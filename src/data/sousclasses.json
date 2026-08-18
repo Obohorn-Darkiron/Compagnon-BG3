@@ -1,0 +1,408 @@
+[
+  {
+    "classe": "Barbare",
+    "nom": "Berserker",
+    "resume": "Rage brute concentrée sur les dégâts en mêlée : Frénésie ajoute une attaque bonus à chaque tour de rage.",
+    "avantages": ["Le plus de dégâts bruts en mêlée", "Simple à jouer, peu de gestion"],
+    "inconvenients": ["Aucune option à distance", "Frappe frénétique cumule un malus si on en abuse"]
+  },
+  {
+    "classe": "Barbare",
+    "nom": "Géant (Giant)",
+    "resume": "Grandit en rageant : jets de dégâts améliorés, portée de lancer et de saut accrues, jusqu'à devenir littéralement une géante en fin de partie.",
+    "avantages": ["Très bon combo lancer/projection", "Devient extrêmement résistant en fin de partie"],
+    "inconvenients": ["Moins de pic de dégâts que Berserker", "Certains bonus arrivent tard"]
+  },
+  {
+    "classe": "Barbare",
+    "nom": "Magie sauvage (Wild Magic)",
+    "resume": "Chaque rage a une chance de déclencher un effet magique aléatoire, généralement favorable pour toi et défavorable pour l'ennemi proche.",
+    "avantages": ["Effets de zone gratuits et imprévisibles", "Fun en Tacticien pour varier les parties"],
+    "inconvenients": ["Aléatoire, donc peu fiable en combat serré", "Moins optimisé que Berserker pour du dégât pur"]
+  },
+  {
+    "classe": "Barbare",
+    "nom": "Cœur sauvage (Wildheart)",
+    "resume": "Choisit un esprit animal (Ours, Aigle, Tigre...) qui donne un bonus passif permanent pendant la rage.",
+    "avantages": ["Très polyvalent selon l'esprit choisi", "Bon compromis tank / dégâts"],
+    "inconvenients": ["Moins spécialisé qu'un Berserker pur", "Le choix d'esprit est définitif"]
+  },
+  {
+    "classe": "Barde",
+    "nom": "Collège du Savoir (Lore)",
+    "resume": "Barde de soutien polyvalent : accès à un large choix de sorts d'autres classes via Savoir complémentaire.",
+    "avantages": ["Extrêmement polyvalent (soins, contrôle, utilitaire)", "Meilleur visage/négociateur du jeu"],
+    "inconvenients": ["Peu de dégâts directs", "Dépend des inspirations bardiques bien placées"]
+  },
+  {
+    "classe": "Barde",
+    "nom": "Collège de l'Épée",
+    "resume": "Barde combattant : Fioriture tranchante permet d'attaquer deux fois avec une arme légère à une main.",
+    "avantages": ["Dégâts à distance ou mêlée très solides", "Reste un plein lanceur de sorts en parallèle"],
+    "inconvenients": ["Demande une arme légère adaptée pour briller", "Moins de sorts de soutien appris que Savoir"]
+  },
+  {
+    "classe": "Barde",
+    "nom": "Collège de la Vaillance (Valour)",
+    "resume": "Barde martial : combat à deux mains ou à distance, inspire le groupe au combat plutôt qu'en exploration.",
+    "avantages": ["Bon compromis mêlée/soutien", "Partage ses attaques bonus avec les alliés proches"],
+    "inconvenients": ["Moins spécialisé que les autres collèges", "Sous-classe assez peu jouée"]
+  },
+  {
+    "classe": "Barde",
+    "nom": "Collège de la Séduction (Glamour)",
+    "resume": "Barde charismatique : ses inspirations donnent aussi des PV temporaires et peuvent forcer un ennemi à changer de cible.",
+    "avantages": ["Excellent soutien défensif de groupe", "Bon contrôle social"],
+    "inconvenients": ["Peu de dégâts personnels", "Nécessite de rester proche des alliés pour son plein effet"]
+  },
+  {
+    "classe": "Clerc",
+    "nom": "Domaine de la Tempête",
+    "resume": "Frappe fort au corps à corps et aux sorts de foudre/tonnerre tout en gardant l'armure lourde et les soins d'un Clerc classique.",
+    "avantages": ["Courroux destructeur = un gros coup gratuit par repos", "Reste un Clerc complet (soins, buffs)"],
+    "inconvenients": ["Un seul Courroux destructeur par repos", "Sagesse à prioriser au détriment du reste"]
+  },
+  {
+    "classe": "Clerc",
+    "nom": "Domaine de la Vie (Life)",
+    "resume": "Le meilleur soigneur pur du jeu : chaque sort de soin rend des PV supplémentaires.",
+    "avantages": ["Soins exceptionnels, garde le groupe debout", "Armure lourde, résistant"],
+    "inconvenients": ["Peu de dégâts", "Rôle parfois passif hors soin"]
+  },
+  {
+    "classe": "Clerc",
+    "nom": "Domaine de la Lumière (Light)",
+    "resume": "Clerc offensif à distance : sorts de feu et de radiance, plus une réaction qui inflige des dégâts en se protégeant.",
+    "avantages": ["Bons dégâts à distance pour un Clerc", "Réaction défensive qui punit l'attaquant"],
+    "inconvenients": ["Fragile s'il s'approche trop", "Moins de soins que Vie"]
+  },
+  {
+    "classe": "Clerc",
+    "nom": "Domaine de la Nature",
+    "resume": "Hybride Clerc/Druide : sorts de nature, résistance élémentaire selon l'ennemi, et accès à des cantrips de Druide.",
+    "avantages": ["Très polyvalent (dégâts + soins + nature)", "Bon contre les ennemis élémentaires"],
+    "inconvenients": ["Touche-à-tout, moins pointu qu'un domaine spécialisé", "Peu de synergie d'équipement dédiée"]
+  },
+  {
+    "classe": "Clerc",
+    "nom": "Domaine de la Ruse (Trickery)",
+    "resume": "Clerc furtif : peut se rendre invisible et créer un double illusoire pour tromper l'ennemi.",
+    "avantages": ["Excellent en infiltration", "Bon outil défensif (invisibilité)"],
+    "inconvenients": ["Peu orienté combat frontal", "Synergise mal avec une run très bienveillante"]
+  },
+  {
+    "classe": "Clerc",
+    "nom": "Domaine de la Guerre (War)",
+    "resume": "Clerc guerrier : bonus aux attaques d'arme et attaque bonus gratuite avec les armes.",
+    "avantages": ["Bon dégât en mêlée tout en restant lanceur complet", "Simple à jouer"],
+    "inconvenients": ["Moins spécialisé que Tempête ou Vie", "Concurrence l'équipement des autres mêlées"]
+  },
+  {
+    "classe": "Clerc",
+    "nom": "Domaine de la Mort (Death)",
+    "resume": "Clerc nécrotique : maîtrise les armes de guerre et inflige des dégâts létaux supplémentaires aux ennemis affaiblis.",
+    "avantages": ["Très bon finisseur (achève les ennemis à faibles PV)", "Bon en mêlée comme à distance"],
+    "inconvenients": ["Thème sombre, moins adapté à une run 100% bienveillante", "Moins de soins qu'un Clerc classique"]
+  },
+  {
+    "classe": "Clerc",
+    "nom": "Domaine du Savoir (Knowledge)",
+    "resume": "Clerc érudit : lit dans les pensées, gagne des compétences supplémentaires et peut copier temporairement le savoir d'un allié.",
+    "avantages": ["Excellent hors combat (compétences, dialogues)", "Bon contrôle mental"],
+    "inconvenients": ["Le plus faible en combat direct des domaines", "Rôle très situationnel"]
+  },
+  {
+    "classe": "Druide",
+    "nom": "Cercle des étoiles",
+    "resume": "Druide polyvalent qui reste sous forme humanoïde : la Forme stellaire offre soins, dégâts à distance ou concentration renforcée.",
+    "avantages": ["Très polyvalent (soins, contrôle, dégâts)", "Bon soutien de duo"],
+    "inconvenients": ["Peu de pic de dégâts brut", "Dépend de la concentration"]
+  },
+  {
+    "classe": "Druide",
+    "nom": "Cercle des spores",
+    "resume": "Druide de première ligne qui ne se transforme pas : Entité symbiotique donne des PV temporaires et des dégâts nécrotiques en mêlée.",
+    "avantages": ["Bon en mêlée pour un lanceur de sorts", "Invocations utiles pour occuper le terrain"],
+    "inconvenients": ["Moins de dégâts à distance", "Gère la concentration ET la mêlée en même temps"]
+  },
+  {
+    "classe": "Druide",
+    "nom": "Cercle de la Lune (Moon)",
+    "resume": "Le druide-forme sauvage par excellence : se transforme en formes de combat puissantes (ours, loup...) dès le niveau 2, avec bien plus de PV en forme.",
+    "avantages": ["Très résistant en forme animale dès le début", "Change de forme sans dépenser d'action en combat"],
+    "inconvenients": ["Perd l'accès à ses sorts pendant la transformation", "Moins de contrôle/soutien qu'Étoiles"]
+  },
+  {
+    "classe": "Druide",
+    "nom": "Cercle de la Terre (Land)",
+    "resume": "Druide caster classique : accès à des sorts supplémentaires selon le terrain, et récupère de la magie en pleine nature.",
+    "avantages": ["Grande liste de sorts", "Récupération de sorts hors combat pratique"],
+    "inconvenients": ["Moins d'identité de combat propre", "Effets liés au terrain peu exploités en pratique"]
+  },
+  {
+    "classe": "Ensorceleur",
+    "nom": "Lignée draconique",
+    "resume": "Le sang d'un dragon (rouge, bleu, or...) coule dans tes veines : le choix de couleur détermine ton élément de prédilection et te donne CA et résistance sans armure.",
+    "avantages": ["CA solide sans armure dès le niveau 1", "Simple, robuste, thème et élément au choix"],
+    "inconvenients": ["Ennemis résistants/immunisés à ton élément", "Fragile en mêlée"]
+  },
+  {
+    "classe": "Ensorceleur",
+    "nom": "Magie sauvage (Wild Magic)",
+    "resume": "Chaque sort lancé a une petite chance de déclencher un effet aléatoire (le Chaos sauvage), parfois très puissant.",
+    "avantages": ["Peut donner un tour de chance surprise (sort gratuit...)", "Thème fun pour une run Tacticien"],
+    "inconvenients": ["Totalement imprévisible", "Moins fiable qu'une Lignée draconique pour optimiser"]
+  },
+  {
+    "classe": "Ensorceleur",
+    "nom": "Magie des ombres (Shadow Magic)",
+    "resume": "Ensorceleur teinté d'obscurité : voit dans le noir, peut devenir un œil invisible pour explorer, et résiste à la peur.",
+    "avantages": ["Excellent pour l'exploration et la discrétion", "Bonne résistance aux effets de Peur"],
+    "inconvenients": ["Peu de bonus de dégâts direct comparé à Draconique", "Profil plus utilitaire qu'offensif"]
+  },
+  {
+    "classe": "Ensorceleur",
+    "nom": "Sorcellerie des tempêtes (Storm Sorcery)",
+    "resume": "Maîtrise les sorts de foudre et de tonnerre, avec la possibilité de voler brièvement après avoir lancé un sort d'attaque.",
+    "avantages": ["Très mobile (vol temporaire)", "Bon combo avec les sorts de foudre/tonnerre"],
+    "inconvenients": ["Moins polyvalent hors foudre/tonnerre", "Vol limité en durée"]
+  },
+  {
+    "classe": "Guerrier",
+    "nom": "Maître de guerre",
+    "resume": "Manœuvres tactiques (désarmement, mise à terre, riposte) en plus des attaques classiques — le Guerrier le plus polyvalent.",
+    "avantages": ["Beaucoup d'options tactiques en combat", "Excellent avec n'importe quelle arme"],
+    "inconvenients": ["Ressource de manœuvres limitée par repos", "Demande un peu plus de gestion que Champion"]
+  },
+  {
+    "classe": "Guerrier",
+    "nom": "Champion",
+    "resume": "Le plus simple des trois : plage de critique élargie et bonus passifs, sans rien à gérer en combat.",
+    "avantages": ["Extrêmement simple à jouer", "Très bon avec les armes qui aiment les critiques"],
+    "inconvenients": ["Aucune option tactique (pas de manœuvres)", "Moins polyvalent que Maître de guerre"]
+  },
+  {
+    "classe": "Guerrier",
+    "nom": "Chevalier occulte (Eldritch Knight)",
+    "resume": "Guerrier qui apprend quelques sorts de Magicien (Contresort, Bouclier...) en plus du combat à l'arme.",
+    "avantages": ["Ajoute de la magie utilitaire à un profil martial", "Bon contre les lanceurs de sorts ennemis"],
+    "inconvenients": ["Peu d'emplacements de sorts", "Moins de dégâts purs qu'un Guerrier dédié"]
+  },
+  {
+    "classe": "Guerrier",
+    "nom": "Archer occulte (Arcane Archer)",
+    "resume": "Guerrier à l'arc qui imprègne ses flèches d'effets magiques (explosion, ralentissement...).",
+    "avantages": ["Très bon contrôle à distance", "Combine tir et un peu de magie"],
+    "inconvenients": ["Ressource de flèches magiques limitée par repos", "Demande un arc pour briller"]
+  },
+  {
+    "classe": "Magicien",
+    "nom": "École d'Évocation",
+    "resume": "Sculpteur de sorts épargne les alliés de ses Boules de feu et Éclairs — le nuke de zone le plus sûr.",
+    "avantages": ["Zone massive sans toucher les alliés", "Bibliothèque de sorts immense (comme tout Magicien)"],
+    "inconvenients": ["Fragile", "Dépend de l'Intelligence et des parchemins"]
+  },
+  {
+    "classe": "Magicien",
+    "nom": "École d'Abjuration",
+    "resume": "Se protège et protège ses alliés avec des boucliers d'énergie qui absorbent les dégâts.",
+    "avantages": ["Excellente survie pour un lanceur fragile", "Bon soutien défensif de groupe"],
+    "inconvenients": ["Peu de bonus offensif direct", "Profil plus défensif qu'agressif"]
+  },
+  {
+    "classe": "Magicien",
+    "nom": "École de Conjuration",
+    "resume": "Spécialiste des invocations : peut se téléporter brièvement et invoque des créatures plus facilement.",
+    "avantages": ["Bon contrôle de zone via invocations", "Mobilité utile (téléportation courte)"],
+    "inconvenients": ["Dépend de la gestion des créatures invoquées", "Moins direct que l'Évocation"]
+  },
+  {
+    "classe": "Magicien",
+    "nom": "École de Divination",
+    "resume": "Peut manipuler la chance : force un jet de dé (le sien ou celui d'un ennemi) à être relancé.",
+    "avantages": ["Excellent pour fiabiliser les moments critiques", "Bon soutien pour tout le groupe"],
+    "inconvenients": ["Ressource limitée par repos", "Peu de bonus de dégâts personnel"]
+  },
+  {
+    "classe": "Magicien",
+    "nom": "École d'Enchantement",
+    "resume": "Spécialiste du contrôle mental : charme et domine plus facilement, y compris des ennemis puissants.",
+    "avantages": ["Excellent contrôle (Charme, Domination)", "Très fort en fin de partie contre les boss"],
+    "inconvenients": ["Faible en dégâts directs", "Beaucoup d'ennemis sont immunisés au Charme"]
+  },
+  {
+    "classe": "Magicien",
+    "nom": "École d'Illusion",
+    "resume": "Trompe les sens ennemis : ses illusions semblent réelles et peuvent recevoir des attaques à sa place.",
+    "avantages": ["Bon outil de diversion et de contrôle", "Original en infiltration"],
+    "inconvenients": ["Peu de dégâts", "Effets parfois difficiles à exploiter en combat direct"]
+  },
+  {
+    "classe": "Magicien",
+    "nom": "École de Nécromancie",
+    "resume": "Renforce les sorts nécrotiques et peut relever des morts-vivants pour combattre à ses côtés.",
+    "avantages": ["Bonne pression supplémentaire via les invocations", "Sorts nécrotiques renforcés"],
+    "inconvenients": ["Thème sombre, moins adapté à une run bienveillante stricte", "Morts-vivants invoqués fragiles"]
+  },
+  {
+    "classe": "Magicien",
+    "nom": "École de Transmutation",
+    "resume": "Peut transformer temporairement de la pierre en chair ou améliorer les capacités physiques d'un allié.",
+    "avantages": ["Bon soutien utilitaire (buffs physiques)", "Utile pour certaines énigmes/exploration"],
+    "inconvenients": ["Peu de dégâts ou de contrôle direct", "École la moins orientée combat"]
+  },
+  {
+    "classe": "Magicien",
+    "nom": "Chant-l'épée (Bladesinging)",
+    "resume": "Magicien combattant : peut se battre à l'épée tout en lançant des sorts, avec un bonus de CA en plus.",
+    "avantages": ["Excellent hybride mêlée/magie", "Très bonne classe d'armure pour un lanceur"],
+    "inconvenients": ["Demande une épée légère spécifique", "Nécessite de bien gérer sorts ET mêlée"]
+  },
+  {
+    "classe": "Moine",
+    "nom": "Paume ouverte",
+    "resume": "Rafale de coups peut renverser ou repousser la cible touchée — le Moine le plus offensif et le plus simple à optimiser.",
+    "avantages": ["Beaucoup d'attaques par tour", "Contrôle intégré (renversement, étourdissement)"],
+    "inconvenients": ["Dépend fortement de bons dons de Force", "Gestion des points de Ki"]
+  },
+  {
+    "classe": "Moine",
+    "nom": "Voie de l'Ombre (Shadow)",
+    "resume": "Moine furtif : peut se téléporter entre les ombres et devenir temporairement invisible.",
+    "avantages": ["Excellente mobilité et infiltration", "Bon en embuscade"],
+    "inconvenients": ["Moins de dégâts bruts que Paume ouverte", "Demande des zones sombres pour exploiter à fond"]
+  },
+  {
+    "classe": "Moine",
+    "nom": "Voie des Quatre Éléments",
+    "resume": "Moine qui dépense son Ki pour lancer des mini-sorts élémentaires (boule de feu, vague, etc.).",
+    "avantages": ["Ajoute des dégâts de zone à un profil mêlée", "Bonne polyvalence élémentaire"],
+    "inconvenients": ["Consomme vite les points de Ki", "Généralement considérée comme la sous-classe la plus faible du Moine"]
+  },
+  {
+    "classe": "Moine",
+    "nom": "Voie du Maître ivre (Drunken Master)",
+    "resume": "Variante de Paume ouverte centrée sur l'esquive : Rafale de coups peut repousser sans provoquer d'attaque d'opportunité et améliore la mobilité.",
+    "avantages": ["Très bonne mobilité pendant l'attaque", "Bon pour éviter les ripostes"],
+    "inconvenients": ["Moins de contrôle direct que Paume ouverte", "Nécessite d'enchaîner les frappes pour briller"]
+  },
+  {
+    "classe": "Occultiste",
+    "nom": "L'Archifée (The Archfey)",
+    "resume": "Patron féerique : peut se rendre invisible brièvement et charme facilement.",
+    "avantages": ["Bon outil défensif (invisibilité de fuite)", "Bon contrôle social"],
+    "inconvenients": ["Peu de bonus offensif direct du patron", "Dépend d'un bon build de sorts pour les dégâts"]
+  },
+  {
+    "classe": "Occultiste",
+    "nom": "Le Fiélon (The Fiend)",
+    "resume": "Patron infernal : gagne des PV temporaires à chaque élimination d'ennemi.",
+    "avantages": ["Très bonne survie (PV temporaires fréquents)", "Bon en combat prolongé contre plusieurs ennemis"],
+    "inconvenients": ["Thème infernal, moins adapté à une run bienveillante stricte", "Peu de contrôle comparé au Grand Ancien"]
+  },
+  {
+    "classe": "Occultiste",
+    "nom": "Le Grand Ancien (The Great Old One)",
+    "resume": "Patron psychique : communique par télépathie et, à haut niveau, peut paralyser mentalement un ennemi.",
+    "avantages": ["Excellent contrôle mental en fin de partie", "Bon en dialogues (télépathie)"],
+    "inconvenients": ["Capacité de contrôle forte arrive tard", "Peu de bonus tôt en partie"]
+  },
+  {
+    "classe": "Occultiste",
+    "nom": "Lame maudite (Hexblade)",
+    "resume": "Patron qui lie une arme à deux mains et permet de frapper au Charisme — le meilleur Occultiste martial.",
+    "avantages": ["Autonome et simple, bon en mêlée ET à distance", "Repos courts rechargent les emplacements de sorts"],
+    "inconvenients": ["Peu d'emplacements de sorts", "Une seule attaque avant le niveau 5"]
+  },
+  {
+    "classe": "Paladin",
+    "nom": "Serment de Vengeance",
+    "resume": "Le paladin justicier : Vœu d'inimitié donne l'avantage sur une cible désignée — le meilleur pic de dégâts des serments.",
+    "avantages": ["Explosion de dégâts en mêlée énorme (Châtiment divin)", "Bon contre une cible prioritaire unique"],
+    "inconvenients": ["Moins protecteur pour le reste du groupe", "Explosion limitée par les emplacements de sorts"]
+  },
+  {
+    "classe": "Paladin",
+    "nom": "Serment des Anciens",
+    "resume": "Paladin protecteur : ses sorts et son aura défendent surtout les alliés et la nature.",
+    "avantages": ["Excellent soutien/protection de groupe", "Résistance aux sorts en aura à haut niveau"],
+    "inconvenients": ["Moins offensif que Vengeance", "Profil plus défensif que burst"]
+  },
+  {
+    "classe": "Paladin",
+    "nom": "Serment de Dévotion",
+    "resume": "Le paladin \"chevalier blanc\" classique : sorts de protection contre les Charmes/Peur et arme sacrée.",
+    "avantages": ["Très résistant aux contrôles mentaux", "Bon équilibre attaque/défense"],
+    "inconvenients": ["Moins de pic de dégâts que Vengeance", "Peu de spécialité marquante"]
+  },
+  {
+    "classe": "Paladin",
+    "nom": "Serment de la Couronne",
+    "resume": "Paladin tacticien : peut forcer un ennemi à l'attaquer lui plutôt que ses alliés.",
+    "avantages": ["Excellent pour protéger un lanceur fragile", "Bon contrôle d'aggro"],
+    "inconvenients": ["Peu de dégâts propres", "Sous-classe assez situationnelle"]
+  },
+  {
+    "classe": "Paladin",
+    "nom": "Parjure (Oathbreaker)",
+    "resume": "Voie sombre débloquée après avoir trahi son serment initial : sorts nécrotiques et effrayants.",
+    "avantages": ["Bons dégâts nécrotiques et contrôle par la peur", "Roleplay original pour une run plus grise"],
+    "inconvenients": ["Nécessite un choix narratif spécifique pour y accéder", "Incompatible avec une run 100% bienveillante"]
+  },
+  {
+    "classe": "Rôdeur",
+    "nom": "Traqueur des ténèbres",
+    "resume": "Attaque bonus gratuite au premier tour de combat, plus bonus d'initiative — le roi du tour d'ouverture.",
+    "avantages": ["Ouverture de combat inégalée", "Excellent en embuscade"],
+    "inconvenients": ["Moins fort sur les tours suivants", "Dépend de l'initiative et de la surprise"]
+  },
+  {
+    "classe": "Rôdeur",
+    "nom": "Chasseur (Hunter)",
+    "resume": "Le rôdeur combattant classique : choisit des capacités contre un type d'ennemi (groupes, grosses cibles...) au fil des niveaux.",
+    "avantages": ["Très bon à distance comme en mêlée", "Simple, efficace sans multiclasse"],
+    "inconvenients": ["Moins de pic d'ouverture que Traqueur des ténèbres", "Profil plus classique, peu de fantaisie"]
+  },
+  {
+    "classe": "Rôdeur",
+    "nom": "Maître des bêtes (Beast Master)",
+    "resume": "S'accompagne d'un compagnon animal contrôlable qui combat à ses côtés.",
+    "avantages": ["Deux corps sur le champ de bataille", "Bon pour absorber des attaques à la place du rôdeur"],
+    "inconvenients": ["Gestion supplémentaire (deux personnages à jouer)", "Considérée comme une des sous-classes les plus faibles en optimisation"]
+  },
+  {
+    "classe": "Rôdeur",
+    "nom": "Gardien d'essaim (Swarmkeeper)",
+    "resume": "Invoque un essaim magique qui pousse ou blesse les ennemis proches et améliore sa mobilité.",
+    "avantages": ["Bon contrôle de zone léger (repousser les ennemis)", "Ajoute de la mobilité sans dépenser d'action"],
+    "inconvenients": ["Dégâts d'essaim assez faibles", "Sous-classe plus situationnelle que Traqueur/Chasseur"]
+  },
+  {
+    "classe": "Roublard",
+    "nom": "Filou",
+    "resume": "L'action bonus supplémentaire permet deux attaques hors-main, donc deux chances de placer l'Attaque sournoise par tour.",
+    "avantages": ["Attaque sournoise deux fois par tour", "Excellent utilitaire (crochetage, désamorçage, discrétion)"],
+    "inconvenients": ["Dégâts plafonnés sans multiclasse", "Fragile face aux groupes"]
+  },
+  {
+    "classe": "Roublard",
+    "nom": "Assassin",
+    "resume": "Avantage et critiques garantis contre les créatures qui n'ont pas encore agi — dévastateur au premier tour surpris.",
+    "avantages": ["Critique garanti sur toute cible surprise au 1er tour", "Extrêmement fort en embuscade planifiée"],
+    "inconvenients": ["Beaucoup moins fort si la surprise échoue", "Dépend de la discrétion pour briller"]
+  },
+  {
+    "classe": "Roublard",
+    "nom": "Bretteur (Swashbuckler)",
+    "resume": "Roublard duelliste : peut engager un ennemi seul sans risquer d'attaque d'opportunité, et charme facilement en duel.",
+    "avantages": ["Très mobile, peut isoler une cible sans risque", "Bon en un-contre-un"],
+    "inconvenients": ["Moins bon contre plusieurs ennemis à la fois", "Profil plus fragile en mêlée prolongée"]
+  },
+  {
+    "classe": "Roublard",
+    "nom": "Escamoteur arcanique (Arcane Trickster)",
+    "resume": "Roublard qui apprend quelques sorts de Magicien, dont une Main de mage invisible qui peut voler ou déclencher des pièges à distance.",
+    "avantages": ["Ajoute de l'utilitaire magique (Main de mage, Bouclier)", "Bon pour désamorcer pièges/coffres à distance"],
+    "inconvenients": ["Peu d'emplacements de sorts", "Moins de dégâts bruts que Filou/Assassin"]
+  }
+]

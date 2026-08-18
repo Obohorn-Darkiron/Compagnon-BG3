@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-title: Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --color-bg: #100e0b;
+  --color-surface: #1a1611;
+  --color-surface-raised: #241e17;
+  --color-border: #362d21;
+
+  --color-ink: #eee7d8;
+  --color-ink-muted: #a89b83;
+
+  --color-gold: #c9a227;
+  --color-gold-soft: #8a6f22;
+
+  --color-essentiel: #b23a3a;
+  --color-excellent: #c9a227;
+  --color-bon: #3f8a5f;
+  --color-situationnel: #5b6b7a;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+#root {
+  min-height: 100svh;
+}

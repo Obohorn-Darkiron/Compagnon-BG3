@@ -1,0 +1,126 @@
+[
+  {
+    "nom": "Humain",
+    "resume": "Le plus polyvalent — pas de sous-race, une compétence bonus au choix et un net gain de capacité de transport. Depuis la sortie complète du jeu, les races n'ont plus de bonus de caractéristiques fixes : ces bonus dépendent uniquement de la classe choisie (fini le \"+1 partout\" de l'accès anticipé).",
+    "particularites": [
+      "Vitesse de déplacement standard (9 m)",
+      "Milice civile : maîtrise des lances, piques, hallebardes et glaives, plus armure légère et bouclier",
+      "Polyvalence humaine : une compétence supplémentaire au choix",
+      "Capacité de transport augmentée d'un quart"
+    ],
+    "verifie": true
+  },
+  {
+    "nom": "Elfe",
+    "resume": "Agile et perceptif, avec une vision dans le noir et une résistance à la charmille propre aux fées.",
+    "particularites": [
+      "Vision dans le noir (12 m)",
+      "Sens aiguisés : maîtrise en Perception",
+      "Ascendance féerique : avantage aux jets de sauvegarde contre la Charme, insensible au Sommeil magique"
+    ],
+    "verifie": true,
+    "sousRaces": [
+      { "nom": "Haut-Elfe", "particularites": ["Un cantrip de Magicien au choix dès le niveau 1 (utilise l'Intelligence)"] },
+      { "nom": "Elfe des bois", "particularites": ["Masque de la nature : maîtrise en Discrétion", "Vitesse de déplacement augmentée (10,5 m)"] }
+    ]
+  },
+  {
+    "nom": "Drow",
+    "resume": "Vision dans le noir supérieure et un sort de Ténèbres inné en réserve — mais attention, ça ne permet PAS de voir dans ses propres Ténèbres (voir plus bas).",
+    "particularites": [
+      "Vision dans le noir Supérieure (24 m) — ne fonctionne que dans le noir normal, pas dans une obscurité magique comme le sort Ténèbres",
+      "Lumières dansantes dès le niveau 1",
+      "Sort inné Ténèbres, une fois par repos long, dès le niveau 5 — sans consommer d'emplacement de sort"
+    ],
+    "verifie": true,
+    "sousRaces": [
+      { "nom": "Drow Loth-Sworn", "particularites": ["Variante narrative — mêmes bonus que Seldarine"] },
+      { "nom": "Drow Seldarine", "particularites": ["Variante narrative — mêmes bonus que Loth-Sworn"] }
+    ]
+  },
+  {
+    "nom": "Demi-Elfe",
+    "resume": "Hérite des atouts défensifs des Elfes (vision dans le noir, résistance à la charmille) sans leurs autres traits — un profil discret et flexible.",
+    "particularites": [
+      "Vision dans le noir (12 m)",
+      "Ascendance féerique : avantage aux jets de sauvegarde contre la Charme, insensible au Sommeil magique"
+    ],
+    "verifie": true
+  },
+  {
+    "nom": "Nain",
+    "resume": "Résistant et bien équipé pour le combat — maîtrise d'armes et résistance au poison de base, avant même de choisir une sous-race.",
+    "particularites": [
+      "Vision dans le noir (12 m)",
+      "Robustesse naine : avantage aux jets de sauvegarde contre le Poison, résistance aux dégâts de poison",
+      "Maîtrise des haches d'armes, hachettes, marteaux légers et marteaux de guerre"
+    ],
+    "verifie": true,
+    "sousRaces": [
+      { "nom": "Nain des collines", "particularites": ["Robustesse naine : +1 point de vie maximum à chaque niveau"] },
+      { "nom": "Nain des montagnes", "particularites": ["Maîtrise des armures légères et intermédiaires"] },
+      { "nom": "Duergar", "particularites": ["Vision dans le noir Supérieure (24 m)", "Résistance Duergar : avantage aux jets de sauvegarde contre les illusions, la Charme et la Paralysie", "Sorts innés Agrandissement et Invisibilité à plus haut niveau"] }
+    ]
+  },
+  {
+    "nom": "Halfelin",
+    "resume": "Petit gabarit, très agile — le trait Chanceux permet de relancer les 1 naturels, un vrai filet de sécurité.",
+    "particularites": ["Vitesse de déplacement réduite (7,5 m)", "Chanceux : relance obligatoire un 1 naturel sur attaque, test ou sauvegarde"],
+    "verifie": true,
+    "sousRaces": [
+      { "nom": "Pied-léger", "particularites": ["Peut se faufiler derrière une créature de plus grande taille"] },
+      { "nom": "Robuste", "particularites": ["Résistance aux dégâts de poison"] }
+    ]
+  },
+  {
+    "nom": "Gnome",
+    "resume": "Le meilleur choix racial pour un lanceur de sorts qui veut résister aux contrôles ennemis — avantage garanti sur trois caractéristiques mentales.",
+    "particularites": ["Rusé comme un gnome : avantage sur TOUS les jets de sauvegarde d'Intelligence, de Sagesse et de Charisme (donc contre la plupart des sorts de contrôle)"],
+    "verifie": true,
+    "sousRaces": [
+      { "nom": "Gnome des forêts", "particularites": ["Communication simple avec les petits animaux"] },
+      { "nom": "Gnome des roches", "particularites": ["Fabrication d'un petit automate mécanique"] },
+      { "nom": "Gnome des profondeurs", "particularites": ["Vision dans le noir supérieure, discrétion renforcée"] }
+    ]
+  },
+  {
+    "nom": "Demi-Orc",
+    "resume": "Excellent choix pour un combattant de mêlée pur — survie garantie une fois par repos long et dégâts critiques renforcés.",
+    "particularites": [
+      "Endurance implacable : une fois par repos long, si tu tombes à 0 PV sans être tué net, tu restes à 1 PV à la place",
+      "Attaques sauvages : un dé de dégâts d'arme supplémentaire sur un coup critique en mêlée (y compris arme secondaire)",
+      "Maîtrise en Intimidation",
+      "Vision dans le noir"
+    ],
+    "verifie": true
+  },
+  {
+    "nom": "Tieffelin",
+    "resume": "Lignée infernale — résistant au feu et doté de sorts innés gratuits selon le sang démoniaque choisi à la création.",
+    "particularites": [
+      "Résistance infernale : résistance aux dégâts de feu",
+      "Legs infernal : cantrip et sorts innés gratuits selon la lignée (ex. lignée Asmodeus — Production de flammes dès le niveau 1, Insulte du diable 1×/repos long dès le niveau 3, Ténèbres 1×/repos long dès le niveau 5)",
+      "Plusieurs lignées possibles (Asmodeus, Mephistopheles, Zariel...), chacune avec ses propres sorts innés"
+    ],
+    "verifie": true
+  },
+  {
+    "nom": "Githyanki",
+    "resume": "Guerriers nés dans le Plan Astral — martialement redoutables dès le départ, avec des pouvoirs psioniques innés qui montent en puissance.",
+    "particularites": [
+      "Connaissance astrale : gagne temporairement la maîtrise des tests liés à une caractéristique au choix, modifiable à chaque repos long",
+      "Prodige martial : maîtrise des armures légère et intermédiaire, plus des épées courtes, longues et à deux mains",
+      "Pouvoirs psioniques githyanki : Main du mage (niveau 1), Bond (niveau 3), Pas voilé (niveau 5) — chacun 1×/repos long"
+    ],
+    "verifie": true
+  },
+  {
+    "nom": "Drakéide",
+    "resume": "Ascendance draconique : souffle destructeur en zone et résistance au type de dégâts associé, dès le niveau 1.",
+    "particularites": [
+      "Ascendance draconique au choix : détermine le type de dégâts du souffle et la résistance associée (feu pour Laiton/Or/Rouge, froid pour Argent/Blanc, foudre pour Bleu/Bronze, acide pour Noir/Cuivré, poison pour Vert)",
+      "Souffle destructeur : dégâts en zone (2d6, jusqu'à 5d6 en fin de progression), sauvegarde à 8 + mod. Constitution + maîtrise, une fois par repos court ou long"
+    ],
+    "verifie": true
+  }
+]
