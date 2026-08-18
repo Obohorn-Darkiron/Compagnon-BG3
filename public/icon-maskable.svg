@@ -1,24 +1,79 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
-  <rect x="0" y="0" width="100" height="100" fill="#100e0b" />
-  <g transform="translate(50,52) scale(0.62) translate(-50,-50)">
-    <polygon points="50,9 87,30 87,70 50,91 13,70 13,30" fill="#c9a227" stroke="#c9a227" stroke-width="2" stroke-linejoin="round" />
-    <g stroke="#100e0b" stroke-width="2.5" opacity="0.55">
-      <line x1="50" y1="9" x2="50" y2="38" />
-      <line x1="50" y1="91" x2="50" y2="62" />
-      <line x1="13" y1="30" x2="50" y2="38" />
-      <line x1="87" y1="30" x2="50" y2="38" />
-      <line x1="13" y1="70" x2="50" y2="62" />
-      <line x1="87" y1="70" x2="50" y2="62" />
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="48%" r="55%">
+      <stop offset="0%" stop-color="#4a2a68" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#4a2a68" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="100" height="100" fill="#0d0b08" />
+  <circle cx="50" cy="50" r="30" fill="url(#glow)" />
+
+  <g transform="translate(50,52) scale(0.62) translate(-50,-48)">
+    <path
+      d="M50 9 L83 23 L83 58 L50 93 L17 58 L17 23 Z"
+      fill="#0d0b08"
+      stroke="#c9a227"
+      stroke-width="3"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M50 13.5 L79 25.5 L79 56.5 L50 88 L21 56.5 L21 25.5 Z"
+      fill="none"
+      stroke="#c9a227"
+      stroke-width="1"
+      opacity="0.6"
+    />
+
+    <g transform="translate(50,48) scale(0.5)">
+      <polygon
+        points="0,-41 37,-20 37,20 0,41 -37,20 -37,-20"
+        fill="#c9a227"
+        stroke="#c9a227"
+        stroke-width="4"
+        stroke-linejoin="round"
+      />
+      <g stroke="#0d0b08" stroke-width="5" opacity="0.55">
+        <line x1="0" y1="-41" x2="0" y2="-12" />
+        <line x1="0" y1="41" x2="0" y2="12" />
+        <line x1="-37" y1="-20" x2="0" y2="-12" />
+        <line x1="37" y1="-20" x2="0" y2="-12" />
+        <line x1="-37" y1="20" x2="0" y2="12" />
+        <line x1="37" y1="20" x2="0" y2="12" />
+      </g>
+      <text
+        x="0"
+        y="4"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        font-family="Georgia, 'Iowan Old Style', 'Palatino Linotype', serif"
+        font-weight="700"
+        font-size="34"
+        fill="#0d0b08"
+      >20</text>
     </g>
-    <text
-      x="50"
-      y="53"
-      text-anchor="middle"
-      dominant-baseline="middle"
-      font-family="Georgia, 'Iowan Old Style', 'Palatino Linotype', serif"
-      font-weight="700"
-      font-size="34"
-      fill="#100e0b"
-    >20</text>
+
+    <g>
+      <circle cx="50" cy="9" r="8" fill="#0d0b08" stroke="#c9a227" stroke-width="2.5" />
+      <path d="M45 10 A 5 5 0 0 1 55 10" stroke="#c9a227" stroke-width="1.8" fill="none" stroke-linecap="round" />
+      <line x1="50" y1="10" x2="50" y2="14" stroke="#c9a227" stroke-width="1.8" stroke-linecap="round" />
+    </g>
+
+    <g>
+      <circle cx="17" cy="40.5" r="8" fill="#0d0b08" stroke="#c9a227" stroke-width="2.5" />
+      <path d="M14 35 Q 20.5 40.5 14 46" stroke="#c9a227" stroke-width="1.8" fill="none" stroke-linecap="round" />
+      <line x1="12.5" y1="40.5" x2="21" y2="40.5" stroke="#c9a227" stroke-width="1.6" stroke-linecap="round" />
+    </g>
+
+    <g>
+      <circle cx="83" cy="40.5" r="8" fill="#0d0b08" stroke="#c9a227" stroke-width="2.5" />
+      <line x1="83" y1="34" x2="83" y2="47" stroke="#c9a227" stroke-width="1.8" stroke-linecap="round" />
+      <line x1="79" y1="38" x2="87" y2="38" stroke="#c9a227" stroke-width="1.6" stroke-linecap="round" />
+    </g>
+
+    <g>
+      <circle cx="50" cy="93" r="8" fill="#0d0b08" stroke="#c9a227" stroke-width="2.5" />
+      <path d="M50 89 L51.3 91.8 L54 93 L51.3 94.2 L50 97 L48.7 94.2 L46 93 L48.7 91.8 Z" fill="#c9a227" />
+    </g>
   </g>
 </svg>
