@@ -17,10 +17,10 @@ export function CompagnonsSuivi({ campagne }: { campagne: Campagne }) {
               key={c.nom}
               type="button"
               onClick={() => saveStore.basculerCompagnonRecrute(campagne.id, c.nom)}
-              className="flex items-center gap-3 rounded-lg border border-border bg-surface px-3 py-2.5 text-left active:bg-surface-raised"
+              className="flex items-start gap-3 rounded-lg border border-border bg-surface px-3 py-2.5 text-left active:bg-surface-raised"
             >
               <span
-                className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border ${
+                className={`mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border ${
                   estRecrute ? 'border-bon bg-bon/20 text-bon' : 'border-border text-ink-muted'
                 }`}
               >
@@ -33,8 +33,8 @@ export function CompagnonsSuivi({ campagne }: { campagne: Campagne }) {
                 <p className="truncate text-xs text-ink-muted">
                   {c.race} · {c.classeDefaut}
                 </p>
+                <p className="mt-1 text-[11px] leading-snug text-ink-muted">{c.acte}</p>
               </div>
-              <span className="shrink-0 text-right text-[11px] text-ink-muted">{c.acte}</span>
             </button>
           )
         })}
