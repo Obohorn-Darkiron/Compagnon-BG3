@@ -4,7 +4,7 @@ import { Section } from '../../components/Section'
 import { Download, Upload } from '../../components/icons'
 import { builds, objets } from '../../data'
 import { saveStore } from '../../storage/useSaveData'
-import { stockageEstPersistant } from '../../storage/driver'
+import { forcerMiseAJour, stockageEstPersistant } from '../../storage/driver'
 
 const estInstallee =
   typeof window !== 'undefined' && window.matchMedia('(display-mode: standalone)').matches
@@ -23,10 +23,16 @@ export function ParametresPage() {
   const inputRef = useRef<HTMLInputElement>(null)
   const [message, setMessage] = useState<string | null>(null)
   const [persistant, setPersistant] = useState<boolean | null>(null)
+  const [recherche, setRecherche] = useState(false)
 
   useEffect(() => {
     stockageEstPersistant().then(setPersistant)
   }, [])
+
+  function verifierMaj() {
+    setRecherche(true)
+    forcerMiseAJour()
+  }
 
   function exporter() {
     const date = new Date().toISOString().slice(0, 10)
@@ -99,6 +105,21 @@ export function ParametresPage() {
           />
         </div>
         {message && <p className="mt-2 text-sm text-ink-muted">{message}</p>}
+      </Section>
+
+      <Section title="Mise à jour">
+        <p className="mb-3 text-sm text-ink-muted">
+          L'appli se met normalement à jour toute seule en arrière-plan. Si tu sais qu'une
+          nouveauté est sortie et que tu ne la vois pas, force la vérification ici.
+        </p>
+        <button
+          type="button"
+          onClick={verifierMaj}
+          disabled={recherche}
+          className="w-full rounded-lg border border-glow/60 bg-glow/10 py-2.5 text-sm font-medium text-glow disabled:opacity-60"
+        >
+          {recherche ? 'Recherche de la dernière version…' : 'Forcer la mise à jour'}
+        </button>
       </Section>
 
       <Section title="Réinitialiser">

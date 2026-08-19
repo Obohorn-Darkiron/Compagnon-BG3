@@ -34,3 +34,20 @@ export async function stockageEstPersistant(): Promise<boolean | null> {
     return null
   }
 }
+
+/**
+ * Vide tout ce que le navigateur a mis en cache pour l'appli (fichiers hors-ligne,
+ * service worker) et recharge. Bouton de secours quand la vérification automatique
+ * de mise à jour ne suffit pas — garantit de repartir sur la toute dernière version.
+ */
+export async function forcerMiseAJour(): Promise<void> {
+  if ('serviceWorker' in navigator) {
+    const registrations = await navigator.serviceWorker.getRegistrations()
+    await Promise.all(registrations.map((r) => r.unregister()))
+  }
+  if ('caches' in window) {
+    const cles = await caches.keys()
+    await Promise.all(cles.map((cle) => caches.delete(cle)))
+  }
+  window.location.reload()
+}
