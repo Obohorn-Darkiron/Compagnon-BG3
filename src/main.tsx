@@ -12,8 +12,21 @@ import { EquipeBuilderPage } from './features/equipe/EquipeBuilderPage'
 import { PersonnageDetailPage } from './features/equipe/PersonnageDetailPage'
 import { ParametresPage } from './features/parametres/ParametresPage'
 import { demanderStockagePersistant } from './storage/driver'
+import { registerSW } from 'virtual:pwa-register'
 
 demanderStockagePersistant()
+
+const VERIFICATION_MAJ_MS = 60 * 1000
+
+registerSW({
+  immediate: true,
+  onRegisteredSW(_url, registration) {
+    if (!registration) return
+    setInterval(() => {
+      registration.update()
+    }, VERIFICATION_MAJ_MS)
+  },
+})
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
