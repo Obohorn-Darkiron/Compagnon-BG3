@@ -16,7 +16,7 @@ export function BuildCandidatCard({
       type="button"
       onClick={onSelect}
       className={`rounded-lg border p-3 text-left transition-colors ${
-        selectionne ? 'border-gold-soft bg-gold/10' : 'border-border bg-surface-raised'
+        selectionne ? 'border-glow/70 bg-glow/10' : 'border-border bg-surface-raised'
       }`}
     >
       <div className="flex items-start justify-between gap-2">

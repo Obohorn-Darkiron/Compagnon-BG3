@@ -6,7 +6,7 @@ import { SousClasseCard } from './SousClasseCard'
 import { BuildCandidatCard } from './BuildCandidatCard'
 
 const champSelect =
-  'w-full rounded-lg border border-border bg-surface-raised px-3 py-2.5 text-sm text-ink focus:border-gold-soft focus:outline-none'
+  'w-full rounded-lg border border-border bg-surface-raised px-3 py-2.5 text-sm text-ink focus:border-glow focus:outline-none'
 
 const stylesJeu: { valeur: StyleJeu; label: string }[] = [
   { valeur: null, label: 'Peu importe' },
@@ -75,7 +75,7 @@ export function NouveauPersonnageForm({ campagneId }: { campagneId: string }) {
         value={nom}
         onChange={(e) => setNom(e.target.value)}
         placeholder="Nom du personnage"
-        className="rounded-lg border border-border bg-surface-raised px-3 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:border-gold-soft focus:outline-none"
+        className="rounded-lg border border-border bg-surface-raised px-3 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:border-glow focus:outline-none"
       />
 
       <div>
@@ -90,7 +90,7 @@ export function NouveauPersonnageForm({ campagneId }: { campagneId: string }) {
               onClick={() => setStyleJeu(s.valeur)}
               className={`rounded-full border px-3 py-2 text-xs font-medium transition-colors ${
                 styleJeu === s.valeur
-                  ? 'border-gold-soft bg-gold/15 text-gold'
+                  ? 'border-glow/70 bg-glow/15 text-glow'
                   : 'border-border text-ink-muted'
               }`}
             >
@@ -154,7 +154,7 @@ export function NouveauPersonnageForm({ campagneId }: { campagneId: string }) {
               }}
               className={`rounded-full border px-3 py-2 text-xs font-medium transition-colors ${
                 classe === c
-                  ? 'border-gold-soft bg-gold/15 text-gold'
+                  ? 'border-glow/70 bg-glow/15 text-glow'
                   : 'border-border text-ink-muted'
               }`}
             >
@@ -205,7 +205,7 @@ export function NouveauPersonnageForm({ campagneId }: { campagneId: string }) {
                 onClick={() => setBuildId('')}
                 className={`rounded-lg border p-2.5 text-left text-sm transition-colors ${
                   buildId === ''
-                    ? 'border-gold-soft bg-gold/10 text-ink'
+                    ? 'border-glow/70 bg-glow/10 text-ink'
                     : 'border-border bg-surface-raised text-ink-muted'
                 }`}
               >

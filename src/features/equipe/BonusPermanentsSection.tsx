@@ -58,7 +58,7 @@ export function BonusPermanentsSection({
                         }
                         className={`rounded-full border px-2.5 py-1 text-xs font-medium transition-colors ${
                           choix?.stat === c
-                            ? 'border-gold-soft bg-gold/15 text-gold'
+                            ? 'border-glow/70 bg-glow/15 text-glow'
                             : 'border-border text-ink-muted'
                         }`}
                       >
@@ -86,7 +86,7 @@ export function BonusPermanentsSection({
                         }
                         className={`rounded-full border px-2.5 py-1 text-xs font-medium transition-colors ${
                           (choix?.valeur ?? bonus.valeursPossibles[0]) === v
-                            ? 'border-gold-soft bg-gold/15 text-gold'
+                            ? 'border-glow/70 bg-glow/15 text-glow'
                             : 'border-border text-ink-muted'
                         }`}
                       >

@@ -51,7 +51,7 @@ export function PersonnageDetailPage() {
               onClick={() => saveStore.majPersonnage(campagneId, personnage.id, { styleJeu: s.valeur })}
               className={`rounded-full border px-3 py-2 text-xs font-medium transition-colors ${
                 personnage.styleJeu === s.valeur
-                  ? 'border-gold-soft bg-gold/15 text-gold'
+                  ? 'border-glow/70 bg-glow/15 text-glow'
                   : 'border-border text-ink-muted'
               }`}
             >
@@ -70,7 +70,7 @@ export function PersonnageDetailPage() {
               sousRace: null,
             })
           }
-          className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-ink focus:border-gold-soft focus:outline-none"
+          className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-ink focus:border-glow focus:outline-none"
         >
           <option value="">Peu importe</option>
           {races.map((r) => (
@@ -85,7 +85,7 @@ export function PersonnageDetailPage() {
             onChange={(e) =>
               saveStore.majPersonnage(campagneId, personnage.id, { sousRace: e.target.value || null })
             }
-            className="mt-2 w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-ink focus:border-gold-soft focus:outline-none"
+            className="mt-2 w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-ink focus:border-glow focus:outline-none"
           >
             <option value="">Sous-race — peu importe</option>
             {raceInfo.sousRaces.map((sr) => (
@@ -121,7 +121,7 @@ export function PersonnageDetailPage() {
               sousClasse: nouveauBuild?.sousClasse ?? personnage.sousClasse,
             })
           }}
-          className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-ink focus:border-gold-soft focus:outline-none"
+          className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-ink focus:border-glow focus:outline-none"
         >
           <option value="">Aucun build choisi</option>
           {builds.map((b) => (

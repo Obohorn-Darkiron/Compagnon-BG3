@@ -53,7 +53,7 @@ export function BuildsListPage() {
               value={recherche}
               onChange={(e) => setRecherche(e.target.value)}
               placeholder="Classe, rôle, sort, don, objet…"
-              className="w-full rounded-lg border border-border bg-surface py-2.5 pl-9 pr-3 text-sm text-ink placeholder:text-ink-muted focus:border-gold-soft focus:outline-none"
+              className="w-full rounded-lg border border-border bg-surface py-2.5 pl-9 pr-3 text-sm text-ink placeholder:text-ink-muted focus:border-glow focus:outline-none"
             />
           </label>
 
@@ -65,7 +65,7 @@ export function BuildsListPage() {
                 onClick={() => setFiltre(f.valeur)}
                 className={`flex-1 rounded-lg border px-2 py-3 text-xs font-medium transition-colors ${
                   filtre === f.valeur
-                    ? 'border-gold-soft bg-gold/15 text-gold'
+                    ? 'border-glow/70 bg-glow/15 text-glow'
                     : 'border-border text-ink-muted'
                 }`}
               >

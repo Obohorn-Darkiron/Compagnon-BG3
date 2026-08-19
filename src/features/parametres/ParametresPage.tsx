@@ -52,7 +52,7 @@ export function ParametresPage() {
           du navigateur. Fermer l'appli ou éteindre le téléphone n'efface rien.
         </p>
         {!estInstallee && (
-          <p className="mb-3 rounded-lg border border-border bg-surface px-3 py-2.5 text-xs text-ink-muted">
+          <p className="mb-3 rounded-lg border border-glow/40 bg-glow/10 px-3 py-2.5 text-xs text-ink">
             Pour une sauvegarde plus solide dans la durée, ajoute l'appli à l'écran d'accueil de
             ton téléphone (menu du navigateur → « Ajouter à l'écran d'accueil »). Elle se
             comportera comme une vraie appli et le téléphone la traitera comme telle.

@@ -14,7 +14,7 @@ export function SousClasseCard({
       type="button"
       onClick={onSelect}
       className={`rounded-lg border p-3 text-left transition-colors ${
-        selectionnee ? 'border-gold-soft bg-gold/10' : 'border-border bg-surface-raised'
+        selectionnee ? 'border-glow/70 bg-glow/10' : 'border-border bg-surface-raised'
       }`}
     >
       <p className="text-sm font-semibold text-ink">{sousClasse.nom}</p>

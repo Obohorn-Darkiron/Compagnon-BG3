@@ -117,7 +117,7 @@ export function BuildDetailPage() {
               onClick={() => setStylePreview(s.valeur)}
               className={`flex-1 rounded-full border px-2 py-2.5 text-xs font-medium transition-colors ${
                 stylePreview === s.valeur
-                  ? 'border-gold-soft bg-gold/15 text-gold'
+                  ? 'border-glow/70 bg-glow/15 text-glow'
                   : 'border-border text-ink-muted'
               }`}
             >

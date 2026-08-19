@@ -81,7 +81,7 @@ function ChipMultiSelect({
             disabled={desactive}
             onClick={() => onToggle(o)}
             className={`rounded-full border px-3 py-2 text-xs font-medium transition-colors disabled:opacity-30 ${
-              actif ? 'border-gold-soft bg-gold/15 text-gold' : 'border-border text-ink-muted'
+              actif ? 'border-glow/70 bg-glow/15 text-glow' : 'border-border text-ink-muted'
             }`}
           >
             {o}
@@ -111,7 +111,7 @@ function CarteSlot({ slot, index }: { slot: ResultatComposition['slots'][number]
         <span
           className={`shrink-0 rounded-full border px-2 py-0.5 text-[11px] font-medium ${
             slot.typeSlot === 'compagnon'
-              ? 'border-gold-soft bg-gold/10 text-gold'
+              ? 'border-glow/70 bg-glow/10 text-glow'
               : 'border-bon/40 bg-bon/10 text-bon'
           }`}
         >
@@ -155,7 +155,7 @@ function CarteSlot({ slot, index }: { slot: ResultatComposition['slots'][number]
 }
 
 const champInput =
-  'w-full rounded-lg border border-border bg-surface-raised px-3 py-2 text-sm text-ink placeholder:text-ink-muted focus:border-gold-soft focus:outline-none'
+  'w-full rounded-lg border border-border bg-surface-raised px-3 py-2 text-sm text-ink placeholder:text-ink-muted focus:border-glow focus:outline-none'
 
 function FormulaireCreation({
   resultat,
@@ -360,10 +360,10 @@ export function EquipeBuilderPage() {
               type="button"
               onClick={() => setNbJoueurs(n.valeur)}
               className={`rounded-lg border p-3 text-left transition-colors ${
-                nbJoueurs === n.valeur ? 'border-gold-soft bg-gold/10' : 'border-border bg-surface'
+                nbJoueurs === n.valeur ? 'border-glow/70 bg-glow/10' : 'border-border bg-surface'
               }`}
             >
-              <p className={`text-sm font-medium ${nbJoueurs === n.valeur ? 'text-gold' : 'text-ink'}`}>
+              <p className={`text-sm font-medium ${nbJoueurs === n.valeur ? 'text-glow' : 'text-ink'}`}>
                 {n.label}
               </p>
               <p className="mt-0.5 text-xs text-ink-muted">{n.description}</p>
@@ -384,10 +384,10 @@ export function EquipeBuilderPage() {
               type="button"
               onClick={() => setGenre(g.valeur)}
               className={`rounded-lg border p-3 text-left transition-colors ${
-                genre === g.valeur ? 'border-gold-soft bg-gold/10' : 'border-border bg-surface'
+                genre === g.valeur ? 'border-glow/70 bg-glow/10' : 'border-border bg-surface'
               }`}
             >
-              <p className={`text-sm font-medium ${genre === g.valeur ? 'text-gold' : 'text-ink'}`}>
+              <p className={`text-sm font-medium ${genre === g.valeur ? 'text-glow' : 'text-ink'}`}>
                 {g.label}
               </p>
               <p className="mt-0.5 text-xs text-ink-muted">{g.description}</p>
@@ -404,7 +404,7 @@ export function EquipeBuilderPage() {
               type="button"
               onClick={() => setStyleCombat(s.valeur)}
               className={`rounded-full border px-3 py-2 text-xs font-medium transition-colors ${
-                styleCombat === s.valeur ? 'border-gold-soft bg-gold/15 text-gold' : 'border-border text-ink-muted'
+                styleCombat === s.valeur ? 'border-glow/70 bg-glow/15 text-glow' : 'border-border text-ink-muted'
               }`}
             >
               {s.label}
@@ -421,7 +421,7 @@ export function EquipeBuilderPage() {
               type="button"
               onClick={() => setPreferenceSoin(p.valeur)}
               className={`rounded-full border px-3 py-2 text-xs font-medium transition-colors ${
-                preferenceSoin === p.valeur ? 'border-gold-soft bg-gold/15 text-gold' : 'border-border text-ink-muted'
+                preferenceSoin === p.valeur ? 'border-glow/70 bg-glow/15 text-glow' : 'border-border text-ink-muted'
               }`}
             >
               {p.label}
@@ -438,7 +438,7 @@ export function EquipeBuilderPage() {
               type="button"
               onClick={() => setMulticlassage(p.valeur)}
               className={`rounded-full border px-3 py-2 text-xs font-medium transition-colors ${
-                multiclassage === p.valeur ? 'border-gold-soft bg-gold/15 text-gold' : 'border-border text-ink-muted'
+                multiclassage === p.valeur ? 'border-glow/70 bg-glow/15 text-glow' : 'border-border text-ink-muted'
               }`}
             >
               {p.label}
@@ -469,10 +469,10 @@ export function EquipeBuilderPage() {
           type="button"
           onClick={() => setSynergiesSurprenantes((v) => !v)}
           className={`w-full rounded-lg border p-3 text-left transition-colors ${
-            synergiesSurprenantes ? 'border-gold-soft bg-gold/10' : 'border-border bg-surface'
+            synergiesSurprenantes ? 'border-glow/70 bg-glow/10' : 'border-border bg-surface'
           }`}
         >
-          <p className={`text-sm font-medium ${synergiesSurprenantes ? 'text-gold' : 'text-ink'}`}>
+          <p className={`text-sm font-medium ${synergiesSurprenantes ? 'text-glow' : 'text-ink'}`}>
             {synergiesSurprenantes ? '✓ ' : ''}Privilégier des associations inattendues mais très
             synergiques
           </p>
@@ -489,7 +489,7 @@ export function EquipeBuilderPage() {
             type="button"
             onClick={() => setUtiliserExistants((v) => !v)}
             className={`w-full rounded-lg border p-3 text-left text-sm transition-colors ${
-              utiliserExistants ? 'border-gold-soft bg-gold/10 text-ink' : 'border-border bg-surface text-ink-muted'
+              utiliserExistants ? 'border-glow/70 bg-glow/10 text-ink' : 'border-border bg-surface text-ink-muted'
             }`}
           >
             <p className="font-medium">

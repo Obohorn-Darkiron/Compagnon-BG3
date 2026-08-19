@@ -29,7 +29,7 @@ function CreerCampagne() {
           value={nom}
           onChange={(e) => setNom(e.target.value)}
           placeholder="Ex. Coop du samedi soir"
-          className="rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:border-gold-soft focus:outline-none"
+          className="rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:border-glow focus:outline-none"
         />
         <button
           type="submit"
@@ -67,7 +67,7 @@ function SelecteurCampagne({ campagneActiveId }: { campagneActiveId: string }) {
           value={nom}
           onChange={(e) => setNom(e.target.value)}
           placeholder="Nom de la campagne"
-          className="w-32 rounded-lg border border-border bg-surface px-2 py-1.5 text-xs text-ink placeholder:text-ink-muted focus:border-gold-soft focus:outline-none"
+          className="w-32 rounded-lg border border-border bg-surface px-2 py-1.5 text-xs text-ink placeholder:text-ink-muted focus:border-glow focus:outline-none"
         />
         <button type="submit" className="rounded-lg bg-gold px-2 py-1.5 text-xs font-medium text-bg">
           OK
