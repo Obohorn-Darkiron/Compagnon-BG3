@@ -4,21 +4,23 @@
   --font-title: Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
   --font-body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
 
-  --color-bg: #100e0b;
-  --color-surface: #1a1611;
-  --color-surface-raised: #241e17;
-  --color-border: #362d21;
+  --color-bg: #0a0d1f;
+  --color-surface: #141833;
+  --color-surface-raised: #1e2444;
+  --color-border: #2f3560;
 
-  --color-ink: #eee7d8;
-  --color-ink-muted: #a89b83;
+  --color-ink: #e6e4f5;
+  --color-ink-muted: #9491b8;
 
   --color-gold: #c9a227;
-  --color-gold-soft: #8a6f22;
+  --color-gold-soft: #a3841f;
+
+  --color-glow: #a855f7;
 
   --color-essentiel: #b23a3a;
   --color-excellent: #c9a227;
   --color-bon: #3f8a5f;
-  --color-situationnel: #5b6b7a;
+  --color-situationnel: #6b6b9a;
 }
 
 html {
@@ -28,6 +30,9 @@ html {
 body {
   margin: 0;
   background-color: var(--color-bg);
+  background-image: radial-gradient(ellipse 80% 50% at 50% -10%, color-mix(in srgb, var(--color-glow) 22%, transparent), transparent);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--color-ink);
   font-family: var(--font-body);
 }
