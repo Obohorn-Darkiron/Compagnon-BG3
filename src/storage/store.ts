@@ -14,6 +14,7 @@ function normaliserPersonnage(p: Partial<Personnage>): Personnage {
     niveau: p.niveau ?? 1,
     objetsObtenus: p.objetsObtenus ?? [],
     choixBonusPermanents: p.choixBonusPermanents ?? {},
+    compagnonNom: p.compagnonNom ?? null,
   }
 }
 
@@ -115,6 +116,7 @@ export const saveStore = {
       race?: string | null
       sousRace?: string | null
       styleJeu?: Personnage['styleJeu']
+      compagnonNom?: string | null
     } = {},
   ): string {
     const personnage: Personnage = {
@@ -129,14 +131,18 @@ export const saveStore = {
       niveau: 1,
       objetsObtenus: [],
       choixBonusPermanents: {},
+      compagnonNom: infos.compagnonNom ?? null,
     }
     majEtat({
       ...etat,
-      campagnes: etat.campagnes.map((c) =>
-        c.id === campagneId
-          ? { ...c, personnages: [...c.personnages, personnage] }
-          : c,
-      ),
+      campagnes: etat.campagnes.map((c) => {
+        if (c.id !== campagneId) return c
+        const compagnonsRecrutes =
+          personnage.compagnonNom && !c.compagnonsRecrutes.includes(personnage.compagnonNom)
+            ? [...c.compagnonsRecrutes, personnage.compagnonNom]
+            : c.compagnonsRecrutes
+        return { ...c, personnages: [...c.personnages, personnage], compagnonsRecrutes }
+      }),
     })
     return personnage.id
   },

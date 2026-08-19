@@ -64,6 +64,27 @@ describe('basculerCompagnonRecrute', () => {
   })
 })
 
+describe('creerPersonnage — lien avec un compagnon de l\'histoire', () => {
+  it('marque automatiquement le compagnon comme recruté', () => {
+    const id = saveStore.creerCampagne('Ma campagne')
+    saveStore.creerPersonnage(id, 'Wyll', { compagnonNom: 'Wyll', race: 'Humain' })
+    expect(saveStore.getSnapshot().campagnes[0].compagnonsRecrutes).toEqual(['Wyll'])
+  })
+
+  it('ne duplique pas le compagnon si déjà marqué recruté', () => {
+    const id = saveStore.creerCampagne('Ma campagne')
+    saveStore.basculerCompagnonRecrute(id, 'Wyll')
+    saveStore.creerPersonnage(id, 'Wyll', { compagnonNom: 'Wyll', race: 'Humain' })
+    expect(saveStore.getSnapshot().campagnes[0].compagnonsRecrutes).toEqual(['Wyll'])
+  })
+
+  it("n'affecte pas la liste des recrutés pour un personnage libre", () => {
+    const id = saveStore.creerCampagne('Ma campagne')
+    saveStore.creerPersonnage(id, 'Tav')
+    expect(saveStore.getSnapshot().campagnes[0].compagnonsRecrutes).toEqual([])
+  })
+})
+
 describe('importerJson — rétrocompatibilité', () => {
   it('accepte une sauvegarde ancienne sans compagnonsRecrutes ni race/sousRace', () => {
     const ancienneSauvegarde = JSON.stringify({

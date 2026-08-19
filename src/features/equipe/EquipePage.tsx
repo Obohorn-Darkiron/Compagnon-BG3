@@ -145,7 +145,14 @@ export function EquipePage() {
               className="flex items-center justify-between gap-3 rounded-xl border border-border bg-surface p-4 active:bg-surface-raised"
             >
               <div className="min-w-0">
-                <p className="truncate font-title text-lg font-semibold text-ink">{perso.nom}</p>
+                <div className="flex items-center gap-1.5">
+                  <p className="truncate font-title text-lg font-semibold text-ink">{perso.nom}</p>
+                  {perso.compagnonNom && (
+                    <span className="shrink-0 rounded-full border border-glow/40 bg-glow/10 px-1.5 py-0.5 text-[10px] font-medium text-glow">
+                      Compagnon
+                    </span>
+                  )}
+                </div>
                 <p className="truncate text-sm text-ink-muted">
                   {build ? build.nom : 'Build à définir'}
                 </p>
@@ -157,7 +164,7 @@ export function EquipePage() {
           )
         })}
 
-        <NouveauPersonnageForm campagneId={campagneActive.id} />
+        <NouveauPersonnageForm campagne={campagneActive} />
       </div>
 
       <CompagnonsSuivi campagne={campagneActive} />

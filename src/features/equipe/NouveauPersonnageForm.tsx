@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { Plus } from '../../components/icons'
 import { buildsPourClasseEtSousClasse, classesDisponibles, races, sousClassesPourClasse } from '../../data'
-import { saveStore, type StyleJeu } from '../../storage/useSaveData'
+import { saveStore, type Campagne, type StyleJeu } from '../../storage/useSaveData'
+import { COMPAGNONS } from './composeurEquipe'
 import { SousClasseCard } from './SousClasseCard'
 import { BuildCandidatCard } from './BuildCandidatCard'
 
@@ -14,8 +15,12 @@ const stylesJeu: { valeur: StyleJeu; label: string }[] = [
   { valeur: 'neutre', label: 'Neutre / gris' },
 ]
 
-export function NouveauPersonnageForm({ campagneId }: { campagneId: string }) {
+type TypePerso = 'libre' | 'compagnon'
+
+export function NouveauPersonnageForm({ campagne }: { campagne: Campagne }) {
   const [ouvert, setOuvert] = useState(false)
+  const [type, setType] = useState<TypePerso>('libre')
+  const [compagnonNom, setCompagnonNom] = useState('')
   const [nom, setNom] = useState('')
   const [styleJeu, setStyleJeu] = useState<StyleJeu>(null)
   const [classe, setClasse] = useState('')
@@ -24,12 +29,20 @@ export function NouveauPersonnageForm({ campagneId }: { campagneId: string }) {
   const [race, setRace] = useState('')
   const [sousRace, setSousRace] = useState('')
 
+  const nomsDejaLies = new Set(
+    campagne.personnages.map((p) => p.compagnonNom).filter((n): n is string => n !== null),
+  )
+  const compagnonsDisponibles = COMPAGNONS.filter((c) => !nomsDejaLies.has(c.nom))
+  const compagnonChoisi = COMPAGNONS.find((c) => c.nom === compagnonNom)
+
   const sousClassesDeLaClasse = classe ? sousClassesPourClasse(classe) : []
   const candidats =
     classe && sousClasse ? buildsPourClasseEtSousClasse(classe, sousClasse) : []
-  const raceInfo = races.find((r) => r.nom === race)
+  const raceInfo = races.find((r) => r.nom === (type === 'compagnon' ? compagnonChoisi?.race : race))
 
   function reinitialiser() {
+    setType('libre')
+    setCompagnonNom('')
     setNom('')
     setClasse('')
     setSousClasse('')
@@ -37,6 +50,17 @@ export function NouveauPersonnageForm({ campagneId }: { campagneId: string }) {
     setRace('')
     setSousRace('')
     setOuvert(false)
+  }
+
+  function choisirCompagnon(nomChoisi: string) {
+    const c = COMPAGNONS.find((x) => x.nom === nomChoisi)
+    setCompagnonNom(nomChoisi)
+    setNom(nomChoisi)
+    setRace(c?.race ?? '')
+    setSousRace(c?.sousRace ?? '')
+    setClasse('')
+    setSousClasse('')
+    setBuildId('')
   }
 
   if (!ouvert) {
@@ -52,31 +76,102 @@ export function NouveauPersonnageForm({ campagneId }: { campagneId: string }) {
     )
   }
 
+  const nomValide = type === 'libre' ? nom.trim().length > 0 : compagnonNom.length > 0
+
   return (
     <form
       className="flex flex-col gap-3 rounded-xl border border-border bg-surface p-4"
       onSubmit={(e) => {
         e.preventDefault()
-        const valeur = nom.trim()
-        if (!valeur) return
-        saveStore.creerPersonnage(campagneId, valeur, {
+        if (!nomValide) return
+        saveStore.creerPersonnage(campagne.id, type === 'compagnon' ? compagnonNom : nom.trim(), {
           classe: classe || null,
           sousClasse: sousClasse || null,
           buildId: buildId || null,
           race: race || null,
           sousRace: sousRace || null,
           styleJeu,
+          compagnonNom: type === 'compagnon' ? compagnonNom : null,
         })
         reinitialiser()
       }}
     >
-      <input
-        autoFocus
-        value={nom}
-        onChange={(e) => setNom(e.target.value)}
-        placeholder="Nom du personnage"
-        className="rounded-lg border border-border bg-surface-raised px-3 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:border-glow focus:outline-none"
-      />
+      <div>
+        <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-muted">
+          Perso libre ou compagnon de l'histoire ?
+        </p>
+        <div className="flex gap-1.5">
+          <button
+            type="button"
+            onClick={() => {
+              setType('libre')
+              setCompagnonNom('')
+              setNom('')
+              setRace('')
+              setSousRace('')
+            }}
+            className={`flex-1 rounded-lg border px-2 py-2.5 text-xs font-medium transition-colors ${
+              type === 'libre' ? 'border-glow/70 bg-glow/15 text-glow' : 'border-border text-ink-muted'
+            }`}
+          >
+            Personnage libre
+          </button>
+          <button
+            type="button"
+            onClick={() => setType('compagnon')}
+            disabled={compagnonsDisponibles.length === 0}
+            className={`flex-1 rounded-lg border px-2 py-2.5 text-xs font-medium transition-colors disabled:opacity-30 ${
+              type === 'compagnon' ? 'border-glow/70 bg-glow/15 text-glow' : 'border-border text-ink-muted'
+            }`}
+          >
+            Compagnon de l'histoire
+          </button>
+        </div>
+        {type === 'compagnon' && compagnonsDisponibles.length === 0 && (
+          <p className="mt-1.5 text-[11px] text-ink-muted">
+            Les 10 compagnons de l'histoire sont déjà dans ce groupe.
+          </p>
+        )}
+      </div>
+
+      {type === 'libre' ? (
+        <input
+          autoFocus
+          value={nom}
+          onChange={(e) => setNom(e.target.value)}
+          placeholder="Nom du personnage"
+          className="rounded-lg border border-border bg-surface-raised px-3 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:border-glow focus:outline-none"
+        />
+      ) : (
+        <div>
+          <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-muted">
+            Quel compagnon ?
+          </p>
+          <div className="flex flex-col gap-2">
+            {compagnonsDisponibles.map((c) => (
+              <button
+                key={c.nom}
+                type="button"
+                onClick={() => choisirCompagnon(c.nom)}
+                className={`rounded-lg border p-2.5 text-left transition-colors ${
+                  compagnonNom === c.nom ? 'border-glow/70 bg-glow/10' : 'border-border bg-surface-raised'
+                }`}
+              >
+                <p className="text-sm font-medium text-ink">{c.nom}</p>
+                <p className="text-xs text-ink-muted">
+                  {c.sousRace ?? c.race} · {c.classeDefaut} de base
+                </p>
+              </button>
+            ))}
+          </div>
+          {compagnonChoisi && (
+            <p className="mt-1.5 text-[11px] text-ink-muted">
+              Sa race ({compagnonChoisi.sousRace ?? compagnonChoisi.race}) est fixe — seule la classe
+              peut être changée (reclassage chez Withers).
+            </p>
+          )}
+        </div>
+      )}
 
       <div>
         <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-muted">
@@ -103,40 +198,42 @@ export function NouveauPersonnageForm({ campagneId }: { campagneId: string }) {
         </p>
       </div>
 
-      <div>
-        <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-muted">
-          Race (optionnel)
-        </p>
-        <select
-          value={race}
-          onChange={(e) => {
-            setRace(e.target.value)
-            setSousRace('')
-          }}
-          className={champSelect}
-        >
-          <option value="">Peu importe</option>
-          {races.map((r) => (
-            <option key={r.nom} value={r.nom}>
-              {r.nom}
-            </option>
-          ))}
-        </select>
-        {raceInfo?.sousRaces && (
+      {type === 'libre' && (
+        <div>
+          <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-muted">
+            Race (optionnel)
+          </p>
           <select
-            value={sousRace}
-            onChange={(e) => setSousRace(e.target.value)}
-            className={`mt-2 ${champSelect}`}
+            value={race}
+            onChange={(e) => {
+              setRace(e.target.value)
+              setSousRace('')
+            }}
+            className={champSelect}
           >
-            <option value="">Sous-race — peu importe</option>
-            {raceInfo.sousRaces.map((sr) => (
-              <option key={sr.nom} value={sr.nom}>
-                {sr.nom}
+            <option value="">Peu importe</option>
+            {races.map((r) => (
+              <option key={r.nom} value={r.nom}>
+                {r.nom}
               </option>
             ))}
           </select>
-        )}
-      </div>
+          {raceInfo?.sousRaces && (
+            <select
+              value={sousRace}
+              onChange={(e) => setSousRace(e.target.value)}
+              className={`mt-2 ${champSelect}`}
+            >
+              <option value="">Sous-race — peu importe</option>
+              {raceInfo.sousRaces.map((sr) => (
+                <option key={sr.nom} value={sr.nom}>
+                  {sr.nom}
+                </option>
+              ))}
+            </select>
+          )}
+        </div>
+      )}
 
       <div>
         <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-muted">
@@ -232,7 +329,7 @@ export function NouveauPersonnageForm({ campagneId }: { campagneId: string }) {
         </button>
         <button
           type="submit"
-          disabled={!nom.trim()}
+          disabled={!nomValide}
           className="flex-1 rounded-lg bg-gold py-2.5 text-sm font-medium text-bg disabled:opacity-40"
         >
           Ajouter

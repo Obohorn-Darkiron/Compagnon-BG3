@@ -62,38 +62,52 @@ export function PersonnageDetailPage() {
       </Section>
 
       <Section title="Race">
-        <select
-          value={personnage.race ?? ''}
-          onChange={(e) =>
-            saveStore.majPersonnage(campagneId, personnage.id, {
-              race: e.target.value || null,
-              sousRace: null,
-            })
-          }
-          className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-ink focus:border-glow focus:outline-none"
-        >
-          <option value="">Peu importe</option>
-          {races.map((r) => (
-            <option key={r.nom} value={r.nom}>
-              {r.nom}
-            </option>
-          ))}
-        </select>
-        {raceInfo?.sousRaces && (
-          <select
-            value={personnage.sousRace ?? ''}
-            onChange={(e) =>
-              saveStore.majPersonnage(campagneId, personnage.id, { sousRace: e.target.value || null })
-            }
-            className="mt-2 w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-ink focus:border-glow focus:outline-none"
-          >
-            <option value="">Sous-race — peu importe</option>
-            {raceInfo.sousRaces.map((sr) => (
-              <option key={sr.nom} value={sr.nom}>
-                {sr.nom}
-              </option>
-            ))}
-          </select>
+        {personnage.compagnonNom ? (
+          <div className="rounded-lg border border-glow/40 bg-glow/10 px-3 py-2.5">
+            <p className="text-sm font-medium text-glow">
+              {personnage.sousRace ?? personnage.race ?? 'Race inconnue'}
+            </p>
+            <p className="mt-1 text-xs text-ink-muted">
+              Race fixe de {personnage.compagnonNom} — un compagnon de l'histoire garde toujours sa
+              race d'origine, même reclassé chez Withers.
+            </p>
+          </div>
+        ) : (
+          <>
+            <select
+              value={personnage.race ?? ''}
+              onChange={(e) =>
+                saveStore.majPersonnage(campagneId, personnage.id, {
+                  race: e.target.value || null,
+                  sousRace: null,
+                })
+              }
+              className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-ink focus:border-glow focus:outline-none"
+            >
+              <option value="">Peu importe</option>
+              {races.map((r) => (
+                <option key={r.nom} value={r.nom}>
+                  {r.nom}
+                </option>
+              ))}
+            </select>
+            {raceInfo?.sousRaces && (
+              <select
+                value={personnage.sousRace ?? ''}
+                onChange={(e) =>
+                  saveStore.majPersonnage(campagneId, personnage.id, { sousRace: e.target.value || null })
+                }
+                className="mt-2 w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-ink focus:border-glow focus:outline-none"
+              >
+                <option value="">Sous-race — peu importe</option>
+                {raceInfo.sousRaces.map((sr) => (
+                  <option key={sr.nom} value={sr.nom}>
+                    {sr.nom}
+                  </option>
+                ))}
+              </select>
+            )}
+          </>
         )}
         {raceInfo && (
           <div className="mt-2 rounded-lg border border-border bg-surface-raised px-3 py-2.5">
@@ -108,6 +122,10 @@ export function PersonnageDetailPage() {
       </Section>
 
       <Section title="Build associé">
+        <p className="mb-2 text-xs text-ink-muted">
+          Change de build à tout moment ici — c'est ton "respec" : niveau, équipement et bonus se
+          recalculent automatiquement sur le nouveau build.
+        </p>
         {classeSousClasse && (
           <p className="mb-2 text-sm text-ink-muted">{classeSousClasse}</p>
         )}

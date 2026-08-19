@@ -13,6 +13,8 @@ export interface Personnage {
   objetsObtenus: string[]
   /** Pour les bonus permanents à choix libre (stat et/ou valeur) : { [objetId]: { stat, valeur } }. */
   choixBonusPermanents: Record<string, { stat: string; valeur: number }>
+  /** Nom d'un compagnon de l'histoire (Shadowheart, Astarion...) si ce perso EST ce compagnon — sa race est alors fixe. Null pour un perso créé librement. */
+  compagnonNom: string | null
 }
 
 export interface Campagne {
