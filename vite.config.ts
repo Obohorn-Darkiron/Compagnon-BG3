@@ -9,20 +9,15 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'icon-192.png', 'icon-512.png', 'icon-maskable-192.png', 'icon-maskable-512.png'],
+      includeAssets: ['icon-192.png', 'icon-512.png', 'icon-maskable-192.png', 'icon-maskable-512.png'],
       manifest: {
         name: 'Compagnon BG3',
         short_name: 'BG3 Compagnon',
         description: 'Builds, objets et suivi de personnages pour Baldur\'s Gate 3',
-        theme_color: '#0f0d0a',
-        background_color: '#0f0d0a',
+        theme_color: '#05081f',
+        background_color: '#05081f',
         display: 'standalone',
         icons: [
-          {
-            src: 'favicon.svg',
-            sizes: 'any',
-            type: 'image/svg+xml',
-          },
           {
             src: 'icon-192.png',
             sizes: '192x192',
