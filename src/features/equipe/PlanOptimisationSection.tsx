@@ -9,8 +9,8 @@ function PlanCaracCard({ plan }: { plan: PlanCarac }) {
   const totalLibere = plan.totalASI - plan.pointsRestants
 
   return (
-    <div className="rounded-lg border border-gold-soft/40 bg-gold/10 px-3 py-3">
-      <p className="text-sm font-semibold text-gold">{nom}</p>
+    <div className="rounded-lg border border-glow/40 bg-glow/10 px-3 py-3">
+      <p className="text-sm font-semibold text-glow">{nom}</p>
       <p className="mt-1 text-xs text-ink">
         Départ {plan.depart} + {plan.bonusPermanent} permanent · les dons ne devaient fournir que{' '}
         {plan.cible - plan.depart} normalement, il t'en reste réellement besoin de{' '}

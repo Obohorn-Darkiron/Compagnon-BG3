@@ -183,7 +183,7 @@ export function PersonnageDetailPage() {
                   )}
                 </div>
                 {note && (
-                  <div className="rounded-lg border border-gold-soft/40 bg-gold/10 px-3 py-2.5">
+                  <div className="rounded-lg border border-glow/40 bg-glow/10 px-3 py-2.5">
                     <p className="text-xs text-ink">{note}</p>
                   </div>
                 )}

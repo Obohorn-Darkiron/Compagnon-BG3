@@ -126,7 +126,7 @@ export function EquipePage() {
       <div className="px-4 pt-4">
         <Link
           to="/equipe/builder"
-          className="flex items-center justify-center gap-1.5 rounded-lg border border-gold-soft bg-gold/10 py-2.5 text-sm font-medium text-gold active:bg-gold/15"
+          className="flex items-center justify-center gap-1.5 rounded-lg border border-glow/60 bg-glow/10 py-2.5 text-sm font-medium text-glow active:bg-glow/15"
         >
           <Sparkles className="h-4 w-4" />
           Explorer des compositions d'équipe

@@ -87,8 +87,8 @@ export function GroupeApercu({ campagne }: { campagne: Campagne }) {
         <Section title="Conseils de race">
           <div className="flex flex-col gap-2">
             {conseilsRace.map((c, i) => (
-              <div key={i} className="rounded-lg border border-gold-soft/40 bg-gold/10 px-3 py-2.5">
-                <p className="text-xs font-semibold text-gold">{c.label}</p>
+              <div key={i} className="rounded-lg border border-glow/40 bg-glow/10 px-3 py-2.5">
+                <p className="text-xs font-semibold text-glow">{c.label}</p>
                 <p className="mt-1 text-xs leading-relaxed text-ink">{c.description}</p>
               </div>
             ))}

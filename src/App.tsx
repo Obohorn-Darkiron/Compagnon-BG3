@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { Swords, Compass, Users, Settings } from './components/icons'
+import { TentacleDecoration } from './components/TentacleDecoration'
 
 const tabs = [
   { to: '/builds', label: 'Builds', icon: Swords },
@@ -10,7 +11,8 @@ const tabs = [
 
 function App() {
   return (
-    <div className="mx-auto flex h-svh max-w-md flex-col overflow-hidden">
+    <div className="relative mx-auto flex h-svh max-w-md flex-col overflow-hidden">
+      <TentacleDecoration />
       <main className="flex-1 overflow-y-auto pb-20">
         <Outlet />
       </main>

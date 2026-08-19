@@ -122,6 +122,23 @@ export function ParametresPage() {
           objets référencés. Aucune donnée n'est envoyée sur internet — tout reste sur cet
           appareil.
         </p>
+        <p className="mt-3 text-xs text-ink-muted">
+          Icône tentacule décorative : « Curled Tentacle » par Lorc (
+          <a
+            href="https://game-icons.net"
+            className="underline underline-offset-2"
+          >
+            game-icons.net
+          </a>
+          ), sous licence{' '}
+          <a
+            href="https://creativecommons.org/licenses/by/3.0/"
+            className="underline underline-offset-2"
+          >
+            CC BY 3.0
+          </a>
+          .
+        </p>
       </Section>
     </div>
   )

@@ -133,8 +133,8 @@ function CarteSlot({ slot, index }: { slot: ResultatComposition['slots'][number]
       <p className="mt-2 text-xs leading-relaxed text-ink">{slot.raison}</p>
 
       {slot.compagnon && (
-        <div className="mt-2 rounded-lg border border-gold-soft/40 bg-gold/10 px-3 py-2.5">
-          <p className="text-xs font-semibold text-gold">
+        <div className="mt-2 rounded-lg border border-glow/40 bg-glow/10 px-3 py-2.5">
+          <p className="text-xs font-semibold text-glow">
             Recrute {slot.compagnon.nom} ({slot.compagnon.sousRace ?? slot.compagnon.race})
           </p>
           <p className="mt-1 text-xs leading-relaxed text-ink">
@@ -552,8 +552,8 @@ export function EquipeBuilderPage() {
             <Section title="Conseils de race">
               <div className="flex flex-col gap-2">
                 {resultat.conseilsRace.map((c, i) => (
-                  <div key={i} className="rounded-lg border border-gold-soft/40 bg-gold/10 px-3 py-2.5">
-                    <p className="text-xs font-semibold text-gold">{c.label}</p>
+                  <div key={i} className="rounded-lg border border-glow/40 bg-glow/10 px-3 py-2.5">
+                    <p className="text-xs font-semibold text-glow">{c.label}</p>
                     <p className="mt-1 text-xs leading-relaxed text-ink">{c.description}</p>
                   </div>
                 ))}
