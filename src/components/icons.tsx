@@ -9,16 +9,11 @@ const base = {
   strokeLinejoin: 'round' as const,
 }
 
-export function Swords({ className }: IconProps) {
+export function Shield({ className }: IconProps) {
   return (
     <svg className={className} {...base}>
-      <path d="M14.5 17.5 3 6V3h3l11.5 11.5" />
-      <path d="M13 19l6-6" />
-      <path d="M16 16l4 4" />
-      <path d="M19 21l2-2" />
-      <path d="M9.5 6.5 21 18v3h-3L6.5 10.5" />
-      <path d="M5 14l-4 4" />
-      <path d="M2 21l2-2" />
+      <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z" />
+      <path d="M12 3v18" opacity="0.5" />
     </svg>
   )
 }
@@ -46,8 +41,16 @@ export function Users({ className }: IconProps) {
 export function Settings({ className }: IconProps) {
   return (
     <svg className={className} {...base}>
-      <circle cx="12" cy="12" r="3" />
-      <path d="M19.4 13.5a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.56V19.5a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1.1-1.56 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.56-1H4.5a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.56-1.1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34H10a1.7 1.7 0 0 0 1-1.56V4.5a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87V10a1.7 1.7 0 0 0 1.56 1h.09a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.56 1z" />
+      <circle cx="12" cy="12" r="6" />
+      <circle cx="12" cy="12" r="2.2" />
+      <line x1="18" y1="12" x2="20.7" y2="12" />
+      <line x1="16.24" y1="16.24" x2="18.15" y2="18.15" />
+      <line x1="12" y1="18" x2="12" y2="20.7" />
+      <line x1="7.76" y1="16.24" x2="5.85" y2="18.15" />
+      <line x1="6" y1="12" x2="3.3" y2="12" />
+      <line x1="7.76" y1="7.76" x2="5.85" y2="5.85" />
+      <line x1="12" y1="6" x2="12" y2="3.3" />
+      <line x1="16.24" y1="7.76" x2="18.15" y2="5.85" />
     </svg>
   )
 }

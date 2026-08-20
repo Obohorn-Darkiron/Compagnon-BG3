@@ -1,9 +1,9 @@
 import { NavLink, Outlet } from 'react-router-dom'
-import { Swords, Compass, Users, Settings } from './components/icons'
+import { Shield, Compass, Users, Settings } from './components/icons'
 import { TentacleDecoration } from './components/TentacleDecoration'
 
 const tabs = [
-  { to: '/builds', label: 'Builds', icon: Swords },
+  { to: '/builds', label: 'Builds', icon: Shield },
   { to: '/explorer', label: 'Explorer', icon: Compass },
   { to: '/equipe', label: 'Mon Groupe', icon: Users },
   { to: '/parametres', label: 'Paramètres', icon: Settings },

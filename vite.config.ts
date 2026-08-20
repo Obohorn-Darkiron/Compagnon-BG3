@@ -16,6 +16,7 @@ export default defineConfig({
         name: 'Compagnon BG3',
         short_name: 'BG3 Compagnon',
         description: 'Builds, objets et suivi de personnages pour Baldur\'s Gate 3',
+        lang: 'fr',
         theme_color: '#05081f',
         background_color: '#05081f',
         display: 'standalone',
