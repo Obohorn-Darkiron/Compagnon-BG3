@@ -10,6 +10,7 @@ import { saveStore, useSaveData, type StyleJeu } from '../../storage/useSaveData
 import { NiveauStepper } from './NiveauStepper'
 import { BonusPermanentsSection } from './BonusPermanentsSection'
 import { PlanOptimisationSection } from './PlanOptimisationSection'
+import { SelecteurBuild } from './SelecteurBuild'
 import { bonusParStatObtenus, noteBonusPermanent } from './bonusPermanentsUtils'
 
 const stylesJeu: { valeur: StyleJeu; label: string }[] = [
@@ -126,28 +127,16 @@ export function PersonnageDetailPage() {
           Change de build à tout moment ici — c'est ton "respec" : niveau, équipement et bonus se
           recalculent automatiquement sur le nouveau build.
         </p>
-        {classeSousClasse && (
-          <p className="mb-2 text-sm text-ink-muted">{classeSousClasse}</p>
-        )}
-        <select
-          value={personnage.buildId ?? ''}
-          onChange={(e) => {
-            const nouveauBuild = builds.find((b) => b.id === e.target.value)
+        <SelecteurBuild
+          buildIdActuel={personnage.buildId}
+          onChoisir={(nouveauBuild) =>
             saveStore.majPersonnage(campagneId, personnage.id, {
-              buildId: e.target.value || null,
+              buildId: nouveauBuild?.id ?? null,
               classe: nouveauBuild?.classe ?? personnage.classe,
               sousClasse: nouveauBuild?.sousClasse ?? personnage.sousClasse,
             })
-          }}
-          className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-ink focus:border-glow focus:outline-none"
-        >
-          <option value="">Aucun build choisi</option>
-          {builds.map((b) => (
-            <option key={b.id} value={b.id}>
-              {b.nom}
-            </option>
-          ))}
-        </select>
+          }
+        />
         {build && (
           <Link
             to={`/builds/${build.id}`}

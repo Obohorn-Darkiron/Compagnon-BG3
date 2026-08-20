@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Plus } from '../../components/icons'
+import { ClasseIcon } from '../../components/ClasseIcon'
 import { buildsPourClasseEtSousClasse, classesDisponibles, races, sousClassesPourClasse } from '../../data'
 import { saveStore, type Campagne, type StyleJeu } from '../../storage/useSaveData'
 import { COMPAGNONS } from './composeurEquipe'
@@ -249,12 +250,13 @@ export function NouveauPersonnageForm({ campagne }: { campagne: Campagne }) {
                 setSousClasse('')
                 setBuildId('')
               }}
-              className={`rounded-full border px-3 py-2 text-xs font-medium transition-colors ${
+              className={`flex items-center gap-1.5 rounded-full border px-3 py-2 text-xs font-medium transition-colors ${
                 classe === c
                   ? 'border-glow/70 bg-glow/15 text-glow'
                   : 'border-border text-ink-muted'
               }`}
             >
+              <ClasseIcon classe={c} className="h-3.5 w-3.5" />
               {c}
             </button>
           ))}

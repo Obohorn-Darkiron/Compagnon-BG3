@@ -133,3 +133,117 @@ export function Plus({ className }: IconProps) {
     </svg>
   )
 }
+
+export function IconeGuerrier({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <path d="M6 18 18 6" />
+      <path d="M13 4l2 2M18 9l2 2" />
+      <path d="M4 20l2-2" />
+    </svg>
+  )
+}
+
+export function IconeMagicien({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <path d="M4 20 16 8" />
+      <path d="M15 3l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" />
+    </svg>
+  )
+}
+
+export function IconeOccultiste({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6-10-6-10-6z" />
+      <circle cx="12" cy="12" r="2.5" />
+    </svg>
+  )
+}
+
+export function IconeEnsorceleur({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <path d="M12 3c1.5 2.5-1 4-1 6.5a2.5 2.5 0 0 0 5 0c0-1-.4-1.6-.8-2.1" />
+      <path d="M8 12a6 6 0 1 0 10.5-4" />
+    </svg>
+  )
+}
+
+export function IconeClerc({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <circle cx="12" cy="12" r="5" />
+      <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.8 5.8l2 2M16.2 16.2l2 2M18.2 5.8l-2 2M7.8 16.2l-2 2" />
+    </svg>
+  )
+}
+
+export function IconePaladin({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z" />
+      <path d="M12 8v6M9 11h6" />
+    </svg>
+  )
+}
+
+export function IconeBarbare({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <path d="M6 21 17 10" />
+      <path d="M13.5 8c.5-3 3-5.5 6-5.5.3 3-1.7 6-4.7 6.5z" />
+    </svg>
+  )
+}
+
+export function IconeRoublard({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <path d="M12 2v9" />
+      <path d="M8 6.5h8" />
+      <path d="M12 11l4 9-4-2-4 2z" />
+    </svg>
+  )
+}
+
+export function IconeRodeur({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <path d="M6 3c6 3 6 15 0 18" />
+      <path d="M6 12h14" />
+      <path d="M17 9l3 3-3 3" />
+    </svg>
+  )
+}
+
+export function IconeBarde({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <circle cx="8" cy="17" r="3" />
+      <path d="M11 17V5l8-2v12" />
+      <circle cx="16" cy="15" r="3" />
+    </svg>
+  )
+}
+
+export function IconeDruide({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <path d="M4 20c8 0 16-6 16-16-10 0-16 8-16 16z" />
+      <path d="M6 18c4-4 8-8 12-12" />
+    </svg>
+  )
+}
+
+export function IconeMoine({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 3a4.5 4.5 0 0 0 0 9 4.5 4.5 0 0 1 0 9" />
+      <circle cx="12" cy="7.5" r="1" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="16.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}

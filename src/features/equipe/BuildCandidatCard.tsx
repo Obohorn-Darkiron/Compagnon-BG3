@@ -1,6 +1,7 @@
 import type { Build } from '../../data'
 import { estMulticlasse } from '../../data'
 import { MulticlasseBadge } from '../../components/MulticlasseBadge'
+import { ClasseIcon } from '../../components/ClasseIcon'
 
 export function BuildCandidatCard({
   build,
@@ -20,7 +21,12 @@ export function BuildCandidatCard({
       }`}
     >
       <div className="flex items-start justify-between gap-2">
-        <p className="text-sm font-semibold text-ink">{build.nom}</p>
+        <div className="flex min-w-0 items-center gap-2">
+          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-gold-soft/50 bg-gold/10 text-gold">
+            <ClasseIcon classe={build.classe} className="h-3.5 w-3.5" />
+          </span>
+          <p className="truncate text-sm font-semibold text-ink">{build.nom}</p>
+        </div>
         <MulticlasseBadge multiclasse={estMulticlasse(build)} />
       </div>
       <p className="mt-0.5 text-xs text-gold">{build.role}</p>
