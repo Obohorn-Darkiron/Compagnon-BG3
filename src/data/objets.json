@@ -54,9 +54,7 @@
     "obtention": "Récompense de quête : sauver la Conseillère Florrick de l'auberge en feu (un choix parmi trois).",
     "effet": "Veines électriques : chaque sort/cantrip infligeant des dégâts octroie 2 Charges de foudre.",
     "verifie": true,
-    "aConfirmer": [
-      "nomFr"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -104,7 +102,7 @@
   {
     "id": "titanstring-bow",
     "nomEn": "Titanstring Bow",
-    "nomFr": null,
+    "nomFr": "Arc des titans",
     "type": "Arc long (arme à distance)",
     "rarete": "Rare",
     "acte": 1,
@@ -112,9 +110,7 @@
     "obtention": "Achat auprès du marchand Brem, dans la planque du Zhentarim accessible depuis une trappe cachée au Repos de Waukeen.",
     "effet": "Ajoute le mod de Force aux dégâts de l'arc (excellent avec une Force gonflée par objet).",
     "verifie": false,
-    "aConfirmer": [
-      "nomFr"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -148,7 +144,7 @@
   {
     "id": "everburn-blade",
     "nomEn": "Everburn Blade",
-    "nomFr": null,
+    "nomFr": "Lame Everburn",
     "type": "Épée à deux mains",
     "rarete": "Rare",
     "acte": 1,
@@ -156,9 +152,7 @@
     "obtention": "Sur le Nautiloïde au tout début du jeu : le commandant Zhalk la lâche si on l'affronte, ou si on lui lance Injonction pour la lui faire lâcher sans combat.",
     "effet": "Épée à deux mains dont les dégâts sont en permanence enflammés (+1d4 feu) — excellente arme d'ouverture pour toute mêlée.",
     "verifie": false,
-    "aConfirmer": [
-      "nomFr"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -172,9 +166,7 @@
     "obtention": "Lâchés par Raphaël après avoir libéré Hope pendant la séquence de la Maison de l'Espoir (accessible via Helsik, au Tribut du Diable).",
     "effet": "Gants BiS du Moine : dégâts de force bonus, soin sur coup à mains nues (ou avantage au prochain jet à la place), +2 Constitution (jusqu'à 20).",
     "verifie": true,
-    "aConfirmer": [
-      "nomFr"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -239,7 +231,7 @@
   {
     "id": "amulet-of-devout",
     "nomEn": "Amulet of the Devout",
-    "nomFr": null,
+    "nomFr": "Amulette du dévot",
     "type": "Amulette",
     "rarete": "Très rare",
     "acte": 3,
@@ -247,15 +239,13 @@
     "obtention": "Dans le grand coffre d'offrandes au sous-sol du Tabernacle. Le crocheter sans être vu évite la malédiction ; le briser au sol au lieu de l'ouvrir évite aussi la sanction.",
     "effet": "+2 au DD des sorts et une utilisation supplémentaire de Conduit divin.",
     "verifie": true,
-    "aConfirmer": [
-      "nomFr"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
     "id": "gloves-hill-giant",
     "nomEn": "Gauntlets of Hill Giant Strength",
-    "nomFr": null,
+    "nomFr": "Gantelets de force du géant des collines",
     "type": "Gants",
     "rarete": "Rare",
     "acte": 3,
@@ -263,15 +253,13 @@
     "obtention": "Sur un piédestal dans les Archives de la Maison de l'Espoir, face au Marteau Orphique. Protégé par une plaque de pression, désamorçable ou contournable en substituant un objet de poids équivalent.",
     "effet": "Fixe la Force à 19 (libère des points de caractéristiques pour les builds de Force).",
     "verifie": true,
-    "aConfirmer": [
-      "nomFr"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
     "id": "amulet-greater-health",
     "nomEn": "Amulet of Greater Health",
-    "nomFr": null,
+    "nomFr": "Amulette de plus grande santé",
     "type": "Amulette",
     "rarete": "Très rare",
     "acte": 3,
@@ -279,15 +267,13 @@
     "obtention": "Sur un piédestal dans les Archives de la Maison de l'Espoir. Protégé par un piège (jet de Discrétion difficile) ou contournable en substituant un objet de poids équivalent.",
     "effet": "Fixe la Constitution à 23 (PV énormes + avantage aux jets de sauvegarde de CON / concentration).",
     "verifie": true,
-    "aConfirmer": [
-      "nomFr"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
     "id": "bhaalist-armour",
     "nomEn": "Bhaalist Armour",
-    "nomFr": null,
+    "nomFr": "Armure de fidèle de Bhaal",
     "type": "Armure (moyenne)",
     "rarete": "Très rare",
     "acte": 3,
@@ -305,7 +291,7 @@
   {
     "id": "deathstalker-mantle",
     "nomEn": "The Deathstalker Mantle",
-    "nomFr": null,
+    "nomFr": "Manteau de Traquemort",
     "type": "Cape",
     "rarete": "Très rare",
     "acte": 1,
@@ -313,9 +299,7 @@
     "obtention": "Offerte par Sceleritas Fel lors d'une scène clé de l'Acte 1, uniquement si le personnage principal est l'origine Enfant Obscur. Inobtenable avec un personnage créé librement (Tav) ou une autre origine.",
     "effet": "Devenir invisible pendant 2 tours après avoir tué un ennemi (une fois par tour) — excellent pour les assassins et furtifs. Peut être donnée à n'importe quel allié une fois obtenue.",
     "verifie": true,
-    "aConfirmer": [
-      "nomFr"
-    ],
+    "aConfirmer": [],
     "alignement": "restreint",
     "alignementNote": "Réservée à l'origine Enfant Obscur (Dark Urge) — inobtenable en Tav classique."
   },
