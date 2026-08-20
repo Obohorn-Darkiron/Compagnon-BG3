@@ -6,6 +6,7 @@ import { ImportanceBadge } from '../../components/ImportanceBadge'
 import { CaracTable } from '../../components/CaracTable'
 import { AlignementBadge } from '../../components/AlignementBadge'
 import { alternativesPourBuild, getBuild, getObjet, nomAffiche } from '../../data'
+import { conseilRacePourBuild } from '../equipe/composeurEquipe'
 
 type StylePreview = 'bienveillant' | 'neutre' | null
 
@@ -23,6 +24,7 @@ export function BuildDetailPage() {
   if (!build) return <Navigate to="/builds" replace />
 
   const alternatives = alternativesPourBuild(build)
+  const conseilRace = conseilRacePourBuild(build)
 
   return (
     <div>
@@ -35,6 +37,21 @@ export function BuildDetailPage() {
       <Section title="Caractéristiques de départ">
         <CaracTable caracDepart={build.caracDepart} />
       </Section>
+
+      {conseilRace && (
+        <Section title="Race conseillée">
+          <div className="rounded-lg border border-glow/40 bg-glow/10 px-3 py-2.5">
+            <p className="text-sm font-semibold text-glow">{conseilRace.race}</p>
+            <p className="mt-1 text-xs leading-relaxed text-ink">
+              {conseilRace.description(build.nom)}
+            </p>
+          </div>
+          <p className="mt-2 text-[11px] text-ink-muted">
+            Un vrai bénéfice mécanique vérifié pour ce build précis — d'autres races restent
+            jouables, celle-ci n'est juste pas laissée au hasard.
+          </p>
+        </Section>
+      )}
 
       <Section title="Forces & faiblesses">
         <div className="grid grid-cols-1 gap-3">

@@ -46,11 +46,23 @@ describe('detecterSynergies', () => {
 })
 
 describe('genererConseilsRace', () => {
-  it('propose Demi-Orc pour un profil de mêlée', () => {
-    const melee = creerBuildFixture({ id: 'melee-x', nom: 'Mon Guerrier', roles: ['degatsMelee'] })
+  it('propose Demi-Orc pour un profil de mêlée à Force modérée', () => {
+    const melee = creerBuildFixture({
+      id: 'melee-x',
+      nom: 'Mon Guerrier',
+      roles: ['degatsMelee'],
+      caracDepart: { FOR: 14, DEX: 16, CON: 14, INT: 8, SAG: 10, CHA: 8 },
+    })
     const conseils = genererConseilsRace([melee])
     expect(conseils.some((c) => c.label.includes('Demi-Orc'))).toBe(true)
     expect(conseils.find((c) => c.label.includes('Demi-Orc'))?.description).toContain('Mon Guerrier')
+  })
+
+  it('propose Nain (Duergar) plutôt que Demi-Orc pour un profil de mêlée à haute Force', () => {
+    const bourrin = creerBuildFixture({ id: 'bourrin-x', nom: 'Mon Bourrin', roles: ['degatsMelee'] })
+    const conseils = genererConseilsRace([bourrin])
+    expect(conseils.some((c) => c.label.includes('Duergar'))).toBe(true)
+    expect(conseils.some((c) => c.label.includes('Demi-Orc'))).toBe(false)
   })
 
   it('propose Gnome pour un lanceur de sorts orienté contrôle', () => {
@@ -68,8 +80,36 @@ describe('genererConseilsRace', () => {
     const melee1 = creerBuildFixture({ id: 'melee-1', roles: ['degatsMelee'] })
     const melee2 = creerBuildFixture({ id: 'melee-2', roles: ['degatsMelee'] })
     const conseils = genererConseilsRace([melee1, melee2])
-    const demiOrc = conseils.filter((c) => c.label.includes('Demi-Orc'))
-    expect(demiOrc).toHaveLength(1)
+    const duergar = conseils.filter((c) => c.label.includes('Duergar'))
+    expect(duergar).toHaveLength(1)
+  })
+
+  it('propose Halfelin pour un profil Tireur d\'élite à distance', () => {
+    const archer = creerBuildFixture({
+      id: 'archer-x',
+      nom: 'Mon Archer',
+      roles: ['degatsDistance'],
+      dons: ["Tireur d'élite (niv 4)"],
+    })
+    const conseils = genererConseilsRace([archer])
+    expect(conseils.some((c) => c.label.includes('Halfelin'))).toBe(true)
+  })
+
+  it('propose Githyanki pour un Magicien', () => {
+    const magicien = creerBuildFixture({ id: 'magicien-x', nom: 'Mon Magicien', classe: 'Magicien', roles: ['degatsDistance'] })
+    const conseils = genererConseilsRace([magicien])
+    expect(conseils.some((c) => c.label.includes('Githyanki'))).toBe(true)
+  })
+
+  it('propose Drakéide pour un Ensorceleur feu', () => {
+    const pyromage = creerBuildFixture({
+      id: 'ensorceleur-feu-x',
+      nom: 'Mon Pyromage',
+      classe: 'Ensorceleur',
+      roles: ['degatsDistance'],
+    })
+    const conseils = genererConseilsRace([pyromage])
+    expect(conseils.some((c) => c.label.includes('Drakéide'))).toBe(true)
   })
 })
 

@@ -136,18 +136,33 @@ const REGLES_SYNERGIE: RegleSynergie[] = [
 
 interface ReglaConseilRace {
   id: string
+  /** Doit correspondre exactement à un `race` de races.json / CompagnonInfo, pour que le composeur
+   * d'équipe puisse aussi s'en servir pour décider qui créer soi-même vs qui recruter. */
+  race: string
   label: string
   cible: (b: Build) => boolean
   description: (nomCible: string) => string
 }
 
+const donCorrespond = (b: Build, motif: RegExp) => b.dons.some((d) => motif.test(d))
+
 /**
  * Conseils de race indépendants des paires — uniquement quand une race a un effet mécanique réel et
- * vérifié (bg3.wiki), jamais une suggestion générique "pour le style".
+ * vérifié (bg3.wiki), jamais une suggestion générique "pour le style". Sert à la fois à l'affichage
+ * (fiche de build, aperçu de groupe) et au composeur d'équipe pour prioriser qui créer soi-même.
  */
 const CONSEILS_RACE: ReglaConseilRace[] = [
   {
+    id: 'duergar-force-burst',
+    race: 'Nain',
+    label: 'Nain (Duergar) pour un coup de boost sans Concentration',
+    cible: (b) => b.roles.includes('degatsMelee') && b.caracDepart.FOR >= 16,
+    description: (nom) =>
+      `Pour ${nom}, la sous-race Duergar (Nain) apporte Agrandissement une fois par repos long, sans dépenser de Concentration ni d'emplacement de sort : bonus aux dégâts et avantage aux tests de Force pendant qu'il est actif — un vrai coup de boost gratuit sur un profil déjà orienté Force.`,
+  },
+  {
     id: 'demi-orc-melee',
+    race: 'Demi-Orc',
     label: 'Demi-Orc pour ton pilier de mêlée',
     cible: (b) => b.roles.includes('degatsMelee'),
     description: (nom) =>
@@ -155,12 +170,42 @@ const CONSEILS_RACE: ReglaConseilRace[] = [
   },
   {
     id: 'gnome-controle-caster',
+    race: 'Gnome',
     label: 'Gnome pour résister au contrôle ennemi',
     cible: (b) => b.roles.includes('controle') && b.sortsCles.length > 0,
     description: (nom) =>
       `Pour ${nom}, la race Gnome (n'importe quelle sous-race) donne l'avantage sur TOUS les jets de sauvegarde d'Intelligence, de Sagesse et de Charisme — c'est exactement ce qui protège un lanceur de sorts contre la plupart des effets de contrôle ennemis (Charme, Peur, Domination...).`,
   },
+  {
+    id: 'halfelin-jet-a-risque',
+    race: 'Halfelin',
+    label: 'Halfelin pour fiabiliser tes jets à risque',
+    cible: (b) => donCorrespond(b, /Tireur d.élite|Grand Maître d.armes|Maître d.armes à deux mains/i),
+    description: (nom) =>
+      `${nom} mise sur des dons qui pénalisent volontairement le jet d'attaque (-5 pour +10 dégâts). La race Halfelin relance automatiquement tout 1 naturel sur un d20 (attaque, sauvegarde ou test) — exactement le genre de raté qui fait le plus mal sur ce profil — et Brave le rend immunisé à la Peur.`,
+  },
+  {
+    id: 'githyanki-savoir-int',
+    race: 'Githyanki',
+    label: 'Githyanki pour un lanceur INT touche-à-tout',
+    cible: (b) => b.classe === 'Magicien',
+    description: (nom) =>
+      `Pour ${nom}, la race Githyanki donne Connaissance astrale : en choisissant l'Intelligence, tu deviens maîtrisé dans TOUTES les compétences liées (Arcanes, Histoire, Investigation...), et tu peux changer ce choix à chaque repos long. Elle donne aussi Main du mage gratuitement, sans consommer un sort connu.`,
+  },
+  {
+    id: 'drakeide-feu',
+    race: 'Drakéide',
+    label: 'Drakéide (ascendance rouge) pour un caster feu',
+    cible: (b) => b.classe === 'Ensorceleur' && /feu/i.test(b.id),
+    description: (nom) =>
+      `Pour ${nom}, un Drakéide d'ascendance rouge apporte une résistance permanente aux dégâts de feu (utile contre tes propres zones et celles des ennemis) et un souffle de feu en zone, indépendant de tes sorts et emplacements.`,
+  },
 ]
+
+/** Le nom exact de la race que ce build préférerait, si une règle vérifiée s'applique — sinon undefined. */
+export function conseilRacePourBuild(build: Build): ReglaConseilRace | undefined {
+  return CONSEILS_RACE.find((r) => r.cible(build))
+}
 
 export interface CompagnonInfo {
   nom: string
@@ -191,10 +236,7 @@ export const COMPAGNONS: CompagnonInfo[] = [
 
 /** Race dont l'app sait, via une règle vérifiée, qu'elle apporte un vrai bénéfice mécanique pour ce build. */
 function beneficeRaceSpecifique(build: Build): string | null {
-  if (possedeSort(build, /Ténèbres/)) return 'Drow'
-  if (CONSEILS_RACE.find((r) => r.id === 'demi-orc-melee')?.cible(build)) return 'Demi-Orc'
-  if (CONSEILS_RACE.find((r) => r.id === 'gnome-controle-caster')?.cible(build)) return 'Gnome'
-  return null
+  return conseilRacePourBuild(build)?.race ?? null
 }
 
 function bucketDe(role: RoleTag): Bucket | null {
