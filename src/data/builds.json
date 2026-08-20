@@ -1381,6 +1381,24 @@
         "objetId": "spellsparkler",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "luminous-armour",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-stormy-clamour",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-belligerent-skies",
+        "importance": "Excellent",
+        "acte": 1
       }
     ],
     "roles": [
@@ -1656,6 +1674,24 @@
         "objetId": "amulet-greater-health",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "melfs-first-staff",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "shadespell-circlet",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-dexterity",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -2284,6 +2320,24 @@
         "objetId": "amulet-of-devout",
         "importance": "Excellent",
         "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "wapiras-crown",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "whispering-promise",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-salving",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -2401,6 +2455,24 @@
         "emplacement": "Cape",
         "objetId": "deathstalker-mantle",
         "importance": "Situationnel",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "bloodthirst",
+        "importance": "Essentiel",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "legacy-of-the-masters",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-speed",
+        "importance": "Bon",
         "acte": 1
       }
     ],
