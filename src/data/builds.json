@@ -129,6 +129,18 @@
         "objetId": "potent-robe",
         "importance": "Excellent",
         "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "spellcrux-amulet",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-belligerent-skies",
+        "importance": "Excellent",
+        "acte": 1
       }
     ],
     "roles": [
@@ -286,6 +298,12 @@
         "objetId": "birthright",
         "importance": "Bon",
         "acte": 3
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "helldusk-boots",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -412,6 +430,30 @@
       {
         "emplacement": "Bottes",
         "objetId": "boots-of-speed",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "firestoker",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "neer-misser",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "hellfire-hand-crossbow",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "wondrous-gloves",
         "importance": "Bon",
         "acte": 1
       }
@@ -549,6 +591,18 @@
         "objetId": "deathstalker-mantle",
         "importance": "Situationnel",
         "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "mask-of-soul-perception",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-speed",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -673,6 +727,24 @@
         "objetId": "boots-of-speed",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "haste-helm",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-cinder-and-sizzle",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-uninhibited-kushigo",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -799,6 +871,30 @@
         "emplacement": "Arme principale",
         "objetId": "balduran-giantslayer",
         "importance": "Essentiel",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme à allonge",
+        "objetId": "halberd-of-vigilance",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "grymskull-helm",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-free-action",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "foebreaker",
+        "importance": "Bon",
         "acte": 3
       }
     ],
@@ -1095,6 +1191,30 @@
       {
         "emplacement": "Arme principale",
         "objetId": "balduran-giantslayer",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "helmet-of-smiting",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "unflinching-protector-amulet",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "killers-sweetheart",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "blackguards-sword",
         "importance": "Excellent",
         "acte": 3
       }
@@ -1949,6 +2069,30 @@
         "objetId": "deathstalker-mantle",
         "importance": "Situationnel",
         "acte": 1
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "crimson-mischief",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Main gauche",
+        "objetId": "cold-snap",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "callous-glow-ring",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "bloodthirst",
+        "importance": "Essentiel",
+        "acte": 3
       }
     ],
     "roles": [
@@ -2071,6 +2215,30 @@
         "emplacement": "Arme principale",
         "objetId": "balduran-giantslayer",
         "importance": "Essentiel",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "foebreaker",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "charge-bound-warhammer",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "helmet-of-grit",
+        "importance": "Bon",
         "acte": 3
       }
     ],
@@ -2198,6 +2366,30 @@
         "objetId": "potent-robe",
         "importance": "Bon",
         "acte": 2
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "caitiff-staff",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-the-weave",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "risky-ring",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Mains",
+        "objetId": "bracers-of-defence",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -2601,6 +2793,30 @@
         "objetId": "potent-robe",
         "importance": "Bon",
         "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-misty-step",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "circlet-of-blasting",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "dark-justiciar-mail",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "hood-of-the-weave",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -2721,6 +2937,24 @@
       {
         "emplacement": "Arme",
         "objetId": "markoheshkir",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-misty-step",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "robe-of-the-weave",
         "importance": "Excellent",
         "acte": 3
       }
@@ -2846,6 +3080,24 @@
         "objetId": "diadem-arcane-synergy",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "shifting-corpus-ring",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-colour-spray",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-displacement",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -2971,6 +3223,30 @@
         "objetId": "bracers-of-defence",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "phalar-aluve",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "sussur-dagger",
+        "importance": "Situationnel",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "infernal-rapier",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "duellists-prerogative",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -3092,6 +3368,30 @@
       {
         "emplacement": "Amulette",
         "objetId": "amulet-of-devout",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "blood-of-lathander",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-hill-giant",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "shield-of-devotion",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "helldusk-armour",
         "importance": "Excellent",
         "acte": 3
       }
@@ -3217,6 +3517,30 @@
         "objetId": "markoheshkir",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "phalar-aluve",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-elemental-infusion",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "wood-woad-shield",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "broodmothers-revenge",
+        "importance": "Situationnel",
+        "acte": 1
       }
     ],
     "roles": [
@@ -3340,6 +3664,30 @@
         "objetId": "balduran-giantslayer",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "blood-of-lathander",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "shield-of-devotion",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "mantle-of-the-holy-warrior",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "helldusk-armour",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -3460,6 +3808,30 @@
       {
         "emplacement": "Arme principale",
         "objetId": "balduran-giantslayer",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-salving",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "unflinching-protector-amulet",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "shield-of-devotion",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "helm-of-balduran",
         "importance": "Excellent",
         "acte": 3
       }
@@ -3585,6 +3957,30 @@
         "objetId": "potent-robe",
         "importance": "Excellent",
         "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-feywild-sparks",
+        "importance": "Essentiel",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "hood-of-the-weave",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "markoheshkir",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "necklace-elemental-augmentation",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -3708,6 +4104,30 @@
         "objetId": "necklace-elemental-augmentation",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "crushers-ring",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-striding",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-speed",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "the-sparkswall",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -3824,6 +4244,30 @@
         "emplacement": "Arme principale",
         "objetId": "balduran-giantslayer",
         "importance": "Essentiel",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "defender-greataxe",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "bonespike-garb",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-regeneration",
+        "importance": "Excellent",
         "acte": 3
       }
     ],
@@ -3947,6 +4391,30 @@
         "emplacement": "Amulette",
         "objetId": "amulet-of-the-harpers",
         "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "cap-of-curing",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "wondrous-gloves",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "spellcrux-amulet",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-brilliance",
+        "importance": "Excellent",
         "acte": 2
       }
     ],
@@ -4072,6 +4540,30 @@
         "objetId": "gloves-of-dexterity",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-archery",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "joltshooter",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "circlet-of-hunting",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-hill-giant",
+        "importance": "Situationnel",
+        "acte": 3
       }
     ],
     "roles": [
@@ -4191,6 +4683,24 @@
         "objetId": "deathstalker-mantle",
         "importance": "Situationnel",
         "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-misty-step",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "disintegrating-night-walkers",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-displacement",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -4313,6 +4823,30 @@
         "objetId": "potent-robe",
         "importance": "Bon",
         "acte": 2
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "caitiff-staff",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-mental-inhibition",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "spellcrux-amulet",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Mains",
+        "objetId": "bracers-of-defence",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -4437,6 +4971,24 @@
         "objetId": "gloves-of-dexterity",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "moondrop-pendant",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "fetish-callarduran-smoothhands",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-protection",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -4560,6 +5112,30 @@
         "objetId": "bracers-of-defence",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-the-harpers",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme à allonge",
+        "objetId": "halberd-of-vigilance",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "foebreaker",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -4682,6 +5258,30 @@
         "objetId": "whispering-promise",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "armour-of-moonbasking",
+        "importance": "Essentiel",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-twilight",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "barkskin-armour",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "disintegrating-night-walkers",
+        "importance": "Situationnel",
+        "acte": 1
       }
     ],
     "roles": [
@@ -4801,6 +5401,24 @@
         "objetId": "amulet-greater-health",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-free-action",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "nyrulna",
+        "importance": "Essentiel",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-hill-giant",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -4917,6 +5535,30 @@
       {
         "emplacement": "Amulette",
         "objetId": "amulet-greater-health",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "bloodguzzler-garb",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "cap-of-wrath",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "charge-bound-warhammer",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "helmet-of-grit",
         "importance": "Excellent",
         "acte": 3
       }
@@ -5040,6 +5682,30 @@
         "objetId": "boots-of-speed",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "wondrous-gloves",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "risky-ring",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "killers-sweetheart",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "armour-of-agility",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -5164,6 +5830,30 @@
         "objetId": "birthright",
         "importance": "Bon",
         "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "cap-of-curing",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-salving",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "wapiras-crown",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-brilliance",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -5288,6 +5978,30 @@
         "objetId": "amulet-of-devout",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "coruscation-ring",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-misty-step",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "luminous-gloves",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "callous-glow-ring",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -5411,6 +6125,30 @@
         "objetId": "amulet-of-devout",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "shadespell-circlet",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "disintegrating-night-walkers",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "spidersilk-armour",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "covert-cowl",
+        "importance": "Excellent",
+        "acte": 2
       }
     ],
     "roles": [
@@ -5535,6 +6273,24 @@
         "objetId": "amulet-of-devout",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "bhaalist-armour",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "hollows-staff",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "dark-justiciar-gauntlets",
+        "importance": "Excellent",
+        "acte": 2
       }
     ],
     "roles": [
@@ -5658,6 +6414,30 @@
         "objetId": "amulet-of-devout",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "melfs-first-staff",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "strange-conduit-ring",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Objet clé",
+        "objetId": "cheveux-tatie-ethel",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Situationnel",
+        "acte": 1
       }
     ],
     "roles": [
@@ -5782,6 +6562,30 @@
         "objetId": "markoheshkir",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "melfs-first-staff",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "barkskin-armour",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "staff-of-spellpower",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "robe-of-the-weave",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -5904,6 +6708,30 @@
         "objetId": "spellsparkler",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "shadow-cloaked-ring",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "spidersilk-armour",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "shadespell-circlet",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "dark-justiciar-mail",
+        "importance": "Situationnel",
+        "acte": 2
       }
     ],
     "roles": [
@@ -6023,6 +6851,30 @@
         "objetId": "gloves-of-dexterity",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "joltshooter",
+        "importance": "Situationnel",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-stormy-clamour",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "callous-glow-ring",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "gontr-mael",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -6145,6 +6997,24 @@
         "objetId": "potent-robe",
         "importance": "Bon",
         "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-misty-step",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "pearl-of-power-amulet",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "quickspell-gloves",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -6267,6 +7137,24 @@
         "objetId": "diadem-arcane-synergy",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "pearl-of-power-amulet",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "staff-of-crones",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "robe-of-the-weave",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -6388,6 +7276,24 @@
         "emplacement": "Torse",
         "objetId": "potent-robe",
         "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "melfs-first-staff",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-misty-step",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "spellcrux-amulet",
+        "importance": "Excellent",
         "acte": 2
       }
     ],
@@ -6511,6 +7417,24 @@
         "objetId": "potent-robe",
         "importance": "Bon",
         "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "silver-pendant",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "disintegrating-night-walkers",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "quickspell-gloves",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -6627,6 +7551,30 @@
       {
         "emplacement": "Bottes",
         "objetId": "boots-of-speed",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-cinder-and-sizzle",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "fistbreaker-helm",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-uninhibited-kushigo",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "haste-helm",
         "importance": "Bon",
         "acte": 1
       }
@@ -6746,6 +7694,30 @@
         "objetId": "boots-of-speed",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-the-drunkard",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "drunken-cloth",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-misty-step",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-displacement",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -6868,6 +7840,30 @@
         "objetId": "potent-robe",
         "importance": "Bon",
         "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "shifting-corpus-ring",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "fey-semblance-amulet",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "caitiff-staff",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Mains",
+        "objetId": "bracers-of-defence",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -6989,6 +7985,30 @@
       {
         "emplacement": "Arme principale",
         "objetId": "balduran-giantslayer",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "adamantine-shield",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "unflinching-protector-amulet",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "sarevoks-horned-helmet",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-persistence",
         "importance": "Excellent",
         "acte": 3
       }
@@ -7113,6 +8133,30 @@
         "objetId": "balduran-giantslayer",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "bhaalist-armour",
+        "importance": "Essentiel",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "blackguards-sword",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "sword-of-chaos",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "sarevoks-horned-helmet",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -7232,6 +8276,30 @@
       {
         "emplacement": "Gants",
         "objetId": "gloves-of-dexterity",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "eversight-ring",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "steelwatcher-helmet",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-hill-giant",
+        "importance": "Situationnel",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "whispering-promise",
         "importance": "Bon",
         "acte": 1
       }
@@ -7355,6 +8423,30 @@
         "objetId": "boots-of-speed",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "gontr-mael",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "caustic-band",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "strange-conduit-ring",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Objet clé",
+        "objetId": "resonance-stone",
+        "importance": "Situationnel",
+        "acte": 2
       }
     ],
     "roles": [
@@ -7474,6 +8566,24 @@
         "objetId": "gloves-of-dexterity",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "sword-of-screams",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "helmet-of-grit",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-protection",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -7490,7 +8600,14 @@
     "split": "Occultiste 12 (classe unique)",
     "role": "Dégâts mêlée psychiques (Lame des ombres) + Contrôle par Ténèbres",
     "resume": "Variante légère et perfide du Pacte de la Lame : au lieu d'une arme à deux mains, tu lies Lame des ombres (Shadow Blade) — une lame conjurée, fine et au Charisme, qui inflige des dégâts psychiques et gagne l'avantage automatique dès que la cible est dans le noir ou une pénombre. Combinée à Ténèbres + l'invocation Vision des ténèbres, tu frappes en toute sécurité pendant que les ennemis à distance ne peuvent plus te viser. Depuis le patch 8, Lame des ombres ne demande plus de Concentration : tu peux la garder active tout en te concentrant sur Immobilisation de monstre, ce qui ouvre un vrai combo contrôle + dégâts plutôt qu'un simple stick psychique.",
-    "caracDepart": { "FOR": 8, "DEX": 14, "CON": 16, "INT": 8, "SAG": 10, "CHA": 16 },
+    "caracDepart": {
+      "FOR": 8,
+      "DEX": 14,
+      "CON": 16,
+      "INT": 8,
+      "SAG": 10,
+      "CHA": 16
+    },
     "forces": [
       "Avantage quasi permanent grâce au combo Ténèbres + Vision des ténèbres",
       "Lame des ombres n'utilise plus la Concentration — libre de maintenir Immobilisation de monstre en même temps et de cumuler l'Anneau du conduit étrange à chaque coup",
@@ -7502,37 +8619,141 @@
       "Ton propre nuage de Ténèbres gêne aussi tes alliés à distance — coordonne avec le groupe",
       "La Pierre de résonance double tes dégâts psychiques mais aussi ceux que tu subis — à réserver aux ennemis qui n'infligent pas eux-mêmes de dégâts psychiques"
     ],
-    "dons": ["+2 Charisme (niv 4)", "Doué (Skilled) (niv 8)", "+2 Charisme (niv 12)"],
-    "sortsCles": ["Lame des ombres (Shadow Blade)", "Explosion occulte (Eldritch Blast)", "Ténèbres", "Immobilisation de monstre"],
+    "dons": [
+      "+2 Charisme (niv 4)",
+      "Doué (Skilled) (niv 8)",
+      "+2 Charisme (niv 12)"
+    ],
+    "sortsCles": [
+      "Lame des ombres (Shadow Blade)",
+      "Explosion occulte (Eldritch Blast)",
+      "Ténèbres",
+      "Immobilisation de monstre"
+    ],
     "jalons": [
-      { "etape": "Niv 2 (invocation)", "note": "Vision des ténèbres choisie ici plutôt qu'une autre invocation — c'est elle qui permet de voir et d'agir normalement dans une obscurité magique, y compris la tienne." },
-      { "etape": "Niv 3 (Pacte de la Lame)", "note": "Lame des ombres apprise et immédiatement liée par Lame maudite : attaque et dégâts au Charisme, dégâts psychiques, avantage automatique si la cible est dans le noir ou une pénombre." },
-      { "etape": "Niv 12", "note": "Buveur de vie ajoute le Charisme aux dégâts d'arme — donc aussi à chaque coup de Lame des ombres." }
+      {
+        "etape": "Niv 2 (invocation)",
+        "note": "Vision des ténèbres choisie ici plutôt qu'une autre invocation — c'est elle qui permet de voir et d'agir normalement dans une obscurité magique, y compris la tienne."
+      },
+      {
+        "etape": "Niv 3 (Pacte de la Lame)",
+        "note": "Lame des ombres apprise et immédiatement liée par Lame maudite : attaque et dégâts au Charisme, dégâts psychiques, avantage automatique si la cible est dans le noir ou une pénombre."
+      },
+      {
+        "etape": "Niv 12",
+        "note": "Buveur de vie ajoute le Charisme aux dégâts d'arme — donc aussi à chaque coup de Lame des ombres."
+      }
     ],
     "progression": [
-      { "niveau": 1, "titre": "Lame maudite", "detail": "Le Pacte de la Lame lie immédiatement une arme (Charisme, dégâts magiques). Malédiction en action bonus. Tours : Décharge occulte, Lame tonnante." },
-      { "niveau": 2, "titre": "Deux emplacements de pacte", "detail": "Invocation Vision des ténèbres choisie — vision normale dans l'obscurité magique. Sort appris : Bouclier." },
-      { "niveau": 3, "titre": "Pacte de la Lame — Lame des ombres", "detail": "Sort de niveau 2 appris : Lame des ombres, aussitôt liée par Lame maudite. Dégâts psychiques au Charisme, avantage dans le noir/la pénombre." },
-      { "niveau": 4, "titre": "Premier don", "detail": "+2 Charisme (18). Pas brumeux appris pour la mobilité." },
-      { "niveau": 5, "titre": "Pacte approfondi", "detail": "Seconde attaque à chaque tour. Invocation Décharge répulsive. Ténèbres apprise si pas déjà fait." },
-      { "niveau": 6, "titre": "Spectre maudit", "detail": "Réaction : relève un spectre après la mort d'une cible maudite compatible." },
-      { "niveau": 7, "titre": "Sorts de niveau 4", "detail": "Porte dimensionnelle apprise pour repositionner ton nuage de Ténèbres ou fuir." },
-      { "niveau": 8, "titre": "Deuxième don", "detail": "Doué : trois compétences maîtrisées supplémentaires." },
-      { "niveau": 9, "titre": "Sorts de niveau 5", "detail": "Immobilisation de monstre apprise — combo direct avec l'avantage de Lame des ombres." },
-      { "niveau": 10, "titre": "Armure des maléfices", "detail": "Trois rayons de Décharge occulte désormais. Réaction Armure des maléfices contre une cible maudite dangereuse." },
-      { "niveau": 11, "titre": "Troisième emplacement de pacte", "detail": "Arcanum mystique de niveau 6 : Cercle de mort, grande zone nécrotique sans Concentration." },
-      { "niveau": 12, "titre": "Buveur de vie — build terminé", "detail": "+2 Charisme (20). Chaque coup de Lame des ombres ajoute aussi le Charisme en dégâts nécrotiques supplémentaires." }
+      {
+        "niveau": 1,
+        "titre": "Lame maudite",
+        "detail": "Le Pacte de la Lame lie immédiatement une arme (Charisme, dégâts magiques). Malédiction en action bonus. Tours : Décharge occulte, Lame tonnante."
+      },
+      {
+        "niveau": 2,
+        "titre": "Deux emplacements de pacte",
+        "detail": "Invocation Vision des ténèbres choisie — vision normale dans l'obscurité magique. Sort appris : Bouclier."
+      },
+      {
+        "niveau": 3,
+        "titre": "Pacte de la Lame — Lame des ombres",
+        "detail": "Sort de niveau 2 appris : Lame des ombres, aussitôt liée par Lame maudite. Dégâts psychiques au Charisme, avantage dans le noir/la pénombre."
+      },
+      {
+        "niveau": 4,
+        "titre": "Premier don",
+        "detail": "+2 Charisme (18). Pas brumeux appris pour la mobilité."
+      },
+      {
+        "niveau": 5,
+        "titre": "Pacte approfondi",
+        "detail": "Seconde attaque à chaque tour. Invocation Décharge répulsive. Ténèbres apprise si pas déjà fait."
+      },
+      {
+        "niveau": 6,
+        "titre": "Spectre maudit",
+        "detail": "Réaction : relève un spectre après la mort d'une cible maudite compatible."
+      },
+      {
+        "niveau": 7,
+        "titre": "Sorts de niveau 4",
+        "detail": "Porte dimensionnelle apprise pour repositionner ton nuage de Ténèbres ou fuir."
+      },
+      {
+        "niveau": 8,
+        "titre": "Deuxième don",
+        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+      },
+      {
+        "niveau": 9,
+        "titre": "Sorts de niveau 5",
+        "detail": "Immobilisation de monstre apprise — combo direct avec l'avantage de Lame des ombres."
+      },
+      {
+        "niveau": 10,
+        "titre": "Armure des maléfices",
+        "detail": "Trois rayons de Décharge occulte désormais. Réaction Armure des maléfices contre une cible maudite dangereuse."
+      },
+      {
+        "niveau": 11,
+        "titre": "Troisième emplacement de pacte",
+        "detail": "Arcanum mystique de niveau 6 : Cercle de mort, grande zone nécrotique sans Concentration."
+      },
+      {
+        "niveau": 12,
+        "titre": "Buveur de vie — build terminé",
+        "detail": "+2 Charisme (20). Chaque coup de Lame des ombres ajoute aussi le Charisme en dégâts nécrotiques supplémentaires."
+      }
     ],
     "equipement": [
-      { "emplacement": "Torse", "objetId": "adamantine-scale-mail", "importance": "Bon", "acte": 1 },
-      { "emplacement": "Bouclier", "objetId": "adamantine-shield", "importance": "Bon", "acte": 1 },
-      { "emplacement": "Tête", "objetId": "diadem-arcane-synergy", "importance": "Bon", "acte": 1 },
-      { "emplacement": "Anneau", "objetId": "strange-conduit-ring", "importance": "Bon", "acte": 1 },
-      { "emplacement": "Cape", "objetId": "deathstalker-mantle", "importance": "Situationnel", "acte": 1 },
-      { "emplacement": "Torse", "objetId": "dark-justiciar-mail", "importance": "Excellent", "acte": 2 },
-      { "emplacement": "Objet clé", "objetId": "resonance-stone", "importance": "Situationnel", "acte": 2 }
+      {
+        "emplacement": "Torse",
+        "objetId": "adamantine-scale-mail",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "adamantine-shield",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "diadem-arcane-synergy",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "strange-conduit-ring",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "deathstalker-mantle",
+        "importance": "Situationnel",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "dark-justiciar-mail",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Objet clé",
+        "objetId": "resonance-stone",
+        "importance": "Situationnel",
+        "acte": 2
+      }
     ],
-    "roles": ["controle", "degatsMelee"]
+    "roles": [
+      "controle",
+      "degatsMelee"
+    ]
   },
   {
     "id": "occultiste-lame-ombres-sentinelle",
@@ -7542,7 +8763,14 @@
     "split": "Occultiste 12 (classe unique)",
     "role": "Dégâts mêlée psychiques secondaires + réactions de Sentinelle en groupe",
     "resume": "Variante de soutien pensée à l'origine pour Wyll dans un groupe où un autre personnage (un Ensorceleur, par exemple) porte déjà le rôle de lanceur Charisme principal : au lieu de rivaliser pour l'équipement premium CHA/DD, cette version mise sur Belm — une attaque bonus supplémentaire qui recopie ta Lame des ombres — et sur le don Sentinelle pour transformer les attaques subies par un allié de mêlée en attaque de réaction. Le noyau Lame des ombres + Ténèbres + Pierre de résonance reste identique à la variante principale, mais l'équipement et le troisième don sont pensés pour ne rien voler à un autre lanceur Charisme du groupe.",
-    "caracDepart": { "FOR": 8, "DEX": 14, "CON": 16, "INT": 10, "SAG": 10, "CHA": 16 },
+    "caracDepart": {
+      "FOR": 8,
+      "DEX": 14,
+      "CON": 16,
+      "INT": 10,
+      "SAG": 10,
+      "CHA": 16
+    },
     "forces": [
       "Belm en main gauche ajoute une vraie attaque bonus de Lame des ombres (pas une simple frappe de dague) — un DPS supplémentaire gratuit chaque tour",
       "Sentinelle transforme les attaques subies par un allié de mêlée proche en attaque de réaction — excellent à côté d'un Berserker ou de tout allié qui encaisse beaucoup de coups",
@@ -7553,38 +8781,146 @@
       "Sans le Miroir de la Perte, plafonne à CHA 20 plutôt que 22 — reste très solide mais légèrement sous le maximum théorique",
       "La Pierre de résonance double aussi les dégâts psychiques subis — même prudence que la variante principale"
     ],
-    "dons": ["+2 Charisme (niv 4)", "Sauvagerie martiale (niv 8)", "+2 Charisme (niv 12)"],
-    "sortsCles": ["Lame des ombres (Shadow Blade)", "Ténèbres", "Arme élémentaire (Elemental Weapon)", "Immobilisation de monstre", "Lame tonnante (Booming Blade)"],
+    "dons": [
+      "+2 Charisme (niv 4)",
+      "Sauvagerie martiale (niv 8)",
+      "+2 Charisme (niv 12)"
+    ],
+    "sortsCles": [
+      "Lame des ombres (Shadow Blade)",
+      "Ténèbres",
+      "Arme élémentaire (Elemental Weapon)",
+      "Immobilisation de monstre",
+      "Lame tonnante (Booming Blade)"
+    ],
     "jalons": [
-      { "etape": "Niv 3 (Pacte de la Lame)", "note": "Lame des ombres apprise et immédiatement liée par Lame maudite : dégâts psychiques au Charisme, avantage dans le noir/la pénombre, sans Concentration depuis le patch 8." },
-      { "etape": "Niv 5 (Arme élémentaire)", "note": "Arme élémentaire (Concentration) ajoute +2 au toucher et des dégâts élémentaires, tout en activant l'Anneau du conduit étrange à chaque coup — bien plus rentable qu'un sort isolé." },
-      { "etape": "Niv 8 (Sauvagerie martiale)", "note": "Relance chaque dé de dégâts d'arme et garde le meilleur résultat : sur les 4d8 de Lame des ombres (dès niv 9), la moyenne passe d'environ 18 à ~23 avant tout autre bonus." },
-      { "etape": "Niv 12", "note": "Buveur de vie ajoute le Charisme aux dégâts d'arme. Avec le double bonus du Miroir de la Perte (Souvenir du Patriarche +1 CHA sans risque, puis +2 CHA en réussissant un test de Religion DD25 — dans cet ordre, sinon le +1 devient inaccessible), ce don peut être remplacé par Sentinelle sans perdre de Charisme final (CHA 22 dans les deux cas)." }
+      {
+        "etape": "Niv 3 (Pacte de la Lame)",
+        "note": "Lame des ombres apprise et immédiatement liée par Lame maudite : dégâts psychiques au Charisme, avantage dans le noir/la pénombre, sans Concentration depuis le patch 8."
+      },
+      {
+        "etape": "Niv 5 (Arme élémentaire)",
+        "note": "Arme élémentaire (Concentration) ajoute +2 au toucher et des dégâts élémentaires, tout en activant l'Anneau du conduit étrange à chaque coup — bien plus rentable qu'un sort isolé."
+      },
+      {
+        "etape": "Niv 8 (Sauvagerie martiale)",
+        "note": "Relance chaque dé de dégâts d'arme et garde le meilleur résultat : sur les 4d8 de Lame des ombres (dès niv 9), la moyenne passe d'environ 18 à ~23 avant tout autre bonus."
+      },
+      {
+        "etape": "Niv 12",
+        "note": "Buveur de vie ajoute le Charisme aux dégâts d'arme. Avec le double bonus du Miroir de la Perte (Souvenir du Patriarche +1 CHA sans risque, puis +2 CHA en réussissant un test de Religion DD25 — dans cet ordre, sinon le +1 devient inaccessible), ce don peut être remplacé par Sentinelle sans perdre de Charisme final (CHA 22 dans les deux cas)."
+      }
     ],
     "progression": [
-      { "niveau": 1, "titre": "Lame maudite", "detail": "Pacte de la Lame et Lier une arme maudite. Tours : Décharge occulte, Lame tonnante." },
-      { "niveau": 2, "titre": "Deux emplacements de pacte", "detail": "Invocations : Décharge occulte à distance et Vision du diable. Sort appris : Bouclier." },
-      { "niveau": 3, "titre": "Pacte de la Lame — Lame des ombres", "detail": "Sort de niveau 2 appris : Lame des ombres, aussitôt liée. Dégâts psychiques au Charisme, avantage dans le noir/la pénombre." },
-      { "niveau": 4, "titre": "Premier don", "detail": "+2 Charisme (18). Pas brumeux appris pour la mobilité." },
-      { "niveau": 5, "titre": "Pacte approfondi", "detail": "Seconde attaque à chaque tour. Invocation Décharge répulsive. Arme élémentaire apprise." },
-      { "niveau": 6, "titre": "Spectre maudit", "detail": "Réaction : relève un spectre après la mort d'une cible maudite compatible." },
-      { "niveau": 7, "titre": "Sorts de niveau 4", "detail": "Porte dimensionnelle apprise pour repositionner la Pierre de résonance ou fuir." },
-      { "niveau": 8, "titre": "Deuxième don", "detail": "Sauvagerie martiale : relance chaque dé de dégâts d'arme et garde le meilleur résultat." },
-      { "niveau": 9, "titre": "Sorts de niveau 5", "detail": "Immobilisation de monstre apprise — combo direct avec la Pierre de résonance, qui baisse déjà les sauvegardes mentales des cibles dans son aura. Lame des ombres passe à 4d8." },
-      { "niveau": 10, "titre": "Armure des maléfices", "detail": "Trois rayons de Décharge occulte désormais. Réaction Armure des maléfices contre une cible maudite dangereuse." },
-      { "niveau": 11, "titre": "Troisième emplacement de pacte", "detail": "Arcanum mystique de niveau 6 : Cercle de mort, grande zone nécrotique sans Concentration." },
-      { "niveau": 12, "titre": "Buveur de vie — build terminé", "detail": "+2 Charisme (20). Chaque coup de Lame des ombres ajoute aussi le Charisme en dégâts nécrotiques. Avec le double bonus du Miroir de la Perte, ce don peut être remplacé par Sentinelle sans perdre de Charisme final." }
+      {
+        "niveau": 1,
+        "titre": "Lame maudite",
+        "detail": "Pacte de la Lame et Lier une arme maudite. Tours : Décharge occulte, Lame tonnante."
+      },
+      {
+        "niveau": 2,
+        "titre": "Deux emplacements de pacte",
+        "detail": "Invocations : Décharge occulte à distance et Vision du diable. Sort appris : Bouclier."
+      },
+      {
+        "niveau": 3,
+        "titre": "Pacte de la Lame — Lame des ombres",
+        "detail": "Sort de niveau 2 appris : Lame des ombres, aussitôt liée. Dégâts psychiques au Charisme, avantage dans le noir/la pénombre."
+      },
+      {
+        "niveau": 4,
+        "titre": "Premier don",
+        "detail": "+2 Charisme (18). Pas brumeux appris pour la mobilité."
+      },
+      {
+        "niveau": 5,
+        "titre": "Pacte approfondi",
+        "detail": "Seconde attaque à chaque tour. Invocation Décharge répulsive. Arme élémentaire apprise."
+      },
+      {
+        "niveau": 6,
+        "titre": "Spectre maudit",
+        "detail": "Réaction : relève un spectre après la mort d'une cible maudite compatible."
+      },
+      {
+        "niveau": 7,
+        "titre": "Sorts de niveau 4",
+        "detail": "Porte dimensionnelle apprise pour repositionner la Pierre de résonance ou fuir."
+      },
+      {
+        "niveau": 8,
+        "titre": "Deuxième don",
+        "detail": "Sauvagerie martiale : relance chaque dé de dégâts d'arme et garde le meilleur résultat."
+      },
+      {
+        "niveau": 9,
+        "titre": "Sorts de niveau 5",
+        "detail": "Immobilisation de monstre apprise — combo direct avec la Pierre de résonance, qui baisse déjà les sauvegardes mentales des cibles dans son aura. Lame des ombres passe à 4d8."
+      },
+      {
+        "niveau": 10,
+        "titre": "Armure des maléfices",
+        "detail": "Trois rayons de Décharge occulte désormais. Réaction Armure des maléfices contre une cible maudite dangereuse."
+      },
+      {
+        "niveau": 11,
+        "titre": "Troisième emplacement de pacte",
+        "detail": "Arcanum mystique de niveau 6 : Cercle de mort, grande zone nécrotique sans Concentration."
+      },
+      {
+        "niveau": 12,
+        "titre": "Buveur de vie — build terminé",
+        "detail": "+2 Charisme (20). Chaque coup de Lame des ombres ajoute aussi le Charisme en dégâts nécrotiques. Avec le double bonus du Miroir de la Perte, ce don peut être remplacé par Sentinelle sans perdre de Charisme final."
+      }
     ],
     "equipement": [
-      { "emplacement": "Main gauche", "objetId": "belm", "importance": "Excellent", "acte": 3 },
-      { "emplacement": "Tête", "objetId": "diadem-arcane-synergy", "importance": "Bon", "acte": 1 },
-      { "emplacement": "Torse", "objetId": "armour-of-agility", "importance": "Excellent", "acte": 3 },
-      { "emplacement": "Amulette", "objetId": "fey-semblance-amulet", "importance": "Bon", "acte": 1 },
-      { "emplacement": "Anneau", "objetId": "strange-conduit-ring", "importance": "Bon", "acte": 1 },
-      { "emplacement": "Cape", "objetId": "cloak-of-displacement", "importance": "Excellent", "acte": 3 },
-      { "emplacement": "Bottes", "objetId": "disintegrating-night-walkers", "importance": "Bon", "acte": 1 }
+      {
+        "emplacement": "Main gauche",
+        "objetId": "belm",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "diadem-arcane-synergy",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "armour-of-agility",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "fey-semblance-amulet",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "strange-conduit-ring",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-displacement",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "disintegrating-night-walkers",
+        "importance": "Bon",
+        "acte": 1
+      }
     ],
-    "roles": ["degatsMelee", "controle"]
+    "roles": [
+      "degatsMelee",
+      "controle"
+    ]
   },
   {
     "id": "roublard-assassin-distance",
@@ -7594,7 +8930,14 @@
     "split": "Roublard 12 (classe unique)",
     "role": "Alpha-strike à distance depuis la discrétion",
     "resume": "Même moteur que l'Assassin pur (Ambuscade : tout coup contre une cible Surprise devient automatiquement critique), mais appliqué à distance : commence en Discrétion, ouvre le combat d'un tir qui critique à coup sûr, encaisse le -5/+10 de Tireur d'élite sans risque puisque le premier coup est déjà garanti critique.",
-    "caracDepart": { "FOR": 8, "DEX": 16, "CON": 14, "INT": 10, "SAG": 12, "CHA": 8 },
+    "caracDepart": {
+      "FOR": 8,
+      "DEX": 16,
+      "CON": 14,
+      "INT": 10,
+      "SAG": 12,
+      "CHA": 8
+    },
     "forces": [
       "Dégâts d'ouverture massifs et fiables (critique garanti + Attaque sournoise + Tireur d'élite)",
       "Zéro risque au contact — tu restes à distance après le premier tir",
@@ -7605,32 +8948,110 @@
       "Après le premier tour, les dégâts retombent au niveau d'un archer classique",
       "Vulnérable si l'ennemi te charge avant que tu aies pu tirer"
     ],
-    "dons": ["Tireur d'élite (niv 4)", "+2 Dextérité (niv 8)", "+2 Dextérité (niv 12)"],
+    "dons": [
+      "Tireur d'élite (niv 4)",
+      "+2 Dextérité (niv 8)",
+      "+2 Dextérité (niv 12)"
+    ],
     "sortsCles": [],
     "jalons": [
-      { "etape": "Niv 3 (Assassin)", "note": "Ambuscade : tout coup porté à une cible Surprise devient automatiquement critique. Alacrité d'assassin : restaure action et action bonus au premier tour de combat." }
+      {
+        "etape": "Niv 3 (Assassin)",
+        "note": "Ambuscade : tout coup porté à une cible Surprise devient automatiquement critique. Alacrité d'assassin : restaure action et action bonus au premier tour de combat."
+      }
     ],
     "progression": [
-      { "niveau": 1, "titre": "Roublard 1", "detail": "Expertise et Attaque sournoise (1d6) dès qu'une cible est prise avec avantage." },
-      { "niveau": 2, "titre": "Ruse", "detail": "Discrétion en action bonus pour te positionner avant l'ouverture." },
-      { "niveau": 3, "titre": "Sous-classe Assassin", "detail": "Ambuscade (critique garanti sur cible Surprise) et Alacrité d'assassin." },
-      { "niveau": 4, "titre": "Premier don", "detail": "Tireur d'élite : ignore le désavantage à distance, option -5/+10 dégâts — à prendre systématiquement sur ton tir d'ouverture garanti critique." },
-      { "niveau": 5, "titre": "Attaque supplémentaire", "detail": "Un second tir par action, utile une fois la surprise passée." },
-      { "niveau": 6, "titre": "Expertise supplémentaire", "detail": "Double maîtrise sur deux compétences de plus, dont Discrétion." },
-      { "niveau": 7, "titre": "Évasion", "detail": "Mi-dégâts sur les sauvegardes de Dextérité réussies." },
-      { "niveau": 8, "titre": "Deuxième don", "detail": "+2 Dextérité (18) — précision, dégâts et CA améliorés." },
-      { "niveau": 9, "titre": "Discrétion infaillible", "detail": "Ne peut plus être repéré en Discrétion par une perception passive, tant que tu restes caché." },
-      { "niveau": 10, "titre": "Attaque sournoise renforcée", "detail": "Le dé d'Attaque sournoise continue de monter avec le niveau." },
-      { "niveau": 11, "titre": "Talent fiable", "detail": "Les jets de compétence maîtrisée ratés sous 10 sont automatiquement traités comme un 10." },
-      { "niveau": 12, "titre": "Troisième don — build terminé", "detail": "+2 Dextérité (20) — maximum naturel." }
+      {
+        "niveau": 1,
+        "titre": "Roublard 1",
+        "detail": "Expertise et Attaque sournoise (1d6) dès qu'une cible est prise avec avantage."
+      },
+      {
+        "niveau": 2,
+        "titre": "Ruse",
+        "detail": "Discrétion en action bonus pour te positionner avant l'ouverture."
+      },
+      {
+        "niveau": 3,
+        "titre": "Sous-classe Assassin",
+        "detail": "Ambuscade (critique garanti sur cible Surprise) et Alacrité d'assassin."
+      },
+      {
+        "niveau": 4,
+        "titre": "Premier don",
+        "detail": "Tireur d'élite : ignore le désavantage à distance, option -5/+10 dégâts — à prendre systématiquement sur ton tir d'ouverture garanti critique."
+      },
+      {
+        "niveau": 5,
+        "titre": "Attaque supplémentaire",
+        "detail": "Un second tir par action, utile une fois la surprise passée."
+      },
+      {
+        "niveau": 6,
+        "titre": "Expertise supplémentaire",
+        "detail": "Double maîtrise sur deux compétences de plus, dont Discrétion."
+      },
+      {
+        "niveau": 7,
+        "titre": "Évasion",
+        "detail": "Mi-dégâts sur les sauvegardes de Dextérité réussies."
+      },
+      {
+        "niveau": 8,
+        "titre": "Deuxième don",
+        "detail": "+2 Dextérité (18) — précision, dégâts et CA améliorés."
+      },
+      {
+        "niveau": 9,
+        "titre": "Discrétion infaillible",
+        "detail": "Ne peut plus être repéré en Discrétion par une perception passive, tant que tu restes caché."
+      },
+      {
+        "niveau": 10,
+        "titre": "Attaque sournoise renforcée",
+        "detail": "Le dé d'Attaque sournoise continue de monter avec le niveau."
+      },
+      {
+        "niveau": 11,
+        "titre": "Talent fiable",
+        "detail": "Les jets de compétence maîtrisée ratés sous 10 sont automatiquement traités comme un 10."
+      },
+      {
+        "niveau": 12,
+        "titre": "Troisième don — build terminé",
+        "detail": "+2 Dextérité (20) — maximum naturel."
+      }
     ],
     "equipement": [
-      { "emplacement": "Arme à distance", "objetId": "titanstring-bow", "importance": "Excellent", "acte": 1 },
-      { "emplacement": "Gants", "objetId": "gloves-of-dexterity", "importance": "Bon", "acte": 1 },
-      { "emplacement": "Bottes", "objetId": "boots-of-speed", "importance": "Bon", "acte": 1 },
-      { "emplacement": "Cape", "objetId": "deathstalker-mantle", "importance": "Situationnel", "acte": 1 }
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "titanstring-bow",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-dexterity",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-speed",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "deathstalker-mantle",
+        "importance": "Situationnel",
+        "acte": 1
+      }
     ],
-    "roles": ["degatsDistance", "utilitaire"]
+    "roles": [
+      "degatsDistance",
+      "utilitaire"
+    ]
   },
   {
     "id": "guerrier-champion-distance",
@@ -7640,7 +9061,14 @@
     "split": "Guerrier 12 (classe unique)",
     "role": "Critiques fréquents à distance",
     "resume": "La plage de critique élargie du Champion (19-20, puis encore plus large plus tard) ne dépend pas du type d'arme — appliquée à un arc avec Tireur d'élite, elle transforme chaque tir en pari statistiquement favorable, avec le +10 dégâts qui rentabilise chaque critique.",
-    "caracDepart": { "FOR": 8, "DEX": 16, "CON": 15, "INT": 8, "SAG": 10, "CHA": 8 },
+    "caracDepart": {
+      "FOR": 8,
+      "DEX": 16,
+      "CON": 15,
+      "INT": 8,
+      "SAG": 10,
+      "CHA": 8
+    },
     "forces": [
       "Dégâts constants et fiables, très simple à jouer",
       "La plage de critique élargie profite pleinement du +10 de Tireur d'élite",
@@ -7651,31 +9079,121 @@
       "Peu d'outils de contrôle ou d'utilitaire",
       "Le -5 de Tireur d'élite peut faire rater les cibles à haute CA sans autre source d'avantage"
     ],
-    "dons": ["Tireur d'élite (niv 4)", "+2 Dextérité (niv 8)", "+2 Dextérité (niv 12)"],
+    "dons": [
+      "Tireur d'élite (niv 4)",
+      "+2 Dextérité (niv 8)",
+      "+2 Dextérité (niv 12)"
+    ],
     "sortsCles": [],
     "jalons": [
-      { "etape": "Niv 3 (Champion)", "note": "Critique amélioré : critique sur 19 ou 20 au lieu de seulement 20." }
+      {
+        "etape": "Niv 3 (Champion)",
+        "note": "Critique amélioré : critique sur 19 ou 20 au lieu de seulement 20."
+      }
     ],
     "progression": [
-      { "niveau": 1, "titre": "Guerrier 1", "detail": "Style de combat (Archerie) et Second souffle." },
-      { "niveau": 2, "titre": "Fougue", "detail": "Action Surge : une action supplémentaire une fois par repos court." },
-      { "niveau": 3, "titre": "Sous-classe Champion", "detail": "Critique amélioré : critique sur 19-20." },
-      { "niveau": 4, "titre": "Premier don", "detail": "Tireur d'élite : ignore le désavantage à distance, option -5/+10 dégâts." },
-      { "niveau": 5, "titre": "Attaque supplémentaire", "detail": "Un second tir par action d'attaque." },
-      { "niveau": 6, "titre": "Athlète accompli", "detail": "Bonus aux tests d'Athlétisme et d'Acrobatie, se relever ne coûte presque rien." },
-      { "niveau": 7, "titre": "Indomptable", "detail": "Peut relancer une sauvegarde ratée une fois par repos long." },
-      { "niveau": 8, "titre": "Deuxième don", "detail": "+2 Dextérité (18)." },
-      { "niveau": 9, "titre": "Troisième attaque", "detail": "Un troisième tir par action d'attaque." },
-      { "niveau": 10, "titre": "Style de combat supplémentaire", "detail": "Second style de combat au choix." },
-      { "niveau": 11, "titre": "Critique supérieur", "detail": "Critique élargi encore une fois, plus de dés de dégâts sur les critiques." },
-      { "niveau": 12, "titre": "Troisième don — build terminé", "detail": "+2 Dextérité (20) — maximum naturel." }
+      {
+        "niveau": 1,
+        "titre": "Guerrier 1",
+        "detail": "Style de combat (Archerie) et Second souffle."
+      },
+      {
+        "niveau": 2,
+        "titre": "Fougue",
+        "detail": "Action Surge : une action supplémentaire une fois par repos court."
+      },
+      {
+        "niveau": 3,
+        "titre": "Sous-classe Champion",
+        "detail": "Critique amélioré : critique sur 19-20."
+      },
+      {
+        "niveau": 4,
+        "titre": "Premier don",
+        "detail": "Tireur d'élite : ignore le désavantage à distance, option -5/+10 dégâts."
+      },
+      {
+        "niveau": 5,
+        "titre": "Attaque supplémentaire",
+        "detail": "Un second tir par action d'attaque."
+      },
+      {
+        "niveau": 6,
+        "titre": "Athlète accompli",
+        "detail": "Bonus aux tests d'Athlétisme et d'Acrobatie, se relever ne coûte presque rien."
+      },
+      {
+        "niveau": 7,
+        "titre": "Indomptable",
+        "detail": "Peut relancer une sauvegarde ratée une fois par repos long."
+      },
+      {
+        "niveau": 8,
+        "titre": "Deuxième don",
+        "detail": "+2 Dextérité (18)."
+      },
+      {
+        "niveau": 9,
+        "titre": "Troisième attaque",
+        "detail": "Un troisième tir par action d'attaque."
+      },
+      {
+        "niveau": 10,
+        "titre": "Style de combat supplémentaire",
+        "detail": "Second style de combat au choix."
+      },
+      {
+        "niveau": 11,
+        "titre": "Critique supérieur",
+        "detail": "Critique élargi encore une fois, plus de dés de dégâts sur les critiques."
+      },
+      {
+        "niveau": 12,
+        "titre": "Troisième don — build terminé",
+        "detail": "+2 Dextérité (20) — maximum naturel."
+      }
     ],
     "equipement": [
-      { "emplacement": "Arme à distance", "objetId": "titanstring-bow", "importance": "Excellent", "acte": 1 },
-      { "emplacement": "Gants", "objetId": "gloves-of-dexterity", "importance": "Bon", "acte": 1 },
-      { "emplacement": "Bottes", "objetId": "boots-of-speed", "importance": "Bon", "acte": 1 }
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "titanstring-bow",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-dexterity",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-speed",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "callous-glow-ring",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "gontr-mael",
+        "importance": "Excellent",
+        "acte": 3
+      }
     ],
-    "roles": ["degatsDistance"]
+    "roles": [
+      "degatsDistance"
+    ]
   },
   {
     "id": "paladin-vengeance-mono",
@@ -7685,7 +9203,14 @@
     "split": "Paladin 12 (classe unique)",
     "role": "Châtiments divins soutenus, sans jonglage multi-classe",
     "resume": "La version simple de la Vengeance : pas de dip Occultiste, donc pas de récupération de Châtiment divin au repos court — en échange, progression pleine (Aura de protection dès le niveau 6, une amélioration de caractéristique de plus) et rien à planifier entre deux classes. Bon choix si tu veux la puissance du Châtiment divin sans la gestion d'un multi-classe.",
-    "caracDepart": { "FOR": 16, "DEX": 8, "CON": 14, "INT": 8, "SAG": 10, "CHA": 16 },
+    "caracDepart": {
+      "FOR": 16,
+      "DEX": 8,
+      "CON": 14,
+      "INT": 8,
+      "SAG": 10,
+      "CHA": 16
+    },
     "forces": [
       "Aucune gestion de multi-classe — juste progresser et jouer",
       "Aura de protection (niveau 6) active plus tôt que la version multi-classée",
@@ -7696,32 +9221,123 @@
       "Moins de burst total sur plusieurs combats rapprochés que la version Occultiste",
       "Doit choisir ses moments de Châtiment divin avec plus de discipline"
     ],
-    "dons": ["+2 Force (niv 4)", "Grand Maître d'armes (niv 8)", "+2 Force (niv 12)"],
-    "sortsCles": ["Châtiment divin", "Bénédiction"],
+    "dons": [
+      "+2 Force (niv 4)",
+      "Grand Maître d'armes (niv 8)",
+      "+2 Force (niv 12)"
+    ],
+    "sortsCles": [
+      "Châtiment divin",
+      "Bénédiction"
+    ],
     "jalons": [
-      { "etape": "Niv 3 (serment)", "note": "Serment de Vengeance : Défi vengeur pour marquer une cible et Traque implacable pour ne jamais la laisser filer." },
-      { "etape": "Niv 6", "note": "Aura de protection : ajoute le Charisme aux sauvegardes de tous les alliés proches — active dès ce niveau, sans partage de niveaux avec une autre classe." }
+      {
+        "etape": "Niv 3 (serment)",
+        "note": "Serment de Vengeance : Défi vengeur pour marquer une cible et Traque implacable pour ne jamais la laisser filer."
+      },
+      {
+        "etape": "Niv 6",
+        "note": "Aura de protection : ajoute le Charisme aux sauvegardes de tous les alliés proches — active dès ce niveau, sans partage de niveaux avec une autre classe."
+      }
     ],
     "progression": [
-      { "niveau": 1, "titre": "Paladin 1", "detail": "Sens divin et Imposition des mains (réserve de soin tactile)." },
-      { "niveau": 2, "titre": "Châtiment divin", "detail": "Sort qui ajoute des dégâts radiants massifs sur une attaque réussie, surtout rentable sur un critique. Style de combat choisi." },
-      { "niveau": 3, "titre": "Serment de Vengeance", "detail": "Défi vengeur (marque une cible, avantage contre elle) et Traque implacable (vitesse bonus pour la poursuivre)." },
-      { "niveau": 4, "titre": "Premier don", "detail": "+2 Force (18)." },
-      { "niveau": 5, "titre": "Attaque supplémentaire", "detail": "Un second coup par action d'attaque." },
-      { "niveau": 6, "titre": "Aura de protection", "detail": "Toi et les alliés proches gagnez un bonus aux sauvegardes égal à ton modificateur de Charisme." },
-      { "niveau": 7, "titre": "Détermination implacable", "detail": "Un échec critique contre un jet de Peur ou de Charme peut être relancé." },
-      { "niveau": 8, "titre": "Deuxième don", "detail": "Grand Maître d'armes : option -5/+10 dégâts avec une arme lourde." },
-      { "niveau": 9, "titre": "Sorts de niveau 3", "detail": "Nouvel emplacement de sort de niveau 3 — encore plus de Châtiments divins par jour." },
-      { "niveau": 10, "titre": "Aura étendue", "detail": "Les auras du Paladin couvrent une zone plus large." },
-      { "niveau": 11, "titre": "Frappe sacrée", "detail": "Les attaques d'arme infligent des dégâts radiants supplémentaires à chaque coup, sans dépenser d'emplacement." },
-      { "niveau": 12, "titre": "Troisième don — build terminé", "detail": "+2 Force (20) — maximum naturel." }
+      {
+        "niveau": 1,
+        "titre": "Paladin 1",
+        "detail": "Sens divin et Imposition des mains (réserve de soin tactile)."
+      },
+      {
+        "niveau": 2,
+        "titre": "Châtiment divin",
+        "detail": "Sort qui ajoute des dégâts radiants massifs sur une attaque réussie, surtout rentable sur un critique. Style de combat choisi."
+      },
+      {
+        "niveau": 3,
+        "titre": "Serment de Vengeance",
+        "detail": "Défi vengeur (marque une cible, avantage contre elle) et Traque implacable (vitesse bonus pour la poursuivre)."
+      },
+      {
+        "niveau": 4,
+        "titre": "Premier don",
+        "detail": "+2 Force (18)."
+      },
+      {
+        "niveau": 5,
+        "titre": "Attaque supplémentaire",
+        "detail": "Un second coup par action d'attaque."
+      },
+      {
+        "niveau": 6,
+        "titre": "Aura de protection",
+        "detail": "Toi et les alliés proches gagnez un bonus aux sauvegardes égal à ton modificateur de Charisme."
+      },
+      {
+        "niveau": 7,
+        "titre": "Détermination implacable",
+        "detail": "Un échec critique contre un jet de Peur ou de Charme peut être relancé."
+      },
+      {
+        "niveau": 8,
+        "titre": "Deuxième don",
+        "detail": "Grand Maître d'armes : option -5/+10 dégâts avec une arme lourde."
+      },
+      {
+        "niveau": 9,
+        "titre": "Sorts de niveau 3",
+        "detail": "Nouvel emplacement de sort de niveau 3 — encore plus de Châtiments divins par jour."
+      },
+      {
+        "niveau": 10,
+        "titre": "Aura étendue",
+        "detail": "Les auras du Paladin couvrent une zone plus large."
+      },
+      {
+        "niveau": 11,
+        "titre": "Frappe sacrée",
+        "detail": "Les attaques d'arme infligent des dégâts radiants supplémentaires à chaque coup, sans dépenser d'emplacement."
+      },
+      {
+        "niveau": 12,
+        "titre": "Troisième don — build terminé",
+        "detail": "+2 Force (20) — maximum naturel."
+      }
     ],
     "equipement": [
-      { "emplacement": "Arme principale", "objetId": "everburn-blade", "importance": "Bon", "acte": 1 },
-      { "emplacement": "Arme principale", "objetId": "balduran-giantslayer", "importance": "Excellent", "acte": 3 },
-      { "emplacement": "Amulette", "objetId": "amulet-greater-health", "importance": "Bon", "acte": 3 }
+      {
+        "emplacement": "Arme principale",
+        "objetId": "everburn-blade",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "balduran-giantslayer",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-greater-health",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "shield-of-devotion",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "killers-sweetheart",
+        "importance": "Excellent",
+        "acte": 2
+      }
     ],
-    "roles": ["tank", "degatsMelee"]
+    "roles": [
+      "tank",
+      "degatsMelee"
+    ]
   },
   {
     "id": "ensorceleur-feu-sorlock",
@@ -7731,7 +9347,14 @@
     "split": "Ensorceleur 8 / Occultiste 4",
     "role": "Explosion occulte accélérée (Sort accéléré) + Malédiction",
     "resume": "Combine l'Explosion occulte de l'Occultiste (qui frappe deux fois avec l'invocation Décharge agonisante) avec le Sort accéléré de l'Ensorceleur : lance un sort d'action classique (Boule de feu, Malédiction...) ET une Explosion occulte en action bonus le même tour. Malédiction ajoute des dégâts supplémentaires à chaque tir d'Explosion occulte tant qu'elle est active.",
-    "caracDepart": { "FOR": 8, "DEX": 14, "CON": 14, "INT": 8, "SAG": 10, "CHA": 16 },
+    "caracDepart": {
+      "FOR": 8,
+      "DEX": 14,
+      "CON": 14,
+      "INT": 8,
+      "SAG": 10,
+      "CHA": 16
+    },
     "forces": [
       "Deux actions de dégâts par tour grâce au Sort accéléré",
       "Explosion occulte ne dépend d'aucun emplacement de sort — dégâts gratuits et illimités",
@@ -7742,32 +9365,133 @@
       "Un peu moins de PV et de survie qu'un profil mono-classe",
       "Dépend des Points de sorcellerie pour le Sort accéléré, une ressource à surveiller"
     ],
-    "dons": ["+2 Charisme (niv 4)", "Doué (Skilled) (niv 8)", "+2 Charisme (niv 12)"],
-    "sortsCles": ["Explosion occulte (Eldritch Blast)", "Malédiction (Hex)", "Boule de feu"],
+    "dons": [
+      "+2 Charisme (niv 4)",
+      "Doué (Skilled) (niv 8)",
+      "+2 Charisme (niv 12)"
+    ],
+    "sortsCles": [
+      "Explosion occulte (Eldritch Blast)",
+      "Malédiction (Hex)",
+      "Boule de feu"
+    ],
     "jalons": [
-      { "etape": "Occultiste 1-2 (tôt)", "note": "Pris en premier pour Explosion occulte et l'invocation Décharge agonisante (+Charisme aux dégâts, deuxième rayon). Malédiction apprise à ce moment." },
-      { "etape": "Ensorceleur (le gros du reste)", "note": "Points de sorcellerie et Métamagie — Sort accéléré est le choix central de ce build, Sort distant très utile aussi." },
-      { "etape": "Occultiste 3-4 (fin de progression)", "note": "Complète le dip : troisième rayon d'Explosion occulte et une deuxième invocation." }
+      {
+        "etape": "Occultiste 1-2 (tôt)",
+        "note": "Pris en premier pour Explosion occulte et l'invocation Décharge agonisante (+Charisme aux dégâts, deuxième rayon). Malédiction apprise à ce moment."
+      },
+      {
+        "etape": "Ensorceleur (le gros du reste)",
+        "note": "Points de sorcellerie et Métamagie — Sort accéléré est le choix central de ce build, Sort distant très utile aussi."
+      },
+      {
+        "etape": "Occultiste 3-4 (fin de progression)",
+        "note": "Complète le dip : troisième rayon d'Explosion occulte et une deuxième invocation."
+      }
     ],
     "progression": [
-      { "niveau": 1, "titre": "Occultiste 1", "detail": "Explosion occulte apprise. Malédiction dans la liste de sorts." },
-      { "niveau": 2, "titre": "Occultiste 2", "detail": "Invocation Décharge agonisante : ajoute le Charisme aux dégâts d'Explosion occulte, un deuxième rayon apparaît au niveau 5 de personnage." },
-      { "niveau": 3, "titre": "Bascule vers Ensorceleur", "detail": "Points de sorcellerie débloqués. Premier sort de niveau 2 appris." },
-      { "niveau": 4, "titre": "Premier don", "detail": "+2 Charisme (18)." },
-      { "niveau": 5, "titre": "Deuxième rayon d'Explosion occulte", "detail": "Le nombre de rayons d'Explosion occulte suit le niveau de personnage, pas seulement le niveau Occultiste." },
-      { "niveau": 6, "titre": "Sorts de niveau 3", "detail": "Boule de feu apprise." },
-      { "niveau": 7, "titre": "Métamagie : Sort accéléré", "detail": "Le choix central du build — lance un sort d'action puis Explosion occulte en action bonus le même tour." },
-      { "niveau": 8, "titre": "Deuxième don", "detail": "Doué : trois compétences maîtrisées supplémentaires." },
-      { "niveau": 9, "titre": "Sorts de niveau 4", "detail": "Nouvel emplacement : sort de zone ou de protection au choix." },
-      { "niveau": 10, "titre": "Retour à Occultiste", "detail": "Troisième niveau d'Occultiste : sorts de pacte supplémentaires, approche du dip complet." },
-      { "niveau": 11, "titre": "Quatrième niveau d'Occultiste", "detail": "Troisième rayon d'Explosion occulte et une deuxième invocation (Vision du diable ou équivalent utilitaire)." },
-      { "niveau": 12, "titre": "Troisième don — build terminé", "detail": "+2 Charisme (20) — maximum naturel." }
+      {
+        "niveau": 1,
+        "titre": "Occultiste 1",
+        "detail": "Explosion occulte apprise. Malédiction dans la liste de sorts."
+      },
+      {
+        "niveau": 2,
+        "titre": "Occultiste 2",
+        "detail": "Invocation Décharge agonisante : ajoute le Charisme aux dégâts d'Explosion occulte, un deuxième rayon apparaît au niveau 5 de personnage."
+      },
+      {
+        "niveau": 3,
+        "titre": "Bascule vers Ensorceleur",
+        "detail": "Points de sorcellerie débloqués. Premier sort de niveau 2 appris."
+      },
+      {
+        "niveau": 4,
+        "titre": "Premier don",
+        "detail": "+2 Charisme (18)."
+      },
+      {
+        "niveau": 5,
+        "titre": "Deuxième rayon d'Explosion occulte",
+        "detail": "Le nombre de rayons d'Explosion occulte suit le niveau de personnage, pas seulement le niveau Occultiste."
+      },
+      {
+        "niveau": 6,
+        "titre": "Sorts de niveau 3",
+        "detail": "Boule de feu apprise."
+      },
+      {
+        "niveau": 7,
+        "titre": "Métamagie : Sort accéléré",
+        "detail": "Le choix central du build — lance un sort d'action puis Explosion occulte en action bonus le même tour."
+      },
+      {
+        "niveau": 8,
+        "titre": "Deuxième don",
+        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+      },
+      {
+        "niveau": 9,
+        "titre": "Sorts de niveau 4",
+        "detail": "Nouvel emplacement : sort de zone ou de protection au choix."
+      },
+      {
+        "niveau": 10,
+        "titre": "Retour à Occultiste",
+        "detail": "Troisième niveau d'Occultiste : sorts de pacte supplémentaires, approche du dip complet."
+      },
+      {
+        "niveau": 11,
+        "titre": "Quatrième niveau d'Occultiste",
+        "detail": "Troisième rayon d'Explosion occulte et une deuxième invocation (Vision du diable ou équivalent utilitaire)."
+      },
+      {
+        "niveau": 12,
+        "titre": "Troisième don — build terminé",
+        "detail": "+2 Charisme (20) — maximum naturel."
+      }
     ],
     "equipement": [
-      { "emplacement": "Arme", "objetId": "markoheshkir", "importance": "Excellent", "acte": 3 },
-      { "emplacement": "Amulette", "objetId": "necklace-elemental-augmentation", "importance": "Bon", "acte": 1 },
-      { "emplacement": "Gants", "objetId": "gloves-of-the-automaton", "importance": "Bon", "acte": 2 }
+      {
+        "emplacement": "Arme",
+        "objetId": "markoheshkir",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "necklace-elemental-augmentation",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-the-automaton",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "coruscation-ring",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "callous-glow-ring",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "spellmight-gloves",
+        "importance": "Excellent",
+        "acte": 3
+      }
     ],
-    "roles": ["degatsDistance", "controle"]
+    "roles": [
+      "degatsDistance",
+      "controle"
+    ]
   }
 ]
