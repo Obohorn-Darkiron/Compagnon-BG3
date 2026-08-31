@@ -3284,5 +3284,1565 @@
     "verifie": true,
     "aConfirmer": [],
     "alignement": "neutre"
+  },
+  {
+    "id": "jhannyl-gloves",
+    "nomEn": "Jhannyl's Gloves",
+    "nomFr": "Jhannyl's Gloves",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Camp (Acte 2) — objet lié à Isobel",
+    "obtention": "Portés par Isobel. Récupérables selon l'issue narrative la concernant (tuée après le dénouement de l'affaire de la Chanteuse nocturne, enlevée par Marcus, emprisonnée par Lorroakan, ou si elle rejoint le camp du groupe).",
+    "effet": "+1 aux jets de sauvegarde. Si le porteur devient Aveuglé, Neutralisé ou Empoisonné, lance automatiquement Délivrance mineure sur lui-même (pas de limite par repos). Ne fonctionne pas si c'est Isobel elle-même qui les porte.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr",
+      "obtention"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "moon-devotion-robe",
+    "nomEn": "Moon Devotion Robe",
+    "nomFr": "Moon Devotion Robe",
+    "type": "Vêtement (torse)",
+    "rarete": "Très rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur — objet lié à Isobel",
+    "obtention": "Portée par Isobel ; récupérable en la tuant après le dénouement de l'affaire de la Chanteuse nocturne mais avant l'assaut sur les Tours de Hautelune.",
+    "effet": "CA 10 + mod. de Dextérité. Avantage aux jets de sauvegarde de Constitution, +1 aux jets de sauvegarde. Octroie un cantrip de flamme (1d8 dégâts de feu) et l'action Rempart lunaire (repos long). Protection de Sélûne : chaque jet de sauvegarde réussi inflige 1d4 dégâts radiants à la source de l'effet (nécessite Armure du mage active).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr",
+      "effetProtectionSelune"
+    ],
+    "alignement": "sombre",
+    "alignementNote": "Nécessite de tuer Isobel — route non-bienveillante."
+  },
+  {
+    "id": "shadow-blade-ring",
+    "nomEn": "Shadow Blade Ring",
+    "nomFr": "Shadow Blade Ring",
+    "type": "Anneau",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Camp (Acte 2)",
+    "obtention": "Récompense d'Arabella après avoir terminé la quête Retrouver les parents d'Arabella.",
+    "effet": "Permet de lancer Lame des ombres (sort de niveau 2) en action bonus, sans nécessiter de Concentration, recharge au repos court.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "ring-of-shadows",
+    "nomEn": "Ring of Shadows",
+    "nomFr": "Ring of Shadows",
+    "type": "Anneau",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Champ de bataille en ruines — Maison dans l'ombre profonde (House in Deep Shadows)",
+    "obtention": "Offert par Oliver (enfant féérique) après avoir joué à deux manches de cache-cache avec lui. Alternative : l'assommer ou le voler.",
+    "effet": "Permet de lancer Discrétion absolue (+10 aux tests de Discrétion pour le porteur et ses alliés proches), recharge au repos long.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "hammergrim-mist-amulet",
+    "nomEn": "Hammergrim Mist Amulet",
+    "nomFr": "Hammergrim Mist Amulet",
+    "type": "Amulette",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Champ de bataille en ruines, à l'est du poste de péage",
+    "obtention": "Dans un coffre verrouillé caché dans une maison en ruine.",
+    "effet": "Permet de lancer Nuage de brouillard (niveau 1), recharge au repos long, sans nécessiter de Concentration.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "dark-justiciar-mask",
+    "nomEn": "Dark Justiciar Mask",
+    "nomFr": "Dark Justiciar Mask",
+    "type": "Casque (tête)",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Champ de bataille en ruines (autre exemplaire à Grymforge)",
+    "obtention": "Butin sur un squelette au Champ de bataille en ruines.",
+    "effet": "+1 aux tests d'Intimidation. Fait partie de la panoplie du Justicier sombre.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "gloomstrand-shield",
+    "nomEn": "Gloomstrand Shield",
+    "nomFr": "Gloomstrand Shield",
+    "type": "Bouclier",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Champ de bataille en ruines, près du pont de bois à moitié détruit",
+    "obtention": "Dans un coffre de voyageur verrouillé (nécessite la Clé du poste de péage de Reithwin).",
+    "effet": "+2 à la Classe d'Armure, +1 aux tests de Discrétion.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "cruel-sting",
+    "nomEn": "Cruel Sting",
+    "nomFr": "Piqûre Cruelle",
+    "type": "Épée longue",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Champ de bataille en ruines",
+    "obtention": "Butin sur Kar'niss.",
+    "effet": "Épée longue de base (1d8+1 tranchant à une main ou 1d10+1 à deux mains, + mod. de Force). Filaments entravants : l'attaque peut Empêtrer la cible. Piqûre sans pitié : un porteur drow inflige 1d4 dégâts de poison supplémentaires contre une cible Entravée.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "moonlantern",
+    "nomEn": "Moonlantern",
+    "nomFr": "Lanterne lunaire",
+    "type": "Massue (arme à une ou deux mains, objet de quête)",
+    "rarete": "Unique",
+    "acte": 2,
+    "zone": "Champ de bataille en ruines (portée par Kar'niss)",
+    "obtention": "Butin sur Kar'niss au Champ de bataille en ruines (après l'embuscade des Harpistes), ou trouvée plus tard selon la progression de la quête d'Isobel/Balthazar.",
+    "effet": "Diffuse une lumière magique dans un rayon de 13 m ; accorde la condition Bouclier lunaire qui protège de la Malédiction de l'ombre. Dégâts d'arme : 1d4+Force (une main) ou 1d6+Force (deux mains) contondant. Contient la fée Dolly ; l'action « Inspecter la Lanterne lunaire » la libère et octroie la Bénédiction de la fée.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "thermoarcanic-gloves",
+    "nomEn": "Thermoarcanic Gloves",
+    "nomFr": "Thermoarcanic Gloves",
+    "type": "Gants",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Champ de bataille en ruines",
+    "obtention": "Portés par Kansif, trouvable au campement des cultistes ou après l'embuscade des Harpistes.",
+    "effet": "Cendres arcaniques : infliger des dégâts de feu octroie 2 tours de Chaleur au porteur (peut se déclencher plusieurs fois par tour avec des sorts à jets multiples).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "family-ring",
+    "nomEn": "Family Ring",
+    "nomFr": "Anneau familial",
+    "type": "Anneau",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Champ de bataille en ruines, près de la tombe d'Ellie May",
+    "obtention": "Trouvé dans un terrier caché nécessitant un test de Perception (DD 10) pour être repéré.",
+    "effet": "+2 aux jets de sauvegarde contre la mort.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "raven-gloves",
+    "nomEn": "Raven Gloves",
+    "nomFr": "Gants du corbeau",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Champ de bataille en ruines",
+    "obtention": "Offerts par Celui qui fut (He Who Was) en récompense de la quête Punir les Méchants.",
+    "effet": "Permet d'invoquer Quothe le corbeau (recharge au repos court) : un familier corbeau capable d'aveugler les ennemis avec son bec.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre",
+    "alignementNote": "Les sources francophones divergent entre « Gants de la corneille » et « Gants du corbeau » — nom retenu à confirmer."
+  },
+  {
+    "id": "ring-of-self-immolation",
+    "nomEn": "Ring of Self Immolation",
+    "nomFr": "Ring of Self Immolation",
+    "type": "Anneau",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Champ de bataille en ruines, tour au nord",
+    "obtention": "Dans un coffre en bois verrouillé ; la clé se trouve sur un squelette voisin.",
+    "effet": "Permet de s'enflammer soi-même en action bonus pour gagner la Chaleur pendant 2 tours, recharge au repos court.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "penumbral-armour",
+    "nomEn": "Penumbral Armour",
+    "nomFr": "Penumbral Armour",
+    "type": "Armure (légère)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Champ de bataille en ruines, maison abandonnée près de la rivière",
+    "obtention": "Dans un coffre opulent verrouillé, à l'intérieur de la maison abandonnée.",
+    "effet": "CA 12 + mod. de Dextérité. Plus discret : +3 aux tests de Discrétion tant que le porteur est Dissimulé.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "ironwood-club",
+    "nomEn": "Ironwood Club",
+    "nomFr": "Ironwood Club",
+    "type": "Massue (arme à une main)",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Champ de bataille en ruines",
+    "obtention": "Portée par le Monstre gluant maudit par l'ombre.",
+    "effet": "Massue +1 (1d4+1 contondant + mod. de Force). Si Bâton noueux (Shillelagh) est lancé dessus, gagne +1d4 dégâts contondants supplémentaires. Actions d'arme Frappe percussive et Brise-échine, recharge au repos court.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "frost-prince",
+    "nomEn": "Frost Prince",
+    "nomFr": "Frost Prince",
+    "type": "Amulette",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Champ de bataille en ruines, sud-est",
+    "obtention": "Dans un coffre doré situé dans la zone sud-est du Champ de bataille en ruines.",
+    "effet": "Permet de lancer Lame de glace (niveau 1) en action, recharge au repos long.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "rippling-force-mail",
+    "nomEn": "Rippling Force Mail",
+    "nomFr": "Armure d'ondes de force",
+    "type": "Armure (lourde)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Coffre verrouillé au premier étage de la forge de Dammon, à l'Auberge de l'Ultime Lueur.",
+    "effet": "Octroie 2 tours de Conduit de force lorsque le porteur subit des dégâts tranchants, perforants ou contondants ; les charges accumulées peuvent ensuite être déchargées en dégâts de force.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "sylvan-scimitar",
+    "nomEn": "Sylvan Scimitar",
+    "nomFr": "Cimeterre sylvestre",
+    "type": "Cimeterre (arme à une main, finesse)",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Porté par Jaheira ; récupérable en la recrutant ou en la vainquant au combat.",
+    "effet": "Remplace le modificateur de Dextérité par le modificateur de caractéristique d'incantation pour les jets d'attaque et de dégâts avec cette arme.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "shield-of-scorching-reprisal",
+    "nomEn": "Shield of Scorching Reprisal",
+    "nomFr": "Bouclier de représailles ardentes",
+    "type": "Bouclier",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Sur le cadavre enterré d'un Poing de Flamme, à l'est des « Tombes ouvertes » au-delà du pont nord de l'Auberge de l'Ultime Lueur.",
+    "effet": "+2 Classe d'Armure, résistance au feu ; en réaction à une attaque de mêlée, peut renverser l'assaillant ; Représailles ardentes (action bonus, repos court) augmente la CA de 1 et inflige des dégâts de feu en retour aux attaques manquées.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "incandescent-staff",
+    "nomEn": "Incandescent Staff",
+    "nomFr": "Bâton incandescent",
+    "type": "Bâton (arme à deux mains)",
+    "rarete": "Très rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de l'intendante Talli à l'Auberge de l'Ultime Lueur.",
+    "effet": "+1 aux jets d'attaque de sort à distance, résistance au feu ; permet de lancer Trait de feu à volonté et Boule de feu (niveau 3, une fois par repos long).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "cindersnap-gloves",
+    "nomEn": "Cindersnap Gloves",
+    "nomFr": "Gants des cendres grésillantes",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de l'intendante Talli à l'Auberge de l'Ultime Lueur.",
+    "effet": "Permet de lancer Protection contre les projectiles (repos court) : les attaques à distance contre le porteur ont désavantage et leurs dégâts sont réduits de moitié.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "gloves-of-balanced-hands",
+    "nomEn": "Gloves of the Balanced Hands",
+    "nomFr": "Gants des mains équilibrées",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de l'intendante Talli à l'Auberge de l'Ultime Lueur.",
+    "effet": "Ajoute le modificateur de caractéristique aux dégâts des attaques de la main secondaire lors d'un combat à deux armes (mêlée ou distance).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "hat-of-uninhibited-kushigo",
+    "nomEn": "Hat of Uninhibited Kushigo",
+    "nomFr": "Chapeau de Kushigo sans entrave",
+    "type": "Chapeau",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de l'intendante Talli à l'Auberge de l'Ultime Lueur.",
+    "effet": "Après avoir infligé des dégâts avec une attaque à mains nues, +1 au DD de sauvegarde des sorts du porteur jusqu'à la fin de son tour.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "obsidian-laced-robe",
+    "nomEn": "Obsidian Laced Robe",
+    "nomFr": "Robe lacée d'obsidienne",
+    "type": "Vêtement (torse)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de l'intendante Talli à l'Auberge de l'Ultime Lueur.",
+    "effet": "Résistance au feu ; lors d'une sauvegarde réussie contre un sort ennemi, inflige 1d4 + bonus de maîtrise en dégâts de feu au lanceur du sort.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "shadeclinger-armour",
+    "nomEn": "Shadeclinger Armour",
+    "nomFr": "Armure d'ami des ombres",
+    "type": "Armure (légère)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de l'intendante Talli à l'Auberge de l'Ultime Lueur.",
+    "effet": "+1 Discrétion ; tant que le porteur est obscurci, avantage à tous les jets de sauvegarde.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "the-mighty-cloth",
+    "nomEn": "The Mighty Cloth",
+    "nomFr": "Puissant tissu",
+    "type": "Vêtement (torse)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de l'intendante Talli à l'Auberge de l'Ultime Lueur.",
+    "effet": "+2 Force (max 20) via la condition Force de taureau ; ne peut être repoussé involontairement ; avantage aux sauvegardes contre le fait d'être entravé ; Charge de taureau (une fois par tour) repousse les ennemis.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "yuan-ti-scale-mail",
+    "nomEn": "Yuan-Ti Scale Mail",
+    "nomFr": "Armure d'écailles de Yuan-ti",
+    "type": "Armure (intermédiaire)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de l'intendante Talli à l'Auberge de l'Ultime Lueur.",
+    "effet": "Ajoute le modificateur complet de Dextérité à la CA sans désavantage de Discrétion ; +1 aux jets d'Initiative.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "thermodynamo-axe",
+    "nomEn": "Thermodynamo Axe",
+    "nomFr": "Hache thermodynamique",
+    "type": "Hache d'armes (arme à une main)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de Dammon à l'Auberge de l'Ultime Lueur.",
+    "effet": "+1 ; chaque fois que l'arme inflige des dégâts, octroie 2 tours de Chaleur (cumulable jusqu'à 7 tours), consommables pour ajouter des dégâts de feu bonus au prochain sort ou attaque de feu.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "darkfire-shortbow",
+    "nomEn": "Darkfire Shortbow",
+    "nomFr": "Arc court du feu obscur",
+    "type": "Arc court (arme à deux mains, à distance)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de Dammon à l'Auberge de l'Ultime Lueur.",
+    "effet": "+2 ; résistance au feu et au froid ; permet de lancer Hâte (niveau 3, une fois par repos long) ; Tir au jarret (repos court) peut réduire de 50 % la vitesse de déplacement de la cible.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "harmonium-halberd",
+    "nomEn": "Harmonium Halberd",
+    "nomFr": "Hallebarde de l'harmonium",
+    "type": "Hallebarde (arme à deux mains)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de Dammon à l'Auberge de l'Ultime Lueur.",
+    "effet": "+1 ; +2 Force (max 23), -1 Intelligence, -1 Sagesse ; Attaque précipitée peut déséquilibrer une cible ; Lacération inflige un saignement ; Fauchage touche jusqu'à 3 ennemis pour moitié dégâts chacun.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "thorn-blade",
+    "nomEn": "Thorn Blade",
+    "nomFr": "Lame d'épines",
+    "type": "Cimeterre (arme à une main, finesse)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de Dammon à l'Auberge de l'Ultime Lueur.",
+    "effet": "Permet de lancer Piège d'entrave (niveau 1, une fois par repos long) ; tant que le porteur se concentre, ses attaques d'arme au corps à corps infligent 1d4 dégâts de poison supplémentaires.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "sword-of-clutching-umbra",
+    "nomEn": "Sword of Clutching Umbra",
+    "nomFr": "Épée des ombres saisissantes",
+    "type": "Épée courte (arme à une main, finesse)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de Dammon à l'Auberge de l'Ultime Lueur.",
+    "effet": "+1 ; Coup imprégné d'ombre (repos court) ajoute le bonus de maîtrise plus 1d6 dégâts psychiques à une attaque, sans briser la dissimulation.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "sword-of-life-stealing",
+    "nomEn": "Sword of Life Stealing",
+    "nomFr": "Épée de vol de vie",
+    "type": "Épée courte (arme à une main, finesse)",
+    "rarete": "Très rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de Dammon à l'Auberge de l'Ultime Lueur.",
+    "effet": "+2 ; lors d'un coup critique contre une cible qui n'est ni une construction ni un mort-vivant, inflige 10 dégâts nécrotiques supplémentaires et octroie 10 points de vie temporaires au porteur.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "flawed-helldusk-armour",
+    "nomEn": "Flawed Helldusk Armour",
+    "nomFr": "Armure imparfaite de crépuscule infernal",
+    "type": "Armure (lourde)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Fabriquée par Dammon à l'Auberge de l'Ultime Lueur en lui apportant un fragment de fer infernal.",
+    "effet": "CA 18 ; Rétribution infernale mineure inflige 1d4 dégâts de feu à un ennemi frappant le porteur au corps à corps à moins de 2 m ; réduit de 1 les dégâts perforants subis ; désavantage aux tests de Discrétion.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "flawed-helldusk-helmet",
+    "nomEn": "Flawed Helldusk Helmet",
+    "nomFr": "Casque imparfait de crépuscule infernal",
+    "type": "Casque",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Fabriqué par Dammon à l'Auberge de l'Ultime Lueur en lui apportant deux fragments de fer infernal.",
+    "effet": "+2 aux jets de sauvegarde contre les sorts ; +1 aux jets de sauvegarde de Constitution.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "swordmaster-gloves",
+    "nomEn": "Swordmaster Gloves",
+    "nomFr": "Gants de maître épéiste",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de Dammon à l'Auberge de l'Ultime Lueur.",
+    "effet": "Octroie la maîtrise des épées courtes, longues et à deux mains ; +1 aux jets d'attaque au corps à corps.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "acrobat-shoes",
+    "nomEn": "Acrobat Shoes",
+    "nomFr": "Chaussures d'acrobate",
+    "type": "Bottes",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de Barcus Wroot dans son atelier à l'Auberge de l'Ultime Lueur.",
+    "effet": "+1 Acrobaties ; avantage aux jets de sauvegarde de Dextérité.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "ring-of-geniality",
+    "nomEn": "Ring of Geniality",
+    "nomFr": "Anneau de cordialité",
+    "type": "Anneau",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de Barcus Wroot dans son atelier à l'Auberge de l'Ultime Lueur.",
+    "effet": "+1 Persuasion ; +1 Tromperie.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "cloak-of-cunning-brume",
+    "nomEn": "Cloak of Cunning Brume",
+    "nomFr": "Cape de Brume Rusée",
+    "type": "Cape",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de Mattis à l'Auberge de l'Ultime Lueur.",
+    "effet": "Lorsque le porteur se désengage, crée un nuage de brume de 2 m de rayon durant 1 tour, obscurcissant la zone.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "evasive-shoes",
+    "nomEn": "Evasive Shoes",
+    "nomFr": "Chaussures d'évasion",
+    "type": "Bottes",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Auberge de l'Ultime Lueur",
+    "obtention": "Achat auprès de Mattis à l'Auberge de l'Ultime Lueur.",
+    "effet": "+1 Acrobaties ; +1 Classe d'Armure.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "poisoners-gloves",
+    "nomEn": "Poisoner's Gloves",
+    "nomFr": "Gants d'empoisonneur",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Maison de guérison (House of Healing), Reithwin",
+    "obtention": "Dans un coffre peint, au fond du bureau de Malus Thorm (Théâtre des opérations), à la Maison de guérison.",
+    "effet": "Envenimement : chaque fois que tu infliges des dégâts de poison, la cible doit réussir un jet de sauvegarde de Constitution (DD 13) ou devenir Empoisonnée.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "vivacious-cloak",
+    "nomEn": "Vivacious Cloak",
+    "nomFr": "Cape vivace",
+    "type": "Cape",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Grand Mausolée, Reithwin",
+    "obtention": "Dans un coffre de voyageur verrouillé, dans le coin sud-est du Grand Mausolée.",
+    "effet": "Vivacité arcanique : après avoir lancé un sort en étant au corps-à-corps et Menacé (un ennemi à portée), gagne 8 points de vie temporaires — se déclenche même si le sort échoue ou rate son jet de sauvegarde.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "shars-temptation",
+    "nomEn": "Shar's Temptation",
+    "nomFr": "Tentation de Shar",
+    "type": "Amulette",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Maison de guérison (House of Healing), Reithwin",
+    "obtention": "Dans une caisse surmontée d'une note, au rez-de-chaussée de la Maison de guérison, près de l'échelle en bois.",
+    "effet": "Permet de lancer Charme-personne (sort de niveau 1), une fois par repos long ou court selon les sources — recharge exacte non confirmée avec certitude.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr",
+      "effet"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "surgeons-subjugation-amulet",
+    "nomEn": "Surgeon's Subjugation Amulet",
+    "nomFr": "Amulette de subjugation du chirurgien",
+    "type": "Amulette",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Maison de guérison (House of Healing), Reithwin",
+    "obtention": "Portée par Malus Thorm à la Maison de guérison ; à récupérer en le vainquant ou en le détroussant.",
+    "effet": "Une fois par repos long, un coup critique porté à un humanoïde peut le Paralyser ou le Neutraliser pendant 2 tours (les sources divergent sur la condition exacte).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr",
+      "effet"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "artificial-leech",
+    "nomEn": "Artificial Leech (+1)",
+    "nomFr": "Artificial Leech (+1)",
+    "type": "Dague",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Maison de guérison (House of Healing), Reithwin",
+    "obtention": "Portée par Sœur Geanne, une des infirmières mortes-vivantes de la Maison de guérison ; obtenue en la vainquant.",
+    "effet": "Dague +1. Ses actions d'arme spéciales sont réservées aux PNJ et inutilisables par le joueur ; inflige 1d6 dégâts nécrotiques supplémentaires quand elle est maniée par une infirmière (bug connu).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "bonesaw",
+    "nomEn": "Bonesaw (+1)",
+    "nomFr": "Bonesaw (+1)",
+    "type": "Épée longue (arme à une ou deux mains)",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Maison de guérison (House of Healing), Reithwin",
+    "obtention": "Portée par Sœur Hunna, une des infirmières mortes-vivantes de la Maison de guérison ; obtenue en la vainquant.",
+    "effet": "Épée longue +1. Ses actions d'arme spéciales sont réservées aux PNJ et inutilisables par le joueur ; inflige 1d6 dégâts nécrotiques supplémentaires quand elle est maniée par une infirmière (bug connu). Collecter les trois outils des infirmières octroie l'inspiration du passé Criminel.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "trepan",
+    "nomEn": "Trepan (+1)",
+    "nomFr": "Trepan (+1)",
+    "type": "Épée courte",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Maison de guérison (House of Healing), Reithwin",
+    "obtention": "Portée par Sœur Vanessa, une des infirmières mortes-vivantes de la Maison de guérison ; obtenue en la vainquant.",
+    "effet": "Épée courte +1. Ses actions d'arme spéciales sont réservées aux PNJ et inutilisables par le joueur ; inflige 1d6 dégâts nécrotiques supplémentaires quand elle est maniée par une infirmière (bug connu).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "spear-of-night",
+    "nomEn": "Spear of Night",
+    "nomFr": "Lance de la nuit",
+    "type": "Lance (arme à une ou deux mains)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Bibliothèque silencieuse, Gantelet de Shar",
+    "obtention": "Sur un autel dans la salle secrète de la Bibliothèque silencieuse, après avoir résolu l'énigme (trouver le livre « Enseignement de Shar : le chant nocturne » et ouvrir la grande porte).",
+    "effet": "Lance +1. Bénédiction de Shar : si la déesse l'autorise, permet d'utiliser cette lance pour tuer le Chant-nocturne (Nightsong). Action d'arme Charge, rechargée au repos court. Objet nécessaire pour progresser dans la quête.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "dark-justiciar-half-plate",
+    "nomEn": "Dark Justiciar Half-Plate",
+    "nomFr": "Demi-plate de tribun de la nuit",
+    "type": "Armure (intermédiaire)",
+    "rarete": "Variable",
+    "acte": 2,
+    "zone": "Gantelet de Shar / Ombreterre",
+    "obtention": "Version Rare (CA 16) : posée au sol à côté de l'autel, dans la salle secrète de la Bibliothèque silencieuse (Gantelet de Shar). Version Très rare (CA 17) : offerte à Ombrecœur en récompense si le Chant-nocturne (Nightsong) est tuée plutôt qu'épargnée, en Ombreterre.",
+    "effet": "Avantage aux jets de sauvegarde de Constitution ; avantage aux tests de Discrétion tant que Dissimulé dans l'ombre. Action bonus Égide de Shar (repos long) : sur la version Rare, +2 à la Classe d'Armure ; sur la version Très rare, active un Bouclier de la Foi qui réduit les dégâts subis de 2 et renvoie 1d4 dégâts nécrotiques à l'attaquant.",
+    "verifie": true,
+    "aConfirmer": [
+      "versionChoix"
+    ],
+    "alignement": "restreint",
+    "alignementNote": "La version Très rare (CA 17, Bouclier de la Foi) n'est obtenue qu'en tuant le Chant-nocturne ; la version Rare (CA 16) est disponible indépendamment de ce choix."
+  },
+  {
+    "id": "dark-justiciar-helmet",
+    "nomEn": "Dark Justiciar Helmet",
+    "nomFr": "Casque de tribun de la nuit",
+    "type": "Casque (tête)",
+    "rarete": "Très rare",
+    "acte": 2,
+    "zone": "Bibliothèque silencieuse, Gantelet de Shar",
+    "obtention": "Dans un coffre doré derrière l'autel, dans la salle secrète de la Bibliothèque silencieuse, après avoir résolu l'énigme du chant nocturne.",
+    "effet": "+1 aux jets de sauvegarde de Constitution et aux jets de sauvegarde contre les sorts. Tant que Dissimulé, le seuil pour infliger un coup critique en attaquant est réduit de 1.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "least-expected",
+    "nomEn": "Least Expected",
+    "nomFr": "Contre toute attente",
+    "type": "Arc court (arme à distance)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Gantelet de Shar",
+    "obtention": "Dans un coffre doré caché du Gantelet de Shar, derrière une porte verrouillée par une énigme.",
+    "effet": "Arc court +2. Précision voilée : +1d4 aux jets d'attaque à distance tant que le porteur est Dissimulé. Actions d'arme Tir aveuglant et Tir aux jarrets, rechargées au repos court.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr",
+      "zone"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "moonlight-glaive",
+    "nomEn": "Moonlight Glaive",
+    "nomFr": "Coutille du clair de lune",
+    "type": "Coutille (arme à deux mains)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Ombreterre, à l'issue du Gantelet de Shar",
+    "obtention": "Offerte par le Chant-nocturne (Nightsong) si elle est libérée et épargnée, à l'issue du Gantelet de Shar.",
+    "effet": "Coutille +2 infligeant 1d4 dégâts radiants supplémentaires et diffusant une lumière permanente dans un rayon de 6 m. Actions d'arme Charge, Lacération et Position défensive. Action spéciale Papillons du clair de lune (repos court) : frappe un ennemi et invoque un essaim de papillons illusoires donnant l'Avantage aux attaques contre lui.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr",
+      "zone"
+    ],
+    "alignement": "restreint",
+    "alignementNote": "Nécessite d'épargner et de libérer le Chant-nocturne (Nightsong) plutôt que de la tuer — chemin mutuellement exclusif avec la version Très rare de la Demi-plate de tribun de la nuit."
+  },
+  {
+    "id": "justiciars-scimitar",
+    "nomEn": "Justiciar's Scimitar",
+    "nomFr": "Cimeterre de Tribun",
+    "type": "Cimeterre",
+    "rarete": "Très rare",
+    "acte": 2,
+    "zone": "Temple de Shar, Gantelet de Shar",
+    "obtention": "Sur le corps de Lyrthindor, le dernier tribun de la nuit métamorphosé en rat, dans le Temple de Shar — obtenu en le combattant plutôt qu'en acceptant son marché initial.",
+    "effet": "Cimeterre +2. Lame assombrissante : une attaque avec Avantage a une chance d'Aveugler la cible. Avantage aux jets d'attaque contre les cibles Dissimulées. Actions d'arme Brise-dos, Fanfaronnade et Coup empreint d'ombre.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "restreint",
+    "alignementNote": "Nécessite de tuer Lyrthindor plutôt que d'accepter son offre initiale."
+  },
+  {
+    "id": "justiciars-greatshield",
+    "nomEn": "Justiciar's Greatshield",
+    "nomFr": "Grand bouclier de Tribun",
+    "type": "Bouclier",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Temple de Shar, Gantelet de Shar",
+    "obtention": "Sur le corps de Lyrthindor, le dernier tribun de la nuit métamorphosé en rat, dans le Temple de Shar — obtenu en le combattant plutôt qu'en acceptant son marché initial.",
+    "effet": "+2 à la Classe d'Armure et Avantage aux tests de Sagesse (Perception). Action bonus Manteau des ténèbres (repos court) : crée un nuage d'obscurité magique et tente de se Cacher. Réaction Coup de bouclier : renverse un attaquant au corps-à-corps sauf s'il réussit un jet de sauvegarde de Force.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "restreint",
+    "alignementNote": "Nécessite de tuer Lyrthindor plutôt que d'accepter son offre initiale."
+  },
+  {
+    "id": "bigboys-chew-toy",
+    "nomEn": "Bigboy's Chew Toy",
+    "nomFr": "Jouet à mâcher de Bigboy",
+    "type": "Bâton (arme à une main)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Tours de Hautelune",
+    "obtention": "Achat auprès de Lann Tarv, au rez-de-chaussée des Tours de Hautelune.",
+    "effet": "Bâton +1. Permet de lancer Agrandissement sur soi-même, une fois par repos long, sans nécessiter de concentration.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "slicing-shortsword",
+    "nomEn": "Slicing Shortsword",
+    "nomFr": "Slicing Shortsword",
+    "type": "Épée courte",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Tours de Hautelune",
+    "obtention": "Achat auprès de Lann Tarv, au rez-de-chaussée des Tours de Hautelune.",
+    "effet": "Épée courte +1. Inflige un Saignement lorsque l'attaque est effectuée avec Avantage (2 dégâts tranchants supplémentaires par tour).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "render-of-mind-and-body",
+    "nomEn": "Render of Mind and Body",
+    "nomFr": "Render of Mind and Body",
+    "type": "Épée courte",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Tours de Hautelune",
+    "obtention": "Achat auprès de Lann Tarv, après avoir convaincu la Disciple Z'rell de donner accès à son stock spécial.",
+    "effet": "Épée courte +1. Inflige 1d8 dégâts psychiques supplémentaires lorsque l'attaque est effectuée avec Avantage.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "gloves-of-the-duellist",
+    "nomEn": "Gloves of The Duellist",
+    "nomFr": "Gants de duelliste",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Tours de Hautelune",
+    "obtention": "Achat auprès de Lann Tarv, au rez-de-chaussée des Tours de Hautelune.",
+    "effet": "+2 aux jets d'attaque d'arme de mêlée tant que le porteur ne tient qu'une seule arme en main principale et rien dans l'autre main (un bouclier en main secondaire n'annule pas le bonus).",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "sentinel-shield",
+    "nomEn": "Sentinel Shield",
+    "nomFr": "Bouclier de sentinelle",
+    "type": "Bouclier",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Tours de Hautelune",
+    "obtention": "Achat auprès de Lann Tarv, au rez-de-chaussée des Tours de Hautelune.",
+    "effet": "+3 à l'initiative et avantage aux tests de Perception. Réaction Choc de bouclier : si le porteur est touché en mêlée, l'attaquant doit réussir un jet de sauvegarde de Dextérité ou tomber à terre.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "enraging-heart-garb",
+    "nomEn": "Enraging Heart Garb",
+    "nomFr": "Tenue de cœur enragé",
+    "type": "Vêtement (torse)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Tours de Hautelune",
+    "obtention": "Achat auprès de Lann Tarv, au rez-de-chaussée des Tours de Hautelune.",
+    "effet": "+2 Constitution. Cœur du dompteur de ruines : est censé générer 2 tours de Courroux tant que le porteur est en Rage, mais un bug de la version vanille empêche cet effet de se déclencher — seul le bonus de Constitution fonctionne réellement.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "gauntlets-of-surging-accuracy",
+    "nomEn": "Gauntlets of Surging Accuracy",
+    "nomFr": "Gantelets d'incroyable précision",
+    "type": "Gants (armure intermédiaire)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Tours de Hautelune",
+    "obtention": "Achat auprès de Lann Tarv, après avoir convaincu la Disciple Z'rell de donner accès à son stock spécial. Nécessite la maîtrise des armures intermédiaires.",
+    "effet": "Lors de l'utilisation de Second souffle (Action Surge), +1d4 aux jets d'attaque pour le reste du tour.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "drakethroat-glaive",
+    "nomEn": "Drakethroat Glaive",
+    "nomFr": "Drakethroat Glaive",
+    "type": "Glaive",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Tours de Hautelune",
+    "obtention": "Achat auprès de Roah Moonglow, au rez-de-chaussée des Tours de Hautelune.",
+    "effet": "Glaive +2. Permet de lancer Arme élémentaire draconique (niveau 3, une fois par repos long) : +1 aux jets d'attaque et 1d4 dégâts élémentaires supplémentaires au choix. Souffle féroce de dragon : désavantage aux jets de sauvegarde contre le souffle draconique du porteur.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "ring-of-spiteful-thunder",
+    "nomEn": "Ring of Spiteful Thunder",
+    "nomFr": "Anneau de tonnerre déstabilisant",
+    "type": "Anneau",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Tours de Hautelune",
+    "obtention": "Achat auprès de Roah Moonglow, au rez-de-chaussée des Tours de Hautelune.",
+    "effet": "Lorsque le porteur inflige des dégâts de Tonnerre à une créature en Réverbération, elle devient Étourdie sauf si elle réussit un jet de sauvegarde de Constitution.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "boots-of-arcane-bolstering",
+    "nomEn": "Boots of Arcane Bolstering",
+    "nomFr": "Bottes de renfort arcanique",
+    "type": "Bottes",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Tours de Hautelune",
+    "obtention": "Achat auprès d'Araj Oblodra, au rez-de-chaussée des Tours de Hautelune.",
+    "effet": "À chaque utilisation de Ruée (Dash), octroie une Charge arcanique pendant 2 tours : +1 aux dégâts de sorts tant que le porteur est Menacé.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "hat-of-storm-scions-power",
+    "nomEn": "Hat of Storm Scion's Power",
+    "nomFr": "Chapeau de puissance de descendant de l'orage",
+    "type": "Chapeau (tête)",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Tours de Hautelune",
+    "obtention": "Achat auprès d'Araj Oblodra, au rez-de-chaussée des Tours de Hautelune.",
+    "effet": "Octroie l'Acuité arcanique (2 tours) chaque fois que le porteur inflige des dégâts de Tonnerre.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "robe-of-exquisite-focus",
+    "nomEn": "Robe of Exquisite Focus",
+    "nomFr": "Robe d'exquise concentration",
+    "type": "Vêtement (torse)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Tours de Hautelune",
+    "obtention": "Achat auprès d'Araj Oblodra, au rez-de-chaussée des Tours de Hautelune.",
+    "effet": "+1 au DD des sorts.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "thunderskin-cloak",
+    "nomEn": "Thunderskin Cloak",
+    "nomFr": "Cape en peau de tonnerre",
+    "type": "Cape",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Tours de Hautelune",
+    "obtention": "Achat auprès d'Araj Oblodra, au rez-de-chaussée des Tours de Hautelune.",
+    "effet": "Écho assourdissant : quand une créature en Réverbération inflige des dégâts au porteur, elle doit réussir un jet de sauvegarde de Constitution ou devenir Étourdie.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "spineshudder-amulet",
+    "nomEn": "Spineshudder Amulet",
+    "nomFr": "Spineshudder Amulet",
+    "type": "Amulette",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Tours de Hautelune — chambre d'Isobel (étage supérieur)",
+    "obtention": "Butin d'un coffre-mimique dans la chambre d'Isobel, à l'étage supérieur des Tours de Hautelune.",
+    "effet": "Résonance crépitante : chaque fois que le porteur inflige des dégâts avec une attaque de sort à distance, la cible subit 2 tours de Réverbération.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "cloak-of-elemental-absorption",
+    "nomEn": "Cloak of Elemental Absorption",
+    "nomFr": "Cape d'absorption élémentaire",
+    "type": "Cape",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Tours de Hautelune — appartements de Ketheric Thorm (2e étage)",
+    "obtention": "Coffre opulent dans les appartements privés de Ketheric Thorm, au deuxième étage des Tours de Hautelune.",
+    "effet": "Absorption des éléments : absorbe la moitié des dégâts de la prochaine attaque élémentaire subie et ajoute 1d6 dégâts du même type élémentaire à la prochaine attaque du porteur. Censé se recharger à chaque repos court, mais un bug de la version vanille le limite à une fois par repos long.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "coldbrim-hat",
+    "nomEn": "Coldbrim Hat",
+    "nomFr": "Coldbrim Hat",
+    "type": "Chapeau (tête)",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Tours de Hautelune — chambres de Balthazar",
+    "obtention": "Coffre opulent verrouillé dans une pièce secrète des chambres de Balthazar.",
+    "effet": "Frisson glacial : une fois par tour, toute condition infligée à une cible ajoute aussi 2 tours de Gel (Encrusted with Frost).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "derivation-cloak",
+    "nomEn": "Derivation Cloak",
+    "nomFr": "Cape de dérivation",
+    "type": "Cape",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Tours de Hautelune — chambres de Balthazar",
+    "obtention": "Coffre lourd verrouillé dans les chambres de Balthazar, au premier étage des Tours de Hautelune.",
+    "effet": "Dérivation mortelle : soigne le porteur de 1d4 PV chaque fois qu'il inflige des dégâts de poison à un ennemi.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "assassin-shortsword",
+    "nomEn": "Assassin's Shortsword",
+    "nomFr": "Assassin's Shortsword",
+    "type": "Épée courte",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Reithwin (Terres maudites de l'ombre)",
+    "obtention": "Butin sur l'un des deux squelettes situés sur les falaises à l'ouest de la Maison de la Guérison, à Reithwin.",
+    "effet": "Épée courte +1. Avantage aux tests de Discrétion. Fioriture (charge de repos court) : feinte pouvant infliger Déséquilibré. Frappe perforante (charge de repos court) : coup pouvant infliger Blessures béantes.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "lightning-jabber",
+    "nomEn": "Lightning Jabber",
+    "nomFr": "Lightning Jabber",
+    "type": "Lance (arme simple, jetable)",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Reithwin, embuscade des kuo-toas maudits au nord-est de l'entrée du Grand Mausolée",
+    "obtention": "Butin sur le chef kuo-toa maudit après l'avoir vaincu.",
+    "effet": "Lance +1 infligeant 1d4 dégâts de foudre supplémentaires (même en cas de jet manqué en tant qu'arme de lancer). Piqûre choquante : à l'impact, peut infliger la condition Choc (DD 13 Constitution, 2 tours).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "punch-drunk-bastard",
+    "nomEn": "Punch-Drunk Bastard",
+    "nomFr": "Punch-Drunk Bastard",
+    "type": "Grande massue (arme à deux mains)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "La Lune déclinante (The Waning Moon), Reithwin",
+    "obtention": "Dans un coffre à l'arrière de la zone ouest, près d'une porte de cage piégée, à la taverne de la Lune déclinante.",
+    "effet": "Grande massue +1. Tant que le porteur est Ivre, avantage aux jets d'attaque et chaque coup de mêlée réussi crée une explosion infligeant 1d4 dégâts de Tonnerre en zone de 3 m (alliés exclus). Ténacité : une attaque de mêlée ratée inflige quand même les dégâts de Force en contondant.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "rat-bat",
+    "nomEn": "Rat Bat",
+    "nomFr": "Rat Bat",
+    "type": "Grande massue (arme à deux mains)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "La Lune déclinante (The Waning Moon), Reithwin",
+    "obtention": "Trouvée au sol, adossée à un mur, près de Thisobald Thorm, à la taverne de la Lune déclinante.",
+    "effet": "Grande massue +1 infligeant 1d6 dégâts perforants supplémentaires. Chasseuse de rats : avantage aux jets d'attaque contre les bêtes.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "twist-of-fortune",
+    "nomEn": "Twist of Fortune",
+    "nomFr": "Twist of Fortune",
+    "type": "Morgenstern (arme à une main)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Péage de Reithwin (Reithwin Tollhouse)",
+    "obtention": "Butin sur Gerringothe Thorm après l'avoir vaincue au Péage de Reithwin.",
+    "effet": "Morgenstern +1. Argent de sang : inflige des dégâts perforants bonus (bonus de maîtrise par tranche de 300 pièces d'or possédées par la cible, l'or est alors consommé). Retournement de fortune : si le dé de dégâts de l'arme fait 2 ou moins, relance automatique.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "boots-of-apparent-death",
+    "nomEn": "Boots of Apparent Death",
+    "nomFr": "Boots of Apparent Death",
+    "type": "Bottes",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Cimetière de Reithwin",
+    "obtention": "Dans un sarcophage verrouillé, derrière une grille en fer, au cimetière de Reithwin.",
+    "effet": "Permet de lancer Feindre la mort (niveau 3) en action, une fois par repos court.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "fleshmelter-cloak",
+    "nomEn": "Fleshmelter Cloak",
+    "nomFr": "Fleshmelter Cloak",
+    "type": "Cape",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Morgue de la Maison de la Guérison",
+    "obtention": "Dans un coffre doré au-dessus de la fosse, dans la morgue de la Maison de la Guérison.",
+    "effet": "Représailles caustiques : toute créature infligeant des dégâts de mêlée au porteur subit 1d4 dégâts d'acide (2d4 sur un coup critique). Ne se déclenche que si le porteur subit réellement des dégâts.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "gloves-of-battlemages-power",
+    "nomEn": "Gloves of Battlemage's Power",
+    "nomFr": "Gloves of Battlemage's Power",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Péage de Reithwin (Reithwin Tollhouse)",
+    "obtention": "Dans un coffre opulent verrouillé, à l'étage du Péage de Reithwin.",
+    "effet": "+1 aux jets de sauvegarde de Force. Toucher une cible avec un sort ou un cantrip via une arme octroie la condition Acuité arcanique : +1 au DD des sorts et aux jets d'attaque de sort par tour restant (jusqu'à 10 tours), la durée diminuant de 2 à chaque fois que le porteur subit des dégâts.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "hracknir-bracers",
+    "nomEn": "Hr'a'cknir Bracers",
+    "nomFr": "Hr'a'cknir Bracers",
+    "type": "Brassards (mains)",
+    "rarete": "Très rare",
+    "acte": 2,
+    "zone": "Reithwin, près du pont menant au point de passage vers la Porte de Baldur",
+    "obtention": "Butin sur Ch'r'ai Tska'an, rencontrée près du pont.",
+    "effet": "+1 aux jets de sauvegarde de Force. Permet de lancer Main de mage en action bonus. Permet de lancer Télékinésie (niveau 5) une fois par repos court.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "icebite-robe",
+    "nomEn": "Icebite Robe",
+    "nomFr": "Icebite Robe",
+    "type": "Vêtement (torse)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Cimetière de Reithwin",
+    "obtention": "Dans un sarcophage au nord de la grille en fer, au cimetière de Reithwin.",
+    "effet": "Résistance aux dégâts de froid. Permet de lancer Armure d'Agathys (niveau 3) une fois par repos long — l'effet s'arrête si la robe est retirée pendant que le sort est actif.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "ichorous-gloves",
+    "nomEn": "Ichorous Gloves",
+    "nomFr": "Ichorous Gloves",
+    "type": "Gants",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "La Lune déclinante (The Waning Moon), Reithwin",
+    "obtention": "Dans un coffre métallique de la réserve derrière le bar, à la taverne de la Lune déclinante.",
+    "effet": "Corrosion visqueuse : infliger des dégâts d'acide inflige aussi Miasmes nauséabonds à la cible (une fois par tour, effet à chance de déclenchement).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "protective-plate",
+    "nomEn": "Protective Plate",
+    "nomFr": "Protective Plate",
+    "type": "Armure (lourde)",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Morgue de la Maison de la Guérison",
+    "obtention": "Butin sur l'Armure creuse (Hollow Armour) rencontrée au fond de la fosse, dans la morgue de la Maison de la Guérison.",
+    "effet": "CA 18. Résistance aux dégâts nécrotiques. N'impose pas de désavantage aux tests de Discrétion malgré son type lourd.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "psionic-ward-armour",
+    "nomEn": "Psionic Ward Armour",
+    "nomFr": "Psionic Ward Armour",
+    "type": "Armure (intermédiaire)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Reithwin, près du pont menant au point de passage vers la Porte de Baldur",
+    "obtention": "Butin sur Ch'r'ai Tska'an (ou pickpocket), rencontrée près du pont.",
+    "effet": "CA 15 + mod. de Dextérité (max +2). Réussir un jet de sauvegarde contre un sort restaure 1d4 PV. Si le porteur est githyanki, résistance aux dégâts psychiques. Désavantage aux tests de Discrétion.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "fireheart-amulet",
+    "nomEn": "Fireheart",
+    "nomFr": "Fireheart",
+    "type": "Amulette",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Reithwin, pièce cachée",
+    "obtention": "Dans un coffre lourd, dans une pièce cachée de Reithwin accessible en brisant une vigne, en sautant par une fenêtre, ou en cassant de vieilles planches sur un toit.",
+    "effet": "Flammes ferventes : subir des dégâts de feu infligés par une autre créature octroie 2 tours de condition Chaleur.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "firzus-ring-of-trading",
+    "nomEn": "Firzu's Ring of Trading",
+    "nomFr": "Firzu's Ring of Trading",
+    "type": "Anneau",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Morgue de la Maison de la Guérison",
+    "obtention": "Sur un cadavre calciné, dans une pièce cachée immédiatement au sud du hall d'entrée de la morgue.",
+    "effet": "+1 aux tests de Tromperie.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "ironvine-shield",
+    "nomEn": "Ironvine Shield",
+    "nomFr": "Ironvine Shield",
+    "type": "Bouclier",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Péage de Reithwin (Reithwin Tollhouse)",
+    "obtention": "Dans un coffre, au Péage de Reithwin.",
+    "effet": "+2 CA. Tant que le porteur manie une arme enchantée par le sort Shillelagh, toute attaque de mêlée qui le touche inflige au passage des dégâts perforants égaux au mod. de Sagesse à l'attaquant.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "strange-tendril-amulet",
+    "nomEn": "Strange Tendril Amulet",
+    "nomFr": "Strange Tendril Amulet",
+    "type": "Amulette",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Morgue de la Maison de la Guérison",
+    "obtention": "Dans un coffre en bois, dans une pièce cachée près de l'entrée principale de la morgue.",
+    "effet": "Permet de lancer Tentacules noirs d'Evard (niveau 4) une fois par repos long.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "true-loves-caress",
+    "nomEn": "True Love's Caress",
+    "nomFr": "Caresse du véritable amour",
+    "type": "Anneau",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Cimetière de Reithwin",
+    "obtention": "Sur un squelette adossé à une pierre tombale, sur la route entre la Maison de la Guérison et la Guilde des maçons, au cimetière de Reithwin.",
+    "effet": "Tendre caresse : permet de recevoir Lien de protection lancé par le porteur de l'anneau jumeau (Étreinte du véritable amour). Une fois lancé, le lien persiste même si les anneaux sont retirés, jusqu'à la mort ou un repos long.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "true-loves-embrace",
+    "nomEn": "True Love's Embrace",
+    "nomFr": "Étreinte du véritable amour",
+    "type": "Anneau",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Maison de la Guérison",
+    "obtention": "Sur un squelette allongé sur un matelas, dans le pavillon hospitalier de la Maison de la Guérison.",
+    "effet": "Étreinte intime : permet de lancer Lien de protection une fois par repos long sur le porteur de l'anneau jumeau (Caresse du véritable amour). Le lien persiste même si les anneaux sont retirés, jusqu'à la mort ou un repos long.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "watchers-shield",
+    "nomEn": "Watcher's Shield",
+    "nomFr": "Watcher's Shield",
+    "type": "Bouclier",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Reithwin, falaises à l'ouest de la Maison de la Guérison",
+    "obtention": "Butin sur l'un des deux squelettes situés sur les falaises à l'ouest de la Maison de la Guérison.",
+    "effet": "+2 CA. Avantage aux tests de Perception. Nécessite la maîtrise des boucliers.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "bided-time",
+    "nomEn": "Bided Time",
+    "nomFr": "Bided Time",
+    "type": "Vêtement (torse)",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Morgue de la Maison de la Guérison",
+    "obtention": "Dans un coffre lourd verrouillé, dans la réserve au sud de la crypte de zombies, dans la morgue de la Maison de la Guérison.",
+    "effet": "CA 10 + mod. de Dextérité. Subir une attaque de mêlée octroie Charge arcanique (+2 dégâts de sorts contre les cibles menaçantes, 2 tours, la durée se réinitialisant à chaque nouveau coup subi).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "blade-of-oppressed-souls",
+    "nomEn": "Blade of Oppressed Souls",
+    "nomFr": "Blade of Oppressed Souls",
+    "type": "Épée longue",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Colonie flagelleuse mentale, Laboratoire nécrotique",
+    "obtention": "Dans la zone débloquée par l'énigme du Laboratoire nécrotique (également vendue par le marchand Koll au Haut Hall, en Ville basse, à l'Acte 3).",
+    "effet": "Épée longue +1 infligeant 1d4 dégâts psychiques bonus sur toutes les attaques. Frappe couronnante (charge de repos court) : libère les hurlements des morts et peut infliger Couronne de folie.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "ketherics-warhammer",
+    "nomEn": "Ketheric's Warhammer",
+    "nomFr": "Ketheric's Warhammer",
+    "type": "Marteau de guerre (arme à une ou deux mains)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Colonie flagelleuse mentale",
+    "obtention": "Butin sur Ketheric Thorm après l'avoir vaincu lors de l'affrontement final.",
+    "effet": "Marteau de guerre +1 infligeant 1d4 dégâts psychiques bonus. Actions d'arme (charge de repos court) : Brise-dos, Écrasement percutant, Frappe affaiblissante.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "reapers-embrace",
+    "nomEn": "Reaper's Embrace",
+    "nomFr": "Reaper's Embrace",
+    "type": "Armure (lourde)",
+    "rarete": "Très rare",
+    "acte": 2,
+    "zone": "Colonie flagelleuse mentale",
+    "obtention": "Butin sur Ketheric Thorm après l'avoir vaincu lors de l'affrontement final.",
+    "effet": "CA 19. Réduit tous les dégâts entrants de 2. Hurlement des morts (action bonus, charge de repos court) : inflige la condition Engourdi aux ennemis proches. Rigidité du faucheur : le porteur ne peut plus être déplacé de force, mais subit un désavantage aux jets de sauvegarde de Dextérité et aux tests de Discrétion.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "myrkulite-scourge",
+    "nomEn": "Myrkulite Scourge",
+    "nomFr": "Myrkulite Scourge",
+    "type": "Fléau d'armes (arme à une main)",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Colonie flagelleuse mentale, baraquements",
+    "obtention": "Butin sur Kressa Bonedaughter, dans les baraquements de la Colonie flagelleuse mentale.",
+    "effet": "Fléau d'armes infligeant 1d6 dégâts nécrotiques bonus. Ténacité (main principale uniquement) : une attaque de mêlée ratée inflige quand même les dégâts de Force en contondant.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "ketherics-shield",
+    "nomEn": "Ketheric's Shield",
+    "nomFr": "Ketheric's Shield",
+    "type": "Bouclier",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Colonie flagelleuse mentale",
+    "obtention": "Butin sur Ketheric Thorm après l'avoir vaincu lors de l'affrontement final.",
+    "effet": "+2 CA. Avantage aux jets de sauvegarde de Dextérité. +1 au DD des sorts et aux jets d'attaque de sort. Choc de bouclier : réaction quand touché en mêlée pour tenter de renverser l'attaquant.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "circlet-of-mental-anguish",
+    "nomEn": "Circlet of Mental Anguish",
+    "nomFr": "Circlet of Mental Anguish",
+    "type": "Diadème (tête)",
+    "rarete": "Rare",
+    "acte": 2,
+    "zone": "Colonie flagelleuse mentale, Laboratoire nécrotique",
+    "obtention": "Butin sur un squelette, dans le Laboratoire nécrotique de la Colonie flagelleuse mentale.",
+    "effet": "Sangsue psychique : quand un ennemi rate un jet de sauvegarde de Charisme, d'Intelligence ou de Sagesse contre un sort ou un cantrip lancé par le porteur, celui-ci récupère 1d4 PV (une fois par sort lancé).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "braindrain-gloves",
+    "nomEn": "Braindrain Gloves",
+    "nomFr": "Braindrain Gloves",
+    "type": "Gants",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Colonie flagelleuse mentale, Laboratoire nécrotique",
+    "obtention": "Butin sur un squelette, juste à côté de la Lame des âmes opprimées, dans le Laboratoire nécrotique.",
+    "effet": "Interférence mentale : infliger des dégâts psychiques à une cible lui inflige aussi Fatigue mentale pendant 2 tours.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
   }
 ]
