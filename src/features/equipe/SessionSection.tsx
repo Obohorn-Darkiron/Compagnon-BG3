@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Section } from '../../components/Section'
 import type { Campagne } from '../../storage/useSaveData'
 import { creerSession, quitterSession, rejoindreSession } from '../../session/sessionSync'
-import { sessionDisponible } from '../../session/supabaseClient'
+import { sessionDisponible } from '../../session/firebaseClient'
 
 export function SessionSection({ campagne }: { campagne: Campagne }) {
   const [codeSaisi, setCodeSaisi] = useState('')
