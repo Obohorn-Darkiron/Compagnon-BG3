@@ -4844,5 +4844,1718 @@
       "nomFr"
     ],
     "alignement": "neutre"
+  },
+  {
+    "id": "helldusk-helmet",
+    "nomEn": "Helldusk Helmet",
+    "nomFr": "Helldusk Helmet",
+    "type": "Casque (tête)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Maison de l'Espoir (House of Hope), Coffre-fort de Raphaël",
+    "obtention": "Dans un tas de caisses au fond du coffre-fort de Raphaël, à la Maison de l'Espoir (même salle que le Bâton de puissance magique). Nécessite d'ouvrir le coffre-fort : jet de Sagesse DD 10 pour activer la gemme infernale inerte, puis jet d'Arcanes DD 20 avec la gemme de contrôle infernale pour ouvrir la porte.",
+    "effet": "Immunité à l'aveuglement et vision dans les ténèbres (magiques ou non) jusqu'à 12 m. +2 aux jets de sauvegarde contre les sorts. Personne ne peut te toucher d'un coup critique. Regard consumant (action, recharge au repos court) : brûle et effraie une cible.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "helldusk-gloves",
+    "nomEn": "Helldusk Gloves",
+    "nomFr": "Helldusk Gloves",
+    "type": "Gants",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Maison de l'Espoir (House of Hope), Boudoir",
+    "obtention": "Butin sur le succube Haarlep après l'avoir vaincu dans le Boudoir de la Maison de l'Espoir.",
+    "effet": "+1 aux jets de sauvegarde de Force. Lance le cantrip Rayons de feu (action, recharge au repos court). Acuité infernale : +1 au DD des sorts et aux jets d'attaque de sort. Toucher infernal : les attaques d'arme infligent 1d6 dégâts de feu supplémentaires ; les attaques à mains nues infligent 1d6 dégâts nécrotiques et peuvent infliger un Saignement.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "amulet-elemental-torment",
+    "nomEn": "Amulet of Elemental Torment",
+    "nomFr": "Amulette du tourment élémentaire",
+    "type": "Amulette",
+    "rarete": "Peu commun",
+    "acte": 3,
+    "zone": "Maison de l'Espoir (House of Hope), Vestibule",
+    "obtention": "Portée par Hope pendant le combat contre Raphaël, à la Maison de l'Espoir ; récupérable sur elle après le combat.",
+    "effet": "Vengeance de la nature : lancer un sort infligeant des dégâts sur une créature se trouvant sur une surface de feu, de saumure caustique, de toxine simple ou d'acide déclenche en plus l'effet de cette surface sur la cible.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "burnished-ring",
+    "nomEn": "Burnished Ring",
+    "nomFr": "Anneau bruni",
+    "type": "Anneau",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Maison de l'Espoir (House of Hope), Prison de Hope",
+    "obtention": "Butin sur l'un des Observateurs (Spectators) affrontés dans la Prison de Hope, à la Maison de l'Espoir.",
+    "effet": "Permet de lancer Rayon paralysant (sort de niveau 3) une fois par repos long.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "amulet-of-bhaal",
+    "nomEn": "Amulet of Bhaal",
+    "nomFr": "Amulette de Bhaal",
+    "type": "Amulette",
+    "rarete": "Unique",
+    "acte": 3,
+    "zone": "Tribunal du Meurtre",
+    "obtention": "Remise par Sarevok Anchev en récompense après avoir réussi la quête « Impressionner le Tribunal du Meurtre » (devenir un Assassin impie de Bhaal en tuant Valeria). Nécessaire pour accéder aux Ruines de la Ville basse puis au Temple de Bhaal.",
+    "effet": "Premier sang : sur un coup réussi contre une cible à PV maximum, inflige la condition Saignement. Sert aussi de clé de quête pour accéder au Temple de Bhaal.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr",
+      "rarete"
+    ],
+    "alignement": "sombre",
+    "alignementNote": "Réservée à la route « Assassin impie de Bhaal » — nécessite de tuer Valeria et de rejoindre le culte de Bhaal. Incompatible avec une run bienveillante."
+  },
+  {
+    "id": "shield-of-the-undevout",
+    "nomEn": "Shield of the Undevout",
+    "nomFr": "Bouclier de l'impie",
+    "type": "Bouclier",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Tribunal du Meurtre",
+    "obtention": "Butin sur l'un des chevaliers de la mort gardant le Tribunal du Meurtre, près du repaire de Sarevok.",
+    "effet": "+2 CA. Un emplacement de sort de niveau 1 supplémentaire. Frappeur funeste : désavantage aux jets de sauvegarde contre tes sorts ou effets infligeant la Peur. Choc de bouclier : réaction pour tenter de renverser un assaillant au contact qui te touche en mêlée.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "blackguards-gauntlets",
+    "nomEn": "Blackguard's Gauntlets",
+    "nomFr": "Gantelets du chevalier félon",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Tribunal du Meurtre",
+    "obtention": "Butin sur l'un des chevaliers de la mort gardant le Tribunal du Meurtre. Nécessite la maîtrise de l'armure intermédiaire.",
+    "effet": "+1 aux jets d'attaque et aux jets de sauvegarde de Force. Lance Blessures (sort de niveau 4) une fois par repos long.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "blackguards-greaves",
+    "nomEn": "Blackguard's Greaves",
+    "nomFr": "Grèves du chevalier félon",
+    "type": "Bottes",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Tribunal du Meurtre",
+    "obtention": "Butin sur l'un des chevaliers de la mort gardant le Tribunal du Meurtre. Nécessite la maîtrise de l'armure intermédiaire.",
+    "effet": "Confère en permanence l'effet Enjambée agrandie (vitesse de déplacement augmentée). +1 aux tests d'Athlétisme.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "blackguards-plate",
+    "nomEn": "Blackguard's Plate",
+    "nomFr": "Armure de plates du chevalier félon",
+    "type": "Armure (lourde)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Tribunal du Meurtre",
+    "obtention": "Butin sur l'un des chevaliers de la mort gardant le Tribunal du Meurtre. Nécessite la maîtrise de l'armure lourde.",
+    "effet": "CA de base 19. Réduit tous les dégâts subis de 1. Avantage aux jets de sauvegarde de Sagesse. Désavantage aux tests de Discrétion.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "assassin-of-bhaal-cowl",
+    "nomEn": "Assassin of Bhaal Cowl",
+    "nomFr": "Capuche de l'assassin de Bhaal",
+    "type": "Casque (tête)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Tribunal du Meurtre",
+    "obtention": "Vendue par le marchand fantomatique Écho d'Abazigal, au Tribunal du Meurtre — accessible uniquement après avoir accepté de devenir Assassin impie de Bhaal.",
+    "effet": "+2 à l'initiative. Lance Détection de l'invisibilité (sort de niveau 2) une fois par repos court. Vision dans le noir.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "sombre",
+    "alignementNote": "Vendue uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante)."
+  },
+  {
+    "id": "bhaalist-gloves",
+    "nomEn": "Bhaalist Gloves",
+    "nomFr": "Gants de fidèle de Bhaal",
+    "type": "Gants",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Tribunal du Meurtre",
+    "obtention": "Vendus par le marchand fantomatique Écho d'Abazigal, au Tribunal du Meurtre — accessible uniquement après avoir accepté de devenir Assassin impie de Bhaal.",
+    "effet": "+1 aux jets d'attaque. Garrotte (action, recharge au repos court) : étrangle une créature humanoïde avec une corde d'ombre.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "sombre",
+    "alignementNote": "Vendus uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante)."
+  },
+  {
+    "id": "craterflesh-gloves",
+    "nomEn": "Craterflesh Gloves",
+    "nomFr": "Gants de chair cratérisée",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Tribunal du Meurtre",
+    "obtention": "Vendus par le marchand fantomatique Écho d'Abazigal, au Tribunal du Meurtre — accessible uniquement après avoir accepté de devenir Assassin impie de Bhaal.",
+    "effet": "+1 aux jets de sauvegarde de Force. Blessures cratérisées : les coups critiques infligent des dégâts de force supplémentaires.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "sombre",
+    "alignementNote": "Vendus uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante)."
+  },
+  {
+    "id": "dread-iron-dagger",
+    "nomEn": "Dread Iron Dagger",
+    "nomFr": "Dague de fer funeste",
+    "type": "Dague",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Tribunal du Meurtre",
+    "obtention": "Vendue par le marchand fantomatique Écho d'Abazigal, au Tribunal du Meurtre — accessible uniquement après avoir accepté de devenir Assassin impie de Bhaal.",
+    "effet": "Embuscade de fer funeste : tant que le porteur est Dissimulé, l'arme inflige 1d6 dégâts nécrotiques supplémentaires.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "sombre",
+    "alignementNote": "Vendue uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante)."
+  },
+  {
+    "id": "fleshrender",
+    "nomEn": "Fleshrender",
+    "nomFr": "Déchire-chair",
+    "type": "Épée courte",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Tribunal du Meurtre",
+    "obtention": "Vendue par le marchand fantomatique Écho d'Abazigal, au Tribunal du Meurtre — accessible uniquement après avoir accepté de devenir Assassin impie de Bhaal.",
+    "effet": "Épée courte +2, finesse. Fendre la chair (action, recharge au repos court) : frappe précise qui peut entraver la guérison de la cible.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "sombre",
+    "alignementNote": "Vendue uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante)."
+  },
+  {
+    "id": "vicious-battleaxe",
+    "nomEn": "Vicious Battleaxe",
+    "nomFr": "Hache de guerre vicieuse",
+    "type": "Hache de guerre (arme à une ou deux mains)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Tribunal du Meurtre",
+    "obtention": "Vendue par le marchand fantomatique Écho d'Abazigal, au Tribunal du Meurtre — accessible uniquement après avoir accepté de devenir Assassin impie de Bhaal.",
+    "effet": "Dolor Amarus : les coups critiques infligent 7 dégâts supplémentaires. Donne accès aux actions d'arme Fauchage, Lacération et Frappe mutilante.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "sombre",
+    "alignementNote": "Vendue uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante)."
+  },
+  {
+    "id": "vicious-shortbow",
+    "nomEn": "Vicious Shortbow",
+    "nomFr": "Arc court vicieux",
+    "type": "Arc court (arme à distance)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Tribunal du Meurtre",
+    "obtention": "Vendu par le marchand fantomatique Écho d'Abazigal, au Tribunal du Meurtre — accessible uniquement après avoir accepté de devenir Assassin impie de Bhaal.",
+    "effet": "Dolor Amarus : les coups critiques infligent 7 dégâts supplémentaires. Donne accès à l'action Tir au jarret (recharge au repos court).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "sombre",
+    "alignementNote": "Vendu uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante)."
+  },
+  {
+    "id": "dolor-amarus",
+    "nomEn": "Dolor Amarus",
+    "nomFr": "Dolor Amarus",
+    "type": "Dague",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Tribunal du Meurtre (également disponible au Repaire de Highberry, Ville basse)",
+    "obtention": "Deux sources indépendantes : butin sur le PNJ Dolor au Repaire de Highberry ; ou achat auprès du marchand fantomatique Écho d'Abazigal au Tribunal du Meurtre, accessible uniquement après avoir accepté de devenir Assassin impie de Bhaal.",
+    "effet": "Sur un coup critique avec une arme ou une attaque à mains nues, inflige 7 dégâts supplémentaires. Se cumule si plusieurs armes portant l'effet « vicieux » sont équipées simultanément.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr",
+      "sourceUnique"
+    ],
+    "alignement": "neutre",
+    "alignementNote": "La source du Tribunal du Meurtre nécessite d'avoir accepté de devenir Assassin impie de Bhaal ; l'autre source (Repaire de Highberry) est accessible sans cette contrainte."
+  },
+  {
+    "id": "duke-ravengards-longsword",
+    "nomEn": "Duke Ravengard's Longsword",
+    "nomFr": "Duke Ravengard's Longsword",
+    "type": "Épée longue",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Camp (Acte 3) ou Fort de Wyrm's Rock",
+    "obtention": "Portée par le grand-duc Ulder Ravengard. S'obtient en lui lançant Injonction : Lâche prise, ou en la récupérant sur son corps s'il meurt (Fort de Wyrm's Rock ou au Camp de l'Acte 3).",
+    "effet": "Épée longue +1. +2 Charisme. Frappe du commandant : en réaction, dirige un allié pour qu'il effectue une attaque d'arme (repos court). Exécution motivante : à chaque ennemi tué, les alliés dans 9 m gagnent des PV temporaires égaux au mod. de Charisme (minimum 1).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "restreint",
+    "alignementNote": "Nécessite que le grand-duc Ravengard meure (ou soit désarmé par un lanceur non-allié) — inobtenable s'il est sauvé normalement."
+  },
+  {
+    "id": "emblazoned-plate-of-the-marshal",
+    "nomEn": "Emblazoned Plate of the Marshal",
+    "nomFr": "Emblazoned Plate of the Marshal",
+    "type": "Armure (lourde)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Camp (Acte 3) ou Fort de Wyrm's Rock",
+    "obtention": "Butin sur le corps du grand-duc Ulder Ravengard, dans la salle d'audience du Fort de Wyrm's Rock, ou au Camp de l'Acte 3 — nécessite que le duc meure.",
+    "effet": "Armure de plaques, CA 19. Tous les dégâts subis sont réduits de 2. Résistance au feu avec +2 aux jets de sauvegarde contre le feu. Permet de lancer Bouclier de feu (niveau 4, repos long). Désavantage aux tests de Discrétion.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "restreint",
+    "alignementNote": "Nécessite que le grand-duc Ravengard meure — inobtenable s'il est sauvé et conservé en vie."
+  },
+  {
+    "id": "staff-of-the-emperor",
+    "nomEn": "Staff of the Emperor",
+    "nomFr": "Staff of the Emperor",
+    "type": "Bâton (arme à une ou deux mains)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Plan astral",
+    "obtention": "Porté par l'Empereur pendant la transition entre l'Acte 2 et l'Acte 3, dans le Plan astral. S'obtient en le désarmant.",
+    "effet": "Bâton +2. +1 au DD des sorts et aux jets d'attaque de sort. Représailles impériales : quand le porteur réussit un jet de sauvegarde contre un sort, le lanceur adverse doit réussir un jet de sauvegarde d'Intelligence ou être Étourdi pendant 1 tour. Action d'arme Renversement.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "orphic-ring",
+    "nomEn": "Orphic Ring",
+    "nomFr": "Orphic Ring",
+    "type": "Anneau",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Plan astral",
+    "obtention": "Récupéré sur le corps du prince Orphée, tard dans l'Acte 3, en choisissant de se ranger du côté de l'Empereur et de tuer Orphée plutôt que de le libérer.",
+    "effet": "Permet de lancer Confusion (niveau 5) une fois par repos long.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "restreint",
+    "alignementNote": "Nécessite de choisir l'Empereur plutôt que de libérer Orphée — choix tardif et mutuellement exclusif de fin d'Acte 3."
+  },
+  {
+    "id": "band-of-the-mystic-scoundrel",
+    "nomEn": "Band of the Mystic Scoundrel",
+    "nomFr": "Band of the Mystic Scoundrel",
+    "type": "Anneau",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Jungle (accessible via le défi truqué du Djinn Akabi, Cirque du Dernier Rideau)",
+    "obtention": "Remporter le jeu truqué du Djinn Akabi au Cirque du Dernier Rideau en lui volant son anneau ou en le distrayant — il téléporte alors le vainqueur dans une jungle hostile. Sur place, l'anneau se trouve dans un sac à dos posé près d'un squelette.",
+    "effet": "Célérité illusoire : après avoir touché une créature avec une attaque d'arme, permet de lancer un sort d'illusion ou d'enchantement en action bonus.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "infernal-mace",
+    "nomEn": "Infernal Mace",
+    "nomFr": "Infernal Mace",
+    "type": "Masse d'armes",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Fort de Wyrm's Rock / Fonderie de la Garde d'acier (butin générique des Gantelets noirs de Bane)",
+    "obtention": "Butin sur les Gantelets noirs de Bane (gardes de Gortash) — ce type d'ennemi peut apparaître à plusieurs endroits (salle d'audience du Fort de Wyrm's Rock, Fonderie de la Garde d'acier, Pyrotechnie de Felogyr) : l'obtention n'est pas garantie à une seule zone.",
+    "effet": "Masse +2. Sur un coup réussi, inflige 3 dégâts de poison supplémentaires et peut infliger la condition Empoisonné (jet de sauvegarde de Constitution DD 12). Action d'arme Frappe percutante : inflige des dégâts et peut étourdir la cible (repos court).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr",
+      "zoneExclusive"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "infernal-spear",
+    "nomEn": "Infernal Spear",
+    "nomFr": "Infernal Spear",
+    "type": "Lance (arme à allonge, polyvalente et jetable)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Fort de Wyrm's Rock (Wyrm's Rock Fortress)",
+    "obtention": "Butin sur les Consuls de fer Mian et Nuff, rencontrés au Fort de Wyrm's Rock.",
+    "effet": "Lance +1, polyvalente, jetable. Propriété Arme infernale : sur un coup réussi, inflige 3 dégâts de poison supplémentaires et peut infliger la condition Empoisonné. Permet l'action d'arme Attaque précipitée.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "absolute-confidence-amulet",
+    "nomEn": "Absolute Confidence Amulet",
+    "nomFr": "Absolute Confidence Amulet",
+    "type": "Amulette",
+    "rarete": "Peu commun",
+    "acte": 3,
+    "zone": "Traversée du Wyrm (Wyrm's Crossing)",
+    "obtention": "Offerte par le marchand Naaber (boutique Carm's Garms, Traversée du Wyrm) en discutant avec lui à plusieurs reprises jusqu'à épuiser toutes les options de dialogue ; peut aussi être directement dérobée sur lui.",
+    "effet": "+1 en Représentation, -1 en Intimidation.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "seemingly-gleaming-ring",
+    "nomEn": "Seemingly Gleaming Ring",
+    "nomFr": "Seemingly Gleaming Ring",
+    "type": "Anneau",
+    "rarete": "Peu commun",
+    "acte": 3,
+    "zone": "Traversée du Wyrm (Wyrm's Crossing)",
+    "obtention": "Offert par le marchand Naaber (boutique Carm's Garms, Traversée du Wyrm) en discutant avec lui jusqu'à épuiser tous les dialogues, à condition d'avoir préalablement dérobé l'Amulette de confiance absolue sur lui.",
+    "effet": "+1 aux jets de sauvegarde de Charisme, -1 aux jets de sauvegarde de Sagesse.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "harmonic-dueller",
+    "nomEn": "Harmonic Dueller",
+    "nomFr": "Harmonic Dueller",
+    "type": "Rapière",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Traversée du Wyrm (Wyrm's Crossing)",
+    "obtention": "Achat auprès du marchand Entharl Danthelon, à la Hache dansante de Danthelon (Traversée du Wyrm).",
+    "effet": "Rapière +1. Action Harmonie mielleuse (repos court) : test de Représentation DD 15 ; en cas de réussite, les attaques de mêlée infligent des dégâts supplémentaires égaux au mod. de Charisme jusqu'à ce que la rapière soit déséquipée.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "blightbringer",
+    "nomEn": "Blightbringer",
+    "nomFr": "Blightbringer",
+    "type": "Arc court (arme à distance)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Traversée du Wyrm (Wyrm's Crossing)",
+    "obtention": "Achat auprès du marchand Entharl Danthelon, à la Hache dansante de Danthelon (Traversée du Wyrm).",
+    "effet": "Arc court +1. Fléau : les attaques contre les gnomes ou les nains bénéficient d'un bonus de 1d4 aux jets d'attaque et de dégâts. Décélérateur de proie : un coup critique inflige aussi Ralenti. Action d'arme Tir aux jarrets (repos court).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "garb-of-the-land-and-sky",
+    "nomEn": "Garb of the Land and Sky",
+    "nomFr": "Garb of the Land and Sky",
+    "type": "Vêtement (torse)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Traversée du Wyrm (Wyrm's Crossing)",
+    "obtention": "Achat auprès du marchand Entharl Danthelon, à la Hache dansante de Danthelon (Traversée du Wyrm).",
+    "effet": "+1 CA. Prestance montagneuse : en utilisant Défense patiente, bénéficie aussi de Bouclier des lames. Vélocité de la brise : en utilisant Pas du vent, le prochain jet d'attaque bénéficie de l'Avantage et inflige 1d8 dégâts de force supplémentaires.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "gauntlets-of-the-warmaster",
+    "nomEn": "Gauntlets of the Warmaster",
+    "nomFr": "Gauntlets of the Warmaster",
+    "type": "Gants",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Traversée du Wyrm (Wyrm's Crossing)",
+    "obtention": "Achat auprès du marchand Entharl Danthelon, à la Hache dansante de Danthelon (Traversée du Wyrm). Nécessite la maîtrise de l'armure intermédiaire.",
+    "effet": "+1 aux jets d'attaque. Manœuvre exacerbée : les cibles subissent un désavantage à leurs jets de sauvegarde contre les manœuvres et la plupart des actions d'armes du porteur.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "horns-of-the-berserker",
+    "nomEn": "Horns of the Berserker",
+    "nomFr": "Horns of the Berserker",
+    "type": "Casque (tête)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Traversée du Wyrm (Wyrm's Crossing)",
+    "obtention": "Achat auprès du marchand Entharl Danthelon, à la Hache dansante de Danthelon (Traversée du Wyrm).",
+    "effet": "Traque sanglante : +2 aux jets d'attaque contre une créature déjà blessée. Soif de sang : tant que le porteur n'est pas à pleins PV, ses attaques à mains nues et de mêlée infligent 2 dégâts nécrotiques supplémentaires ; s'il n'inflige aucun dégât dans son tour, il subit 1d4 dégâts nécrotiques.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "snow-dusted-monastery-gloves",
+    "nomEn": "Snow-Dusted Monastery Gloves",
+    "nomFr": "Snow-Dusted Monastery Gloves",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Traversée du Wyrm (Wyrm's Crossing)",
+    "obtention": "Achat auprès du marchand Entharl Danthelon, à la Hache dansante de Danthelon (Traversée du Wyrm).",
+    "effet": "Les attaques à mains nues infligent 1d4 dégâts de froid supplémentaires. Permet de lancer Éclat de glace (niveau 3) une fois par repos long.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "scarlet-leather-armour",
+    "nomEn": "Scarlet Leather Armour",
+    "nomFr": "Scarlet Leather Armour",
+    "type": "Armure (légère)",
+    "rarete": "Peu commun",
+    "acte": 3,
+    "zone": "Traversée du Wyrm (Wyrm's Crossing)",
+    "obtention": "Portée par l'assassin Dolor à Highberry's Home (Traversée du Wyrm) — récupérable en le vainquant ou en le détroussant.",
+    "effet": "Armure légère, CA 12 + mod. de Dextérité. +1 aux tests de Discrétion.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "voss-silver-sword",
+    "nomEn": "Voss' Silver Sword",
+    "nomFr": "Épée d'argent de Voss",
+    "type": "Épée longue",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Traversée du Wyrm (Wyrm's Crossing) — La Caresse de Sharess, ou égouts de la Ville basse",
+    "obtention": "Portée par le githyanki Kith'rak Voss. S'obtient en le désarmant dès l'Acte 1, ou plus tard à l'Acte 3 en la lui donnant en échange du Marteau Orphique, en le vainquant au combat, ou en la lui dérobant.",
+    "effet": "Épée longue +2 (plus 1d4 dégâts psychiques). Permet de lancer Châtiment courroucé (repos court). Pourfendeur interplanaire : +1d4 aux dégâts contre les githyanki, aberrations, fiélons et élémentaires.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "ring-of-truthfulness",
+    "nomEn": "Ring of Truthfulness",
+    "nomFr": "Ring of Truthfulness",
+    "type": "Anneau",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Porté par le nourrisson flagelleur mental caché dans le sous-sol du Moulin abandonné (Abandoned Windmill), à Rivington.",
+    "effet": "Avantage aux jets de Perspicacité.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "clown-hammer",
+    "nomEn": "Clown Hammer",
+    "nomFr": "Clown Hammer",
+    "type": "Marteau de guerre (arme à une ou deux mains)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Cirque du Dernier Rideau, Porte de Baldur",
+    "obtention": "Porté par Fuum déguisé en Dribbles le clown, sur la scène au nord-est du Cirque du Dernier Rideau ; à récupérer sur son corps après l'avoir vaincu.",
+    "effet": "Marteau de guerre +2. Ironie funeste : à chaque coup critique, l'attaquant ET la cible doivent réussir un jet de sauvegarde de Sagesse ou subir la condition Rire incontrôlable (la cible ratant le jet tombe à terre). L'immunité peut être obtenue via certains objets (Kit de maquillage, Casque cornu de Sarevok, Étoffe d'autorité).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "djinni-ring",
+    "nomEn": "Djinni Ring",
+    "nomFr": "Djinni Ring",
+    "type": "Anneau",
+    "rarete": "Peu commun",
+    "acte": 3,
+    "zone": "Cirque du Dernier Rideau, Porte de Baldur",
+    "obtention": "Porté par le djinni Akabi, au Cirque du Dernier Rideau. S'obtient en le lui dérobant ou lors de l'affrontement avec lui.",
+    "effet": "Permet de lancer Main de mage en cantrip, récupération au repos court. Ne se cumule pas avec les Brassards de Hr'a'cknir, ne peut pas être lancé en action bonus, et ne bénéficie pas de Légèreté de main du Voleur des arcanes.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "staff-of-a-mumbling-wizard",
+    "nomEn": "Staff of a Mumbling Wizard",
+    "nomFr": "Staff of a Mumbling Wizard",
+    "type": "Bâton (arme à une ou deux mains)",
+    "rarete": "Peu commun",
+    "acte": 3,
+    "zone": "Cirque du Dernier Rideau, Porte de Baldur (roue de la fortune d'Akabi)",
+    "obtention": "L'un des lots de consolation possibles offerts par Akabi après un tour raté de sa roue de la fortune (500 po par tour) — attribué au hasard parmi plusieurs objets, non garanti.",
+    "effet": "Permet de lancer à volonté un cantrip de type Trait de feu, avec une chance sur 20 de déclencher une Boule de feu à la place. Un bug documenté empêche les dégâts de dépasser 1d8. Avec maîtrise, action Renversement (repos court).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr",
+      "loterieConsolation"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "comeback-handaxe",
+    "nomEn": "Comeback Handaxe",
+    "nomFr": "Comeback Handaxe",
+    "type": "Hachette (arme de lancer, légère)",
+    "rarete": "Peu commun",
+    "acte": 3,
+    "zone": "Cirque du Dernier Rideau, Porte de Baldur (roue de la fortune d'Akabi)",
+    "obtention": "L'un des lots de consolation possibles offerts par Akabi après un tour raté de sa roue de la fortune — attribué au hasard, non garanti.",
+    "effet": "Hachette +1. Une fois lancée, revient automatiquement vers le lanceur, lui infligeant au passage des dégâts contondants. Action Lacération (repos court) : inflige un saignement.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr",
+      "loterieConsolation"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "boots-of-very-fast-blinking",
+    "nomEn": "Boots of Very Fast Blinking",
+    "nomFr": "Bottes de Clignotement Accéléré",
+    "type": "Bottes",
+    "rarete": "Peu commun",
+    "acte": 3,
+    "zone": "Cirque du Dernier Rideau, Porte de Baldur (roue de la fortune d'Akabi)",
+    "obtention": "L'un des lots de consolation possibles offerts par Akabi après un tour raté de sa roue de la fortune — attribué au hasard, non garanti.",
+    "effet": "Octroie l'action bonus Pas brumeux déshabillant (récupération à chaque tour) : téléporte le porteur vers un espace visible, mais ses vêtements ne le suivent pas.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr",
+      "loterieConsolation"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "reverse-rain-cloak",
+    "nomEn": "Reverse Rain Cloak",
+    "nomFr": "Cape de Pluie Inversée",
+    "type": "Cape",
+    "rarete": "Peu commun",
+    "acte": 3,
+    "zone": "Cirque du Dernier Rideau, Porte de Baldur (roue de la fortune d'Akabi)",
+    "obtention": "L'un des lots de consolation possibles offerts par Akabi après un tour raté de sa roue de la fortune — attribué au hasard, non garanti.",
+    "effet": "Applique en permanence la condition Trempé au porteur : immunité à la Brûlure, résistance au feu, vulnérabilité à la foudre et au froid. La condition disparaît au repos mais revient dès que la cape est reportée.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr",
+      "loterieConsolation"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "unlucky-thiefs-gloves",
+    "nomEn": "Unlucky Thief's Gloves",
+    "nomFr": "Gants du Voleur Malchanceux",
+    "type": "Gants",
+    "rarete": "Peu commun",
+    "acte": 3,
+    "zone": "Cirque du Dernier Rideau, Porte de Baldur (roue de la fortune d'Akabi)",
+    "obtention": "L'un des lots de consolation possibles offerts par Akabi après un tour raté de sa roue de la fortune — attribué au hasard, non garanti.",
+    "effet": "+2 en Escamotage. Chaque vol réussi ajoute un morceau de charbon à l'inventaire. Après 20 vols, le vol suivant produit un seau de charbon ardent, infligeant la Brûlure (annulable si Trempé).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr",
+      "loterieConsolation"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "pointy-hat",
+    "nomEn": "The Pointy Hat",
+    "nomFr": "The Pointy Hat",
+    "type": "Chapeau",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Cirque du Dernier Rideau, Porte de Baldur",
+    "obtention": "Dans un coffre situé derrière Lucretious, au Cirque du Dernier Rideau.",
+    "effet": "Chapeau pointu glorieux : ajoute le modificateur d'Intelligence aux jets de Persuasion.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "dark-displacement-gloves",
+    "nomEn": "Dark Displacement Gloves",
+    "nomFr": "Gants de Déplacement Obscur",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Cirque du Dernier Rideau, Porte de Baldur",
+    "obtention": "Vendus par Popper, au Cirque du Dernier Rideau.",
+    "effet": "+1 en Escamotage. +1 aux jets d'attaque avec les armes de lancer. Échange subtil : lors d'une attaque avec une arme de lancer, échange la position du porteur avec celle de la cible si elle rate un jet de sauvegarde de Dextérité DD 13.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "undead-bane",
+    "nomEn": "The Undead Bane",
+    "nomFr": "Fléau des morts-vivants",
+    "type": "Hache à deux mains (grande hache)",
+    "rarete": "Peu commun",
+    "acte": 3,
+    "zone": "Camp Gur ou Antre de Cazador (Palais Szarr), Ville basse",
+    "obtention": "Portée par la Gur Ulma : achetable ou récupérable soit à son campement, soit dans le donjon de Cazador (Palais Szarr) une fois celui-ci vaincu.",
+    "effet": "Grande hache +1. Fléau des Impies : inflige 1d6 dégâts tranchants supplémentaires contre les Démons et les Morts-vivants. Action Fléau profanateur (repos court) : ajoute le bonus de maîtrise aux dégâts ; contre un Démon ou un Mort-vivant, inflige aussi 2d6 dégâts tranchants supplémentaires et peut appliquer Maudit.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "ring-of-blink",
+    "nomEn": "Ring of Blink",
+    "nomFr": "Ring of Blink",
+    "type": "Anneau",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Récompense offerte par Tara (le tressym), sur le toit du Temple de la Main ouverte.",
+    "effet": "Permet de lancer Clignotement (Blink) en tant qu'action, lancé comme un sort de niveau 3, récupère au repos long.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "tressym-collar",
+    "nomEn": "Tressym Collar",
+    "nomFr": "Tressym Collar",
+    "type": "Amulette",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Porté par Tara (le tressym) sur le toit du Temple de la Main ouverte (Tara peut aussi apparaître à la Taule du Diable ou chez Highberry selon la partie).",
+    "effet": "Permet de lancer Télékinésie en tant qu'action, lancée comme un sort de niveau 5, récupère au repos long.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "seraphic-pugilist-gloves",
+    "nomEn": "Seraphic Pugilist Gloves",
+    "nomFr": "Seraphic Pugilist Gloves",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Dans un coffre verrouillé au pied des lits, à l'extrémité ouest du Temple de la Main ouverte.",
+    "effet": "+1d4 dégâts radiants sur les attaques à mains nues. Permet de lancer Rayon de guidage (Guiding Bolt) en tant qu'action, lancé comme un sort de niveau 4, récupère au repos long.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "stillmaker",
+    "nomEn": "Stillmaker",
+    "nomFr": "Stillmaker",
+    "type": "Dague (arme à une main, +2)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Dans un trou situé dans la zone souterraine sous le Temple de la Main ouverte, repérable via un jet de Perception DD 5.",
+    "effet": "1d4+2 dégâts perforants + mod. de Force ou de Dextérité. Permet de lancer Immobilisation de personne (niveau 3) en tant qu'action, récupère au repos long. Actions d'arme Coup de pommeau, Frappe perforante et Lacération, récupèrent au repos court.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "tarnished-ring",
+    "nomEn": "Tarnished Ring",
+    "nomFr": "Tarnished Ring",
+    "type": "Anneau",
+    "rarete": "Peu commun",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Fabriqué en combinant (clic droit) l'Anneau sans gemme — loté sur un cadavre de réfugié au nord-est de Rivington — avec la Gemme sans anneau, achetée à Ferg Drogher près de la Grange réquisitionnée.",
+    "effet": "Aucun effet mécanique connu : ne sert qu'à être revendu aux marchands pour environ 40 pièces d'or.",
+    "verifie": true,
+    "aConfirmer": [
+      "rarete"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "dwarven-thrower",
+    "nomEn": "Dwarven Thrower",
+    "nomFr": "Dwarven Thrower",
+    "type": "Marteau de guerre (arme à une ou deux mains, +2)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Vendu par Ferg Drogher près de la Grange réquisitionnée, à Rivington. L'accès à son stock spécial nécessite un jet de Persuasion réussi, sauf si Shadowheart a tué le Chant-nocturne à l'Acte 2.",
+    "effet": "1d8+2 (une main) ou 1d10+2 (deux mains) dégâts contondants + mod. de Force. Revient automatiquement dans la main après avoir été lancé. Si lancé par un nain : +1d8 dégâts contondants supplémentaires. Actions d'arme Cassage de dos, Frappe assourdissante et Frappe affaiblissante, récupèrent au repos court.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "hellrider-longbow",
+    "nomEn": "Hellrider Longbow",
+    "nomFr": "Arc long de Cavaliers des Enfers",
+    "type": "Arc long (arme à deux mains)",
+    "rarete": "Peu commun",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Vendu par Ferg Drogher près de la Grange réquisitionnée, à Rivington. L'accès à son stock spécial nécessite un jet de Persuasion réussi, sauf si Shadowheart a tué le Chant-nocturne à l'Acte 2.",
+    "effet": "1d8+1 dégâts perforants + mod. de Dextérité. Vigilance accrue : +3 Initiative, avantage aux jets de Perception. Feu infernal : une fois par tour, une cible touchée peut être affligée de Feu follet. Actions d'arme Tir aux jarrets et Visée, récupèrent au repos court.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "sethan",
+    "nomEn": "Sethan",
+    "nomFr": "Sethan",
+    "type": "Hache à deux mains (grande hache)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Vendue par Ferg Drogher près de la Grange réquisitionnée, à Rivington. L'accès à son stock spécial nécessite un jet de Persuasion réussi, sauf si Shadowheart a tué le Chant-nocturne à l'Acte 2.",
+    "effet": "1d12+2 dégâts tranchants + mod. de Force. Sethan : Grande hache spirituelle (action bonus, repos long) invoque un double spectral infligeant des dégâts de force. Sethan : Réduction (action, repos long) réduit la taille de la cible.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "robe-of-supreme-defences",
+    "nomEn": "Robe of Supreme Defences",
+    "nomFr": "Robe of Supreme Defences",
+    "type": "Vêtement (torse)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Vendue par Ferg Drogher près de la Grange réquisitionnée, à Rivington. L'accès à son stock spécial nécessite un jet de Persuasion réussi, sauf si Shadowheart a tué le Chant-nocturne à l'Acte 2.",
+    "effet": "Concentration exquise : tant que le porteur est concentré sur un sort, il ajoute son mod. d'incantation à ses jets de sauvegarde et gagne +1 CA.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "nymph-cloak",
+    "nomEn": "Nymph Cloak",
+    "nomFr": "Cape de nymphe",
+    "type": "Cape",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Comptoir d'Escompte (The Counting House), Ville basse — également vendue à Rivington",
+    "obtention": "Dans le coffre-fort à haute sécurité n°1 (clé de Lorroakan) du Comptoir d'Escompte, en Ville basse. Également vendue en alternative par le marchand Ferg Drogher à Rivington.",
+    "effet": "Permet de lancer Domination de personne (sort de niveau 5) en tant qu'action, une fois par repos long.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "corvid-token",
+    "nomEn": "Corvid Token",
+    "nomFr": "Corvid Token",
+    "type": "Amulette",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Vendu par Mattis, près de la Grange réquisitionnée, à Rivington.",
+    "effet": "Vol et saut augmentés de 1,5 m. Chute plumée : immunité permanente aux dégâts de chute. Permet de se métamorphoser en corbeau funeste, récupère au repos long.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "scabby-pugilist-circlet",
+    "nomEn": "Scabby Pugilist Circlet",
+    "nomFr": "Scabby Pugilist Circlet",
+    "type": "Casque",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Vendu par Mattis, près de la Grange réquisitionnée, à Rivington, à condition qu'il survive jusqu'à l'Acte 3.",
+    "effet": "Bravoure martiale : +2 dégâts aux attaques d'armes et à mains nues lorsque le porteur est entouré par 2 ennemis ou plus.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "dancing-breeze",
+    "nomEn": "The Dancing Breeze",
+    "nomFr": "The Dancing Breeze",
+    "type": "Coutille (glaive, arme à deux mains, +2)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Vendue par Exxvikyap, au magasin général de Rivington.",
+    "effet": "1d10+2 dégâts tranchants + mod. de Force ou de Dextérité (Finesse). Portée étendue. Attaque tourbillon : frappe tous les ennemis proches, récupère au repos court.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "ambusher",
+    "nomEn": "Ambusher",
+    "nomFr": "Ambusher",
+    "type": "Épée courte (arme à une main)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Vendue par Exxvikyap, au magasin général de Rivington.",
+    "effet": "1d6+1 dégâts perforants + mod. de Force ou de Dextérité. Arme sentinelle : +1 Initiative, avantage aux jets de Perception. Traînée de l'Embusqueur : +1d6 dégâts nécrotiques contre les créatures n'ayant pas encore joué leur tour.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "elven-chain",
+    "nomEn": "Elven Chain",
+    "nomFr": "Elven Chain",
+    "type": "Armure intermédiaire (torse)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Vendue par Exxvikyap, au magasin général de Rivington.",
+    "effet": "CA 14 + mod. de Dextérité (max +2). Le porteur est considéré compétent avec cette armure quelle que soit sa classe. Agilité elfique : +2 Initiative, avantage aux jets de sauvegarde de Dextérité.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "stalker-gloves",
+    "nomEn": "Stalker Gloves",
+    "nomFr": "Stalker Gloves",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Vendus par Exxvikyap, au magasin général de Rivington.",
+    "effet": "Rarement pris au dépourvu : +1 Initiative. Attaque sournoise indétectable : l'Attaque sournoise inflige 1d4 dégâts de force supplémentaires.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "swires-sledboard",
+    "nomEn": "Swires' Sledboard",
+    "nomFr": "Swires' Sledboard",
+    "type": "Bouclier",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Vendu par Exxvikyap, au magasin général de Rivington.",
+    "effet": "+2 CA. Conduit du bouclier : applique Conduit de force au début du tour en combat. Frappe de bouclier : en réaction, tente de mettre l'attaquant à terre.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "gleamdance-dagger",
+    "nomEn": "Gleamdance Dagger",
+    "nomFr": "Gleamdance Dagger",
+    "type": "Dague (arme à une main)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Portée par Farlin, sur la Plage occidentale, à l'ouest de Rivington.",
+    "effet": "1d4+2 dégâts perforants + mod. de Force ou de Dextérité. Émet une lumière (6 m). +1 CA en main secondaire. Action Frappe perforante en main principale, récupère au repos court.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "corpsegrinder",
+    "nomEn": "Corpsegrinder",
+    "nomFr": "Corpsegrinder",
+    "type": "Maillet (arme à deux mains, +2)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Porté par Cairos, sur la Plage occidentale, à l'ouest de Rivington.",
+    "effet": "2d6+2 dégâts contondants + 1d4 dégâts de tonnerre + mod. de Force. Ténacité : sur une attaque manquée, inflige quand même le mod. de Force en dégâts. Actions Cassage de dos, Frappe assourdissante et Coup de grâce tonnerre, récupèrent au repos court.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "bonespike-boots",
+    "nomEn": "Bonespike Boots",
+    "nomFr": "Bonespike Boots",
+    "type": "Bottes",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Rivington",
+    "obtention": "Dans un coffre en bois sur la Plage occidentale, à l'ouest de Rivington.",
+    "effet": "Bond brutal : bond vers une cible avec possibilité de la mettre à terre (récupère chaque tour). Instinct d'esquive : +1 CA et jets de sauvegarde sans armure ni bouclier. Vol plané affiné : +1,5 m à la distance de saut.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "hellfire-engine-crossbow",
+    "nomEn": "Hellfire Engine Crossbow",
+    "nomFr": "Hellfire Engine Crossbow",
+    "type": "Arbalète lourde (arme à distance, à deux mains)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Fonderie de la Garde d'acier",
+    "obtention": "À fabriquer sur l'établi de la Fonderie de la Garde d'acier, en combinant le plan de l'arbalète du Guetteur, un Bras de Garde d'acier et un Module de ciblage — exposés dans la galerie du rez-de-chaussée de la Fonderie.",
+    "effet": "Arbalète lourde +2. Lance Flèche de foudre (niveau 4, repos long). Action Tir perforant (repos court). Action Contact à distance. Action Repositionner le malfaiteur : tire la cible plus près sans jet d'attaque requis.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "despair-of-athkatla",
+    "nomEn": "Despair of Athkatla",
+    "nomFr": "Despair of Athkatla",
+    "type": "Bâton (arme à une ou deux mains)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Tour de Ramazith (Ville Basse de Baldur's Gate)",
+    "obtention": "Butin sur le corps du mage Lorroakan après l'avoir vaincu au combat, dans la Tour de Ramazith — nécessite de choisir de l'affronter plutôt que de s'allier à lui.",
+    "effet": "Bâton +2. +1 au DD des sorts et aux jets d'attaque de sort. Action d'arme Renversement en main principale (repos court).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "restreint",
+    "alignementNote": "Nécessite de vaincre Lorroakan plutôt que de s'allier à lui."
+  },
+  {
+    "id": "shelter-of-athkatla",
+    "nomEn": "Shelter of Athkatla",
+    "nomFr": "Shelter of Athkatla",
+    "type": "Vêtement (torse)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Tour de Ramazith (Ville Basse de Baldur's Gate)",
+    "obtention": "Portée par le mage Lorroakan ; récupérable sur son corps après l'avoir vaincu au combat dans la Tour de Ramazith — nécessite de choisir de l'affronter plutôt que de s'allier à lui.",
+    "effet": "CA 10 + mod. de Dextérité. Avantage aux jets de sauvegarde contre les sorts. Permet de lancer Image miroir (niveau 2, repos long).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "restreint",
+    "alignementNote": "Nécessite de vaincre Lorroakan plutôt que de s'allier à lui."
+  },
+  {
+    "id": "gold-wyrmling-staff",
+    "nomEn": "Gold Wyrmling Staff",
+    "nomFr": "Gold Wyrmling Staff",
+    "type": "Bâton (arme à deux mains)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Ventes de Sortilèges (Sorcerous Sundries), Ville Basse",
+    "obtention": "Sur un piédestal au rez-de-chaussée de Ventes de Sortilèges, sous le vitrail derrière les élémentaires de lave et d'eau.",
+    "effet": "Bâton +1. Les attaques de mêlée infligent 1d4 dégâts de feu supplémentaires. Octroie le cantrip Trait de feu. Débloque l'action d'arme Renverse (repos court).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "winters-clutches",
+    "nomEn": "Winter's Clutches",
+    "nomFr": "Winter's Clutches",
+    "type": "Gants",
+    "rarete": "Peu commun",
+    "acte": 3,
+    "zone": "Ventes de Sortilèges (Sorcerous Sundries), Ville Basse",
+    "obtention": "Sur un comptoir au rez-de-chaussée de Ventes de Sortilèges, derrière les élémentaires de lave et d'eau.",
+    "effet": "Quand le porteur inflige des dégâts de froid, la cible subit 2 tours de Gel (Encrusted with Frost).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "armour-of-landfall",
+    "nomEn": "Armour of Landfall",
+    "nomFr": "Armure de Landfall",
+    "type": "Armure (légère)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Ventes de Sortilèges (Sorcerous Sundries), Ville Basse",
+    "obtention": "Achat auprès de Rolan (ou de la projection de Lorroakan si Rolan est mort) à Ventes de Sortilèges.",
+    "effet": "CA 13 + mod. de Dextérité. +1 au DD des sorts. Permet de lancer Croissance des plantes (niveau 3) au repos court. Régénère 1d4 PV sur une surface de Croissance des plantes ou de vigne. Avantage aux sauvegardes de Constitution.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "harper-sacredstriker",
+    "nomEn": "Harper Sacredstriker",
+    "nomFr": "Harper Sacredstriker",
+    "type": "Bâton (arme à deux mains)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Ventes de Sortilèges (Sorcerous Sundries), Ville Basse",
+    "obtention": "Achat auprès de Rolan (ou de la projection de Lorroakan si Rolan est mort) à Ventes de Sortilèges.",
+    "effet": "Bâton +1. Permet de lancer Arme spirituelle (niveau 6) en action bonus une fois par repos long, sans consommer d'emplacement de sort. Débloque l'action d'arme Renverse (repos court).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "vest-of-soul-rejuvenation",
+    "nomEn": "Vest of Soul Rejuvenation",
+    "nomFr": "Gilet de rajeunissement de l'âme",
+    "type": "Vêtement (torse)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Ventes de Sortilèges (Sorcerous Sundries), Ville Basse",
+    "obtention": "Achat auprès de Rolan si Rolan et Lorroakan sont tous deux en vie, ou auprès de la projection de Lorroakan si Rolan est mort.",
+    "effet": "CA 12 + mod. de Dextérité. Régénération du défiant : soigne 1d4 PV sur un jet de sauvegarde contre un sort réussi. Contre du Kushigo supérieur : en réaction, attaque à mains nues contre tout attaquant ayant raté son attaque.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "hellfire-greataxe",
+    "nomEn": "Hellfire Greataxe",
+    "nomFr": "Hellfire Greataxe",
+    "type": "Hache à deux mains (greataxe)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Coffre des sortilèges (Sorcerous Vault), sous Ventes de Sortilèges, Ville Basse",
+    "obtention": "Dans un coffre doré de la section « Illusion » du Coffre des sortilèges ; le coffre doit être physiquement détruit pour être ouvert.",
+    "effet": "Hache à deux mains +2. Inflige 1d6 dégâts de feu supplémentaires par coup. Thermodynamo : le porteur gagne 2 tours de Chaleur à chaque dégât infligé. Débloque l'action Fauchage infernal, Fauchage et Lacération.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "pyroquickness-hat",
+    "nomEn": "Pyroquickness Hat",
+    "nomFr": "Pyroquickness Hat",
+    "type": "Chapeau (tête)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Coffre des sortilèges (Sorcerous Vault), sous Ventes de Sortilèges, Ville Basse",
+    "obtention": "Dans un coffre opulent initialement invisible de la section Elminster du Coffre des sortilèges (nécessite Vision de l'invisible ou Feu de fée pour le repérer).",
+    "effet": "Retour ardent : infliger des dégâts de feu avec un sort (hors cantrip) inflige Combustion au porteur mais lui octroie une action bonus supplémentaire ce tour-ci.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "keepsake-ring",
+    "nomEn": "Keepsake Ring",
+    "nomFr": "Keepsake Ring",
+    "type": "Anneau",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Taverne de l'Elfsong (Elfsong Tavern), sous-sol, Ville Basse",
+    "obtention": "Au sol dans la salle aux rats du sous-sol de la Taverne de l'Elfsong.",
+    "effet": "Permet de lancer Domestication des bêtes (niveau 5) une fois par repos long.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "sword-of-the-emperor",
+    "nomEn": "Sword of the Emperor",
+    "nomFr": "Sword of the Emperor",
+    "type": "Épée longue",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Repaire des Chevaliers du Bouclier (Knights of the Shield Hideout), sous la Taverne de l'Elfsong, Ville Basse",
+    "obtention": "Dans une pièce cachée du repaire, via un passage secret dans la cave à vin du sous-sol de la Taverne de l'Elfsong.",
+    "effet": "Épée longue +2. Pourfendeur de métamorphes : inflige 1d4 dégâts et jets d'attaque supplémentaires contre les créatures métamorphosées ou polymorphées. +2 aux jets de sauvegarde contre les sorts.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "cerebral-citadel-armour",
+    "nomEn": "Cerebral Citadel Armour",
+    "nomFr": "Cerebral Citadel Armour",
+    "type": "Armure (lourde)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Repaire des Chevaliers du Bouclier, sous la Taverne de l'Elfsong, Ville Basse",
+    "obtention": "Dans la garde-robe de l'Empereur, au sein du repaire.",
+    "effet": "Si le porteur est infesté par un têtard illithide : immunité à Effrayé et +1 aux jets de sauvegarde d'Intelligence, de Sagesse et de Charisme. Désavantage aux tests de Discrétion.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "cerebral-citadel-gloves",
+    "nomEn": "Cerebral Citadel Gloves",
+    "nomFr": "Cerebral Citadel Gloves",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Repaire des Chevaliers du Bouclier, sous la Taverne de l'Elfsong, Ville Basse",
+    "obtention": "Dans la garde-robe de l'Empereur, au sein du repaire.",
+    "effet": "Euphorie illithide : charmer ou effrayer une créature octroie +1d4 aux jets d'attaque et de sauvegarde. +1 aux jets de sauvegarde de Force.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "boots-of-psionic-movement",
+    "nomEn": "Boots of Psionic Movement",
+    "nomFr": "Boots of Psionic Movement",
+    "type": "Bottes",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Repaire des Chevaliers du Bouclier, sous la Taverne de l'Elfsong, Ville Basse",
+    "obtention": "Butin sur Ch'r'ai Har'rak, cheffe githyanki vaincue au terme du combat du repaire.",
+    "effet": "+1 aux jets de sauvegarde de Dextérité. Vol githyanki : lance Vol (niveau 3) en action bonus, repos long. Frappe volante : après avoir lancé Vol, la prochaine attaque au corps à corps inflige 1d4 dégâts psychiques supplémentaires.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "gemini-gloves",
+    "nomEn": "Gemini Gloves",
+    "nomFr": "Gemini Gloves",
+    "type": "Gants",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "La Part du Diable (Devil's Fee), Ville basse",
+    "obtention": "Achat auprès d'Helsik, à la Part du Diable, une fois l'accès à son stock spécial débloqué.",
+    "effet": "Lanceur adroit : un cantrip ciblant un allié ou un ennemi peut toucher une cible supplémentaire. Une fois par repos court.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "gibus-of-the-worshipful-servant",
+    "nomEn": "Gibus of the Worshipful Servant",
+    "nomFr": "Gibus of the Worshipful Servant",
+    "type": "Chapeau (tête)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "La Part du Diable (Devil's Fee), Ville basse",
+    "obtention": "Offert par Helsik dès la première rencontre, ou trouvable/en vente sur son bureau à la Part du Diable une fois son stock spécial débloqué.",
+    "effet": "Vigilance du larbin : au début du combat, le porteur gagne un nombre de tours d'Élan égal à son mod. de Charisme. Multitâche : avantage aux jets de sauvegarde de concentration.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "hellbeard-halberd",
+    "nomEn": "Hellbeard Halberd",
+    "nomFr": "Hellbeard Halberd",
+    "type": "Hallebarde (arme à allonge, deux mains)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "La Part du Diable (Devil's Fee), Ville basse",
+    "obtention": "Achat auprès d'Helsik, à la Part du Diable, une fois l'accès à son stock spécial débloqué.",
+    "effet": "Inflige 6 dégâts de poison supplémentaires par coup. La cible doit réussir un jet de sauvegarde de Constitution DD 12 ou être Empoisonnée pendant 2 tours. Débloque les actions d'arme Charge, Lacération et Fauchage.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "shapeshifter-hat",
+    "nomEn": "Shapeshifter Hat",
+    "nomFr": "Shapeshifter Hat",
+    "type": "Chapeau (tête)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "La Part du Diable (Devil's Fee), Ville basse",
+    "obtention": "Achat auprès d'Helsik, à la Part du Diable, une fois l'accès à son stock spécial débloqué.",
+    "effet": "+1 à la compétence Nature. Étreinte de la nature : octroie 1 charge de Forme sauvage supplémentaire par repos long.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "spellseeking-gloves",
+    "nomEn": "Spellseeking Gloves",
+    "nomFr": "Spellseeking Gloves",
+    "type": "Gants",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "La Part du Diable (Devil's Fee), Ville basse",
+    "obtention": "Achat auprès d'Helsik, à la Part du Diable, une fois l'accès à son stock spécial débloqué.",
+    "effet": "Sort en quête : en effectuant un jet d'attaque de sort, dépense des Points de sorcellerie pour obtenir l'avantage à ce jet.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "hat-of-the-sharp-caster",
+    "nomEn": "Hat of the Sharp Caster",
+    "nomFr": "Hat of the Sharp Caster",
+    "type": "Chapeau (tête)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "La Part du Diable (Devil's Fee), toit, Ville basse",
+    "obtention": "Achat auprès de Tara, marchande installée sur le toit de la Part du Diable.",
+    "effet": "Incantateur affûté : quand un dé de dégâts d'une attaque de sort fait 1 ou 2, il est relancé une fois.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "bonespike-gloves",
+    "nomEn": "Bonespike Gloves",
+    "nomFr": "Bonespike Gloves",
+    "type": "Gants",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Chasme du Massacre (Manslaughter Chasm), Sous-ville, Ville basse",
+    "obtention": "Butin sur Strangler Luke, dans le Chasme du Massacre, pendant l'embuscade menée par le Farslayer de Bhaal Ghislev. À récupérer avant la fin du combat contre Ghislev.",
+    "effet": "Renforcement exosquelettique : les attaques du porteur ignorent la Résistance aux dégâts Tranchants, Perforants et Contondants.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "bonespike-helmet",
+    "nomEn": "Bonespike Helmet",
+    "nomFr": "Bonespike Helmet",
+    "type": "Casque (tête)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Ruines de la Sous-ville (Undercity Ruins), Égouts de la Ville basse",
+    "obtention": "Achat auprès du pénitent silencieux Bareki, dans les ruines de la Sous-ville, sous les égouts de la Ville basse.",
+    "effet": "En Rage, les créatures hostiles dans un rayon de 3 m doivent réussir un jet de sauvegarde de Sagesse ou subir 2d4 dégâts psychiques. Attaque menaçante en mêlée (action) : peut effrayer la cible. +2 en Intimidation.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "breaching-pikestaff",
+    "nomEn": "Breaching Pikestaff",
+    "nomFr": "Breaching Pikestaff",
+    "type": "Pique (arme à allonge, deux mains)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Antre Ancien (Ancient Lair), Sous-ville, Ville basse",
+    "obtention": "Dans un sarcophage de pierre vide, au centre d'une plateforme de l'Antre Ancien, dans la Sous-ville.",
+    "effet": "Pique +2 : dégâts perforants plus 1d4 dégâts de force supplémentaires. Portée étendue. Actions d'armes : Charge, Frappe perforante, Affermir.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "chancers-carcanet",
+    "nomEn": "Chancer's Carcanet",
+    "nomFr": "Carcanet d'arnaqueur",
+    "type": "Amulette",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Égouts de la Ville basse (Sous-ville)",
+    "obtention": "Offert par le fantôme de Sarin après avoir replacé sur son squelette le crâne trouvé derrière le marchand Bareki, puis rapporté au squelette dans les égouts de la Ville basse.",
+    "effet": "Endurance innée : une fois par repos long, utilise une réaction pour effectuer un jet d'attaque ou de sauvegarde avec Avantage.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "rhapsody",
+    "nomEn": "Rhapsody",
+    "nomFr": "Rapsodie",
+    "type": "Dague",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Antre de Cazador, sous le Palais Szarr, Ville basse",
+    "obtention": "Butin sur le cadavre de Cazador Szarr après l'avoir vaincu dans son donjon, lors de la quête personnelle d'Astarion.",
+    "effet": "Dague +1. Ristourne écarlate : +1 aux jets d'attaque, aux dégâts et au DD des sorts par ennemi tué (cumulable jusqu'à +3). Festin écarlate (action bonus, au maximum de charges) : se recharge à un repos long. Peut infliger Saignement en frappant en étant Dissimulé.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre",
+    "alignementNote": "Nécessite d'avoir vaincu Cazador Szarr en combat lors de la quête personnelle d'Astarion."
+  },
+  {
+    "id": "woe",
+    "nomEn": "Woe",
+    "nomFr": "Woe",
+    "type": "Bâton (arme à une ou deux mains)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Antre de Cazador, sous le Palais Szarr, Ville basse",
+    "obtention": "Ajouté automatiquement à l'inventaire après avoir vaincu Cazador Szarr, lors de la quête personnelle d'Astarion — à condition de ne pas avoir interrompu le rituel.",
+    "effet": "Bâton +2. +1 au DD des sorts et aux jets d'attaque de sort. Permet de lancer Fléau (niveau 4) une fois par repos long. Vampirisme arcanique : régénère 1d4 PV quand une cible rate un jet de sauvegarde contre un de tes sorts.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre",
+    "alignementNote": "Nécessite d'avoir mené la confrontation avec Cazador Szarr sans interrompre le rituel."
+  },
+  {
+    "id": "pelorsun-blade",
+    "nomEn": "Pelorsun Blade",
+    "nomFr": "Pelorsun Blade",
+    "type": "Rapière",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Antre de Cazador, sous le Palais Szarr, Ville basse",
+    "obtention": "Dans un coffret en bois de rose piégé, dissimulé sous un tas de terre au niveau inférieur du donjon de Cazador.",
+    "effet": "Rapière +1 infligeant 1d4 dégâts radiants supplémentaires. Avantage aux jets d'attaque contre les créatures mortes-vivantes. Actions d'armes : Fioriture, Frappe perforante, Frappe affaiblissante.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "spell-savant-amulet",
+    "nomEn": "Spell Savant Amulet",
+    "nomFr": "Spell Savant Amulet",
+    "type": "Amulette",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Comptoir d'Escompte (The Counting House), Ville basse",
+    "obtention": "Dans le coffre-fort à haute sécurité n°1 (clé de Lorroakan) du Comptoir d'Escompte.",
+    "effet": "Amplification des sorts : accorde un emplacement de sort de niveau 2 supplémentaire.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "jannaths-hat",
+    "nomEn": "Jannath's Hat",
+    "nomFr": "Jannath's Hat",
+    "type": "Chapeau (tête)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Comptoir d'Escompte (The Counting House), Ville basse",
+    "obtention": "Dans le coffre-fort à haute sécurité n°2 (clé de Lady Jannath) du Comptoir d'Escompte.",
+    "effet": "Avantage aux tests de Persuasion et de Tromperie.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "trident-of-the-waves",
+    "nomEn": "Trident of the Waves",
+    "nomFr": "Trident of the Waves",
+    "type": "Trident (arme de lancer)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Comptoir d'Escompte (The Counting House), Ville basse",
+    "obtention": "Dans le coffre-fort à haute sécurité n°4 du Comptoir d'Escompte — clé trouvée dans le coffre des quartiers d'Allandra Grey, à la Maison de la Reine des Eaux.",
+    "effet": "Trident +1. Appel des eaux : chaque coup réussi inflige la condition Mouillé et crée une surface d'eau de 2 m de rayon centrée sur la cible.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "amulet-of-restoration",
+    "nomEn": "Amulet of Restoration",
+    "nomFr": "Amulette de restauration",
+    "type": "Amulette",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Comptoir d'Escompte (The Counting House), Ville basse",
+    "obtention": "Dans un coffre intitulé « Réserve privée », dans la première salle à l'est en descendant l'escalier d'entrée du Comptoir d'Escompte. Également vendue dès l'Acte 1 par Derryth Bonecloak, à la colonie myconide de l'Outreterre.",
+    "effet": "Permet de lancer Mot de soin (niveau 1) et Mot de soin de groupe (niveau 3) en action bonus, chacun rechargeant à un repos long.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "handmaidens-mace",
+    "nomEn": "Handmaiden's Mace",
+    "nomFr": "Handmaiden's Mace",
+    "type": "Masse d'armes",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Cloître de la Sombre Étreinte, sous la Maison du Chagrin (House of Grief), Ville basse",
+    "obtention": "Portée par Viconia DeVir, dans le Cloître de la Sombre Étreinte — butin si elle est vaincue ou tuée lors de la quête personnelle de Shadowheart.",
+    "effet": "Masse +2 infligeant 1d6 dégâts de poison supplémentaires. Fixe la Force à 18. Action d'arme Fracas percutant (repos court, peut infliger Sonné).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre",
+    "alignementNote": "Nécessite de vaincre ou tuer Viconia DeVir lors de la quête personnelle de Shadowheart."
+  },
+  {
+    "id": "viconias-priestess-robe",
+    "nomEn": "Viconia's Priestess Robe",
+    "nomFr": "Viconia's Priestess Robe",
+    "type": "Vêtement (torse)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Cloître de la Sombre Étreinte, sous la Maison du Chagrin, Ville basse",
+    "obtention": "Portée par Viconia DeVir — butin si elle est vaincue ou tuée lors de la quête personnelle de Shadowheart.",
+    "effet": "+1 CA. Voile de Shar : avantage aux tests de Discrétion tant que Obscurci. Voile shar'ien : Bouclier de la foi accorde en plus +2 à tous les jets de sauvegarde.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre",
+    "alignementNote": "Nécessite de vaincre ou tuer Viconia DeVir lors de la quête personnelle de Shadowheart."
+  },
+  {
+    "id": "viconias-walking-fortress",
+    "nomEn": "Viconia's Walking Fortress",
+    "nomFr": "Forteresse ambulante de Viconia",
+    "type": "Bouclier",
+    "rarete": "Légendaire",
+    "acte": 3,
+    "zone": "Cloître de la Sombre Étreinte, sous la Maison du Chagrin, Ville basse",
+    "obtention": "Portée par Viconia DeVir — butin si elle est vaincue ou tuée lors de la quête personnelle de Shadowheart.",
+    "effet": "Bouclier légendaire, +3 CA. Bouclier des sorts : avantage aux sauvegardes contre les sorts, désavantage imposé aux jets d'attaque de sort visant le porteur. Carapace réfléchissante (action bonus, repos court). Lien de protection (action, repos long). Réprimande du puissant (réaction).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre",
+    "alignementNote": "Nécessite de vaincre ou tuer Viconia DeVir lors de la quête personnelle de Shadowheart."
+  },
+  {
+    "id": "wavemothers-cloak",
+    "nomEn": "Wavemother's Cloak",
+    "nomFr": "Cape de la Wavemother",
+    "type": "Cape",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Maison de la Reine des Eaux (Water Queen's House), Ville basse",
+    "obtention": "Dans un coffre opulent verrouillé, derrière le bureau d'Allandra Grey, à l'étage de la Maison de la Reine des Eaux.",
+    "effet": "Égide humide : une fois par tour, accorde une Protection de couche d'eau (immunité à l'inflammation, résistance au feu, +2 CA et +2 aux jets de sauvegarde) jusqu'à ce que le porteur subisse des dégâts.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "wavemothers-sickle",
+    "nomEn": "Wavemother's Sickle",
+    "nomFr": "Wavemother's Sickle",
+    "type": "Serpe (arme de mêlée légère, une main)",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Maison de la Reine des Eaux (Water Queen's House), Ville basse",
+    "obtention": "Portée par Allandra Grey (la Wavemother), à la Maison de la Reine des Eaux — butin si elle est vaincue ou tuée.",
+    "effet": "Serpe +2 infligeant 1d4 dégâts de froid supplémentaires. Avantage aux jets d'attaque contre les créatures Mouillées. Action d'arme Lacération.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "wavemothers-robe",
+    "nomEn": "Wavemother's Robe",
+    "nomFr": "Robe de la Wavemother",
+    "type": "Vêtement (torse)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Maison de la Reine des Eaux (Water Queen's House), Ville basse",
+    "obtention": "Récompense d'Allandra Grey pour avoir terminé la quête « Venger les noyés », à la Maison de la Reine des Eaux.",
+    "effet": "+1 CA. Permet de lancer Création ou destruction d'eau (niveau 4) une fois par repos court. Résistance au feu et au froid. Rajeunissement aquatique : soigne 1d4 PV en début de tour de combat dans l'eau.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "shade-slayer-cloak",
+    "nomEn": "Shade-Slayer Cloak",
+    "nomFr": "Shade-Slayer Cloak",
+    "type": "Cape",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "La Guilde (Guildhall), Ville basse",
+    "obtention": "Achat auprès du marchand Sticky Dondo, à la Guilde, en Ville basse.",
+    "effet": "Critique furtif : tant que le porteur est Dissimulé, le seuil pour obtenir un coup critique en attaquant est réduit de 1 (cumulable).",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "till-death-do-us-part",
+    "nomEn": "Till Death Do Us Part",
+    "nomFr": "Jusqu'à ce que la mort nous sépare",
+    "type": "Anneau",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Demeure de Lady Jannath, Ville basse",
+    "obtention": "Obtenu de Lady Jannath après avoir terminé les quêtes « Écho d'un amour perdu » et « Libérer l'artiste ».",
+    "effet": "Permet de lancer Lumière protectrice (niveau 3) une fois par repos long.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
+  },
+  {
+    "id": "after-death-do-us-part",
+    "nomEn": "After Death Do Us Part",
+    "nomFr": "After Death Do Us Part",
+    "type": "Anneau",
+    "rarete": "Rare",
+    "acte": 3,
+    "zone": "Demeure de Lady Jannath, Ville basse",
+    "obtention": "Porté par Oskar Fevras : butin s'il est tué par Kerri, ou si sa liaison est révélée à Lady Jannath, durant la quête « Libérer l'artiste ».",
+    "effet": "Quand le porteur tombe Neutralisé, il se relève aussitôt avec la moitié de ses PV maximum restaurés, mais subit la condition Possession d'ombre.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "cindermoth-cloak",
+    "nomEn": "Cindermoth Cloak",
+    "nomFr": "Cindermoth Cloak",
+    "type": "Cape",
+    "rarete": "Peu commun",
+    "acte": 3,
+    "zone": "Égouts de la Ville basse (Sous-ville)",
+    "obtention": "Butin sur Aelis Siryasius, dans une zone couverte de surfaces grasses des égouts de la Ville basse.",
+    "effet": "Voile ardent : toute créature qui inflige des dégâts au porteur en restant à moins de 2 m subit la condition Brûlure.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
+  },
+  {
+    "id": "silver-sword-of-the-astral-plane",
+    "nomEn": "Silver Sword of the Astral Plane",
+    "nomFr": "Épée d'argent du plan astral",
+    "type": "Épée à deux mains (espadon, légendaire)",
+    "rarete": "Légendaire",
+    "acte": 3,
+    "zone": "Égouts de la Ville basse (Sous-ville)",
+    "obtention": "Récompensée par Kith'rak Voss en lui montrant le Marteau Orphique (ou en le tuant), dans les égouts de la Ville basse.",
+    "effet": "Espadon légendaire +3. Action d'arme Briseur d'âme : dégâts psychiques bonus égaux au bonus de maîtrise, peut Étourdir la cible. Pour un porteur githyanki : avantage aux sauvegardes d'Intelligence, de Sagesse et de Charisme, résistance aux dégâts psychiques, immunité à la Charme, et 1d6 dégâts psychiques supplémentaires par coup.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
   }
 ]
