@@ -5,6 +5,7 @@ import { Check } from '../../components/icons'
 import { builds, getObjet, nomAffiche } from '../../data'
 import { detecterSynergies, genererConseilsRace } from './composeurEquipe'
 import { saveStore } from '../../storage/useSaveData'
+import { lireJoueurId } from '../../storage/identite'
 import type { Campagne, Personnage } from '../../storage/useSaveData'
 import type { Importance } from '../../data/types'
 
@@ -93,14 +94,17 @@ export function GroupeApercu({ campagne }: { campagne: Campagne }) {
                         <div className="mt-1.5 flex flex-col gap-1.5">
                           {entrees.map(({ perso, importance }) => {
                             const obtenu = perso.objetsObtenus.includes(objetId)
+                            const modifiable =
+                              perso.proprietaireId === null || perso.proprietaireId === lireJoueurId()
                             return (
                               <button
                                 key={perso.id}
                                 type="button"
+                                disabled={!modifiable}
                                 onClick={() =>
                                   saveStore.basculerObjetObtenu(campagne.id, perso.id, objetId)
                                 }
-                                className="flex items-center justify-between gap-2"
+                                className="flex items-center justify-between gap-2 disabled:opacity-60"
                               >
                                 <span className="flex items-center gap-1.5">
                                   <span

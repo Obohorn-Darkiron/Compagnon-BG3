@@ -1,4 +1,5 @@
 import { ecrireBrut, lireBrut } from './driver'
+import { lireJoueurId } from './identite'
 import { SAVE_VERSION, saveDataVide, type Campagne, type Personnage, type SaveData } from './schema'
 
 function normaliserPersonnage(p: Partial<Personnage>): Personnage {
@@ -15,6 +16,7 @@ function normaliserPersonnage(p: Partial<Personnage>): Personnage {
     objetsObtenus: p.objetsObtenus ?? [],
     choixBonusPermanents: p.choixBonusPermanents ?? {},
     compagnonNom: p.compagnonNom ?? null,
+    proprietaireId: p.proprietaireId ?? null,
   }
 }
 
@@ -24,6 +26,7 @@ function normaliserCampagne(c: Partial<Campagne>): Campagne {
     nom: c.nom ?? '',
     personnages: (c.personnages ?? []).map(normaliserPersonnage),
     compagnonsRecrutes: c.compagnonsRecrutes ?? [],
+    sessionCode: c.sessionCode ?? null,
   }
 }
 
@@ -81,7 +84,13 @@ export const saveStore = {
   },
 
   creerCampagne(nom: string): string {
-    const campagne: Campagne = { id: idAleatoire(), nom, personnages: [], compagnonsRecrutes: [] }
+    const campagne: Campagne = {
+      id: idAleatoire(),
+      nom,
+      personnages: [],
+      compagnonsRecrutes: [],
+      sessionCode: null,
+    }
     majEtat({
       ...etat,
       campagnes: [...etat.campagnes, campagne],
@@ -119,6 +128,7 @@ export const saveStore = {
       compagnonNom?: string | null
     } = {},
   ): string {
+    const campagneCible = etat.campagnes.find((c) => c.id === campagneId)
     const personnage: Personnage = {
       id: idAleatoire(),
       nom,
@@ -132,6 +142,7 @@ export const saveStore = {
       objetsObtenus: [],
       choixBonusPermanents: {},
       compagnonNom: infos.compagnonNom ?? null,
+      proprietaireId: campagneCible?.sessionCode ? lireJoueurId() : null,
     }
     majEtat({
       ...etat,
@@ -248,6 +259,62 @@ export const saveStore = {
             : [...c.compagnonsRecrutes, nomCompagnon],
         }
       }),
+    })
+  },
+
+  /** Associe (ou retire, avec code=null) une campagne à une session de groupe partagée.
+   * Quitter une session détache les personnages des autres joueurs (ils ne sont plus synchronisés). */
+  definirSession(campagneId: string, code: string | null) {
+    const monId = lireJoueurId()
+    majEtat({
+      ...etat,
+      campagnes: etat.campagnes.map((c) => {
+        if (c.id !== campagneId) return c
+        if (code !== null) {
+          return {
+            ...c,
+            sessionCode: code,
+            // Les personnages déjà présents avant la session deviennent les miens (synchronisés).
+            personnages: c.personnages.map((p) =>
+              p.proprietaireId === null ? { ...p, proprietaireId: monId } : p,
+            ),
+          }
+        }
+        return {
+          ...c,
+          sessionCode: null,
+          personnages: c.personnages.filter((p) => p.proprietaireId === null || p.proprietaireId === monId),
+        }
+      }),
+    })
+  },
+
+  /** Insère ou met à jour un personnage reçu d'un autre joueur de la session (ne touche jamais aux miens). */
+  appliquerPersonnageDistant(campagneId: string, personnage: Personnage) {
+    majEtat({
+      ...etat,
+      campagnes: etat.campagnes.map((c) => {
+        if (c.id !== campagneId) return c
+        const dejaPresent = c.personnages.some((p) => p.id === personnage.id)
+        return {
+          ...c,
+          personnages: dejaPresent
+            ? c.personnages.map((p) => (p.id === personnage.id ? personnage : p))
+            : [...c.personnages, personnage],
+        }
+      }),
+    })
+  },
+
+  /** Retire un personnage supprimé par son propriétaire ailleurs dans la session. */
+  retirerPersonnageDistant(campagneId: string, personnageId: string) {
+    majEtat({
+      ...etat,
+      campagnes: etat.campagnes.map((c) =>
+        c.id === campagneId
+          ? { ...c, personnages: c.personnages.filter((p) => p.id !== personnageId) }
+          : c,
+      ),
     })
   },
 

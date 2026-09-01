@@ -15,6 +15,8 @@ export interface Personnage {
   choixBonusPermanents: Record<string, { stat: string; valeur: number }>
   /** Nom d'un compagnon de l'histoire (Shadowheart, Astarion...) si ce perso EST ce compagnon — sa race est alors fixe. Null pour un perso créé librement. */
   compagnonNom: string | null
+  /** joueurId du joueur propriétaire dans une session de groupe. Null = personnage local, non synchronisé. */
+  proprietaireId: string | null
 }
 
 export interface Campagne {
@@ -23,6 +25,8 @@ export interface Campagne {
   personnages: Personnage[]
   /** Noms des compagnons de l'histoire (Shadowheart, Astarion...) recrutés dans cette campagne. */
   compagnonsRecrutes: string[]
+  /** Code de session de groupe partagée (ex. "K7XQ2M"). Null = campagne purement locale. */
+  sessionCode: string | null
 }
 
 export interface SaveData {

@@ -12,9 +12,11 @@ import { EquipeBuilderPage } from './features/equipe/EquipeBuilderPage'
 import { PersonnageDetailPage } from './features/equipe/PersonnageDetailPage'
 import { ParametresPage } from './features/parametres/ParametresPage'
 import { demanderStockagePersistant } from './storage/driver'
+import { reprendreSessionsActives } from './session/sessionSync'
 import { registerSW } from 'virtual:pwa-register'
 
 demanderStockagePersistant()
+reprendreSessionsActives()
 
 const VERIFICATION_MAJ_MS = 60 * 1000
 

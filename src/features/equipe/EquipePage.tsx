@@ -4,9 +4,11 @@ import { PageHeader } from '../../components/PageHeader'
 import { Sparkles } from '../../components/icons'
 import { builds } from '../../data'
 import { saveStore, useSaveData } from '../../storage/useSaveData'
+import { lireJoueurId } from '../../storage/identite'
 import { NouveauPersonnageForm } from './NouveauPersonnageForm'
 import { GroupeApercu } from './GroupeApercu'
 import { CompagnonsSuivi } from './CompagnonsSuivi'
+import { SessionSection } from './SessionSection'
 
 function CreerCampagne() {
   const [nom, setNom] = useState('')
@@ -133,11 +135,14 @@ export function EquipePage() {
         </Link>
       </div>
 
+      <SessionSection campagne={campagneActive} />
+
       <GroupeApercu campagne={campagneActive} />
 
       <div className="flex flex-col gap-3 px-4 py-4">
         {campagneActive.personnages.map((perso) => {
           const build = builds.find((b) => b.id === perso.buildId)
+          const estCoequipier = perso.proprietaireId !== null && perso.proprietaireId !== lireJoueurId()
           return (
             <Link
               key={perso.id}
@@ -150,6 +155,11 @@ export function EquipePage() {
                   {perso.compagnonNom && (
                     <span className="shrink-0 rounded-full border border-glow/40 bg-glow/10 px-1.5 py-0.5 text-[10px] font-medium text-glow">
                       Compagnon
+                    </span>
+                  )}
+                  {estCoequipier && (
+                    <span className="shrink-0 rounded-full border border-border px-1.5 py-0.5 text-[10px] font-medium text-ink-muted">
+                      Coéquipier
                     </span>
                   )}
                 </div>

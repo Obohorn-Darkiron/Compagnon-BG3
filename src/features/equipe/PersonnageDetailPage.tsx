@@ -7,6 +7,7 @@ import { CaracTable } from '../../components/CaracTable'
 import { Check } from '../../components/icons'
 import { builds, etapeAuNiveau, getObjet, nomAffiche, races } from '../../data'
 import { saveStore, useSaveData, type StyleJeu } from '../../storage/useSaveData'
+import { lireJoueurId } from '../../storage/identite'
 import { NiveauStepper } from './NiveauStepper'
 import { BonusPermanentsSection } from './BonusPermanentsSection'
 import { PlanOptimisationSection } from './PlanOptimisationSection'
@@ -34,6 +35,8 @@ export function PersonnageDetailPage() {
   const build = builds.find((b) => b.id === personnage.buildId)
   const classeSousClasse = [personnage.classe, personnage.sousClasse].filter(Boolean).join(' · ')
   const raceInfo = races.find((r) => r.nom === personnage.race)
+  const estLectureSeule =
+    personnage.proprietaireId !== null && personnage.proprietaireId !== lireJoueurId()
 
   return (
     <div>
@@ -43,6 +46,14 @@ export function PersonnageDetailPage() {
         back="/equipe"
       />
 
+      {estLectureSeule && (
+        <p className="mx-4 mt-3 rounded-lg border border-glow/40 bg-glow/10 px-3 py-2.5 text-xs text-glow">
+          Ce personnage appartient à un autre joueur de la session — consultation seule, tu ne
+          peux pas le modifier depuis ton appareil.
+        </p>
+      )}
+
+      <fieldset disabled={estLectureSeule} className="contents">
       <Section title="Style de jeu">
         <div className="flex flex-wrap gap-1.5">
           {stylesJeu.map((s) => (
@@ -266,6 +277,7 @@ export function PersonnageDetailPage() {
           Supprimer ce personnage
         </button>
       </div>
+      </fieldset>
     </div>
   )
 }
