@@ -1,4 +1,4 @@
-export type StyleJeu = 'bienveillant' | 'neutre' | null
+export type StyleJeu = 'bienveillant' | 'neutre' | 'sombre' | null
 
 export interface Personnage {
   id: string

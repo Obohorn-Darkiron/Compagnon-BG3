@@ -14,6 +14,7 @@ const stylesJeu: { valeur: StyleJeu; label: string }[] = [
   { valeur: null, label: 'Peu importe' },
   { valeur: 'bienveillant', label: 'Bienveillant' },
   { valeur: 'neutre', label: 'Neutre / gris' },
+  { valeur: 'sombre', label: 'Sombre' },
 ]
 
 type TypePerso = 'libre' | 'compagnon'

@@ -8,12 +8,13 @@ import { AlignementBadge } from '../../components/AlignementBadge'
 import { alternativesPourBuild, getBuild, getObjet, nomAffiche } from '../../data'
 import { conseilRacePourBuild } from '../equipe/composeurEquipe'
 
-type StylePreview = 'bienveillant' | 'neutre' | null
+type StylePreview = 'bienveillant' | 'neutre' | 'sombre' | null
 
 const stylesPreview: { valeur: StylePreview; label: string }[] = [
   { valeur: null, label: 'Peu importe' },
   { valeur: 'bienveillant', label: 'Bienveillant' },
   { valeur: 'neutre', label: 'Neutre / gris' },
+  { valeur: 'sombre', label: 'Sombre' },
 ]
 
 export function BuildDetailPage() {
@@ -152,6 +153,12 @@ export function BuildDetailPage() {
           <p className="mb-2 text-xs text-ink-muted">
             Style neutre : tous les objets ci-dessous restent accessibles, y compris ceux à
             choix moral.
+          </p>
+        )}
+        {stylePreview === 'sombre' && (
+          <p className="mb-2 text-xs text-ink-muted">
+            Voie sombre assumée : tous les objets ci-dessous restent accessibles, y compris ceux
+            qui demandent un choix sombre (culte de Bhaal, routes non-bienveillantes...).
           </p>
         )}
         <div className="flex flex-col gap-2">

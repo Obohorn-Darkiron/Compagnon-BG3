@@ -13,7 +13,18 @@ import { BonusPermanentsSection } from './BonusPermanentsSection'
 import { PlanOptimisationSection } from './PlanOptimisationSection'
 import { SelecteurBuild } from './SelecteurBuild'
 import { bonusParStatObtenus, noteBonusPermanent } from './bonusPermanentsUtils'
-import type { EquipementRecommande, Importance, JalonSombre } from '../../data/types'
+import type { EquipementRecommande, Importance, JalonSombre, Objet } from '../../data/types'
+
+interface EquipementResolu {
+  emplacement: string
+  importance: EquipementRecommande['importance']
+  objetOriginal: Objet | undefined
+  objet: Objet | undefined
+  alternative: Objet | undefined
+  sansAlternative: boolean
+  idAffiche: string
+  acteAffiche: number
+}
 
 const ORDRE_IMPORTANCE: Record<Importance, number> = {
   Essentiel: 4,
@@ -26,6 +37,7 @@ const stylesJeu: { valeur: StyleJeu; label: string }[] = [
   { valeur: null, label: 'Peu importe' },
   { valeur: 'bienveillant', label: 'Bienveillant' },
   { valeur: 'neutre', label: 'Neutre / gris' },
+  { valeur: 'sombre', label: 'Sombre' },
 ]
 
 export function PersonnageDetailPage() {
@@ -46,15 +58,33 @@ export function PersonnageDetailPage() {
   const estLectureSeule =
     personnage.proprietaireId !== null && personnage.proprietaireId !== lireJoueurId()
 
-  const equipementParActe = new Map<number, EquipementRecommande[]>()
+  const equipementParActe = new Map<number, EquipementResolu[]>()
   if (build) {
     const tri = [...build.equipement].sort(
       (a, b) => ORDRE_IMPORTANCE[b.importance] - ORDRE_IMPORTANCE[a.importance],
     )
     for (const e of tri) {
-      const liste = equipementParActe.get(e.acte) ?? []
-      liste.push(e)
-      equipementParActe.set(e.acte, liste)
+      const objetOriginal = getObjet(e.objetId)
+      const aAdapter =
+        personnage.styleJeu === 'bienveillant' &&
+        objetOriginal !== undefined &&
+        objetOriginal.alignement !== 'neutre'
+      const alternative =
+        aAdapter && objetOriginal?.alternative ? getObjet(objetOriginal.alternative) : undefined
+      const objet = alternative ?? objetOriginal
+      const resolu: EquipementResolu = {
+        emplacement: e.emplacement,
+        importance: e.importance,
+        objetOriginal,
+        objet,
+        alternative,
+        sansAlternative: aAdapter && alternative === undefined,
+        idAffiche: objet?.id ?? e.objetId,
+        acteAffiche: alternative ? alternative.acte : e.acte,
+      }
+      const liste = equipementParActe.get(resolu.acteAffiche) ?? []
+      liste.push(resolu)
+      equipementParActe.set(resolu.acteAffiche, liste)
     }
   }
   const actesEquipement = [...equipementParActe.keys()].sort((a, b) => a - b)
@@ -120,6 +150,14 @@ export function PersonnageDetailPage() {
             ? 'Ce personnage est le Dark Urge'
             : 'Marquer ce personnage comme le Dark Urge'}
         </button>
+        {personnage.estDarkUrge && (
+          <p className="mt-2 text-xs text-ink-muted">
+            Ta voie se règle juste au-dessus, dans « Style de jeu » : Bienveillant si tu comptes
+            résister aux pulsions, Sombre si tu comptes y céder. Ça adapte automatiquement
+            l'équipement à obtenir plus bas — pas de mauvaise surprise si tes choix ferment
+            certains objets.
+          </p>
+        )}
       </Section>
 
       {personnage.estDarkUrge && (
@@ -316,17 +354,16 @@ export function PersonnageDetailPage() {
                 </p>
                 <div className="flex flex-col gap-2">
                   {equipementParActe.get(acte)!.map((e, i) => {
-                    const objet = getObjet(e.objetId)
-                    const obtenu = personnage.objetsObtenus.includes(e.objetId)
+                    const obtenu = personnage.objetsObtenus.includes(e.idAffiche)
                     return (
                       <div
-                        key={`${e.objetId}-${i}`}
+                        key={`${e.idAffiche}-${i}`}
                         className="flex items-center gap-3 rounded-lg border border-border bg-surface px-3 py-2.5"
                       >
                         <button
                           type="button"
                           onClick={() =>
-                            saveStore.basculerObjetObtenu(campagneId, personnage.id, e.objetId)
+                            saveStore.basculerObjetObtenu(campagneId, personnage.id, e.idAffiche)
                           }
                           aria-label={obtenu ? 'Marquer comme non obtenu' : 'Marquer comme obtenu'}
                           className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border ${
@@ -336,21 +373,32 @@ export function PersonnageDetailPage() {
                           {obtenu && <Check className="h-4 w-4" />}
                         </button>
                         <Link
-                          to={`/explorer/${e.objetId}`}
+                          to={`/explorer/${e.idAffiche}`}
                           state={{ from: `/equipe/${personnage.id}` }}
                           className="min-w-0 flex-1"
                         >
                           <p
                             className={`truncate text-sm font-medium ${obtenu ? 'text-ink-muted line-through' : 'text-ink'}`}
                           >
-                            {objet ? nomAffiche(objet) : e.objetId}
+                            {e.objet ? nomAffiche(e.objet) : e.idAffiche}
                           </p>
                           <p className="text-xs text-ink-muted">{e.emplacement}</p>
+                          {e.alternative && e.objetOriginal && (
+                            <p className="mt-1 text-xs text-bon">
+                              Remplace {nomAffiche(e.objetOriginal)} (choix sombre)
+                            </p>
+                          )}
+                          {e.sansAlternative && e.objetOriginal && (
+                            <p className="mt-1 text-xs text-essentiel">
+                              Aucune alternative neutre connue
+                              {e.objetOriginal.alignementNote ? ` — ${e.objetOriginal.alignementNote}` : ''}
+                            </p>
+                          )}
                         </Link>
                         <div className="flex shrink-0 flex-col items-end gap-1">
                           <ImportanceBadge importance={e.importance} />
-                          {personnage.styleJeu === 'bienveillant' && objet && (
-                            <AlignementBadge alignement={objet.alignement} />
+                          {personnage.styleJeu === 'bienveillant' && e.objetOriginal && !e.alternative && (
+                            <AlignementBadge alignement={e.objetOriginal.alignement} />
                           )}
                         </div>
                       </div>
