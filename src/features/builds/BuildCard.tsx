@@ -3,6 +3,7 @@ import type { Build } from '../../data/types'
 import { estMulticlasse } from '../../data'
 import { MulticlasseBadge } from '../../components/MulticlasseBadge'
 import { ClasseIcon } from '../../components/ClasseIcon'
+import { ElementBadge } from '../../components/ElementBadge'
 
 export function BuildCard({ build }: { build: Build }) {
   return (
@@ -25,6 +26,13 @@ export function BuildCard({ build }: { build: Build }) {
         <MulticlasseBadge multiclasse={estMulticlasse(build)} />
       </div>
       <p className="mt-1 text-sm text-ink-muted">{build.role}</p>
+      {build.elements.length > 0 && (
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          {build.elements.map((e) => (
+            <ElementBadge key={e} element={e} />
+          ))}
+        </div>
+      )}
       <p className="mt-2 line-clamp-2 text-sm text-ink-muted/90">{build.resume}</p>
     </Link>
   )

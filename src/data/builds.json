@@ -24,6 +24,9 @@
       "Fragile en mêlée",
       "Dépend des emplacements de haut niveau"
     ],
+    "synergies": [
+      "Combo Charges de foudre : The Spellsparkler t'octroie 2 Charges à chaque sort de dégâts, The Blast Pendant en consomme le stock pour renforcer ton prochain sort de foudre, et Le Gilet électrisant punit quiconque te frappe en mêlée tant que tu portes des charges. Les charges se perdent au rythme d'une par tour si tu ne les utilises pas — pense à les décharger avant qu'elles ne se dissipent."
+    ],
     "dons": [
       "+2 Charisme (niv 4)",
       "Doué (Skilled) ou +2 Charisme (niv 8)"
@@ -182,6 +185,10 @@
     "roles": [
       "controle",
       "degatsDistance"
+    ],
+    "elements": [
+      "foudre",
+      "tonnerre"
     ]
   },
   {
@@ -213,7 +220,8 @@
       "Avec un combattant de mêlée (type Karlach) : ouvre par Boule de feu avant qu'il/elle n'entre au contact, pour ne pas le/la toucher.",
       "Avec un exécuteur mobile (type Wyll) : Hâte jumelée sur les deux martiaux pour les combats longs.",
       "Avec un contrôleur de terrain (type Druide) : il/elle ralentit ou retient, ta zone punit ensuite.",
-      "Attention : ne fais jamais mouiller une cible que tu comptes brûler (Création d'eau, Tempête de glace annulent tes dégâts de feu)."
+      "Attention : ne fais jamais mouiller une cible que tu comptes brûler (Création d'eau, Tempête de glace annulent tes dégâts de feu).",
+      "Combo Chaleur (optionnel, remplace Gants/Bottes/Anneau) : porte l'Anneau d'auto-immolation, les Gants thermo-arcaniques et les Chaussures de braise pour accumuler des tours de Chaleur à chaque dégât de feu infligé (ou en t'auto-immolant en début de combat), puis laisse Convergence de chaleur (automatique) transformer ces tours en gros bonus de dégâts sur ton prochain sort ou attaque de feu. Attention : la Chaleur inflige aussi 1d4 dégâts de feu par tour à toi-même si tu ne la consommes pas."
     ],
     "dons": [
       "+2 Charisme (niv 4)",
@@ -370,10 +378,31 @@
         "objetId": "gold-wyrmling-staff",
         "importance": "Bon",
         "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-self-immolation",
+        "importance": "Situationnel",
+        "acte": 2
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "thermoarcanic-gloves",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "cinder-shoes",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
       "degatsDistance"
+    ],
+    "elements": [
+      "feu"
     ]
   },
   {
@@ -564,7 +593,8 @@
       "soin",
       "controle",
       "degatsDistance"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "gloomstalker-assassin-guerrier",
@@ -733,7 +763,8 @@
     ],
     "roles": [
       "degatsDistance"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "moine-paume-ouverte",
@@ -912,7 +943,8 @@
     "roles": [
       "controle",
       "degatsMelee"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "guerrier-maitre-de-guerre",
@@ -1100,7 +1132,8 @@
       "tank",
       "controle",
       "degatsMelee"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "occultiste-lame-maudite",
@@ -1304,6 +1337,9 @@
       "controle",
       "degatsMelee",
       "degatsDistance"
+    ],
+    "elements": [
+      "necrotique"
     ]
   },
   {
@@ -1491,6 +1527,9 @@
     ],
     "roles": [
       "degatsMelee"
+    ],
+    "elements": [
+      "radiant"
     ]
   },
   {
@@ -1673,7 +1712,8 @@
     "roles": [
       "tank",
       "degatsMelee"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "clerc-tempete",
@@ -1861,6 +1901,10 @@
       "soin",
       "utilitaire",
       "degatsDistance"
+    ],
+    "elements": [
+      "foudre",
+      "tonnerre"
     ]
   },
   {
@@ -2050,6 +2094,10 @@
       "soin",
       "controle",
       "degatsDistance"
+    ],
+    "elements": [
+      "radiant",
+      "foudre"
     ]
   },
   {
@@ -2220,6 +2268,10 @@
       "tank",
       "controle",
       "degatsMelee"
+    ],
+    "elements": [
+      "necrotique",
+      "radiant"
     ]
   },
   {
@@ -2389,6 +2441,10 @@
     ],
     "roles": [
       "degatsDistance"
+    ],
+    "elements": [
+      "feu",
+      "foudre"
     ]
   },
   {
@@ -2572,7 +2628,8 @@
     "roles": [
       "degatsMelee",
       "utilitaire"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "guerrier-champion",
@@ -2754,7 +2811,8 @@
     ],
     "roles": [
       "degatsMelee"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "occultiste-fielon-distance",
@@ -2936,7 +2994,8 @@
       "controle",
       "degatsMelee",
       "degatsDistance"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "clerc-vie",
@@ -3112,7 +3171,8 @@
       "tank",
       "soin",
       "degatsDistance"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "roublard-assassin-pur",
@@ -3277,7 +3337,8 @@
     "roles": [
       "utilitaire",
       "degatsMelee"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "magicien-necromancie",
@@ -3457,6 +3518,11 @@
     ],
     "roles": [
       "degatsDistance"
+    ],
+    "elements": [
+      "necrotique",
+      "poison",
+      "glace"
     ]
   },
   {
@@ -3628,6 +3694,9 @@
     "roles": [
       "tank",
       "degatsDistance"
+    ],
+    "elements": [
+      "feu"
     ]
   },
   {
@@ -3795,6 +3864,9 @@
       "controle",
       "utilitaire",
       "degatsDistance"
+    ],
+    "elements": [
+      "feu"
     ]
   },
   {
@@ -3972,6 +4044,10 @@
     "roles": [
       "degatsMelee",
       "utilitaire"
+    ],
+    "elements": [
+      "tonnerre",
+      "feu"
     ]
   },
   {
@@ -4155,7 +4231,8 @@
     "roles": [
       "soin",
       "degatsMelee"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "clerc-nature",
@@ -4339,7 +4416,8 @@
       "soin",
       "utilitaire",
       "degatsDistance"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "paladin-devotion",
@@ -4521,6 +4599,9 @@
     "roles": [
       "controle",
       "degatsMelee"
+    ],
+    "elements": [
+      "radiant"
     ]
   },
   {
@@ -4703,6 +4784,9 @@
     "roles": [
       "tank",
       "degatsMelee"
+    ],
+    "elements": [
+      "radiant"
     ]
   },
   {
@@ -4886,6 +4970,9 @@
     "roles": [
       "controle",
       "degatsDistance"
+    ],
+    "elements": [
+      "feu"
     ]
   },
   {
@@ -5068,6 +5155,10 @@
     ],
     "roles": [
       "degatsDistance"
+    ],
+    "elements": [
+      "foudre",
+      "tonnerre"
     ]
   },
   {
@@ -5239,7 +5330,8 @@
     "roles": [
       "tank",
       "degatsMelee"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "barde-savoir",
@@ -5424,7 +5516,8 @@
       "controle",
       "utilitaire",
       "degatsDistance"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "rodeur-chasseur",
@@ -5601,7 +5694,8 @@
       "controle",
       "degatsMelee",
       "degatsDistance"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "moine-ombre",
@@ -5773,7 +5867,8 @@
     "roles": [
       "utilitaire",
       "degatsMelee"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "occultiste-grand-ancien",
@@ -5951,7 +6046,8 @@
       "degatsMelee",
       "degatsDistance",
       "utilitaire"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "roublard-escamoteur",
@@ -6122,7 +6218,8 @@
       "controle",
       "degatsDistance",
       "utilitaire"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "guerrier-chevalier-occulte",
@@ -6293,6 +6390,9 @@
     "roles": [
       "degatsMelee",
       "utilitaire"
+    ],
+    "elements": [
+      "tonnerre"
     ]
   },
   {
@@ -6470,6 +6570,9 @@
       "tank",
       "soin",
       "degatsMelee"
+    ],
+    "elements": [
+      "radiant"
     ]
   },
   {
@@ -6636,7 +6739,8 @@
     "roles": [
       "controle",
       "degatsMelee"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "barbare-magie-sauvage",
@@ -6807,7 +6911,8 @@
     ],
     "roles": [
       "degatsMelee"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "barde-vaillance",
@@ -6992,7 +7097,8 @@
       "degatsMelee",
       "degatsDistance",
       "utilitaire"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "barde-seduction",
@@ -7169,7 +7275,8 @@
       "controle",
       "utilitaire",
       "degatsDistance"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "clerc-lumiere",
@@ -7352,6 +7459,10 @@
       "tank",
       "soin",
       "degatsDistance"
+    ],
+    "elements": [
+      "feu",
+      "radiant"
     ]
   },
   {
@@ -7536,7 +7647,8 @@
       "controle",
       "utilitaire",
       "degatsDistance"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "clerc-mort",
@@ -7714,6 +7826,9 @@
       "soin",
       "degatsMelee",
       "degatsDistance"
+    ],
+    "elements": [
+      "necrotique"
     ]
   },
   {
@@ -7898,7 +8013,8 @@
       "controle",
       "utilitaire",
       "degatsDistance"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "druide-terre",
@@ -8074,6 +8190,9 @@
     "roles": [
       "soin",
       "degatsDistance"
+    ],
+    "elements": [
+      "radiant"
     ]
   },
   {
@@ -8257,6 +8376,9 @@
       "controle",
       "degatsDistance",
       "utilitaire"
+    ],
+    "elements": [
+      "feu"
     ]
   },
   {
@@ -8430,7 +8552,8 @@
     "roles": [
       "controle",
       "degatsDistance"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "magicien-conjuration",
@@ -8600,6 +8723,9 @@
     "roles": [
       "controle",
       "degatsDistance"
+    ],
+    "elements": [
+      "feu"
     ]
   },
   {
@@ -8770,6 +8896,9 @@
     "roles": [
       "controle",
       "degatsDistance"
+    ],
+    "elements": [
+      "feu"
     ]
   },
   {
@@ -8940,7 +9069,8 @@
     "roles": [
       "controle",
       "degatsDistance"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "magicien-transmutation",
@@ -9110,6 +9240,9 @@
     "roles": [
       "utilitaire",
       "degatsDistance"
+    ],
+    "elements": [
+      "feu"
     ]
   },
   {
@@ -9281,6 +9414,9 @@
     ],
     "roles": [
       "degatsMelee"
+    ],
+    "elements": [
+      "feu"
     ]
   },
   {
@@ -9453,7 +9589,8 @@
     "roles": [
       "controle",
       "degatsMelee"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "occultiste-archifee",
@@ -9631,7 +9768,8 @@
       "degatsMelee",
       "degatsDistance",
       "utilitaire"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "paladin-couronne",
@@ -9807,6 +9945,9 @@
       "tank",
       "controle",
       "degatsMelee"
+    ],
+    "elements": [
+      "radiant"
     ]
   },
   {
@@ -9989,6 +10130,11 @@
     "roles": [
       "controle",
       "degatsMelee"
+    ],
+    "elements": [
+      "necrotique",
+      "radiant",
+      "feu"
     ]
   },
   {
@@ -10164,7 +10310,8 @@
     "roles": [
       "controle",
       "degatsDistance"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "rodeur-gardien-essaim",
@@ -10333,7 +10480,8 @@
     "roles": [
       "controle",
       "degatsDistance"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "roublard-bretteur",
@@ -10501,7 +10649,8 @@
       "controle",
       "utilitaire",
       "degatsMelee"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "occultiste-lame-ombres",
@@ -10700,6 +10849,9 @@
     "roles": [
       "controle",
       "degatsMelee"
+    ],
+    "elements": [
+      "psychique"
     ]
   },
   {
@@ -10891,6 +11043,10 @@
     "roles": [
       "degatsMelee",
       "controle"
+    ],
+    "elements": [
+      "psychique",
+      "tonnerre"
     ]
   },
   {
@@ -11052,7 +11208,8 @@
     "roles": [
       "degatsDistance",
       "utilitaire"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "guerrier-champion-distance",
@@ -11225,7 +11382,8 @@
     ],
     "roles": [
       "degatsDistance"
-    ]
+    ],
+    "elements": []
   },
   {
     "id": "paladin-vengeance-mono",
@@ -11405,6 +11563,9 @@
     "roles": [
       "tank",
       "degatsMelee"
+    ],
+    "elements": [
+      "radiant"
     ]
   },
   {
@@ -11596,6 +11757,9 @@
     "roles": [
       "degatsDistance",
       "controle"
+    ],
+    "elements": [
+      "feu"
     ]
   }
 ]

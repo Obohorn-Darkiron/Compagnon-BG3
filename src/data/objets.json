@@ -6557,5 +6557,19 @@
     "verifie": true,
     "aConfirmer": [],
     "alignement": "neutre"
+  },
+  {
+    "id": "cinder-shoes",
+    "nomEn": "Cinder Shoes",
+    "nomFr": "Chaussures de braise",
+    "type": "Bottes",
+    "rarete": "Peu commun",
+    "acte": 2,
+    "zone": "Outreterre, Colonie myconide",
+    "obtention": "Achat auprès de Blurg, dans la Colonie myconide.",
+    "effet": "Cendres : mettre un ennemi en Combustion (Burning) t'octroie 2 tours de la condition Chaleur.",
+    "verifie": true,
+    "aConfirmer": [],
+    "alignement": "neutre"
   }
 ]

@@ -94,4 +94,4 @@ export function buildsPourObjet(
     )
 }
 
-export type { Build, Objet, RaceInfo, SousClasseInfo, RoleTag } from './types'
+export type { Build, Objet, RaceInfo, SousClasseInfo, RoleTag, ElementTag } from './types'

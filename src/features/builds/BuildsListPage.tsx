@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react'
 import { PageHeader } from '../../components/PageHeader'
 import { Search } from '../../components/icons'
 import { builds, estMulticlasse, getObjet, nomAffiche } from '../../data'
+import type { ElementTag } from '../../data/types'
+import { LABELS_ELEMENT } from '../../components/elementLabels'
 import { BuildCard } from './BuildCard'
 
 type FiltreClasse = 'tous' | 'mono' | 'multi'
@@ -12,9 +14,12 @@ const filtres: { valeur: FiltreClasse; label: string }[] = [
   { valeur: 'multi', label: 'Multi-classe' },
 ]
 
+const elementsDisponibles = Object.keys(LABELS_ELEMENT) as ElementTag[]
+
 export function BuildsListPage() {
   const [recherche, setRecherche] = useState('')
   const [filtre, setFiltre] = useState<FiltreClasse>('tous')
+  const [elementActif, setElementActif] = useState<ElementTag | null>(null)
 
   const resultats = useMemo(() => {
     const q = recherche.trim().toLowerCase()
@@ -24,6 +29,7 @@ export function BuildsListPage() {
         if (filtre === 'multi') return estMulticlasse(b)
         return true
       })
+      .filter((b) => (elementActif ? b.elements.includes(elementActif) : true))
       .filter((b) => {
         if (!q) return true
         const nomsEquipement = b.equipement.map((e) => {
@@ -41,7 +47,7 @@ export function BuildsListPage() {
         ]
         return champs.some((champ) => champ.toLowerCase().includes(q))
       })
-  }, [recherche, filtre])
+  }, [recherche, filtre, elementActif])
 
   return (
     <div>
@@ -70,6 +76,23 @@ export function BuildsListPage() {
                 }`}
               >
                 {f.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-1.5">
+            {elementsDisponibles.map((el) => (
+              <button
+                key={el}
+                type="button"
+                onClick={() => setElementActif((actuel) => (actuel === el ? null : el))}
+                className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+                  elementActif === el
+                    ? 'border-glow/70 bg-glow/15 text-glow'
+                    : 'border-border text-ink-muted'
+                }`}
+              >
+                {LABELS_ELEMENT[el]}
               </button>
             ))}
           </div>

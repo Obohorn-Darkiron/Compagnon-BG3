@@ -29,6 +29,17 @@ export interface EquipementRecommande {
 
 export type RoleTag = 'tank' | 'soin' | 'controle' | 'degatsMelee' | 'degatsDistance' | 'utilitaire'
 
+export type ElementTag =
+  | 'feu'
+  | 'glace'
+  | 'foudre'
+  | 'poison'
+  | 'acide'
+  | 'necrotique'
+  | 'radiant'
+  | 'tonnerre'
+  | 'psychique'
+
 export interface Build {
   id: string
   classe: string
@@ -47,6 +58,8 @@ export interface Build {
   progression: EtapeProgression[]
   equipement: EquipementRecommande[]
   roles: RoleTag[]
+  /** Types de dégâts dominants du build — pour la recherche par élément. Vide si non pertinent (build purement physique). */
+  elements: ElementTag[]
 }
 
 export interface SousClasseInfo {

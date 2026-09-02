@@ -19,6 +19,7 @@ export function creerBuildFixture(overrides: Partial<Build> = {}): Build {
     progression: [],
     equipement: [],
     roles: ['degatsMelee'],
+    elements: [],
     ...overrides,
   }
 }
