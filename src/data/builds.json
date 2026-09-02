@@ -11761,5 +11761,192 @@
     "elements": [
       "feu"
     ]
+  },
+  {
+    "id": "ensorceleur-glace-draconique-blanche",
+    "classe": "Ensorceleur",
+    "sousClasse": "Lignée draconique",
+    "nom": "Ensorceleur Glace (Lignée draconique blanche)",
+    "split": "Ensorceleur 12 (classe unique)",
+    "role": "Contrôle de zone / Dégâts de froid",
+    "resume": "Caster de froid classe unique : la Lignée blanche ajoute le mod de Charisme aux dégâts de froid dès le niveau 6, donne la résistance, et offre Armure d'Agathys gratuitement. Rayon de givre ralentit au quotidien, Tempête de glace fait tomber les ennemis en zone, et Cône de froid sert de finisseur — plus tardif que la Boule de feu d'un Ensorceleur rouge, mais avec plus de contrôle.",
+    "caracDepart": {
+      "FOR": 8,
+      "DEX": 16,
+      "CON": 14,
+      "INT": 8,
+      "SAG": 12,
+      "CHA": 16
+    },
+    "forces": [
+      "Beaucoup de contrôle en plus des dégâts (ralentissement, chute au sol)",
+      "Armure d'Agathys gratuite dès le niveau 1 (PV temporaires + riposte de froid en mêlée)",
+      "Cône de froid = grosse zone de dégâts (8d8) en un seul sort"
+    ],
+    "faiblesses": [
+      "Ennemis résistants/immunisés au froid (fréquents en zones glacées et chez certains morts-vivants)",
+      "Fragile en mêlée",
+      "Pas de sort de froid dédié aux niveaux 2 et 3 — repose sur Rayon de givre et des sorts hors élément en attendant Tempête de glace (niveau 7)"
+    ],
+    "synergies": [
+      "Combo Gel : Winter's Clutches applique 2 tours de Gel (Encrusted with Frost) à chaque dégât de froid infligé, et Coldbrim Hat en ajoute aussi à chaque AUTRE condition posée sur la même cible (Ralenti par Rayon de givre, à terre par Tempête de glace...) — empile le Gel très vite."
+    ],
+    "dons": [
+      "+2 Charisme (niv 4)",
+      "+2 Charisme (niv 8)",
+      "Vigilant (niv 12)"
+    ],
+    "sortsCles": [
+      "Rayon de givre (Ray of Frost)",
+      "Tempête de glace (Ice Storm)",
+      "Cône de froid (Cone of Cold)",
+      "Armure d'Agathys",
+      "Hâte"
+    ],
+    "jalons": [
+      {
+        "etape": "Sous-classe (niv 1)",
+        "note": "Lignée blanche : Armure d'Agathys offerte, CA 13 + Dextérité sans armure."
+      },
+      {
+        "etape": "Niv 6",
+        "note": "Affinité élémentaire : le vrai palier du build, Charisme ajouté aux dégâts de froid, résistance disponible."
+      },
+      {
+        "etape": "Niv 9",
+        "note": "Cône de froid : 8d8 dégâts de froid en cône, le finisseur du build."
+      }
+    ],
+    "progression": [
+      {
+        "niveau": 1,
+        "titre": "Lignée draconique blanche",
+        "detail": "CA 13 + Dextérité sans armure, Armure d'Agathys offerte (PV temporaires, riposte de froid contre qui te frappe en mêlée). Cantrip Rayon de givre. Sorts de départ : Bouclier, Orbe chromatique (dégâts au choix, dont froid)."
+      },
+      {
+        "niveau": 2,
+        "titre": "Points de sorcellerie",
+        "detail": "Font de magie (réserve de points de sorcellerie) et deux premières métamagies : Sort jumeau et Sort distant. Sort de niveau 2 appris : Image miroir (aucun sort de froid n'existe à ce niveau)."
+      },
+      {
+        "niveau": 3,
+        "titre": "Sort accéléré",
+        "detail": "Troisième métamagie débloquée : transforme un sort en action bonus pour des tours à deux sorts."
+      },
+      {
+        "niveau": 4,
+        "titre": "Premier don",
+        "detail": "+2 Charisme (18) — améliore les jets d'attaque et la difficulté de sauvegarde de tes sorts. Nouveau tour de magie : Lumière."
+      },
+      {
+        "niveau": 5,
+        "titre": "Sorts de niveau 3",
+        "detail": "Hâte apprise (aucun sort de froid n'existe à ce niveau) — booste un allié en mêlée pendant que tu contrôles à distance."
+      },
+      {
+        "niveau": 6,
+        "titre": "Affinité élémentaire",
+        "detail": "Le vrai palier du build : le modificateur de Charisme s'ajoute à chaque instance de dégâts de froid, plus résistance au froid activable."
+      },
+      {
+        "niveau": 7,
+        "titre": "Tempête de glace apprise",
+        "detail": "Sorts de niveau 4 : 4d6 dégâts de froid + 2d8 contondants en zone, crée une surface de glace qui peut faire tomber les ennemis — double dégâts contre une cible Mouillée."
+      },
+      {
+        "niveau": 8,
+        "titre": "Deuxième don",
+        "detail": "+2 Charisme (20) — maximum naturel de Charisme atteint."
+      },
+      {
+        "niveau": 9,
+        "titre": "Cône de froid appris",
+        "detail": "Sorts de niveau 5 : 8d8 dégâts de froid en cône, le finisseur de zone du build."
+      },
+      {
+        "niveau": 10,
+        "titre": "Télékinésie",
+        "detail": "Déplace une créature ou un objet chaque tour. Métamagie Sort intensifié débloquée."
+      },
+      {
+        "niveau": 11,
+        "titre": "Globe d'invulnérabilité",
+        "detail": "Sorts de niveau 6 : bouton d'urgence pour stabiliser une phase de combat très dangereuse."
+      },
+      {
+        "niveau": 12,
+        "titre": "Troisième don — build terminé",
+        "detail": "Vigilant (+5 initiative, ne peut être surpris). Boule de feu apprise comme option hors élément, utile contre les ennemis résistants ou immunisés au froid."
+      }
+    ],
+    "equipement": [
+      {
+        "emplacement": "Arme",
+        "objetId": "markoheshkir",
+        "importance": "Essentiel",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "mourning-frost",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "potent-robe",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "icebite-robe",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "snowburst-ring",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "winters-clutches",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "coldbrim-hat",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "necklace-elemental-augmentation",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "circlet-of-blasting",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "wavemothers-robe",
+        "importance": "Situationnel",
+        "acte": 3
+      }
+    ],
+    "roles": [
+      "controle",
+      "degatsDistance"
+    ],
+    "elements": [
+      "glace"
+    ]
   }
 ]

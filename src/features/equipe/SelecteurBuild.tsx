@@ -2,14 +2,19 @@ import { useState } from 'react'
 import { ClasseIcon } from '../../components/ClasseIcon'
 import { ChevronLeft } from '../../components/icons'
 import {
+  buildsPourClasse,
   buildsPourClasseEtSousClasse,
   classesDisponibles,
   getBuild,
   sousClassesPourClasse,
   type Build,
 } from '../../data'
+import type { ElementTag } from '../../data/types'
+import { LABELS_ELEMENT } from '../../components/elementLabels'
 import { SousClasseCard } from './SousClasseCard'
 import { BuildCandidatCard } from './BuildCandidatCard'
+
+const elementsDisponibles = Object.keys(LABELS_ELEMENT) as ElementTag[]
 
 export function SelecteurBuild({
   buildIdActuel,
@@ -22,14 +27,31 @@ export function SelecteurBuild({
   const [ouvert, setOuvert] = useState(false)
   const [classe, setClasse] = useState(buildActuel?.classe ?? '')
   const [sousClasse, setSousClasse] = useState(buildActuel?.sousClasse ?? '')
+  const [elementFiltre, setElementFiltre] = useState<ElementTag | null>(null)
 
-  const sousClassesDeLaClasse = classe ? sousClassesPourClasse(classe) : []
-  const candidats = classe && sousClasse ? buildsPourClasseEtSousClasse(classe, sousClasse) : []
+  const classesAffichees = elementFiltre
+    ? classesDisponibles().filter((c) =>
+        buildsPourClasse(c).some((b) => b.elements.includes(elementFiltre)),
+      )
+    : classesDisponibles()
+
+  const sousClassesDeLaClasseBrutes = classe ? sousClassesPourClasse(classe) : []
+  const sousClassesDeLaClasse = elementFiltre
+    ? sousClassesDeLaClasseBrutes.filter((sc) =>
+        buildsPourClasseEtSousClasse(classe, sc.nom).some((b) => b.elements.includes(elementFiltre)),
+      )
+    : sousClassesDeLaClasseBrutes
+
+  const candidatsBruts = classe && sousClasse ? buildsPourClasseEtSousClasse(classe, sousClasse) : []
+  const candidats = elementFiltre
+    ? candidatsBruts.filter((b) => b.elements.includes(elementFiltre))
+    : candidatsBruts
 
   function fermer() {
     setOuvert(false)
     setClasse(buildActuel?.classe ?? '')
     setSousClasse(buildActuel?.sousClasse ?? '')
+    setElementFiltre(null)
   }
 
   if (!ouvert) {
@@ -86,25 +108,55 @@ export function SelecteurBuild({
         </button>
       </div>
 
-      <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-muted">Classe</p>
+      <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-muted">
+        Direction élémentaire (optionnel)
+      </p>
       <div className="mb-3 flex flex-wrap gap-1.5">
-        {classesDisponibles().map((c) => (
+        {elementsDisponibles.map((el) => (
           <button
-            key={c}
+            key={el}
             type="button"
             onClick={() => {
-              setClasse(c)
+              setElementFiltre((actuel) => (actuel === el ? null : el))
+              setClasse('')
               setSousClasse('')
             }}
-            className={`flex items-center gap-1.5 rounded-full border px-3 py-2 text-xs font-medium transition-colors ${
-              classe === c ? 'border-glow/70 bg-glow/15 text-glow' : 'border-border text-ink-muted'
+            className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+              elementFiltre === el
+                ? 'border-glow/70 bg-glow/15 text-glow'
+                : 'border-border text-ink-muted'
             }`}
           >
-            <ClasseIcon classe={c} className="h-3.5 w-3.5" />
-            {c}
+            {LABELS_ELEMENT[el]}
           </button>
         ))}
       </div>
+
+      <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-muted">Classe</p>
+      {classesAffichees.length === 0 ? (
+        <p className="mb-3 rounded-lg border border-border bg-surface-raised px-3 py-2.5 text-xs text-ink-muted">
+          Aucun build ne joue sur cet élément pour l'instant.
+        </p>
+      ) : (
+        <div className="mb-3 flex flex-wrap gap-1.5">
+          {classesAffichees.map((c) => (
+            <button
+              key={c}
+              type="button"
+              onClick={() => {
+                setClasse(c)
+                setSousClasse('')
+              }}
+              className={`flex items-center gap-1.5 rounded-full border px-3 py-2 text-xs font-medium transition-colors ${
+                classe === c ? 'border-glow/70 bg-glow/15 text-glow' : 'border-border text-ink-muted'
+              }`}
+            >
+              <ClasseIcon classe={c} className="h-3.5 w-3.5" />
+              {c}
+            </button>
+          ))}
+        </div>
+      )}
 
       {classe && (
         <>

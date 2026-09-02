@@ -125,6 +125,14 @@ const REGLES_SYNERGIE: RegleSynergie[] = [
       `${a} peut lancer Hâte sur ${b} pour lui offrir une action supplémentaire et +2 à la CA pendant les combats clés.`,
   },
   {
+    id: 'eau-foudre-electrocution',
+    label: 'Combo Eau + Foudre (Électrocution)',
+    aTag: (b) => b.id === 'magicien-conjuration',
+    bTag: (b) => b.elements.includes('foudre'),
+    description: (a, b) =>
+      `${a} peut créer une flaque d'eau au sol (Conjuration mineure) ; un sort de foudre de ${b} lancé dans cette zone Électrocute tous les ennemis qui s'y trouvent, dégâts en plus. Attention : l'Électrocution touche aussi vos propres alliés s'ils sont dans l'eau — coordonnez le timing avant de foudroyer.`,
+  },
+  {
     id: 'tenebres',
     label: 'Obscurité totale à exploiter',
     aTag: (b) => possedeSort(b, /Ténèbres/),
