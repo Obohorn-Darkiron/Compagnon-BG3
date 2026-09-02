@@ -53,7 +53,7 @@
       {
         "niveau": 1,
         "titre": "Sous-classe Ensorceleur",
-        "detail": "Lignée draconique bleue (ou Tempête sauvage) — pose l'identité foudre du build. Premiers cantrips et sorts de niveau 1."
+        "detail": "Lignée draconique bleue (ou Sorcellerie des tempêtes) — pose l'identité foudre du build. Premiers cantrips et sorts de niveau 1."
       },
       {
         "niveau": 2,
@@ -744,11 +744,11 @@
     "role": "Pic de dégâts en mêlée / Mobilité / Contrôle",
     "resume": "Machine à coups : Bagarreur de taverne fait exploser les dégâts à mains nues, et le dip Voleur (Filou) ajoute une action bonus, donc encore plus de frappes. Très mobile, renverse et étourdit.",
     "caracDepart": {
-      "FOR": 8,
-      "DEX": 17,
+      "FOR": 16,
+      "DEX": 16,
       "CON": 14,
       "INT": 8,
-      "SAG": 15,
+      "SAG": 14,
       "CHA": 8
     },
     "forces": [
@@ -822,8 +822,8 @@
       },
       {
         "niveau": 9,
-        "titre": "Sérénité",
-        "detail": "Peut se lancer Havre de paix par les points de Ki. Fin de la partie Moine pure du build."
+        "titre": "Déplacement sans armure avancé",
+        "detail": "Vitesse de déplacement sans armure augmentée (la Tranquillité/Sérénité est exclusive à un Moine Paume ouverte qui atteint le niveau 11, jamais atteint ici). Fin de la partie Moine pure du build."
       },
       {
         "niveau": 10,
@@ -1525,7 +1525,7 @@
       "Attention : ne donne pas le même butin qu'à un autre mêlée du groupe — Force/Rage pour toi, Charisme/finesse pour l'autre."
     ],
     "dons": [
-      "Maître d'armes à deux mains (niv 4)",
+      "Grand Maître d'armes (niv 4)",
       "Athlète (niv 8)",
       "+2 Force (niv 12)"
     ],
@@ -1559,7 +1559,7 @@
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Maître des armes à deux mains : option -5/+10 dégâts, et attaque bonus après un critique ou une élimination."
+        "detail": "Grand Maître d'armes : option -5/+10 dégâts, et attaque bonus après un critique ou une élimination."
       },
       {
         "niveau": 5,
@@ -1714,7 +1714,7 @@
     "jalons": [
       {
         "etape": "Niv 1 (domaine)",
-        "note": "Courroux destructeur : dégâts de foudre/tonnerre maximisés."
+        "note": "Colère de la tempête : réaction gratuite qui inflige 2d8 dégâts de foudre/tonnerre à qui te touche en mêlée."
       },
       {
         "etape": "Niv 5",
@@ -1725,12 +1725,12 @@
       {
         "niveau": 1,
         "titre": "Domaine de la Tempête",
-        "detail": "Courroux destructeur : un sort de foudre ou de tonnerre inflige ses dégâts maximum, une fois par repos long."
+        "detail": "Colère de la tempête : réaction gratuite (sans charge de Conduit divin) qui inflige 2d8 dégâts de foudre/tonnerre à quiconque te touche en mêlée, mi-dégâts si jet de sauvegarde réussi."
       },
       {
         "niveau": 2,
         "titre": "Conduit divin",
-        "detail": "Première utilisation de Conduit divin par repos, pour activer une capacité de domaine sans dépenser de sort."
+        "detail": "Courroux destructeur : un sort de foudre ou de tonnerre inflige ses dégâts maximum, une fois par repos long."
       },
       {
         "niveau": 3,
@@ -3322,7 +3322,7 @@
       },
       {
         "etape": "Niv 6",
-        "note": "Serviteurs morts-vivants : anime des morts-vivants plus résistants en action bonus."
+        "note": "Serviteurs morts-vivants : accès à Animer les morts, +1 cadavre relevé, morts-vivants avec PV bonus et bonus de maîtrise aux dégâts."
       }
     ],
     "progression": [
@@ -3354,7 +3354,7 @@
       {
         "niveau": 6,
         "titre": "Serviteurs morts-vivants",
-        "detail": "Anime des morts-vivants en action bonus ; ils sont plus résistants que la normale."
+        "detail": "Undead Thralls : accès au sort Animer les morts, +1 cadavre relevé par lancer, morts-vivants créés avec PV bonus (= niveau de Magicien) et bonus de maîtrise aux dégâts."
       },
       {
         "niveau": 7,
@@ -3498,7 +3498,7 @@
     "jalons": [
       {
         "etape": "Niv 2 (sous-classe)",
-        "note": "Rempart arcanique : bouclier de PV temporaires rechargeable."
+        "note": "Rempart arcanique : bouclier de PV temporaires qui protège uniquement le Magicien jusqu'au niveau 6, rechargé par les sorts d'Abjuration et au repos long."
       }
     ],
     "progression": [
@@ -3510,7 +3510,7 @@
       {
         "niveau": 2,
         "titre": "École d'Abjuration",
-        "detail": "Rempart arcanique : bouclier de PV temporaires posé sur soi ou un allié, rechargeable au repos court."
+        "detail": "Rempart arcanique : bouclier de PV temporaires posé sur soi-même uniquement (la projection sur un allié n'arrive qu'au niveau 6) ; se recharge par les sorts d'Abjuration lancés et au repos long."
       },
       {
         "niveau": 3,
@@ -3549,8 +3549,8 @@
       },
       {
         "niveau": 10,
-        "titre": "Résistance améliorée",
-        "detail": "Le Rempart arcanique confère aussi une résistance aux dégâts choisie."
+        "titre": "Improved Abjuration",
+        "detail": "L'intensité (PV temporaires) du Rempart arcanique se recharge aussi au repos court, en plus du repos long — ce n'est pas une résistance aux dégâts."
       },
       {
         "niveau": 11,
@@ -3669,7 +3669,7 @@
     "jalons": [
       {
         "etape": "Niv 2 (sous-classe)",
-        "note": "Illusion améliorée : les illusions durent, persistent et peuvent recevoir des attaques."
+        "note": "Illusion améliorée : le cantrip Illusion mineure peut être lancé en action bonus au lieu d'une action complète."
       }
     ],
     "progression": [
@@ -3681,7 +3681,7 @@
       {
         "niveau": 2,
         "titre": "École d'Illusion",
-        "detail": "Illusion améliorée : tes illusions mineures durent, se déplacent avec toi, et peuvent inclure des sons."
+        "detail": "Illusion améliorée : le cantrip Illusion mineure peut désormais être lancé en action bonus."
       },
       {
         "niveau": 3,
@@ -3700,8 +3700,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Illusion malléable",
-        "detail": "Peut modifier une illusion déjà lancée sans dépenser d'action."
+        "titre": "Vision des invisibles",
+        "detail": "Vision des invisibles (See Invisibility) : capacité active (recharge au repos court) qui permet de percevoir — et de révéler aux alliés — les créatures invisibles."
       },
       {
         "niveau": 7,
@@ -3720,8 +3720,8 @@
       },
       {
         "niveau": 10,
-        "titre": "Illusion très réelle",
-        "detail": "Une illusion créée peut devenir temporairement un objet physique réel."
+        "titre": "Double illusoire",
+        "detail": "Double illusoire (Illusory Self) : réaction (recharge au repos court) qui interpose un double illusoire pour faire échouer une attaque ennemie."
       },
       {
         "niveau": 11,
@@ -3836,7 +3836,7 @@
     "jalons": [
       {
         "etape": "Niv 2 (sous-classe)",
-        "note": "Chant de l'épée : bonus de CA, précision et dégâts en action bonus."
+        "note": "Chant de l'épée (action bonus) : bonus de CA et de sauvegarde de Constitution, vitesse et Acrobaties — pas de bonus de précision ou de dégâts."
       }
     ],
     "progression": [
@@ -3848,12 +3848,12 @@
       {
         "niveau": 2,
         "titre": "Chant-l'épée",
-        "detail": "Chant de l'épée activable en action bonus : +CA, avantage sur les jets de Constitution, dégâts d'arme bonifiés."
+        "detail": "Chant de l'épée activable en action bonus : +CA et bonus aux jets de sauvegarde de Constitution égal au modificateur d'Intelligence, vitesse augmentée, avantage aux jets d'Acrobaties — n'augmente pas les dégâts d'arme."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : Lame tonnante recommandée pour combiner sort et attaque."
+        "detail": "Lame tonnante (Booming Blade) est un cantrip, pas un sort de niveau 2 : elle ne consomme aucun emplacement et est disponible dès le niveau 1."
       },
       {
         "niveau": 4,
@@ -3867,8 +3867,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Chant extatique",
-        "detail": "Le Chant de l'épée peut être utilisé sans compter les emplacements dépensés contre certains effets."
+        "titre": "Attaque supplémentaire",
+        "detail": "Extra Attack : le Chant-l'épée obtient une attaque gratuite supplémentaire après une attaque à l'arme ou à mains nues — le vrai gain majeur du niveau 6."
       },
       {
         "niveau": 7,
@@ -3887,8 +3887,8 @@
       },
       {
         "niveau": 10,
-        "titre": "Chant du chant-épée renforcé",
-        "detail": "Le bonus de dégâts du Chant de l'épée augmente."
+        "titre": "Chant de défense",
+        "detail": "Song of Defence : pendant le Chant de l'épée, dépense un emplacement de sort pour réduire les dégâts subis de 5 par niveau d'emplacement dépensé."
       },
       {
         "niveau": 11,
@@ -4013,19 +4013,19 @@
     "jalons": [
       {
         "etape": "Niv 1 (domaine)",
-        "note": "Guerrier de guerre (War Caster) : maîtrise des armes de guerre et armures."
+        "note": "Prêtre de guerre : maîtrise des armes de guerre/armures, plus 3 charges (repos long) donnant une attaque d'arme en action bonus."
       }
     ],
     "progression": [
       {
         "niveau": 1,
         "titre": "Domaine de la Guerre",
-        "detail": "Maîtrise de toutes les armes de guerre et armures lourdes dès le niveau 1."
+        "detail": "Maîtrise de toutes les armes de guerre et armures lourdes, plus Prêtre de guerre : 3 charges (rechargées au repos long, jusqu'à 6 plus tard) donnant chacune une attaque d'arme en action bonus."
       },
       {
         "niveau": 2,
         "titre": "Conduit divin",
-        "detail": "Attaque de guerre : ajoute une attaque bonus après une action d'attaque, une fois par repos court."
+        "detail": "Frappe guidée : dépense une charge de Conduit divin pour ajouter +10 fixe à ton propre jet d'attaque."
       },
       {
         "niveau": 3,
@@ -4044,8 +4044,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Bonus divin",
-        "detail": "Ajoute le bonus de maîtrise aux jets d'attaque d'arme via Conduit divin."
+        "titre": "Bénédiction du dieu de guerre",
+        "detail": "Réaction (Conduit divin) qui ajoute +10 au jet d'attaque d'un allié proche — ne s'applique pas à toi-même."
       },
       {
         "niveau": 7,
@@ -4196,14 +4196,14 @@
     "jalons": [
       {
         "etape": "Niv 1 (domaine)",
-        "note": "Résistance acquise contre un type de dégâts, plus un cantrip de Druide."
+        "note": "Acolyte de la nature : un cantrip de Druide supplémentaire, plus la maîtrise d'une compétence (Dressage, Nature ou Survie)."
       }
     ],
     "progression": [
       {
         "niveau": 1,
         "titre": "Domaine de la Nature",
-        "detail": "Résistance acquise (choix selon l'ennemi rencontré) et un cantrip de Druide en plus des cantrips de Clerc."
+        "detail": "Acolyte de la nature : un cantrip de Druide en plus des cantrips de Clerc, plus la maîtrise d'une compétence (Dressage, Nature ou Survie)."
       },
       {
         "niveau": 2,
@@ -4227,8 +4227,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Robustesse acquise",
-        "detail": "Renforce la résistance élémentaire choisie au niveau 1."
+        "titre": "Atténuation des éléments",
+        "detail": "Dampen Elements : réaction qui divise par deux les dégâts subis d'un type élémentaire au choix (acide, froid, feu, foudre ou tonnerre) — c'est ici, pas au niveau 1, que la résistance élémentaire apparaît réellement."
       },
       {
         "niveau": 7,
@@ -4368,8 +4368,8 @@
     ],
     "dons": [
       "Grand Maître d'armes (niv 4)",
-      "+2 Force ou Charisme (niv 6)",
-      "Don libre (niv 8)"
+      "+2 Force ou Charisme (niv 8)",
+      "Don libre (niv 12)"
     ],
     "sortsCles": [
       "Châtiment divin",
@@ -4410,8 +4410,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Aura de protection + deuxième don",
-        "detail": "Toi et les alliés proches gagnez un bonus aux sauvegardes égal à ton modificateur de Charisme. Don : +2 Force ou Charisme."
+        "titre": "Aura de protection",
+        "detail": "Toi et les alliés proches gagnez un bonus aux sauvegardes égal à ton modificateur de Charisme (aucun don à ce niveau)."
       },
       {
         "niveau": 7,
@@ -4420,8 +4420,8 @@
       },
       {
         "niveau": 8,
-        "titre": "Troisième don",
-        "detail": "Un don libre pour peaufiner le build (précision, survie ou utilitaire)."
+        "titre": "Deuxième don",
+        "detail": "+2 Force ou Charisme."
       },
       {
         "niveau": 9,
@@ -4440,7 +4440,7 @@
       },
       {
         "niveau": 12,
-        "titre": "Quatrième don — build terminé",
+        "titre": "Troisième don — build terminé",
         "detail": "Un dernier don libre pour maximiser le build."
       }
     ],
@@ -4550,13 +4550,13 @@
     ],
     "dons": [
       "Grand Maître d'armes (niv 4)",
-      "+2 Force ou Charisme (niv 6)",
-      "Don libre (niv 8)"
+      "+2 Force ou Charisme (niv 8)",
+      "Don libre (niv 12)"
     ],
     "sortsCles": [
       "Châtiment divin",
-      "Croissance d'épines",
-      "Toile d'araignée"
+      "Rayon de lune",
+      "Croissance des plantes"
     ],
     "jalons": [
       {
@@ -4592,8 +4592,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Aura de protection + deuxième don",
-        "detail": "Toi et les alliés proches gagnez un bonus aux sauvegardes égal à ton modificateur de Charisme. Don : +2 Force ou Charisme."
+        "titre": "Aura de protection",
+        "detail": "Toi et les alliés proches gagnez un bonus aux sauvegardes égal à ton modificateur de Charisme (aucun don à ce niveau)."
       },
       {
         "niveau": 7,
@@ -4602,8 +4602,8 @@
       },
       {
         "niveau": 8,
-        "titre": "Troisième don",
-        "detail": "Un don libre pour peaufiner le build."
+        "titre": "Deuxième don",
+        "detail": "+2 Force ou Charisme."
       },
       {
         "niveau": 9,
@@ -4622,7 +4622,7 @@
       },
       {
         "niveau": 12,
-        "titre": "Quatrième don — build terminé",
+        "titre": "Troisième don — build terminé",
         "detail": "Un dernier don libre pour maximiser le build."
       }
     ],
@@ -4775,8 +4775,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Chance contrôlée",
-        "detail": "Peut dépenser un point de sorcellerie pour forcer une surtension magique favorable."
+        "titre": "Distorsion du sort",
+        "detail": "Bend Luck : dépense 2 points de sorcellerie pour donner un bonus ou malus de 1d4 à un jet de caractéristique, d'attaque ou de sauvegarde (le sien ou celui d'une cible) — sans rapport avec le déclenchement d'une surtension."
       },
       {
         "niveau": 7,
@@ -4927,14 +4927,14 @@
     "jalons": [
       {
         "etape": "Niv 1 (sous-classe)",
-        "note": "Résistance et langage des tempêtes ; vol activable après un sort d'attaque."
+        "note": "Résistance et langage des tempêtes ; vol activable après n'importe quel sort de niveau 1 ou plus."
       }
     ],
     "progression": [
       {
         "niveau": 1,
         "titre": "Sorcellerie des tempêtes",
-        "detail": "Résistance à la foudre et au tonnerre. Après avoir lancé un sort d'attaque, peut voler jusqu'à ta vitesse pour le reste du tour."
+        "detail": "Résistance à la foudre et au tonnerre. Après avoir lancé n'importe quel sort de niveau 1 ou plus (pas seulement un sort offensif), peut voler jusqu'à ta vitesse pour le reste du tour."
       },
       {
         "niveau": 2,
@@ -4958,8 +4958,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Bouclier de la tempête",
-        "detail": "En réaction, riposte de foudre/tonnerre contre un attaquant proche."
+        "titre": "Cœur de la tempête",
+        "detail": "Résistance aux dégâts de foudre et de tonnerre, plus une explosion de zone de dégâts foudre/tonnerre déclenchée à chaque sort de cet élément que tu lances."
       },
       {
         "niveau": 7,
@@ -4983,8 +4983,8 @@
       },
       {
         "niveau": 11,
-        "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "titre": "Sorts de niveau 6 + Fureur de la tempête",
+        "detail": "Premier emplacement de niveau 6 débloqué. Fureur de la tempête (Storm's Fury) : réaction qui riposte en dégâts foudre/tonnerre contre un attaquant de mêlée, et peut le repousser."
       },
       {
         "niveau": 12,
@@ -5092,11 +5092,10 @@
       "Simple à jouer"
     ],
     "faiblesses": [
-      "Moins spécialisé qu'un Berserker pur",
-      "Le choix d'esprit est définitif"
+      "Moins spécialisé qu'un Berserker pur pour du dégât pur"
     ],
     "dons": [
-      "Maître d'armes à deux mains (niv 4)",
+      "Grand Maître d'armes (niv 4)",
       "Athlète (niv 8)",
       "+2 Force (niv 12)"
     ],
@@ -5126,7 +5125,7 @@
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Maître des armes à deux mains : option -5/+10 dégâts."
+        "detail": "Grand Maître d'armes : option -5/+10 dégâts."
       },
       {
         "niveau": 5,
@@ -5281,7 +5280,7 @@
     "jalons": [
       {
         "etape": "Niv 3 (sous-classe)",
-        "note": "Savoir complémentaire : apprend 2 sorts supplémentaires de n'importe quelle classe."
+        "note": "Trois maîtrises de compétences + Mots Cinglants — Savoir complémentaire (2 sorts d'une autre classe) n'arrive qu'au niveau 6."
       }
     ],
     "progression": [
@@ -5298,7 +5297,7 @@
       {
         "niveau": 3,
         "titre": "Sous-classe Collège du Savoir",
-        "detail": "Savoir complémentaire : apprend 2 sorts supplémentaires de n'importe quelle classe (Boule de feu, Immobilisation de monstre...)."
+        "detail": "Trois maîtrises de compétences supplémentaires, plus Mots Cinglants (Cutting Words) : réaction qui réduit le jet d'attaque, de compétence ou de dégâts d'un ennemi proche."
       },
       {
         "niveau": 4,
@@ -5312,8 +5311,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Contre-charme supérieur",
-        "detail": "Peut utiliser Inspiration bardique pour contrer un effet de Peur ou de Charme sur un allié."
+        "titre": "Contre-charme supérieur + Savoir complémentaire",
+        "detail": "Peut utiliser Inspiration bardique pour contrer un effet de Peur ou de Charme sur un allié. Savoir complémentaire : apprend 2 sorts supplémentaires de n'importe quelle classe (Boule de feu, Immobilisation de monstre...)."
       },
       {
         "niveau": 7,
@@ -5613,11 +5612,11 @@
     "role": "Mobilité / Infiltration / Embuscade",
     "resume": "Moine furtif qui se téléporte entre les ombres et peut devenir temporairement invisible — excellent pour frapper vite, disparaître, et recommencer.",
     "caracDepart": {
-      "FOR": 8,
-      "DEX": 17,
+      "FOR": 16,
+      "DEX": 16,
       "CON": 14,
       "INT": 8,
-      "SAG": 15,
+      "SAG": 14,
       "CHA": 8
     },
     "forces": [
@@ -5638,7 +5637,7 @@
     "jalons": [
       {
         "etape": "Niv 3 (sous-classe)",
-        "note": "Pas de l'ombre : se téléporte d'ombre en ombre en utilisant du Ki."
+        "note": "Arts de l'ombre : sorts utilitaires (Ténèbres, Vision dans le noir, Silence, Pas sans trace) pour 2 Ki, plus Discrétion en action bonus."
       }
     ],
     "progression": [
@@ -5655,7 +5654,7 @@
       {
         "niveau": 3,
         "titre": "Sous-classe Voie de l'Ombre",
-        "detail": "Pas de l'ombre : se téléporte d'une zone d'ombre à une autre en dépensant un point de Ki."
+        "detail": "Arts de l'ombre : sorts utilitaires pour 2 Ki (Ténèbres, Vision dans le noir, Silence, Pas sans trace), plus Discrétion en action bonus."
       },
       {
         "niveau": 4,
@@ -5665,12 +5664,12 @@
       {
         "niveau": 5,
         "titre": "Attaque supplémentaire",
-        "detail": "Un second coup par action, plus Frappe étourdissante."
+        "detail": "Un second coup par action, plus Frappe étourdissante. Voile des ombres (Cloak of Shadows) : action qui rend invisible tant que tu restes dans une zone d'ombre — sans coût de Ki."
       },
       {
         "niveau": 6,
-        "titre": "Ombre et éclat",
-        "detail": "Peut se rendre invisible en dépensant deux points de Ki, tant qu'il reste immobile."
+        "titre": "Pas de l'ombre",
+        "detail": "Téléportation d'ombre en ombre en action bonus (sans coût de Ki), avec avantage sur ta prochaine attaque de mêlée."
       },
       {
         "niveau": 7,
@@ -5684,18 +5683,18 @@
       },
       {
         "niveau": 9,
-        "titre": "Sérénité",
-        "detail": "Peut se lancer Havre de paix par les points de Ki."
+        "titre": "Déplacement sans armure avancé",
+        "detail": "Vitesse de déplacement sans armure augmentée (la Tranquillité/Sérénité est exclusive à Paume ouverte)."
       },
       {
         "niveau": 10,
-        "titre": "Créature de l'ombre",
-        "detail": "Peut invoquer un double d'ombre qui distrait un ennemi."
+        "titre": "Pureté du corps",
+        "detail": "Immunité aux poisons et maladies, plus déplacement sans armure amélioré."
       },
       {
         "niveau": 11,
-        "titre": "Corps parfait",
-        "detail": "Immunité aux poisons et maladies, plus de résistance générale."
+        "titre": "Frappe de l'ombre",
+        "detail": "Shadow Strike : téléportation d'attaque (3 Ki), 3d8 dégâts psychiques bonus si tu es invisible ou caché."
       },
       {
         "niveau": 12,
@@ -5783,7 +5782,7 @@
     "nom": "Occultiste du Grand Ancien (contrôle)",
     "split": "Occultiste 12 (classe unique)",
     "role": "Contrôle mental / Dégâts à distance",
-    "resume": "Occultiste caster à distance dont le patron psychique offre, en fin de partie, une capacité de paralysie mentale redoutable contre les boss — en plus d'Explosion occulte pour le quotidien.",
+    "resume": "Occultiste caster à distance dont le patron psychique inflige la Peur sur critique et offre une défense contre les dégâts psychiques, en plus d'Explosion occulte pour le quotidien.",
     "caracDepart": {
       "FOR": 8,
       "DEX": 14,
@@ -5793,9 +5792,9 @@
       "CHA": 16
     },
     "forces": [
-      "Excellent contrôle mental en fin de partie",
+      "Bon contrôle par la Peur sur critique et défense psychique en fin de partie",
       "Bon à distance sans risque de mêlée",
-      "Bon en dialogues (télépathie)"
+      "Bon en dialogues (Charisme élevé)"
     ],
     "faiblesses": [
       "Capacité de contrôle forte arrive tard",
@@ -5814,14 +5813,14 @@
     "jalons": [
       {
         "etape": "Niv 1 (patron)",
-        "note": "Télépathie : communique par la pensée avec les créatures proches."
+        "note": "Mortel rappel : un critique réussi inflige la Peur à la cible touchée."
       }
     ],
     "progression": [
       {
         "niveau": 1,
         "titre": "Le Grand Ancien",
-        "detail": "Télépathie avec les créatures proches. Tour de départ : Explosion occulte."
+        "detail": "Mortel rappel (Mortal Reminder) : un critique réussi inflige la Peur à la cible. Tour de départ : Explosion occulte."
       },
       {
         "niveau": 2,
@@ -5845,8 +5844,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Résilience psychique",
-        "detail": "Avantage aux jets de sauvegarde d'Intelligence, de Sagesse et de Charisme contre les créatures aberrantes/monstrueuses."
+        "titre": "Bouclier entropique",
+        "detail": "Impose un désavantage à l'attaquant qui te touche en mêlée ; si son attaque rate, tu gagnes l'avantage sur ta prochaine attaque contre lui."
       },
       {
         "niveau": 7,
@@ -5865,13 +5864,13 @@
       },
       {
         "niveau": 10,
-        "titre": "Voile de la pensée",
-        "detail": "Résiste à la lecture et à la manipulation de tes pensées."
+        "titre": "Bouclier de pensée",
+        "detail": "Résistance aux dégâts psychiques, et renvoie une partie des dégâts psychiques subis à l'attaquant."
       },
       {
         "niveau": 11,
-        "titre": "Créature immortelle",
-        "detail": "En réaction, paralyse mentalement une créature proche une fois par repos long — capacité signature en fin de partie."
+        "titre": "Arcanum mystique (niveau 6)",
+        "detail": "Un sort de niveau 6 utilisable une fois par repos long — la 'Créature immortelle' de la table papier (niveau 14) n'existe pas dans BG3, plafonné au niveau 12."
       },
       {
         "niveau": 12,
@@ -6153,7 +6152,8 @@
     "dons": [
       "Grand Maître d'armes (niv 4)",
       "+2 Force (niv 6)",
-      "Doué (niv 8)"
+      "Doué (niv 8)",
+      "Don libre (niv 12)"
     ],
     "sortsCles": [
       "Contresort",
@@ -6200,7 +6200,7 @@
       {
         "niveau": 7,
         "titre": "Guerre des sorts",
-        "detail": "Peut lancer Bouclier ou Absorption d'énergie en réaction, en plus de l'action normale."
+        "detail": "Après avoir lancé un cantrip (sort mineur), tu peux effectuer une attaque d'arme en action bonus."
       },
       {
         "niveau": 8,
@@ -6215,7 +6215,7 @@
       {
         "niveau": 10,
         "titre": "Frappe occulte",
-        "detail": "Une attaque d'arme par tour peut être remplacée pour délivrer un sort de contact à distance."
+        "detail": "Toucher avec une attaque d'arme inflige un désavantage à la cible sur son prochain jet de sauvegarde contre un sort que tu lances avant la fin de ton prochain tour."
       },
       {
         "niveau": 11,
@@ -6321,7 +6321,7 @@
       "Moins de contrôle/soutien qu'Étoiles"
     ],
     "dons": [
-      "+2 Sagesse (niv 4)",
+      "Bagarreur de taverne (niv 4)",
       "Guerrier de guerre (niv 8)",
       "+2 Sagesse (niv 12)"
     ],
@@ -6355,7 +6355,7 @@
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "+2 Sagesse (18)."
+        "detail": "Bagarreur de taverne : ajoute le mod de Force aux dégâts en forme animale (via la Force de la forme sauvage, aucun inconvénient)."
       },
       {
         "niveau": 5,
@@ -6498,7 +6498,7 @@
       "Certains bonus arrivent tard"
     ],
     "dons": [
-      "Maître d'armes à deux mains (niv 4)",
+      "Grand Maître d'armes (niv 4)",
       "Athlète (niv 8)",
       "+2 Force (niv 12)"
     ],
@@ -6528,7 +6528,7 @@
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Maître des armes à deux mains : option -5/+10 dégâts."
+        "detail": "Grand Maître d'armes : option -5/+10 dégâts."
       },
       {
         "niveau": 5,
@@ -6664,7 +6664,7 @@
       "Moins optimisé que Berserker pour du dégât pur"
     ],
     "dons": [
-      "Maître d'armes à deux mains (niv 4)",
+      "Grand Maître d'armes (niv 4)",
       "Athlète (niv 8)",
       "+2 Force (niv 12)"
     ],
@@ -6694,7 +6694,7 @@
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Maître des armes à deux mains : option -5/+10 dégâts."
+        "detail": "Grand Maître d'armes : option -5/+10 dégâts."
       },
       {
         "niveau": 5,
@@ -6827,7 +6827,7 @@
     },
     "forces": [
       "Bon compromis mêlée/soutien",
-      "Partage ses attaques bonus avec les alliés proches",
+      "Donne un dé de bonus (Combat inspiré) à un allié pour une attaque, un jet, une sauvegarde, des dégâts ou la CA",
       "Reste un plein lanceur de sorts"
     ],
     "faiblesses": [
@@ -6847,7 +6847,7 @@
     "jalons": [
       {
         "etape": "Niv 3 (sous-classe)",
-        "note": "Combat inspiré : peut partager ses attaques bonus avec un allié proche."
+        "note": "Combat inspiré : donne un dé de bonus (1d6) applicable à l'attaque, un jet, une sauvegarde, les dégâts ou la CA d'un allié."
       }
     ],
     "progression": [
@@ -6864,7 +6864,7 @@
       {
         "niveau": 3,
         "titre": "Sous-classe Vaillance",
-        "detail": "Combat inspiré : maîtrise martiale et armures, et peut offrir une attaque bonus à un allié."
+        "detail": "Combat inspiré : maîtrise des armes de guerre et armures moyennes/boucliers, plus un dé de bonus (1d6) donné à un allié pour un jet d'attaque, de caractéristique, de sauvegarde, de dégâts ou de CA."
       },
       {
         "niveau": 4,
@@ -7062,8 +7062,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Détournement de mêlée",
-        "detail": "Peut forcer un ennemi à attaquer ailleurs que sa cible en utilisant l'Inspiration bardique."
+        "titre": "Manteau de Majesté",
+        "detail": "Manteau de Majesté (Commandement) : action bonus (repos long) qui ordonne à une créature proche de fuir, approcher, geler sur place ou lâcher son arme — réussite automatique contre une cible charmée. Ne consomme pas d'Inspiration bardique."
       },
       {
         "niveau": 7,
@@ -7209,14 +7209,14 @@
     "jalons": [
       {
         "etape": "Niv 1 (domaine)",
-        "note": "Vive flamme : cantrip de dégâts renforcé, plus une réaction défensive à distance."
+        "note": "Étincelle protectrice : réaction qui impose un désavantage à un attaquant proche, plus le cantrip utilitaire Lumière."
       }
     ],
     "progression": [
       {
         "niveau": 1,
         "titre": "Domaine de la Lumière",
-        "detail": "Vive flamme : ton cantrip de dégâts touche un rayon plus large. Réaction Étincelle protectrice."
+        "detail": "Étincelle protectrice (Warding Flare) : réaction qui impose un désavantage à un ennemi qui t'attaque, plus le cantrip Lumière (utilitaire, pas de dégâts)."
       },
       {
         "niveau": 2,
@@ -7250,8 +7250,8 @@
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "titre": "Deuxième don + Incantation puissante",
+        "detail": "Doué : trois compétences maîtrisées supplémentaires. Incantation puissante (Potent Spellcasting) : ajoute ton modificateur de Sagesse aux dégâts de tes cantrips de Clerc."
       },
       {
         "niveau": 9,
@@ -7392,14 +7392,14 @@
     "jalons": [
       {
         "etape": "Niv 1 (domaine)",
-        "note": "Bénédiction du fourbe : invisibilité en action bonus, une fois par repos court."
+        "note": "Bénédiction du fourbe : donne l'avantage aux jets de Discrétion (action complète), une fois par repos court — l'invisibilité réelle n'arrive qu'au niveau 6."
       }
     ],
     "progression": [
       {
         "niveau": 1,
         "titre": "Domaine de la Ruse",
-        "detail": "Bénédiction du fourbe : devient invisible en action bonus, une fois par repos court."
+        "detail": "Bénédiction du fourbe : action complète qui donne l'avantage aux jets de Discrétion à une créature, une fois par repos court — ce n'est pas une invisibilité."
       },
       {
         "niveau": 2,
@@ -7423,8 +7423,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Capacité de domaine",
-        "detail": "Renforce le contrôle et la discrétion du domaine."
+        "titre": "Manteau des ombres",
+        "detail": "Cloak of Shadows : devient invisible tant que tu restes dans une zone d'ombre/obscurité — nécessite d'être déjà dissimulé, ce n'est pas un effet libre à volonté."
       },
       {
         "niveau": 7,
@@ -7561,7 +7561,8 @@
     ],
     "faiblesses": [
       "Thème sombre, moins adapté à une run 100% bienveillante",
-      "Moins de soins qu'un Clerc classique"
+      "Moins de soins qu'un Clerc classique",
+      "Morts-vivants et constructs (fréquents en fin de jeu) résistent ou sont immunisés aux dégâts nécrotiques, cœur du build"
     ],
     "dons": [
       "+2 Sagesse (niv 4)",
@@ -7576,19 +7577,19 @@
     "jalons": [
       {
         "etape": "Niv 1 (domaine)",
-        "note": "Cantrip de dégâts renforcé (Rayon de givre) et maîtrise des armes de guerre."
+        "note": "Faucheur : les cantrips de Nécromancie à cible unique (comme Toucher de la mort) touchent une cible supplémentaire."
       }
     ],
     "progression": [
       {
         "niveau": 1,
         "titre": "Domaine de la Mort",
-        "detail": "Maîtrise des armes de guerre. Cantrip de dégâts renforcé (touche comme un lanceur de haut niveau plus tôt)."
+        "detail": "Maîtrise des armes de guerre. Faucheur (Reaper) : les cantrips de Nécromancie à cible unique, comme Toucher de la mort, touchent aussi une seconde cible à portée."
       },
       {
         "niveau": 2,
         "titre": "Conduit divin",
-        "detail": "Toucher de la moisson : réduit temporairement la résistance nécrotique d'une cible."
+        "detail": "Toucher de la mort (Touch of Death) : dépense une charge de Conduit divin pour infliger des dégâts nécrotiques bonus sur une attaque de mêlée réussie."
       },
       {
         "niveau": 3,
@@ -7753,19 +7754,19 @@
     "jalons": [
       {
         "etape": "Niv 1 (domaine)",
-        "note": "Bénédictions du savoir : deux compétences ou outils maîtrisés supplémentaires."
+        "note": "Bénédictions du savoir : double le bonus de maîtrise (Expertise) sur deux compétences choisies parmi Arcanes, Histoire, Nature ou Religion."
       }
     ],
     "progression": [
       {
         "niveau": 1,
         "titre": "Domaine du Savoir",
-        "detail": "Bénédictions du savoir : deux compétences ou outils maîtrisés supplémentaires."
+        "detail": "Bénédictions du savoir : Expertise (bonus de maîtrise doublé) sur deux compétences au choix parmi Arcanes, Histoire, Nature et Religion."
       },
       {
         "niveau": 2,
         "titre": "Conduit divin",
-        "detail": "Lecture des pensées : accède temporairement au savoir d'une créature proche."
+        "detail": "Connaissance des âges : dépense une charge de Conduit divin pour gagner la maîtrise de toutes les compétences et outils liés à une caractéristique choisie."
       },
       {
         "niveau": 3,
@@ -7784,8 +7785,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Capacité de domaine",
-        "detail": "Renforce le contrôle mental et l'utilitaire du domaine."
+        "titre": "Lecture des pensées",
+        "detail": "Lecture des pensées (Read Thoughts) et Communication avec les animaux : accède au savoir/pensées d'une créature proche — ces capacités apparaissent réellement à ce niveau, pas au niveau 2."
       },
       {
         "niveau": 7,
@@ -7926,7 +7927,7 @@
     ],
     "dons": [
       "+2 Sagesse (niv 4)",
-      "Doué (Skilled) (niv 8)",
+      "Guerrier de guerre (niv 8)",
       "+2 Sagesse (niv 12)"
     ],
     "sortsCles": [
@@ -7979,7 +7980,7 @@
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "detail": "Guerrier de guerre (War Caster) : avantage aux jets de sauvegarde de Concentration, lance des sorts à composantes gestuelles mains occupées."
       },
       {
         "niveau": 9,
@@ -8139,13 +8140,13 @@
       },
       {
         "niveau": 5,
-        "titre": "Œil des ténèbres",
-        "detail": "Peut projeter un œil invisible pour explorer à distance."
+        "titre": "Sorts de niveau 3",
+        "detail": "Boule de feu ou autre sort de zone appris."
       },
       {
         "niveau": 6,
-        "titre": "Sorts de niveau 3",
-        "detail": "Boule de feu ou autre sort de zone appris."
+        "titre": "Molosse de mauvais augure",
+        "detail": "Hound of Ill Omen : invoque un molosse spectral qui traque une cible et lui inflige le désavantage à la prochaine attaque contre elle (repos long)."
       },
       {
         "niveau": 7,
@@ -8169,8 +8170,8 @@
       },
       {
         "niveau": 11,
-        "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "titre": "Sorts de niveau 6 + Marche des ombres",
+        "detail": "Premier emplacement de niveau 6 débloqué. Marche des ombres (Shadow Walk) : téléportation en zone d'ombre, plus un Sort distant gratuit sur le prochain sort lancé."
       },
       {
         "niveau": 12,
@@ -8286,7 +8287,8 @@
     "dons": [
       "Tireur d'élite (niv 4)",
       "+2 Dextérité (niv 6)",
-      "Doué (Skilled) (niv 8)"
+      "Doué (Skilled) (niv 8)",
+      "Don libre (niv 12)"
     ],
     "sortsCles": [],
     "jalons": [
@@ -8343,8 +8345,8 @@
       },
       {
         "niveau": 10,
-        "titre": "Tir de salve à volonté",
-        "detail": "Utilisations supplémentaires du tir de salve arcanique par repos."
+        "titre": "Tir de salve renforcé",
+        "detail": "Les charges de Tir de salve arcanique passent à 10 par repos (pas illimité) et une option supplémentaire est débloquée."
       },
       {
         "niveau": 11,
@@ -8437,7 +8439,7 @@
     "nom": "Magicien Conjurateur (invocations)",
     "split": "Magicien 12 (classe unique)",
     "role": "Invocations / Mobilité / Contrôle",
-    "resume": "Spécialiste des invocations : peut se téléporter brièvement et invoque des créatures plus facilement, en plus de l'immense bibliothèque de sorts du Magicien.",
+    "resume": "Spécialiste de la conjuration : obtient au niveau 6 Transposition bénigne (téléportation courte ou échange de place avec un allié) et au niveau 10 une protection de concentration sur les sorts de Conjuration, en plus de l'immense bibliothèque de sorts du Magicien.",
     "caracDepart": {
       "FOR": 8,
       "DEX": 14,
@@ -8468,7 +8470,7 @@
     "jalons": [
       {
         "etape": "Niv 2 (sous-classe)",
-        "note": "Poigne mineure conjurée : petite téléportation gratuite après avoir lancé un sort."
+        "note": "Conjuration mineure (Création d'eau) : crée une pluie/flaque d'eau — la vraie téléportation (Transposition bénigne) n'arrive qu'au niveau 6."
       }
     ],
     "progression": [
@@ -8480,7 +8482,7 @@
       {
         "niveau": 2,
         "titre": "École de Conjuration",
-        "detail": "Poigne mineure conjurée : courte téléportation gratuite après avoir lancé un sort de conjuration."
+        "detail": "Conjuration mineure : Création d'eau — crée une pluie/flaque d'eau (repos court), sans lien avec la téléportation."
       },
       {
         "niveau": 3,
@@ -8499,8 +8501,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Invocation renforcée",
-        "detail": "Les créatures invoquées bénéficient d'un bonus de survie."
+        "titre": "Transposition bénigne",
+        "detail": "Téléportation vers un espace visible inoccupé, ou échange de position avec un allié consentant (action, recharge au repos long) — pas un bonus de survie aux invocations."
       },
       {
         "niveau": 7,
@@ -8519,8 +8521,8 @@
       },
       {
         "niveau": 10,
-        "titre": "Poigne conjurée améliorée",
-        "detail": "Distance et fréquence de la téléportation gratuite augmentées."
+        "titre": "Conjuration concentrée",
+        "detail": "Focused Conjuration : les dégâts subis ne peuvent plus interrompre la concentration sur un sort de Conjuration."
       },
       {
         "niveau": 11,
@@ -8669,8 +8671,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Présages améliorés",
-        "detail": "Récupère les dés de présage dépensés plus rapidement."
+        "titre": "Divination experte",
+        "detail": "Gagne un troisième dé de présage, et peut en récupérer via des « prophéties » à accomplir au repos court."
       },
       {
         "niveau": 7,
@@ -8689,8 +8691,8 @@
       },
       {
         "niveau": 10,
-        "titre": "Troisième dé de présage",
-        "detail": "Une réserve de présage plus généreuse."
+        "titre": "Œil de la prescience",
+        "detail": "Third Eye : capacités actives de Vision dans le noir et de Vision des invisibles (recharge au repos long) — le troisième dé de présage est en réalité acquis au niveau 6."
       },
       {
         "niveau": 11,
@@ -8808,7 +8810,7 @@
     "jalons": [
       {
         "etape": "Niv 2 (sous-classe)",
-        "note": "Enchantement instantané : peut changer discrètement la cible d'un sort de contrôle."
+        "note": "Regard hypnotique : charme et incapacite une créature proche, maintenable chaque tour."
       }
     ],
     "progression": [
@@ -8820,7 +8822,7 @@
       {
         "niveau": 2,
         "titre": "École d'Enchantement",
-        "detail": "Enchantement instantané : peut rediriger discrètement un sort de charme/domination vers une autre cible."
+        "detail": "Regard hypnotique (Hypnotic Gaze) : charme et incapacite une créature à portée de vue (action, rechargeable au repos long, maintenable chaque tour)."
       },
       {
         "niveau": 3,
@@ -8839,8 +8841,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Emprise irrésistible",
-        "detail": "Ajoute un bonus à la difficulté de sauvegarde d'un sort de charme ciblé, une fois par repos long."
+        "titre": "Charme instinctif",
+        "detail": "Instinctive Charm : réaction qui charme un ennemi t'attaquant, le forçant à cibler quelqu'un d'autre."
       },
       {
         "niveau": 7,
@@ -8859,8 +8861,8 @@
       },
       {
         "niveau": 10,
-        "titre": "Volonté imposée",
-        "detail": "Peut relancer gratuitement un sort de charme raté une fois par repos long."
+        "titre": "Enchantement dédoublé",
+        "detail": "Split Enchantment : les sorts d'Enchantement à cible unique peuvent désormais viser deux créatures."
       },
       {
         "niveau": 11,
@@ -8978,7 +8980,7 @@
     "jalons": [
       {
         "etape": "Niv 2 (sous-classe)",
-        "note": "Pierre de transmutation : petit objet magique offrant un bonus au porteur."
+        "note": "Alchimie expérimentale : test de Médecine DD 15 lors du brassage de potions pour en obtenir deux au lieu d'une — la Pierre de transmutation n'arrive qu'au niveau 6."
       }
     ],
     "progression": [
@@ -8990,7 +8992,7 @@
       {
         "niveau": 2,
         "titre": "École de Transmutation",
-        "detail": "Pierre de transmutation : crée un objet qui donne un bonus (avantage à un jet de caractéristique au choix) au porteur."
+        "detail": "Alchimie expérimentale (Experimental Alchemy) : chance de brasser deux potions/fioles au lieu d'une lors d'un test de Médecine réussi."
       },
       {
         "niveau": 3,
@@ -9009,8 +9011,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Transmutation mineure",
-        "detail": "Modifie temporairement la texture d'un matériau — utile en exploration/énigmes."
+        "titre": "Pierre du transmutateur",
+        "detail": "Transmuter's Stone : crée une pierre magique au choix (proficience de sauvegarde Constitution, Vision dans le noir, +3m de vitesse, ou résistance à un dégât élémentaire) ; une seule active à la fois."
       },
       {
         "niveau": 7,
@@ -9029,8 +9031,8 @@
       },
       {
         "niveau": 10,
-        "titre": "Maîtrise de la pierre",
-        "detail": "La Pierre de transmutation peut offrir un second bonus simultané."
+        "titre": "Change-forme",
+        "detail": "Shapechanger : action qui transforme le Magicien en geai bleu volant ; si la forme animale tombe à 0 PV, il reprend sa forme initiale avec ses PV intacts."
       },
       {
         "niveau": 11,
@@ -9119,11 +9121,11 @@
     "role": "Mêlée + dégâts élémentaires de zone",
     "resume": "Moine qui dépense son Ki pour lancer des mini-sorts élémentaires (boule de feu, vague) en plus des Rafales de coups classiques.",
     "caracDepart": {
-      "FOR": 8,
-      "DEX": 17,
+      "FOR": 16,
+      "DEX": 16,
       "CON": 14,
       "INT": 8,
-      "SAG": 15,
+      "SAG": 14,
       "CHA": 8
     },
     "forces": [
@@ -9190,8 +9192,8 @@
       },
       {
         "niveau": 9,
-        "titre": "Sérénité",
-        "detail": "Peut se lancer Havre de paix par les points de Ki."
+        "titre": "Déplacement sans armure avancé",
+        "detail": "Vitesse de déplacement sans armure augmentée, plus sélection d'une discipline élémentaire supplémentaire (la Tranquillité/Sérénité est exclusive à Paume ouverte)."
       },
       {
         "niveau": 10,
@@ -9290,11 +9292,11 @@
     "role": "Mobilité offensive / Beaucoup d'attaques",
     "resume": "Variante de Paume ouverte centrée sur l'esquive : Rafale de coups peut repousser sans provoquer d'attaque d'opportunité et améliore la mobilité pendant l'attaque.",
     "caracDepart": {
-      "FOR": 8,
-      "DEX": 17,
+      "FOR": 16,
+      "DEX": 16,
       "CON": 14,
       "INT": 8,
-      "SAG": 15,
+      "SAG": 14,
       "CHA": 8
     },
     "forces": [
@@ -9346,8 +9348,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Titubation contrôlée",
-        "detail": "Renforce l'esquive et la mobilité pendant les échanges de coups."
+        "titre": "Se relever d'un bond + Rediriger l'attaque",
+        "detail": "Se relever d'un bond : se relever de la position à terre coûte moins de déplacement. Rediriger l'attaque : réaction qui dévie une attaque de mêlée manquée vers une autre créature proche."
       },
       {
         "niveau": 7,
@@ -9361,8 +9363,8 @@
       },
       {
         "niveau": 9,
-        "titre": "Sérénité",
-        "detail": "Peut se lancer Havre de paix par les points de Ki."
+        "titre": "Dessoûlage",
+        "detail": "Sobering Realisation : dégâts psychiques bonus infligés à une cible ivre, qui la dessoûle au passage (la Tranquillité/Sérénité est exclusive à Paume ouverte)."
       },
       {
         "niveau": 10,
@@ -9491,14 +9493,14 @@
     "jalons": [
       {
         "etape": "Niv 1 (patron)",
-        "note": "Charme féerique : peut se rendre invisible pour se replier, une fois par repos court."
+        "note": "Présence féerique : effraie ou charme les créatures proches en zone, une fois par repos court."
       }
     ],
     "progression": [
       {
         "niveau": 1,
         "titre": "L'Archifée",
-        "detail": "Charme féerique : devient invisible pour un tour de repli, une fois par repos court. Tour de départ : Explosion occulte."
+        "detail": "Présence féerique (Fey Presence) : effraie ou charme les créatures proches en zone, une fois par repos court. Tour de départ : Explosion occulte."
       },
       {
         "niveau": 2,
@@ -9522,8 +9524,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Grâce féerique",
-        "detail": "Renforce le charme et la mobilité liés au patron."
+        "titre": "Fuite brumeuse",
+        "detail": "Réaction (Misty Escape) : quand tu subis des dégâts, deviens invisible et te téléportes à proximité — une fois par repos court."
       },
       {
         "niveau": 7,
@@ -9542,8 +9544,8 @@
       },
       {
         "niveau": 10,
-        "titre": "Charme renforcé",
-        "detail": "Les effets de contrôle social liés au patron gagnent en fiabilité."
+        "titre": "Défenses enchanteresses",
+        "detail": "Devient immunisé à l'état Charmé."
       },
       {
         "niveau": 11,
@@ -9658,8 +9660,8 @@
     ],
     "dons": [
       "Grand Maître d'armes (niv 4)",
-      "+2 Force ou Charisme (niv 6)",
-      "Doué (Skilled) (niv 8)"
+      "+2 Force ou Charisme (niv 8)",
+      "Doué (Skilled) (niv 12)"
     ],
     "sortsCles": [
       "Châtiment divin",
@@ -9699,8 +9701,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Aura de protection + deuxième don",
-        "detail": "Toi et les alliés proches gagnez un bonus aux sauvegardes égal à ton modificateur de Charisme. Don : +2 Force ou Charisme selon la priorité recherchée."
+        "titre": "Aura de protection",
+        "detail": "Toi et les alliés proches gagnez un bonus aux sauvegardes égal à ton modificateur de Charisme (aucun don à ce niveau)."
       },
       {
         "niveau": 7,
@@ -9709,8 +9711,8 @@
       },
       {
         "niveau": 8,
-        "titre": "Troisième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "titre": "Deuxième don",
+        "detail": "+2 Force ou Charisme selon la priorité recherchée."
       },
       {
         "niveau": 9,
@@ -9729,8 +9731,8 @@
       },
       {
         "niveau": 12,
-        "titre": "Quatrième don — build terminé",
-        "detail": "Un dernier don libre pour maximiser le build."
+        "titre": "Troisième don — build terminé",
+        "detail": "Doué : trois compétences maîtrisées supplémentaires."
       }
     ],
     "equipement": [
@@ -9834,12 +9836,13 @@
     ],
     "dons": [
       "Grand Maître d'armes (niv 4)",
-      "+2 Force ou Charisme (niv 6)",
-      "Doué (Skilled) (niv 8)"
+      "+2 Force ou Charisme (niv 8)",
+      "Doué (Skilled) (niv 12)"
     ],
     "sortsCles": [
       "Châtiment divin",
-      "Vague hurlante"
+      "Ténèbres",
+      "Réprimande infernale"
     ],
     "jalons": [
       {
@@ -9875,8 +9878,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Aura de protection + deuxième don",
-        "detail": "Toi et les alliés proches gagnez un bonus aux sauvegardes égal à ton modificateur de Charisme. Don : +2 Force ou Charisme selon la priorité recherchée."
+        "titre": "Aura de protection",
+        "detail": "Toi et les alliés proches gagnez un bonus aux sauvegardes égal à ton modificateur de Charisme (aucun don à ce niveau)."
       },
       {
         "niveau": 7,
@@ -9885,8 +9888,8 @@
       },
       {
         "niveau": 8,
-        "titre": "Troisième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "titre": "Deuxième don",
+        "detail": "+2 Force ou Charisme selon la priorité recherchée."
       },
       {
         "niveau": 9,
@@ -9905,8 +9908,8 @@
       },
       {
         "niveau": 12,
-        "titre": "Quatrième don — build terminé",
-        "detail": "Un dernier don libre pour maximiser le build."
+        "titre": "Troisième don — build terminé",
+        "detail": "Doué : trois compétences maîtrisées supplémentaires."
       }
     ],
     "equipement": [
@@ -11079,6 +11082,7 @@
     ],
     "dons": [
       "Tireur d'élite (niv 4)",
+      "Alerte (niv 6)",
       "+2 Dextérité (niv 8)",
       "+2 Dextérité (niv 12)"
     ],
@@ -11117,23 +11121,23 @@
       },
       {
         "niveau": 6,
+        "titre": "Deuxième don",
+        "detail": "Alerte : +5 à l'initiative, impossible d'être surpris."
+      },
+      {
+        "niveau": 7,
         "titre": "Athlète accompli",
         "detail": "Bonus aux tests d'Athlétisme et d'Acrobatie, se relever ne coûte presque rien."
       },
       {
-        "niveau": 7,
-        "titre": "Indomptable",
-        "detail": "Peut relancer une sauvegarde ratée une fois par repos long."
-      },
-      {
         "niveau": 8,
-        "titre": "Deuxième don",
+        "titre": "Troisième don",
         "detail": "+2 Dextérité (18)."
       },
       {
         "niveau": 9,
-        "titre": "Troisième attaque",
-        "detail": "Un troisième tir par action d'attaque."
+        "titre": "Indomptable",
+        "detail": "Peut relancer une sauvegarde ratée une fois par repos long."
       },
       {
         "niveau": 10,
@@ -11142,12 +11146,12 @@
       },
       {
         "niveau": 11,
-        "titre": "Critique supérieur",
-        "detail": "Critique élargi encore une fois, plus de dés de dégâts sur les critiques."
+        "titre": "Troisième attaque",
+        "detail": "Un troisième tir par action d'attaque."
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
+        "titre": "Quatrième don — build terminé",
         "detail": "+2 Dextérité (20) — maximum naturel."
       }
     ],
@@ -11430,8 +11434,8 @@
       "Dépend des Points de sorcellerie pour le Sort accéléré, une ressource à surveiller"
     ],
     "dons": [
-      "+2 Charisme (niv 4)",
-      "Doué (Skilled) (niv 8)",
+      "+2 Charisme (niv 6)",
+      "Doué (Skilled) (niv 11)",
       "+2 Charisme (niv 12)"
     ],
     "sortsCles": [
@@ -11467,12 +11471,12 @@
       {
         "niveau": 3,
         "titre": "Bascule vers Ensorceleur",
-        "detail": "Points de sorcellerie débloqués. Premier sort de niveau 2 appris."
+        "detail": "Premiers cantrips et sorts d'Ensorceleur niveau 1 — les Points de sorcellerie n'arrivent qu'au niveau 4 (Ensorceleur classe 2)."
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Charisme (18)."
+        "titre": "Points de sorcellerie",
+        "detail": "Font de magie (Ensorceleur classe 2) débloqué : réserve de points de sorcellerie."
       },
       {
         "niveau": 5,
@@ -11481,8 +11485,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Sorts de niveau 3",
-        "detail": "Boule de feu apprise."
+        "titre": "Premier don + Sorts de niveau 3",
+        "detail": "+2 Charisme (18). Boule de feu apprise."
       },
       {
         "niveau": 7,
@@ -11491,23 +11495,23 @@
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
-      },
-      {
-        "niveau": 9,
         "titre": "Sorts de niveau 4",
         "detail": "Nouvel emplacement : sort de zone ou de protection au choix."
       },
       {
+        "niveau": 9,
+        "titre": "Ensorceleur 7",
+        "detail": "Poursuite de la progression de sorts Ensorceleur — pas de palier notable à ce niveau précis dans cet ordre de multiclassage."
+      },
+      {
         "niveau": 10,
         "titre": "Retour à Occultiste",
-        "detail": "Troisième niveau d'Occultiste : sorts de pacte supplémentaires, approche du dip complet."
+        "detail": "Troisième niveau d'Occultiste : sorts de pacte supplémentaires. Troisième rayon d'Explosion occulte (suit le niveau de personnage, pas seulement le niveau Occultiste)."
       },
       {
         "niveau": 11,
-        "titre": "Quatrième niveau d'Occultiste",
-        "detail": "Troisième rayon d'Explosion occulte et une deuxième invocation (Vision du diable ou équivalent utilitaire)."
+        "titre": "Deuxième don + invocation",
+        "detail": "Doué (Skilled) : trois compétences maîtrisées supplémentaires. Quatrième niveau d'Occultiste : une deuxième invocation (Vision du diable ou équivalent utilitaire)."
       },
       {
         "niveau": 12,
