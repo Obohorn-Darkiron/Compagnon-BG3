@@ -13,6 +13,14 @@ interface EntreeEquipementGroupe {
   perso: Personnage
   importance: Importance
   objetId: string
+  emplacement: string
+}
+
+const ORDRE_IMPORTANCE: Record<Importance, number> = {
+  Essentiel: 4,
+  Excellent: 3,
+  Bon: 2,
+  Situationnel: 1,
 }
 
 export function GroupeApercu({ campagne }: { campagne: Campagne }) {
@@ -22,22 +30,35 @@ export function GroupeApercu({ campagne }: { campagne: Campagne }) {
 
   if (equipes.length < 2) return null
 
-  const parObjet = new Map<string, { perso: Personnage; importance: Importance }[]>()
+  const buildParPersoId = new Map(equipes.map(({ perso, build }) => [perso.id, build]))
+
+  const parObjet = new Map<string, EntreeEquipementGroupe[]>()
   for (const { perso, build } of equipes) {
     for (const e of build.equipement) {
       const liste = parObjet.get(e.objetId) ?? []
-      liste.push({ perso, importance: e.importance })
+      liste.push({ perso, importance: e.importance, objetId: e.objetId, emplacement: e.emplacement })
       parObjet.set(e.objetId, liste)
     }
   }
   const conflits = [...parObjet.entries()].filter(([, liste]) => liste.length > 1)
+
+  /** Pour un personnage en conflit sur un objet, cherche dans SON PROPRE build un autre choix
+   * pour le même emplacement — permet de proposer une alternative plutôt que de se disputer l'objet. */
+  function alternativePour(perso: Personnage, emplacement: string, objetIdExclu: string) {
+    const build = buildParPersoId.get(perso.id)
+    if (!build) return null
+    const candidats = build.equipement
+      .filter((e) => e.emplacement === emplacement && e.objetId !== objetIdExclu)
+      .sort((a, b) => ORDRE_IMPORTANCE[b.importance] - ORDRE_IMPORTANCE[a.importance])
+    return candidats[0] ?? null
+  }
 
   const parActe = new Map<number, Map<string, EntreeEquipementGroupe[]>>()
   for (const { perso, build } of equipes) {
     for (const e of build.equipement) {
       const parObjetDeLActe = parActe.get(e.acte) ?? new Map<string, EntreeEquipementGroupe[]>()
       const liste = parObjetDeLActe.get(e.objetId) ?? []
-      liste.push({ perso, importance: e.importance, objetId: e.objetId })
+      liste.push({ perso, importance: e.importance, objetId: e.objetId, emplacement: e.emplacement })
       parObjetDeLActe.set(e.objetId, liste)
       parActe.set(e.acte, parObjetDeLActe)
     }
@@ -152,13 +173,29 @@ export function GroupeApercu({ campagne }: { campagne: Campagne }) {
                   >
                     {objet ? nomAffiche(objet) : objetId}
                   </Link>
-                  <div className="mt-1.5 flex flex-col gap-1">
-                    {liste.map(({ perso, importance }) => (
-                      <div key={perso.id} className="flex items-center justify-between gap-2">
-                        <span className="text-xs text-ink-muted">{perso.nom}</span>
-                        <ImportanceBadge importance={importance} />
-                      </div>
-                    ))}
+                  <div className="mt-1.5 flex flex-col gap-2">
+                    {liste.map(({ perso, importance, emplacement }) => {
+                      const alternative = alternativePour(perso, emplacement, objetId)
+                      const objetAlternatif = alternative ? getObjet(alternative.objetId) : null
+                      return (
+                        <div key={perso.id} className="flex flex-col gap-1">
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="text-xs text-ink-muted">{perso.nom}</span>
+                            <ImportanceBadge importance={importance} />
+                          </div>
+                          {objetAlternatif && (
+                            <Link
+                              to={`/explorer/${alternative!.objetId}`}
+                              state={{ from: '/equipe' }}
+                              className="text-[11px] text-glow underline underline-offset-2"
+                            >
+                              Alternative pour {perso.nom} : {nomAffiche(objetAlternatif)} (
+                              {alternative!.importance})
+                            </Link>
+                          )}
+                        </div>
+                      )
+                    })}
                   </div>
                 </div>
               )
