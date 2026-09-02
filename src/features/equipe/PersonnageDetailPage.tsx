@@ -13,6 +13,14 @@ import { BonusPermanentsSection } from './BonusPermanentsSection'
 import { PlanOptimisationSection } from './PlanOptimisationSection'
 import { SelecteurBuild } from './SelecteurBuild'
 import { bonusParStatObtenus, noteBonusPermanent } from './bonusPermanentsUtils'
+import type { EquipementRecommande, Importance } from '../../data/types'
+
+const ORDRE_IMPORTANCE: Record<Importance, number> = {
+  Essentiel: 4,
+  Excellent: 3,
+  Bon: 2,
+  Situationnel: 1,
+}
 
 const stylesJeu: { valeur: StyleJeu; label: string }[] = [
   { valeur: null, label: 'Peu importe' },
@@ -37,6 +45,19 @@ export function PersonnageDetailPage() {
   const raceInfo = races.find((r) => r.nom === personnage.race)
   const estLectureSeule =
     personnage.proprietaireId !== null && personnage.proprietaireId !== lireJoueurId()
+
+  const equipementParActe = new Map<number, EquipementRecommande[]>()
+  if (build) {
+    const tri = [...build.equipement].sort(
+      (a, b) => ORDRE_IMPORTANCE[b.importance] - ORDRE_IMPORTANCE[a.importance],
+    )
+    for (const e of tri) {
+      const liste = equipementParActe.get(e.acte) ?? []
+      liste.push(e)
+      equipementParActe.set(e.acte, liste)
+    }
+  }
+  const actesEquipement = [...equipementParActe.keys()].sort((a, b) => a - b)
 
   return (
     <div>
@@ -217,48 +238,57 @@ export function PersonnageDetailPage() {
 
       {build && (
         <Section title="Équipement à obtenir">
-          <div className="flex flex-col gap-2">
-            {build.equipement.map((e, i) => {
-              const objet = getObjet(e.objetId)
-              const obtenu = personnage.objetsObtenus.includes(e.objetId)
-              return (
-                <div
-                  key={`${e.objetId}-${i}`}
-                  className="flex items-center gap-3 rounded-lg border border-border bg-surface px-3 py-2.5"
-                >
-                  <button
-                    type="button"
-                    onClick={() => saveStore.basculerObjetObtenu(campagneId, personnage.id, e.objetId)}
-                    aria-label={obtenu ? 'Marquer comme non obtenu' : 'Marquer comme obtenu'}
-                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border ${
-                      obtenu ? 'border-bon bg-bon/20 text-bon' : 'border-border text-ink-muted'
-                    }`}
-                  >
-                    {obtenu && <Check className="h-4 w-4" />}
-                  </button>
-                  <Link
-                    to={`/explorer/${e.objetId}`}
-                    state={{ from: `/equipe/${personnage.id}` }}
-                    className="min-w-0 flex-1"
-                  >
-                    <p
-                      className={`truncate text-sm font-medium ${obtenu ? 'text-ink-muted line-through' : 'text-ink'}`}
-                    >
-                      {objet ? nomAffiche(objet) : e.objetId}
-                    </p>
-                    <p className="text-xs text-ink-muted">
-                      {e.emplacement} · Acte {e.acte}
-                    </p>
-                  </Link>
-                  <div className="flex shrink-0 flex-col items-end gap-1">
-                    <ImportanceBadge importance={e.importance} />
-                    {personnage.styleJeu === 'bienveillant' && objet && (
-                      <AlignementBadge alignement={objet.alignement} />
-                    )}
-                  </div>
+          <div className="flex flex-col gap-4">
+            {actesEquipement.map((acte) => (
+              <div key={acte}>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-ink-muted">
+                  Acte {acte}
+                </p>
+                <div className="flex flex-col gap-2">
+                  {equipementParActe.get(acte)!.map((e, i) => {
+                    const objet = getObjet(e.objetId)
+                    const obtenu = personnage.objetsObtenus.includes(e.objetId)
+                    return (
+                      <div
+                        key={`${e.objetId}-${i}`}
+                        className="flex items-center gap-3 rounded-lg border border-border bg-surface px-3 py-2.5"
+                      >
+                        <button
+                          type="button"
+                          onClick={() =>
+                            saveStore.basculerObjetObtenu(campagneId, personnage.id, e.objetId)
+                          }
+                          aria-label={obtenu ? 'Marquer comme non obtenu' : 'Marquer comme obtenu'}
+                          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border ${
+                            obtenu ? 'border-bon bg-bon/20 text-bon' : 'border-border text-ink-muted'
+                          }`}
+                        >
+                          {obtenu && <Check className="h-4 w-4" />}
+                        </button>
+                        <Link
+                          to={`/explorer/${e.objetId}`}
+                          state={{ from: `/equipe/${personnage.id}` }}
+                          className="min-w-0 flex-1"
+                        >
+                          <p
+                            className={`truncate text-sm font-medium ${obtenu ? 'text-ink-muted line-through' : 'text-ink'}`}
+                          >
+                            {objet ? nomAffiche(objet) : e.objetId}
+                          </p>
+                          <p className="text-xs text-ink-muted">{e.emplacement}</p>
+                        </Link>
+                        <div className="flex shrink-0 flex-col items-end gap-1">
+                          <ImportanceBadge importance={e.importance} />
+                          {personnage.styleJeu === 'bienveillant' && objet && (
+                            <AlignementBadge alignement={objet.alignement} />
+                          )}
+                        </div>
+                      </div>
+                    )
+                  })}
                 </div>
-              )
-            })}
+              </div>
+            ))}
           </div>
         </Section>
       )}
