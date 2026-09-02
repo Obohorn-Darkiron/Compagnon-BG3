@@ -141,6 +141,42 @@
         "objetId": "gloves-belligerent-skies",
         "importance": "Excellent",
         "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "the-blast-pendant",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "the-sparkswall",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "jolty-vest",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-spiteful-thunder",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "hat-of-storm-scions-power",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "despair-of-athkatla",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -282,12 +318,6 @@
         "acte": 1
       },
       {
-        "emplacement": "Mains",
-        "objetId": "bracers-of-defence",
-        "importance": "Bon",
-        "acte": 1
-      },
-      {
         "emplacement": "Torse",
         "objetId": "potent-robe",
         "importance": "Essentiel",
@@ -303,6 +333,42 @@
         "emplacement": "Bottes",
         "objetId": "helldusk-boots",
         "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-cinder-and-sizzle",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "circlet-of-blasting",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "incandescent-staff",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "helldusk-armour",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-elemental-torment",
+        "importance": "Situationnel",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "gold-wyrmling-staff",
+        "importance": "Bon",
         "acte": 3
       }
     ],
@@ -456,6 +522,42 @@
         "objetId": "wondrous-gloves",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "hand-crossbow-plus1",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "gontr-mael",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-protection",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "wapiras-crown",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-the-harpers",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -603,6 +705,30 @@
         "objetId": "boots-of-speed",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "killers-sweetheart",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "least-expected",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "gontr-mael",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-archery",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -745,6 +871,42 @@
         "objetId": "boots-of-uninhibited-kushigo",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-misty-step",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "corvid-token",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-displacement",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-protection",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "killers-sweetheart",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "risky-ring",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -894,6 +1056,42 @@
       {
         "emplacement": "Arme principale",
         "objetId": "foebreaker",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "defender-greataxe",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "sethan",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "adamantine-splint-armour",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "helldusk-armour",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-greater-health",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-persistence",
         "importance": "Bon",
         "acte": 3
       }
@@ -1064,6 +1262,42 @@
         "objetId": "legacy-of-the-masters",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "everburn-blade",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "fey-semblance-amulet",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "disintegrating-night-walkers",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "strange-conduit-ring",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "defender-greataxe",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-displacement",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -1217,6 +1451,42 @@
         "objetId": "blackguards-sword",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "adamantine-splint-armour",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "blackguards-plate",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-displacement",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "legacy-of-the-masters",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "fey-semblance-amulet",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -1368,6 +1638,36 @@
         "objetId": "bonespike-garb",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "very-heavy-greataxe",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-greater-health",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "crushers-ring",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-persistence",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "the-mighty-cloth",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -1519,6 +1819,42 @@
         "objetId": "gloves-belligerent-skies",
         "importance": "Excellent",
         "acte": 1
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "the-real-sparky-sparkswall",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "the-sparkswall",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "the-blast-pendant",
+        "importance": "Situationnel",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "hat-of-storm-scions-power",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-spiteful-thunder",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "thunderskin-cloak",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -1672,6 +2008,42 @@
         "objetId": "reviving-hands",
         "importance": "Bon",
         "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "spidersilk-armour",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "moondrop-pendant",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "unflinching-protector-amulet",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "chancers-carcanet",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "burnished-ring",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "cindersnap-gloves",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -1812,6 +2184,36 @@
         "objetId": "gloves-of-dexterity",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "armour-of-agility",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "hollows-staff",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "strange-conduit-ring",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-silvanus",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "springstep-boots",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -1945,6 +2347,42 @@
       {
         "emplacement": "Arme",
         "objetId": "spellsparkler",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "incandescent-staff",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "spellmight-gloves",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "robe-of-exquisite-focus",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-arcane-bolstering",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "hat-of-the-sharp-caster",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "pearl-of-power-amulet",
         "importance": "Bon",
         "acte": 1
       }
@@ -2093,6 +2531,42 @@
         "objetId": "bloodthirst",
         "importance": "Essentiel",
         "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-dexterity",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-speed",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "sword-of-clutching-umbra",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Main gauche",
+        "objetId": "gleamdance-dagger",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "covert-cowl",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -2238,6 +2712,42 @@
       {
         "emplacement": "Tête",
         "objetId": "helmet-of-grit",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "killers-sweetheart",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "hellfire-greataxe",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "very-heavy-greataxe",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "adamantine-scale-mail",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-greater-health",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-persistence",
         "importance": "Bon",
         "acte": 3
       }
@@ -2386,10 +2896,40 @@
         "acte": 2
       },
       {
-        "emplacement": "Mains",
-        "objetId": "bracers-of-defence",
+        "emplacement": "Tête",
+        "objetId": "circlet-of-blasting",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "pearl-of-power-amulet",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "shifting-corpus-ring",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "quickspell-gloves",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "hood-of-the-weave",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "spell-savant-amulet",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -2530,6 +3070,42 @@
         "objetId": "ring-of-salving",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-aid-and-comfort",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "slippery-chain-shirt",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "periapt-of-wound-closure",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "hellriders-pride",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "true-loves-embrace",
+        "importance": "Situationnel",
+        "acte": 2
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "reviving-hands",
+        "importance": "Essentiel",
+        "acte": 3
       }
     ],
     "roles": [
@@ -2666,6 +3242,36 @@
         "objetId": "boots-of-speed",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "sussur-dagger",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "killers-sweetheart",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "covert-cowl",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "spidersilk-armour",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "rhapsody",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -2817,6 +3423,36 @@
         "objetId": "hood-of-the-weave",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "hollows-staff",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "woe",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "circlet-of-mental-anguish",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-mental-inhibition",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-the-weave",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -2956,6 +3592,36 @@
         "emplacement": "Torse",
         "objetId": "robe-of-the-weave",
         "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "helldusk-helmet",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-protection",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-the-harpers",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "unflinching-protector-amulet",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "robe-of-supreme-defences",
+        "importance": "Bon",
         "acte": 3
       }
     ],
@@ -3098,6 +3764,30 @@
         "objetId": "cloak-of-displacement",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "shelter-of-athkatla",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "band-of-the-mystic-scoundrel",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "covert-cowl",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-misty-step",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -3247,6 +3937,36 @@
         "objetId": "duellists-prerogative",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "diadem-arcane-synergy",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "strange-conduit-ring",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "vivacious-cloak",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "robe-of-exquisite-focus",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "thorn-blade",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -3392,6 +4112,42 @@
       {
         "emplacement": "Torse",
         "objetId": "helldusk-armour",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "grymskull-helm",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-protection",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "helm-of-balduran",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-persistence",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "mantle-of-the-holy-warrior",
         "importance": "Excellent",
         "acte": 3
       }
@@ -3541,6 +4297,42 @@
         "objetId": "broodmothers-revenge",
         "importance": "Situationnel",
         "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "oak-fathers-embrace",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "key-of-the-ancients",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-silvanus",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "natures-snare",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "barkskin-armour",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "armour-of-moonbasking",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -3688,6 +4480,42 @@
         "objetId": "helldusk-armour",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "glowing-shield",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "fistbreaker-helm",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "birthright",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-devout",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "barkskin-armour",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -3834,6 +4662,42 @@
         "objetId": "helm-of-balduran",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "blood-of-lathander",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-protection",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "protective-plate",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "armour-of-agility",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "adamantine-shield",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "fey-semblance-amulet",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -3981,6 +4845,42 @@
         "objetId": "necklace-elemental-augmentation",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "melfs-first-staff",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "pearl-of-power-amulet",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "robe-of-exquisite-focus",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "circlet-of-mental-anguish",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "spell-savant-amulet",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "staff-of-the-emperor",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -4128,6 +5028,42 @@
         "objetId": "the-sparkswall",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "the-blast-pendant",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-belligerent-skies",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-stormy-clamour",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-spiteful-thunder",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "hat-of-storm-scions-power",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "woe",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -4269,6 +5205,36 @@
         "objetId": "ring-of-regeneration",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "everburn-blade",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-greater-health",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "disintegrating-night-walkers",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "helmet-of-grit",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "the-mighty-cloth",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -4416,6 +5382,42 @@
         "objetId": "boots-of-brilliance",
         "importance": "Excellent",
         "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-protection",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-geniality",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "periapt-of-wound-closure",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Objet clé",
+        "objetId": "lihalas-lute",
+        "importance": "Situationnel",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "jannaths-hat",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -4564,6 +5566,36 @@
         "objetId": "gloves-hill-giant",
         "importance": "Situationnel",
         "acte": 3
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "gontr-mael",
+        "importance": "Essentiel",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-speed",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "darkfire-shortbow",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "adamantine-scale-mail",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "caustic-band",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -4701,6 +5733,42 @@
         "objetId": "cloak-of-displacement",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-shadows",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "shadow-cloaked-ring",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "covert-cowl",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "moondrop-pendant",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "helldusk-boots",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-thievery",
+        "importance": "Situationnel",
+        "acte": 1
       }
     ],
     "roles": [
@@ -4843,10 +5911,40 @@
         "acte": 2
       },
       {
-        "emplacement": "Mains",
-        "objetId": "bracers-of-defence",
+        "emplacement": "Tête",
+        "objetId": "circlet-of-blasting",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "pearl-of-power-amulet",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "circlet-of-mental-anguish",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-the-weave",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "quickspell-gloves",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "hood-of-the-weave",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -4989,6 +6087,36 @@
         "objetId": "cloak-of-protection",
         "importance": "Bon",
         "acte": 2
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "sussur-dagger",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "hracknir-bracers",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "quickspell-gloves",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-striding",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-free-action",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -5108,12 +6236,6 @@
         "acte": 1
       },
       {
-        "emplacement": "Mains",
-        "objetId": "bracers-of-defence",
-        "importance": "Bon",
-        "acte": 1
-      },
-      {
         "emplacement": "Amulette",
         "objetId": "amulet-of-the-harpers",
         "importance": "Bon",
@@ -5134,6 +6256,36 @@
       {
         "emplacement": "Arme principale",
         "objetId": "foebreaker",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "spellcrux-amulet",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gauntlets-of-surging-accuracy",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "warped-headband-of-intellect",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "adamantine-splint-armour",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "sword-of-chaos",
         "importance": "Bon",
         "acte": 3
       }
@@ -5282,6 +6434,36 @@
         "objetId": "disintegrating-night-walkers",
         "importance": "Situationnel",
         "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "oak-fathers-embrace",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-regeneration",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "periapt-of-wound-closure",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-striding",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-protection",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -5418,6 +6600,36 @@
         "emplacement": "Gants",
         "objetId": "gloves-hill-giant",
         "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "returning-pike",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "lightning-jabber",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "dwarven-thrower",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "bonespike-garb",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-persistence",
+        "importance": "Bon",
         "acte": 3
       }
     ],
@@ -5560,6 +6772,36 @@
         "emplacement": "Tête",
         "objetId": "helmet-of-grit",
         "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "balduran-giantslayer",
+        "importance": "Essentiel",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "sethan",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-growling-underdog",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "crushers-ring",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-persistence",
+        "importance": "Bon",
         "acte": 3
       }
     ],
@@ -5706,6 +6948,42 @@
         "objetId": "armour-of-agility",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "wapiras-crown",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-protection",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-the-harpers",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "gontr-mael",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "breastplate-plus1",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -5853,6 +7131,36 @@
         "emplacement": "Bottes",
         "objetId": "boots-of-brilliance",
         "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-protection",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "wondrous-gloves",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "periapt-of-wound-closure",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "true-loves-embrace",
+        "importance": "Excellent",
         "acte": 2
       }
     ],
@@ -6002,6 +7310,42 @@
         "objetId": "callous-glow-ring",
         "importance": "Bon",
         "acte": 2
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "incandescent-staff",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "shield-of-scorching-reprisal",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "obsidian-laced-robe",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "robe-of-the-weave",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "hood-of-the-weave",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-the-weave",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -6149,6 +7493,42 @@
         "objetId": "covert-cowl",
         "importance": "Excellent",
         "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "fetish-callarduran-smoothhands",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-thievery",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-shadows",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-cunning-brume",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "gloomstrand-shield",
+        "importance": "Situationnel",
+        "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "shade-slayer-cloak",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -6291,6 +7671,42 @@
         "objetId": "dark-justiciar-gauntlets",
         "importance": "Excellent",
         "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "adamantine-scale-mail",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "tarnished-charm",
+        "importance": "Situationnel",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "myrkulite-scourge",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "sword-of-life-stealing",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-apparent-death",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "shield-of-the-undevout",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -6438,6 +7854,42 @@
         "objetId": "ring-of-protection",
         "importance": "Situationnel",
         "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "warped-headband-of-intellect",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "explorers-ring",
+        "importance": "Situationnel",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-mental-inhibition",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "surgeons-subjugation-amulet",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "robe-of-exquisite-focus",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "mask-of-soul-perception",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -6586,6 +8038,36 @@
         "objetId": "robe-of-the-weave",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "incandescent-staff",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "spellcrux-amulet",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-the-weave",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "quickspell-gloves",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-persistence",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -6732,6 +8214,42 @@
         "objetId": "dark-justiciar-mail",
         "importance": "Situationnel",
         "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-cunning-brume",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "shadeclinger-armour",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "eversight-ring",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "shade-slayer-cloak",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "helldusk-helmet",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "robe-of-the-weave",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -6875,6 +8393,36 @@
         "objetId": "gontr-mael",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "least-expected",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "hellrider-longbow",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "armour-of-agility",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-archery",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "circlet-of-hunting",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -7015,6 +8563,36 @@
         "objetId": "quickspell-gloves",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "strange-tendril-amulet",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "djinni-ring",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-free-action",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-the-weave",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "warped-headband-of-intellect",
+        "importance": "Excellent",
+        "acte": 1
       }
     ],
     "roles": [
@@ -7155,6 +8733,36 @@
         "objetId": "robe-of-the-weave",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "chancers-carcanet",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "hat-of-the-sharp-caster",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "mask-of-soul-perception",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "burnished-ring",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "incandescent-staff",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -7295,6 +8903,36 @@
         "objetId": "spellcrux-amulet",
         "importance": "Excellent",
         "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "nymph-cloak",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "band-of-the-mystic-scoundrel",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-mental-inhibition",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "circlet-of-mental-anguish",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "stillmaker",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -7435,6 +9073,36 @@
         "objetId": "quickspell-gloves",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "bigboys-chew-toy",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "tressym-collar",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-blink",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "warped-headband-of-intellect",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "the-mighty-cloth",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -7575,6 +9243,36 @@
       {
         "emplacement": "Tête",
         "objetId": "haste-helm",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-elemental-infusion",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "risky-ring",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-the-weave",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "diadem-arcane-synergy",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "fey-semblance-amulet",
         "importance": "Bon",
         "acte": 1
       }
@@ -7718,6 +9416,36 @@
         "objetId": "cloak-of-displacement",
         "importance": "Bon",
         "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "crushers-ring",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "spurred-band",
+        "importance": "Situationnel",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "haste-helm",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-protection",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-uninhibited-kushigo",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -7860,10 +9588,40 @@
         "acte": 3
       },
       {
-        "emplacement": "Mains",
-        "objetId": "bracers-of-defence",
+        "emplacement": "Tête",
+        "objetId": "circlet-of-blasting",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "pearl-of-power-amulet",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-geniality",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "nymph-cloak",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "quickspell-gloves",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "hood-of-the-weave",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -8011,6 +9769,36 @@
         "objetId": "boots-of-persistence",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "vivacious-cloak",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "reapers-embrace",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "shield-of-the-undevout",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gauntlets-of-the-warmaster",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -8157,6 +9945,42 @@
         "objetId": "sarevoks-horned-helmet",
         "importance": "Bon",
         "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-bhaal",
+        "importance": "Essentiel",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "bhaalist-gloves",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "craterflesh-gloves",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-protection",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "killers-sweetheart",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "disintegrating-night-walkers",
+        "importance": "Situationnel",
+        "acte": 1
       }
     ],
     "roles": [
@@ -8300,6 +10124,36 @@
       {
         "emplacement": "Anneau",
         "objetId": "whispering-promise",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "gontr-mael",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-speed",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-archery",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-the-harpers",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "spidersilk-armour",
         "importance": "Bon",
         "acte": 1
       }
@@ -8447,6 +10301,30 @@
         "objetId": "resonance-stone",
         "importance": "Situationnel",
         "acte": 2
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-dexterity",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "darkfire-shortbow",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "spidersilk-armour",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "circlet-of-hunting",
+        "importance": "Excellent",
+        "acte": 2
       }
     ],
     "roles": [
@@ -8584,6 +10462,36 @@
         "objetId": "cloak-of-protection",
         "importance": "Bon",
         "acte": 2
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "rupturing-blade",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "sword-of-life-stealing",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "duellists-prerogative",
+        "importance": "Essentiel",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-the-duellist",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "springstep-boots",
+        "importance": "Bon",
+        "acte": 1
       }
     ],
     "roles": [
@@ -8747,6 +10655,42 @@
         "emplacement": "Objet clé",
         "objetId": "resonance-stone",
         "importance": "Situationnel",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "armour-of-agility",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-the-automaton",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "fey-semblance-amulet",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "disintegrating-night-walkers",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "cloak-of-displacement",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "shadow-blade-ring",
+        "importance": "Excellent",
         "acte": 2
       }
     ],
@@ -8915,6 +10859,30 @@
         "objetId": "disintegrating-night-walkers",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-the-automaton",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "adamantine-scale-mail",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "shadow-blade-ring",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "spellcrux-amulet",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -9046,6 +11014,36 @@
         "objetId": "deathstalker-mantle",
         "importance": "Situationnel",
         "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-archery",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "least-expected",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "killers-sweetheart",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "gontr-mael",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "covert-cowl",
+        "importance": "Bon",
+        "acte": 2
       }
     ],
     "roles": [
@@ -9188,6 +11186,36 @@
         "emplacement": "Arme à distance",
         "objetId": "gontr-mael",
         "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "least-expected",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "killers-sweetheart",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-archery",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "armour-of-agility",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "blightbringer",
+        "importance": "Situationnel",
         "acte": 3
       }
     ],
@@ -9332,6 +11360,42 @@
         "objetId": "killers-sweetheart",
         "importance": "Excellent",
         "acte": 2
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "adamantine-shield",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "helmet-of-smiting",
+        "importance": "Excellent",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "rippling-force-mail",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "blackguards-plate",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Cape",
+        "objetId": "mantle-of-the-holy-warrior",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "legacy-of-the-masters",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -9485,6 +11549,42 @@
       {
         "emplacement": "Gants",
         "objetId": "spellmight-gloves",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-cinder-and-sizzle",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "circlet-of-blasting",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "hat-fire-acuity",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "incandescent-staff",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "fireheart-amulet",
+        "importance": "Bon",
+        "acte": 2
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "helldusk-gloves",
         "importance": "Excellent",
         "acte": 3
       }
