@@ -84,6 +84,13 @@ export interface RaceInfo {
   sousRaces?: SousRaceInfo[]
 }
 
+export interface JalonSombre {
+  id: string
+  acte: number
+  /** Décrit seulement le lieu/moment (jamais le contenu ni l'issue) — pense "marqueur", pas "spoil". */
+  label: string
+}
+
 export type Alignement = 'neutre' | 'sombre' | 'restreint'
 
 export interface Objet {

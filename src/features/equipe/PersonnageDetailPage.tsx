@@ -5,7 +5,7 @@ import { ImportanceBadge } from '../../components/ImportanceBadge'
 import { AlignementBadge } from '../../components/AlignementBadge'
 import { CaracTable } from '../../components/CaracTable'
 import { Check } from '../../components/icons'
-import { builds, etapeAuNiveau, getObjet, nomAffiche, races } from '../../data'
+import { builds, etapeAuNiveau, getObjet, jalonsSombres, nomAffiche, races } from '../../data'
 import { saveStore, useSaveData, type StyleJeu } from '../../storage/useSaveData'
 import { lireJoueurId } from '../../storage/identite'
 import { NiveauStepper } from './NiveauStepper'
@@ -13,7 +13,7 @@ import { BonusPermanentsSection } from './BonusPermanentsSection'
 import { PlanOptimisationSection } from './PlanOptimisationSection'
 import { SelecteurBuild } from './SelecteurBuild'
 import { bonusParStatObtenus, noteBonusPermanent } from './bonusPermanentsUtils'
-import type { EquipementRecommande, Importance } from '../../data/types'
+import type { EquipementRecommande, Importance, JalonSombre } from '../../data/types'
 
 const ORDRE_IMPORTANCE: Record<Importance, number> = {
   Essentiel: 4,
@@ -59,6 +59,14 @@ export function PersonnageDetailPage() {
   }
   const actesEquipement = [...equipementParActe.keys()].sort((a, b) => a - b)
 
+  const jalonsParActe = new Map<number, JalonSombre[]>()
+  for (const j of jalonsSombres) {
+    const liste = jalonsParActe.get(j.acte) ?? []
+    liste.push(j)
+    jalonsParActe.set(j.acte, liste)
+  }
+  const actesJalons = [...jalonsParActe.keys()].sort((a, b) => a - b)
+
   return (
     <div>
       <PageHeader
@@ -93,6 +101,68 @@ export function PersonnageDetailPage() {
           ))}
         </div>
       </Section>
+
+      <Section title="Dark Urge">
+        <button
+          type="button"
+          onClick={() =>
+            saveStore.majPersonnage(campagneId, personnage.id, {
+              estDarkUrge: !personnage.estDarkUrge,
+            })
+          }
+          className={`w-full rounded-lg border px-3 py-2.5 text-left text-sm font-medium transition-colors ${
+            personnage.estDarkUrge
+              ? 'border-essentiel/60 bg-essentiel/10 text-essentiel'
+              : 'border-border text-ink-muted'
+          }`}
+        >
+          {personnage.estDarkUrge
+            ? 'Ce personnage est le Dark Urge'
+            : 'Marquer ce personnage comme le Dark Urge'}
+        </button>
+      </Section>
+
+      {personnage.estDarkUrge && (
+        <Section title="Dark Urge — Moments à ne pas manquer">
+          <p className="mb-3 text-xs text-ink-muted">
+            Juste des repères de lieu et de moment — jamais ce qui s'y passe. Coche au fur et à
+            mesure, et reste attentif à ce moment précis quand tu y arrives en jeu.
+          </p>
+          <div className="flex flex-col gap-4">
+            {actesJalons.map((acte) => (
+              <div key={acte}>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-ink-muted">
+                  Acte {acte}
+                </p>
+                <div className="flex flex-col gap-2">
+                  {jalonsParActe.get(acte)!.map((j) => {
+                    const coche = personnage.jalonsSombresCoches.includes(j.id)
+                    return (
+                      <button
+                        key={j.id}
+                        type="button"
+                        onClick={() => saveStore.basculerJalonSombre(campagneId, personnage.id, j.id)}
+                        className="flex items-center gap-3 rounded-lg border border-border bg-surface px-3 py-2.5 text-left"
+                      >
+                        <span
+                          className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border ${
+                            coche ? 'border-bon bg-bon/20 text-bon' : 'border-border text-ink-muted'
+                          }`}
+                        >
+                          {coche && <Check className="h-3.5 w-3.5" />}
+                        </span>
+                        <span className={`text-sm ${coche ? 'text-ink-muted line-through' : 'text-ink'}`}>
+                          {j.label}
+                        </span>
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
 
       <Section title="Race">
         {personnage.compagnonNom ? (

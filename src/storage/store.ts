@@ -17,6 +17,8 @@ function normaliserPersonnage(p: Partial<Personnage>): Personnage {
     choixBonusPermanents: p.choixBonusPermanents ?? {},
     compagnonNom: p.compagnonNom ?? null,
     proprietaireId: p.proprietaireId ?? null,
+    estDarkUrge: p.estDarkUrge ?? false,
+    jalonsSombresCoches: p.jalonsSombresCoches ?? [],
   }
 }
 
@@ -143,6 +145,8 @@ export const saveStore = {
       choixBonusPermanents: {},
       compagnonNom: infos.compagnonNom ?? null,
       proprietaireId: campagneCible?.sessionCode ? lireJoueurId() : null,
+      estDarkUrge: false,
+      jalonsSombresCoches: [],
     }
     majEtat({
       ...etat,
@@ -175,7 +179,15 @@ export const saveStore = {
     patch: Partial<
       Pick<
         Personnage,
-        'nom' | 'classe' | 'sousClasse' | 'buildId' | 'race' | 'sousRace' | 'styleJeu' | 'niveau'
+        | 'nom'
+        | 'classe'
+        | 'sousClasse'
+        | 'buildId'
+        | 'race'
+        | 'sousRace'
+        | 'styleJeu'
+        | 'niveau'
+        | 'estDarkUrge'
       >
     >,
   ) {
@@ -238,6 +250,29 @@ export const saveStore = {
                   objetsObtenus: deja
                     ? p.objetsObtenus.filter((id) => id !== objetId)
                     : [...p.objetsObtenus, objetId],
+                }
+              }),
+            }
+          : c,
+      ),
+    })
+  },
+
+  basculerJalonSombre(campagneId: string, personnageId: string, jalonId: string) {
+    majEtat({
+      ...etat,
+      campagnes: etat.campagnes.map((c) =>
+        c.id === campagneId
+          ? {
+              ...c,
+              personnages: c.personnages.map((p) => {
+                if (p.id !== personnageId) return p
+                const deja = p.jalonsSombresCoches.includes(jalonId)
+                return {
+                  ...p,
+                  jalonsSombresCoches: deja
+                    ? p.jalonsSombresCoches.filter((id) => id !== jalonId)
+                    : [...p.jalonsSombresCoches, jalonId],
                 }
               }),
             }

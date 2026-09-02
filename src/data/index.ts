@@ -2,12 +2,14 @@ import buildsJson from './builds.json'
 import objetsJson from './objets.json'
 import sousclassesJson from './sousclasses.json'
 import racesJson from './races.json'
-import type { Build, Objet, RaceInfo, SousClasseInfo } from './types'
+import darkUrgeJson from './darkUrge.json'
+import type { Build, Objet, RaceInfo, SousClasseInfo, JalonSombre } from './types'
 
 export const builds = buildsJson as Build[]
 export const objets = objetsJson as Objet[]
 export const sousClasses = sousclassesJson as SousClasseInfo[]
 export const races = racesJson as RaceInfo[]
+export const jalonsSombres = darkUrgeJson as JalonSombre[]
 
 const objetsById = new Map(objets.map((o) => [o.id, o]))
 const buildsById = new Map(builds.map((b) => [b.id, b]))
@@ -94,4 +96,4 @@ export function buildsPourObjet(
     )
 }
 
-export type { Build, Objet, RaceInfo, SousClasseInfo, RoleTag, ElementTag } from './types'
+export type { Build, Objet, RaceInfo, SousClasseInfo, RoleTag, ElementTag, JalonSombre } from './types'

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "acte1-plage-nautiloide",
+    "acte": 1,
+    "label": "Tout début — sur la plage, juste après l'écrasement du nautiloïde"
+  },
+  {
+    "id": "acte1-cercle-sceaux",
+    "acte": 1,
+    "label": "Bosquet des Émeraudes — le cercle de sceaux arcanique, en croisant Gale"
+  },
+  {
+    "id": "acte1-petit-animal-bosquet",
+    "acte": 1,
+    "label": "Abords du Bosquet des Émeraudes — un petit animal territorial"
+  },
+  {
+    "id": "acte1-premier-repos-pont",
+    "acte": 1,
+    "label": "Premier repos long après avoir franchi le pont vers Havrelune (Moonhaven) — moment important, sois attentif"
+  },
+  {
+    "id": "acte1-camp-gobelin-minthara",
+    "acte": 1,
+    "label": "Camp gobelin — si tu passes la nuit avec Minthara"
+  },
+  {
+    "id": "acte2-auberge-isobel",
+    "acte": 2,
+    "label": "Auberge du Dernier Espoir — le repos long qui suit ta première rencontre avec Isobel (l'un des choix les plus importants de la run)"
+  },
+  {
+    "id": "acte2-repos-suivant-isobel",
+    "acte": 2,
+    "label": "Le repos long suivant, si tu as épargné Isobel"
+  },
+  {
+    "id": "acte3-rivington-reve",
+    "acte": 3,
+    "label": "Havrelune/Rivington — un rêve à ton premier repos long en Acte 3"
+  },
+  {
+    "id": "acte3-duel-orin",
+    "acte": 3,
+    "label": "Ville basse — le duel contre Orin"
+  },
+  {
+    "id": "acte3-temple-bhaal",
+    "acte": 3,
+    "label": "Juste après le duel contre Orin — au Temple de Bhaal"
+  }
+]

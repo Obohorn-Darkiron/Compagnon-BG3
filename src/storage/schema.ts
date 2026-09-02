@@ -17,6 +17,10 @@ export interface Personnage {
   compagnonNom: string | null
   /** joueurId du joueur propriétaire dans une session de groupe. Null = personnage local, non synchronisé. */
   proprietaireId: string | null
+  /** true si ce personnage est l'origine Dark Urge — fait apparaître la checklist des moments à ne pas manquer. */
+  estDarkUrge: boolean
+  /** Identifiants de jalonsDarkUrge (voir data/darkUrge.json) déjà cochés comme "passés" par le joueur. */
+  jalonsSombresCoches: string[]
 }
 
 export interface Campagne {

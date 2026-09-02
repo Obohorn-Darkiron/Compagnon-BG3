@@ -3199,6 +3199,9 @@
       "Beaucoup moins fort une fois la surprise passée",
       "Une seule action bonus (pas de Filou)"
     ],
+    "synergies": [
+      "Identité culte de Bhaal : Soif de sang vient directement du butin d'Orin, la grande prêtresse de Bhaal — et une fois le Tribunal du Meurtre rejoint comme Assassin impie, le marchand Écho d'Abazigal vend la Capuche de l'assassin de Bhaal et des dagues « vicieuses » supplémentaires (dégâts de critique cumulables) pour compléter le thème. Parfait pour une run Dark Urge qui embrasse ses pulsions."
+    ],
     "dons": [
       "+2 Dextérité (niv 4)",
       "Assassin chevronné ou Doué (niv 8)",
@@ -3331,6 +3334,18 @@
         "emplacement": "Arme",
         "objetId": "rhapsody",
         "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "dolor-amarus",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "assassin-of-bhaal-cowl",
+        "importance": "Bon",
         "acte": 3
       }
     ],
@@ -9975,6 +9990,9 @@
       "Nécessite un choix narratif spécifique pour y accéder (trahir son serment)",
       "Incompatible avec une run 100% bienveillante"
     ],
+    "synergies": [
+      "Identité culte de Bhaal : Armure de fidèle de Bhaal, Amulette de Bhaal et Gants de fidèle de Bhaal forment le kit complet vendu par Écho d'Abazigal au Tribunal du Meurtre, accessible seulement après avoir rejoint le culte comme Assassin impie — l'équipement thématique naturel d'une run Dark Urge qui cède à ses pulsions."
+    ],
     "dons": [
       "Grand Maître d'armes (niv 4)",
       "+2 Force ou Charisme (niv 8)",
@@ -10125,6 +10143,12 @@
         "objetId": "disintegrating-night-walkers",
         "importance": "Situationnel",
         "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "assassin-of-bhaal-cowl",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -11075,6 +11099,9 @@
       "Après le premier tour, les dégâts retombent au niveau d'un archer classique",
       "Vulnérable si l'ennemi te charge avant que tu aies pu tirer"
     ],
+    "synergies": [
+      "Identité culte de Bhaal : une fois le Tribunal du Meurtre rejoint comme Assassin impie, Écho d'Abazigal vend l'Arc court vicieux (+7 dégâts sur critique) et la Capuche de l'assassin de Bhaal — un habillage thématique cohérent pour une run Dark Urge qui embrasse ses pulsions, sans rien changer au moteur du build."
+    ],
     "dons": [
       "Tireur d'élite (niv 4)",
       "+2 Dextérité (niv 8)",
@@ -11203,6 +11230,18 @@
         "objetId": "covert-cowl",
         "importance": "Bon",
         "acte": 2
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "vicious-shortbow",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "assassin-of-bhaal-cowl",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
