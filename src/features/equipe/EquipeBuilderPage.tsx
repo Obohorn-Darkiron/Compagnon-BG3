@@ -8,7 +8,10 @@ import {
   composerEquipe,
   LABELS_GENRE_GROUPE,
   LABELS_ROLE,
+  remplacerSlot,
+  reproposerEquipe,
   type GenreGroupe,
+  type OptionsComposition,
   type PreferenceMulticlasse,
   type PreferenceSoin,
   type ResultatComposition,
@@ -92,7 +95,15 @@ function ChipMultiSelect({
   )
 }
 
-function CarteSlot({ slot, index }: { slot: ResultatComposition['slots'][number]; index: number }) {
+function CarteSlot({
+  slot,
+  index,
+  onRemplacer,
+}: {
+  slot: ResultatComposition['slots'][number]
+  index: number
+  onRemplacer?: () => void
+}) {
   return (
     <div className="rounded-xl border border-border bg-surface p-4">
       <div className="flex items-start justify-between gap-2">
@@ -149,6 +160,16 @@ function CarteSlot({ slot, index }: { slot: ResultatComposition['slots'][number]
           </p>
           <p className="mt-1 text-[11px] text-ink-muted">{slot.compagnon.acte}</p>
         </div>
+      )}
+
+      {onRemplacer && (
+        <button
+          type="button"
+          onClick={onRemplacer}
+          className="mt-3 w-full rounded-lg border border-border py-2 text-xs font-medium text-ink-muted active:bg-surface-raised"
+        >
+          Remplacer ce personnage
+        </button>
       )}
     </div>
   )
@@ -335,9 +356,36 @@ export function EquipeBuilderPage() {
   const [synergiesSurprenantes, setSynergiesSurprenantes] = useState(false)
   const [utiliserExistants, setUtiliserExistants] = useState(false)
   const [resultat, setResultat] = useState<ResultatComposition | null>(null)
+  const [optionsActuelles, setOptionsActuelles] = useState<OptionsComposition | null>(null)
 
   function basculer(liste: string[], setListe: (v: string[]) => void, valeur: string) {
     setListe(liste.includes(valeur) ? liste.filter((c) => c !== valeur) : [...liste, valeur])
+  }
+
+  function composer() {
+    const options: OptionsComposition = {
+      builsFixes: utiliserExistants ? builsFixesDisponibles : [],
+      genre,
+      preferenceSoin,
+      styleCombat,
+      multiclassage,
+      classesAInclure,
+      classesAEviter,
+      synergiesSurprenantes,
+      nbJoueurs,
+    }
+    setOptionsActuelles(options)
+    setResultat(composerEquipe(options))
+  }
+
+  function remplacer(index: number) {
+    if (!resultat || !optionsActuelles) return
+    setResultat(remplacerSlot(resultat, index, optionsActuelles))
+  }
+
+  function relancerTout() {
+    if (!resultat || !optionsActuelles) return
+    setResultat(reproposerEquipe(resultat, optionsActuelles))
   }
 
   return (
@@ -502,26 +550,8 @@ export function EquipeBuilderPage() {
       )}
 
       <div className="px-4 py-4">
-        <button
-          type="button"
-          onClick={() =>
-            setResultat(
-              composerEquipe({
-                builsFixes: utiliserExistants ? builsFixesDisponibles : [],
-                genre,
-                preferenceSoin,
-                styleCombat,
-                multiclassage,
-                classesAInclure,
-                classesAEviter,
-                synergiesSurprenantes,
-                nbJoueurs,
-              }),
-            )
-          }
-          className="w-full rounded-lg bg-gold py-2.5 text-sm font-medium text-bg"
-        >
-          Composer l'équipe
+        <button type="button" onClick={composer} className="w-full rounded-lg bg-gold py-2.5 text-sm font-medium text-bg">
+          {resultat ? 'Recomposer depuis zéro' : "Composer l'équipe"}
         </button>
       </div>
 
@@ -530,9 +560,21 @@ export function EquipeBuilderPage() {
           <Section title={`Ton équipe — ${LABELS_GENRE_GROUPE[resultat.genre]}`}>
             <div className="flex flex-col gap-3">
               {resultat.slots.map((slot, i) => (
-                <CarteSlot key={slot.build.id + i} slot={slot} index={i} />
+                <CarteSlot
+                  key={i}
+                  slot={slot}
+                  index={i}
+                  onRemplacer={slot.dejaExistant ? undefined : () => remplacer(i)}
+                />
               ))}
             </div>
+            <button
+              type="button"
+              onClick={relancerTout}
+              className="mt-3 w-full rounded-lg border border-glow/60 bg-glow/10 py-2.5 text-sm font-medium text-glow"
+            >
+              Autre proposition (mêmes réponses)
+            </button>
           </Section>
 
           {resultat.synergies.length > 0 && (

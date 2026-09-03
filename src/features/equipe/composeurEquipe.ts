@@ -533,6 +533,34 @@ export interface OptionsComposition {
   /** Nombre de joueurs réels (1 à 4) — détermine combien de rôles restent des compagnons à recruter. */
   nbJoueurs?: number
   tailleEquipe?: number
+  /** Builds à ne jamais proposer (déjà montrés lors d'un remplacement ou d'une autre proposition). */
+  buildsAExclure?: string[]
+}
+
+function calculerAvertissements(choisis: Build[], tailleEquipe: number): string[] {
+  const avertissements: string[] = []
+  const parObjet = new Map<string, Build[]>()
+  for (const b of choisis) {
+    for (const e of b.equipement) {
+      const liste = parObjet.get(e.objetId) ?? []
+      liste.push(b)
+      parObjet.set(e.objetId, liste)
+    }
+  }
+  for (const [objetId, liste] of parObjet) {
+    if (liste.length < 2) continue
+    const objet = getObjet(objetId)
+    const nomObjet = objet ? nomAffiche(objet) : objetId
+    avertissements.push(
+      `${liste.map((b) => b.nom).join(' et ')} convoitent le même objet (${nomObjet}) — un des deux devra s'en passer ou choisir une alternative.`,
+    )
+  }
+  if (choisis.length < tailleEquipe) {
+    avertissements.push(
+      `Je n'ai trouvé que ${choisis.length} classe(s) différente(s) sans doublon possible pour compléter les ${tailleEquipe} emplacements.`,
+    )
+  }
+  return avertissements
 }
 
 /**
@@ -543,6 +571,7 @@ export interface OptionsComposition {
 export function composerEquipe(options: OptionsComposition): ResultatComposition {
   const tailleEquipe = options.tailleEquipe ?? 4
   const classesAEviter = new Set(options.classesAEviter ?? [])
+  const buildsAExclure = new Set(options.buildsAExclure ?? [])
   const synergiesSurprenantes = options.synergiesSurprenantes ?? false
   const besoins = ajusterProfil(options.genre, options.preferenceSoin)
 
@@ -569,7 +598,7 @@ export function composerEquipe(options: OptionsComposition): ResultatComposition
   for (const classe of options.classesAInclure ?? []) {
     if (choisis.length >= tailleEquipe) break
     if (classesUtilisees.has(classe)) continue
-    const candidats = builds.filter((b) => b.classe === classe)
+    const candidats = builds.filter((b) => b.classe === classe && !buildsAExclure.has(b.id))
     const meilleur = meilleurCandidat(candidats, scoreOptions())
     if (!meilleur) continue
 
@@ -586,7 +615,9 @@ export function composerEquipe(options: OptionsComposition): ResultatComposition
   }
 
   while (choisis.length < tailleEquipe) {
-    const candidats = builds.filter((b) => !classesUtilisees.has(b.classe) && !classesAEviter.has(b.classe))
+    const candidats = builds.filter(
+      (b) => !classesUtilisees.has(b.classe) && !classesAEviter.has(b.classe) && !buildsAExclure.has(b.id),
+    )
     const meilleur = meilleurCandidat(candidats, scoreOptions())
     if (!meilleur) break
 
@@ -603,34 +634,99 @@ export function composerEquipe(options: OptionsComposition): ResultatComposition
   }
 
   const synergies = detecterSynergies(choisis)
-
-  const avertissements: string[] = []
-  const parObjet = new Map<string, Build[]>()
-  for (const b of choisis) {
-    for (const e of b.equipement) {
-      const liste = parObjet.get(e.objetId) ?? []
-      liste.push(b)
-      parObjet.set(e.objetId, liste)
-    }
-  }
-  for (const [objetId, liste] of parObjet) {
-    if (liste.length < 2) continue
-    const objet = getObjet(objetId)
-    const nomObjet = objet ? nomAffiche(objet) : objetId
-    avertissements.push(
-      `${liste.map((b) => b.nom).join(' et ')} convoitent le même objet (${nomObjet}) — un des deux devra s'en passer ou choisir une alternative.`,
-    )
-  }
-
-  if (choisis.length < tailleEquipe) {
-    avertissements.push(
-      `Je n'ai trouvé que ${choisis.length} classe(s) différente(s) sans doublon possible pour compléter les ${tailleEquipe} emplacements.`,
-    )
-  }
+  const avertissements = calculerAvertissements(choisis, tailleEquipe)
 
   assignerJoueursEtCompagnons(slots, options.nbJoueurs ?? tailleEquipe)
 
   return { genre: options.genre, slots, synergies, conseilsRace: genererConseilsRace(choisis), avertissements }
+}
+
+/**
+ * Remplace UN emplacement d'une composition déjà générée par le meilleur complément suivant, en
+ * gardant tous les autres emplacements strictement intacts (raison, compagnon assigné, etc.) — pas
+ * de rebrassage global pour un seul remplacement. Ne touche jamais un emplacement déjà existant
+ * (`dejaExistant`) : ce ne sont pas des propositions, ce sont de vrais personnages du groupe.
+ */
+export function remplacerSlot(
+  resultatActuel: ResultatComposition,
+  indexARemplacer: number,
+  options: OptionsComposition,
+): ResultatComposition {
+  const slotActuel = resultatActuel.slots[indexARemplacer]
+  if (!slotActuel || slotActuel.dejaExistant) return resultatActuel
+
+  const autresSlots = resultatActuel.slots.filter((_, i) => i !== indexARemplacer)
+  const autresBuilds = autresSlots.map((s) => s.build)
+  const classesUtilisees = new Set(autresBuilds.map((b) => b.classe))
+  const classesAEviter = new Set(options.classesAEviter ?? [])
+  const buildsAExclure = new Set([slotActuel.build.id, ...(options.buildsAExclure ?? [])])
+  const synergiesSurprenantes = options.synergiesSurprenantes ?? false
+
+  const besoins = ajusterProfil(options.genre, options.preferenceSoin)
+  for (const b of autresBuilds) decrementerBesoins(besoins, b)
+
+  const candidats = builds.filter(
+    (b) => !classesUtilisees.has(b.classe) && !classesAEviter.has(b.classe) && !buildsAExclure.has(b.id),
+  )
+  const meilleur = meilleurCandidat(candidats, {
+    besoins,
+    dejaChoisis: autresBuilds,
+    genre: options.genre,
+    styleCombat: options.styleCombat,
+    multiclassage: options.multiclassage,
+    synergiesSurprenantes,
+  })
+  if (!meilleur) return resultatActuel
+
+  const nouveauSlot: SlotPropose = {
+    build: meilleur,
+    raison: raisonChoix(meilleur, besoins, autresBuilds),
+    dejaExistant: false,
+    typeSlot: slotActuel.typeSlot,
+  }
+
+  // Si l'emplacement remplacé était tenu par un compagnon, on cherche un compagnon compatible avec
+  // le nouveau build parmi ceux pas déjà utilisés ailleurs dans la composition (jamais le même
+  // compagnon recruté deux fois).
+  if (slotActuel.typeSlot === 'compagnon') {
+    const compagnonsUtilises = new Set(
+      autresSlots.filter((s) => s.compagnon).map((s) => s.compagnon!.nom),
+    )
+    const disponibles = COMPAGNONS.filter((c) => !compagnonsUtilises.has(c.nom))
+    const raceUtile = beneficeRaceSpecifique(meilleur)
+    const compagnonRaceUtile = raceUtile ? disponibles.find((c) => c.race === raceUtile) : undefined
+    const compagnonClasseExacte = disponibles.find((c) => c.classeDefaut === meilleur.classe)
+    const choisi = compagnonRaceUtile ?? compagnonClasseExacte ?? disponibles[0]
+    if (choisi) {
+      nouveauSlot.compagnon = { ...choisi, reclassageNecessaire: choisi.classeDefaut !== meilleur.classe }
+    } else {
+      // Plus aucun compagnon disponible (cas limite) : retombe sur "ton perso" plutôt que planter.
+      nouveauSlot.typeSlot = 'perso'
+    }
+  }
+
+  const nouveauxSlots = resultatActuel.slots.map((s, i) => (i === indexARemplacer ? nouveauSlot : s))
+  const nouveauxBuilds = nouveauxSlots.map((s) => s.build)
+
+  return {
+    genre: resultatActuel.genre,
+    slots: nouveauxSlots,
+    synergies: detecterSynergies(nouveauxBuilds),
+    conseilsRace: genererConseilsRace(nouveauxBuilds),
+    avertissements: calculerAvertissements(nouveauxBuilds, options.tailleEquipe ?? nouveauxSlots.length),
+  }
+}
+
+/**
+ * Génère une autre composition complète avec les mêmes réponses, en excluant tous les builds
+ * (non déjà-existants) déjà montrés — pour varier sans revenir à des choix déjà refusés.
+ */
+export function reproposerEquipe(
+  resultatActuel: ResultatComposition,
+  options: OptionsComposition,
+): ResultatComposition {
+  const idsAExclure = resultatActuel.slots.filter((s) => !s.dejaExistant).map((s) => s.build.id)
+  return composerEquipe({ ...options, buildsAExclure: [...(options.buildsAExclure ?? []), ...idsAExclure] })
 }
 
 export const LABELS_GENRE_GROUPE = LABELS_GENRE
