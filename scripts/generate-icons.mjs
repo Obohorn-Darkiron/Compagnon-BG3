@@ -18,6 +18,9 @@ for (const job of jobs) {
 const maskableJobs = [
   { size: 192, out: './public/icon-maskable-192.png' },
   { size: 512, out: './public/icon-maskable-512.png' },
+  // iOS n'affiche pas la transparence proprement sur "Ajouter à l'écran d'accueil" — même
+  // traitement fond plein que les icônes maskable, à la taille recommandée par Apple.
+  { size: 180, out: './public/apple-touch-icon.png' },
 ]
 
 for (const job of maskableJobs) {

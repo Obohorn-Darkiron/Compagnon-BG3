@@ -11,7 +11,13 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: false,
-      includeAssets: ['icon-192.png', 'icon-512.png', 'icon-maskable-192.png', 'icon-maskable-512.png'],
+      includeAssets: [
+        'icon-192.png',
+        'icon-512.png',
+        'icon-maskable-192.png',
+        'icon-maskable-512.png',
+        'apple-touch-icon.png',
+      ],
       manifest: {
         name: 'Compagnon BG3',
         short_name: 'BG3 Compagnon',
