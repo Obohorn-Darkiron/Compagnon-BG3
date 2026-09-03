@@ -34,19 +34,37 @@ export function GroupeApercu({ campagne }: { campagne: Campagne }) {
 
   const buildParPersoId = new Map(equipes.map(({ perso, build }) => [perso.id, build]))
 
-  const toutesEntrees: EntreeEquipementGroupe[] = []
+  // Un remplacement automatique peut retomber sur un objet qu'un même personnage possède déjà
+  // ailleurs dans son build — on fusionne par (personnage, objet affiché) plutôt que de créer une
+  // deuxième ligne pour la même personne sur le même objet, en gardant la note de remplacement.
+  const entreesParPersoEtId = new Map<string, EntreeEquipementGroupe>()
   for (const { perso, build } of equipes) {
     for (const e of build.equipement) {
-      const resolu = resoudreObjetPourStyle(e.objetId, perso.styleJeu)
-      toutesEntrees.push({
+      const resolu = resoudreObjetPourStyle(e.objetId, perso.styleJeu, e.emplacement)
+      const entree: EntreeEquipementGroupe = {
         ...resolu,
         perso,
         importance: e.importance,
         emplacement: e.emplacement,
         acteAffiche: resolu.alternative ? resolu.alternative.acte : e.acte,
-      })
+      }
+      const cle = `${perso.id}::${entree.idAffiche}`
+      const existante = entreesParPersoEtId.get(cle)
+      if (!existante) {
+        entreesParPersoEtId.set(cle, entree)
+      } else {
+        const source = existante.alternative ? existante : entree.alternative ? entree : existante
+        entreesParPersoEtId.set(cle, {
+          ...(ORDRE_IMPORTANCE[entree.importance] > ORDRE_IMPORTANCE[existante.importance] ? entree : existante),
+          alternative: source.alternative,
+          alternativeAutoTrouvee: source.alternativeAutoTrouvee,
+          objetOriginal: source.objetOriginal,
+          sansAlternative: existante.sansAlternative && entree.sansAlternative,
+        })
+      }
     }
   }
+  const toutesEntrees = [...entreesParPersoEtId.values()]
 
   const parObjet = new Map<string, EntreeEquipementGroupe[]>()
   for (const entree of toutesEntrees) {
@@ -67,7 +85,7 @@ export function GroupeApercu({ campagne }: { campagne: Campagne }) {
       .sort((a, b) => ORDRE_IMPORTANCE[b.importance] - ORDRE_IMPORTANCE[a.importance])
     const meilleur = candidats[0]
     if (!meilleur) return null
-    const resolu = resoudreObjetPourStyle(meilleur.objetId, perso.styleJeu)
+    const resolu = resoudreObjetPourStyle(meilleur.objetId, perso.styleJeu, meilleur.emplacement)
     return { importance: meilleur.importance, resolu }
   }
 
@@ -129,7 +147,7 @@ export function GroupeApercu({ campagne }: { campagne: Campagne }) {
                           )}
                         </div>
                         <div className="mt-1.5 flex flex-col gap-1.5">
-                          {entrees.map(({ perso, importance, alternative, sansAlternative, objetOriginal }) => {
+                          {entrees.map(({ perso, importance, alternative, alternativeAutoTrouvee, sansAlternative, objetOriginal }) => {
                             const obtenu = perso.objetsObtenus.includes(idAffiche)
                             const modifiable =
                               perso.proprietaireId === null || perso.proprietaireId === lireJoueurId()
@@ -159,14 +177,20 @@ export function GroupeApercu({ campagne }: { campagne: Campagne }) {
                                   </span>
                                   <span className="flex items-center gap-1">
                                     <ImportanceBadge importance={importance} />
-                                    {perso.styleJeu === 'bienveillant' && objetOriginal && !alternative && (
-                                      <AlignementBadge alignement={objetOriginal.alignement} />
-                                    )}
+                                    {objetOriginal &&
+                                      (objetOriginal.alignement === 'restreint' ||
+                                        (perso.styleJeu === 'bienveillant' &&
+                                          objetOriginal.alignement === 'sombre' &&
+                                          !alternative)) && (
+                                        <AlignementBadge alignement={objetOriginal.alignement} />
+                                      )}
                                   </span>
                                 </button>
                                 {alternative && objetOriginal && (
                                   <p className="pl-7 text-[11px] text-bon">
-                                    Remplace {nomAffiche(objetOriginal)} pour {perso.nom} (choix sombre)
+                                    {alternativeAutoTrouvee
+                                      ? `Suggestion pour ${perso.nom} à la place de ${nomAffiche(objetOriginal)} (choix sombre, pas d'alternative vérifiée)`
+                                      : `Remplace ${nomAffiche(objetOriginal)} pour ${perso.nom} (choix sombre)`}
                                   </p>
                                 )}
                                 {sansAlternative && objetOriginal && (

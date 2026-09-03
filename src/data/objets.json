@@ -3318,7 +3318,8 @@
       "effetProtectionSelune"
     ],
     "alignement": "sombre",
-    "alignementNote": "Nécessite de tuer Isobel — route non-bienveillante."
+    "alignementNote": "Nécessite de tuer Isobel — route non-bienveillante.",
+    "alternative": "potent-robe"
   },
   {
     "id": "shadow-blade-ring",
@@ -4925,7 +4926,8 @@
       "rarete"
     ],
     "alignement": "sombre",
-    "alignementNote": "Réservée à la route « Assassin impie de Bhaal » — nécessite de tuer Valeria et de rejoindre le culte de Bhaal. Incompatible avec une run bienveillante."
+    "alignementNote": "Réservée à la route « Assassin impie de Bhaal » — nécessite de tuer Valeria et de rejoindre le culte de Bhaal. Incompatible avec une run bienveillante.",
+    "alternative": "amulet-of-the-harpers"
   },
   {
     "id": "shield-of-the-undevout",
@@ -5006,7 +5008,8 @@
       "nomFr"
     ],
     "alignement": "sombre",
-    "alignementNote": "Vendue uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante)."
+    "alignementNote": "Vendue uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante).",
+    "alternative": "covert-cowl"
   },
   {
     "id": "bhaalist-gloves",
@@ -5023,7 +5026,8 @@
       "nomFr"
     ],
     "alignement": "sombre",
-    "alignementNote": "Vendus uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante)."
+    "alignementNote": "Vendus uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante).",
+    "alternative": "gauntlets-of-the-warmaster"
   },
   {
     "id": "craterflesh-gloves",
@@ -5040,7 +5044,8 @@
       "nomFr"
     ],
     "alignement": "sombre",
-    "alignementNote": "Vendus uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante)."
+    "alignementNote": "Vendus uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante).",
+    "alternative": "gloves-of-the-automaton"
   },
   {
     "id": "dread-iron-dagger",
@@ -5057,7 +5062,8 @@
       "nomFr"
     ],
     "alignement": "sombre",
-    "alignementNote": "Vendue uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante)."
+    "alignementNote": "Vendue uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante).",
+    "alternative": "sussur-dagger"
   },
   {
     "id": "fleshrender",
@@ -5074,7 +5080,8 @@
       "nomFr"
     ],
     "alignement": "sombre",
-    "alignementNote": "Vendue uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante)."
+    "alignementNote": "Vendue uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante).",
+    "alternative": "assassin-shortsword"
   },
   {
     "id": "vicious-battleaxe",
@@ -5108,7 +5115,8 @@
       "nomFr"
     ],
     "alignement": "sombre",
-    "alignementNote": "Vendu uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante)."
+    "alignementNote": "Vendu uniquement après avoir accepté de devenir Assassin impie de Bhaal (route non-bienveillante).",
+    "alternative": "least-expected"
   },
   {
     "id": "dolor-amarus",
