@@ -26,6 +26,68 @@ export function nomAffiche(objet: Objet): string {
   return objet.nomFr ?? objet.nomEn
 }
 
+export type CategorieObjet =
+  | 'Arme'
+  | 'Armure'
+  | 'Tête'
+  | 'Amulette'
+  | 'Anneau'
+  | 'Gants'
+  | 'Bottes'
+  | 'Cape'
+  | 'Bouclier'
+  | 'Bonus permanent'
+  | 'Objet clé'
+  | 'Autre'
+
+const MOTS_CLES_ARME = [
+  'Arbalète',
+  'Arc',
+  'Bâton',
+  'Cimeterre',
+  'Coutille',
+  'Dague',
+  'Faucille',
+  'Fléau',
+  'Glaive',
+  'Hache',
+  'Hallebarde',
+  'Lance',
+  'Maillet',
+  'Marteau',
+  'Masse',
+  'Massue',
+  'Morgenstern',
+  'Pique',
+  'Rapière',
+  'Serpe',
+  'Trident',
+  'Épée',
+]
+
+/**
+ * Catégorie d'équipement dérivée du champ `type` (texte libre, ~100 variantes dans le catalogue —
+ * ex. "Épée à deux mains (espadon, légendaire)") — sert à proposer un filtre utilisable plutôt que
+ * cent boutons différents. Approximatif par construction (reconnaissance de mots-clés), mais
+ * suffisant pour parcourir le catalogue par famille d'objet.
+ */
+export function categorieObjet(objet: Objet): CategorieObjet {
+  const t = objet.type
+  if (t === 'Objet clé') return 'Objet clé'
+  if (t.startsWith('Bonus permanent')) return 'Bonus permanent'
+  if (t === 'Amulette') return 'Amulette'
+  if (t === 'Anneau') return 'Anneau'
+  if (t === 'Bouclier') return 'Bouclier'
+  if (t === 'Bottes') return 'Bottes'
+  if (t.startsWith('Cape')) return 'Cape'
+  if (t.includes('Brassards') || t.startsWith('Gants')) return 'Gants'
+  if (/Casque|Chapeau|Diadème|Masque|Cercle/.test(t)) return 'Tête'
+  if (t.startsWith('Armure') || t.startsWith('Vêtement (torse)')) return 'Armure'
+  const tMinuscule = t.toLowerCase()
+  if (MOTS_CLES_ARME.some((mot) => tMinuscule.includes(mot.toLowerCase()))) return 'Arme'
+  return 'Autre'
+}
+
 /** Un build est multi-classe dès que son split mentionne plusieurs classes séparées par "/". */
 export function estMulticlasse(build: Build): boolean {
   return build.split.includes('/')
