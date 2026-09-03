@@ -5,6 +5,7 @@ import { Download, Upload } from '../../components/icons'
 import { builds, objets } from '../../data'
 import { saveStore } from '../../storage/useSaveData'
 import { forcerMiseAJour, stockageEstPersistant } from '../../storage/driver'
+import { quitterSessionsPourCampagnes } from '../../session/sessionSync'
 import { THEMES, definirTheme, useTheme } from '../../theme/theme'
 
 const estInstallee =
@@ -157,11 +158,14 @@ export function ParametresPage() {
       <Section title="Réinitialiser">
         <button
           type="button"
-          onClick={() => {
-            if (confirm('Supprimer toutes les campagnes et tous les personnages ?')) {
-              saveStore.reinitialiser()
-              setMessage('Sauvegarde réinitialisée.')
-            }
+          onClick={async () => {
+            if (!confirm('Supprimer toutes les campagnes et tous les personnages ?')) return
+            // Quitte proprement toute session de groupe active AVANT d'effacer : sinon les
+            // personnages restent orphelins pour toujours côté Firebase (voir sessionSync).
+            const campagneIds = saveStore.getSnapshot().campagnes.map((c) => c.id)
+            await quitterSessionsPourCampagnes(campagneIds)
+            saveStore.reinitialiser()
+            setMessage('Sauvegarde réinitialisée.')
           }}
           className="w-full rounded-lg border border-essentiel/40 py-2.5 text-sm text-essentiel"
         >

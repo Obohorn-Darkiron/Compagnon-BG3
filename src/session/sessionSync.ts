@@ -223,3 +223,16 @@ export function reprendreSessionsActives() {
     if (campagne.sessionCode) ecouterSession(campagne.id, campagne.sessionCode)
   }
 }
+
+/**
+ * À appeler AVANT toute suppression locale (réinitialisation complète, suppression d'une
+ * campagne) qui efface une campagne liée à une session de groupe. Sans ça, l'état local disparaît
+ * avant que la session ait pu être quittée proprement : le personnage reste orphelin pour
+ * toujours côté Firebase, visible indéfiniment par les autres joueurs comme un profil qui ne se
+ * met plus jamais à jour.
+ */
+export async function quitterSessionsPourCampagnes(campagneIds: string[]) {
+  for (const campagneId of campagneIds) {
+    await quitterSession(campagneId)
+  }
+}

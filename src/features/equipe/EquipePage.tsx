@@ -5,6 +5,7 @@ import { Sparkles } from '../../components/icons'
 import { builds } from '../../data'
 import { saveStore, useSaveData } from '../../storage/useSaveData'
 import { lireJoueurId } from '../../storage/identite'
+import { quitterSession } from '../../session/sessionSync'
 import { NouveauPersonnageForm } from './NouveauPersonnageForm'
 import { GroupeApercu } from './GroupeApercu'
 import { CompagnonsSuivi } from './CompagnonsSuivi'
@@ -182,14 +183,18 @@ export function EquipePage() {
       <div className="px-4 pb-6">
         <button
           type="button"
-          onClick={() => {
+          onClick={async () => {
             if (
-              confirm(
+              !confirm(
                 `Supprimer la campagne "${campagneActive.nom}" et ses ${campagneActive.personnages.length} personnage(s) ?`,
               )
             ) {
-              saveStore.supprimerCampagne(campagneActive.id)
+              return
             }
+            // Quitte proprement une éventuelle session de groupe AVANT d'effacer la campagne :
+            // sinon le personnage reste orphelin pour toujours côté Firebase (voir sessionSync).
+            await quitterSession(campagneActive.id)
+            saveStore.supprimerCampagne(campagneActive.id)
           }}
           className="w-full rounded-lg border border-essentiel/40 py-2.5 text-sm text-essentiel"
         >
