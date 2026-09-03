@@ -5,7 +5,7 @@ import { ImportanceBadge } from '../../components/ImportanceBadge'
 import { AlignementBadge } from '../../components/AlignementBadge'
 import { CaracTable } from '../../components/CaracTable'
 import { Check } from '../../components/icons'
-import { builds, etapeAuNiveau, getObjet, jalonsSombres, nomAffiche, races } from '../../data'
+import { builds, etapeAuNiveau, jalonsSombres, nomAffiche, races } from '../../data'
 import { saveStore, useSaveData, type StyleJeu } from '../../storage/useSaveData'
 import { lireJoueurId } from '../../storage/identite'
 import { NiveauStepper } from './NiveauStepper'
@@ -13,16 +13,12 @@ import { BonusPermanentsSection } from './BonusPermanentsSection'
 import { PlanOptimisationSection } from './PlanOptimisationSection'
 import { SelecteurBuild } from './SelecteurBuild'
 import { bonusParStatObtenus, noteBonusPermanent } from './bonusPermanentsUtils'
-import type { EquipementRecommande, Importance, JalonSombre, Objet } from '../../data/types'
+import { resoudreObjetPourStyle, type ObjetResolu } from './alignementUtils'
+import type { EquipementRecommande, Importance, JalonSombre } from '../../data/types'
 
-interface EquipementResolu {
+interface EquipementResolu extends ObjetResolu {
   emplacement: string
   importance: EquipementRecommande['importance']
-  objetOriginal: Objet | undefined
-  objet: Objet | undefined
-  alternative: Objet | undefined
-  sansAlternative: boolean
-  idAffiche: string
   acteAffiche: number
 }
 
@@ -64,23 +60,12 @@ export function PersonnageDetailPage() {
       (a, b) => ORDRE_IMPORTANCE[b.importance] - ORDRE_IMPORTANCE[a.importance],
     )
     for (const e of tri) {
-      const objetOriginal = getObjet(e.objetId)
-      const aAdapter =
-        personnage.styleJeu === 'bienveillant' &&
-        objetOriginal !== undefined &&
-        objetOriginal.alignement !== 'neutre'
-      const alternative =
-        aAdapter && objetOriginal?.alternative ? getObjet(objetOriginal.alternative) : undefined
-      const objet = alternative ?? objetOriginal
+      const resoluObjet = resoudreObjetPourStyle(e.objetId, personnage.styleJeu)
       const resolu: EquipementResolu = {
+        ...resoluObjet,
         emplacement: e.emplacement,
         importance: e.importance,
-        objetOriginal,
-        objet,
-        alternative,
-        sansAlternative: aAdapter && alternative === undefined,
-        idAffiche: objet?.id ?? e.objetId,
-        acteAffiche: alternative ? alternative.acte : e.acte,
+        acteAffiche: resoluObjet.alternative ? resoluObjet.alternative.acte : e.acte,
       }
       const liste = equipementParActe.get(resolu.acteAffiche) ?? []
       liste.push(resolu)
