@@ -27,6 +27,28 @@ html {
   color-scheme: dark;
 }
 
+html[data-theme='parchemin'] {
+  color-scheme: light;
+
+  --color-bg: #f2ead9;
+  --color-surface: #fffdf8;
+  --color-surface-raised: #ecdfc2;
+  --color-border: #cbb98f;
+
+  --color-ink: #2a2117;
+  --color-ink-muted: #6f6350;
+
+  --color-gold: #805808;
+  --color-gold-soft: #63430c;
+
+  --color-glow: #b3261e;
+
+  --color-essentiel: #8c1c1c;
+  --color-excellent: #805808;
+  --color-bon: #276b44;
+  --color-situationnel: #665c47;
+}
+
 body {
   margin: 0;
   background-color: var(--color-bg);

@@ -13,8 +13,10 @@ import { PersonnageDetailPage } from './features/equipe/PersonnageDetailPage'
 import { ParametresPage } from './features/parametres/ParametresPage'
 import { demanderStockagePersistant } from './storage/driver'
 import { reprendreSessionsActives } from './session/sessionSync'
+import { initialiserTheme } from './theme/theme'
 import { registerSW } from 'virtual:pwa-register'
 
+initialiserTheme()
 demanderStockagePersistant()
 reprendreSessionsActives()
 

@@ -5,6 +5,7 @@ import { Download, Upload } from '../../components/icons'
 import { builds, objets } from '../../data'
 import { saveStore } from '../../storage/useSaveData'
 import { forcerMiseAJour, stockageEstPersistant } from '../../storage/driver'
+import { THEMES, definirTheme, useTheme } from '../../theme/theme'
 
 const estInstallee =
   typeof window !== 'undefined' && window.matchMedia('(display-mode: standalone)').matches
@@ -24,6 +25,7 @@ export function ParametresPage() {
   const [message, setMessage] = useState<string | null>(null)
   const [persistant, setPersistant] = useState<boolean | null>(null)
   const [recherche, setRecherche] = useState(false)
+  const theme = useTheme()
 
   useEffect(() => {
     stockageEstPersistant().then(setPersistant)
@@ -51,6 +53,36 @@ export function ParametresPage() {
   return (
     <div>
       <PageHeader title="Paramètres" />
+
+      <Section title="Thème">
+        <p className="mb-3 text-sm text-ink-muted">
+          Change juste l'apparence — rien d'autre ne bouge, tes campagnes restent intactes.
+        </p>
+        <div className="flex gap-4">
+          {THEMES.map((t) => (
+            <button
+              key={t.id}
+              type="button"
+              onClick={() => definirTheme(t.id)}
+              aria-label={`Thème ${t.label}`}
+              aria-pressed={theme === t.id}
+              className="flex flex-col items-center gap-1.5"
+            >
+              <span
+                className={`h-11 w-11 rounded-xl transition-shadow ${
+                  theme === t.id ? 'ring-2 ring-ink ring-offset-2 ring-offset-bg' : ''
+                }`}
+                style={{
+                  background: `linear-gradient(135deg, ${t.couleurFond} 50%, ${t.couleurAccent} 50%)`,
+                }}
+              />
+              <span className={`text-xs ${theme === t.id ? 'font-semibold text-ink' : 'text-ink-muted'}`}>
+                {t.label}
+              </span>
+            </button>
+          ))}
+        </div>
+      </Section>
 
       <Section title="Sauvegarde">
         <p className="mb-3 text-sm text-ink-muted">
