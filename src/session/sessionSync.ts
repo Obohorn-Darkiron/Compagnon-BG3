@@ -224,10 +224,10 @@ export async function quitterSession(campagneId: string) {
 }
 
 /**
- * Retire UN personnage précis d'une session — le sien ou celui d'un coéquipier. Accessible à
- * n'importe quel membre de la session (pas seulement au créateur) : c'est un geste de ménage
- * ciblé et peu risqué, contrairement à la suppression de toute la session. Supprime aussi la
- * session entière si c'était le dernier personnage qui y restait.
+ * Retire UN personnage précis d'une session (un coéquipier, en pratique). Réservé au créateur de
+ * la session côté UI (voir EquipePage) — sans compte utilisateur, rien n'empêche techniquement un
+ * autre membre d'appeler cette fonction, mais l'appli ne propose ce geste qu'au créateur. Supprime
+ * aussi la session entière si c'était le dernier personnage qui y restait.
  */
 export async function retirerPersonnageDeSession(
   campagneId: string,

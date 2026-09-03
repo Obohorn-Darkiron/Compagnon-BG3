@@ -172,7 +172,7 @@ export function EquipePage() {
                   {perso.niveau}
                 </div>
               </Link>
-              {estCoequipier && campagneActive.sessionCode && (
+              {estCoequipier && campagneActive.sessionCode && campagneActive.sessionEstProprietaire && (
                 <button
                   type="button"
                   onClick={() => {
