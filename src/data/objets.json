@@ -107,9 +107,9 @@
     "rarete": "Rare",
     "acte": 1,
     "zone": "Planque du Zhentarim (Repos de Waukeen)",
-    "obtention": "Achat auprès du marchand Brem, dans la planque du Zhentarim accessible depuis une trappe cachée au Repos de Waukeen.",
+    "obtention": "Achat auprès du marchand Brem, dans la planque du Zhentarim accessible depuis une trappe cachée au Repos de Waukeen — nécessite d'avoir terminé la quête « Retrouver la cargaison perdue ». Sinon, disponible plus tard auprès de Lann Tarv aux Tours de Hautelune (Acte 2).",
     "effet": "Ajoute le mod de Force aux dégâts de l'arc (excellent avec une Force gonflée par objet).",
-    "verifie": false,
+    "verifie": true,
     "aConfirmer": [],
     "alignement": "neutre"
   },
@@ -146,12 +146,12 @@
     "nomEn": "Everburn Blade",
     "nomFr": "Lame Everburn",
     "type": "Épée à deux mains",
-    "rarete": "Rare",
+    "rarete": "Peu commun",
     "acte": 1,
     "zone": "Nautiloïde (prologue)",
-    "obtention": "Sur le Nautiloïde au tout début du jeu : le commandant Zhalk la lâche si on l'affronte, ou si on lui lance Injonction pour la lui faire lâcher sans combat.",
+    "obtention": "Sur le Nautiloïde au tout début du jeu : le commandant Zhalk la lâche s'il est vaincu au combat. Lui lancer Injonction (« Lâche ») fonctionne aussi mais n'est pas garanti — Zhalk a de bonnes chances de réussir son jet de sauvegarde et de résister.",
     "effet": "Épée à deux mains dont les dégâts sont en permanence enflammés (+1d4 feu) — excellente arme d'ouverture pour toute mêlée.",
-    "verifie": false,
+    "verifie": true,
     "aConfirmer": [],
     "alignement": "neutre"
   },
@@ -876,11 +876,10 @@
     "acte": 2,
     "zone": "Auberge de l'Ultime Lueur",
     "obtention": "Achat auprès de l'intendante Talli à l'Auberge de l'Ultime Lueur.",
-    "effet": "CA fixée à 16 via la condition Écorce, et avantage aux jets de sauvegarde de Constitution. Les sources consultées se contredisent sur le maintien de l'effet Écorce en Forme sauvage/étoilée — à vérifier en jeu avant de compter dessus sous forme animale.",
+    "effet": "CA fixée à 16 via la condition Écorce (Forest Aegis), et avantage aux jets de sauvegarde de Constitution. Confirmé : l'effet Écorce ne se maintient pas en Forme sauvage (retombe à la CA normale du Druide transformé).",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "effetFormeSauvage"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -973,11 +972,10 @@
     "acte": 2,
     "zone": "Tours de Hautelune",
     "obtention": "Achat auprès de Lann Tarv, au rez-de-chaussée des Tours de Hautelune.",
-    "effet": "+1 au DD des sorts (Haute magie) et +1 à l'initiative. L'application de ce bonus de DD aux disciplines de Ki du Moine des Quatre Éléments n'a pas pu être confirmée avec certitude.",
+    "effet": "+1 au DD des sorts (Haute magie) et +1 à l'initiative. Confirmé : ce bonus ne s'applique PAS au DD des disciplines de Ki du Moine (Frappe étourdissante) — BG3 calcule ce DD via Force/Dextérité, pas via le DD des sorts, contrairement à la règle 5e classique.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "effetSurDisciplinesKi"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -1040,9 +1038,7 @@
     "obtention": "Butin sur Raphaël après l'avoir vaincu en combat, à la Maison de l'Espoir. Impossible à obtenir si tu acceptes son marché. Portable sans maîtrise de l'armure lourde.",
     "effet": "Réduit tous les dégâts subis de 3. Résistance au feu et immunité à la condition Brûlure. Rétribution infernale : quand tu réussis un jet de sauvegarde contre un sort ou effet, son lanceur prend feu pendant 3 tours. Lance Vol gratuitement une fois par repos long, sans Concentration.",
     "verifie": true,
-    "aConfirmer": [
-      "effet"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -1050,15 +1046,14 @@
     "nomEn": "Ring of Elemental Infusion",
     "nomFr": "Anneau d'infusion élémentaire",
     "type": "Anneau",
-    "rarete": "Rare",
+    "rarete": "Peu commun",
     "acte": 1,
     "zone": "Crèche githyanki (Y'llek)",
     "obtention": "Porté par la marchande githyanki Gish Umr'a'ac, dans l'infirmerie de la Crèche Y'llek (nécessite de passer les gardes, par la diplomatie ou le combat).",
     "effet": "Quand tu infliges des dégâts d'Acide, de Froid, de Feu, de Foudre ou de Tonnerre avec un sort ou un cantrip, ta première attaque d'arme réussie avant la fin de ton prochain tour inflige 1d4 dégâts supplémentaires du même type.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "rarete"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -1074,8 +1069,7 @@
     "effet": "Permet de lancer une capacité d'Étreinte du bois qui entrave la cible (1d6 dégâts perforants par tour), donne l'avantage aux attaques contre elle et lui inflige un désavantage à ses propres attaques et sauvegardes de Dextérité, pendant 3 tours.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "zone"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -1100,15 +1094,13 @@
     "nomEn": "Coruscation Ring",
     "nomFr": "Anneau de coruscation",
     "type": "Anneau",
-    "rarete": "Rare",
+    "rarete": "Peu commun",
     "acte": 2,
     "zone": "Cave secrète, Auberge de l'Ultime Lueur",
     "obtention": "Coffre lourd piégé dans une cave secrète sous l'Auberge de l'Ultime Lueur, derrière des portes en chêne bloquées par une toile d'araignée destructible ou un mur fissuré, dans une salle gardée par des Meenlocks.",
     "effet": "Radiance arcanique : quand tu infliges des dégâts de sort à une cible illuminée par une source de lumière, elle subit aussi Orbe rayonnant pendant 2 tours (malus aux jets d'attaque, émet une lumière vive) — s'applique à chaque touche des sorts à attaques multiples comme Explosion occulte.",
     "verifie": true,
-    "aConfirmer": [
-      "rarete"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -1122,9 +1114,7 @@
     "obtention": "Coffre du potier, au Champ de bataille en ruine.",
     "effet": "Tes dégâts Radiants infligent la condition Orbe rayonnant à la créature touchée — synergise directement avec l'Armure lumineuse.",
     "verifie": true,
-    "aConfirmer": [
-      "zone"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -1200,9 +1190,7 @@
     "obtention": "Récompense offerte à Shadowheart pour avoir vaincu le Chant-nocturne (Nightsong), en Ombreterre.",
     "effet": "Ajoute 1d4 dégâts nécrotiques à tes attaques d'arme (y compris de lancer) et +1 aux sauvegardes de Force. Permet de lancer Ténèbres implorantes en action bonus (une fois par tour) : inflige 2d8 dégâts nécrotiques à la cible si elle entre ou commence son tour dans une zone Obscurcie.",
     "verifie": true,
-    "aConfirmer": [
-      "zone"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -1377,8 +1365,7 @@
     "effet": "En action bonus, récupère un emplacement de sort déjà dépensé (de n'importe quel niveau), une fois par repos long — fonctionne aussi avec les emplacements de Pacte de l'Occultiste.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "acte"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -1503,9 +1490,7 @@
     "obtention": "Récompense de la quête de compagnon de Wyll : l'emmener à la Pouponnière (Tadpoling Centre) pour libérer Mizora, puis réussir un test de Persuasion DD 14.",
     "effet": "Utilise le modificateur de caractéristique de sort (au lieu de Force/Dextérité) pour les jets d'attaque et de dégâts ; +1 au DD des sorts ; permet d'invoquer un cambion allié une fois par repos long tant que l'arme est équipée.",
     "verifie": true,
-    "aConfirmer": [
-      "acte"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -1985,9 +1970,7 @@
     "obtention": "Porté par le Titan Garde d'acier ; butin en le vainquant (ne tombe pas s'il est tué alors qu'il est Atrophié).",
     "effet": "Arc long +3. Peut infliger Éclair guide sur une attaque réussie. Capacités : Hâte céleste (repos long) octroie Hâté ; Éclat céleste (repos court) effraie une cible et ajoute des dégâts radiants aux attaques à distance pendant plusieurs tours. Les sources consultées divergent légèrement sur le détail exact de ces capacités.",
     "verifie": true,
-    "aConfirmer": [
-      "effet"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -2136,12 +2119,10 @@
     "rarete": "Rare",
     "acte": 1,
     "zone": "Grymforge",
-    "obtention": "Butin ou vol sur le nain Thudd, à Grymforge — lieu et PNJ précis moins solidement confirmés que les autres objets de cette liste.",
+    "obtention": "Butin ou vol sur le nain Thudd, à Grymforge.",
     "effet": "En combat, quand le porteur commence son tour à 50% de points de vie ou moins, il gagne l'état Courroux (+1 dégâts de mêlée par tour restant, cumulable). Un bug documenté fait que l'effet n'applique parfois qu'1 tour de Courroux au lieu de 2.",
-    "verifie": false,
-    "aConfirmer": [
-      "obtention"
-    ],
+    "verifie": true,
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -2343,9 +2324,7 @@
     "obtention": "Deux sources indépendantes avec effet identique : porté par Findal dans le Passage souterrain (variante Objet d'histoire), ou looté sur Nettie dans les Chambres des druides (variante Peu commun).",
     "effet": "+1 en Nature. Permet, en se tenant devant la dalle de pierre correspondante (dans les Chambres de Nettie ou le Passage souterrain), d'ouvrir un raccourci entre les deux zones.",
     "verifie": true,
-    "aConfirmer": [
-      "rarete"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -2453,15 +2432,13 @@
     "nomEn": "Amulet of Selûne's Chosen",
     "nomFr": "Amulette de l'élue de Séluné",
     "type": "Amulette",
-    "rarete": "Rare",
+    "rarete": "Peu commun",
     "acte": 1,
     "zone": "Sanctuaire dévasté (Shattered Sanctum), derrière le trône de Dror Ragzlin",
     "obtention": "Dans des caisses au trésor derrière le trône de Dror Ragzlin, au Sanctuaire dévasté (porte verrouillée dont il détient la clé, crochetable ou destructible).",
     "effet": "Permet de lancer Rêve de Séluné (tour de magie) une fois par repos long : un allié touché récupère 1d6 PV mais doit réussir un jet de sauvegarde de Constitution ou s'endormir.",
     "verifie": true,
-    "aConfirmer": [
-      "rarete"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -2617,11 +2594,9 @@
     "acte": 1,
     "zone": "Sous-sombre (Underdark), Grotte de Bibberbang",
     "obtention": "Sur un squelette situé sur une corniche de la Grotte de Bibberbang, au nord-ouest du Sous-sombre — nécessite de sauter de corniche en corniche pour l'atteindre.",
-    "effet": "Améliore la connaissance du porteur en Nature et en Survie.",
+    "effet": "+1 en Nature, +1 en Survie.",
     "verifie": true,
-    "aConfirmer": [
-      "effetExact"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -2636,8 +2611,7 @@
     "effet": "Permet de concentrer et décharger les Charges de foudre du porteur pour renforcer son prochain sort de foudre ; permet aussi de lancer Vague tonnante.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "effetExact"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -2678,11 +2652,9 @@
     "acte": 1,
     "zone": "Sous-sombre (Underdark), Crique fétide",
     "obtention": "Trouvée dans la Crique fétide (Festering Cove), dans le Sous-sombre.",
-    "effet": "Faucille infusée de la puissance de BOOOAL — inflige 2d4 dégâts tranchants au lieu d'1d4 pour une faucille normale.",
+    "effet": "Faucille infusée de la puissance de BOOOAL — inflige 2d4 dégâts tranchants au lieu d'1d4 pour une faucille normale. Action d'arme Lacération (repos court) : fait Saigner la cible. Bénédiction de BOOOAL : avantage aux jets d'attaque contre les cibles qui Saignent, tant que des Kuo-toa existent pour vénérer BOOOAL (condition perdue après un repos long avec l'arme en inventaire).",
     "verifie": true,
-    "aConfirmer": [
-      "effetComplet"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -2752,9 +2724,7 @@
     "obtention": "Portée par le duergar Gekh Coal, non loin de l'entrée du Village délabré — à looter après l'avoir vaincu.",
     "effet": "Fléau des nuisibles : inflige 1d6 dégâts de feu supplémentaires aux plantes, myconides et créatures de taille Petite.",
     "verifie": true,
-    "aConfirmer": [
-      "zoneExacte"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
@@ -2830,10 +2800,9 @@
     "acte": 1,
     "zone": "Forgefer (Grymforge), Lac de lave",
     "obtention": "Dans un coffre en adamantium verrouillé et piégé au bord du Lac de lave de Forgefer (clé adamantine sur un squelette voisin, ou crochetage DD 20). Déclenche la quête Aider le moine maudit, dont la résolution finale a lieu plus tard dans l'aventure.",
-    "effet": "Version initiale (Rare) : octroie le sort Fracas et la Restauration de Ki, mais impose un jet de sauvegarde de Sagesse à chaque usage (échec = Hystérie). En refusant la malédiction du moine, la version obtenue (Très rare) permet de lancer Fracas sans jet de sauvegarde (recharge au repos long) et améliore la Restauration de Ki. Accepter la malédiction retire tous les effets magiques de l'amulette.",
+    "effet": "Version initiale (Rare) : octroie le sort Fracas (lancé comme un sort de niveau 2, repos court) et la Restauration de Ki mineure (2 points de Ki, repos long), mais impose un jet de sauvegarde de Sagesse à chaque usage de Fracas (DD 10, qui grimpe à 15 puis 20 selon les événements de l'Acte 3) — un échec inflige Hystérie (1 tour, équivalent à Rire hideux de Tasha). En refusant la malédiction du moine, la version obtenue (Très rare) permet de lancer Fracas sans jet de sauvegarde et améliore la Restauration de Ki. Accepter la malédiction retire tous les effets magiques de l'amulette.",
     "verifie": true,
     "aConfirmer": [
-      "effetComplet",
       "acte"
     ],
     "alignement": "neutre"
@@ -3297,8 +3266,7 @@
     "effet": "+1 aux jets de sauvegarde. Si le porteur devient Aveuglé, Neutralisé ou Empoisonné, lance automatiquement Délivrance mineure sur lui-même (pas de limite par repos). Ne fonctionne pas si c'est Isobel elle-même qui les porte.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "obtention"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -3311,11 +3279,10 @@
     "acte": 2,
     "zone": "Auberge de l'Ultime Lueur — objet lié à Isobel",
     "obtention": "Portée par Isobel ; récupérable en la tuant après le dénouement de l'affaire de la Chanteuse nocturne mais avant l'assaut sur les Tours de Hautelune.",
-    "effet": "CA 10 + mod. de Dextérité. Avantage aux jets de sauvegarde de Constitution, +1 aux jets de sauvegarde. Octroie un cantrip de flamme (1d8 dégâts de feu) et l'action Rempart lunaire (repos long). Protection de Sélûne : chaque jet de sauvegarde réussi inflige 1d4 dégâts radiants à la source de l'effet (nécessite Armure du mage active).",
+    "effet": "CA 10 + mod. de Dextérité. Avantage aux jets de sauvegarde de Constitution, +1 aux jets de sauvegarde. Octroie un cantrip de flamme (1d8 dégâts de feu) et l'action Rempart lunaire (repos long). Protection de Sélûne : chaque jet de sauvegarde réussi contre un sort inflige 1d4 dégâts radiants à son lanceur — nécessite le sort Armure du mage classique actif (pas le Rempart lunaire de la robe elle-même, malgré ce que suggère l'infobulle en jeu) ; ne se déclenche pas contre des attaques d'arme ou effets non magiques.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "effetProtectionSelune"
+      "nomFr"
     ],
     "alignement": "sombre",
     "alignementNote": "Nécessite de tuer Isobel — route non-bienveillante.",
@@ -3963,11 +3930,10 @@
     "acte": 2,
     "zone": "Maison de guérison (House of Healing), Reithwin",
     "obtention": "Dans une caisse surmontée d'une note, au rez-de-chaussée de la Maison de guérison, près de l'échelle en bois.",
-    "effet": "Permet de lancer Charme-personne (sort de niveau 1), une fois par repos long ou court selon les sources — recharge exacte non confirmée avec certitude.",
+    "effet": "Permet de lancer Charme-personne (sort de niveau 1), une fois par repos court.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "effet"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -3980,11 +3946,10 @@
     "acte": 2,
     "zone": "Maison de guérison (House of Healing), Reithwin",
     "obtention": "Portée par Malus Thorm à la Maison de guérison ; à récupérer en le vainquant ou en le détroussant.",
-    "effet": "Une fois par repos long, un coup critique porté à un humanoïde peut le Paralyser ou le Neutraliser pendant 2 tours (les sources divergent sur la condition exacte).",
+    "effet": "Une fois par repos long, un coup critique porté à un humanoïde peut le Paralyser pendant 2 tours.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "effet"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -4061,9 +4026,7 @@
     "obtention": "Version Rare (CA 16) : posée au sol à côté de l'autel, dans la salle secrète de la Bibliothèque silencieuse (Gantelet de Shar). Version Très rare (CA 17) : offerte à Ombrecœur en récompense si le Chant-nocturne (Nightsong) est tuée plutôt qu'épargnée, en Ombreterre.",
     "effet": "Avantage aux jets de sauvegarde de Constitution ; avantage aux tests de Discrétion tant que Dissimulé dans l'ombre. Action bonus Égide de Shar (repos long) : sur la version Rare, +2 à la Classe d'Armure ; sur la version Très rare, active un Bouclier de la Foi qui réduit les dégâts subis de 2 et renvoie 1d4 dégâts nécrotiques à l'attaquant.",
     "verifie": true,
-    "aConfirmer": [
-      "versionChoix"
-    ],
+    "aConfirmer": [],
     "alignement": "restreint",
     "alignementNote": "La version Très rare (CA 17, Bouclier de la Foi) n'est obtenue qu'en tuant le Chant-nocturne ; la version Rare (CA 16) est disponible indépendamment de ce choix."
   },
@@ -4095,8 +4058,7 @@
     "effet": "Arc court +2. Précision voilée : +1d4 aux jets d'attaque à distance tant que le porteur est Dissimulé. Actions d'arme Tir aveuglant et Tir aux jarrets, rechargées au repos court.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "zone"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -4112,8 +4074,7 @@
     "effet": "Coutille +2 infligeant 1d4 dégâts radiants supplémentaires et diffusant une lumière permanente dans un rayon de 6 m. Actions d'arme Charge, Lacération et Position défensive. Action spéciale Papillons du clair de lune (repos court) : frappe un ennemi et invoque un essaim de papillons illusoires donnant l'Avantage aux attaques contre lui.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "zone"
+      "nomFr"
     ],
     "alignement": "restreint",
     "alignementNote": "Nécessite d'épargner et de libérer le Chant-nocturne (Nightsong) plutôt que de la tuer — chemin mutuellement exclusif avec la version Très rare de la Demi-plate de tribun de la nuit."
@@ -4922,8 +4883,7 @@
     "effet": "Premier sang : sur un coup réussi contre une cible à PV maximum, inflige la condition Saignement. Sert aussi de clé de quête pour accéder au Temple de Bhaal.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "rarete"
+      "nomFr"
     ],
     "alignement": "sombre",
     "alignementNote": "Réservée à la route « Assassin impie de Bhaal » — nécessite de tuer Valeria et de rejoindre le culte de Bhaal. Incompatible avec une run bienveillante.",
@@ -5130,8 +5090,7 @@
     "effet": "Sur un coup critique avec une arme ou une attaque à mains nues, inflige 7 dégâts supplémentaires. Se cumule si plusieurs armes portant l'effet « vicieux » sont équipées simultanément.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "sourceUnique"
+      "nomFr"
     ],
     "alignement": "neutre",
     "alignementNote": "La source du Tribunal du Meurtre nécessite d'avoir accepté de devenir Assassin impie de Bhaal ; l'autre source (Repaire de Highberry) est accessible sans cette contrainte."
@@ -5226,13 +5185,12 @@
     "type": "Masse d'armes",
     "rarete": "Rare",
     "acte": 3,
-    "zone": "Fort de Wyrm's Rock / Fonderie de la Garde d'acier (butin générique des Gantelets noirs de Bane)",
-    "obtention": "Butin sur les Gantelets noirs de Bane (gardes de Gortash) — ce type d'ennemi peut apparaître à plusieurs endroits (salle d'audience du Fort de Wyrm's Rock, Fonderie de la Garde d'acier, Pyrotechnie de Felogyr) : l'obtention n'est pas garantie à une seule zone.",
+    "zone": "Fonderie de la Garde d'acier",
+    "obtention": "Porté par l'un des cinq Gantelets noirs de Bane nommés (Borri Paver, Hahns Rives, Ifran, Indora Ralston, Tamia Holzt) à la Fonderie de la Garde d'acier.",
     "effet": "Masse +2. Sur un coup réussi, inflige 3 dégâts de poison supplémentaires et peut infliger la condition Empoisonné (jet de sauvegarde de Constitution DD 12). Action d'arme Frappe percutante : inflige des dégâts et peut étourdir la cible (repos court).",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "zoneExclusive"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -5468,8 +5426,7 @@
     "effet": "Permet de lancer à volonté un cantrip de type Trait de feu, avec une chance sur 20 de déclencher une Boule de feu à la place. Un bug documenté empêche les dégâts de dépasser 1d8. Avec maîtrise, action Renversement (repos court).",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "loterieConsolation"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -5485,8 +5442,7 @@
     "effet": "Hachette +1. Une fois lancée, revient automatiquement vers le lanceur, lui infligeant au passage des dégâts contondants. Action Lacération (repos court) : inflige un saignement.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "loterieConsolation"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -5502,8 +5458,7 @@
     "effet": "Octroie l'action bonus Pas brumeux déshabillant (récupération à chaque tour) : téléporte le porteur vers un espace visible, mais ses vêtements ne le suivent pas.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "loterieConsolation"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -5519,8 +5474,7 @@
     "effet": "Applique en permanence la condition Trempé au porteur : immunité à la Brûlure, résistance au feu, vulnérabilité à la foudre et au froid. La condition disparaît au repos mais revient dès que la cape est reportée.",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "loterieConsolation"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -5536,8 +5490,7 @@
     "effet": "+2 en Escamotage. Chaque vol réussi ajoute un morceau de charbon à l'inventaire. Après 20 vols, le vol suivant produit un seau de charbon ardent, infligeant la Brûlure (annulable si Trempé).",
     "verifie": true,
     "aConfirmer": [
-      "nomFr",
-      "loterieConsolation"
+      "nomFr"
     ],
     "alignement": "neutre"
   },
@@ -5656,9 +5609,7 @@
     "obtention": "Fabriqué en combinant (clic droit) l'Anneau sans gemme — loté sur un cadavre de réfugié au nord-est de Rivington — avec la Gemme sans anneau, achetée à Ferg Drogher près de la Grange réquisitionnée.",
     "effet": "Aucun effet mécanique connu : ne sert qu'à être revendu aux marchands pour environ 40 pièces d'or.",
     "verifie": true,
-    "aConfirmer": [
-      "rarete"
-    ],
+    "aConfirmer": [],
     "alignement": "neutre"
   },
   {
