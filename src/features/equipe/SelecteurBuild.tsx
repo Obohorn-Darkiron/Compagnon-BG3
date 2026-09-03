@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ClasseIcon } from '../../components/ClasseIcon'
 import { ChevronLeft } from '../../components/icons'
 import {
+  builds,
   buildsPourClasse,
   buildsPourClasseEtSousClasse,
   classesDisponibles,
@@ -10,7 +11,7 @@ import {
   type Build,
 } from '../../data'
 import type { ElementTag } from '../../data/types'
-import { LABELS_ELEMENT } from '../../components/elementLabels'
+import { LABELS_ELEMENT, NOTE_ELEMENT_FAIBLE } from '../../components/elementLabels'
 import { SousClasseCard } from './SousClasseCard'
 import { BuildCandidatCard } from './BuildCandidatCard'
 
@@ -46,6 +47,12 @@ export function SelecteurBuild({
   const candidats = elementFiltre
     ? candidatsBruts.filter((b) => b.elements.includes(elementFiltre))
     : candidatsBruts
+
+  const nbBuildsPourElement = elementFiltre
+    ? builds.filter((b) => b.elements.includes(elementFiltre)).length
+    : 0
+  const noteElementFaible =
+    elementFiltre && nbBuildsPourElement <= 2 ? NOTE_ELEMENT_FAIBLE[elementFiltre] : undefined
 
   function fermer() {
     setOuvert(false)
@@ -131,6 +138,13 @@ export function SelecteurBuild({
           </button>
         ))}
       </div>
+
+      {elementFiltre && nbBuildsPourElement <= 2 && (
+        <p className="mb-3 rounded-lg border border-glow/30 bg-glow/5 px-3 py-2.5 text-xs leading-relaxed text-ink-muted">
+          {noteElementFaible ??
+            `Peu de builds misent sur ${LABELS_ELEMENT[elementFiltre]} dans le catalogue actuel — ce n'est pas forcément un oubli, certains dégâts sont juste peu représentés en sorts/objets dédiés dans BG3.`}
+        </p>
+      )}
 
       <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-muted">Classe</p>
       {classesAffichees.length === 0 ? (

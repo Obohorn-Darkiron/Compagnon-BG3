@@ -3,7 +3,7 @@ import { PageHeader } from '../../components/PageHeader'
 import { Search } from '../../components/icons'
 import { builds, estMulticlasse, getObjet, nomAffiche } from '../../data'
 import type { ElementTag } from '../../data/types'
-import { LABELS_ELEMENT } from '../../components/elementLabels'
+import { LABELS_ELEMENT, NOTE_ELEMENT_FAIBLE } from '../../components/elementLabels'
 import { BuildCard } from './BuildCard'
 
 type FiltreClasse = 'tous' | 'mono' | 'multi'
@@ -48,6 +48,12 @@ export function BuildsListPage() {
         return champs.some((champ) => champ.toLowerCase().includes(q))
       })
   }, [recherche, filtre, elementActif])
+
+  const nbBuildsPourElement = useMemo(
+    () => (elementActif ? builds.filter((b) => b.elements.includes(elementActif)).length : 0),
+    [elementActif],
+  )
+  const noteElementFaible = elementActif && nbBuildsPourElement <= 2 ? NOTE_ELEMENT_FAIBLE[elementActif] : undefined
 
   return (
     <div>
@@ -100,6 +106,12 @@ export function BuildsListPage() {
       </PageHeader>
 
       <div className="flex flex-col gap-3 px-4 py-4">
+        {elementActif && nbBuildsPourElement <= 2 && (
+          <p className="rounded-lg border border-glow/30 bg-glow/5 px-3 py-2.5 text-xs leading-relaxed text-ink-muted">
+            {noteElementFaible ??
+              `Peu de builds misent sur ${LABELS_ELEMENT[elementActif]} dans le catalogue actuel — ce n'est pas forcément un oubli, certains dégâts sont juste peu représentés en sorts/objets dédiés dans BG3.`}
+          </p>
+        )}
         {resultats.map((build) => (
           <BuildCard key={build.id} build={build} />
         ))}

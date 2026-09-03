@@ -8750,7 +8750,7 @@
     "nom": "Magicien Devin (fiabilisation)",
     "split": "Magicien 12 (classe unique)",
     "role": "Soutien de fiabilité / Contrôle",
-    "resume": "Magicien capable de manipuler la chance : force un jet de dé (le sien ou celui d'un ennemi) à être relancé — excellent pour sécuriser les moments critiques du groupe.",
+    "resume": "Magicien capable de manipuler la chance : force un jet de dé (le sien ou celui d'un ennemi) à être relancé — excellent pour sécuriser les moments critiques du groupe. Garde aussi Orbe chromatique dès le niveau 1, le seul sort du jeu qui choisit son type de dégâts (acide, froid, feu, foudre, poison ou tonnerre) au moment de le lancer.",
     "caracDepart": {
       "FOR": 8,
       "DEX": 14,
@@ -8762,6 +8762,7 @@
     "forces": [
       "Excellent pour fiabiliser les moments critiques",
       "Bon soutien pour tout le groupe",
+      "Orbe chromatique choisit son élément selon la résistance adverse — jamais un sort gâché",
       "Bibliothèque de sorts immense"
     ],
     "faiblesses": [
@@ -8774,11 +8775,16 @@
       "+2 Intelligence (niv 12)"
     ],
     "sortsCles": [
+      "Orbe chromatique (Chromatic Orb)",
       "Immobilisation de monstre",
       "Boule de feu",
       "Contresort"
     ],
     "jalons": [
+      {
+        "etape": "Niv 1",
+        "note": "Orbe chromatique : choisit son élément (acide, froid, feu, foudre, poison ou tonnerre) selon la résistance de la cible."
+      },
       {
         "etape": "Niv 2 (sous-classe)",
         "note": "Présages : deux dés en réserve pour forcer une relance (le sien ou celui d'un ennemi)."
@@ -8788,7 +8794,7 @@
       {
         "niveau": 1,
         "titre": "Magicien 1",
-        "detail": "Lanceur de sorts et Récupération arcanique."
+        "detail": "Lanceur de sorts et Récupération arcanique. Orbe chromatique (sort de niveau 1) : choisit son type de dégâts au moment du lancer — acide, froid, feu, foudre, poison (2d8) ou tonnerre (3d8) — pour toujours viser la résistance la plus faible de la cible."
       },
       {
         "niveau": 2,
@@ -8913,7 +8919,12 @@
       "degatsDistance"
     ],
     "elements": [
-      "feu"
+      "feu",
+      "glace",
+      "foudre",
+      "poison",
+      "acide",
+      "tonnerre"
     ]
   },
   {
