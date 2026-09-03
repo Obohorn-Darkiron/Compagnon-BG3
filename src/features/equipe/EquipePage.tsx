@@ -5,7 +5,7 @@ import { Sparkles } from '../../components/icons'
 import { builds } from '../../data'
 import { saveStore, useSaveData } from '../../storage/useSaveData'
 import { lireJoueurId } from '../../storage/identite'
-import { quitterSession } from '../../session/sessionSync'
+import { detacherSessionsPourCampagnes, retirerPersonnageDeSession } from '../../session/sessionSync'
 import { NouveauPersonnageForm } from './NouveauPersonnageForm'
 import { GroupeApercu } from './GroupeApercu'
 import { CompagnonsSuivi } from './CompagnonsSuivi'
@@ -145,33 +145,51 @@ export function EquipePage() {
           const build = builds.find((b) => b.id === perso.buildId)
           const estCoequipier = perso.proprietaireId !== null && perso.proprietaireId !== lireJoueurId()
           return (
-            <Link
-              key={perso.id}
-              to={`/equipe/${perso.id}`}
-              className="flex items-center justify-between gap-3 rounded-xl border border-border bg-surface p-4 active:bg-surface-raised"
-            >
-              <div className="min-w-0">
-                <div className="flex items-center gap-1.5">
-                  <p className="truncate font-title text-lg font-semibold text-ink">{perso.nom}</p>
-                  {perso.compagnonNom && (
-                    <span className="shrink-0 rounded-full border border-glow/40 bg-glow/10 px-1.5 py-0.5 text-[10px] font-medium text-glow">
-                      Compagnon
-                    </span>
-                  )}
-                  {estCoequipier && (
-                    <span className="shrink-0 rounded-full border border-border px-1.5 py-0.5 text-[10px] font-medium text-ink-muted">
-                      Coéquipier
-                    </span>
-                  )}
+            <div key={perso.id} className="rounded-xl border border-border bg-surface">
+              <Link
+                to={`/equipe/${perso.id}`}
+                className="flex items-center justify-between gap-3 p-4 active:bg-surface-raised"
+              >
+                <div className="min-w-0">
+                  <div className="flex items-center gap-1.5">
+                    <p className="truncate font-title text-lg font-semibold text-ink">{perso.nom}</p>
+                    {perso.compagnonNom && (
+                      <span className="shrink-0 rounded-full border border-glow/40 bg-glow/10 px-1.5 py-0.5 text-[10px] font-medium text-glow">
+                        Compagnon
+                      </span>
+                    )}
+                    {estCoequipier && (
+                      <span className="shrink-0 rounded-full border border-border px-1.5 py-0.5 text-[10px] font-medium text-ink-muted">
+                        Coéquipier
+                      </span>
+                    )}
+                  </div>
+                  <p className="truncate text-sm text-ink-muted">
+                    {build ? build.nom : 'Build à définir'}
+                  </p>
                 </div>
-                <p className="truncate text-sm text-ink-muted">
-                  {build ? build.nom : 'Build à définir'}
-                </p>
-              </div>
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gold-soft text-sm font-semibold text-gold">
-                {perso.niveau}
-              </div>
-            </Link>
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gold-soft text-sm font-semibold text-gold">
+                  {perso.niveau}
+                </div>
+              </Link>
+              {estCoequipier && campagneActive.sessionCode && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (
+                      confirm(
+                        `Retirer ${perso.nom} de la session ? Utile si cette personne ne revient pas — elle pourra recréer son personnage si elle rejoint plus tard.`,
+                      )
+                    ) {
+                      void retirerPersonnageDeSession(campagneActive.id, campagneActive.sessionCode!, perso.id)
+                    }
+                  }}
+                  className="w-full border-t border-border py-2 text-xs text-essentiel"
+                >
+                  Retirer de la session
+                </button>
+              )}
+            </div>
           )
         })}
 
@@ -183,7 +201,7 @@ export function EquipePage() {
       <div className="px-4 pb-6">
         <button
           type="button"
-          onClick={async () => {
+          onClick={() => {
             if (
               !confirm(
                 `Supprimer la campagne "${campagneActive.nom}" et ses ${campagneActive.personnages.length} personnage(s) ?`,
@@ -191,9 +209,10 @@ export function EquipePage() {
             ) {
               return
             }
-            // Quitte proprement une éventuelle session de groupe AVANT d'effacer la campagne :
-            // sinon le personnage reste orphelin pour toujours côté Firebase (voir sessionSync).
-            await quitterSession(campagneActive.id)
+            // Détache localement une éventuelle session de groupe (sans y toucher côté Firebase) :
+            // un personnage de coéquipier peut être retiré manuellement par n'importe qui si besoin,
+            // ou récupéré en revenant plus tard avec le même code.
+            detacherSessionsPourCampagnes([campagneActive.id])
             saveStore.supprimerCampagne(campagneActive.id)
           }}
           className="w-full rounded-lg border border-essentiel/40 py-2.5 text-sm text-essentiel"

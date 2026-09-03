@@ -176,10 +176,27 @@ export async function rejoindreSession(
     return { ok: false, erreur: err instanceof Error ? err.message : 'Erreur inconnue.' }
   }
   if (!existe) return { ok: false, erreur: 'Aucune session ne correspond à ce code.' }
+  const monId = lireJoueurId()
   // Si cette personne avait créé la session à l'origine (même appareil, même joueurId) et la
   // rejoint après l'avoir quittée (reset, campagne supprimée...), elle retrouve son statut de
   // créateur au lieu de perdre silencieusement le bouton "Supprimer pour tout le monde".
-  saveStore.definirSession(campagneId, code, creePar === lireJoueurId())
+  saveStore.definirSession(campagneId, code, creePar === monId)
+
+  // Si mon (mes) personnage(s) existent déjà dans cette session — par exemple après un reset
+  // local ou un changement d'appareil — on les récupère au lieu de repartir de zéro comme si je
+  // n'avais jamais joué.
+  if (database) {
+    try {
+      const snapshotPersonnages = await get(ref(database, `sessions/${code}/personnages`))
+      snapshotPersonnages.forEach((enfant) => {
+        const ligne = enfant.val() as LignePersonnage
+        if (ligne.joueurId === monId) saveStore.appliquerPersonnageDistant(campagneId, ligne.data)
+      })
+    } catch (err) {
+      console.error('Échec de la récupération des personnages déjà présents :', err)
+    }
+  }
+
   ecouterSession(campagneId, code)
   return { ok: true }
 }
@@ -203,6 +220,29 @@ export async function quitterSession(campagneId: string) {
     if (!restants.exists()) await remove(ref(db, `sessions/${sessionCode}`))
   } catch (err) {
     console.error('Échec du nettoyage de session en quittant :', err)
+  }
+}
+
+/**
+ * Retire UN personnage précis d'une session — le sien ou celui d'un coéquipier. Accessible à
+ * n'importe quel membre de la session (pas seulement au créateur) : c'est un geste de ménage
+ * ciblé et peu risqué, contrairement à la suppression de toute la session. Supprime aussi la
+ * session entière si c'était le dernier personnage qui y restait.
+ */
+export async function retirerPersonnageDeSession(
+  campagneId: string,
+  sessionCode: string,
+  personnageId: string,
+): Promise<{ ok: true } | { ok: false; erreur: string }> {
+  if (!database) return { ok: false, erreur: 'La fonction de session n’est pas encore configurée.' }
+  try {
+    await remove(ref(database, `sessions/${sessionCode}/personnages/${personnageId}`))
+    saveStore.retirerPersonnageDistant(campagneId, personnageId)
+    const restants = await get(ref(database, `sessions/${sessionCode}/personnages`))
+    if (!restants.exists()) await remove(ref(database, `sessions/${sessionCode}`))
+    return { ok: true }
+  } catch (err) {
+    return { ok: false, erreur: err instanceof Error ? err.message : 'Erreur inconnue.' }
   }
 }
 
@@ -233,14 +273,20 @@ export function reprendreSessionsActives() {
 }
 
 /**
- * À appeler AVANT toute suppression locale (réinitialisation complète, suppression d'une
- * campagne) qui efface une campagne liée à une session de groupe. Sans ça, l'état local disparaît
- * avant que la session ait pu être quittée proprement : le personnage reste orphelin pour
- * toujours côté Firebase, visible indéfiniment par les autres joueurs comme un profil qui ne se
- * met plus jamais à jour.
+ * Détache une campagne de sa session UNIQUEMENT en local (arrête d'écouter, oublie le code) —
+ * ne touche jamais aux données Firebase. Pour "Réinitialiser mes données" ou "Supprimer cette
+ * campagne" : ce ne sont pas des actions "je quitte le groupe", ça peut être un simple ménage
+ * local (téléphone changé, appli buggée...). Le personnage reste visible pour les autres joueurs
+ * — récupérable en revenant avec le même code, ou supprimable par n'importe quel membre via
+ * retirerPersonnageDeSession si la personne ne revient pas.
  */
-export async function quitterSessionsPourCampagnes(campagneIds: string[]) {
-  for (const campagneId of campagneIds) {
-    await quitterSession(campagneId)
-  }
+function detacherSessionLocalement(campagneId: string) {
+  arreterEcoute(campagneId)
+  saveStore.definirSession(campagneId, null)
+}
+
+/** À appeler AVANT toute réinitialisation ou suppression de campagne locale, pour chaque
+ * campagne concernée — voir detacherSessionLocalement. */
+export function detacherSessionsPourCampagnes(campagneIds: string[]) {
+  for (const campagneId of campagneIds) detacherSessionLocalement(campagneId)
 }
