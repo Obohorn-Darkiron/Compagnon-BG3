@@ -1,7 +1,12 @@
 import { useState } from 'react'
 import { Section } from '../../components/Section'
 import type { Campagne } from '../../storage/useSaveData'
-import { creerSession, quitterSession, rejoindreSession } from '../../session/sessionSync'
+import {
+  creerSession,
+  quitterSession,
+  rejoindreSession,
+  supprimerSessionEtQuitter,
+} from '../../session/sessionSync'
 import { sessionDisponible } from '../../session/firebaseClient'
 
 export function SessionSection({ campagne }: { campagne: Campagne }) {
@@ -53,13 +58,49 @@ export function SessionSection({ campagne }: { campagne: Campagne }) {
               : `${nbJoueurs} joueurs connectés à cette session.`}
           </p>
         </div>
-        <button
-          type="button"
-          onClick={() => quitterSession(campagne.id)}
-          className="mt-2 w-full rounded-lg border border-essentiel/40 py-2 text-xs text-essentiel"
-        >
-          Quitter la session
-        </button>
+        {erreur && <p className="mt-2 text-xs text-essentiel">{erreur}</p>}
+        <div className="mt-2 flex flex-col gap-2">
+          <button
+            type="button"
+            disabled={enCours}
+            onClick={() => {
+              setEnCours(true)
+              void quitterSession(campagne.id).finally(() => setEnCours(false))
+            }}
+            className="w-full rounded-lg border border-essentiel/40 py-2 text-xs text-essentiel disabled:opacity-40"
+          >
+            Quitter la session
+          </button>
+          {campagne.sessionEstProprietaire && (
+            <button
+              type="button"
+              disabled={enCours}
+              onClick={() => {
+                if (
+                  !confirm(
+                    "Supprimer cette session pour tout le monde ? Les autres joueurs seront déconnectés et perdront le lien de synchronisation.",
+                  )
+                ) {
+                  return
+                }
+                setEnCours(true)
+                setErreur(null)
+                void supprimerSessionEtQuitter(campagne.id, campagne.sessionCode!).then((resultat) => {
+                  setEnCours(false)
+                  if (!resultat.ok) setErreur(resultat.erreur)
+                })
+              }}
+              className="w-full rounded-lg border border-essentiel bg-essentiel/10 py-2 text-xs font-medium text-essentiel disabled:opacity-40"
+            >
+              Supprimer la session pour tout le monde
+            </button>
+          )}
+          {!campagne.sessionEstProprietaire && (
+            <p className="text-center text-[11px] text-ink-muted">
+              Seul le créateur de la session peut la supprimer pour tout le monde.
+            </p>
+          )}
+        </div>
       </Section>
     )
   }

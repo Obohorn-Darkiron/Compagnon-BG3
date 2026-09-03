@@ -29,6 +29,7 @@ function normaliserCampagne(c: Partial<Campagne>): Campagne {
     personnages: (c.personnages ?? []).map(normaliserPersonnage),
     compagnonsRecrutes: c.compagnonsRecrutes ?? [],
     sessionCode: c.sessionCode ?? null,
+    sessionEstProprietaire: c.sessionEstProprietaire ?? false,
   }
 }
 
@@ -92,6 +93,7 @@ export const saveStore = {
       personnages: [],
       compagnonsRecrutes: [],
       sessionCode: null,
+      sessionEstProprietaire: false,
     }
     majEtat({
       ...etat,
@@ -299,7 +301,7 @@ export const saveStore = {
 
   /** Associe (ou retire, avec code=null) une campagne à une session de groupe partagée.
    * Quitter une session détache les personnages des autres joueurs (ils ne sont plus synchronisés). */
-  definirSession(campagneId: string, code: string | null) {
+  definirSession(campagneId: string, code: string | null, estProprietaire = false) {
     const monId = lireJoueurId()
     majEtat({
       ...etat,
@@ -309,6 +311,7 @@ export const saveStore = {
           return {
             ...c,
             sessionCode: code,
+            sessionEstProprietaire: estProprietaire,
             // Les personnages déjà présents avant la session deviennent les miens (synchronisés).
             personnages: c.personnages.map((p) =>
               p.proprietaireId === null ? { ...p, proprietaireId: monId } : p,
@@ -318,6 +321,7 @@ export const saveStore = {
         return {
           ...c,
           sessionCode: null,
+          sessionEstProprietaire: false,
           personnages: c.personnages.filter((p) => p.proprietaireId === null || p.proprietaireId === monId),
         }
       }),

@@ -31,6 +31,8 @@ export interface Campagne {
   compagnonsRecrutes: string[]
   /** Code de session de groupe partagée (ex. "K7XQ2M"). Null = campagne purement locale. */
   sessionCode: string | null
+  /** true si CE joueur a créé la session en cours — seul lui peut la supprimer pour tout le monde. */
+  sessionEstProprietaire: boolean
 }
 
 export interface SaveData {

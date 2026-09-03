@@ -3,6 +3,7 @@ import {
   onChildAdded,
   onChildChanged,
   onChildRemoved,
+  onValue,
   ref,
   remove,
   serverTimestamp,
@@ -114,7 +115,21 @@ function ecouterSession(campagneId: string, sessionCode: string) {
     if (snap.key) saveStore.retirerPersonnageDistant(campagneId, snap.key)
   })
 
-  ecoutes.set(campagneId, [arreterAjout, arreterModif, arreterRetrait])
+  // Si la session disparaît côté serveur (le propriétaire l'a supprimée, ou le dernier joueur
+  // vient de la vider), on se détache localement au lieu de rester connecté dans le vide.
+  let premierAppel = true
+  const arreterSurveillanceSession = onValue(ref(database, `sessions/${sessionCode}/creeLe`), (snap) => {
+    if (premierAppel) {
+      premierAppel = false
+      return
+    }
+    if (!snap.exists()) {
+      arreterEcoute(campagneId)
+      saveStore.definirSession(campagneId, null)
+    }
+  })
+
+  ecoutes.set(campagneId, [arreterAjout, arreterModif, arreterRetrait, arreterSurveillanceSession])
 }
 
 function arreterEcoute(campagneId: string) {
@@ -132,10 +147,11 @@ export async function creerSession(
   const code = genererCode()
   try {
     await set(ref(database, `sessions/${code}/creeLe`), serverTimestamp())
+    await set(ref(database, `sessions/${code}/creePar`), lireJoueurId())
   } catch (err) {
     return { ok: false, erreur: err instanceof Error ? err.message : 'Erreur inconnue.' }
   }
-  saveStore.definirSession(campagneId, code)
+  saveStore.definirSession(campagneId, code, true)
   ecouterSession(campagneId, code)
   return { ok: true, code }
 }
@@ -155,14 +171,48 @@ export async function rejoindreSession(
     return { ok: false, erreur: err instanceof Error ? err.message : 'Erreur inconnue.' }
   }
   if (!existe) return { ok: false, erreur: 'Aucune session ne correspond à ce code.' }
-  saveStore.definirSession(campagneId, code)
+  saveStore.definirSession(campagneId, code, false)
   ecouterSession(campagneId, code)
   return { ok: true }
 }
 
-export function quitterSession(campagneId: string) {
+/** Quitte la session : retire mes personnages côté serveur, et supprime la session entière si
+ * plus personne n'y a de personnage (dernier joueur parti = plus rien à synchroniser). */
+export async function quitterSession(campagneId: string) {
+  const monId = lireJoueurId()
+  const campagne = saveStore.getSnapshot().campagnes.find((c) => c.id === campagneId)
+  const sessionCode = campagne?.sessionCode
+
   arreterEcoute(campagneId)
   saveStore.definirSession(campagneId, null)
+
+  const db = database
+  if (!db || !sessionCode) return
+  try {
+    const mesPersonnages = campagne?.personnages.filter((p) => p.proprietaireId === monId) ?? []
+    await Promise.all(mesPersonnages.map((p) => remove(ref(db, `sessions/${sessionCode}/personnages/${p.id}`))))
+    const restants = await get(ref(db, `sessions/${sessionCode}/personnages`))
+    if (!restants.exists()) await remove(ref(db, `sessions/${sessionCode}`))
+  } catch (err) {
+    console.error('Échec du nettoyage de session en quittant :', err)
+  }
+}
+
+/** Réservé au créateur de la session : la supprime pour tout le monde (personnages de tous les
+ * joueurs compris), pas seulement pour soi. */
+export async function supprimerSessionEtQuitter(
+  campagneId: string,
+  sessionCode: string,
+): Promise<{ ok: true } | { ok: false; erreur: string }> {
+  arreterEcoute(campagneId)
+  saveStore.definirSession(campagneId, null)
+  if (!database) return { ok: true }
+  try {
+    await remove(ref(database, `sessions/${sessionCode}`))
+    return { ok: true }
+  } catch (err) {
+    return { ok: false, erreur: err instanceof Error ? err.message : 'Erreur inconnue.' }
+  }
 }
 
 /** À appeler au démarrage de l'app pour reprendre l'écoute des campagnes déjà en session. */
