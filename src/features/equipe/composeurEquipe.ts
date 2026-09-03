@@ -338,11 +338,22 @@ interface OptionsScore {
   synergiesSurprenantes: boolean
 }
 
+/**
+ * Rendements décroissants : le 1er besoin comblé par un candidat compte plein, les suivants de
+ * moins en moins. Sans ça, un profil "touche-à-tout" qui comble 3 besoins à la fois écrase
+ * mathématiquement tout spécialiste mono-rôle, et les mêmes classes généralistes reviennent sans
+ * arrêt quel que soit le contexte — ce n'était pas un manque d'idées, c'est un biais du calcul.
+ */
+const POIDS_BESOIN_COMBLE = [25, 13, 7, 4]
+
 function scoreCandidat(candidat: Build, o: OptionsScore): number {
   let score = 0
-  for (const bucket of bucketsCouverts(candidat)) {
-    score += o.besoins[bucket] > 0 ? 25 : 6
-  }
+  const bucketsCandidat = bucketsCouverts(candidat)
+  const bucketsBesoinCombles = bucketsCandidat.filter((b) => o.besoins[b] > 0)
+  bucketsBesoinCombles.forEach((_, i) => {
+    score += POIDS_BESOIN_COMBLE[Math.min(i, POIDS_BESOIN_COMBLE.length - 1)]
+  })
+  score += (bucketsCandidat.length - bucketsBesoinCombles.length) * 6
   if (candidat.roles.includes('utilitaire')) score += 4
 
   score -= penaliteCannibalisation(candidat, o.dejaChoisis)
@@ -399,14 +410,33 @@ function raisonChoix(build: Build, besoinsAvant: Besoins, dejaChoisis: Build[]):
   return morceaux.join(' · ')
 }
 
+/** Écart de score en dessous du meilleur : au-delà, un candidat n'est plus considéré "aussi bon". */
+const ECART_QUASI_EX_AEQUO = 12
+
+/**
+ * Choisit parmi les meilleurs candidats plutôt que TOUJOURS le premier. Quand plusieurs profils
+ * sont réellement comparables (score à moins de ECART_QUASI_EX_AEQUO points du meilleur), le choix
+ * est pondéré par leur score au lieu d'être figé sur un seul gagnant — sinon la même poignée de
+ * classes "optimales" revient sans arrêt, quelle que soit la nuance de la demande.
+ */
 function meilleurCandidat(candidats: Build[], o: OptionsScore): Build | null {
   if (candidats.length === 0) return null
-  return candidats
-    .slice()
-    .sort((a, b) => {
-      const diff = scoreCandidat(b, o) - scoreCandidat(a, o)
-      return diff !== 0 ? diff : a.id.localeCompare(b.id)
-    })[0]
+  const notes = candidats
+    .map((candidat) => ({ candidat, score: scoreCandidat(candidat, o) }))
+    .sort((a, b) => b.score - a.score || a.candidat.id.localeCompare(b.candidat.id))
+
+  const seuil = notes[0].score - ECART_QUASI_EX_AEQUO
+  const finalistes = notes.filter((n) => n.score >= seuil)
+  if (finalistes.length <= 1) return notes[0].candidat
+
+  const poids = finalistes.map((n) => n.score - seuil + 1)
+  const poidsTotal = poids.reduce((s, p) => s + p, 0)
+  let tirage = Math.random() * poidsTotal
+  for (let i = 0; i < finalistes.length; i++) {
+    tirage -= poids[i]
+    if (tirage <= 0) return finalistes[i].candidat
+  }
+  return finalistes[0].candidat
 }
 
 export interface CompagnonAssigne extends CompagnonInfo {
