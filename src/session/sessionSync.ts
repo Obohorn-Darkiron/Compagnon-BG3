@@ -164,14 +164,22 @@ export async function rejoindreSession(
   const code = codeSaisi.trim().toUpperCase()
   if (!code) return { ok: false, erreur: 'Entre un code de session.' }
   let existe = false
+  let creePar: string | null = null
   try {
-    const snapshot = await get(ref(database, `sessions/${code}/creeLe`))
-    existe = snapshot.exists()
+    const [snapshotCreeLe, snapshotCreePar] = await Promise.all([
+      get(ref(database, `sessions/${code}/creeLe`)),
+      get(ref(database, `sessions/${code}/creePar`)),
+    ])
+    existe = snapshotCreeLe.exists()
+    creePar = snapshotCreePar.val()
   } catch (err) {
     return { ok: false, erreur: err instanceof Error ? err.message : 'Erreur inconnue.' }
   }
   if (!existe) return { ok: false, erreur: 'Aucune session ne correspond à ce code.' }
-  saveStore.definirSession(campagneId, code, false)
+  // Si cette personne avait créé la session à l'origine (même appareil, même joueurId) et la
+  // rejoint après l'avoir quittée (reset, campagne supprimée...), elle retrouve son statut de
+  // créateur au lieu de perdre silencieusement le bouton "Supprimer pour tout le monde".
+  saveStore.definirSession(campagneId, code, creePar === lireJoueurId())
   ecouterSession(campagneId, code)
   return { ok: true }
 }
