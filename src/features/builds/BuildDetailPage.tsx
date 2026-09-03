@@ -1,12 +1,28 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { PageHeader } from '../../components/PageHeader'
 import { Section } from '../../components/Section'
 import { ImportanceBadge } from '../../components/ImportanceBadge'
 import { CaracTable } from '../../components/CaracTable'
 import { AlignementBadge } from '../../components/AlignementBadge'
-import { alternativesPourBuild, getBuild, getObjet, nomAffiche } from '../../data'
+import { SourceAlternativeBadge } from '../../components/SourceAlternativeBadge'
+import { alternativesPourBuild, getBuild, nomAffiche } from '../../data'
 import { conseilRacePourBuild } from '../equipe/composeurEquipe'
+import { resoudreObjetPourStyle, type ObjetResolu } from '../equipe/alignementUtils'
+import type { Importance } from '../../data/types'
+
+interface EquipementResoluAffiche extends ObjetResolu {
+  emplacement: string
+  importance: Importance
+  acteAffiche: number
+}
+
+const ORDRE_IMPORTANCE: Record<Importance, number> = {
+  Essentiel: 4,
+  Excellent: 3,
+  Bon: 2,
+  Situationnel: 1,
+}
 
 type StylePreview = 'bienveillant' | 'neutre' | 'sombre' | null
 
@@ -21,6 +37,38 @@ export function BuildDetailPage() {
   const { id } = useParams<{ id: string }>()
   const build = id ? getBuild(id) : undefined
   const [stylePreview, setStylePreview] = useState<StylePreview>(null)
+
+  const equipementDeduplique = useMemo(() => {
+    if (!build) return []
+    // Une alternative peut retomber sur un objet déjà présent ailleurs dans l'équipement — on
+    // fusionne par idAffiche plutôt que d'afficher deux fois la même ligne (voir GroupeApercu).
+    const parId = new Map<string, EquipementResoluAffiche>()
+    for (const e of build.equipement) {
+      const resolu = resoudreObjetPourStyle(e.objetId, stylePreview, e.emplacement)
+      const entree: EquipementResoluAffiche = {
+        ...resolu,
+        emplacement: e.emplacement,
+        importance: e.importance,
+        acteAffiche: resolu.alternative ? resolu.alternative.acte : e.acte,
+      }
+      const existante = parId.get(resolu.idAffiche)
+      if (!existante) {
+        parId.set(resolu.idAffiche, entree)
+      } else {
+        const source = existante.alternative ? existante : entree.alternative ? entree : existante
+        parId.set(resolu.idAffiche, {
+          ...(ORDRE_IMPORTANCE[entree.importance] > ORDRE_IMPORTANCE[existante.importance]
+            ? entree
+            : existante),
+          alternative: source.alternative,
+          alternativeAutoTrouvee: source.alternativeAutoTrouvee,
+          objetOriginal: source.objetOriginal,
+          sansAlternative: existante.sansAlternative && entree.sansAlternative,
+        })
+      }
+    }
+    return [...parId.values()]
+  }, [build, stylePreview])
 
   if (!build) return <Navigate to="/builds" replace />
 
@@ -162,47 +210,48 @@ export function BuildDetailPage() {
           </p>
         )}
         <div className="flex flex-col gap-2">
-          {build.equipement.map((e, i) => {
-            const objetOriginal = getObjet(e.objetId)
-            const aAdapter =
-              stylePreview === 'bienveillant' &&
-              objetOriginal !== undefined &&
-              objetOriginal.alignement !== 'neutre'
-            const alternative =
-              aAdapter && objetOriginal?.alternative ? getObjet(objetOriginal.alternative) : undefined
+          {equipementDeduplique.map((e) => {
+            const { objetOriginal, alternative, alternativeAutoTrouvee, sansAlternative } = e
             const objetAffiche = alternative ?? objetOriginal
-            const sansAlternative = aAdapter && alternative === undefined
+            const afficherBadgeAlignement =
+              objetOriginal &&
+              !alternative &&
+              (objetOriginal.alignement === 'restreint' ||
+                (stylePreview === 'bienveillant' && objetOriginal.alignement === 'sombre'))
 
             return (
               <div
-                key={`${e.objetId}-${i}`}
+                key={e.idAffiche}
                 className="rounded-lg border border-border bg-surface px-3 py-2.5"
               >
                 <Link
-                  to={`/explorer/${objetAffiche?.id ?? e.objetId}`}
+                  to={`/explorer/${e.idAffiche}`}
                   state={{ from: `/builds/${build.id}` }}
                   className="flex items-center justify-between gap-3 active:opacity-70"
                 >
                   <div className="min-w-0">
                     <p className="truncate text-sm font-medium text-ink">
-                      {objetAffiche ? nomAffiche(objetAffiche) : e.objetId}
+                      {objetAffiche ? nomAffiche(objetAffiche) : e.idAffiche}
                     </p>
                     <p className="text-xs text-ink-muted">
-                      {e.emplacement} · Acte {alternative ? alternative.acte : e.acte}
+                      {e.emplacement} · Acte {e.acteAffiche}
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-col items-end gap-1">
                     <ImportanceBadge importance={e.importance} />
-                    {objetOriginal && !alternative && (
+                    {afficherBadgeAlignement && objetOriginal && (
                       <AlignementBadge alignement={objetOriginal.alignement} />
                     )}
                   </div>
                 </Link>
                 {alternative && objetOriginal && (
-                  <p className="mt-1.5 text-xs text-bon">
-                    Remplace {nomAffiche(objetOriginal)}
-                    {objetOriginal.alignementNote ? ` — ${objetOriginal.alignementNote}` : ''}
-                  </p>
+                  <div className="mt-1.5 flex items-center gap-1.5">
+                    <SourceAlternativeBadge autoTrouvee={alternativeAutoTrouvee} />
+                    <p className="text-xs text-ink-muted">
+                      à la place de {nomAffiche(objetOriginal)}
+                      {objetOriginal.alignementNote ? ` — ${objetOriginal.alignementNote}` : ''}
+                    </p>
+                  </div>
                 )}
                 {sansAlternative && objetOriginal && (
                   <p className="mt-1.5 text-xs text-essentiel">

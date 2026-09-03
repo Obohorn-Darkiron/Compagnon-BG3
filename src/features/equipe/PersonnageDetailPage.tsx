@@ -3,6 +3,7 @@ import { PageHeader } from '../../components/PageHeader'
 import { Section } from '../../components/Section'
 import { ImportanceBadge } from '../../components/ImportanceBadge'
 import { AlignementBadge } from '../../components/AlignementBadge'
+import { SourceAlternativeBadge } from '../../components/SourceAlternativeBadge'
 import { CaracTable } from '../../components/CaracTable'
 import { Check } from '../../components/icons'
 import { builds, etapeAuNiveau, jalonsSombres, nomAffiche, races } from '../../data'
@@ -388,11 +389,14 @@ export function PersonnageDetailPage() {
                           </p>
                           <p className="text-xs text-ink-muted">{e.emplacement}</p>
                           {e.alternative && e.objetOriginal && (
-                            <p className="mt-1 text-xs text-bon">
-                              {e.alternativeAutoTrouvee
-                                ? `Suggestion à la place de ${nomAffiche(e.objetOriginal)} (choix sombre, pas d'alternative vérifiée)`
-                                : `Remplace ${nomAffiche(e.objetOriginal)} (choix sombre)`}
-                            </p>
+                            <div className="mt-1 flex items-center gap-1.5">
+                              <SourceAlternativeBadge autoTrouvee={e.alternativeAutoTrouvee} />
+                              <p className="text-xs text-ink-muted">
+                                {e.alternativeAutoTrouvee
+                                  ? `à la place de ${nomAffiche(e.objetOriginal)} (choix sombre)`
+                                  : `remplace ${nomAffiche(e.objetOriginal)} (choix sombre)`}
+                              </p>
+                            </div>
                           )}
                           {e.sansAlternative && e.objetOriginal && (
                             <p className="mt-1 text-xs text-essentiel">

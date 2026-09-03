@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { PageHeader } from '../../components/PageHeader'
-import { Search } from '../../components/icons'
+import { Scale, Search } from '../../components/icons'
 import { builds, estMulticlasse, getObjet, nomAffiche } from '../../data'
 import type { ElementTag } from '../../data/types'
 import { LABELS_ELEMENT, NOTE_ELEMENT_FAIBLE } from '../../components/elementLabels'
@@ -17,9 +18,25 @@ const filtres: { valeur: FiltreClasse; label: string }[] = [
 const elementsDisponibles = Object.keys(LABELS_ELEMENT) as ElementTag[]
 
 export function BuildsListPage() {
+  const navigate = useNavigate()
   const [recherche, setRecherche] = useState('')
   const [filtre, setFiltre] = useState<FiltreClasse>('tous')
   const [elementActif, setElementActif] = useState<ElementTag | null>(null)
+  const [modeComparaison, setModeComparaison] = useState(false)
+  const [selection, setSelection] = useState<string[]>([])
+
+  function basculerSelection(id: string) {
+    setSelection((actuelle) => {
+      if (actuelle.includes(id)) return actuelle.filter((x) => x !== id)
+      if (actuelle.length >= 2) return [actuelle[1], id]
+      return [...actuelle, id]
+    })
+  }
+
+  function quitterModeComparaison() {
+    setModeComparaison(false)
+    setSelection([])
+  }
 
   const resultats = useMemo(() => {
     const q = recherche.trim().toLowerCase()
@@ -57,7 +74,24 @@ export function BuildsListPage() {
 
   return (
     <div>
-      <PageHeader title="Builds" subtitle={`${builds.length} builds disponibles`}>
+      <PageHeader
+        title="Builds"
+        subtitle={`${builds.length} builds disponibles`}
+        action={
+          <button
+            type="button"
+            onClick={() => (modeComparaison ? quitterModeComparaison() : setModeComparaison(true))}
+            className={`flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-2 text-xs font-medium transition-colors ${
+              modeComparaison
+                ? 'border-glow/70 bg-glow/15 text-glow'
+                : 'border-border text-ink-muted'
+            }`}
+          >
+            <Scale className="h-3.5 w-3.5" />
+            {modeComparaison ? 'Annuler' : 'Comparer'}
+          </button>
+        }
+      >
         <div className="flex flex-col gap-2">
           <label className="relative block">
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-muted" />
@@ -105,20 +139,47 @@ export function BuildsListPage() {
         </div>
       </PageHeader>
 
-      <div className="flex flex-col gap-3 px-4 py-4">
+      <div className={`flex flex-col gap-3 px-4 py-4 ${modeComparaison ? 'pb-24' : ''}`}>
         {elementActif && nbBuildsPourElement <= 2 && (
           <p className="rounded-lg border border-glow/30 bg-glow/5 px-3 py-2.5 text-xs leading-relaxed text-ink-muted">
             {noteElementFaible ??
               `Peu de builds misent sur ${LABELS_ELEMENT[elementActif]} dans le catalogue actuel — ce n'est pas forcément un oubli, certains dégâts sont juste peu représentés en sorts/objets dédiés dans BG3.`}
           </p>
         )}
+        {modeComparaison && (
+          <p className="rounded-lg border border-glow/30 bg-glow/5 px-3 py-2.5 text-xs text-ink-muted">
+            Choisis 2 builds à comparer.
+          </p>
+        )}
         {resultats.map((build) => (
-          <BuildCard key={build.id} build={build} />
+          <BuildCard
+            key={build.id}
+            build={build}
+            modeComparaison={modeComparaison}
+            selectionne={selection.includes(build.id)}
+            onToggleSelection={() => basculerSelection(build.id)}
+          />
         ))}
         {resultats.length === 0 && (
           <p className="py-8 text-center text-sm text-ink-muted">Aucun build ne correspond.</p>
         )}
       </div>
+
+      {modeComparaison && (
+        <div className="fixed inset-x-0 bottom-16 z-10 mx-auto max-w-md border-t border-border bg-bg/95 px-4 py-3 backdrop-blur">
+          <button
+            type="button"
+            disabled={selection.length !== 2}
+            onClick={() => {
+              navigate(`/builds/comparer/${selection[0]}/${selection[1]}`)
+              quitterModeComparaison()
+            }}
+            className="w-full rounded-lg border border-glow/60 bg-glow/15 py-2.5 text-sm font-medium text-glow disabled:opacity-40"
+          >
+            {selection.length === 2 ? 'Comparer ces 2 builds' : `Comparer (${selection.length}/2)`}
+          </button>
+        </div>
+      )}
     </div>
   )
 }

@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.tsx'
 import { BuildsListPage } from './features/builds/BuildsListPage'
 import { BuildDetailPage } from './features/builds/BuildDetailPage'
+import { ComparerBuildsPage } from './features/builds/ComparerBuildsPage'
 import { ObjetsListPage } from './features/explorer/ObjetsListPage'
 import { ObjetDetailPage } from './features/explorer/ObjetDetailPage'
 import { EquipePage } from './features/equipe/EquipePage'
@@ -39,6 +40,7 @@ createRoot(document.getElementById('root')!).render(
         <Route element={<App />}>
           <Route index element={<Navigate to="/builds" replace />} />
           <Route path="builds" element={<BuildsListPage />} />
+          <Route path="builds/comparer/:idA/:idB" element={<ComparerBuildsPage />} />
           <Route path="builds/:id" element={<BuildDetailPage />} />
           <Route path="explorer" element={<ObjetsListPage />} />
           <Route path="explorer/:id" element={<ObjetDetailPage />} />

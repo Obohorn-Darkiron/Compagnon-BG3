@@ -137,6 +137,18 @@ export function Plus({ className }: IconProps) {
   )
 }
 
+export function Scale({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <path d="M12 3v18" />
+      <path d="M7 21h10" />
+      <path d="M4 7h6M14 7h6" />
+      <path d="M4 7l-2.5 5.5a2.75 2.75 0 0 0 5 0Z" />
+      <path d="M20 7l-2.5 5.5a2.75 2.75 0 0 0 5 0Z" />
+    </svg>
+  )
+}
+
 export function IconeGuerrier({ className }: IconProps) {
   return (
     <svg className={className} {...base}>

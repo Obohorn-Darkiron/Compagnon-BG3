@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Section } from '../../components/Section'
 import { ImportanceBadge } from '../../components/ImportanceBadge'
 import { AlignementBadge } from '../../components/AlignementBadge'
+import { SourceAlternativeBadge } from '../../components/SourceAlternativeBadge'
 import { Check } from '../../components/icons'
 import { builds, nomAffiche } from '../../data'
 import { detecterSynergies, genererConseilsRace } from './composeurEquipe'
@@ -187,11 +188,14 @@ export function GroupeApercu({ campagne }: { campagne: Campagne }) {
                                   </span>
                                 </button>
                                 {alternative && objetOriginal && (
-                                  <p className="pl-7 text-[11px] text-bon">
-                                    {alternativeAutoTrouvee
-                                      ? `Suggestion pour ${perso.nom} à la place de ${nomAffiche(objetOriginal)} (choix sombre, pas d'alternative vérifiée)`
-                                      : `Remplace ${nomAffiche(objetOriginal)} pour ${perso.nom} (choix sombre)`}
-                                  </p>
+                                  <div className="flex items-center gap-1.5 pl-7">
+                                    <SourceAlternativeBadge autoTrouvee={alternativeAutoTrouvee} />
+                                    <p className="text-[11px] text-ink-muted">
+                                      {alternativeAutoTrouvee
+                                        ? `pour ${perso.nom}, à la place de ${nomAffiche(objetOriginal)} (choix sombre)`
+                                        : `remplace ${nomAffiche(objetOriginal)} pour ${perso.nom} (choix sombre)`}
+                                    </p>
+                                  </div>
                                 )}
                                 {sansAlternative && objetOriginal && (
                                   <p className="pl-7 text-[11px] text-essentiel">
