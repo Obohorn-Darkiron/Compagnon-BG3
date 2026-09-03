@@ -8,20 +8,13 @@ import { AlignementBadge } from '../../components/AlignementBadge'
 import { SourceAlternativeBadge } from '../../components/SourceAlternativeBadge'
 import { alternativesPourBuild, getBuild, nomAffiche } from '../../data'
 import { conseilRacePourBuild } from '../equipe/composeurEquipe'
-import { resoudreObjetPourStyle, type ObjetResolu } from '../equipe/alignementUtils'
+import { dedupliquerParIdAffiche, resoudreObjetPourStyle, type ObjetResolu } from '../equipe/alignementUtils'
 import type { Importance } from '../../data/types'
 
 interface EquipementResoluAffiche extends ObjetResolu {
   emplacement: string
   importance: Importance
   acteAffiche: number
-}
-
-const ORDRE_IMPORTANCE: Record<Importance, number> = {
-  Essentiel: 4,
-  Excellent: 3,
-  Bon: 2,
-  Situationnel: 1,
 }
 
 type StylePreview = 'bienveillant' | 'neutre' | 'sombre' | null
@@ -41,33 +34,17 @@ export function BuildDetailPage() {
   const equipementDeduplique = useMemo(() => {
     if (!build) return []
     // Une alternative peut retomber sur un objet déjà présent ailleurs dans l'équipement — on
-    // fusionne par idAffiche plutôt que d'afficher deux fois la même ligne (voir GroupeApercu).
-    const parId = new Map<string, EquipementResoluAffiche>()
-    for (const e of build.equipement) {
+    // fusionne par idAffiche plutôt que d'afficher deux fois la même ligne (voir alignementUtils).
+    const entrees = build.equipement.map((e): EquipementResoluAffiche => {
       const resolu = resoudreObjetPourStyle(e.objetId, stylePreview, e.emplacement)
-      const entree: EquipementResoluAffiche = {
+      return {
         ...resolu,
         emplacement: e.emplacement,
         importance: e.importance,
         acteAffiche: resolu.alternative ? resolu.alternative.acte : e.acte,
       }
-      const existante = parId.get(resolu.idAffiche)
-      if (!existante) {
-        parId.set(resolu.idAffiche, entree)
-      } else {
-        const source = existante.alternative ? existante : entree.alternative ? entree : existante
-        parId.set(resolu.idAffiche, {
-          ...(ORDRE_IMPORTANCE[entree.importance] > ORDRE_IMPORTANCE[existante.importance]
-            ? entree
-            : existante),
-          alternative: source.alternative,
-          alternativeAutoTrouvee: source.alternativeAutoTrouvee,
-          objetOriginal: source.objetOriginal,
-          sansAlternative: existante.sansAlternative && entree.sansAlternative,
-        })
-      }
-    }
-    return [...parId.values()]
+    })
+    return dedupliquerParIdAffiche(entrees)
   }, [build, stylePreview])
 
   if (!build) return <Navigate to="/builds" replace />

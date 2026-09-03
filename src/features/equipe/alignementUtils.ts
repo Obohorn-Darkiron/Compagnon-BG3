@@ -81,3 +81,41 @@ export function resoudreObjetPourStyle(objetId: string, styleJeu: StyleJeu, empl
     idAffiche: objet?.id ?? objetId,
   }
 }
+
+/**
+ * Fusionne deux entrées d'équipement résolues qui pointent vers le même objet affiché — cas
+ * concret : un remplacement automatique retombe sur un objet déjà présent ailleurs dans la même
+ * liste (même build, même acte...). Garde la meilleure importance rencontrée entre les deux, et
+ * préserve la note de remplacement dès que l'une des deux entrées en porte une (sinon fusionner
+ * avec la version "sans remplacement" effacerait l'info).
+ */
+export function fusionnerEntreesEquipement<T extends ObjetResolu & { importance: Importance }>(
+  existante: T,
+  nouvelle: T,
+): T {
+  const source = existante.alternative ? existante : nouvelle.alternative ? nouvelle : existante
+  return {
+    ...(ORDRE_IMPORTANCE[nouvelle.importance] > ORDRE_IMPORTANCE[existante.importance] ? nouvelle : existante),
+    alternative: source.alternative,
+    alternativeAutoTrouvee: source.alternativeAutoTrouvee,
+    objetOriginal: source.objetOriginal,
+    sansAlternative: existante.sansAlternative && nouvelle.sansAlternative,
+  }
+}
+
+/**
+ * Regroupe une liste d'entrées d'équipement résolues par objet affiché (idAffiche), en fusionnant
+ * les doublons (voir fusionnerEntreesEquipement) — pour ne jamais afficher deux fois le même objet
+ * quand un remplacement retombe sur quelque chose déjà présent ailleurs dans la liste. L'ordre de
+ * première apparition est conservé.
+ */
+export function dedupliquerParIdAffiche<T extends ObjetResolu & { importance: Importance }>(
+  entrees: T[],
+): T[] {
+  const parId = new Map<string, T>()
+  for (const entree of entrees) {
+    const existante = parId.get(entree.idAffiche)
+    parId.set(entree.idAffiche, existante ? fusionnerEntreesEquipement(existante, entree) : entree)
+  }
+  return [...parId.values()]
+}

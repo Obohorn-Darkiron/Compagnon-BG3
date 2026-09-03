@@ -6,7 +6,7 @@ import { SourceAlternativeBadge } from '../../components/SourceAlternativeBadge'
 import { Check } from '../../components/icons'
 import { builds, nomAffiche } from '../../data'
 import { detecterSynergies, genererConseilsRace } from './composeurEquipe'
-import { resoudreObjetPourStyle, type ObjetResolu } from './alignementUtils'
+import { dedupliquerParIdAffiche, resoudreObjetPourStyle, type ObjetResolu } from './alignementUtils'
 import { saveStore } from '../../storage/useSaveData'
 import { lireJoueurId } from '../../storage/identite'
 import type { Campagne, Personnage } from '../../storage/useSaveData'
@@ -37,35 +37,21 @@ export function GroupeApercu({ campagne }: { campagne: Campagne }) {
 
   // Un remplacement automatique peut retomber sur un objet qu'un même personnage possède déjà
   // ailleurs dans son build — on fusionne par (personnage, objet affiché) plutôt que de créer une
-  // deuxième ligne pour la même personne sur le même objet, en gardant la note de remplacement.
-  const entreesParPersoEtId = new Map<string, EntreeEquipementGroupe>()
+  // deuxième ligne pour la même personne sur le même objet (voir alignementUtils).
+  const toutesEntrees: EntreeEquipementGroupe[] = []
   for (const { perso, build } of equipes) {
-    for (const e of build.equipement) {
+    const entreesPerso = build.equipement.map((e): EntreeEquipementGroupe => {
       const resolu = resoudreObjetPourStyle(e.objetId, perso.styleJeu, e.emplacement)
-      const entree: EntreeEquipementGroupe = {
+      return {
         ...resolu,
         perso,
         importance: e.importance,
         emplacement: e.emplacement,
         acteAffiche: resolu.alternative ? resolu.alternative.acte : e.acte,
       }
-      const cle = `${perso.id}::${entree.idAffiche}`
-      const existante = entreesParPersoEtId.get(cle)
-      if (!existante) {
-        entreesParPersoEtId.set(cle, entree)
-      } else {
-        const source = existante.alternative ? existante : entree.alternative ? entree : existante
-        entreesParPersoEtId.set(cle, {
-          ...(ORDRE_IMPORTANCE[entree.importance] > ORDRE_IMPORTANCE[existante.importance] ? entree : existante),
-          alternative: source.alternative,
-          alternativeAutoTrouvee: source.alternativeAutoTrouvee,
-          objetOriginal: source.objetOriginal,
-          sansAlternative: existante.sansAlternative && entree.sansAlternative,
-        })
-      }
-    }
+    })
+    toutesEntrees.push(...dedupliquerParIdAffiche(entreesPerso))
   }
-  const toutesEntrees = [...entreesParPersoEtId.values()]
 
   const parObjet = new Map<string, EntreeEquipementGroupe[]>()
   for (const entree of toutesEntrees) {

@@ -14,7 +14,7 @@ import { BonusPermanentsSection } from './BonusPermanentsSection'
 import { PlanOptimisationSection } from './PlanOptimisationSection'
 import { SelecteurBuild } from './SelecteurBuild'
 import { bonusParStatObtenus, noteBonusPermanent } from './bonusPermanentsUtils'
-import { resoudreObjetPourStyle, type ObjetResolu } from './alignementUtils'
+import { dedupliquerParIdAffiche, resoudreObjetPourStyle, type ObjetResolu } from './alignementUtils'
 import type { EquipementRecommande, Importance, JalonSombre } from '../../data/types'
 
 interface EquipementResolu extends ObjetResolu {
@@ -60,36 +60,25 @@ export function PersonnageDetailPage() {
     const tri = [...build.equipement].sort(
       (a, b) => ORDRE_IMPORTANCE[b.importance] - ORDRE_IMPORTANCE[a.importance],
     )
-    // Un remplacement automatique peut retomber sur un objet déjà présent ailleurs dans le même
-    // build (même acte) — on fusionne plutôt que de l'afficher deux fois, en gardant la meilleure
-    // importance et la note de remplacement si l'une des deux entrées en portait une.
-    const parActeEtId = new Map<number, Map<string, EquipementResolu>>()
-    for (const e of tri) {
+    const resolus = tri.map((e): EquipementResolu => {
       const resoluObjet = resoudreObjetPourStyle(e.objetId, personnage.styleJeu, e.emplacement)
-      const resolu: EquipementResolu = {
+      return {
         ...resoluObjet,
         emplacement: e.emplacement,
         importance: e.importance,
         acteAffiche: resoluObjet.alternative ? resoluObjet.alternative.acte : e.acte,
       }
-      const parId = parActeEtId.get(resolu.acteAffiche) ?? new Map<string, EquipementResolu>()
-      const existant = parId.get(resolu.idAffiche)
-      if (!existant) {
-        parId.set(resolu.idAffiche, resolu)
-      } else {
-        const source = existant.alternative ? existant : resolu.alternative ? resolu : existant
-        parId.set(resolu.idAffiche, {
-          ...(ORDRE_IMPORTANCE[resolu.importance] > ORDRE_IMPORTANCE[existant.importance] ? resolu : existant),
-          alternative: source.alternative,
-          alternativeAutoTrouvee: source.alternativeAutoTrouvee,
-          objetOriginal: source.objetOriginal,
-          sansAlternative: existant.sansAlternative && resolu.sansAlternative,
-        })
-      }
-      parActeEtId.set(resolu.acteAffiche, parId)
+    })
+    const parActe = new Map<number, EquipementResolu[]>()
+    for (const resolu of resolus) {
+      const liste = parActe.get(resolu.acteAffiche) ?? []
+      liste.push(resolu)
+      parActe.set(resolu.acteAffiche, liste)
     }
-    for (const [acte, parId] of parActeEtId) {
-      equipementParActe.set(acte, [...parId.values()])
+    // Un remplacement automatique peut retomber sur un objet déjà présent ailleurs dans le même
+    // build (même acte) — on fusionne plutôt que de l'afficher deux fois (voir alignementUtils).
+    for (const [acte, liste] of parActe) {
+      equipementParActe.set(acte, dedupliquerParIdAffiche(liste))
     }
   }
   const actesEquipement = [...equipementParActe.keys()].sort((a, b) => a - b)
