@@ -1,6 +1,8 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { Shield, Compass, Users, Settings } from './components/icons'
 import { TentacleDecoration } from './components/TentacleDecoration'
+import { ErrorBoundary } from './components/ErrorBoundary'
+import { useEchecEcriture } from './storage/useSaveData'
 
 const tabs = [
   { to: '/builds', label: 'Builds', icon: Shield },
@@ -10,11 +12,22 @@ const tabs = [
 ]
 
 function App() {
+  const echecEcriture = useEchecEcriture()
+  const location = useLocation()
+
   return (
     <div className="relative mx-auto flex h-svh max-w-md flex-col overflow-hidden">
       <TentacleDecoration />
+      {echecEcriture && (
+        <p className="shrink-0 bg-essentiel px-4 py-2 text-center text-xs font-medium text-white">
+          Impossible d'enregistrer tes dernières modifications (stockage plein ou bloqué) — exporte
+          ta sauvegarde depuis Paramètres avant de continuer.
+        </p>
+      )}
       <main className="flex-1 overflow-y-auto pb-20">
-        <Outlet />
+        <ErrorBoundary key={location.pathname}>
+          <Outlet />
+        </ErrorBoundary>
       </main>
 
       <nav className="fixed inset-x-0 bottom-0 mx-auto flex max-w-md border-t border-border bg-surface/95 backdrop-blur">

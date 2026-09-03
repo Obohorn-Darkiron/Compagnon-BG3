@@ -13,8 +13,16 @@ export function lireBrut(): string | null {
   }
 }
 
-export function ecrireBrut(json: string): void {
-  window.localStorage.setItem(CLE, json)
+/** true si l'écriture a réussi. Peut échouer (stockage plein, navigation privée qui bloque
+ * localStorage...) — dans ce cas les données restent correctes en mémoire pour la session en
+ * cours, mais ne survivront pas à une fermeture de l'appli tant que le problème n'est pas résolu. */
+export function ecrireBrut(json: string): boolean {
+  try {
+    window.localStorage.setItem(CLE, json)
+    return true
+  } catch {
+    return false
+  }
 }
 
 /**

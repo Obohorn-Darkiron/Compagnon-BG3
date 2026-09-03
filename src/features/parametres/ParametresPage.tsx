@@ -172,8 +172,10 @@ export function ParametresPage() {
       <Section title="À propos">
         <p className="text-sm text-ink-muted">
           Compagnon non-officiel pour Baldur's Gate 3. {builds.length} builds et {objets.length}{' '}
-          objets référencés. Aucune donnée n'est envoyée sur internet — tout reste sur cet
-          appareil.
+          objets référencés. Tes campagnes et personnages restent uniquement sur cet appareil.
+          Seule exception : si tu crées ou rejoins une session de groupe, les builds des
+          personnages liés à cette session sont envoyés à un serveur (Firebase) pour se
+          synchroniser entre joueurs — rien d'autre n'est jamais transmis.
         </p>
         <p className="mt-3 text-xs text-ink-muted">
           Icône tentacule décorative : « Curled Tentacle » par Lorc (

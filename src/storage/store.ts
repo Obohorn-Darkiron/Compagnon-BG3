@@ -60,10 +60,11 @@ function charger(): SaveData {
 }
 
 let etat: SaveData = charger()
+let echecEcriture = false
 const abonnes = new Set<() => void>()
 
 function notifier() {
-  ecrireBrut(JSON.stringify(etat))
+  echecEcriture = !ecrireBrut(JSON.stringify(etat))
   abonnes.forEach((fn) => fn())
 }
 
@@ -84,6 +85,13 @@ export const saveStore = {
 
   getSnapshot(): SaveData {
     return etat
+  },
+
+  /** true si la dernière tentative de sauvegarde locale a échoué (stockage plein ou bloqué) —
+   * les modifications restent actives pour la session en cours mais ne survivront pas à une
+   * fermeture de l'appli tant que ça persiste. */
+  getEchecEcriture(): boolean {
+    return echecEcriture
   },
 
   creerCampagne(nom: string): string {
