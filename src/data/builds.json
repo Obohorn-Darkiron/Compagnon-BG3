@@ -762,6 +762,12 @@
         "objetId": "gloves-of-archery",
         "importance": "Bon",
         "acte": 1
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "sarevoks-horned-helmet",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -770,6 +776,9 @@
     "elements": [],
     "mecaniques": [
       "critique"
+    ],
+    "synergies": [
+      "Le Masque de perception des âmes (+2 initiative) sert directement la stratégie du build : plus l'initiative est haute, plus tu agis tôt dans le round de surprise, plus tu multiplies les attaques d'Assassinat automatiquement critiques avant que l'ennemi n'ait pu agir. Le Casque à cornes de Sarevok (-1 au seuil de critique, permanent, cumulable) est listé comme alternative : il augmente le taux de critique sur la durée du combat mais sacrifie ce boost d'initiative — un vrai choix selon que tu comptes tout jouer sur l'ouverture ou sur la régularité."
     ]
   },
   {
@@ -2666,7 +2675,8 @@
     "forces": [
       "Aucune gestion de ressource",
       "Très bon avec les armes à fort multiplicateur de critique",
-      "Increvable avec assez de PV"
+      "Increvable avec assez de PV",
+      "Casque à cornes de Sarevok : encore -1 au seuil de critique, permanent et cumulable avec Critique amélioré — critique sur 18-20 dès le niveau 3, sans aucune gestion de ressource"
     ],
     "faiblesses": [
       "Pas de manœuvres tactiques",
@@ -2783,12 +2793,6 @@
         "acte": 1
       },
       {
-        "emplacement": "Tête",
-        "objetId": "helmet-of-grit",
-        "importance": "Bon",
-        "acte": 3
-      },
-      {
         "emplacement": "Anneau",
         "objetId": "killers-sweetheart",
         "importance": "Excellent",
@@ -2822,6 +2826,18 @@
         "emplacement": "Bottes",
         "objetId": "boots-of-persistence",
         "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "sarevoks-horned-helmet",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "craterflesh-gloves",
+        "importance": "Excellent",
         "acte": 3
       }
     ],
@@ -11504,6 +11520,12 @@
         "objetId": "the-dead-shot",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "sarevoks-horned-helmet",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -12108,7 +12130,7 @@
       "Équipement clé uniquement disponible après la quête du Tribunal du Meurtre (Acte 3)"
     ],
     "synergies": [
-      "Identité culte de Bhaal complète : Armure de fidèle de Bhaal (Aura du Meurtre, double les dégâts perforants des ennemis à moins de 3 m), Capuche de l'assassin de Bhaal (+2 initiative, vital pour agir avant l'ennemi), Amulette de Bhaal (Premier sang, Saignement sur cible à PV max) et Dolor Amarus (+7 dégâts sur critique) forment un tout cohérent. Parfait pour une run Dark Urge qui embrasse pleinement ses pulsions, mais accessible à n'importe quel personnage prêt à rejoindre le culte."
+      "Identité culte de Bhaal complète : Armure de fidèle de Bhaal (Aura du Meurtre, double les dégâts perforants des ennemis à moins de 3 m), Capuche de l'assassin de Bhaal (+2 initiative, vital pour agir avant l'ennemi), Amulette de Bhaal (Premier sang, Saignement sur cible à PV max) et Dolor Amarus (+7 dégâts sur critique) forment un tout cohérent. Parfait pour une run Dark Urge qui embrasse pleinement ses pulsions, mais accessible à n'importe quel personnage prêt à rejoindre le culte. Alternative pur critique : le Casque à cornes de Sarevok (-1 permanent au seuil de critique, cumulable) est disponible au même endroit — il augmente le taux de critique sur toute la durée du combat mais perd les +2 d'initiative qui aident à agir avant l'ennemi pendant le round de surprise (crucial pour l'Assassinat garanti du Roublard Assassin) et casse l'identité visuelle du set Bhaal complet."
     ],
     "dons": [
       "+2 Dextérité (niv 4)",
@@ -12248,6 +12270,12 @@
         "emplacement": "Main gauche",
         "objetId": "dolor-amarus",
         "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "sarevoks-horned-helmet",
+        "importance": "Bon",
         "acte": 3
       }
     ],
@@ -12622,7 +12650,8 @@
     "forces": [
       "Dégâts constants et fiables à distance, sans dépendre de la surprise",
       "+7 dégâts sur chaque critique grâce à l'Arc court vicieux",
-      "Gants d'ossature exosquelettique : ignore les résistances Tranchant/Perforant/Contondant — jamais un ennemi résistant qui ruine un combat"
+      "Gants d'ossature exosquelettique : ignore les résistances Tranchant/Perforant/Contondant — jamais un ennemi résistant qui ruine un combat",
+      "Casque à cornes de Sarevok (looté sur Sarevok lui-même, un Bhaalspawn) : -1 permanent au seuil de critique, cumulable — contrairement au Roublard Assassin, ce Rôdeur n'a pas de mécanique de critique garanti en embuscade, donc ce bonus permanent lui sert davantage qu'un simple bonus d'initiative"
     ],
     "faiblesses": [
       "Entièrement verrouillé sur une route sombre — inutilisable en run bienveillante",
@@ -12749,8 +12778,8 @@
       },
       {
         "emplacement": "Tête",
-        "objetId": "assassin-of-bhaal-cowl",
-        "importance": "Bon",
+        "objetId": "sarevoks-horned-helmet",
+        "importance": "Excellent",
         "acte": 3
       }
     ],
@@ -12782,7 +12811,8 @@
     "forces": [
       "Pic de dégâts sur critique parmi les plus extrêmes du jeu (deux dés de 1d12 en plus des dés normalement doublés)",
       "Attaque téméraire augmente concrètement les chances de tomber dans la plage de critique élargie",
-      "Rage donne la résistance aux dégâts physiques — reste solide malgré une itemization tournée vers l'attaque"
+      "Rage donne la résistance aux dégâts physiques — reste solide malgré une itemization tournée vers l'attaque",
+      "Casque à cornes de Sarevok ajoute encore -1 : critique sur 18-20 dès le niveau 3 (Champion + Casque), avant même l'avantage de l'Attaque téméraire — et les Gants de chair cratérisée ajoutent un dé de Force à chaque critique"
     ],
     "faiblesses": [
       "Montée en puissance lente : Critique brutal (Barbare 9) n'arrive qu'au tout dernier niveau du jeu",
@@ -12913,6 +12943,192 @@
         "objetId": "amulet-greater-health",
         "importance": "Excellent",
         "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "sarevoks-horned-helmet",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "craterflesh-gloves",
+        "importance": "Excellent",
+        "acte": 3
+      }
+    ],
+    "roles": [
+      "degatsMelee"
+    ],
+    "elements": [],
+    "mecaniques": [
+      "critique"
+    ]
+  },
+  {
+    "id": "guerrier-champion-barbare-dague-critique",
+    "classe": "Guerrier",
+    "sousClasse": "Champion",
+    "nom": "Guerrier Champion / Barbare Cœur sauvage (Ours) — Duo de dagues implacable",
+    "split": "Guerrier (Champion) 3 / Barbare (Cœur sauvage : Ours) 9",
+    "role": "Burst de critique maximal (avantage permanent) / Duo de dagues",
+    "resume": "Le pendant en dagues du build hache à deux mains, avec un avantage permanent au lieu d'un avantage conditionné à la Discrétion : les trois mêmes réductions de seuil cumulables et TOUTES permanentes (Champion -1, Bloodthirst -1, Casque à cornes de Sarevok -1 — critique sur 17-20 dès le niveau 12), mais ici l'avantage vient de l'Attaque téméraire du Barbare, disponible à volonté, plutôt que d'un jeu autour du statut Caché. Point vérifié essentiel : en BG3, le bonus de dégâts de Rage s'applique aussi aux armes de finesse utilisées en Dextérité — une déviation assumée par Larian par rapport à la règle 5e papier (qui réserve ce bonus aux armes de Force) — donc rien n'est perdu à jouer des dagues plutôt qu'une arme lourde.",
+    "caracDepart": {
+      "FOR": 8,
+      "DEX": 17,
+      "CON": 16,
+      "INT": 8,
+      "SAG": 10,
+      "CHA": 8
+    },
+    "forces": [
+      "Avantage permanent et inconditionnel via Attaque téméraire — aucune dépendance à la Discrétion, à un statut Caché ou à un allié pour le déclencher, contrairement aux builds Assassin du catalogue",
+      "Seuil de critique à 17-20 dès le niveau 12 (Champion -1, Bloodthirst -1, Casque à cornes de Sarevok -1), les trois sources permanentes et vérifiées cumulables — avec l'avantage de l'Attaque téméraire, environ 36% de chances de critique par jet d'attaque",
+      "Deux dés de dégâts d'arme supplémentaires par critique (Critique brutal du Barbare + Attaques sauvages du Demi-Orc) en plus des dégâts fixes de Dolor Amarus (+7) et du dé de Force des Gants de chair cratérisée"
+    ],
+    "faiblesses": [
+      "Rage donne aussi l'avantage aux ennemis contre toi — Cœur d'ours (résistance à tous les dégâts sauf psychique en Rage) atténue le risque mais ne l'annule pas",
+      "Dagues (1d4) : dégâts de base plus faibles qu'une arme à deux mains hors critique — ce build mise sur la fréquence et le bonus de critique, pas sur le dégât brut à chaque coup normal",
+      "Comme le build hache, Critique brutal (Barbare 9) n'arrive qu'au tout dernier niveau du jeu — montée en puissance progressive",
+      "Les Gants de chair cratérisée nécessitent d'avoir accepté de devenir Assassin impie de Bhaal au Tribunal du Meurtre (route non-bienveillante) ; une alternative neutre existe (Gants de l'automate, avantage aux attaques 1×/repos court) mais perd le dé de Force sur critique"
+    ],
+    "synergies": [
+      "Bonus de Rage sur arme de finesse vérifié sur bg3.wiki (page Rage) : contrairement à la règle D&D papier, Larian applique le bonus de dégâts de Rage aux armes de finesse utilisées en Dextérité, pas seulement aux armes de Force — sans cette particularité propre à BG3, ce build ne fonctionnerait pas aussi bien.",
+      "Casque à cornes de Sarevok et Bloodthirst sont tous deux vérifiés comme inconditionnels et cumulables entre eux et avec Critique amélioré du Champion (bg3.wiki, page Critical Hit : « Multiple sources of this effect stack »)."
+    ],
+    "dons": [
+      "+2 Dextérité (niv 7)",
+      "Alerte (niv 11)"
+    ],
+    "sortsCles": [],
+    "jalons": [
+      {
+        "etape": "Guerrier 3 (Champion)",
+        "note": "Critique amélioré : critique sur 19-20 au lieu de 20 seul."
+      },
+      {
+        "etape": "Barbare 2",
+        "note": "Attaque téméraire : avantage à toutes tes attaques de mêlée du tour, contre l'avantage donné aux ennemis contre toi."
+      },
+      {
+        "etape": "Barbare 3 (Cœur sauvage : Ours)",
+        "note": "Cœur d'ours : résistance à tous les dégâts sauf psychique tant que tu es en Rage — vérifié sur bg3.wiki."
+      },
+      {
+        "etape": "Barbare 9",
+        "note": "Critique brutal : un dé de dégâts d'arme supplémentaire à chaque critique — le build atteint son plein potentiel, cumulé avec les Attaques sauvages du Demi-Orc."
+      }
+    ],
+    "progression": [
+      {
+        "niveau": 1,
+        "titre": "Guerrier 1",
+        "detail": "Style de combat (Deux armes : ajoute le modificateur de caractéristique aux dégâts de l'attaque en main gauche) et Second souffle pour un peu de PV de secours."
+      },
+      {
+        "niveau": 2,
+        "titre": "Fougue",
+        "detail": "Action Surge : une action supplémentaire une fois par repos court."
+      },
+      {
+        "niveau": 3,
+        "titre": "Sous-classe Champion",
+        "detail": "Critique amélioré : critique sur 19-20."
+      },
+      {
+        "niveau": 4,
+        "titre": "Barbare 1",
+        "detail": "Rage (dégâts bonus et résistance aux dégâts physiques — vérifié : s'applique aussi aux dagues tenues en Dextérité en BG3) et Défense sans armure (CA = 10 + mod. Dextérité + mod. Constitution)."
+      },
+      {
+        "niveau": 5,
+        "titre": "Barbare 2",
+        "detail": "Attaque téméraire (avantage à toutes tes attaques de mêlée du tour, au prix de donner l'avantage aux ennemis contre toi) et Sens du danger."
+      },
+      {
+        "niveau": 6,
+        "titre": "Sous-classe Cœur sauvage (Ours)",
+        "detail": "Cœur d'ours : résistance à tous les dégâts sauf psychique tant que tu es en Rage."
+      },
+      {
+        "niveau": 7,
+        "titre": "Premier don",
+        "detail": "+2 Dextérité — plus de précision, de dégâts et de Classe d'Armure (Défense sans armure)."
+      },
+      {
+        "niveau": 8,
+        "titre": "Attaque supplémentaire",
+        "detail": "Un second coup par action d'attaque, et Mouvement rapide (+3 m de vitesse hors armure lourde)."
+      },
+      {
+        "niveau": 9,
+        "titre": "Aspect de la bête",
+        "detail": "Deuxième bonus lié à l'Ours en tant que Cœur sauvage, actif hors Rage — secondaire à la synergie critique de ce build."
+      },
+      {
+        "niveau": 10,
+        "titre": "Instinct féroce",
+        "detail": "Ne peut plus être surpris tant que tu es conscient — l'initiative passe en avantage si tu es surpris malgré tout."
+      },
+      {
+        "niveau": 11,
+        "titre": "Deuxième don",
+        "detail": "Alerte : +5 à l'initiative, impossible d'être surpris — permet d'ouvrir le combat et de déclencher l'Attaque téméraire dès le premier tour."
+      },
+      {
+        "niveau": 12,
+        "titre": "Critique brutal — build terminé",
+        "detail": "Un dé de dégâts supplémentaire (correspondant au dé de l'arme, donc un d4 par dague) sur chaque critique, en plus des Attaques sauvages du Demi-Orc — le pic de dégâts du build."
+      }
+    ],
+    "equipement": [
+      {
+        "emplacement": "Torse",
+        "objetId": "bloodguzzler-garb",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-speed",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "killers-sweetheart",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "bloodthirst",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Main gauche",
+        "objetId": "dolor-amarus",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "sarevoks-horned-helmet",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "craterflesh-gloves",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-greater-health",
+        "importance": "Bon",
+        "acte": 3
       }
     ],
     "roles": [
@@ -12930,7 +13146,7 @@
     "nom": "Guerrier Champion / Occultiste Lame maudite — Bourreau Maudit",
     "split": "Guerrier (Champion) 9 / Occultiste (Lame maudite, Pacte de la Lame) 3",
     "role": "Exécution ciblée / Dague et dague (Charisme)",
-    "resume": "Multiclasse atypique qui frappe au Charisme plutôt qu'à la Force ou la Dextérité : le Pacte de la Lame de l'Occultiste Lame maudite lie Bloodthirst (qui réduit lui-même le seuil de critique de 1, en plus de celui du Champion) comme arme de Charisme, tandis que la Malédiction du sorcier des lames ajoute encore -1 sur la cible maudite et des dégâts bonus. Contre une cible maudite, le seuil de critique cumulé descend à 18-20.",
+    "resume": "Multiclasse atypique qui frappe au Charisme plutôt qu'à la Force ou la Dextérité : le Pacte de la Lame de l'Occultiste Lame maudite lie Bloodthirst (qui réduit lui-même le seuil de critique de 1, en plus de celui du Champion) comme arme de Charisme, le Casque à cornes de Sarevok ajoute encore -1, et la Malédiction du sorcier des lames ajoute un dernier -1 sur la cible maudite. Seuil de base (Champion + Bloodthirst + Casque) : critique sur 17-20. Contre une cible maudite : 16-20.",
     "caracDepart": {
       "FOR": 8,
       "DEX": 16,
@@ -12940,7 +13156,7 @@
       "CHA": 16
     },
     "forces": [
-      "Contre une cible maudite : critique sur 18-20 (Champion -1 + Malédiction -1), soit 15% de base avant tout autre bonus",
+      "Seuil de base à 17-20 en permanence (Champion -1, Bloodthirst -1, Casque à cornes de Sarevok -1) ; contre une cible maudite, 16-20 (+ la Malédiction), soit 25% de base avant tout autre bonus",
       "La Malédiction du sorcier des lames ajoute aussi les dégâts du bonus de maîtrise sur la cible visée, et rend des PV si elle meurt",
       "Profil Charisme original : un Guerrier qui frappe fort sans avoir besoin de Force ni de Dextérité élevées"
     ],
@@ -12950,7 +13166,7 @@
       "Demande de bien gérer deux progressions de classe en parallèle plutôt que de suivre une seule ligne droite"
     ],
     "synergies": [
-      "Bloodthirst réduit le seuil de critique pour TOUTES tes attaques, pas seulement les siennes — confirmé à ne pas nécessiter d'être l'arme activement utilisée pour infliger des dégâts, juste d'être équipée. Combinée à une seconde dague (Dolor Amarus, +7 dégâts sur critique) en main gauche, chaque critique devient rentable même sans Critique brutal de Barbare. Aucune route sombre requise, contrairement aux builds du Tribunal du Meurtre."
+      "Bloodthirst réduit le seuil de critique pour TOUTES tes attaques, pas seulement les siennes — confirmé à ne pas nécessiter d'être l'arme activement utilisée pour infliger des dégâts, juste d'être équipée. Combinée à une seconde dague (Dolor Amarus, +7 dégâts sur critique) en main gauche et au Casque à cornes de Sarevok (-1 supplémentaire, permanent, vérifié cumulable avec les autres sources sur bg3.wiki), chaque critique devient rentable même sans Critique brutal de Barbare. Aucune route sombre requise, contrairement aux builds du Tribunal du Meurtre."
     ],
     "dons": [
       "+2 Charisme (niv 7)",
@@ -13077,6 +13293,12 @@
         "emplacement": "Amulette",
         "objetId": "amulet-greater-health",
         "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "sarevoks-horned-helmet",
+        "importance": "Excellent",
         "acte": 3
       }
     ],
