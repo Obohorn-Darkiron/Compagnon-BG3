@@ -11428,6 +11428,12 @@
         "objetId": "blightbringer",
         "importance": "Situationnel",
         "acte": 3
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "the-dead-shot",
+        "importance": "Excellent",
+        "acte": 3
       }
     ],
     "roles": [
@@ -12668,6 +12674,325 @@
     "roles": [
       "degatsDistance",
       "controle"
+    ],
+    "elements": []
+  },
+  {
+    "id": "guerrier-champion-barbare-hache-critique",
+    "classe": "Guerrier",
+    "sousClasse": "Champion",
+    "nom": "Guerrier Champion / Barbare Berserker — Fureur Écarlate",
+    "split": "Guerrier (Champion) 3 / Barbare (Berserker) 9",
+    "role": "Burst de critique maximal / Hache à deux mains",
+    "resume": "Multiclasse qui empile trois sources indépendantes de bonus de critique sur une hache à deux mains : la plage élargie du Champion (19-20), l'Attaque téméraire du Barbare (avantage en mêlée, donc plus de chances de tomber dans cette plage), et deux dés de dégâts supplémentaires sur chaque critique — Critique brutal (Barbare) et Attaques sauvages (Demi-Orc), qui correspondent tous les deux au dé de l'arme elle-même, d'où le choix d'une hache à deux mains en 1d12 plutôt qu'une arme plus légère.",
+    "caracDepart": {
+      "FOR": 17,
+      "DEX": 10,
+      "CON": 16,
+      "INT": 8,
+      "SAG": 10,
+      "CHA": 8
+    },
+    "forces": [
+      "Pic de dégâts sur critique parmi les plus extrêmes du jeu (deux dés de 1d12 en plus des dés normalement doublés)",
+      "Attaque téméraire augmente concrètement les chances de tomber dans la plage de critique élargie",
+      "Rage donne la résistance aux dégâts physiques — reste solide malgré une itemization tournée vers l'attaque"
+    ],
+    "faiblesses": [
+      "Montée en puissance lente : Critique brutal (Barbare 9) n'arrive qu'au tout dernier niveau du jeu",
+      "Seulement 2 dons sur toute la progression — aucune des deux classes n'atteint son propre niveau d'augmentation final",
+      "Attaque téméraire donne aussi l'avantage aux ennemis contre toi — un vrai risque en combat prolongé"
+    ],
+    "synergies": [
+      "Contrairement aux builds du Tribunal du Meurtre, celui-ci n'a besoin d'aucun choix moral ni d'aucune route sombre : la Hache infernale et tout l'équipement recommandé restent accessibles sur n'importe quelle run. Dès le niveau 1, les Attaques sauvages du Demi-Orc ajoutent déjà un dé supplémentaire sur chaque critique ; Critique brutal vient s'y ajouter en tout dernier, au niveau 12."
+    ],
+    "dons": [
+      "Grand Maître d'armes (niv 7)",
+      "+2 Force (niv 11)"
+    ],
+    "sortsCles": [],
+    "jalons": [
+      {
+        "etape": "Guerrier 3 (Champion)",
+        "note": "Critique amélioré : critique sur 19-20 au lieu de 20 seul."
+      },
+      {
+        "etape": "Barbare 2",
+        "note": "Attaque téméraire : avantage à toutes tes attaques de mêlée, en échange de donner aussi l'avantage aux ennemis contre toi."
+      },
+      {
+        "etape": "Barbare 3 (Berserker)",
+        "note": "Frénésie : une attaque de mêlée supplémentaire en action bonus tant que tu es en Rage."
+      },
+      {
+        "etape": "Barbare 9",
+        "note": "Critique brutal : un dé de dégâts supplémentaire à chaque critique — le build atteint son plein potentiel."
+      }
+    ],
+    "progression": [
+      {
+        "niveau": 1,
+        "titre": "Guerrier 1",
+        "detail": "Style de combat (Grande arme recommandé) et Second souffle pour un peu de PV de secours."
+      },
+      {
+        "niveau": 2,
+        "titre": "Fougue",
+        "detail": "Action Surge : une action supplémentaire une fois par repos court."
+      },
+      {
+        "niveau": 3,
+        "titre": "Sous-classe Champion",
+        "detail": "Critique amélioré : critique sur 19-20."
+      },
+      {
+        "niveau": 4,
+        "titre": "Barbare 1",
+        "detail": "Rage (dégâts bonus et résistance aux dégâts physiques) et Défense sans armure (CA = 10 + mod. Dextérité + mod. Constitution)."
+      },
+      {
+        "niveau": 5,
+        "titre": "Barbare 2",
+        "detail": "Attaque téméraire (avantage à toutes tes attaques de mêlée du tour, au prix de donner l'avantage aux ennemis contre toi) et Sens du danger."
+      },
+      {
+        "niveau": 6,
+        "titre": "Sous-classe Berserker",
+        "detail": "Frénésie : une attaque de mêlée supplémentaire en action bonus tant que tu es en Rage."
+      },
+      {
+        "niveau": 7,
+        "titre": "Premier don",
+        "detail": "Grand Maître d'armes : option -5 au jet d'attaque pour +10 dégâts avec une arme lourde."
+      },
+      {
+        "niveau": 8,
+        "titre": "Attaque supplémentaire",
+        "detail": "Un second coup par action d'attaque, et Mouvement rapide (+3 m de vitesse hors armure lourde)."
+      },
+      {
+        "niveau": 9,
+        "titre": "Rage sans esprit",
+        "detail": "Immunisé au Charme et à la Peur tant que tu es en Rage."
+      },
+      {
+        "niveau": 10,
+        "titre": "Instinct féroce",
+        "detail": "Ne peut plus être surpris tant que tu es conscient — l'initiative passe en avantage si tu es surpris malgré tout."
+      },
+      {
+        "niveau": 11,
+        "titre": "Deuxième don",
+        "detail": "+2 Force."
+      },
+      {
+        "niveau": 12,
+        "titre": "Critique brutal — build terminé",
+        "detail": "Un dé de dégâts supplémentaire (correspondant au dé de l'arme) sur chaque critique, en plus des Attaques sauvages du Demi-Orc — le pic de dégâts du build."
+      }
+    ],
+    "equipement": [
+      {
+        "emplacement": "Arme principale",
+        "objetId": "very-heavy-greataxe",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "adamantine-scale-mail",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-speed",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "killers-sweetheart",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "hellfire-greataxe",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-greater-health",
+        "importance": "Excellent",
+        "acte": 3
+      }
+    ],
+    "roles": [
+      "degatsMelee"
+    ],
+    "elements": []
+  },
+  {
+    "id": "guerrier-champion-occultiste-dague-critique",
+    "classe": "Guerrier",
+    "sousClasse": "Champion",
+    "nom": "Guerrier Champion / Occultiste Lame maudite — Bourreau Maudit",
+    "split": "Guerrier (Champion) 9 / Occultiste (Lame maudite, Pacte de la Lame) 3",
+    "role": "Exécution ciblée / Dague et dague (Charisme)",
+    "resume": "Multiclasse atypique qui frappe au Charisme plutôt qu'à la Force ou la Dextérité : le Pacte de la Lame de l'Occultiste Lame maudite lie Bloodthirst (qui réduit lui-même le seuil de critique de 1, en plus de celui du Champion) comme arme de Charisme, tandis que la Malédiction du sorcier des lames ajoute encore -1 sur la cible maudite et des dégâts bonus. Contre une cible maudite, le seuil de critique cumulé descend à 18-20.",
+    "caracDepart": {
+      "FOR": 8,
+      "DEX": 16,
+      "CON": 14,
+      "INT": 8,
+      "SAG": 10,
+      "CHA": 16
+    },
+    "forces": [
+      "Contre une cible maudite : critique sur 18-20 (Champion -1 + Malédiction -1), soit 15% de base avant tout autre bonus",
+      "La Malédiction du sorcier des lames ajoute aussi les dégâts du bonus de maîtrise sur la cible visée, et rend des PV si elle meurt",
+      "Profil Charisme original : un Guerrier qui frappe fort sans avoir besoin de Force ni de Dextérité élevées"
+    ],
+    "faiblesses": [
+      "Profil de caractéristiques exigeant (Charisme et Constitution, avec un peu de Dextérité pour la CA) — moins direct qu'un profil Force ou Dex pur",
+      "La réduction de seuil de la Malédiction ne s'applique qu'à UNE cible à la fois, rechargée au repos court",
+      "Demande de bien gérer deux progressions de classe en parallèle plutôt que de suivre une seule ligne droite"
+    ],
+    "synergies": [
+      "Bloodthirst réduit le seuil de critique pour TOUTES tes attaques, pas seulement les siennes — confirmé à ne pas nécessiter d'être l'arme activement utilisée pour infliger des dégâts, juste d'être équipée. Combinée à une seconde dague (Dolor Amarus, +7 dégâts sur critique) en main gauche, chaque critique devient rentable même sans Critique brutal de Barbare. Aucune route sombre requise, contrairement aux builds du Tribunal du Meurtre."
+    ],
+    "dons": [
+      "+2 Charisme (niv 7)",
+      "Alerte (niv 9)",
+      "+2 Charisme (niv 11)"
+    ],
+    "sortsCles": [
+      "Explosion occulte (Eldritch Blast)"
+    ],
+    "jalons": [
+      {
+        "etape": "Occultiste 1 (Lame maudite)",
+        "note": "Guerrier des lames : utilise le Charisme pour les attaques et dégâts d'une arme à une main. Malédiction du sorcier des lames : -1 au seuil de critique et dégâts bonus contre la cible maudite (repos court)."
+      },
+      {
+        "etape": "Guerrier 3 (Champion)",
+        "note": "Critique amélioré : critique sur 19-20 — cumulé avec la Malédiction sur la cible maudite, ça descend à 18-20."
+      },
+      {
+        "etape": "Occultiste 3 (Pacte de la Lame)",
+        "note": "Lie une arme (Bloodthirst recommandé) : Charisme pour l'attaque et les dégâts, invocable/rangée à volonté."
+      }
+    ],
+    "progression": [
+      {
+        "niveau": 1,
+        "titre": "Occultiste 1",
+        "detail": "Pacte du Sorcier des lames : Guerrier des lames (Charisme pour les attaques et dégâts d'une arme à une main), Malédiction du sorcier des lames, et Explosion occulte."
+      },
+      {
+        "niveau": 2,
+        "titre": "Guerrier 1",
+        "detail": "Style de combat (Duel recommandé) et Second souffle."
+      },
+      {
+        "niveau": 3,
+        "titre": "Fougue",
+        "detail": "Action Surge : une action supplémentaire une fois par repos court."
+      },
+      {
+        "niveau": 4,
+        "titre": "Sous-classe Champion",
+        "detail": "Critique amélioré : critique sur 19-20."
+      },
+      {
+        "niveau": 5,
+        "titre": "Occultiste 2",
+        "detail": "Invocations occultes, et les emplacements de sort se rechargent au repos court."
+      },
+      {
+        "niveau": 6,
+        "titre": "Occultiste 3 (Pacte de la Lame)",
+        "detail": "Lie une arme comme pacte : Bloodthirst devient une arme de Charisme, invocable à volonté."
+      },
+      {
+        "niveau": 7,
+        "titre": "Premier don",
+        "detail": "+2 Charisme."
+      },
+      {
+        "niveau": 8,
+        "titre": "Attaque supplémentaire",
+        "detail": "Un second coup par action d'attaque."
+      },
+      {
+        "niveau": 9,
+        "titre": "Deuxième don",
+        "detail": "Alerte : +5 à l'initiative, impossible d'être surpris."
+      },
+      {
+        "niveau": 10,
+        "titre": "Athlète remarquable",
+        "detail": "Bonus aux tests d'Athlétisme et d'Acrobatie (feature Champion)."
+      },
+      {
+        "niveau": 11,
+        "titre": "Troisième don",
+        "detail": "+2 Charisme (18 ou plus selon le point de départ)."
+      },
+      {
+        "niveau": 12,
+        "titre": "Indomptable — build terminé",
+        "detail": "Peut relancer une sauvegarde ratée une fois par repos long."
+      }
+    ],
+    "equipement": [
+      {
+        "emplacement": "Torse",
+        "objetId": "spidersilk-armour",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-speed",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "gloves-of-dexterity",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "killers-sweetheart",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "bloodthirst",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Main gauche",
+        "objetId": "dolor-amarus",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-greater-health",
+        "importance": "Bon",
+        "acte": 3
+      }
+    ],
+    "roles": [
+      "degatsMelee"
     ],
     "elements": []
   }

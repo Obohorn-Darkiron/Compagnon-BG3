@@ -6530,5 +6530,21 @@
     "verifie": true,
     "aConfirmer": [],
     "alignement": "neutre"
+  },
+  {
+    "id": "the-dead-shot",
+    "nomEn": "The Dead Shot",
+    "nomFr": "The Dead Shot",
+    "type": "Arc long (arme à distance)",
+    "rarete": "Très rare",
+    "acte": 3,
+    "zone": "Armurerie de Stormshore, Ville basse (point de passage du Mur central)",
+    "obtention": "Vendu par Fytz le Pétardier, près du point de passage du Mur central de la Ville basse.",
+    "effet": "Arc long +2. Critique amélioré : le seuil de critique est réduit de 1 pour toutes tes attaques (pas seulement celles avec cet arc), cumulable avec d'autres sources. Tir perçant : double ton bonus de maîtrise sur les jets d'attaque à distance, sauf en cas de désavantage.",
+    "verifie": true,
+    "aConfirmer": [
+      "nomFr"
+    ],
+    "alignement": "neutre"
   }
 ]
