@@ -2676,11 +2676,12 @@
       "Aucune gestion de ressource",
       "Très bon avec les armes à fort multiplicateur de critique",
       "Increvable avec assez de PV",
-      "Casque à cornes de Sarevok : encore -1 au seuil de critique, permanent et cumulable avec Critique amélioré — critique sur 18-20 dès le niveau 3, sans aucune gestion de ressource"
+      "Casque à cornes de Sarevok : encore -1 au seuil de critique, permanent et cumulable avec Critique amélioré — critique sur 18-20 dès le niveau 3, soit 15% par jet d'attaque, sans aucune gestion de ressource"
     ],
     "faiblesses": [
       "Pas de manœuvres tactiques",
-      "Moins polyvalent que Maître de guerre"
+      "Moins polyvalent que Maître de guerre",
+      "Ce build n'a aucune source d'avantage intégrée à la classe (contrairement au Barbare/Attaque téméraire, à l'Occultiste/Ténèbres+Devil's Sight ou au Roublard/Assassinat du catalogue) : le seuil réduit s'applique à un jet de d20 simple, sans jamais en lancer deux. C'est le choix le plus simple du catalogue, pas le plus optimisé pour maximiser le taux de critique."
     ],
     "dons": [
       "Grand Maître d'armes (niv 4)",
@@ -3237,7 +3238,8 @@
       "Une seule action bonus (pas de Filou)"
     ],
     "synergies": [
-      "Identité culte de Bhaal : Soif de sang vient directement du butin d'Orin, la grande prêtresse de Bhaal — et une fois le Tribunal du Meurtre rejoint comme Assassin impie, le marchand Écho d'Abazigal vend la Capuche de l'assassin de Bhaal et des dagues « vicieuses » supplémentaires (dégâts de critique cumulables) pour compléter le thème. Parfait pour une run Dark Urge qui embrasse ses pulsions."
+      "Identité culte de Bhaal : Soif de sang vient directement du butin d'Orin, la grande prêtresse de Bhaal — et une fois le Tribunal du Meurtre rejoint comme Assassin impie, le marchand Écho d'Abazigal vend la Capuche de l'assassin de Bhaal et des dagues « vicieuses » supplémentaires (dégâts de critique cumulables) pour compléter le thème. Parfait pour une run Dark Urge qui embrasse ses pulsions.",
+      "Au-delà du tour d'ouverture (critique garanti par Ambuscade sur cible Surprise), le taux de critique retombe au seuil de base sans avantage — sauf si tu te re-caches via Ruse (Discrétion en action bonus, dispo dès le niveau 2) à chaque tour où c'est possible : retrouver la Discrétion redonne l'avantage sur l'attaque suivante (Attaque sournoise incluse), donc plus de chances de retomber dans la plage de critique. Ça demande un ennemi qui perd ta trace (couvert, angle mort) — pas garanti dans un combat rapproché où tu restes visible."
     ],
     "dons": [
       "+2 Dextérité (niv 4)",
@@ -11194,7 +11196,8 @@
       "Vulnérable si l'ennemi te charge avant que tu aies pu tirer"
     ],
     "synergies": [
-      "Identité culte de Bhaal : une fois le Tribunal du Meurtre rejoint comme Assassin impie, Écho d'Abazigal vend l'Arc court vicieux (+7 dégâts sur critique) et la Capuche de l'assassin de Bhaal — un habillage thématique cohérent pour une run Dark Urge qui embrasse ses pulsions, sans rien changer au moteur du build."
+      "Identité culte de Bhaal : une fois le Tribunal du Meurtre rejoint comme Assassin impie, Écho d'Abazigal vend l'Arc court vicieux (+7 dégâts sur critique) et la Capuche de l'assassin de Bhaal — un habillage thématique cohérent pour une run Dark Urge qui embrasse ses pulsions, sans rien changer au moteur du build.",
+      "Au-delà du tour d'ouverture (critique garanti par Ambuscade sur cible Surprise), le taux de critique retombe au seuil de base sans avantage — sauf si tu te re-caches via Ruse (Discrétion en action bonus, dispo dès le niveau 2) à chaque tour où c'est possible : retrouver la Discrétion redonne l'avantage sur l'attaque suivante (Attaque sournoise incluse), donc plus de chances de retomber dans la plage de critique. Ça demande un ennemi qui perd ta trace (couvert, angle mort) — pas garanti dans un combat rapproché où tu restes visible."
     ],
     "dons": [
       "Tireur d'élite (niv 4)",
@@ -11371,7 +11374,8 @@
     "faiblesses": [
       "Moins de pic de dégâts qu'un Assassin en ouverture de combat",
       "Peu d'outils de contrôle ou d'utilitaire",
-      "Le -5 de Tireur d'élite peut faire rater les cibles à haute CA sans autre source d'avantage"
+      "Le -5 de Tireur d'élite peut faire rater les cibles à haute CA sans autre source d'avantage",
+      "Attention à une confusion fréquente : la hauteur (Position dominante) donne +2 au jet d'attaque en BG3, PAS l'avantage — ça aide à toucher, mais ça ne change rien aux chances de tomber dans la plage de critique, qui ne dépend que du d20 brut. Comme le Guerrier Champion en mêlée, cet archer n'a donc aucune source d'avantage intégrée pour augmenter son taux de critique, seulement le seuil réduit appliqué à un jet simple."
     ],
     "dons": [
       "Tireur d'élite (niv 4)",
@@ -12130,7 +12134,8 @@
       "Équipement clé uniquement disponible après la quête du Tribunal du Meurtre (Acte 3)"
     ],
     "synergies": [
-      "Identité culte de Bhaal complète : Armure de fidèle de Bhaal (Aura du Meurtre, double les dégâts perforants des ennemis à moins de 3 m), Capuche de l'assassin de Bhaal (+2 initiative, vital pour agir avant l'ennemi), Amulette de Bhaal (Premier sang, Saignement sur cible à PV max) et Dolor Amarus (+7 dégâts sur critique) forment un tout cohérent. Parfait pour une run Dark Urge qui embrasse pleinement ses pulsions, mais accessible à n'importe quel personnage prêt à rejoindre le culte. Alternative pur critique : le Casque à cornes de Sarevok (-1 permanent au seuil de critique, cumulable) est disponible au même endroit — il augmente le taux de critique sur toute la durée du combat mais perd les +2 d'initiative qui aident à agir avant l'ennemi pendant le round de surprise (crucial pour l'Assassinat garanti du Roublard Assassin) et casse l'identité visuelle du set Bhaal complet."
+      "Identité culte de Bhaal complète : Armure de fidèle de Bhaal (Aura du Meurtre, double les dégâts perforants des ennemis à moins de 3 m), Capuche de l'assassin de Bhaal (+2 initiative, vital pour agir avant l'ennemi), Amulette de Bhaal (Premier sang, Saignement sur cible à PV max) et Dolor Amarus (+7 dégâts sur critique) forment un tout cohérent. Parfait pour une run Dark Urge qui embrasse pleinement ses pulsions, mais accessible à n'importe quel personnage prêt à rejoindre le culte. Alternative pur critique : le Casque à cornes de Sarevok (-1 permanent au seuil de critique, cumulable) est disponible au même endroit — il augmente le taux de critique sur toute la durée du combat mais perd les +2 d'initiative qui aident à agir avant l'ennemi pendant le round de surprise (crucial pour l'Assassinat garanti du Roublard Assassin) et casse l'identité visuelle du set Bhaal complet.",
+      "Au-delà du tour d'ouverture (critique garanti par Ambuscade sur cible Surprise), le taux de critique retombe au seuil de base sans avantage — sauf si tu te re-caches via Ruse (Discrétion en action bonus, dispo dès le niveau 2) à chaque tour où c'est possible : retrouver la Discrétion redonne l'avantage sur l'attaque suivante (Attaque sournoise incluse), donc plus de chances de retomber dans la plage de critique. Ça demande un ennemi qui perd ta trace (couvert, angle mort) — pas garanti dans un combat rapproché où tu restes visible."
     ],
     "dons": [
       "+2 Dextérité (niv 4)",
@@ -12305,14 +12310,15 @@
       "CHA": 8
     },
     "forces": [
-      "Plage de critique cumulée (Champion 19-20 + Casque de Sarevok) parmi les plus hautes du jeu",
+      "Plage de critique cumulée (Champion 19-20 + Casque de Sarevok) : critique sur 18-20, soit 15% par jet d'attaque, en permanence dès le niveau 3",
       "Chaque critique inflige +7 dégâts supplémentaires grâce à la Hache de guerre vicieuse",
       "Aucune gestion de ressource, très résistant avec l'Armure de plates du chevalier félon"
     ],
     "faiblesses": [
       "Entièrement verrouillé sur une route sombre — inutilisable en run bienveillante",
       "Toujours aucune manœuvre tactique (comme tout Champion)",
-      "Équipement clé uniquement disponible après la quête du Tribunal du Meurtre (Acte 3)"
+      "Équipement clé uniquement disponible après la quête du Tribunal du Meurtre (Acte 3)",
+      "Ce build n'a aucune source d'avantage intégrée à la classe (contrairement au Barbare/Attaque téméraire, à l'Occultiste/Ténèbres+Devil's Sight ou au Roublard/Assassinat du catalogue) : le seuil réduit s'applique à un jet de d20 simple, sans jamais en lancer deux. C'est le choix le plus simple du catalogue, pas le plus optimisé pour maximiser le taux de critique."
     ],
     "synergies": [
       "Le set du chevalier félon (Armure de plates, Gantelets, Grèves — butin sur les gardes du Tribunal du Meurtre) donne une base défensive solide (CA 19, réduction de dégâts, avantage Sagesse) pendant que le Casque à cornes de Sarevok et la Hache de guerre vicieuse transforment chaque critique en gros pic de dégâts. Thème cohérent pour une run Dark Urge qui assume ses pulsions, mais accessible à n'importe quel personnage prêt à rejoindre le culte."
@@ -12656,7 +12662,8 @@
     "faiblesses": [
       "Entièrement verrouillé sur une route sombre — inutilisable en run bienveillante",
       "L'Aura du Meurtre de l'équipement Bhaal ne profite pas à ce build (il reste à distance)",
-      "Moins de pic de dégâts d'ouverture qu'un Assassin en embuscade"
+      "Moins de pic de dégâts d'ouverture qu'un Assassin en embuscade",
+      "Attention à une confusion fréquente : la hauteur (Position dominante) donne +2 au jet d'attaque en BG3, PAS l'avantage — ça aide à toucher, mais ça ne change rien aux chances de tomber dans la plage de critique, qui ne dépend que du d20 brut. Comme le Guerrier Champion en mêlée, cet archer n'a donc aucune source d'avantage intégrée pour augmenter son taux de critique, seulement le seuil réduit appliqué à un jet simple."
     ],
     "synergies": [
       "Partage l'identité du Tribunal du Meurtre avec les autres builds de la série (Amulette de Bhaal, marchand Écho d'Abazigal) mais reste volontairement plus léger sur l'itemization Bhaal : contrairement aux variantes mêlée, l'Armure de fidèle de Bhaal ne sert à rien pour un archer qui garde ses distances — ce build recommande une armure défensive classique à la place plutôt que de forcer une pièce du set sans bénéfice réel."
@@ -13158,12 +13165,14 @@
     "forces": [
       "Seuil de base à 17-20 en permanence (Champion -1, Bloodthirst -1, Casque à cornes de Sarevok -1) ; contre une cible maudite, 16-20 (+ la Malédiction), soit 25% de base avant tout autre bonus",
       "La Malédiction du sorcier des lames ajoute aussi les dégâts du bonus de maîtrise sur la cible visée, et rend des PV si elle meurt",
-      "Profil Charisme original : un Guerrier qui frappe fort sans avoir besoin de Force ni de Dextérité élevées"
+      "Profil Charisme original : un Guerrier qui frappe fort sans avoir besoin de Force ni de Dextérité élevées",
+      "Ténèbres + Devil's Sight (invocation Occultiste 2) : lancée sur soi, la zone aveugle tous les ennemis sans vision dans le noir dans un rayon de 5 m — vérifié sur bg3.wiki, attaquer une créature Aveuglée donne l'avantage — pendant que Devil's Sight laisse le porteur voir normalement à l'intérieur. Une vraie source d'avantage permanente en mêlée, contrairement aux autres builds Guerrier Champion du catalogue qui n'en ont aucune."
     ],
     "faiblesses": [
       "Profil de caractéristiques exigeant (Charisme et Constitution, avec un peu de Dextérité pour la CA) — moins direct qu'un profil Force ou Dex pur",
       "La réduction de seuil de la Malédiction ne s'applique qu'à UNE cible à la fois, rechargée au repos court",
-      "Demande de bien gérer deux progressions de classe en parallèle plutôt que de suivre une seule ligne droite"
+      "Demande de bien gérer deux progressions de classe en parallèle plutôt que de suivre une seule ligne droite",
+      "Ténèbres aveugle aussi les alliés sans vision dans le noir qui entrent dans la zone (5 m de rayon) — à lancer une fois le combat engagé et les alliés positionnés, pas au centre du groupe dès le début"
     ],
     "synergies": [
       "Bloodthirst réduit le seuil de critique pour TOUTES tes attaques, pas seulement les siennes — confirmé à ne pas nécessiter d'être l'arme activement utilisée pour infliger des dégâts, juste d'être équipée. Combinée à une seconde dague (Dolor Amarus, +7 dégâts sur critique) en main gauche et au Casque à cornes de Sarevok (-1 supplémentaire, permanent, vérifié cumulable avec les autres sources sur bg3.wiki), chaque critique devient rentable même sans Critique brutal de Barbare. Aucune route sombre requise, contrairement aux builds du Tribunal du Meurtre."
@@ -13174,7 +13183,8 @@
       "+2 Charisme (niv 11)"
     ],
     "sortsCles": [
-      "Explosion occulte (Eldritch Blast)"
+      "Explosion occulte (Eldritch Blast)",
+      "Ténèbres (Darkness)"
     ],
     "jalons": [
       {
@@ -13186,8 +13196,16 @@
         "note": "Critique amélioré : critique sur 19-20 — cumulé avec la Malédiction sur la cible maudite, ça descend à 18-20."
       },
       {
+        "etape": "Occultiste 2",
+        "note": "Invocation Devil's Sight : voit normalement dans le noir, magique ou non, jusqu'à 24 m — permet de voir à travers sa propre Ténèbres."
+      },
+      {
         "etape": "Occultiste 3 (Pacte de la Lame)",
         "note": "Lie une arme (Bloodthirst recommandé) : Charisme pour l'attaque et les dégâts, invocable/rangée à volonté."
+      },
+      {
+        "etape": "Occultiste 3",
+        "note": "Apprend Ténèbres (sort de niveau 2, dispo aux Occultistes dès la classe niveau 3) : zone de 5 m de rayon qui aveugle les ennemis sans vision dans le noir — attaque contre une cible Aveuglée = avantage."
       }
     ],
     "progression": [
@@ -13214,12 +13232,12 @@
       {
         "niveau": 5,
         "titre": "Occultiste 2",
-        "detail": "Invocations occultes, et les emplacements de sort se rechargent au repos court."
+        "detail": "Invocations occultes, et les emplacements de sort se rechargent au repos court. Prend l'invocation Devil's Sight : voit à travers sa propre Ténèbres jusqu'à 24 m."
       },
       {
         "niveau": 6,
         "titre": "Occultiste 3 (Pacte de la Lame)",
-        "detail": "Lie une arme comme pacte : Bloodthirst devient une arme de Charisme, invocable à volonté."
+        "detail": "Lie une arme comme pacte : Bloodthirst devient une arme de Charisme, invocable à volonté. Apprend aussi le sort Ténèbres, lancé sur soi pour aveugler les ennemis proches et gagner l'avantage sur eux (vérifié : Devil's Sight laisse le porteur y voir normalement)."
       },
       {
         "niveau": 7,
