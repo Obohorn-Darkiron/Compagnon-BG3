@@ -11998,5 +11998,677 @@
     "elements": [
       "glace"
     ]
+  },
+  {
+    "id": "roublard-assassin-tribunal",
+    "classe": "Roublard",
+    "sousClasse": "Assassin",
+    "nom": "Roublard Assassin — Ombre du Tribunal",
+    "split": "Voleur (Assassin) 12 (classe unique)",
+    "role": "Frappe d'ouverture dévastatrice / Culte de Bhaal (dague + dague)",
+    "resume": "Variante du Roublard Assassin pur entièrement tournée vers l'identité du Tribunal du Meurtre : deux dagues perforantes, dont Dolor Amarus qui ajoute +7 dégâts sur chaque critique, portées par l'Aura du Meurtre de l'Armure de fidèle de Bhaal qui double les dégâts perforants subis par les ennemis à moins de 3 m — y compris ceux que tu viens de toucher. Nécessite d'avoir rejoint le culte de Bhaal comme Assassin impie (route non-bienveillante).",
+    "caracDepart": {
+      "FOR": 8,
+      "DEX": 16,
+      "CON": 14,
+      "INT": 10,
+      "SAG": 12,
+      "CHA": 8
+    },
+    "forces": [
+      "Critique garanti en embuscade, sur des dégâts perforants doublés par sa propre aura",
+      "Dolor Amarus ajoute +7 dégâts à chaque critique — cumulable avec une seconde dague vicieuse",
+      "Toujours aussi fort en discrétion et utilitaire que le Roublard Assassin classique"
+    ],
+    "faiblesses": [
+      "Entièrement verrouillé sur une route sombre — inutilisable en run bienveillante",
+      "L'Aura du Meurtre (portée 3 m) ne sert à rien si tu restes à distance",
+      "Équipement clé uniquement disponible après la quête du Tribunal du Meurtre (Acte 3)"
+    ],
+    "synergies": [
+      "Identité culte de Bhaal complète : Armure de fidèle de Bhaal (Aura du Meurtre, double les dégâts perforants des ennemis à moins de 3 m), Capuche de l'assassin de Bhaal (+2 initiative, vital pour agir avant l'ennemi), Amulette de Bhaal (Premier sang, Saignement sur cible à PV max) et Dolor Amarus (+7 dégâts sur critique) forment un tout cohérent. Parfait pour une run Dark Urge qui embrasse pleinement ses pulsions, mais accessible à n'importe quel personnage prêt à rejoindre le culte."
+    ],
+    "dons": [
+      "+2 Dextérité (niv 4)",
+      "Assassin chevronné ou Doué (niv 8)",
+      "+2 Dextérité (niv 10)",
+      "Don libre (niv 12)"
+    ],
+    "sortsCles": [],
+    "jalons": [
+      {
+        "etape": "Niv 3 (sous-classe)",
+        "note": "Assassin : avantage et critiques garantis sur les créatures qui n'ont pas agi."
+      },
+      {
+        "etape": "Acte 3 (Tribunal du Meurtre)",
+        "note": "Devenir Assassin impie de Bhaal débloque l'équipement clé du build chez Écho d'Abazigal."
+      }
+    ],
+    "progression": [
+      {
+        "niveau": 1,
+        "titre": "Roublard 1",
+        "detail": "Expertise (double maîtrise sur deux compétences) et Attaque sournoise (1d6) dès qu'une cible est prise avec avantage."
+      },
+      {
+        "niveau": 2,
+        "titre": "Ruse",
+        "detail": "Désengagement, Repli ou Discrétion en action bonus."
+      },
+      {
+        "niveau": 3,
+        "titre": "Sous-classe Assassin",
+        "detail": "Avantage automatique et critiques garantis contre toute créature qui n'a pas encore agi au premier tour de combat."
+      },
+      {
+        "niveau": 4,
+        "titre": "Premier don",
+        "detail": "+2 Dextérité (18)."
+      },
+      {
+        "niveau": 5,
+        "titre": "Esquive totale",
+        "detail": "En réaction, réduit de moitié les dégâts d'une attaque qui te touche."
+      },
+      {
+        "niveau": 6,
+        "titre": "Expertise supplémentaire",
+        "detail": "Double maîtrise sur deux compétences de plus — discrétion et crochetage recommandés."
+      },
+      {
+        "niveau": 7,
+        "titre": "Évasion",
+        "detail": "Mi-dégâts (ou aucun) sur les sauvegardes de Dextérité réussies — très fort contre les sorts de zone."
+      },
+      {
+        "niveau": 8,
+        "titre": "Deuxième don",
+        "detail": "Assassin chevronné, ou Doué (Skilled) selon la préférence."
+      },
+      {
+        "niveau": 9,
+        "titre": "Expertise en infiltration",
+        "detail": "Peut se construire une fausse identité complète — surtout utile en roleplay/infiltration longue durée."
+      },
+      {
+        "niveau": 10,
+        "titre": "Troisième don",
+        "detail": "+2 Dextérité (20) — maximum naturel, précision et dégâts au plus haut."
+      },
+      {
+        "niveau": 11,
+        "titre": "Talent fiable",
+        "detail": "Les jets de compétence maîtrisée ratés sous 10 sont automatiquement traités comme un 10."
+      },
+      {
+        "niveau": 12,
+        "titre": "Quatrième don — build terminé",
+        "detail": "+7 dégâts de Dolor Amarus sur chaque critique garanti en ouverture : le build est à son pic."
+      }
+    ],
+    "equipement": [
+      {
+        "emplacement": "Cape",
+        "objetId": "deathstalker-mantle",
+        "importance": "Situationnel",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme",
+        "objetId": "sussur-dagger",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-speed",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "killers-sweetheart",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "bhaalist-armour",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "assassin-of-bhaal-cowl",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-bhaal",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "bhaalist-gloves",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "dread-iron-dagger",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Main gauche",
+        "objetId": "dolor-amarus",
+        "importance": "Excellent",
+        "acte": 3
+      }
+    ],
+    "roles": [
+      "degatsMelee",
+      "utilitaire"
+    ],
+    "elements": []
+  },
+  {
+    "id": "guerrier-champion-bourreau-tribunal",
+    "classe": "Guerrier",
+    "sousClasse": "Champion",
+    "nom": "Guerrier Champion — Bourreau du Tribunal",
+    "split": "Guerrier 12 (classe unique)",
+    "role": "Critiques fréquents et dévastateurs / Culte de Bhaal (hache à deux mains)",
+    "resume": "Variante du Guerrier Champion qui pousse la plage de critique élargie à son maximum : le Casque à cornes de Sarevok réduit encore le seuil de critique en plus du 19-20 du Champion, et la Hache de guerre vicieuse ajoute +7 dégâts à chaque critique obtenu. Nécessite d'avoir rejoint le culte de Bhaal comme Assassin impie (route non-bienveillante).",
+    "caracDepart": {
+      "FOR": 17,
+      "DEX": 14,
+      "CON": 15,
+      "INT": 8,
+      "SAG": 10,
+      "CHA": 8
+    },
+    "forces": [
+      "Plage de critique cumulée (Champion 19-20 + Casque de Sarevok) parmi les plus hautes du jeu",
+      "Chaque critique inflige +7 dégâts supplémentaires grâce à la Hache de guerre vicieuse",
+      "Aucune gestion de ressource, très résistant avec l'Armure de plates du chevalier félon"
+    ],
+    "faiblesses": [
+      "Entièrement verrouillé sur une route sombre — inutilisable en run bienveillante",
+      "Toujours aucune manœuvre tactique (comme tout Champion)",
+      "Équipement clé uniquement disponible après la quête du Tribunal du Meurtre (Acte 3)"
+    ],
+    "synergies": [
+      "Le set du chevalier félon (Armure de plates, Gantelets, Grèves — butin sur les gardes du Tribunal du Meurtre) donne une base défensive solide (CA 19, réduction de dégâts, avantage Sagesse) pendant que le Casque à cornes de Sarevok et la Hache de guerre vicieuse transforment chaque critique en gros pic de dégâts. Thème cohérent pour une run Dark Urge qui assume ses pulsions, mais accessible à n'importe quel personnage prêt à rejoindre le culte."
+    ],
+    "dons": [
+      "Grand Maître d'armes (niv 4)",
+      "+2 Force (niv 6)",
+      "Résilient CON ou Chanceux (niv 8)",
+      "Don libre (niv 12)"
+    ],
+    "sortsCles": [],
+    "jalons": [
+      {
+        "etape": "Niv 3 (sous-classe)",
+        "note": "Champion : plage de critique élargie à 19-20."
+      },
+      {
+        "etape": "Acte 3 (Tribunal du Meurtre)",
+        "note": "Butin sur les chevaliers de la mort (armure complète) et sur Sarevok (casque) ; achat de la Hache de guerre vicieuse chez Écho d'Abazigal après avoir rejoint le culte."
+      }
+    ],
+    "progression": [
+      {
+        "niveau": 1,
+        "titre": "Guerrier 1",
+        "detail": "Style de combat (Grande arme recommandé) et Second souffle pour un peu de PV de secours."
+      },
+      {
+        "niveau": 2,
+        "titre": "Fougue",
+        "detail": "Action Surge : une action supplémentaire une fois par repos court."
+      },
+      {
+        "niveau": 3,
+        "titre": "Sous-classe Champion",
+        "detail": "Critique amélioré (19-20) et avantage aux tests d'Athlétisme."
+      },
+      {
+        "niveau": 4,
+        "titre": "Premier don",
+        "detail": "Grand Maître d'armes : option -5/+10 dégâts avec une arme lourde."
+      },
+      {
+        "niveau": 5,
+        "titre": "Attaque supplémentaire",
+        "detail": "Un second coup par action d'attaque — donc deux chances de critique par tour."
+      },
+      {
+        "niveau": 6,
+        "titre": "Deuxième don",
+        "detail": "+2 Force."
+      },
+      {
+        "niveau": 7,
+        "titre": "Athlète remarquable",
+        "detail": "Peut sprinter (bonus de mouvement) en plus des tests d'Athlétisme facilités."
+      },
+      {
+        "niveau": 8,
+        "titre": "Troisième don",
+        "detail": "Résilient (Constitution) ou Chanceux selon le confort recherché."
+      },
+      {
+        "niveau": 9,
+        "titre": "Indomptable",
+        "detail": "Peut relancer une sauvegarde ratée une fois par repos long."
+      },
+      {
+        "niveau": 10,
+        "titre": "Style de combat supplémentaire",
+        "detail": "Choisit un second style de combat, cumulable avec le premier."
+      },
+      {
+        "niveau": 11,
+        "titre": "Troisième attaque",
+        "detail": "Un troisième coup par action — donc trois chances de critique par tour, chacune capable de déclencher les +7 de la hache."
+      },
+      {
+        "niveau": 12,
+        "titre": "Quatrième don — build terminé",
+        "detail": "Un dernier don libre pour peaufiner le build (précision, survie ou utilitaire)."
+      }
+    ],
+    "equipement": [
+      {
+        "emplacement": "Arme principale",
+        "objetId": "everburn-blade",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "very-heavy-greataxe",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "killers-sweetheart",
+        "importance": "Excellent",
+        "acte": 2
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "blackguards-plate",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "sarevoks-horned-helmet",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "blackguards-gauntlets",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "blackguards-greaves",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-bhaal",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "vicious-battleaxe",
+        "importance": "Excellent",
+        "acte": 3
+      }
+    ],
+    "roles": [
+      "degatsMelee"
+    ],
+    "elements": []
+  },
+  {
+    "id": "guerrier-maitre-guerre-bouclier-tribunal",
+    "classe": "Guerrier",
+    "sousClasse": "Maître de guerre",
+    "nom": "Guerrier Maître de guerre — Bouclier du Tribunal",
+    "split": "Guerrier 12 (classe unique)",
+    "role": "Tank/duelliste polyvalent / Culte de Bhaal (épée courte + bouclier)",
+    "resume": "Frontline épée-et-bouclier qui exploite l'Aura du Meurtre de sa propre Armure de fidèle de Bhaal : en restant au contact permanent, il double les dégâts perforants subis par tous les ennemis à moins de 3 m — y compris ses propres coups de Déchire-chair (épée courte, perforante) et ceux de tout allié perforant à proximité. Le Bouclier de l'impie ajoute défense et un emplacement de sort. Nécessite d'avoir rejoint le culte de Bhaal comme Assassin impie (route non-bienveillante).",
+    "caracDepart": {
+      "FOR": 16,
+      "DEX": 12,
+      "CON": 16,
+      "INT": 8,
+      "SAG": 10,
+      "CHA": 8
+    },
+    "forces": [
+      "L'Aura du Meurtre profite à plein à un combattant qui reste au contact en permanence",
+      "Manœuvres tactiques (désarmement, mise à terre, riposte) en plus du bouclier",
+      "Bon soutien de groupe : son aura profite aussi à tout allié utilisant une arme perforante à proximité"
+    ],
+    "faiblesses": [
+      "Entièrement verrouillé sur une route sombre — inutilisable en run bienveillante",
+      "Moins de dégâts bruts qu'une arme à deux mains",
+      "Doit rester au contact pour que l'Aura du Meurtre serve à quelque chose (3 m autour de lui)"
+    ],
+    "synergies": [
+      "L'Aura du Meurtre de l'Armure de fidèle de Bhaal (rayon 3 m, double les dégâts perforants) profite à ce build ET à tout allié utilisant une arme perforante à proximité (dague, rapière, arc...) — un vrai bonus d'équipe si un autre membre du groupe joue perforant, comme le Roublard Assassin — Ombre du Tribunal. Déchire-chair (épée courte perforante) en profite directement, et le Bouclier de l'impie garde le profil résistant malgré une itemization tournée vers l'attaque."
+    ],
+    "dons": [
+      "Sentinelle (niv 4)",
+      "+2 Force (niv 6)",
+      "Robuste ou Résilient CON (niv 8)",
+      "Don libre (niv 12)"
+    ],
+    "sortsCles": [],
+    "jalons": [
+      {
+        "etape": "Niv 3 (sous-classe)",
+        "note": "Maître de guerre : Manœuvres tactiques (désarmement, mise à terre, riposte)."
+      },
+      {
+        "etape": "Acte 3 (Tribunal du Meurtre)",
+        "note": "Armure de fidèle de Bhaal et Bouclier de l'impie débloqués après avoir rejoint le culte."
+      }
+    ],
+    "progression": [
+      {
+        "niveau": 1,
+        "titre": "Guerrier 1",
+        "detail": "Style de combat (Défense ou Duel recommandé avec un bouclier) et Second souffle pour un peu de PV de secours."
+      },
+      {
+        "niveau": 2,
+        "titre": "Fougue",
+        "detail": "Action Surge : une action supplémentaire une fois par repos court."
+      },
+      {
+        "niveau": 3,
+        "titre": "Sous-classe Maître de guerre",
+        "detail": "Manœuvres débloquées : Frappe menaçante, Attaque au but, Riposte."
+      },
+      {
+        "niveau": 4,
+        "titre": "Premier don",
+        "detail": "Sentinelle : punit les ennemis qui attaquent tes alliés ou tentent de fuir ta portée."
+      },
+      {
+        "niveau": 5,
+        "titre": "Attaque supplémentaire",
+        "detail": "Un second coup par action d'attaque."
+      },
+      {
+        "niveau": 6,
+        "titre": "Deuxième don",
+        "detail": "+2 Force."
+      },
+      {
+        "niveau": 7,
+        "titre": "Connais ton ennemi",
+        "detail": "Évalue rapidement les forces et faiblesses relatives d'une créature observée."
+      },
+      {
+        "niveau": 8,
+        "titre": "Troisième don",
+        "detail": "Robuste (plus de PV max) ou Résilient (Constitution) selon le confort recherché."
+      },
+      {
+        "niveau": 9,
+        "titre": "Indomptable",
+        "detail": "Peut relancer une sauvegarde ratée une fois par repos long."
+      },
+      {
+        "niveau": 10,
+        "titre": "Manœuvre et dé de supériorité supplémentaires",
+        "detail": "Une manœuvre de plus au répertoire, et un dé de supériorité additionnel par repos court."
+      },
+      {
+        "niveau": 11,
+        "titre": "Troisième attaque",
+        "detail": "Un troisième coup par action d'attaque — trois occasions par tour de déclencher l'Aura du Meurtre sur une nouvelle cible."
+      },
+      {
+        "niveau": 12,
+        "titre": "Quatrième don — build terminé",
+        "detail": "Un dernier don libre pour peaufiner le build (précision, survie ou utilitaire)."
+      }
+    ],
+    "equipement": [
+      {
+        "emplacement": "Arme principale",
+        "objetId": "everburn-blade",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-persistence",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Torse",
+        "objetId": "bhaalist-armour",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Bouclier",
+        "objetId": "shield-of-the-undevout",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Arme principale",
+        "objetId": "fleshrender",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "sarevoks-horned-helmet",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-bhaal",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "craterflesh-gloves",
+        "importance": "Bon",
+        "acte": 3
+      }
+    ],
+    "roles": [
+      "tank",
+      "degatsMelee"
+    ],
+    "elements": []
+  },
+  {
+    "id": "rodeur-chasseur-traqueur-tribunal",
+    "classe": "Rôdeur",
+    "sousClasse": "Chasseur (Hunter)",
+    "nom": "Rôdeur Chasseur — Traqueur du Tribunal",
+    "split": "Rôdeur 12 (classe unique)",
+    "role": "Dégâts constants à distance / Culte de Bhaal (arc court)",
+    "resume": "Rôdeur Chasseur classique qui troque son arc contre l'Arc court vicieux (+7 dégâts sur critique) et profite de l'Amulette de Bhaal pour un premier coup qui Saigne, et des Gants d'ossature exosquelettique pour ignorer les résistances physiques. Contrairement aux variantes mêlée du Tribunal, ce build ne recommande pas l'Armure de fidèle de Bhaal : son Aura du Meurtre ne profite qu'aux ennemis à moins de 3 m du porteur, ce qui ne sert à rien pour un archer qui garde ses distances. Nécessite d'avoir rejoint le culte de Bhaal comme Assassin impie (route non-bienveillante).",
+    "caracDepart": {
+      "FOR": 8,
+      "DEX": 17,
+      "CON": 14,
+      "INT": 8,
+      "SAG": 14,
+      "CHA": 8
+    },
+    "forces": [
+      "Dégâts constants et fiables à distance, sans dépendre de la surprise",
+      "+7 dégâts sur chaque critique grâce à l'Arc court vicieux",
+      "Gants d'ossature exosquelettique : ignore les résistances Tranchant/Perforant/Contondant — jamais un ennemi résistant qui ruine un combat"
+    ],
+    "faiblesses": [
+      "Entièrement verrouillé sur une route sombre — inutilisable en run bienveillante",
+      "L'Aura du Meurtre de l'équipement Bhaal ne profite pas à ce build (il reste à distance)",
+      "Moins de pic de dégâts d'ouverture qu'un Assassin en embuscade"
+    ],
+    "synergies": [
+      "Partage l'identité du Tribunal du Meurtre avec les autres builds de la série (Amulette de Bhaal, marchand Écho d'Abazigal) mais reste volontairement plus léger sur l'itemization Bhaal : contrairement aux variantes mêlée, l'Armure de fidèle de Bhaal ne sert à rien pour un archer qui garde ses distances — ce build recommande une armure défensive classique à la place plutôt que de forcer une pièce du set sans bénéfice réel."
+    ],
+    "dons": [
+      "Tireur d'élite (niv 4)",
+      "+2 Dextérité (niv 8)",
+      "Doué (niv 12)"
+    ],
+    "sortsCles": [],
+    "jalons": [
+      {
+        "etape": "Niv 3 (sous-classe)",
+        "note": "Proie du chasseur : capacité au choix selon le type d'ennemi rencontré."
+      },
+      {
+        "etape": "Acte 3 (Tribunal du Meurtre)",
+        "note": "Arc court vicieux et Amulette de Bhaal disponibles après avoir rejoint le culte ; les Gants d'ossature exosquelettique viennent d'un combat séparé contre le Farslayer Ghislev."
+      }
+    ],
+    "progression": [
+      {
+        "niveau": 1,
+        "titre": "Rôdeur 1",
+        "detail": "Ennemi juré et Explorateur-né : bonus situationnels."
+      },
+      {
+        "niveau": 2,
+        "titre": "Rôdeur 2",
+        "detail": "Style de combat (Archerie recommandé) et premiers sorts : Marque du chasseur."
+      },
+      {
+        "niveau": 3,
+        "titre": "Sous-classe Chasseur",
+        "detail": "Proie du chasseur : choisit une capacité contre les groupes (Volée de flèches) ou les cibles isolées (Ennemi juré supérieur)."
+      },
+      {
+        "niveau": 4,
+        "titre": "Premier don",
+        "detail": "Tireur d'élite : ignore le désavantage à distance, option -5/+10 dégâts."
+      },
+      {
+        "niveau": 5,
+        "titre": "Attaque supplémentaire",
+        "detail": "Un second coup par action d'attaque — deux chances de critique par tour avec l'Arc court vicieux."
+      },
+      {
+        "niveau": 6,
+        "titre": "Ennemi juré supérieur",
+        "detail": "Bonus renforcés contre le type d'ennemi favori."
+      },
+      {
+        "niveau": 7,
+        "titre": "Défense du chasseur",
+        "detail": "Capacité défensive au choix (esquive contre plusieurs attaquants, ou repli protecteur)."
+      },
+      {
+        "niveau": 8,
+        "titre": "Deuxième don",
+        "detail": "+2 Dextérité — précision et dégâts améliorés."
+      },
+      {
+        "niveau": 9,
+        "titre": "Sorts de niveau 3",
+        "detail": "Immobiliser un être humanoïde et autres sorts de contrôle."
+      },
+      {
+        "niveau": 10,
+        "titre": "Explorateur-né supérieur",
+        "detail": "Bonus d'exploration et de pistage renforcés."
+      },
+      {
+        "niveau": 11,
+        "titre": "Volée de flèches supérieure",
+        "detail": "Capacité offensive de zone renforcée contre les groupes."
+      },
+      {
+        "niveau": 12,
+        "titre": "Troisième don — build terminé",
+        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+      }
+    ],
+    "equipement": [
+      {
+        "emplacement": "Torse",
+        "objetId": "spidersilk-armour",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Bottes",
+        "objetId": "boots-of-speed",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Anneau",
+        "objetId": "ring-of-protection",
+        "importance": "Bon",
+        "acte": 1
+      },
+      {
+        "emplacement": "Arme à distance",
+        "objetId": "vicious-shortbow",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Amulette",
+        "objetId": "amulet-of-bhaal",
+        "importance": "Bon",
+        "acte": 3
+      },
+      {
+        "emplacement": "Gants",
+        "objetId": "bonespike-gloves",
+        "importance": "Excellent",
+        "acte": 3
+      },
+      {
+        "emplacement": "Tête",
+        "objetId": "assassin-of-bhaal-cowl",
+        "importance": "Bon",
+        "acte": 3
+      }
+    ],
+    "roles": [
+      "degatsDistance",
+      "controle"
+    ],
+    "elements": []
   }
 ]
