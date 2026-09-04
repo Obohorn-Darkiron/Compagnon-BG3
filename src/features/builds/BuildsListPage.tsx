@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import { PageHeader } from '../../components/PageHeader'
 import { Scale, Search } from '../../components/icons'
 import { builds, estMulticlasse, getObjet, nomAffiche } from '../../data'
-import type { ElementTag } from '../../data/types'
-import { LABELS_ELEMENT, NOTE_ELEMENT_FAIBLE } from '../../components/elementLabels'
+import type { ElementTag, MecaniqueTag, RoleTag } from '../../data/types'
+import { LABELS_ELEMENT, LABELS_MECANIQUE, NOTE_ELEMENT_FAIBLE } from '../../components/elementLabels'
+import { LABELS_ROLE } from '../equipe/composeurEquipe'
 import { BuildCard } from './BuildCard'
 
 type FiltreClasse = 'tous' | 'mono' | 'multi'
@@ -16,12 +17,16 @@ const filtres: { valeur: FiltreClasse; label: string }[] = [
 ]
 
 const elementsDisponibles = Object.keys(LABELS_ELEMENT) as ElementTag[]
+const mecaniquesDisponibles = Object.keys(LABELS_MECANIQUE) as MecaniqueTag[]
+const rolesDisponibles = Object.keys(LABELS_ROLE) as RoleTag[]
 
 export function BuildsListPage() {
   const navigate = useNavigate()
   const [recherche, setRecherche] = useState('')
   const [filtre, setFiltre] = useState<FiltreClasse>('tous')
   const [elementActif, setElementActif] = useState<ElementTag | null>(null)
+  const [mecaniqueActive, setMecaniqueActive] = useState<MecaniqueTag | null>(null)
+  const [roleActif, setRoleActif] = useState<RoleTag | null>(null)
   const [modeComparaison, setModeComparaison] = useState(false)
   const [selection, setSelection] = useState<string[]>([])
 
@@ -47,6 +52,8 @@ export function BuildsListPage() {
         return true
       })
       .filter((b) => (elementActif ? b.elements.includes(elementActif) : true))
+      .filter((b) => (mecaniqueActive ? b.mecaniques.includes(mecaniqueActive) : true))
+      .filter((b) => (roleActif ? b.roles.includes(roleActif) : true))
       .filter((b) => {
         if (!q) return true
         const nomsEquipement = b.equipement.map((e) => {
@@ -64,7 +71,7 @@ export function BuildsListPage() {
         ]
         return champs.some((champ) => champ.toLowerCase().includes(q))
       })
-  }, [recherche, filtre, elementActif])
+  }, [recherche, filtre, elementActif, mecaniqueActive, roleActif])
 
   const nbBuildsPourElement = useMemo(
     () => (elementActif ? builds.filter((b) => b.elements.includes(elementActif)).length : 0),
@@ -133,6 +140,37 @@ export function BuildsListPage() {
                 }`}
               >
                 {LABELS_ELEMENT[el]}
+              </button>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-1.5">
+            {rolesDisponibles.map((r) => (
+              <button
+                key={r}
+                type="button"
+                onClick={() => setRoleActif((actuel) => (actuel === r ? null : r))}
+                className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+                  roleActif === r
+                    ? 'border-glow/70 bg-glow/15 text-glow'
+                    : 'border-border text-ink-muted'
+                }`}
+              >
+                {LABELS_ROLE[r]}
+              </button>
+            ))}
+            {mecaniquesDisponibles.map((m) => (
+              <button
+                key={m}
+                type="button"
+                onClick={() => setMecaniqueActive((actuel) => (actuel === m ? null : m))}
+                className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+                  mecaniqueActive === m
+                    ? 'border-glow/70 bg-glow/15 text-glow'
+                    : 'border-border text-ink-muted'
+                }`}
+              >
+                {LABELS_MECANIQUE[m]}
               </button>
             ))}
           </div>

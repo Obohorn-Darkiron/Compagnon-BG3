@@ -10,12 +10,15 @@ import {
   sousClassesPourClasse,
   type Build,
 } from '../../data'
-import type { ElementTag } from '../../data/types'
-import { LABELS_ELEMENT, NOTE_ELEMENT_FAIBLE } from '../../components/elementLabels'
+import type { ElementTag, MecaniqueTag, RoleTag } from '../../data/types'
+import { LABELS_ELEMENT, LABELS_MECANIQUE, NOTE_ELEMENT_FAIBLE } from '../../components/elementLabels'
+import { LABELS_ROLE } from './composeurEquipe'
 import { SousClasseCard } from './SousClasseCard'
 import { BuildCandidatCard } from './BuildCandidatCard'
 
 const elementsDisponibles = Object.keys(LABELS_ELEMENT) as ElementTag[]
+const mecaniquesDisponibles = Object.keys(LABELS_MECANIQUE) as MecaniqueTag[]
+const rolesDisponibles = Object.keys(LABELS_ROLE) as RoleTag[]
 
 export function SelecteurBuild({
   buildIdActuel,
@@ -29,24 +32,30 @@ export function SelecteurBuild({
   const [classe, setClasse] = useState(buildActuel?.classe ?? '')
   const [sousClasse, setSousClasse] = useState(buildActuel?.sousClasse ?? '')
   const [elementFiltre, setElementFiltre] = useState<ElementTag | null>(null)
+  const [mecaniqueFiltre, setMecaniqueFiltre] = useState<MecaniqueTag | null>(null)
+  const [roleFiltre, setRoleFiltre] = useState<RoleTag | null>(null)
 
-  const classesAffichees = elementFiltre
-    ? classesDisponibles().filter((c) =>
-        buildsPourClasse(c).some((b) => b.elements.includes(elementFiltre)),
-      )
+  const filtreActif = elementFiltre !== null || mecaniqueFiltre !== null || roleFiltre !== null
+  function buildCorrespondAuFiltre(b: Build): boolean {
+    if (elementFiltre && !b.elements.includes(elementFiltre)) return false
+    if (mecaniqueFiltre && !b.mecaniques.includes(mecaniqueFiltre)) return false
+    if (roleFiltre && !b.roles.includes(roleFiltre)) return false
+    return true
+  }
+
+  const classesAffichees = filtreActif
+    ? classesDisponibles().filter((c) => buildsPourClasse(c).some(buildCorrespondAuFiltre))
     : classesDisponibles()
 
   const sousClassesDeLaClasseBrutes = classe ? sousClassesPourClasse(classe) : []
-  const sousClassesDeLaClasse = elementFiltre
+  const sousClassesDeLaClasse = filtreActif
     ? sousClassesDeLaClasseBrutes.filter((sc) =>
-        buildsPourClasseEtSousClasse(classe, sc.nom).some((b) => b.elements.includes(elementFiltre)),
+        buildsPourClasseEtSousClasse(classe, sc.nom).some(buildCorrespondAuFiltre),
       )
     : sousClassesDeLaClasseBrutes
 
   const candidatsBruts = classe && sousClasse ? buildsPourClasseEtSousClasse(classe, sousClasse) : []
-  const candidats = elementFiltre
-    ? candidatsBruts.filter((b) => b.elements.includes(elementFiltre))
-    : candidatsBruts
+  const candidats = filtreActif ? candidatsBruts.filter(buildCorrespondAuFiltre) : candidatsBruts
 
   const nbBuildsPourElement = elementFiltre
     ? builds.filter((b) => b.elements.includes(elementFiltre)).length
@@ -59,6 +68,8 @@ export function SelecteurBuild({
     setClasse(buildActuel?.classe ?? '')
     setSousClasse(buildActuel?.sousClasse ?? '')
     setElementFiltre(null)
+    setMecaniqueFiltre(null)
+    setRoleFiltre(null)
   }
 
   if (!ouvert) {
@@ -146,10 +157,48 @@ export function SelecteurBuild({
         </p>
       )}
 
+      <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-muted">
+        Rôle et mécanique (optionnel)
+      </p>
+      <div className="mb-3 flex flex-wrap gap-1.5">
+        {rolesDisponibles.map((r) => (
+          <button
+            key={r}
+            type="button"
+            onClick={() => {
+              setRoleFiltre((actuel) => (actuel === r ? null : r))
+              setClasse('')
+              setSousClasse('')
+            }}
+            className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+              roleFiltre === r ? 'border-glow/70 bg-glow/15 text-glow' : 'border-border text-ink-muted'
+            }`}
+          >
+            {LABELS_ROLE[r]}
+          </button>
+        ))}
+        {mecaniquesDisponibles.map((m) => (
+          <button
+            key={m}
+            type="button"
+            onClick={() => {
+              setMecaniqueFiltre((actuel) => (actuel === m ? null : m))
+              setClasse('')
+              setSousClasse('')
+            }}
+            className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+              mecaniqueFiltre === m ? 'border-glow/70 bg-glow/15 text-glow' : 'border-border text-ink-muted'
+            }`}
+          >
+            {LABELS_MECANIQUE[m]}
+          </button>
+        ))}
+      </div>
+
       <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-muted">Classe</p>
       {classesAffichees.length === 0 ? (
         <p className="mb-3 rounded-lg border border-border bg-surface-raised px-3 py-2.5 text-xs text-ink-muted">
-          Aucun build ne joue sur cet élément pour l'instant.
+          Aucun build ne correspond à ces filtres pour l'instant.
         </p>
       ) : (
         <div className="mb-3 flex flex-wrap gap-1.5">

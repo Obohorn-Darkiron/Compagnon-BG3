@@ -189,7 +189,8 @@
     "elements": [
       "foudre",
       "tonnerre"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "ensorceleur-feu-draconique-rouge",
@@ -403,7 +404,8 @@
     ],
     "elements": [
       "feu"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "barde-epee-distance",
@@ -594,7 +596,8 @@
       "controle",
       "degatsDistance"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "gloomstalker-assassin-guerrier",
@@ -764,7 +767,10 @@
     "roles": [
       "degatsDistance"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": [
+      "critique"
+    ]
   },
   {
     "id": "moine-paume-ouverte",
@@ -944,7 +950,8 @@
       "controle",
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "guerrier-maitre-de-guerre",
@@ -1133,7 +1140,8 @@
       "controle",
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "occultiste-lame-maudite",
@@ -1340,7 +1348,8 @@
     ],
     "elements": [
       "necrotique"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "paladin-vengeance-occultiste",
@@ -1530,7 +1539,8 @@
     ],
     "elements": [
       "radiant"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "barbare-berserker",
@@ -1713,7 +1723,8 @@
       "tank",
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "clerc-tempete",
@@ -1905,7 +1916,8 @@
     "elements": [
       "foudre",
       "tonnerre"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "druide-etoiles",
@@ -2098,7 +2110,8 @@
     "elements": [
       "radiant",
       "foudre"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "druide-spores",
@@ -2272,7 +2285,8 @@
     "elements": [
       "necrotique",
       "radiant"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "magicien-evocation",
@@ -2445,7 +2459,8 @@
     "elements": [
       "feu",
       "foudre"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "roublard-filou-melee",
@@ -2629,7 +2644,8 @@
       "degatsMelee",
       "utilitaire"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "guerrier-champion",
@@ -2812,7 +2828,10 @@
     "roles": [
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": [
+      "critique"
+    ]
   },
   {
     "id": "occultiste-fielon-distance",
@@ -2995,7 +3014,8 @@
       "degatsMelee",
       "degatsDistance"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "clerc-vie",
@@ -3172,7 +3192,8 @@
       "soin",
       "degatsDistance"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "roublard-assassin-pur",
@@ -3353,7 +3374,10 @@
       "utilitaire",
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": [
+      "critique"
+    ]
   },
   {
     "id": "magicien-necromancie",
@@ -3538,7 +3562,8 @@
       "necrotique",
       "poison",
       "glace"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "magicien-abjuration",
@@ -3712,7 +3737,8 @@
     ],
     "elements": [
       "feu"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "magicien-illusion",
@@ -3882,7 +3908,8 @@
     ],
     "elements": [
       "feu"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "magicien-bladesinging",
@@ -4063,7 +4090,8 @@
     "elements": [
       "tonnerre",
       "feu"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "clerc-guerre",
@@ -4247,7 +4275,8 @@
       "soin",
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "clerc-nature",
@@ -4432,7 +4461,8 @@
       "utilitaire",
       "degatsDistance"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "paladin-devotion",
@@ -4617,7 +4647,8 @@
     ],
     "elements": [
       "radiant"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "paladin-anciens",
@@ -4802,7 +4833,8 @@
     ],
     "elements": [
       "radiant"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "ensorceleur-magie-sauvage",
@@ -4988,7 +5020,8 @@
     ],
     "elements": [
       "feu"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "ensorceleur-tempete",
@@ -5174,7 +5207,8 @@
     "elements": [
       "foudre",
       "tonnerre"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "barbare-coeur-sauvage",
@@ -5346,7 +5380,8 @@
       "tank",
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "barde-savoir",
@@ -5532,7 +5567,8 @@
       "utilitaire",
       "degatsDistance"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "rodeur-chasseur",
@@ -5710,7 +5746,8 @@
       "degatsMelee",
       "degatsDistance"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "moine-ombre",
@@ -5883,7 +5920,8 @@
       "utilitaire",
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "occultiste-grand-ancien",
@@ -6062,7 +6100,8 @@
       "degatsDistance",
       "utilitaire"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "roublard-escamoteur",
@@ -6234,7 +6273,8 @@
       "degatsDistance",
       "utilitaire"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "guerrier-chevalier-occulte",
@@ -6408,7 +6448,8 @@
     ],
     "elements": [
       "tonnerre"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "druide-lune",
@@ -6588,7 +6629,8 @@
     ],
     "elements": [
       "radiant"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "barbare-geant",
@@ -6755,7 +6797,8 @@
       "controle",
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "barbare-magie-sauvage",
@@ -6927,7 +6970,8 @@
     "roles": [
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "barde-vaillance",
@@ -7113,7 +7157,8 @@
       "degatsDistance",
       "utilitaire"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "barde-seduction",
@@ -7291,7 +7336,8 @@
       "utilitaire",
       "degatsDistance"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "clerc-lumiere",
@@ -7478,7 +7524,8 @@
     "elements": [
       "feu",
       "radiant"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "clerc-ruse",
@@ -7663,7 +7710,8 @@
       "utilitaire",
       "degatsDistance"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "clerc-mort",
@@ -7844,7 +7892,8 @@
     ],
     "elements": [
       "necrotique"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "clerc-savoir",
@@ -8029,7 +8078,8 @@
       "utilitaire",
       "degatsDistance"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "druide-terre",
@@ -8208,7 +8258,8 @@
     ],
     "elements": [
       "radiant"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "ensorceleur-ombres",
@@ -8394,7 +8445,8 @@
     ],
     "elements": [
       "feu"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "guerrier-archer-occulte",
@@ -8568,7 +8620,8 @@
       "controle",
       "degatsDistance"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "magicien-conjuration",
@@ -8741,7 +8794,8 @@
     ],
     "elements": [
       "feu"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "magicien-divination",
@@ -8925,7 +8979,8 @@
       "poison",
       "acide",
       "tonnerre"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "magicien-enchantement",
@@ -9096,7 +9151,8 @@
       "controle",
       "degatsDistance"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "magicien-transmutation",
@@ -9269,7 +9325,8 @@
     ],
     "elements": [
       "feu"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "moine-quatre-elements",
@@ -9443,7 +9500,8 @@
     ],
     "elements": [
       "feu"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "moine-maitre-ivre",
@@ -9616,7 +9674,8 @@
       "controle",
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "occultiste-archifee",
@@ -9795,7 +9854,8 @@
       "degatsDistance",
       "utilitaire"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "paladin-couronne",
@@ -9974,7 +10034,8 @@
     ],
     "elements": [
       "radiant"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "paladin-parjure",
@@ -10170,7 +10231,8 @@
       "necrotique",
       "radiant",
       "feu"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "rodeur-maitre-des-betes",
@@ -10346,7 +10408,8 @@
       "controle",
       "degatsDistance"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "rodeur-gardien-essaim",
@@ -10516,7 +10579,8 @@
       "controle",
       "degatsDistance"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "roublard-bretteur",
@@ -10685,7 +10749,8 @@
       "utilitaire",
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "occultiste-lame-ombres",
@@ -10887,7 +10952,8 @@
     ],
     "elements": [
       "psychique"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "occultiste-lame-ombres-sentinelle",
@@ -11082,7 +11148,8 @@
     "elements": [
       "psychique",
       "tonnerre"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "roublard-assassin-distance",
@@ -11259,7 +11326,10 @@
       "degatsDistance",
       "utilitaire"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": [
+      "critique"
+    ]
   },
   {
     "id": "guerrier-champion-distance",
@@ -11439,7 +11509,10 @@
     "roles": [
       "degatsDistance"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": [
+      "critique"
+    ]
   },
   {
     "id": "paladin-vengeance-mono",
@@ -11622,7 +11695,8 @@
     ],
     "elements": [
       "radiant"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "ensorceleur-feu-sorlock",
@@ -11816,7 +11890,8 @@
     ],
     "elements": [
       "feu"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "ensorceleur-glace-draconique-blanche",
@@ -12003,7 +12078,8 @@
     ],
     "elements": [
       "glace"
-    ]
+    ],
+    "mecaniques": []
   },
   {
     "id": "roublard-assassin-tribunal",
@@ -12179,7 +12255,10 @@
       "degatsMelee",
       "utilitaire"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": [
+      "critique"
+    ]
   },
   {
     "id": "guerrier-champion-bourreau-tribunal",
@@ -12348,7 +12427,10 @@
     "roles": [
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": [
+      "critique"
+    ]
   },
   {
     "id": "guerrier-maitre-guerre-bouclier-tribunal",
@@ -12518,7 +12600,8 @@
       "tank",
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": []
   },
   {
     "id": "rodeur-chasseur-traqueur-tribunal",
@@ -12675,7 +12758,10 @@
       "degatsDistance",
       "controle"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": [
+      "critique"
+    ]
   },
   {
     "id": "guerrier-champion-barbare-hache-critique",
@@ -12832,7 +12918,10 @@
     "roles": [
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": [
+      "critique"
+    ]
   },
   {
     "id": "guerrier-champion-occultiste-dague-critique",
@@ -12994,6 +13083,9 @@
     "roles": [
       "degatsMelee"
     ],
-    "elements": []
+    "elements": [],
+    "mecaniques": [
+      "critique"
+    ]
   }
 ]

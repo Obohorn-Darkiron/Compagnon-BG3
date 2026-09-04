@@ -31,8 +31,8 @@ export function BuildDetailPage() {
   const build = id ? getBuild(id) : undefined
   const [stylePreview, setStylePreview] = useState<StylePreview>(null)
 
-  const equipementDeduplique = useMemo(() => {
-    if (!build) return []
+  const equipementParActe = useMemo(() => {
+    if (!build) return new Map<number, EquipementResoluAffiche[]>()
     // Une alternative peut retomber sur un objet déjà présent ailleurs dans l'équipement — on
     // fusionne par idAffiche plutôt que d'afficher deux fois la même ligne (voir alignementUtils).
     const entrees = build.equipement.map((e): EquipementResoluAffiche => {
@@ -44,8 +44,15 @@ export function BuildDetailPage() {
         acteAffiche: resolu.alternative ? resolu.alternative.acte : e.acte,
       }
     })
-    return dedupliquerParIdAffiche(entrees)
+    const parActe = new Map<number, EquipementResoluAffiche[]>()
+    for (const e of dedupliquerParIdAffiche(entrees)) {
+      const liste = parActe.get(e.acteAffiche) ?? []
+      liste.push(e)
+      parActe.set(e.acteAffiche, liste)
+    }
+    return parActe
   }, [build, stylePreview])
+  const actesEquipement = [...equipementParActe.keys()].sort((a, b) => a - b)
 
   if (!build) return <Navigate to="/builds" replace />
 
@@ -186,59 +193,66 @@ export function BuildDetailPage() {
             qui demandent un choix sombre (culte de Bhaal, routes non-bienveillantes...).
           </p>
         )}
-        <div className="flex flex-col gap-2">
-          {equipementDeduplique.map((e) => {
-            const { objetOriginal, alternative, alternativeAutoTrouvee, sansAlternative } = e
-            const objetAffiche = alternative ?? objetOriginal
-            const afficherBadgeAlignement =
-              objetOriginal &&
-              !alternative &&
-              (objetOriginal.alignement === 'restreint' ||
-                (stylePreview === 'bienveillant' && objetOriginal.alignement === 'sombre'))
+        <div className="flex flex-col gap-4">
+          {actesEquipement.map((acte) => (
+            <div key={acte}>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-ink-muted">
+                Acte {acte}
+              </p>
+              <div className="flex flex-col gap-2">
+                {equipementParActe.get(acte)!.map((e) => {
+                  const { objetOriginal, alternative, alternativeAutoTrouvee, sansAlternative } = e
+                  const objetAffiche = alternative ?? objetOriginal
+                  const afficherBadgeAlignement =
+                    objetOriginal &&
+                    !alternative &&
+                    (objetOriginal.alignement === 'restreint' ||
+                      (stylePreview === 'bienveillant' && objetOriginal.alignement === 'sombre'))
 
-            return (
-              <div
-                key={e.idAffiche}
-                className="rounded-lg border border-border bg-surface px-3 py-2.5"
-              >
-                <Link
-                  to={`/explorer/${e.idAffiche}`}
-                  state={{ from: `/builds/${build.id}` }}
-                  className="flex items-center justify-between gap-3 active:opacity-70"
-                >
-                  <div className="min-w-0">
-                    <p className="truncate text-sm font-medium text-ink">
-                      {objetAffiche ? nomAffiche(objetAffiche) : e.idAffiche}
-                    </p>
-                    <p className="text-xs text-ink-muted">
-                      {e.emplacement} · Acte {e.acteAffiche}
-                    </p>
-                  </div>
-                  <div className="flex shrink-0 flex-col items-end gap-1">
-                    <ImportanceBadge importance={e.importance} />
-                    {afficherBadgeAlignement && objetOriginal && (
-                      <AlignementBadge alignement={objetOriginal.alignement} />
-                    )}
-                  </div>
-                </Link>
-                {alternative && objetOriginal && (
-                  <div className="mt-1.5 flex items-center gap-1.5">
-                    <SourceAlternativeBadge autoTrouvee={alternativeAutoTrouvee} />
-                    <p className="text-xs text-ink-muted">
-                      à la place de {nomAffiche(objetOriginal)}
-                      {objetOriginal.alignementNote ? ` — ${objetOriginal.alignementNote}` : ''}
-                    </p>
-                  </div>
-                )}
-                {sansAlternative && objetOriginal && (
-                  <p className="mt-1.5 text-xs text-essentiel">
-                    Aucune alternative neutre connue
-                    {objetOriginal.alignementNote ? ` — ${objetOriginal.alignementNote}` : ''}
-                  </p>
-                )}
+                  return (
+                    <div
+                      key={e.idAffiche}
+                      className="rounded-lg border border-border bg-surface px-3 py-2.5"
+                    >
+                      <Link
+                        to={`/explorer/${e.idAffiche}`}
+                        state={{ from: `/builds/${build.id}` }}
+                        className="flex items-center justify-between gap-3 active:opacity-70"
+                      >
+                        <div className="min-w-0">
+                          <p className="truncate text-sm font-medium text-ink">
+                            {objetAffiche ? nomAffiche(objetAffiche) : e.idAffiche}
+                          </p>
+                          <p className="text-xs text-ink-muted">{e.emplacement}</p>
+                        </div>
+                        <div className="flex shrink-0 flex-col items-end gap-1">
+                          <ImportanceBadge importance={e.importance} />
+                          {afficherBadgeAlignement && objetOriginal && (
+                            <AlignementBadge alignement={objetOriginal.alignement} />
+                          )}
+                        </div>
+                      </Link>
+                      {alternative && objetOriginal && (
+                        <div className="mt-1.5 flex items-center gap-1.5">
+                          <SourceAlternativeBadge autoTrouvee={alternativeAutoTrouvee} />
+                          <p className="text-xs text-ink-muted">
+                            à la place de {nomAffiche(objetOriginal)}
+                            {objetOriginal.alignementNote ? ` — ${objetOriginal.alignementNote}` : ''}
+                          </p>
+                        </div>
+                      )}
+                      {sansAlternative && objetOriginal && (
+                        <p className="mt-1.5 text-xs text-essentiel">
+                          Aucune alternative neutre connue
+                          {objetOriginal.alignementNote ? ` — ${objetOriginal.alignementNote}` : ''}
+                        </p>
+                      )}
+                    </div>
+                  )
+                })}
               </div>
-            )
-          })}
+            </div>
+          ))}
         </div>
       </Section>
 

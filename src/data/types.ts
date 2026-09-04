@@ -40,6 +40,10 @@ export type ElementTag =
   | 'tonnerre'
   | 'psychique'
 
+/** Mécanique de jeu centrale que le build cherche activement à exploiter (pas une simple
+ * mention en passant) — pour la recherche par style de jeu, comme `elements` pour les dégâts. */
+export type MecaniqueTag = 'critique'
+
 export interface Build {
   id: string
   classe: string
@@ -60,6 +64,8 @@ export interface Build {
   roles: RoleTag[]
   /** Types de dégâts dominants du build — pour la recherche par élément. Vide si non pertinent (build purement physique). */
   elements: ElementTag[]
+  /** Mécaniques centrales activement exploitées (ex. critique). Vide si aucune ne s'applique. */
+  mecaniques: MecaniqueTag[]
 }
 
 export interface SousClasseInfo {

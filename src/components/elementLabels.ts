@@ -1,4 +1,4 @@
-import type { ElementTag } from '../data/types'
+import type { ElementTag, MecaniqueTag } from '../data/types'
 
 export const LABELS_ELEMENT: Record<ElementTag, string> = {
   feu: 'Feu',
@@ -10,6 +10,10 @@ export const LABELS_ELEMENT: Record<ElementTag, string> = {
   radiant: 'Radiant',
   tonnerre: 'Tonnerre',
   psychique: 'Psychique',
+}
+
+export const LABELS_MECANIQUE: Record<MecaniqueTag, string> = {
+  critique: 'Critique',
 }
 
 /**
