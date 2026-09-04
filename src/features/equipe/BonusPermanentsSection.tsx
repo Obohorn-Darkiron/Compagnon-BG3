@@ -41,6 +41,12 @@ export function BonusPermanentsSection({
                 </div>
               </div>
 
+              {bonus.avertissement && (
+                <p className="mt-2 ml-11 rounded-lg border border-glow/30 bg-glow/5 px-2.5 py-2 text-[11px] leading-relaxed text-ink-muted">
+                  {bonus.avertissement}
+                </p>
+              )}
+
               {obtenu && bonus.statFixe === null && (
                 <div className="mt-2 pl-11">
                   <p className="mb-1 text-[11px] uppercase tracking-wide text-ink-muted">

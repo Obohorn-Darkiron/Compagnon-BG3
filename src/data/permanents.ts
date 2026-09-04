@@ -10,6 +10,8 @@ export interface BonusPermanent {
   /** Valeurs possibles ; s'il y en a plusieurs, le joueur choisit laquelle il a obtenue. */
   valeursPossibles: number[]
   description: string
+  /** Note affichée à part, en évidence — pour un choix qui a une vraie implication morale/narrative. */
+  avertissement?: string
 }
 
 export const BONUS_PERMANENTS: BonusPermanent[] = [
@@ -25,15 +27,28 @@ export const BONUS_PERMANENTS: BonusPermanent[] = [
     label: "Miroir de l'égarement — Mémoire du Patriarche",
     statFixe: 'CHA',
     valeursPossibles: [1],
-    description: '+1 Charisme — le résultat le plus courant.',
+    description:
+      "+1 Charisme. Uniquement au Cloître de la Douce Étreinte (Acte 3) — le Miroir trouvé dans le Gantelet de Shar en Acte 2 est fissuré et inutilisable. En sacrifiant un souvenir sans prier, ce résultat sort environ 1 fois sur 5 ; les autres souvenirs sacrifiés ne donnent rien. Impose Vigueur volée (-2 à la caractéristique choisie) jusqu'au prochain repos long — retirable avec Suppression de malédiction ou Restauration supérieure.",
   },
   {
     objetId: 'miroir-egarement-rare',
-    label: "Miroir de l'égarement — bonus rare",
+    label: "Miroir de l'égarement — bonus rare (prière)",
     statFixe: null,
     valeursPossibles: [2],
     description:
-      '+2 sur la caractéristique de ton choix — rare (nécessite un jet de Religion DD 25 au préalable). Se cumule avec la Mémoire du Patriarche si obtenue sur une autre caractéristique : coche les deux si tu as eu cette chance.',
+      "+2 sur la caractéristique de ton choix. Nécessite de prier le Miroir (en plus du sacrifice d'un souvenir) et de réussir un jet de Religion DD 25 — environ 60% de réussite si le jet passe, quasi impossible sinon. Impose aussi Vigueur volée (-2, jusqu'au prochain repos long, retirable). Se cumule avec la Mémoire du Patriarche si obtenue sur une autre caractéristique.",
+    avertissement:
+      "Prier le Miroir est un rituel explicitement dédié à Shar — un choix qui a du sens pour une run sombre ou grise, pas pour une run bienveillante stricte.",
+  },
+  {
+    objetId: 'miroir-egarement-savoir-interdit',
+    label: "Miroir de l'égarement — Savoir interdit",
+    statFixe: null,
+    valeursPossibles: [2],
+    description:
+      "+2 garanti sur la caractéristique de ton choix, sans jet de Religion — en sacrifiant spécifiquement le souvenir « Savoir interdit » obtenu pendant la quête de la Nécromancie de Thay (Gale). Impose quand même Vigueur volée (-2, jusqu'au prochain repos long, retirable).",
+    avertissement:
+      "Comme les autres bonus obtenus par le Miroir, ce sacrifice fait partie du même rituel dédié à Shar.",
   },
   {
     objetId: 'potion-hautelune-force',
