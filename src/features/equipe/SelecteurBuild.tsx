@@ -158,7 +158,7 @@ export function SelecteurBuild({
       )}
 
       <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-muted">
-        Rôle et mécanique (optionnel)
+        Rôle (optionnel)
       </p>
       <div className="mb-3 flex flex-wrap gap-1.5">
         {rolesDisponibles.map((r) => (
@@ -177,6 +177,12 @@ export function SelecteurBuild({
             {LABELS_ROLE[r]}
           </button>
         ))}
+      </div>
+
+      <p className="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-muted">
+        Mécanique (optionnel)
+      </p>
+      <div className="mb-3 flex flex-wrap gap-1.5">
         {mecaniquesDisponibles.map((m) => (
           <button
             key={m}

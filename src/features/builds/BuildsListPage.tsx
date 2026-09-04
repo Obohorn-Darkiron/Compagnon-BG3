@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { PageHeader } from '../../components/PageHeader'
-import { Scale, Search } from '../../components/icons'
+import { ChevronDown, Filter, Scale, Search } from '../../components/icons'
 import { builds, estMulticlasse, getObjet, nomAffiche } from '../../data'
 import type { ElementTag, MecaniqueTag, RoleTag } from '../../data/types'
 import { LABELS_ELEMENT, LABELS_MECANIQUE, NOTE_ELEMENT_FAIBLE } from '../../components/elementLabels'
@@ -27,6 +27,7 @@ export function BuildsListPage() {
   const [elementActif, setElementActif] = useState<ElementTag | null>(null)
   const [mecaniqueActive, setMecaniqueActive] = useState<MecaniqueTag | null>(null)
   const [roleActif, setRoleActif] = useState<RoleTag | null>(null)
+  const [filtresOuverts, setFiltresOuverts] = useState(false)
   const [modeComparaison, setModeComparaison] = useState(false)
   const [selection, setSelection] = useState<string[]>([])
 
@@ -79,6 +80,14 @@ export function BuildsListPage() {
   )
   const noteElementFaible = elementActif && nbBuildsPourElement <= 2 ? NOTE_ELEMENT_FAIBLE[elementActif] : undefined
 
+  const nbFiltresActifs = [elementActif, mecaniqueActive, roleActif].filter((f) => f !== null).length
+
+  function reinitialiserFiltres() {
+    setElementActif(null)
+    setMecaniqueActive(null)
+    setRoleActif(null)
+  }
+
   return (
     <div>
       <PageHeader
@@ -127,53 +136,108 @@ export function BuildsListPage() {
             ))}
           </div>
 
-          <div className="flex flex-wrap gap-1.5">
-            {elementsDisponibles.map((el) => (
-              <button
-                key={el}
-                type="button"
-                onClick={() => setElementActif((actuel) => (actuel === el ? null : el))}
-                className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
-                  elementActif === el
-                    ? 'border-glow/70 bg-glow/15 text-glow'
-                    : 'border-border text-ink-muted'
-                }`}
-              >
-                {LABELS_ELEMENT[el]}
-              </button>
-            ))}
-          </div>
+          <button
+            type="button"
+            onClick={() => setFiltresOuverts((v) => !v)}
+            className={`flex items-center justify-between gap-2 rounded-lg border px-3 py-2.5 text-xs font-medium transition-colors ${
+              filtresOuverts || nbFiltresActifs > 0
+                ? 'border-glow/70 bg-glow/15 text-glow'
+                : 'border-border text-ink-muted'
+            }`}
+          >
+            <span className="flex items-center gap-1.5">
+              <Filter className="h-3.5 w-3.5" />
+              Filtres
+              {nbFiltresActifs > 0 && (
+                <span className="flex h-4 min-w-4 items-center justify-center rounded-full bg-glow px-1 text-[10px] font-semibold text-bg">
+                  {nbFiltresActifs}
+                </span>
+              )}
+            </span>
+            <ChevronDown
+              className={`h-3.5 w-3.5 transition-transform ${filtresOuverts ? 'rotate-180' : ''}`}
+            />
+          </button>
 
-          <div className="flex flex-wrap gap-1.5">
-            {rolesDisponibles.map((r) => (
-              <button
-                key={r}
-                type="button"
-                onClick={() => setRoleActif((actuel) => (actuel === r ? null : r))}
-                className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
-                  roleActif === r
-                    ? 'border-glow/70 bg-glow/15 text-glow'
-                    : 'border-border text-ink-muted'
-                }`}
-              >
-                {LABELS_ROLE[r]}
-              </button>
-            ))}
-            {mecaniquesDisponibles.map((m) => (
-              <button
-                key={m}
-                type="button"
-                onClick={() => setMecaniqueActive((actuel) => (actuel === m ? null : m))}
-                className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
-                  mecaniqueActive === m
-                    ? 'border-glow/70 bg-glow/15 text-glow'
-                    : 'border-border text-ink-muted'
-                }`}
-              >
-                {LABELS_MECANIQUE[m]}
-              </button>
-            ))}
-          </div>
+          {filtresOuverts && (
+            <div className="flex flex-col gap-3 rounded-lg border border-border bg-surface p-3">
+              <div>
+                <p className="mb-1.5 text-[11px] font-medium uppercase tracking-wide text-ink-muted">
+                  Élément
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {elementsDisponibles.map((el) => (
+                    <button
+                      key={el}
+                      type="button"
+                      onClick={() => setElementActif((actuel) => (actuel === el ? null : el))}
+                      className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+                        elementActif === el
+                          ? 'border-glow/70 bg-glow/15 text-glow'
+                          : 'border-border text-ink-muted'
+                      }`}
+                    >
+                      {LABELS_ELEMENT[el]}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <p className="mb-1.5 text-[11px] font-medium uppercase tracking-wide text-ink-muted">
+                  Rôle
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {rolesDisponibles.map((r) => (
+                    <button
+                      key={r}
+                      type="button"
+                      onClick={() => setRoleActif((actuel) => (actuel === r ? null : r))}
+                      className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+                        roleActif === r
+                          ? 'border-glow/70 bg-glow/15 text-glow'
+                          : 'border-border text-ink-muted'
+                      }`}
+                    >
+                      {LABELS_ROLE[r]}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <p className="mb-1.5 text-[11px] font-medium uppercase tracking-wide text-ink-muted">
+                  Mécanique
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {mecaniquesDisponibles.map((m) => (
+                    <button
+                      key={m}
+                      type="button"
+                      onClick={() => setMecaniqueActive((actuel) => (actuel === m ? null : m))}
+                      className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+                        mecaniqueActive === m
+                          ? 'border-glow/70 bg-glow/15 text-glow'
+                          : 'border-border text-ink-muted'
+                      }`}
+                    >
+                      {LABELS_MECANIQUE[m]}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {nbFiltresActifs > 0 && (
+                <button
+                  type="button"
+                  onClick={reinitialiserFiltres}
+                  className="self-start text-xs font-medium text-glow underline-offset-2 active:underline"
+                >
+                  Réinitialiser les filtres
+                </button>
+              )}
+            </div>
+          )}
         </div>
       </PageHeader>
 

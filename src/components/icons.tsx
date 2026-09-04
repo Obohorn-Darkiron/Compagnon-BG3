@@ -137,6 +137,24 @@ export function Plus({ className }: IconProps) {
   )
 }
 
+export function ChevronDown({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <path d="M6 9l6 6 6-6" />
+    </svg>
+  )
+}
+
+export function Filter({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <path d="M4 5h16" />
+      <path d="M7 12h10" />
+      <path d="M10 19h4" />
+    </svg>
+  )
+}
+
 export function Scale({ className }: IconProps) {
   return (
     <svg className={className} {...base}>
