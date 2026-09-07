@@ -1784,63 +1784,138 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Domaine de la Tempête",
-        "detail": "Colère de la tempête : réaction gratuite (sans charge de Conduit divin) qui inflige 2d8 dégâts de foudre/tonnerre à quiconque te touche en mêlée, mi-dégâts si jet de sauvegarde réussi."
+        "titre": "Spécialisation : Domaine de la Tempête",
+        "detail": "Colère de la tempête : réaction gratuite (sans charge de Conduit divin) qui inflige 2d8 dégâts de foudre ou tonnerre à quiconque te touche en mêlée, mi-dégâts si jet de sauvegarde réussi.",
+        "sorts": [
+          {
+            "nom": "Flamme sacrée",
+            "type": "nouveau",
+            "note": "cantrip de départ recommandé"
+          },
+          {
+            "nom": "Vague tonnante (Thunderwave)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Nappe de brouillard (Fog Cloud)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "Conduit divin",
-        "detail": "Courroux destructeur : un sort de foudre ou de tonnerre inflige ses dégâts maximum, une fois par repos long."
+        "titre": "Capacité de classe : Courroux destructeur",
+        "detail": "1 charge de Conduit divin (recharge repos court ou long) : le prochain sort de foudre ou de tonnerre inflige ses dégâts maximum au lieu d'un jet."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de soin ou de contrôle supplémentaire."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Bourrasque (Gust of Wind)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Fracassement (Shatter)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Sagesse (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Augmente le DD des sorts, les soins et les jets de sauvegarde de Sagesse."
+        }
       },
       {
         "niveau": 5,
-        "titre": "Appel de la foudre",
-        "detail": "Sort de zone récurrent : dégâts chaque tour pour un seul emplacement dépensé."
+        "titre": "Sorts de niveau 3",
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Appel de la foudre (Call Lightning)",
+            "type": "toujoursPrepare",
+            "note": "dégâts de zone récurrents pour un seul emplacement dépensé"
+          },
+          {
+            "nom": "Tempête de neige (Sleet Storm)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Frappe foudroyante",
-        "detail": "Un sort de foudre qui touche une grande créature peut aussi la repousser."
+        "titre": "Capacité de domaine : Frappe foudroyante",
+        "detail": "Un sort de foudre ou de tonnerre qui touche une créature Grande ou plus petite peut aussi la repousser de 3 m."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : un sort de soutien ou de contrôle avancé."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Liberté de mouvement (Freedom of Movement)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Tempête de glace (Ice Storm)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don + Frappe divine",
-        "detail": "Doué (Skilled) ou Guerrier de guerre (War Caster), plus des dégâts de foudre bonus automatiques une fois par tour sur les attaques d'arme."
+        "titre": "Nouveau don + Frappe divine",
+        "detail": "Frappe divine : foudre — une fois par tour, +1d8 dégâts de foudre sur une attaque de mêlée réussie, en plus des dégâts de l'arme.",
+        "don": {
+          "nom": "Doué (Skilled) ou Guerrier de guerre (War Caster)",
+          "effet": "Doué ajoute trois compétences maîtrisées au choix ; Guerrier de guerre permet de lancer des sorts même les mains occupées et donne l'avantage aux jets de Concentration."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Nouvel emplacement de haut niveau : soins de groupe ou contrôle majeur."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Vague destructrice (Destructive Wave)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Fléau d'insectes (Insect Plague)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Intervention divine",
-        "detail": "Peut supplier ta divinité d'intervenir directement — capacité rare mais puissante."
+        "titre": "Capacité de classe : Intervention divine",
+        "detail": "Peut supplier ta divinité d'intervenir directement en combat (effet puissant tiré au sort)."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 : accès aux sorts de Clerc les plus puissants."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "zone ou finisseur selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Sagesse (20) — maximum naturel, DD des sorts au plus haut."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Sagesse à 20, le maximum naturel — DD des sorts et dégâts au plus haut."
+        }
       }
     ],
     "equipement": [
@@ -3083,63 +3158,138 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Domaine de la Vie",
-        "detail": "Disciple de la vie : tous tes sorts de soin rendent des PV supplémentaires. Armure lourde disponible immédiatement."
+        "titre": "Spécialisation : Domaine de la Vie",
+        "detail": "Disciple de la vie : chaque sort de soin que tu lances rend 2 PV + le niveau du sort en plus. Armure lourde disponible immédiatement.",
+        "sorts": [
+          {
+            "nom": "Flamme sacrée",
+            "type": "nouveau",
+            "note": "cantrip de départ recommandé"
+          },
+          {
+            "nom": "Bénédiction",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Soins (Cure Wounds)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "Conduit divin",
-        "detail": "Première utilisation de Conduit divin par repos, pour activer une capacité de domaine sans dépenser de sort."
+        "titre": "Capacité de classe : Préserver la vie",
+        "detail": "1 charge de Conduit divin (recharge repos court ou long) : restaure 3 × ton niveau de personnage en PV, répartis entre les créatures alliées proches."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de soin ou de contrôle supplémentaire."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Aide (Aid)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Restauration partielle (Lesser Restoration)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Sagesse (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Augmente le DD des sorts, les soins et les jets de sauvegarde de Sagesse."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Restauration supérieure et autres sorts de soin avancés débloqués."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Retour à la vie (Revivify)",
+            "type": "toujoursPrepare",
+            "note": "ramène un allié mort depuis moins d'1 tour"
+          },
+          {
+            "nom": "Lueur d'espoir (Beacon of Hope)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Soigneur béni",
-        "detail": "Tes sorts de soin te soignent aussi légèrement quand tu soignes un allié."
+        "titre": "Capacité de domaine : Soigneur béni",
+        "detail": "Quand tu lances un sort de soin de niveau 1 ou plus sur un allié, tu récupères aussi 2 PV + le niveau du sort."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : soin ou protection de groupe avancée."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Gardien de la foi (Guardian of Faith)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Protection contre la mort",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don + Frappe divine",
-        "detail": "Doué (Skilled) ou Guerrier de guerre (War Caster), plus des dégâts radiants bonus automatiques une fois par tour sur les attaques d'arme."
+        "titre": "Nouveau don + Frappe divine",
+        "detail": "Frappe divine : radiant — une fois par tour, +1d8 dégâts radiants sur une attaque de mêlée réussie, en plus des dégâts de l'arme.",
+        "don": {
+          "nom": "Doué (Skilled) ou Guerrier de guerre (War Caster)",
+          "effet": "Doué ajoute trois compétences maîtrisées au choix ; Guerrier de guerre permet de lancer des sorts même les mains occupées et donne l'avantage aux jets de Concentration."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Soins de groupe et autres sorts de haut niveau débloqués."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Restauration supérieure (Greater Restoration)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Soins de groupe (Mass Cure Wounds)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Intervention divine",
-        "detail": "Peut supplier ta divinité d'intervenir directement — capacité rare mais puissante."
+        "titre": "Capacité de classe : Intervention divine",
+        "detail": "Peut supplier ta divinité d'intervenir directement en combat (effet puissant tiré au sort)."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "soin majeur ou protection de groupe selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Sagesse (20) — maximum naturel, soins et DD au plus haut."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Sagesse à 20, le maximum naturel — soins et DD des sorts au plus haut."
+        }
       }
     ],
     "equipement": [
@@ -4156,63 +4306,137 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Domaine de la Guerre",
-        "detail": "Maîtrise de toutes les armes de guerre et armures lourdes, plus Prêtre de guerre : 3 charges (rechargées au repos long, jusqu'à 6 plus tard) donnant chacune une attaque d'arme en action bonus."
+        "titre": "Spécialisation : Domaine de la Guerre",
+        "detail": "Maîtrise de toutes les armes de guerre et armures lourdes. Prêtre de guerre : 3 charges (repos long) donnant chacune une attaque d'arme en action bonus.",
+        "sorts": [
+          {
+            "nom": "Flamme sacrée",
+            "type": "nouveau",
+            "note": "cantrip de départ recommandé"
+          },
+          {
+            "nom": "Faveur divine (Divine Favour)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Bouclier de la foi (Shield of Faith)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "Conduit divin",
-        "detail": "Frappe guidée : dépense une charge de Conduit divin pour ajouter +10 fixe à ton propre jet d'attaque."
+        "titre": "Capacité de classe : Frappe guidée",
+        "detail": "1 charge de Conduit divin (recharge repos court ou long) : ajoute +10 fixe à ton propre jet d'attaque."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de soin ou de contrôle supplémentaire."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Arme magique (Magic Weapon)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Arme spirituelle",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Sagesse (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Augmente le DD des sorts, les soins et les jets de sauvegarde de Sagesse."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Nouvel emplacement de niveau 3."
+        "detail": "Les charges de Prêtre de guerre passent de 3 à 4.",
+        "sorts": [
+          {
+            "nom": "Esprits gardiens (Spirit Guardians)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Aura du croisé (Crusader's Mantle)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Bénédiction du dieu de guerre",
+        "titre": "Capacité de domaine : Bénédiction du dieu de guerre",
         "detail": "Réaction (Conduit divin) qui ajoute +10 au jet d'attaque d'un allié proche — ne s'applique pas à toi-même."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : soutien ou contrôle avancé."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Liberté de mouvement (Freedom of Movement)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Peau de pierre (Stoneskin)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don + Frappe divine",
-        "detail": "Grand Maître d'armes, plus des dégâts bonus automatiques une fois par tour sur les attaques d'arme."
+        "titre": "Nouveau don + Frappe divine",
+        "detail": "Les charges de Prêtre de guerre passent de 4 à 5. Frappe divine : une fois par tour, +1d8 dégâts (du type de ton arme) sur une attaque de mêlée réussie.",
+        "don": {
+          "nom": "Grand Maître d'armes",
+          "effet": "Option -5 au jet d'attaque pour +10 dégâts avec une arme lourde — synergise avec les charges de Prêtre de guerre pour multiplier les attaques bonifiées."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Soins de groupe et autres sorts de haut niveau."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Colonne de flamme (Flame Strike)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Intervention divine",
-        "detail": "Peut supplier ta divinité d'intervenir directement."
+        "titre": "Capacité de classe : Intervention divine",
+        "detail": "Peut supplier ta divinité d'intervenir directement en combat (effet puissant tiré au sort)."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Sagesse (20) — maximum naturel, DD des sorts et dégâts au plus haut."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Sagesse à 20, le maximum naturel — DD des sorts et dégâts au plus haut."
+        }
       }
     ],
     "equipement": [
@@ -4341,63 +4565,137 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Domaine de la Nature",
-        "detail": "Acolyte de la nature : un cantrip de Druide en plus des cantrips de Clerc, plus la maîtrise d'une compétence (Dressage, Nature ou Survie)."
+        "titre": "Spécialisation : Domaine de la Nature",
+        "detail": "Acolyte de la nature : un cantrip de Druide en plus des cantrips de Clerc, plus la maîtrise d'une compétence (Dressage, Nature ou Survie).",
+        "sorts": [
+          {
+            "nom": "Flamme sacrée",
+            "type": "nouveau",
+            "note": "cantrip de Clerc recommandé"
+          },
+          {
+            "nom": "Communication avec les animaux (Speak with Animals)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Amitié avec les animaux (Animal Friendship)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "Conduit divin",
-        "detail": "Charme animal ou plante : neutralise une créature naturelle sans dépenser de sort."
+        "titre": "Capacité de classe : Charme animal ou plante",
+        "detail": "1 charge de Conduit divin (recharge repos court ou long) : neutralise une créature naturelle sans dépenser de sort."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de nature ou de soin supplémentaire."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Peau d'écorce (Barkskin)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Croissance d'épines (Spike Growth)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Sagesse (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Augmente le DD des sorts, les soins et les jets de sauvegarde de Sagesse."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Croissance d'épines et autres sorts de contrôle naturel."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Croissance des plantes (Plant Growth)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Tempête de neige (Sleet Storm)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Atténuation des éléments",
-        "detail": "Dampen Elements : réaction qui divise par deux les dégâts subis d'un type élémentaire au choix (acide, froid, feu, foudre ou tonnerre) — c'est ici, pas au niveau 1, que la résistance élémentaire apparaît réellement."
+        "titre": "Capacité de domaine : Atténuation des éléments",
+        "detail": "Réaction qui divise par deux les dégâts subis (toi ou un allié) d'un type élémentaire (acide, froid, feu, foudre ou tonnerre) — c'est ici, pas au niveau 1, que la résistance élémentaire apparaît réellement."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : soutien ou contrôle avancé."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Domination de bête (Dominate Beast)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Liane avide (Grasping Vine)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+        "titre": "Nouveau don + Frappe divine",
+        "detail": "Frappe divine : élémentaire — une fois par tour, +1d8 dégâts de froid, feu ou foudre au choix sur une attaque de mêlée réussie.",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Soins de groupe et autres sorts de haut niveau."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Fléau d'insectes (Insect Plague)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Mur de pierre (Wall of Stone)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Intervention divine",
-        "detail": "Peut supplier ta divinité d'intervenir directement."
+        "titre": "Capacité de classe : Intervention divine",
+        "detail": "Peut supplier ta divinité d'intervenir directement en combat (effet puissant tiré au sort)."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Sagesse (20) — maximum naturel, DD des sorts au plus haut."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Sagesse à 20, le maximum naturel — DD des sorts au plus haut."
+        }
       }
     ],
     "equipement": [
@@ -7401,63 +7699,141 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Domaine de la Lumière",
-        "detail": "Étincelle protectrice (Warding Flare) : réaction qui impose un désavantage à un ennemi qui t'attaque, plus le cantrip Lumière (utilitaire, pas de dégâts)."
+        "titre": "Spécialisation : Domaine de la Lumière",
+        "detail": "Étincelle protectrice (Warding Flare) : réaction qui impose le désavantage à un ennemi qui t'attaque.",
+        "sorts": [
+          {
+            "nom": "Flamme sacrée",
+            "type": "nouveau",
+            "note": "cantrip de départ recommandé"
+          },
+          {
+            "nom": "Lumière (Light)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Mains brûlantes (Burning Hands)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Lueurs féeriques (Faerie Fire)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "Conduit divin",
-        "detail": "Première utilisation de Conduit divin par repos."
+        "titre": "Capacité de classe : Radiance de l'aube",
+        "detail": "1 charge de Conduit divin (recharge repos court ou long) : inflige 2d10 + ton niveau en dégâts radiants aux ennemis proches et dissipe l'obscurité magique."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de dégâts ou de soin supplémentaire."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sphère de feu (Flaming Sphere)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Rayon ardent (Scorching Ray)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Sagesse (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Augmente le DD des sorts, les soins et les jets de sauvegarde de Sagesse."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Rayon ardent ou autre sort de dégâts à distance."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Lumière du jour (Daylight)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Boule de feu (Fireball)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Capacité de domaine",
-        "detail": "Renforce encore les dégâts de feu/radiants du domaine."
+        "titre": "Capacité de domaine : Étincelle protectrice améliorée",
+        "detail": "Étincelle protectrice peut désormais protéger un allié attaqué, pas seulement toi."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : dégâts ou soutien avancé."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Gardien de la foi (Guardian of Faith)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Mur de feu (Wall of Fire)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don + Incantation puissante",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires. Incantation puissante (Potent Spellcasting) : ajoute ton modificateur de Sagesse aux dégâts de tes cantrips de Clerc."
+        "titre": "Nouveau don + Incantation puissante",
+        "detail": "Incantation puissante (Potent Spellcasting) : ajoute ton modificateur de Sagesse aux dégâts de tes cantrips de Clerc — Flamme sacrée tape sensiblement plus fort.",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Boule de feu ou autre sort de zone majeur."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Vague destructrice (Destructive Wave)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Colonne de flamme (Flame Strike)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Intervention divine",
-        "detail": "Peut supplier ta divinité d'intervenir directement."
+        "titre": "Capacité de classe : Intervention divine",
+        "detail": "Peut supplier ta divinité d'intervenir directement en combat (effet puissant tiré au sort)."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Sagesse (20) — maximum naturel."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Sagesse à 20, le maximum naturel."
+        }
       }
     ],
     "equipement": [
@@ -7589,63 +7965,137 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Domaine de la Ruse",
-        "detail": "Bénédiction du fourbe : action complète qui donne l'avantage aux jets de Discrétion à une créature, une fois par repos court — ce n'est pas une invisibilité."
+        "titre": "Spécialisation : Domaine de la Ruse",
+        "detail": "Bénédiction du fourbe : action complète qui donne l'avantage aux jets de Discrétion à une créature, une fois par repos court — ce n'est pas une invisibilité.",
+        "sorts": [
+          {
+            "nom": "Flamme sacrée",
+            "type": "nouveau",
+            "note": "cantrip de départ recommandé"
+          },
+          {
+            "nom": "Charme-personne (Charm Person)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Déguisement (Disguise Self)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "Conduit divin",
-        "detail": "Créer un double illusoire de toi-même pour tromper les ennemis."
+        "titre": "Capacité de classe : Invoquer la duplicité",
+        "detail": "1 charge de Conduit divin (recharge repos court ou long) : crée un double illusoire de toi — dans un rayon de 3 m autour du double, toi et tes alliés obtenez l'avantage aux jets d'attaque."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de contrôle ou de soin."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Image miroir (Mirror Image)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Passage sans trace (Pass Without Trace)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Sagesse (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Augmente le DD des sorts, les soins et les jets de sauvegarde de Sagesse."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Nouvel emplacement de niveau 3."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Malédiction (Bestow Curse)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Peur (Fear)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Manteau des ombres",
-        "detail": "Cloak of Shadows : devient invisible tant que tu restes dans une zone d'ombre/obscurité — nécessite d'être déjà dissimulé, ce n'est pas un effet libre à volonté."
+        "titre": "Capacité de domaine : Manteau des ombres",
+        "detail": "Conduit divin : devient invisible tant que tu restes dans une zone d'ombre/obscurité — nécessite d'être déjà dissimulé, ce n'est pas un effet libre à volonté."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : soutien ou contrôle avancé."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Porte dimensionnelle (Dimension Door)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Métamorphose (Polymorph)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "titre": "Nouveau don + Frappe divine",
+        "detail": "Frappe divine : poison — une fois par tour, +1d8 dégâts de poison sur une attaque de mêlée réussie.",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Soins de groupe et autres sorts de haut niveau."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Domination de personne (Dominate Person)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Apparence trompeuse (Seeming)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Intervention divine",
-        "detail": "Peut supplier ta divinité d'intervenir directement."
+        "titre": "Capacité de classe : Intervention divine",
+        "detail": "Peut supplier ta divinité d'intervenir directement en combat (effet puissant tiré au sort)."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Sagesse (20) — maximum naturel."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Sagesse à 20, le maximum naturel."
+        }
       }
     ],
     "equipement": [
@@ -8057,63 +8507,137 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Domaine du Savoir",
-        "detail": "Bénédictions du savoir : Expertise (bonus de maîtrise doublé) sur deux compétences au choix parmi Arcanes, Histoire, Nature et Religion."
+        "titre": "Spécialisation : Domaine du Savoir",
+        "detail": "Bénédictions du savoir : Expertise (bonus de maîtrise doublé) sur deux compétences au choix parmi Arcanes, Histoire, Nature et Religion.",
+        "sorts": [
+          {
+            "nom": "Flamme sacrée",
+            "type": "nouveau",
+            "note": "cantrip de départ recommandé"
+          },
+          {
+            "nom": "Injonction (Command)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Sommeil (Sleep)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "Conduit divin",
-        "detail": "Connaissance des âges : dépense une charge de Conduit divin pour gagner la maîtrise de toutes les compétences et outils liés à une caractéristique choisie."
+        "titre": "Capacité de classe : Connaissance des âges",
+        "detail": "1 charge de Conduit divin (recharge repos court ou long) : gagne la maîtrise de toutes les compétences et outils liés à une caractéristique choisie."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de contrôle ou de soin."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Apaisement des émotions (Calm Emotions)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Immobilisation de personne (Hold Person)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Sagesse (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Augmente le DD des sorts, les soins et les jets de sauvegarde de Sagesse."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Immobiliser un être humanoïde ou autre sort de contrôle."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Lenteur (Slow)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Communication avec les morts (Speak with Dead)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Lecture des pensées",
-        "detail": "Lecture des pensées (Read Thoughts) et Communication avec les animaux : accède au savoir/pensées d'une créature proche — ces capacités apparaissent réellement à ce niveau, pas au niveau 2."
+        "titre": "Capacité de domaine : Lecture des pensées",
+        "detail": "Conduit divin : accède aux pensées d'une créature proche en lui parlant. Communication avec les animaux devient aussi disponible via Conduit divin — ces capacités apparaissent réellement à ce niveau, pas au niveau 2."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : soutien ou contrôle avancé."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Confusion",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Sphère résiliente d'Otiluke (Otiluke's Resilient Sphere)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "titre": "Nouveau don + Incantation puissante",
+        "detail": "Incantation puissante (Potent Spellcasting) : ajoute ton modificateur de Sagesse aux dégâts de tes cantrips de Clerc.",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix — cumule bien avec l'identité érudite du domaine."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Soins de groupe et autres sorts de haut niveau."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Domination de personne (Dominate Person)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Télékinésie (Telekinesis)",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Intervention divine",
-        "detail": "Peut supplier ta divinité d'intervenir directement."
+        "titre": "Capacité de classe : Intervention divine",
+        "detail": "Peut supplier ta divinité d'intervenir directement en combat (effet puissant tiré au sort)."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Sagesse (20) — maximum naturel."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Sagesse à 20, le maximum naturel."
+        }
       }
     ],
     "equipement": [
