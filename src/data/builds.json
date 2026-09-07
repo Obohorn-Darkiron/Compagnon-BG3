@@ -2422,63 +2422,134 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Magicien 1",
-        "detail": "Lanceur de sorts et Récupération arcanique (restaure des emplacements hors combat)."
+        "titre": "Sorts de départ",
+        "detail": "3 cantrips et 6 sorts ajoutés au grimoire au niveau 1, puis 2 sorts de plus à chaque niveau (en plus de ceux appris via parchemin). Sorts préparés chaque jour : Intelligence + niveau de Magicien, modifiable hors combat.",
+        "sorts": [
+          {
+            "nom": "Projectile magique (Magic Missile)",
+            "type": "nouveau",
+            "note": "dégâts fiables, ne rate jamais"
+          },
+          {
+            "nom": "Bouclier (Shield)",
+            "type": "nouveau",
+            "note": "+5 CA en réaction, survie de base"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "École d'Évocation",
-        "detail": "Sculpteur de sorts : les alliés réussissent automatiquement leur sauvegarde et ignorent les dégâts de tes sorts de zone."
+        "titre": "Spécialisation : École d'Évocation",
+        "detail": "Sculpteur de sorts : tes alliés dans la zone de tes sorts d'Évocation réussissent automatiquement leur jet de sauvegarde et ne subissent aucun dégât — plus besoin de viser en évitant le groupe. Évocateur érudit : coût divisé par deux pour apprendre des sorts d'Évocation depuis un parchemin (25 po par niveau de sort)."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort utilitaire ou de contrôle supplémentaire."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Rayon ardent (Scorching Ray)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Flèche acide de Melf",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Intelligence (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Augmente le DD des sorts et les jets d'attaque de sort — la caractéristique principale du Magicien."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Boule de feu et Éclair appris — les deux sorts de zone piliers du build."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Boule de feu (Fireball)",
+            "type": "nouveau",
+            "note": "sculptée grâce à Sculpteur de sorts — épargne tes alliés"
+          },
+          {
+            "nom": "Contresort (Counterspell)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Cantrip potentialisé",
-        "detail": "Tes cantrips à dégâts infligent la moitié des dégâts même sur une sauvegarde réussie de la cible."
+        "titre": "Capacité d'école : Cantrip renforcé",
+        "detail": "Quand un ennemi réussit son jet de sauvegarde contre un de tes cantrips, il subit quand même la moitié des dégâts au lieu de zéro."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : contrôle ou protection avancée."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Tempête de glace (Ice Storm)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Mur de feu (Wall of Fire)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué (Skilled), ou Élu selon la préférence."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Nouvel emplacement de haut niveau, dégâts de zone encore plus lourds."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Cône de froid (Cone of Cold)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Hâte (Haste)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Évocation renforcée",
-        "detail": "Ajoute ton modificateur d'Intelligence aux dégâts d'un sort d'évocation par lancer."
+        "titre": "Capacité d'école : Évocation empuissantée",
+        "detail": "Ajoute ton modificateur d'Intelligence aux dégâts de tous tes sorts d'Évocation — même ceux appris hors de la classe Magicien."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 : accès aux sorts les plus puissants du jeu."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Désintégration (Disintegrate)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Intelligence (20) — maximum naturel, DD des sorts au plus haut."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Intelligence à 20, le maximum naturel — DD des sorts au plus haut."
+        }
       }
     ],
     "equipement": [
@@ -3578,7 +3649,7 @@
       "+2 Intelligence (niv 12)"
     ],
     "sortsCles": [
-      "Toucher de la mort",
+      "Contact glacial (Chill Touch)",
       "Nuage nauséabond",
       "Désintégration",
       "Cône de froid"
@@ -3596,63 +3667,125 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Magicien 1",
-        "detail": "Lanceur de sorts et Récupération arcanique (restaure des emplacements hors combat)."
+        "titre": "Sorts de départ",
+        "detail": "3 cantrips et 6 sorts ajoutés au grimoire au niveau 1, puis 2 sorts de plus à chaque niveau (en plus de ceux appris via parchemin). Sorts préparés chaque jour : Intelligence + niveau de Magicien, modifiable hors combat.",
+        "sorts": [
+          {
+            "nom": "Contact glacial (Chill Touch)",
+            "type": "nouveau",
+            "note": "cantrip nécrotique, empêche la cible de récupérer des PV"
+          },
+          {
+            "nom": "Simulacre de vie (False Life)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "École de Nécromancie",
-        "detail": "Moisson funeste : tuer une créature avec un sort restaure des PV. Morts-vivants créés plus résistants."
+        "titre": "Spécialisation : École de Nécromancie",
+        "detail": "Moisson funeste : une fois par tour, si tu tues une créature avec un sort, tu récupères des PV égaux à deux fois le niveau de l'emplacement dépensé — trois fois si c'est un sort de Nécromancie. Ne fonctionne pas contre les morts-vivants et les constructs. Nécromancien érudit : coût divisé par deux pour apprendre des sorts de Nécromancie depuis un parchemin."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de contrôle ou d'invocation supplémentaire."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Rayon affaiblissant (Ray of Enfeeblement)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Flèche acide de Melf",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Intelligence (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Augmente le DD des sorts et les jets d'attaque de sort — la caractéristique principale du Magicien."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Nuage nauséabond et autres sorts de zone nécrotiques/toxiques."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Contresort (Counterspell)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Nuage nauséabond (Stinking Cloud)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Serviteurs morts-vivants",
-        "detail": "Undead Thralls : accès au sort Animer les morts, +1 cadavre relevé par lancer, morts-vivants créés avec PV bonus (= niveau de Magicien) et bonus de maîtrise aux dégâts."
+        "titre": "Capacité d'école : Serviteurs morts-vivants",
+        "detail": "Débloque Animation des morts si tu ne l'as pas déjà. Le sort relève un cadavre supplémentaire, et tes morts-vivants gagnent des PV bonus égaux à ton niveau de Magicien plus ton bonus de maîtrise ajouté à leurs dégâts."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : contrôle ou dégâts nécrotiques avancés."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Flétrissement (Blight)",
+            "type": "nouveau",
+            "note": "gros dégâts nécrotiques ponctuels"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Toucher de la mort et autres sorts nécrotiques majeurs."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Cône de froid (Cone of Cold)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Résistance à la mort",
-        "detail": "Résistance aux dégâts nécrotiques et immunité à la réduction de PV maximum."
+        "titre": "Capacité d'école : Endurci face à la mort",
+        "detail": "Résistance aux dégâts nécrotiques, et ton maximum de PV ne peut plus être réduit."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Désintégration (Disintegrate)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Intelligence (20) — maximum naturel, DD des sorts au plus haut."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Intelligence à 20, le maximum naturel — DD des sorts au plus haut."
+        }
       }
     ],
     "equipement": [
@@ -3778,63 +3911,121 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Magicien 1",
-        "detail": "Lanceur de sorts et Récupération arcanique."
+        "titre": "Sorts de départ",
+        "detail": "3 cantrips et 6 sorts ajoutés au grimoire au niveau 1, puis 2 sorts de plus à chaque niveau (en plus de ceux appris via parchemin). Sorts préparés chaque jour : Intelligence + niveau de Magicien, modifiable hors combat.",
+        "sorts": [
+          {
+            "nom": "Bouclier (Shield)",
+            "type": "nouveau",
+            "note": "+5 CA en réaction"
+          },
+          {
+            "nom": "Armure de mage (Mage Armour)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "École d'Abjuration",
-        "detail": "Rempart arcanique : bouclier de PV temporaires posé sur soi-même uniquement (la projection sur un allié n'arrive qu'au niveau 6) ; se recharge par les sorts d'Abjuration lancés et au repos long."
+        "titre": "Spécialisation : École d'Abjuration",
+        "detail": "Rempart arcanique : chaque sort d'Abjuration que tu lances charge un bouclier magique (intensité = niveau du sort, plafonné à 2× ton niveau de Magicien) qui absorbe les prochains dégâts subis, point pour point, jusqu'à épuisement. Se recharge intégralement à chaque repos long. Abjurateur érudit : coût divisé par deux pour apprendre des sorts d'Abjuration depuis un parchemin."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort défensif ou de contrôle supplémentaire."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Détection des pensées (Detect Thoughts)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Intelligence (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Augmente le DD des sorts et les jets d'attaque de sort — la caractéristique principale du Magicien."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Contresort et autres protections avancées."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Contresort (Counterspell)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Dissipation de la magie (Dispel Magic)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Projection du rempart",
-        "detail": "Peut poser le Rempart arcanique sur un allié à distance."
+        "titre": "Capacité d'école : Rempart projeté",
+        "detail": "Réaction : dépense l'intensité de ton Rempart arcanique pour absorber les dégâts subis par un allié proche à ta place."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : protection ou contrôle de haut niveau."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Bannissement (Banishment)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Nouvel emplacement de haut niveau."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Cône de froid (Cone of Cold)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Improved Abjuration",
-        "detail": "L'intensité (PV temporaires) du Rempart arcanique se recharge aussi au repos court, en plus du repos long — ce n'est pas une résistance aux dégâts."
+        "titre": "Capacité d'école : Abjuration améliorée",
+        "detail": "À chaque repos court, l'intensité de ton Rempart arcanique augmente d'un montant égal à ton niveau de Magicien — un rempart qui se recharge bien plus vite."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Globe d'invulnérabilité et autres sorts de protection majeurs."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Globe d'invulnérabilité (Globe of Invulnerability)",
+            "type": "nouveau",
+            "note": "bulle qui bloque les sorts de niveau 5 et moins"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Intelligence (20) — maximum naturel, DD des sorts au plus haut."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Intelligence à 20, le maximum naturel — DD des sorts au plus haut."
+        }
       }
     ],
     "equipement": [
@@ -3953,63 +4144,121 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Magicien 1",
-        "detail": "Lanceur de sorts et Récupération arcanique."
+        "titre": "Sorts de départ",
+        "detail": "3 cantrips et 6 sorts ajoutés au grimoire au niveau 1, puis 2 sorts de plus à chaque niveau (en plus de ceux appris via parchemin). Sorts préparés chaque jour : Intelligence + niveau de Magicien, modifiable hors combat.",
+        "sorts": [
+          {
+            "nom": "Illusion mineure (Minor Illusion)",
+            "type": "nouveau",
+            "note": "cantrip de diversion, deviendra action bonus au niveau 2"
+          },
+          {
+            "nom": "Déguisement (Disguise Self)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "École d'Illusion",
-        "detail": "Illusion améliorée : le cantrip Illusion mineure peut désormais être lancé en action bonus."
+        "titre": "Spécialisation : École d'Illusion",
+        "detail": "Illusion mineure améliorée : le cantrip Illusion mineure se lance désormais en action bonus. Illusionniste érudit : coût divisé par deux pour apprendre des sorts d'Illusion depuis un parchemin."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de contrôle ou d'illusion supplémentaire."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Invisibilité (Invisibility)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Image miroir (Mirror Image)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Intelligence (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Augmente le DD des sorts et les jets d'attaque de sort — la caractéristique principale du Magicien."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Image miroir et autres illusions de niveau 3."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Peur (Fear)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Vision des invisibles",
-        "detail": "Vision des invisibles (See Invisibility) : capacité active (recharge au repos court) qui permet de percevoir — et de révéler aux alliés — les créatures invisibles."
+        "titre": "Capacité d'école : Détection de l'invisibilité",
+        "detail": "Action (repos court) : voit les créatures invisibles pendant un temps, et peut les révéler aux autres."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : contrôle ou protection avancée."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Invisibilité suprême (Greater Invisibility)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Nouvel emplacement de haut niveau."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Double illusoire",
-        "detail": "Double illusoire (Illusory Self) : réaction (recharge au repos court) qui interpose un double illusoire pour faire échouer une attaque ennemie."
+        "titre": "Capacité d'école : Moi illusoire",
+        "detail": "Réaction (repos court) : interpose un double illusoire de toi face à une attaque, qui rate automatiquement."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Intelligence (20) — maximum naturel, DD des sorts au plus haut."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Intelligence à 20, le maximum naturel — DD des sorts au plus haut."
+        }
       }
     ],
     "equipement": [
@@ -4124,63 +4373,122 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Magicien 1",
-        "detail": "Lanceur de sorts et Récupération arcanique."
+        "titre": "Sorts de départ",
+        "detail": "3 cantrips et 6 sorts ajoutés au grimoire au niveau 1, puis 2 sorts de plus à chaque niveau (en plus de ceux appris via parchemin). Sorts préparés chaque jour : Intelligence + niveau de Magicien, modifiable hors combat.",
+        "sorts": [
+          {
+            "nom": "Lame tonnante (Booming Blade)",
+            "type": "nouveau",
+            "note": "cantrip d'arme, cœur du profil hybride"
+          },
+          {
+            "nom": "Bouclier (Shield)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "Chant-l'épée",
-        "detail": "Chant de l'épée activable en action bonus : +CA et bonus aux jets de sauvegarde de Constitution égal au modificateur d'Intelligence, vitesse augmentée, avantage aux jets d'Acrobaties — n'augmente pas les dégâts d'arme."
+        "titre": "Spécialisation : Chant-l'épée",
+        "detail": "Chant de l'épée (2 charges, repos long) : +2 CA, +3 m de vitesse, avantage aux tests d'Acrobatie et +2 aux jets de sauvegarde de Constitution tant qu'actif — incompatible avec une armure moyenne/lourde ou un bouclier. Entraînement à la guerre et au chant : maîtrise armure légère, dague/épée longue/rapière/cimeterre/épée courte/serpe, plus la compétence Représentation."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Lame tonnante (Booming Blade) est un cantrip, pas un sort de niveau 2 : elle ne consomme aucun emplacement et est disponible dès le niveau 1."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Rayon ardent (Scorching Ray)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Intelligence (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Augmente le DD des sorts et les jets d'attaque de sort — la caractéristique principale du Magicien."
+        }
       },
       {
         "niveau": 5,
-        "titre": "Sorts de niveau 3",
-        "detail": "Hâte et autres sorts offensifs de niveau 3."
+        "titre": "Sorts de niveau 3 + Chant de l'épée renforcé",
+        "detail": "Chant de l'épée passe à 3 charges ; ses bonus montent à +3 CA et +3 aux jets de sauvegarde de Constitution.",
+        "sorts": [
+          {
+            "nom": "Contresort (Counterspell)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Hâte (Haste)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Attaque supplémentaire",
-        "detail": "Extra Attack : le Chant-l'épée obtient une attaque gratuite supplémentaire après une attaque à l'arme ou à mains nues — le vrai gain majeur du niveau 6."
+        "titre": "Capacité de classe : Attaque supplémentaire",
+        "detail": "Un second coup par action d'attaque — le profil mêlée prend forme."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : contrôle ou protection avancée."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Liberté de mouvement (Freedom of Movement)",
+            "type": "nouveau",
+            "note": "précieux pour un profil mêlée qui ne veut pas être immobilisé"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
-        "titre": "Sorts de niveau 5",
-        "detail": "Nouvel emplacement de haut niveau."
+        "titre": "Sorts de niveau 5 + Chant de l'épée renforcé",
+        "detail": "Chant de l'épée passe à 4 charges ; ses bonus montent à +4 CA et +4 aux jets de sauvegarde de Constitution.",
+        "sorts": [
+          {
+            "nom": "Cône de froid (Cone of Cold)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Chant de défense",
-        "detail": "Song of Defence : pendant le Chant de l'épée, dépense un emplacement de sort pour réduire les dégâts subis de 5 par niveau d'emplacement dépensé."
+        "titre": "Capacité de classe : Chant de défense",
+        "detail": "Tant que le Chant de l'épée est actif, dépense des emplacements de sort pour réduire les dégâts subis de 5 par emplacement."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Intelligence (20) — maximum naturel, DD des sorts au plus haut."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Intelligence à 20, le maximum naturel — DD des sorts au plus haut."
+        }
       }
     ],
     "equipement": [
@@ -9309,63 +9617,125 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Magicien 1",
-        "detail": "Lanceur de sorts et Récupération arcanique."
+        "titre": "Sorts de départ",
+        "detail": "3 cantrips et 6 sorts ajoutés au grimoire au niveau 1, puis 2 sorts de plus à chaque niveau (en plus de ceux appris via parchemin). Sorts préparés chaque jour : Intelligence + niveau de Magicien, modifiable hors combat.",
+        "sorts": [
+          {
+            "nom": "Appel de familier (Find Familiar)",
+            "type": "nouveau",
+            "note": "rituel — ne consomme pas de sort connu"
+          },
+          {
+            "nom": "Bouclier (Shield)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "École de Conjuration",
-        "detail": "Conjuration mineure : Création d'eau — crée une pluie/flaque d'eau (repos court), sans lien avec la téléportation."
+        "titre": "Spécialisation : École de Conjuration",
+        "detail": "Conjuration mineure : Création d'eau en action (repos court) — éteint les flammes exposées et forme une surface d'eau. Conjurateur érudit : coût divisé par deux pour apprendre des sorts de Conjuration depuis un parchemin."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort d'invocation ou de contrôle."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Flèche acide de Melf",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Toile d'araignée (Web)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Intelligence (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Augmente le DD des sorts et les jets d'attaque de sort — la caractéristique principale du Magicien."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Boule de feu ou autre sort de zone appris."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Boule de feu (Fireball)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Contresort (Counterspell)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Transposition bénigne",
-        "detail": "Téléportation vers un espace visible inoccupé, ou échange de position avec un allié consentant (action, recharge au repos long) — pas un bonus de survie aux invocations."
+        "titre": "Capacité d'école : Transposition bénigne",
+        "detail": "Action (repos long) : téléporte-toi vers un espace proche inoccupé, ou échange ta place avec un allié."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : contrôle ou protection avancée."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Tempête de glace (Ice Storm)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Nouvel emplacement de haut niveau."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Cône de froid (Cone of Cold)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Conjuration concentrée",
-        "detail": "Focused Conjuration : les dégâts subis ne peuvent plus interrompre la concentration sur un sort de Conjuration."
+        "titre": "Capacité d'école : Conjuration concentrée",
+        "detail": "Les dégâts subis pendant que tu te concentres sur un sort de Conjuration ne peuvent plus briser ta concentration."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Intelligence (20) — maximum naturel."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Intelligence à 20, le maximum naturel — DD des sorts au plus haut."
+        }
       }
     ],
     "equipement": [
@@ -9489,63 +9859,121 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Magicien 1",
-        "detail": "Lanceur de sorts et Récupération arcanique. Orbe chromatique (sort de niveau 1) : choisit son type de dégâts au moment du lancer — acide, froid, feu, foudre, poison (2d8) ou tonnerre (3d8) — pour toujours viser la résistance la plus faible de la cible."
+        "titre": "Sorts de départ",
+        "detail": "3 cantrips et 6 sorts ajoutés au grimoire au niveau 1, puis 2 sorts de plus à chaque niveau (en plus de ceux appris via parchemin). Sorts préparés chaque jour : Intelligence + niveau de Magicien, modifiable hors combat.",
+        "sorts": [
+          {
+            "nom": "Orbe chromatique (Chromatic Orb)",
+            "type": "nouveau",
+            "note": "seul sort du jeu qui choisit son type de dégâts au lancer"
+          },
+          {
+            "nom": "Bouclier (Shield)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "École de Divination",
-        "detail": "Présages : garde deux dés en réserve, utilisables pour forcer une relance sur n'importe quel jet proche."
+        "titre": "Spécialisation : École de Divination",
+        "detail": "Présage : après chaque repos long, gagne 2 dés de Présage. En réaction, remplace un jet d'attaque ou de sauvegarde (le tien ou celui d'un ennemi) par un de ces dés. Chaque dé ne sert qu'une fois, et les dés non utilisés sont perdus en fin de journée. Devin érudit : coût divisé par deux pour apprendre des sorts de Divination depuis un parchemin."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de contrôle supplémentaire."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de personne (Hold Person)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Intelligence (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Augmente le DD des sorts et les jets d'attaque de sort — la caractéristique principale du Magicien."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Boule de feu ou autre sort de zone appris."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Boule de feu (Fireball)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Contresort (Counterspell)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Divination experte",
-        "detail": "Gagne un troisième dé de présage, et peut en récupérer via des « prophéties » à accomplir au repos court."
+        "titre": "Capacité d'école : Divination experte",
+        "detail": "Un troisième dé de Présage. Au repos court, une Prophétie te propose un petit objectif qui, une fois accompli, restaure tes dés de Présage manquants."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : contrôle ou protection avancée."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Bannissement (Banishment)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Immobilisation de monstre et autres sorts de contrôle majeurs."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Œil de la prescience",
-        "detail": "Third Eye : capacités actives de Vision dans le noir et de Vision des invisibles (recharge au repos long) — le troisième dé de présage est en réalité acquis au niveau 6."
+        "titre": "Capacité d'école : Troisième œil",
+        "detail": "Vision dans le noir 24 m, et/ou détection de l'invisibilité — les deux effets peuvent être actifs en même temps, rechargés au repos long."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Intelligence (20) — maximum naturel."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Intelligence à 20, le maximum naturel — DD des sorts au plus haut."
+        }
       }
     ],
     "equipement": [
@@ -9668,63 +10096,127 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Magicien 1",
-        "detail": "Lanceur de sorts et Récupération arcanique."
+        "titre": "Sorts de départ",
+        "detail": "3 cantrips et 6 sorts ajoutés au grimoire au niveau 1, puis 2 sorts de plus à chaque niveau (en plus de ceux appris via parchemin). Sorts préparés chaque jour : Intelligence + niveau de Magicien, modifiable hors combat.",
+        "sorts": [
+          {
+            "nom": "Charme-personne (Charm Person)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Sommeil (Sleep)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Fou rire de Tasha (Tasha's Hideous Laughter)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "École d'Enchantement",
-        "detail": "Regard hypnotique (Hypnotic Gaze) : charme et incapacite une créature à portée de vue (action, rechargeable au repos long, maintenable chaque tour)."
+        "titre": "Spécialisation : École d'Enchantement",
+        "detail": "Regard hypnotique (repos long) : action qui charme et neutralise une créature — elle ne peut plus t'attaquer ni agir tant que tu maintiens l'effet en réaction chaque tour. Enchanteur érudit : coût divisé par deux pour apprendre des sorts d'Enchantement depuis un parchemin."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Immobilisation de personne et autres sorts de contrôle."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de personne (Hold Person)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Suggestion",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Intelligence (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Augmente le DD des sorts et les jets d'attaque de sort — la caractéristique principale du Magicien."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Nouvel emplacement de niveau 3."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Contresort (Counterspell)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Hâte (Haste)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Charme instinctif",
-        "detail": "Instinctive Charm : réaction qui charme un ennemi t'attaquant, le forçant à cibler quelqu'un d'autre."
+        "titre": "Capacité d'école : Charme instinctif",
+        "detail": "Réaction : quand un ennemi t'attaque, tu peux le charmer et forcer son attaque à se rediriger vers une autre cible proche si possible."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : contrôle avancé."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Confusion",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Domination de monstre et autres sorts de contrôle majeurs."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Domination de personne (Dominate Person)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Enchantement dédoublé",
-        "detail": "Split Enchantment : les sorts d'Enchantement à cible unique peuvent désormais viser deux créatures."
+        "titre": "Capacité d'école : Enchantement partagé",
+        "detail": "Les sorts d'Enchantement qui ne ciblaient qu'une seule créature peuvent désormais en cibler deux à la fois."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Danse irrésistible d'Otto (Otto's Irresistible Dance)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Intelligence (20) — maximum naturel."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Intelligence à 20, le maximum naturel — DD des sorts au plus haut."
+        }
       }
     ],
     "equipement": [
@@ -9840,63 +10332,124 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Magicien 1",
-        "detail": "Lanceur de sorts et Récupération arcanique."
+        "titre": "Sorts de départ",
+        "detail": "3 cantrips et 6 sorts ajoutés au grimoire au niveau 1, puis 2 sorts de plus à chaque niveau (en plus de ceux appris via parchemin). Sorts préparés chaque jour : Intelligence + niveau de Magicien, modifiable hors combat.",
+        "sorts": [
+          {
+            "nom": "Armure de mage (Mage Armour)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "École de Transmutation",
-        "detail": "Alchimie expérimentale (Experimental Alchemy) : chance de brasser deux potions/fioles au lieu d'une lors d'un test de Médecine réussi."
+        "titre": "Spécialisation : École de Transmutation",
+        "detail": "Alchimie expérimentale : quand tu combines des extraits, tu peux en obtenir deux au lieu d'un en réussissant un test de Médecine DD 15. Transmutateur érudit : coût divisé par deux pour apprendre des sorts de Transmutation depuis un parchemin."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort utilitaire ou de contrôle."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Amélioration de caractéristique (Enhance Ability)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Agrandissement/rapetissement (Enlarge/Reduce)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Toile d'araignée (Web)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Intelligence (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Augmente le DD des sorts et les jets d'attaque de sort — la caractéristique principale du Magicien."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Boule de feu ou autre sort de zone appris."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Boule de feu (Fireball)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Contresort (Counterspell)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Pierre du transmutateur",
-        "detail": "Transmuter's Stone : crée une pierre magique au choix (proficience de sauvegarde Constitution, Vision dans le noir, +3m de vitesse, ou résistance à un dégât élémentaire) ; une seule active à la fois."
+        "titre": "Capacité d'école : Pierre du transmutateur",
+        "detail": "Crée une pierre magique (une seule active à la fois) donnant, au choix : maîtrise des sauvegardes de Constitution, vision dans le noir 18 m, +3 m de vitesse, ou résistance à un dégât élémentaire (acide, froid, feu, foudre ou tonnerre)."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : contrôle ou protection avancée."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Métamorphose (Polymorph)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Nouvel emplacement de haut niveau."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Télékinésie (Telekinesis)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Change-forme",
-        "detail": "Shapechanger : action qui transforme le Magicien en geai bleu volant ; si la forme animale tombe à 0 PV, il reprend sa forme initiale avec ses PV intacts."
+        "titre": "Capacité d'école : Métamorphe",
+        "detail": "Transforme-toi en geai bleu volant — si ses PV tombent à 0, tu reprends ta forme d'origine avec tes PV intacts."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Pétrification (Flesh to Stone)",
+            "type": "nouveau",
+            "note": "contrôle majeur — la cible pétrifiée ne peut plus agir"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Intelligence (20) — maximum naturel."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Intelligence",
+          "effet": "Intelligence à 20, le maximum naturel — DD des sorts au plus haut."
+        }
       }
     ],
     "equipement": [
