@@ -146,13 +146,19 @@ export function BuildDetailPage() {
         </Section>
       )}
 
-      <Section title="Jalons">
+      <Section title="Progression niveau par niveau">
+        <p className="mb-3 text-xs leading-relaxed text-ink-muted">
+          Ce que choisir à chaque niveau pour que le build fonctionne comme prévu — dons, sorts et
+          capacités de classe, dans l'ordre.
+        </p>
         <ol className="space-y-3 border-l border-border pl-4">
-          {build.jalons.map((j) => (
-            <li key={j.etape} className="relative">
-              <span className="absolute -left-[21px] top-1 h-2 w-2 rounded-full bg-gold" />
-              <p className="text-sm font-medium text-ink">{j.etape}</p>
-              <p className="text-sm text-ink-muted">{j.note}</p>
+          {build.progression.map((etape) => (
+            <li key={etape.niveau} className="relative">
+              <span className="absolute -left-6 top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-gold text-[9px] font-bold text-bg">
+                {etape.niveau}
+              </span>
+              <p className="text-sm font-medium text-ink">{etape.titre}</p>
+              <p className="text-sm text-ink-muted">{etape.detail}</p>
             </li>
           ))}
         </ol>
