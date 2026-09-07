@@ -7763,31 +7763,45 @@
       "+2 Sagesse (niv 12)"
     ],
     "sortsCles": [
-      "Toucher de la mort",
-      "Flamme sacrée",
-      "Soins de groupe"
+      "Glas (Toll the Dead) — cantrip nécrotique, touche 2 cibles grâce à Faucheur",
+      "Simulacre de vie (False Life)",
+      "Caresse du vampire (Vampiric Touch)",
+      "Flétrissement (Blight)",
+      "Contagion"
     ],
     "jalons": [
       {
         "etape": "Niv 1 (domaine)",
-        "note": "Faucheur : les cantrips de Nécromancie à cible unique (comme Toucher de la mort) touchent une cible supplémentaire."
+        "note": "Faucheur : les cantrips de Nécromancie à cible unique (Glas, Frisson des os, Tendon rompu) touchent aussi une seconde cible à portée. Sorts de domaine toujours préparés en plus : Simulacre de vie et Rayon de maladie."
+      },
+      {
+        "etape": "Niv 2",
+        "note": "Conduit divin (Toucher de la mort) : dépense une charge pour ajouter des dégâts nécrotiques bonus à une attaque de mêlée réussie. 1 charge, recharge repos court ou long."
+      },
+      {
+        "etape": "Niv 6",
+        "note": "Inéluctable Destruction : tes dégâts ignorent la résistance aux dégâts nécrotiques. Deuxième charge de Conduit divin."
+      },
+      {
+        "etape": "Niv 8",
+        "note": "Frappe divine : nécrotique — +1d8 dégâts nécrotiques une fois par tour sur une attaque de mêlée réussie, en plus des dégâts de l'arme."
       }
     ],
     "progression": [
       {
         "niveau": 1,
-        "titre": "Domaine de la Mort",
-        "detail": "Maîtrise des armes de guerre. Faucheur (Reaper) : les cantrips de Nécromancie à cible unique, comme Toucher de la mort, touchent aussi une seconde cible à portée."
+        "titre": "Clerc 1 (Domaine de la Mort)",
+        "detail": "Maîtrise des armes de guerre. Faucheur : les cantrips de Nécromancie à cible unique (Glas, Frisson des os, Tendon rompu) touchent une seconde cible. Choisis Glas comme cantrip de départ — c'est le cœur du build. Sorts de domaine toujours préparés, sans consommer d'emplacement : Simulacre de vie (PV temporaires avant le combat) et Rayon de maladie."
       },
       {
         "niveau": 2,
         "titre": "Conduit divin",
-        "detail": "Toucher de la mort (Touch of Death) : dépense une charge de Conduit divin pour infliger des dégâts nécrotiques bonus sur une attaque de mêlée réussie."
+        "detail": "1 charge de Conduit divin (recharge repos court ou long) : Toucher de la mort ajoute des dégâts nécrotiques bonus à une attaque de mêlée réussie — pratique pour achever une cible entre deux tours de sorts."
       },
       {
         "niveau": 3,
-        "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de dégâts ou de soin."
+        "titre": "Sorts de niveau 2 + sorts de domaine",
+        "detail": "Nouvel emplacement de niveau 2 à préparer (Sagesse) — Flamme sacrée en réserve à distance si besoin d'un cantrip secondaire. Sorts de domaine toujours préparés en plus : Cécité/Surdité et Rayon affaiblissant."
       },
       {
         "niveau": 4,
@@ -7796,43 +7810,43 @@
       },
       {
         "niveau": 5,
-        "titre": "Sorts de niveau 3",
-        "detail": "Nouvel emplacement de niveau 3."
+        "titre": "Sorts de niveau 3 + sorts de domaine",
+        "detail": "Nouvel emplacement de niveau 3. Sorts de domaine toujours préparés : Animation des morts et Caresse du vampire (Vampiric Touch) — bon sort de dégâts nécrotiques soutenus à courte portée, complète Glas sur les cibles qui survivent au premier échange."
       },
       {
         "niveau": 6,
-        "titre": "Capacité de domaine",
-        "detail": "Renforce les dégâts nécrotiques et le rôle de finisseur du domaine."
+        "titre": "Capacité de domaine — Inéluctable Destruction",
+        "detail": "Tes dégâts ignorent la résistance aux dégâts nécrotiques — contre directement la faiblesse du thème (l'immunité totale reste un mur, mais la résistance simple ne freine plus rien). Deuxième charge de Conduit divin."
       },
       {
         "niveau": 7,
-        "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : dégâts ou soutien avancé."
+        "titre": "Sorts de niveau 4 + sorts de domaine",
+        "detail": "Nouvel emplacement de niveau 4. Sorts de domaine toujours préparés : Flétrissement (gros dégâts nécrotiques ponctuels, bon burst sur un finisseur) et Protection contre la mort."
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "titre": "Deuxième don + Frappe divine",
+        "detail": "Doué (Skilled) ou +2 Sagesse selon préférence. Frappe divine : nécrotique — une fois par tour, +1d8 dégâts nécrotiques sur une attaque de mêlée réussie, en plus des dégâts de l'arme : le profil hybride sort + arme prend forme."
       },
       {
         "niveau": 9,
-        "titre": "Sorts de niveau 5",
-        "detail": "Soins de groupe et autres sorts de haut niveau."
+        "titre": "Sorts de niveau 5 + sorts de domaine",
+        "detail": "Nouvel emplacement de niveau 5 — Soins de groupe si le groupe a besoin de plus de soutien. Sorts de domaine toujours préparés : Brume mortelle et Contagion."
       },
       {
         "niveau": 10,
         "titre": "Intervention divine",
-        "detail": "Peut supplier ta divinité d'intervenir directement."
+        "detail": "Peut supplier ta divinité d'intervenir directement en combat (effet puissant tiré au sort)."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "Premier emplacement de niveau 6 — un sort de haut niveau au choix selon le combat prévu (contrôle de zone ou finisseur supplémentaire)."
       },
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "+2 Sagesse (20) — maximum naturel."
+        "detail": "+2 Sagesse (20) — maximum naturel, DD des sorts et soins au plus haut."
       }
     ],
     "equipement": [
@@ -7911,7 +7925,12 @@
     "elements": [
       "necrotique"
     ],
-    "mecaniques": []
+    "mecaniques": [],
+    "synergies": [
+      "Le cœur du build tient en un seul cantrip : Glas (Toll the Dead) inflige 1d12 dégâts nécrotiques, mais seulement 1d8 si la cible est à PV pleins — littéralement plus fort contre un ennemi déjà entamé, l'essence même d'un « finisseur ». Faucheur (niveau 1) fait toucher ce cantrip sur DEUX cibles à la fois, sans coût de sort ni de repos : un DPS de zone gratuit et illimité dès le niveau 1, qui monte à 2d12/2d8 au niveau 5 et 3d12/3d8 au niveau 10 (vérifié sur bg3.wiki, page Toll the Dead — la comparaison est faite sur le pourcentage de PV, pas seulement PV pleins à 100% exact).",
+      "Inéluctable Destruction (niveau 6) fait ensuite ignorer la résistance aux dégâts nécrotiques par TOUS tes dégâts — ça contre directement la faiblesse du thème nécrotique (l'immunité totale de certains morts-vivants/constructs reste un mur infranchissable, mais la simple résistance ne freine plus rien). Frappe divine : nécrotique (niveau 8) ajoute encore 1d8 nécrotique une fois par tour sur une attaque de mêlée réussie, pour un profil hybride sort + arme cohérent de bout en bout plutôt qu'un pur lanceur.",
+      "Les sorts de domaine de la Mort (Simulacre de vie, Rayon de maladie, Cécité/Surdité, Rayon affaiblissant, Animation des morts, Caresse du vampire, Flétrissement, Protection contre la mort, Brume mortelle, Contagion) sont TOUJOURS préparés en plus de tes sorts choisis au Sagesse — ils ne consomment aucun emplacement de préparation, contrairement à un Clerc classique où chaque sort préparé est un choix qui coûte une place."
+    ]
   },
   {
     "id": "clerc-savoir",
