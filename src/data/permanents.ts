@@ -12,6 +12,8 @@ export interface BonusPermanent {
   description: string
   /** Note affichée à part, en évidence — pour un choix qui a une vraie implication morale/narrative. */
   avertissement?: string
+  /** Note affichée uniquement quand le personnage EST ce compagnon précis (ex. une restriction propre à sa quête personnelle). */
+  notePourCompagnon?: { nom: string; texte: string }
 }
 
 export const BONUS_PERMANENTS: BonusPermanent[] = [
@@ -29,6 +31,11 @@ export const BONUS_PERMANENTS: BonusPermanent[] = [
     valeursPossibles: [1],
     description:
       "+1 Charisme. Uniquement au Cloître de la Douce Étreinte (Acte 3) — le Miroir trouvé dans le Gantelet de Shar en Acte 2 est fissuré et inutilisable. En sacrifiant un souvenir sans prier, ce résultat sort environ 1 fois sur 5 ; les autres souvenirs sacrifiés ne donnent rien. Impose Vigueur volée (-2 à la caractéristique choisie) jusqu'au prochain repos long — retirable avec Suppression de malédiction ou Restauration supérieure.",
+    notePourCompagnon: {
+      nom: 'Shadowheart',
+      texte:
+        "Si elle n'est plus fidèle à Shar au moment d'utiliser le Miroir (route Séluné, en épargnant le Chant-Nocturne), le Miroir lui refuse TOUT bénéfice, quel que soit le sacrifice tenté — le jeu indique qu'elle a déjà cédé l'essentiel de ses souvenirs et n'a plus rien à offrir. Si elle est restée fidèle à Shar (voie Justicière des Ténèbres), elle obtient au contraire le bonus rare (+2) automatiquement, sans jet de Religion ni malus. Détail d'ordre important : utiliser le Miroir AVANT sa scène de décision finale (avec ses parents) compte comme fidèle, même si elle rejette Shar juste après.",
+    },
   },
   {
     objetId: 'miroir-egarement-rare',
@@ -39,6 +46,11 @@ export const BONUS_PERMANENTS: BonusPermanent[] = [
       "+2 sur la caractéristique de ton choix. Nécessite de prier le Miroir (en plus du sacrifice d'un souvenir) et de réussir un jet de Religion DD 25 — environ 60% de réussite si le jet passe, quasi impossible sinon. Impose aussi Vigueur volée (-2, jusqu'au prochain repos long, retirable). Se cumule avec la Mémoire du Patriarche si obtenue sur une autre caractéristique.",
     avertissement:
       "Prier le Miroir est un rituel explicitement dédié à Shar — un choix qui a du sens pour une run sombre ou grise, pas pour une run bienveillante stricte.",
+    notePourCompagnon: {
+      nom: 'Shadowheart',
+      texte:
+        "Si elle n'est plus fidèle à Shar (route Séluné), ce bonus lui est entièrement refusé, prière ou non. Si elle est restée fidèle à Shar, elle l'obtient automatiquement sans avoir besoin de réussir le jet de Religion DD 25 ni de risquer le malus.",
+    },
   },
   {
     objetId: 'miroir-egarement-savoir-interdit',
@@ -49,6 +61,11 @@ export const BONUS_PERMANENTS: BonusPermanent[] = [
       "+2 garanti sur la caractéristique de ton choix, sans jet de Religion — en sacrifiant spécifiquement le souvenir « Savoir interdit » obtenu pendant la quête de la Nécromancie de Thay (Gale). Impose quand même Vigueur volée (-2, jusqu'au prochain repos long, retirable).",
     avertissement:
       "Comme les autres bonus obtenus par le Miroir, ce sacrifice fait partie du même rituel dédié à Shar.",
+    notePourCompagnon: {
+      nom: 'Shadowheart',
+      texte:
+        "Si elle n'est plus fidèle à Shar (route Séluné), ce sacrifice lui est refusé comme tous les autres usages du Miroir — peu importe le souvenir offert.",
+    },
   },
   {
     objetId: 'potion-hautelune-force',

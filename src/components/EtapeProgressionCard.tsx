@@ -62,7 +62,7 @@ export function EtapeProgressionCard({ etape }: { etape: EtapeProgression }) {
       </div>
 
       {etape.don && (
-        <div className="rounded-lg border border-gold/40 bg-gold/10 px-3 py-2.5">
+        <div className="rounded-lg border border-border bg-surface px-3 py-2.5">
           <p className="text-[10px] font-semibold uppercase tracking-wide text-gold">Don</p>
           <p className="mt-1 text-sm font-bold text-ink">{etape.don.nom}</p>
           <p className="mt-0.5 text-xs text-ink-muted">{etape.don.effet}</p>

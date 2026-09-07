@@ -47,6 +47,15 @@ export function BonusPermanentsSection({
                 </p>
               )}
 
+              {bonus.notePourCompagnon && personnage.compagnonNom === bonus.notePourCompagnon.nom && (
+                <p className="mt-2 ml-11 rounded-lg border border-essentiel/30 bg-essentiel/5 px-2.5 py-2 text-[11px] leading-relaxed text-ink-muted">
+                  <span className="font-semibold text-essentiel">
+                    Spécifique à {personnage.compagnonNom} :
+                  </span>{' '}
+                  {bonus.notePourCompagnon.texte}
+                </p>
+              )}
+
               {obtenu && bonus.statFixe === null && (
                 <div className="mt-2 pl-11">
                   <p className="mb-1 text-[11px] uppercase tracking-wide text-ink-muted">
