@@ -14,10 +14,22 @@ export interface Jalon {
   note: string
 }
 
+/** Un choix de sort à ce niveau, pour l'onglet "Sorts" de la fiche build. */
+export interface ChoixSort {
+  nom: string
+  /** nouveau = sort/cantrip choisi ; toujoursPrepare = sort de domaine automatique (ne coûte pas d'emplacement) ; echange = remplace un sort déjà connu (Ensorceleur/Occultiste/Barde/Rôdeur). */
+  type: 'nouveau' | 'toujoursPrepare' | 'echange'
+  note?: string
+}
+
 export interface EtapeProgression {
   niveau: number
   titre: string
   detail: string
+  /** Don pris à ce niveau, si applicable — affiché en évidence dans l'onglet "Progression & dons". */
+  don?: string
+  /** Choix de sorts à ce niveau, si applicable — alimente l'onglet "Sorts" de la fiche build. */
+  sorts?: ChoixSort[]
 }
 
 export interface EquipementRecommande {

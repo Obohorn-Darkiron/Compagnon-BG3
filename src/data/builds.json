@@ -7791,7 +7791,22 @@
       {
         "niveau": 1,
         "titre": "Clerc 1 (Domaine de la Mort)",
-        "detail": "Maîtrise des armes de guerre. Faucheur : les cantrips de Nécromancie à cible unique (Glas, Frisson des os, Tendon rompu) touchent une seconde cible. Choisis Glas comme cantrip de départ — c'est le cœur du build. Sorts de domaine toujours préparés, sans consommer d'emplacement : Simulacre de vie (PV temporaires avant le combat) et Rayon de maladie."
+        "detail": "Maîtrise des armes de guerre. Faucheur : les cantrips de Nécromancie à cible unique (Glas, Frisson des os, Tendon rompu) touchent une seconde cible. Choisis Glas comme cantrip de départ — c'est le cœur du build. Sorts de domaine toujours préparés, sans consommer d'emplacement : Simulacre de vie (PV temporaires avant le combat) et Rayon de maladie.",
+        "sorts": [
+          {
+            "nom": "Glas (Toll the Dead)",
+            "type": "nouveau",
+            "note": "cantrip de départ, cœur du build"
+          },
+          {
+            "nom": "Simulacre de vie",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Rayon de maladie",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 2,
@@ -7801,17 +7816,44 @@
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2 + sorts de domaine",
-        "detail": "Nouvel emplacement de niveau 2 à préparer (Sagesse) — Flamme sacrée en réserve à distance si besoin d'un cantrip secondaire. Sorts de domaine toujours préparés en plus : Cécité/Surdité et Rayon affaiblissant."
+        "detail": "Nouvel emplacement de niveau 2 à préparer (Sagesse) — Flamme sacrée en réserve à distance si besoin d'un cantrip secondaire. Sorts de domaine toujours préparés en plus : Cécité/Surdité et Rayon affaiblissant.",
+        "sorts": [
+          {
+            "nom": "Flamme sacrée",
+            "type": "nouveau",
+            "note": "cantrip secondaire à distance, optionnel"
+          },
+          {
+            "nom": "Cécité/Surdité",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Rayon affaiblissant",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "+2 Sagesse (18)."
+        "detail": "+2 Sagesse (18).",
+        "don": "+2 Sagesse"
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3 + sorts de domaine",
-        "detail": "Nouvel emplacement de niveau 3. Sorts de domaine toujours préparés : Animation des morts et Caresse du vampire (Vampiric Touch) — bon sort de dégâts nécrotiques soutenus à courte portée, complète Glas sur les cibles qui survivent au premier échange."
+        "detail": "Nouvel emplacement de niveau 3. Sorts de domaine toujours préparés : Animation des morts et Caresse du vampire (Vampiric Touch) — bon sort de dégâts nécrotiques soutenus à courte portée, complète Glas sur les cibles qui survivent au premier échange.",
+        "sorts": [
+          {
+            "nom": "Animation des morts",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Caresse du vampire (Vampiric Touch)",
+            "type": "toujoursPrepare",
+            "note": "bon sort de dégâts nécrotiques soutenus"
+          }
+        ]
       },
       {
         "niveau": 6,
@@ -7821,17 +7863,39 @@
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4 + sorts de domaine",
-        "detail": "Nouvel emplacement de niveau 4. Sorts de domaine toujours préparés : Flétrissement (gros dégâts nécrotiques ponctuels, bon burst sur un finisseur) et Protection contre la mort."
+        "detail": "Nouvel emplacement de niveau 4. Sorts de domaine toujours préparés : Flétrissement (gros dégâts nécrotiques ponctuels, bon burst sur un finisseur) et Protection contre la mort.",
+        "sorts": [
+          {
+            "nom": "Flétrissement (Blight)",
+            "type": "toujoursPrepare",
+            "note": "gros burst nécrotique ponctuel"
+          },
+          {
+            "nom": "Protection contre la mort",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 8,
         "titre": "Deuxième don + Frappe divine",
-        "detail": "Doué (Skilled) ou +2 Sagesse selon préférence. Frappe divine : nécrotique — une fois par tour, +1d8 dégâts nécrotiques sur une attaque de mêlée réussie, en plus des dégâts de l'arme : le profil hybride sort + arme prend forme."
+        "detail": "Doué (Skilled) ou +2 Sagesse selon préférence. Frappe divine : nécrotique — une fois par tour, +1d8 dégâts nécrotiques sur une attaque de mêlée réussie, en plus des dégâts de l'arme : le profil hybride sort + arme prend forme.",
+        "don": "Doué (Skilled) ou +2 Sagesse"
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5 + sorts de domaine",
-        "detail": "Nouvel emplacement de niveau 5 — Soins de groupe si le groupe a besoin de plus de soutien. Sorts de domaine toujours préparés : Brume mortelle et Contagion."
+        "detail": "Nouvel emplacement de niveau 5 — Soins de groupe si le groupe a besoin de plus de soutien. Sorts de domaine toujours préparés : Brume mortelle et Contagion.",
+        "sorts": [
+          {
+            "nom": "Brume mortelle (Cloudkill)",
+            "type": "toujoursPrepare"
+          },
+          {
+            "nom": "Contagion",
+            "type": "toujoursPrepare"
+          }
+        ]
       },
       {
         "niveau": 10,
@@ -7841,12 +7905,20 @@
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 — un sort de haut niveau au choix selon le combat prévu (contrôle de zone ou finisseur supplémentaire)."
+        "detail": "Premier emplacement de niveau 6 — un sort de haut niveau au choix selon le combat prévu (contrôle de zone ou finisseur supplémentaire).",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "contrôle de zone ou finisseur supplémentaire selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "+2 Sagesse (20) — maximum naturel, DD des sorts et soins au plus haut."
+        "detail": "+2 Sagesse (20) — maximum naturel, DD des sorts et soins au plus haut.",
+        "don": "+2 Sagesse"
       }
     ],
     "equipement": [
