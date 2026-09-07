@@ -6,10 +6,11 @@ import { ImportanceBadge } from '../../components/ImportanceBadge'
 import { CaracTable } from '../../components/CaracTable'
 import { AlignementBadge } from '../../components/AlignementBadge'
 import { SourceAlternativeBadge } from '../../components/SourceAlternativeBadge'
+import { ChoixSortBadge } from '../../components/ChoixSortBadge'
 import { alternativesPourBuild, getBuild, nomAffiche } from '../../data'
 import { conseilRacePourBuild } from '../equipe/composeurEquipe'
 import { dedupliquerParIdAffiche, resoudreObjetPourStyle, type ObjetResolu } from '../equipe/alignementUtils'
-import type { ChoixSort, Importance } from '../../data/types'
+import type { Importance } from '../../data/types'
 
 interface EquipementResoluAffiche extends ObjetResolu {
   emplacement: string
@@ -27,18 +28,6 @@ const stylesPreview: { valeur: StylePreview; label: string }[] = [
 ]
 
 type OngletProgression = 'progression' | 'sorts'
-
-const LABELS_TYPE_SORT: Record<ChoixSort['type'], string> = {
-  nouveau: 'Nouveau',
-  toujoursPrepare: 'Toujours préparé',
-  echange: 'Échange',
-}
-
-const STYLES_TYPE_SORT: Record<ChoixSort['type'], string> = {
-  nouveau: 'bg-bon/20 text-bon border-bon/40',
-  toujoursPrepare: 'bg-situationnel/20 text-situationnel border-situationnel/40',
-  echange: 'bg-glow/20 text-glow border-glow/40',
-}
 
 export function BuildDetailPage() {
   const { id } = useParams<{ id: string }>()
@@ -230,17 +219,7 @@ export function BuildDetailPage() {
                         </span>
                         <div className="flex flex-col gap-1.5">
                           {etape.sorts!.map((sort) => (
-                            <div key={sort.nom} className="flex flex-wrap items-center gap-1.5">
-                              <span
-                                className={`inline-flex shrink-0 items-center rounded-full border px-2 py-0.5 text-[10px] font-medium ${STYLES_TYPE_SORT[sort.type]}`}
-                              >
-                                {LABELS_TYPE_SORT[sort.type]}
-                              </span>
-                              <span className="text-sm font-bold text-ink">{sort.nom}</span>
-                              {sort.note && (
-                                <span className="text-xs text-ink-muted">— {sort.note}</span>
-                              )}
-                            </div>
+                            <ChoixSortBadge key={sort.nom} sort={sort} />
                           ))}
                         </div>
                       </li>
