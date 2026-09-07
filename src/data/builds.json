@@ -1316,63 +1316,107 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Lame maudite",
-        "detail": "Lie immédiatement l'arme à deux mains (maîtrise, dégâts magiques, Charisme). Malédiction en action bonus. Tours : Décharge occulte, Lame tonnante."
+        "titre": "Patron : Lame maudite",
+        "detail": "Guerrier des lames (Hex Warrior) : maîtrise armure intermédiaire/boucliers/armes de guerre, et utilise le Charisme pour l'attaque et les dégâts d'une arme à une main liée. Malédiction du sorcier des lames (action bonus) : +bonus de maîtrise aux dégâts contre la cible, et -1 à son seuil de critique.",
+        "sorts": [
+          {
+            "nom": "Explosion occulte (Eldritch Blast)",
+            "type": "nouveau",
+            "note": "cantrip central, à volonté"
+          },
+          {
+            "nom": "Bouclier (Shield)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "Deux emplacements de pacte",
-        "detail": "Invocations : Décharge agonisante (Charisme sur chaque rayon) et Vision du diable. Sort appris : Bouclier."
+        "titre": "Deux emplacements de pacte + Invocations",
+        "detail": "2 Invocations occultes au choix (4 au niveau 3, 5 au niveau 5, 6 au niveau 6, 7 au niveau 7, 9 au niveau 8) — des capacités permanentes qui ne coûtent aucune ressource, comme Décharge agonisante (ajoute le Charisme aux dégâts d'Explosion occulte) ou Devil's Sight (voit à travers les Ténèbres)."
       },
       {
         "niveau": 3,
         "titre": "Pacte de la Lame",
-        "detail": "Sort de niveau 2 appris : Ténèbres — premier vrai plan tactique du build."
+        "detail": "Lie une arme à une main comme pacte (invocable à volonté, dégâts d'arme magiques). Bloodthirst ou une arme vicieuse recommandée dès qu'elle est trouvée.",
+        "sorts": [
+          {
+            "nom": "Ténèbres (Darkness)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Charisme (18). Pas brumeux appris pour la mobilité."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts, les jets d'attaque de sort et les dégâts d'Explosion occulte (avec l'invocation Agonisante décharge)."
+        }
       },
       {
         "niveau": 5,
-        "titre": "Pacte approfondi",
-        "detail": "Seconde attaque à chaque tour — le vrai pic martial. Invocation Décharge répulsive. Faim de Hadar apprise."
+        "titre": "Sorts de niveau 3",
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Faim de Hadar (Hunger of Hadar)",
+            "type": "nouveau",
+            "note": "zone de dégâts persistante et d'aveuglement"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Spectre maudit",
-        "detail": "Réaction : relève un spectre après la mort d'une cible maudite compatible (hors constructions, morts-vivants, etc.)."
+        "titre": "Capacité de patron : Spectre maudit",
+        "detail": "Réaction : quand une créature maudite meurt, invoque un spectre à son service (Malingre/Ordinaire/Primordial selon la taille) — inefficace contre les constructs, élémentaires, vases, plantes et morts-vivants."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Porte dimensionnelle apprise. Invocation Lenteur (Mire the Mind) pour le contrôle en terrain ouvert."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Bannissement (Banishment)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Maître des armes à deux mains : option -5/+10 dégâts, plus attaque bonus après critique ou élimination."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Maître des armes à deux mains",
+          "effet": "Attaque à deux mains avec une arme à une main liée au Pacte de la Lame — combine la portabilité d'une arme légère avec les dégâts d'une arme lourde."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Immobilisation de monstre apprise. Invocation Serviteurs du chaos."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Armure des maléfices",
-        "detail": "Trois rayons de Décharge occulte désormais. Réaction Armure des maléfices contre une cible maudite dangereuse."
+        "titre": "Capacité de patron : Armure des maléfices",
+        "detail": "Réaction, 50% de chances : annule l'attaque d'une créature que tu as maudite avec la Malédiction du sorcier des lames."
       },
       {
         "niveau": 11,
-        "titre": "Troisième emplacement de pacte",
-        "detail": "Arcanum mystique de niveau 6 : Cercle de mort, grande zone nécrotique sans Concentration."
+        "titre": "Troisième emplacement de pacte + Arcanum mystique",
+        "detail": "3 emplacements de pacte au lieu de 2. Arcanum mystique : un sort de niveau 6 utilisable une fois par repos long, sans consommer d'emplacement — la seule façon pour un Occultiste d'atteindre le niveau 6, ses emplacements de pacte plafonnant au niveau 5."
       },
       {
         "niveau": 12,
-        "titre": "Buveur de vie — build terminé",
-        "detail": "+2 Charisme (20). Chaque attaque de mêlée ajoute le Charisme en dégâts nécrotiques supplémentaires."
+        "titre": "Capacité de patron : Buveur de vie — build terminé",
+        "detail": "Ajoute ton modificateur de Charisme aux dégâts d'une attaque de mêlée réussie avec ton arme de pacte, et récupère des PV égaux à ce bonus."
       }
     ],
     "equipement": [
@@ -3150,63 +3194,140 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Le Fiélon",
-        "detail": "Bénédiction du Fiélon : gagne des PV temporaires à chaque fois qu'un ennemi meurt à proximité. Tour de départ : Explosion occulte."
+        "titre": "Patron : Le Fiélon",
+        "detail": "Bénédiction du Fiélon : chaque fois que tu réduis une créature hostile à 0 PV, gagne des PV temporaires égaux à ton modificateur de Charisme + ton niveau d'Occultiste — tenir la ligne arrière devient très facile.",
+        "sorts": [
+          {
+            "nom": "Explosion occulte (Eldritch Blast)",
+            "type": "nouveau",
+            "note": "cantrip central, à volonté"
+          },
+          {
+            "nom": "Ténèbres (Darkness)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
         "titre": "Deux invocations",
-        "detail": "Décharge agonisante (Charisme sur chaque rayon) et Vision du diable apprises."
+        "detail": "2 Invocations occultes au choix (4 au niveau 3, 5 au niveau 5, 6 au niveau 6, 7 au niveau 7, 9 au niveau 8) — des capacités permanentes qui ne coûtent aucune ressource, comme Décharge agonisante (ajoute le Charisme aux dégâts d'Explosion occulte) ou Devil's Sight (voit à travers les Ténèbres)."
       },
       {
         "niveau": 3,
-        "titre": "Pacte",
-        "detail": "Pacte du Grimoire recommandé : cantrips supplémentaires d'autres classes."
+        "titre": "Pacte + Sorts de niveau 2",
+        "detail": "Pacte de la Chaîne ou du Grimoire recommandé (le Fiélon ne profite pas du Pacte de la Lame).",
+        "sorts": [
+          {
+            "nom": "Cécité/Surdité (Blindness)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          },
+          {
+            "nom": "Rayon ardent (Scorching Ray)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Charisme (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts, les jets d'attaque de sort et les dégâts d'Explosion occulte (avec l'invocation Agonisante décharge)."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Emplacements de pacte de niveau 3 : plus de dégâts sur tes sorts à emplacement."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Boule de feu (Fireball)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          },
+          {
+            "nom": "Nuage nauséabond (Stinking Cloud)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Chance du Fiélon",
-        "detail": "Une fois par repos court, ajoute 1d10 à un jet de caractéristique ou de sauvegarde raté."
+        "titre": "Capacité de patron : Chance du Fiélon",
+        "detail": "Ajoute 1d10 à un test de caractéristique de ton choix."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4 + invocation",
-        "detail": "Emplacements de niveau 4, plus une nouvelle invocation au choix."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Mur de feu (Wall of Fire)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          },
+          {
+            "nom": "Bouclier de feu (Fire Shield)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "+2 Charisme (20)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Renforce encore le DD des sorts et les dégâts."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Emplacements de niveau 5 — le maximum pour les emplacements de pacte."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Cône de froid (Cone of Cold)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          },
+          {
+            "nom": "Colonne de flamme (Flame Strike)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Résilience infernale",
-        "detail": "Résistance à un type de dégâts, choisie après chaque repos long."
+        "titre": "Capacité de patron : Résilience infernale",
+        "detail": "Choisis un type de dégâts et deviens Résistant — rechangeable à chaque repos court."
       },
       {
         "niveau": 11,
         "titre": "Arcanum mystique (niveau 6)",
-        "detail": "Un sort de niveau 6 utilisable une fois par repos long, en plus des emplacements de pacte habituels."
+        "detail": "Un sort de niveau 6 utilisable une fois par repos long, sans consommer d'emplacement — la seule façon pour un Occultiste d'atteindre le niveau 6, ses emplacements de pacte plafonnant au niveau 5.",
+        "sorts": [
+          {
+            "nom": "Globe d'invulnérabilité (Globe of Invulnerability)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       }
     ],
     "equipement": [
@@ -6822,63 +6943,134 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Le Grand Ancien",
-        "detail": "Mortel rappel (Mortal Reminder) : un critique réussi inflige la Peur à la cible. Tour de départ : Explosion occulte."
+        "titre": "Patron : Le Grand Ancien",
+        "detail": "Rappel mortel : quand tu portes un coup critique, la cible et les ennemis proches doivent réussir un jet de sauvegarde de Sagesse ou devenir Effrayés jusqu'à la fin de leur prochain tour.",
+        "sorts": [
+          {
+            "nom": "Explosion occulte (Eldritch Blast)",
+            "type": "nouveau",
+            "note": "cantrip central, à volonté"
+          },
+          {
+            "nom": "Ténèbres (Darkness)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
         "titre": "Deux invocations",
-        "detail": "Décharge agonisante et Vision du diable apprises."
+        "detail": "2 Invocations occultes au choix (4 au niveau 3, 5 au niveau 5, 6 au niveau 6, 7 au niveau 7, 9 au niveau 8) — des capacités permanentes qui ne coûtent aucune ressource, comme Décharge agonisante (ajoute le Charisme aux dégâts d'Explosion occulte) ou Devil's Sight (voit à travers les Ténèbres)."
       },
       {
         "niveau": 3,
-        "titre": "Pacte",
-        "detail": "Pacte du Grimoire recommandé : cantrips supplémentaires d'autres classes."
+        "titre": "Pacte + Sorts de niveau 2",
+        "detail": "Pacte de la Chaîne ou du Grimoire recommandé.",
+        "sorts": [
+          {
+            "nom": "Détection des pensées (Detect Thoughts)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          },
+          {
+            "nom": "Force fantasmagorique (Phantasmal Force)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Charisme (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts, les jets d'attaque de sort et les dégâts d'Explosion occulte (avec l'invocation Agonisante décharge)."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Emplacements de pacte de niveau 3."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Malédiction (Bestow Curse)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          },
+          {
+            "nom": "Lenteur (Slow)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Bouclier entropique",
-        "detail": "Impose un désavantage à l'attaquant qui te touche en mêlée ; si son attaque rate, tu gagnes l'avantage sur ta prochaine attaque contre lui."
+        "titre": "Capacité de patron : Bouclier entropique",
+        "detail": "Réaction : impose le désavantage à un jet d'attaque contre toi ; si l'attaque rate, gagne l'avantage à ta prochaine attaque contre cet ennemi."
       },
       {
         "niveau": 7,
-        "titre": "Sorts de niveau 4 + invocation",
-        "detail": "Emplacements de niveau 4, plus une nouvelle invocation."
+        "titre": "Sorts de niveau 4",
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Tentacules noirs d'Evard (Evard's Black Tentacles)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "+2 Charisme (20)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Renforce encore le DD des sorts et les dégâts."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Emplacements de niveau 5 — le maximum pour les emplacements de pacte."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Télékinésie (Telekinesis)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Bouclier de pensée",
-        "detail": "Résistance aux dégâts psychiques, et renvoie une partie des dégâts psychiques subis à l'attaquant."
+        "titre": "Capacité de patron : Bouclier de pensée",
+        "detail": "Résistance aux dégâts psychiques, et quiconque t'inflige des dégâts psychiques en subit autant en retour."
       },
       {
         "niveau": 11,
         "titre": "Arcanum mystique (niveau 6)",
-        "detail": "Un sort de niveau 6 utilisable une fois par repos long — la 'Créature immortelle' de la table papier (niveau 14) n'existe pas dans BG3, plafonné au niveau 12."
+        "detail": "Un sort de niveau 6 utilisable une fois par repos long, sans consommer d'emplacement — la seule façon pour un Occultiste d'atteindre le niveau 6, ses emplacements de pacte plafonnant au niveau 5.",
+        "sorts": [
+          {
+            "nom": "Globe d'invulnérabilité (Globe of Invulnerability)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       }
     ],
     "equipement": [
@@ -11204,63 +11396,140 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "L'Archifée",
-        "detail": "Présence féerique (Fey Presence) : effraie ou charme les créatures proches en zone, une fois par repos court. Tour de départ : Explosion occulte."
+        "titre": "Patron : L'Archifée",
+        "detail": "Présence féerique : action, une fois par repos court, charme ou effraie toutes les créatures proches au choix.",
+        "sorts": [
+          {
+            "nom": "Explosion occulte (Eldritch Blast)",
+            "type": "nouveau",
+            "note": "cantrip central, à volonté"
+          },
+          {
+            "nom": "Ténèbres (Darkness)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
         "titre": "Deux invocations",
-        "detail": "Décharge agonisante et Vision du diable apprises."
+        "detail": "2 Invocations occultes au choix (4 au niveau 3, 5 au niveau 5, 6 au niveau 6, 7 au niveau 7, 9 au niveau 8) — des capacités permanentes qui ne coûtent aucune ressource, comme Décharge agonisante (ajoute le Charisme aux dégâts d'Explosion occulte) ou Devil's Sight (voit à travers les Ténèbres)."
       },
       {
         "niveau": 3,
-        "titre": "Pacte",
-        "detail": "Pacte du Grimoire recommandé : cantrips supplémentaires d'autres classes."
+        "titre": "Pacte + Sorts de niveau 2",
+        "detail": "Pacte de la Chaîne ou du Grimoire recommandé.",
+        "sorts": [
+          {
+            "nom": "Apaisement des émotions (Calm Emotions)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          },
+          {
+            "nom": "Force fantasmagorique (Phantasmal Force)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Charisme (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts, les jets d'attaque de sort et les dégâts d'Explosion occulte (avec l'invocation Agonisante décharge)."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Emplacements de pacte de niveau 3."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Clignotement (Blink)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          },
+          {
+            "nom": "Croissance des plantes (Plant Growth)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Fuite brumeuse",
-        "detail": "Réaction (Misty Escape) : quand tu subis des dégâts, deviens invisible et te téléportes à proximité — une fois par repos court."
+        "titre": "Capacité de patron : Fuite brumeuse",
+        "detail": "Quand tu subis des dégâts, deviens Invisible ; à ton tour suivant, tu peux lancer Brume (Misty Step) en réaction, ce qui met fin à l'invisibilité."
       },
       {
         "niveau": 7,
-        "titre": "Sorts de niveau 4 + invocation",
-        "detail": "Emplacements de niveau 4, plus une nouvelle invocation."
+        "titre": "Sorts de niveau 4",
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Domination de bête (Dominate Beast)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          },
+          {
+            "nom": "Invisibilité suprême (Greater Invisibility)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "+2 Charisme (20)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Renforce encore le DD des sorts et les dégâts."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Emplacements de niveau 5 — le maximum pour les emplacements de pacte."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Domination de personne (Dominate Person)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          },
+          {
+            "nom": "Apparence trompeuse (Seeming)",
+            "type": "toujoursPrepare",
+            "note": "sort de patron, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Défenses enchanteresses",
-        "detail": "Devient immunisé à l'état Charmé."
+        "titre": "Capacité de patron : Défenses enchanteresses",
+        "detail": "Ne peut plus être Charmé."
       },
       {
         "niveau": 11,
         "titre": "Arcanum mystique (niveau 6)",
-        "detail": "Un sort de niveau 6 utilisable une fois par repos long."
+        "detail": "Un sort de niveau 6 utilisable une fois par repos long, sans consommer d'emplacement — la seule façon pour un Occultiste d'atteindre le niveau 6, ses emplacements de pacte plafonnant au niveau 5.",
+        "sorts": [
+          {
+            "nom": "Danse irrésistible d'Otto (Otto's Irresistible Dance)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "Doué, ou tout don utilitaire selon la préférence."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       }
     ],
     "equipement": [
@@ -12290,63 +12559,114 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Lame maudite",
-        "detail": "Le Pacte de la Lame lie immédiatement une arme (Charisme, dégâts magiques). Malédiction en action bonus. Tours : Décharge occulte, Lame tonnante."
+        "titre": "Patron : Lame maudite",
+        "detail": "Guerrier des lames (Hex Warrior) : maîtrise armure intermédiaire/boucliers/armes de guerre, et utilise le Charisme pour l'attaque et les dégâts d'une arme à une main liée. Malédiction du sorcier des lames (action bonus) : +bonus de maîtrise aux dégâts contre la cible, et -1 à son seuil de critique.",
+        "sorts": [
+          {
+            "nom": "Explosion occulte (Eldritch Blast)",
+            "type": "nouveau",
+            "note": "cantrip central, à volonté"
+          },
+          {
+            "nom": "Bouclier (Shield)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "Deux emplacements de pacte",
-        "detail": "Invocation Vision des ténèbres choisie — vision normale dans l'obscurité magique. Sort appris : Bouclier."
+        "titre": "Deux emplacements de pacte + Invocations",
+        "detail": "2 Invocations occultes au choix (4 au niveau 3, 5 au niveau 5, 6 au niveau 6, 7 au niveau 7, 9 au niveau 8) — Vision des ténèbres (voit à travers les Ténèbres) est essentielle ici pour combiner Lame des ombres et Ténèbres en sécurité."
       },
       {
         "niveau": 3,
         "titre": "Pacte de la Lame — Lame des ombres",
-        "detail": "Sort de niveau 2 appris : Lame des ombres, aussitôt liée par Lame maudite. Dégâts psychiques au Charisme, avantage dans le noir/la pénombre."
+        "detail": "Lie Lame des ombres comme pacte au lieu d'une arme physique : une lame conjurée, fine, au Charisme, qui inflige des dégâts psychiques et gagne l'avantage automatique dès que la cible est dans le noir ou une pénombre. Depuis le patch 8, ne demande plus de Concentration.",
+        "sorts": [
+          {
+            "nom": "Lame des ombres (Shadow Blade)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Ténèbres (Darkness)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Charisme (18). Pas brumeux appris pour la mobilité."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts, les jets d'attaque de sort et les dégâts d'Explosion occulte (avec l'invocation Agonisante décharge)."
+        }
       },
       {
         "niveau": 5,
-        "titre": "Pacte approfondi",
-        "detail": "Seconde attaque à chaque tour. Invocation Décharge répulsive. Ténèbres apprise si pas déjà fait."
+        "titre": "Sorts de niveau 3",
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de personne (Hold Person)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Spectre maudit",
-        "detail": "Réaction : relève un spectre après la mort d'une cible maudite compatible."
+        "titre": "Capacité de patron : Spectre maudit",
+        "detail": "Réaction : quand une créature maudite meurt, invoque un spectre à son service (Malingre/Ordinaire/Primordial selon la taille) — inefficace contre les constructs, élémentaires, vases, plantes et morts-vivants."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Porte dimensionnelle apprise pour repositionner ton nuage de Ténèbres ou fuir."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Bannissement (Banishment)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Immobilisation de monstre apprise — combo direct avec l'avantage de Lame des ombres."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Armure des maléfices",
-        "detail": "Trois rayons de Décharge occulte désormais. Réaction Armure des maléfices contre une cible maudite dangereuse."
+        "titre": "Capacité de patron : Armure des maléfices",
+        "detail": "Réaction, 50% de chances : annule l'attaque d'une créature que tu as maudite avec la Malédiction du sorcier des lames."
       },
       {
         "niveau": 11,
-        "titre": "Troisième emplacement de pacte",
-        "detail": "Arcanum mystique de niveau 6 : Cercle de mort, grande zone nécrotique sans Concentration."
+        "titre": "Troisième emplacement de pacte + Arcanum mystique",
+        "detail": "3 emplacements de pacte au lieu de 2. Arcanum mystique : un sort de niveau 6 utilisable une fois par repos long, sans consommer d'emplacement — la seule façon pour un Occultiste d'atteindre le niveau 6, ses emplacements de pacte plafonnant au niveau 5."
       },
       {
         "niveau": 12,
-        "titre": "Buveur de vie — build terminé",
-        "detail": "+2 Charisme (20). Chaque coup de Lame des ombres ajoute aussi le Charisme en dégâts nécrotiques supplémentaires."
+        "titre": "Capacité de patron : Buveur de vie — build terminé",
+        "detail": "Ajoute ton modificateur de Charisme aux dégâts d'une attaque de mêlée réussie avec ton arme de pacte, et récupère des PV égaux à ce bonus.",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Charisme à 20, le maximum naturel."
+        }
       }
     ],
     "equipement": [
@@ -12497,63 +12817,114 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Lame maudite",
-        "detail": "Pacte de la Lame et Lier une arme maudite. Tours : Décharge occulte, Lame tonnante."
+        "titre": "Patron : Lame maudite",
+        "detail": "Guerrier des lames (Hex Warrior) : maîtrise armure intermédiaire/boucliers/armes de guerre, et utilise le Charisme pour l'attaque et les dégâts d'une arme à une main liée. Malédiction du sorcier des lames (action bonus) : +bonus de maîtrise aux dégâts contre la cible, et -1 à son seuil de critique.",
+        "sorts": [
+          {
+            "nom": "Explosion occulte (Eldritch Blast)",
+            "type": "nouveau",
+            "note": "cantrip central, à volonté"
+          },
+          {
+            "nom": "Bouclier (Shield)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "Deux emplacements de pacte",
-        "detail": "Invocations : Décharge occulte à distance et Vision du diable. Sort appris : Bouclier."
+        "titre": "Deux emplacements de pacte + Invocations",
+        "detail": "2 Invocations occultes au choix (4 au niveau 3, 5 au niveau 5, 6 au niveau 6, 7 au niveau 7, 9 au niveau 8) — Vision des ténèbres (voit à travers les Ténèbres) est essentielle ici pour combiner Lame des ombres et Ténèbres en sécurité."
       },
       {
         "niveau": 3,
         "titre": "Pacte de la Lame — Lame des ombres",
-        "detail": "Sort de niveau 2 appris : Lame des ombres, aussitôt liée. Dégâts psychiques au Charisme, avantage dans le noir/la pénombre."
+        "detail": "Lie Lame des ombres comme pacte au lieu d'une arme physique : une lame conjurée, fine, au Charisme, qui inflige des dégâts psychiques et gagne l'avantage automatique dès que la cible est dans le noir ou une pénombre. Depuis le patch 8, ne demande plus de Concentration.",
+        "sorts": [
+          {
+            "nom": "Lame des ombres (Shadow Blade)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Ténèbres (Darkness)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Charisme (18). Pas brumeux appris pour la mobilité."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts, les jets d'attaque de sort et les dégâts d'Explosion occulte (avec l'invocation Agonisante décharge)."
+        }
       },
       {
         "niveau": 5,
-        "titre": "Pacte approfondi",
-        "detail": "Seconde attaque à chaque tour. Invocation Décharge répulsive. Arme élémentaire apprise."
+        "titre": "Sorts de niveau 3",
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de personne (Hold Person)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Spectre maudit",
-        "detail": "Réaction : relève un spectre après la mort d'une cible maudite compatible."
+        "titre": "Capacité de patron : Spectre maudit",
+        "detail": "Réaction : quand une créature maudite meurt, invoque un spectre à son service (Malingre/Ordinaire/Primordial selon la taille) — inefficace contre les constructs, élémentaires, vases, plantes et morts-vivants."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Porte dimensionnelle apprise pour repositionner la Pierre de résonance ou fuir."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Bannissement (Banishment)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Sauvagerie martiale : relance chaque dé de dégâts d'arme et garde le meilleur résultat."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Sentinelle",
+          "effet": "Quand un ennemi proche attaque un allié autre que toi, tu peux l'attaquer en réaction. Réduit aussi sa vitesse à 0 si ton attaque de mêlée le touche — transforme ce build en vrai protecteur de mêlée plutôt qu'en lanceur Charisme principal."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Immobilisation de monstre apprise — combo direct avec la Pierre de résonance, qui baisse déjà les sauvegardes mentales des cibles dans son aura. Lame des ombres passe à 4d8."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Armure des maléfices",
-        "detail": "Trois rayons de Décharge occulte désormais. Réaction Armure des maléfices contre une cible maudite dangereuse."
+        "titre": "Capacité de patron : Armure des maléfices",
+        "detail": "Réaction, 50% de chances : annule l'attaque d'une créature que tu as maudite avec la Malédiction du sorcier des lames."
       },
       {
         "niveau": 11,
-        "titre": "Troisième emplacement de pacte",
-        "detail": "Arcanum mystique de niveau 6 : Cercle de mort, grande zone nécrotique sans Concentration."
+        "titre": "Troisième emplacement de pacte + Arcanum mystique",
+        "detail": "3 emplacements de pacte au lieu de 2. Arcanum mystique : un sort de niveau 6 utilisable une fois par repos long, sans consommer d'emplacement — la seule façon pour un Occultiste d'atteindre le niveau 6, ses emplacements de pacte plafonnant au niveau 5."
       },
       {
         "niveau": 12,
-        "titre": "Buveur de vie — build terminé",
-        "detail": "+2 Charisme (20). Chaque coup de Lame des ombres ajoute aussi le Charisme en dégâts nécrotiques. Avec le double bonus du Miroir de la Perte, ce don peut être remplacé par Sentinelle sans perdre de Charisme final."
+        "titre": "Capacité de patron : Buveur de vie — build terminé",
+        "detail": "Ajoute ton modificateur de Charisme aux dégâts d'une attaque de mêlée réussie avec ton arme de pacte, et récupère des PV égaux à ce bonus.",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Charisme à 20, le maximum naturel."
+        }
       }
     ],
     "equipement": [
