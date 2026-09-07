@@ -14,21 +14,31 @@ export interface Jalon {
   note: string
 }
 
-/** Un choix de sort à ce niveau, pour l'onglet "Sorts" de la fiche build. */
+/** Un choix de sort à ce niveau, affiché groupé par type sur la fiche de progression. */
 export interface ChoixSort {
   nom: string
-  /** nouveau = sort/cantrip choisi ; toujoursPrepare = sort de domaine automatique (ne coûte pas d'emplacement) ; echange = remplace un sort déjà connu (Ensorceleur/Occultiste/Barde/Rôdeur). */
+  /** nouveau = sort/cantrip choisi ; toujoursPrepare = sort de domaine automatique (ne coûte pas d'emplacement) ; echange = remplace un sort déjà connu (Ensorceleur/Occultiste/Barde/Rôdeur — voir `ancien`). */
   type: 'nouveau' | 'toujoursPrepare' | 'echange'
+  /** Nom du sort remplacé — uniquement pour type 'echange'. */
+  ancien?: string
   note?: string
+}
+
+/** Don pris à ce niveau : nom (nature) et effet séparés pour un affichage en deux temps. */
+export interface DonProgression {
+  nom: string
+  effet: string
 }
 
 export interface EtapeProgression {
   niveau: number
+  /** Résumé COURT de la nature de ce niveau (ex. "Nouveau don", "Sorts de niveau 2", "Spécialisation", "Rage débloquée") — pas une phrase descriptive, juste une étiquette. */
   titre: string
+  /** Explication des capacités de classe propres à ce niveau — ne doit PAS répéter le contenu déjà couvert par `don` ou `sorts` (affichés séparément). Vide si le niveau n'apporte que ça. */
   detail: string
-  /** Don pris à ce niveau, si applicable — affiché en évidence dans l'onglet "Progression & dons". */
-  don?: string
-  /** Choix de sorts à ce niveau, si applicable — alimente l'onglet "Sorts" de la fiche build. */
+  /** Don pris à ce niveau, si applicable — affiché en évidence, nom en gras puis effet en dessous. */
+  don?: DonProgression
+  /** Choix de sorts à ce niveau, si applicable — groupés par type (nouveau / toujours préparé / échange). */
   sorts?: ChoixSort[]
 }
 

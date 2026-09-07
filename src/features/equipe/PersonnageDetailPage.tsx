@@ -4,7 +4,7 @@ import { Section } from '../../components/Section'
 import { ImportanceBadge } from '../../components/ImportanceBadge'
 import { AlignementBadge } from '../../components/AlignementBadge'
 import { SourceAlternativeBadge } from '../../components/SourceAlternativeBadge'
-import { ChoixSortBadge } from '../../components/ChoixSortBadge'
+import { EtapeProgressionCard } from '../../components/EtapeProgressionCard'
 import { CaracTable } from '../../components/CaracTable'
 import { Check } from '../../components/icons'
 import { builds, etapeAuNiveau, jalonsSombres, nomAffiche, races } from '../../data'
@@ -311,39 +311,14 @@ export function PersonnageDetailPage() {
             const note = noteBonusPermanent(build, bonusParStatObtenus(personnage), personnage.niveau)
             return (
               <div className="mt-3 flex flex-col gap-2">
-                <div className="rounded-lg border border-border bg-surface px-3 py-3">
-                  {etape ? (
-                    <>
-                      <p className="text-sm font-medium text-gold">{etape.titre}</p>
-                      <p className="mt-1 text-sm text-ink-muted">{etape.detail}</p>
-                    </>
-                  ) : (
+                {etape ? (
+                  <EtapeProgressionCard etape={etape} />
+                ) : (
+                  <div className="rounded-lg border border-border bg-surface px-3 py-3">
                     <p className="text-sm text-ink-muted">
                       Rien de particulier à décider à ce niveau — continue de jouer, la prochaine
                       étape arrivera bientôt.
                     </p>
-                  )}
-                </div>
-
-                {etape?.don && (
-                  <div className="rounded-lg border border-gold/40 bg-gold/10 px-3 py-2.5">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-gold">
-                      Don à prendre
-                    </p>
-                    <p className="mt-1 text-sm font-bold text-ink">{etape.don}</p>
-                  </div>
-                )}
-
-                {etape?.sorts && etape.sorts.length > 0 && (
-                  <div className="rounded-lg border border-border bg-surface px-3 py-2.5">
-                    <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-ink-muted">
-                      Sorts à ce niveau
-                    </p>
-                    <div className="flex flex-col gap-1.5">
-                      {etape.sorts.map((sort) => (
-                        <ChoixSortBadge key={sort.nom} sort={sort} />
-                      ))}
-                    </div>
                   </div>
                 )}
 

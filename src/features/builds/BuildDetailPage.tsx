@@ -6,7 +6,7 @@ import { ImportanceBadge } from '../../components/ImportanceBadge'
 import { CaracTable } from '../../components/CaracTable'
 import { AlignementBadge } from '../../components/AlignementBadge'
 import { SourceAlternativeBadge } from '../../components/SourceAlternativeBadge'
-import { ChoixSortBadge } from '../../components/ChoixSortBadge'
+import { EtapeProgressionCard } from '../../components/EtapeProgressionCard'
 import { alternativesPourBuild, getBuild, nomAffiche } from '../../data'
 import { conseilRacePourBuild } from '../equipe/composeurEquipe'
 import { dedupliquerParIdAffiche, resoudreObjetPourStyle, type ObjetResolu } from '../equipe/alignementUtils'
@@ -27,13 +27,10 @@ const stylesPreview: { valeur: StylePreview; label: string }[] = [
   { valeur: 'sombre', label: 'Sombre' },
 ]
 
-type OngletProgression = 'progression' | 'sorts'
-
 export function BuildDetailPage() {
   const { id } = useParams<{ id: string }>()
   const build = id ? getBuild(id) : undefined
   const [stylePreview, setStylePreview] = useState<StylePreview>(null)
-  const [ongletProgression, setOngletProgression] = useState<OngletProgression>('progression')
 
   const equipementParActe = useMemo(() => {
     if (!build) return new Map<number, EquipementResoluAffiche[]>()
@@ -151,89 +148,20 @@ export function BuildDetailPage() {
       )}
 
       <Section title="Progression niveau par niveau">
-        <div className="mb-3 flex gap-1.5">
-          <button
-            type="button"
-            onClick={() => setOngletProgression('progression')}
-            className={`flex-1 rounded-full border px-2 py-2.5 text-xs font-medium transition-colors ${
-              ongletProgression === 'progression'
-                ? 'border-glow/70 bg-glow/15 text-glow'
-                : 'border-border text-ink-muted'
-            }`}
-          >
-            Progression & dons
-          </button>
-          <button
-            type="button"
-            onClick={() => setOngletProgression('sorts')}
-            className={`flex-1 rounded-full border px-2 py-2.5 text-xs font-medium transition-colors ${
-              ongletProgression === 'sorts'
-                ? 'border-glow/70 bg-glow/15 text-glow'
-                : 'border-border text-ink-muted'
-            }`}
-          >
-            Sorts
-          </button>
-        </div>
-
-        {ongletProgression === 'progression' && (
-          <>
-            <p className="mb-3 text-xs leading-relaxed text-ink-muted">
-              Ce qui se débloque à chaque niveau et le don à prendre, dans l'ordre.
-            </p>
-            <ol className="space-y-3 border-l border-border pl-4">
-              {build.progression.map((etape) => (
-                <li key={etape.niveau} className="relative">
-                  <span className="absolute -left-6 top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-gold text-[9px] font-bold text-bg">
-                    {etape.niveau}
-                  </span>
-                  <p className="text-sm font-medium text-ink">{etape.titre}</p>
-                  {etape.don && (
-                    <p className="mt-1">
-                      <span className="inline-flex items-center rounded-md border border-gold/40 bg-gold/15 px-2 py-0.5 text-xs font-bold text-gold">
-                        Don : {etape.don}
-                      </span>
-                    </p>
-                  )}
-                  <p className="mt-1 text-sm text-ink-muted">{etape.detail}</p>
-                </li>
-              ))}
-            </ol>
-          </>
-        )}
-
-        {ongletProgression === 'sorts' && (
-          <>
-            {build.progression.some((e) => e.sorts && e.sorts.length > 0) ? (
-              <>
-                <p className="mb-3 text-xs leading-relaxed text-ink-muted">
-                  Les sorts à prendre, échanger ou garder, niveau par niveau.
-                </p>
-                <ol className="space-y-3 border-l border-border pl-4">
-                  {build.progression
-                    .filter((e) => e.sorts && e.sorts.length > 0)
-                    .map((etape) => (
-                      <li key={etape.niveau} className="relative">
-                        <span className="absolute -left-6 top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-gold text-[9px] font-bold text-bg">
-                          {etape.niveau}
-                        </span>
-                        <div className="flex flex-col gap-1.5">
-                          {etape.sorts!.map((sort) => (
-                            <ChoixSortBadge key={sort.nom} sort={sort} />
-                          ))}
-                        </div>
-                      </li>
-                    ))}
-                </ol>
-              </>
-            ) : (
-              <p className="rounded-lg border border-border bg-surface-raised px-3 py-2.5 text-xs text-ink-muted">
-                Ce build n'a pas encore de détail sorts structuré niveau par niveau — voir
-                l'onglet « Progression & dons » et « Sorts clés » plus haut en attendant.
-              </p>
-            )}
-          </>
-        )}
+        <p className="mb-3 text-xs leading-relaxed text-ink-muted">
+          Ce qui se débloque à chaque niveau : don, sorts à prendre et sorts toujours préparés,
+          dans l'ordre.
+        </p>
+        <ol className="space-y-4 border-l border-border pl-4">
+          {build.progression.map((etape) => (
+            <li key={etape.niveau} className="relative">
+              <span className="absolute -left-6 top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-gold text-[9px] font-bold text-bg">
+                {etape.niveau}
+              </span>
+              <EtapeProgressionCard etape={etape} />
+            </li>
+          ))}
+        </ol>
       </Section>
 
       <Section title="Équipement recommandé">
