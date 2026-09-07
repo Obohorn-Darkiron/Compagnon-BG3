@@ -56,7 +56,18 @@
       {
         "niveau": 1,
         "titre": "Sous-classe Ensorceleur",
-        "detail": "Lignée draconique bleue (ou Sorcellerie des tempêtes) — pose l'identité foudre du build. Premiers cantrips et sorts de niveau 1."
+        "detail": "Lignée draconique bleue (ou Sorcellerie des tempêtes) — pose l'identité foudre du build. Premiers cantrips et sorts de niveau 1.",
+        "sorts": [
+          {
+            "nom": "Trait de feu (Fire Bolt) ou Rayon de givre",
+            "type": "nouveau",
+            "note": "cantrip de départ, en attendant les sorts de foudre"
+          },
+          {
+            "nom": "Bouclier (Shield)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
@@ -71,12 +82,23 @@
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "+2 Charisme (18) — améliore les jets d'attaque et la difficulté de sauvegarde de tes sorts."
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts et les jets d'attaque de sort."
+        }
       },
       {
         "niveau": 5,
         "titre": "Éclair débloqué",
-        "detail": "Sorts de niveau 3 : Éclair devient le cœur des dégâts du build."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Éclair (Lightning Bolt)",
+            "type": "nouveau",
+            "note": "cœur des dégâts du build"
+          }
+        ]
       },
       {
         "niveau": 6,
@@ -86,17 +108,34 @@
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement de niveau 4 : un sort supplémentaire de contrôle ou de protection."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Contresort (Counterspell)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "Doué (Skilled), ou +2 Charisme (20) selon le confort recherché."
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled) ou +2 Charisme",
+          "effet": "Doué ajoute trois compétences maîtrisées au choix ; +2 Charisme (20) pousse le DD des sorts au maximum naturel."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Immobilisation de monstre apprise — contrôle monocible majeur en complément d'Éclair."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "nouveau",
+            "note": "contrôle monocible majeur en complément d'Éclair"
+          }
+        ]
       },
       {
         "niveau": 10,
@@ -227,7 +266,7 @@
     "dons": [
       "+2 Charisme (niv 4)",
       "+2 Charisme (niv 8)",
-      "Vigilant (niv 12)"
+      "Alerte (niv 12)"
     ],
     "sortsCles": [
       "Rayon ardent (Scorching Ray)",
@@ -255,62 +294,128 @@
       {
         "niveau": 1,
         "titre": "Lignée draconique rouge",
-        "detail": "CA 13 + Dextérité sans armure, résistance au feu, Mains brûlantes offertes. Sorts de départ : Bouclier, Projectile magique."
+        "detail": "CA 13 sans armure, +1 PV par niveau de Sorcerer, résistance aux dégâts de feu.",
+        "sorts": [
+          {
+            "nom": "Trait de feu (Fire Bolt)",
+            "type": "nouveau",
+            "note": "cantrip de départ"
+          },
+          {
+            "nom": "Mains brûlantes (Burning Hands)",
+            "type": "toujoursPrepare",
+            "note": "sort bonus offert par l'ascendance rouge"
+          },
+          {
+            "nom": "Bouclier (Shield)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
         "titre": "Points de sorcellerie",
-        "detail": "Deux métamagies débloquées : Sort jumelé et Sort distant. Sort appris : Sommeil."
+        "detail": "Débloque les Points de sorcellerie (2, +1 par niveau ensuite) et 2 Métamagies au choix parmi Sort prudent, Sort distant, Sort prolongé et Sort jumelé — des altérations qu'on applique à un sort en dépensant des points."
       },
       {
         "niveau": 3,
-        "titre": "Rayon ardent appris",
-        "detail": "Remplace Sommeil. Métamagie Sort accéléré débloquée pour enchaîner deux sorts dans le même tour."
+        "titre": "Sorts de niveau 2 + Métamagie",
+        "detail": "Une Métamagie supplémentaire parmi Sort accéléré (lance un deuxième sort en action bonus), Sort discret ou Sort intensifié.",
+        "sorts": [
+          {
+            "nom": "Rayon ardent (Scorching Ray)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Charisme (18). Nouveau tour de magie : Lumière."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts, les jets d'attaque de sort et les dégâts si Affinité élémentaire (ou équivalent) est actif."
+        }
       },
       {
         "niveau": 5,
-        "titre": "Boule de feu apprise",
-        "detail": "Remplace Immobilisation de personne. Ton sort de zone principal."
+        "titre": "Sorts de niveau 3",
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Boule de feu (Fireball)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Contresort (Counterspell)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Affinité élémentaire",
-        "detail": "Le vrai palier du build : le modificateur de Charisme s'ajoute à chaque instance de dégâts de feu, y compris chaque rayon de Rayon ardent. Hâte apprise."
+        "titre": "Capacité de lignée : Affinité élémentaire",
+        "detail": "Ajoute ton modificateur de Charisme aux dégâts de tous tes sorts de feu. Peut aussi dépenser 1 Point de sorcellerie après un sort de feu pour gagner la résistance au feu pendant 1 heure."
       },
       {
         "niveau": 7,
-        "titre": "Mur de feu appris",
-        "detail": "Contrôle de zone dans un passage étroit, en complément de Boule de feu."
+        "titre": "Sorts de niveau 4",
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Mur de feu (Wall of Fire)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "+2 Charisme (20) — maximum naturel de Charisme atteint. Porte dimensionnelle apprise."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Renforce encore le DD des sorts et les dégâts."
+        }
       },
       {
         "niveau": 9,
-        "titre": "Immobilisation de monstre",
-        "detail": "Contrôle monocible majeur pour neutraliser une cible dangereuse."
+        "titre": "Sorts de niveau 5",
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Télékinésie (Telekinesis)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Télékinésie",
-        "detail": "Déplace une créature ou un objet chaque tour. Métamagie Sort intensifié débloquée."
+        "titre": "Métamagie supplémentaire",
+        "detail": "Une Métamagie supplémentaire au choix, plus Récupération arcanique : une fois par jour, convertit des emplacements de sort dépensés en Points de sorcellerie lors d'un repos court."
       },
       {
         "niveau": 11,
-        "titre": "Globe d'invulnérabilité",
-        "detail": "Bouton d'urgence pour stabiliser une phase de combat très dangereuse."
+        "titre": "Sorts de niveau 6",
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Globe d'invulnérabilité (Globe of Invulnerability)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "Vigilant (+5 initiative, ne peut être surpris). Cône de froid appris comme option hors élément."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "Alerte",
+          "effet": "+5 à l'initiative, impossible d'être surpris — agir tôt permet de poser ses sorts de zone avant que les ennemis ne se dispersent."
+        }
       }
     ],
     "equipement": [
@@ -5506,62 +5611,123 @@
       {
         "niveau": 1,
         "titre": "Magie sauvage",
-        "detail": "Chaos sauvage : chaque sort lancé a une petite chance de déclencher une surtension magique aléatoire."
+        "detail": "Chaque sort de niveau 1+ que tu lances a une petite chance de déclencher un effet magique aléatoire (généralement favorable). Tumulte du chaos : active à volonté pour gagner l'avantage sur ton prochain jet d'attaque, test ou sauvegarde — au prix d'une chance de surtension bien plus élevée sur le sort suivant.",
+        "sorts": [
+          {
+            "nom": "Trait de feu (Fire Bolt)",
+            "type": "nouveau",
+            "note": "cantrip de départ"
+          },
+          {
+            "nom": "Bouclier (Shield)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Armure d'Agathys (Armor of Agathys)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
         "titre": "Points de sorcellerie",
-        "detail": "Font de magie et deux premières métamagies : Sort jumeau et Sort distant."
+        "detail": "Débloque les Points de sorcellerie (2, +1 par niveau ensuite) et 2 Métamagies au choix parmi Sort prudent, Sort distant, Sort prolongé et Sort jumelé — des altérations qu'on applique à un sort en dépensant des points."
       },
       {
         "niveau": 3,
-        "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de contrôle supplémentaire."
+        "titre": "Sorts de niveau 2 + Métamagie",
+        "detail": "Une Métamagie supplémentaire parmi Sort accéléré (lance un deuxième sort en action bonus), Sort discret ou Sort intensifié.",
+        "sorts": [
+          {
+            "nom": "Rayon ardent (Scorching Ray)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Charisme (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts, les jets d'attaque de sort et les dégâts si Affinité élémentaire (ou équivalent) est actif."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Boule de feu ou autre sort de zone appris."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Boule de feu (Fireball)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Contresort (Counterspell)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Distorsion du sort",
-        "detail": "Bend Luck : dépense 2 points de sorcellerie pour donner un bonus ou malus de 1d4 à un jet de caractéristique, d'attaque ou de sauvegarde (le sien ou celui d'une cible) — sans rapport avec le déclenchement d'une surtension."
+        "titre": "Capacité de sous-classe : Distorsion du sort",
+        "detail": "Réaction, 2 Points de sorcellerie : lance 1d4 et applique le résultat en bonus ou malus (au choix) au jet d'attaque, de sauvegarde ou de caractéristique d'une créature visible."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : contrôle ou protection avancée."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Confusion",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "+2 Charisme (20)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Renforce encore le DD des sorts et les dégâts."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Immobilisation de monstre ou autre contrôle majeur."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
         "titre": "Métamagie supplémentaire",
-        "detail": "Sort accéléré débloqué pour enchaîner deux sorts dans le même tour."
+        "detail": "Une Métamagie supplémentaire au choix, plus Récupération arcanique : une fois par jour, convertit des emplacements de sort dépensés en Points de sorcellerie lors d'un repos court."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Globe d'invulnérabilité (Globe of Invulnerability)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       }
     ],
     "equipement": [
@@ -5693,62 +5859,127 @@
       {
         "niveau": 1,
         "titre": "Sorcellerie des tempêtes",
-        "detail": "Résistance à la foudre et au tonnerre. Après avoir lancé n'importe quel sort de niveau 1 ou plus (pas seulement un sort offensif), peut voler jusqu'à ta vitesse pour le reste du tour."
+        "detail": "Magie tempétueuse : après avoir lancé un sort de niveau 1+, vole en action bonus jusqu'à 9 m jusqu'à la fin du tour, sans provoquer d'attaque d'opportunité.",
+        "sorts": [
+          {
+            "nom": "Trait de feu (Fire Bolt)",
+            "type": "nouveau",
+            "note": "cantrip de départ"
+          },
+          {
+            "nom": "Vague tonnante (Thunderwave)",
+            "type": "toujoursPrepare",
+            "note": "sort de tempête offert par la sous-classe"
+          },
+          {
+            "nom": "Appel de la foudre (Call Lightning)",
+            "type": "toujoursPrepare",
+            "note": "sort de tempête offert par la sous-classe, débloqué au niveau 3 emplacements"
+          }
+        ]
       },
       {
         "niveau": 2,
         "titre": "Points de sorcellerie",
-        "detail": "Font de magie et deux premières métamagies : Sort jumeau et Sort distant."
+        "detail": "Débloque les Points de sorcellerie (2, +1 par niveau ensuite) et 2 Métamagies au choix parmi Sort prudent, Sort distant, Sort prolongé et Sort jumelé — des altérations qu'on applique à un sort en dépensant des points."
       },
       {
         "niveau": 3,
-        "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de contrôle supplémentaire."
+        "titre": "Sorts de niveau 2 + Métamagie",
+        "detail": "Une Métamagie supplémentaire parmi Sort accéléré (lance un deuxième sort en action bonus), Sort discret ou Sort intensifié.",
+        "sorts": [
+          {
+            "nom": "Bourrasque (Gust of Wind)",
+            "type": "toujoursPrepare",
+            "note": "sort de tempête offert par la sous-classe"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Charisme (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts, les jets d'attaque de sort et les dégâts si Affinité élémentaire (ou équivalent) est actif."
+        }
       },
       {
         "niveau": 5,
-        "titre": "Éclair appris",
-        "detail": "Sorts de niveau 3 : Éclair devient le cœur des dégâts du build."
+        "titre": "Sorts de niveau 3",
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Éclair (Lightning Bolt)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Contresort (Counterspell)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Cœur de la tempête",
-        "detail": "Résistance aux dégâts de foudre et de tonnerre, plus une explosion de zone de dégâts foudre/tonnerre déclenchée à chaque sort de cet élément que tu lances."
+        "titre": "Capacité de sous-classe : Cœur de la tempête",
+        "detail": "Résistance aux dégâts de foudre et de tonnerre. Quand tu lances un sort de niveau 1+ de foudre ou de tonnerre, les créatures proches de ton choix subissent des dégâts égaux à la moitié de ton niveau d'Ensorceleur, dans le type correspondant."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : contrôle ou protection avancée."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Tempête de glace (Ice Storm)",
+            "type": "nouveau",
+            "note": "option hors élément pour le contrôle de zone"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "+2 Charisme (20)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Renforce encore le DD des sorts et les dégâts."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Appel de la foudre et autres sorts de zone majeurs."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
         "titre": "Métamagie supplémentaire",
-        "detail": "Sort accéléré débloqué pour enchaîner deux sorts dans le même tour."
+        "detail": "Une Métamagie supplémentaire au choix, plus Récupération arcanique : une fois par jour, convertit des emplacements de sort dépensés en Points de sorcellerie lors d'un repos court."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6 + Fureur de la tempête",
-        "detail": "Premier emplacement de niveau 6 débloqué. Fureur de la tempête (Storm's Fury) : réaction qui riposte en dégâts foudre/tonnerre contre un attaquant de mêlée, et peut le repousser."
+        "detail": "Réaction : quand une créature te touche en mêlée, inflige-lui des dégâts de foudre et repousse-la potentiellement.",
+        "sorts": [
+          {
+            "nom": "Globe d'invulnérabilité (Globe of Invulnerability)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       }
     ],
     "equipement": [
@@ -9256,62 +9487,119 @@
       {
         "niveau": 1,
         "titre": "Magie des ombres",
-        "detail": "Vision dans le noir magique et non magique, plus résistance aux effets de Peur."
+        "detail": "Yeux des ténèbres : vision dans le noir jusqu'à 24 m. Force de la tombe : à 0 PV, tombe à 1 PV au lieu d'être à terre (une fois par repos court).",
+        "sorts": [
+          {
+            "nom": "Trait de feu (Fire Bolt)",
+            "type": "nouveau",
+            "note": "cantrip de départ"
+          },
+          {
+            "nom": "Bouclier (Shield)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
         "titre": "Points de sorcellerie",
-        "detail": "Font de magie et deux premières métamagies : Sort jumeau et Sort distant."
+        "detail": "Débloque les Points de sorcellerie (2, +1 par niveau ensuite) et 2 Métamagies au choix parmi Sort prudent, Sort distant, Sort prolongé et Sort jumelé — des altérations qu'on applique à un sort en dépensant des points."
       },
       {
         "niveau": 3,
-        "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de contrôle supplémentaire."
+        "titre": "Sorts de niveau 2 + Métamagie",
+        "detail": "Une Métamagie supplémentaire parmi Sort accéléré (lance un deuxième sort en action bonus), Sort discret ou Sort intensifié.",
+        "sorts": [
+          {
+            "nom": "Ténèbres (Darkness)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Charisme (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts, les jets d'attaque de sort et les dégâts si Affinité élémentaire (ou équivalent) est actif."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Boule de feu ou autre sort de zone appris."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Boule de feu (Fireball)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Contresort (Counterspell)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Molosse de mauvais augure",
-        "detail": "Hound of Ill Omen : invoque un molosse spectral qui traque une cible et lui inflige le désavantage à la prochaine attaque contre elle (repos long)."
+        "titre": "Capacité de sous-classe : Molosse de mauvais augure",
+        "detail": "Action bonus, 3 Points de sorcellerie (repos court) : invoque un molosse d'ombre qui attaque et effraie tes ennemis."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : contrôle ou protection avancée."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Confusion",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "+2 Charisme (20)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Renforce encore le DD des sorts et les dégâts."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Nouvel emplacement de haut niveau."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
         "titre": "Métamagie supplémentaire",
-        "detail": "Sort accéléré débloqué pour enchaîner deux sorts dans le même tour."
+        "detail": "Une Métamagie supplémentaire au choix, plus Récupération arcanique : une fois par jour, convertit des emplacements de sort dépensés en Points de sorcellerie lors d'un repos court."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6 + Marche des ombres",
-        "detail": "Premier emplacement de niveau 6 débloqué. Marche des ombres (Shadow Walk) : téléportation en zone d'ombre, plus un Sort distant gratuit sur le prochain sort lancé."
+        "detail": "Action bonus : téléporte-toi dans les ombres — le prochain sort lancé ce tour bénéficie gratuitement de la Métamagie Sort distant.",
+        "sorts": [
+          {
+            "nom": "Globe d'invulnérabilité (Globe of Invulnerability)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "Doué, ou tout don utilitaire selon la préférence."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       }
     ],
     "equipement": [
@@ -12934,7 +13222,7 @@
     ],
     "sortsCles": [
       "Explosion occulte (Eldritch Blast)",
-      "Malédiction (Hex)",
+      "Maléfice (Hex)",
       "Boule de feu"
     ],
     "jalons": [
@@ -12955,7 +13243,19 @@
       {
         "niveau": 1,
         "titre": "Occultiste 1",
-        "detail": "Explosion occulte apprise. Malédiction dans la liste de sorts."
+        "detail": "Explosion occulte apprise. Malédiction dans la liste de sorts.",
+        "sorts": [
+          {
+            "nom": "Explosion occulte (Eldritch Blast)",
+            "type": "toujoursPrepare",
+            "note": "cantrip central du build, appris automatiquement"
+          },
+          {
+            "nom": "Maléfice (Hex)",
+            "type": "nouveau",
+            "note": "dégâts bonus par tour sur la cible maudite"
+          }
+        ]
       },
       {
         "niveau": 2,
@@ -12965,7 +13265,14 @@
       {
         "niveau": 3,
         "titre": "Bascule vers Ensorceleur",
-        "detail": "Premiers cantrips et sorts d'Ensorceleur niveau 1 — les Points de sorcellerie n'arrivent qu'au niveau 4 (Ensorceleur classe 2)."
+        "detail": "Premiers cantrips et sorts d'Ensorceleur niveau 1 — les Points de sorcellerie n'arrivent qu'au niveau 4 (Ensorceleur classe 2).",
+        "sorts": [
+          {
+            "nom": "Trait de feu (Fire Bolt)",
+            "type": "nouveau",
+            "note": "cantrip Ensorceleur de départ"
+          }
+        ]
       },
       {
         "niveau": 4,
@@ -12980,7 +13287,17 @@
       {
         "niveau": 6,
         "titre": "Premier don + Sorts de niveau 3",
-        "detail": "+2 Charisme (18). Boule de feu apprise."
+        "detail": "Boule de feu apprise.",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts et les jets d'attaque de sort — profite à la fois à Explosion occulte et aux sorts d'Ensorceleur."
+        },
+        "sorts": [
+          {
+            "nom": "Boule de feu (Fireball)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 7,
@@ -12990,7 +13307,13 @@
       {
         "niveau": 8,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : sort de zone ou de protection au choix."
+        "detail": "Nouvel emplacement : sort de zone ou de protection au choix.",
+        "sorts": [
+          {
+            "nom": "Mur de feu (Wall of Fire)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 9,
@@ -13005,12 +13328,20 @@
       {
         "niveau": 11,
         "titre": "Deuxième don + invocation",
-        "detail": "Doué (Skilled) : trois compétences maîtrisées supplémentaires. Quatrième niveau d'Occultiste : une deuxième invocation (Vision du diable ou équivalent utilitaire)."
+        "detail": "Quatrième niveau d'Occultiste : une deuxième invocation (Vision des ténèbres ou équivalent utilitaire).",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "+2 Charisme (20) — maximum naturel."
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Charisme à 20, le maximum naturel."
+        }
       }
     ],
     "equipement": [
@@ -13128,7 +13459,7 @@
     "dons": [
       "+2 Charisme (niv 4)",
       "+2 Charisme (niv 8)",
-      "Vigilant (niv 12)"
+      "Alerte (niv 12)"
     ],
     "sortsCles": [
       "Rayon de givre (Ray of Frost)",
@@ -13155,62 +13486,130 @@
       {
         "niveau": 1,
         "titre": "Lignée draconique blanche",
-        "detail": "CA 13 + Dextérité sans armure, Armure d'Agathys offerte (PV temporaires, riposte de froid contre qui te frappe en mêlée). Cantrip Rayon de givre. Sorts de départ : Bouclier, Orbe chromatique (dégâts au choix, dont froid)."
+        "detail": "CA 13 sans armure, +1 PV par niveau de Sorcerer, résistance aux dégâts de froid.",
+        "sorts": [
+          {
+            "nom": "Rayon de givre (Ray of Frost)",
+            "type": "nouveau",
+            "note": "cantrip de départ, ralentit la cible"
+          },
+          {
+            "nom": "Armure d'Agathys (Armor of Agathys)",
+            "type": "toujoursPrepare",
+            "note": "sort bonus offert par l'ascendance blanche"
+          },
+          {
+            "nom": "Bouclier (Shield)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
         "titre": "Points de sorcellerie",
-        "detail": "Font de magie (réserve de points de sorcellerie) et deux premières métamagies : Sort jumeau et Sort distant. Sort de niveau 2 appris : Image miroir (aucun sort de froid n'existe à ce niveau)."
+        "detail": "Débloque les Points de sorcellerie (2, +1 par niveau ensuite) et 2 Métamagies au choix parmi Sort prudent, Sort distant, Sort prolongé et Sort jumelé — des altérations qu'on applique à un sort en dépensant des points."
       },
       {
         "niveau": 3,
-        "titre": "Sort accéléré",
-        "detail": "Troisième métamagie débloquée : transforme un sort en action bonus pour des tours à deux sorts."
+        "titre": "Sorts de niveau 2 + Métamagie",
+        "detail": "Une Métamagie supplémentaire parmi Sort accéléré (lance un deuxième sort en action bonus), Sort discret ou Sort intensifié.",
+        "sorts": [
+          {
+            "nom": "Rayon ardent (Scorching Ray)",
+            "type": "nouveau",
+            "note": "option hors élément, utile si l'ennemi résiste au froid"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Charisme (18) — améliore les jets d'attaque et la difficulté de sauvegarde de tes sorts. Nouveau tour de magie : Lumière."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts, les jets d'attaque de sort et les dégâts si Affinité élémentaire (ou équivalent) est actif."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Hâte apprise (aucun sort de froid n'existe à ce niveau) — booste un allié en mêlée pendant que tu contrôles à distance."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Contresort (Counterspell)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Hâte (Haste)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Affinité élémentaire",
-        "detail": "Le vrai palier du build : le modificateur de Charisme s'ajoute à chaque instance de dégâts de froid, plus résistance au froid activable."
+        "titre": "Capacité de lignée : Affinité élémentaire",
+        "detail": "Ajoute ton modificateur de Charisme aux dégâts de tous tes sorts de froid. Peut aussi dépenser 1 Point de sorcellerie après un sort de froid pour gagner la résistance au froid pendant 1 heure."
       },
       {
         "niveau": 7,
-        "titre": "Tempête de glace apprise",
-        "detail": "Sorts de niveau 4 : 4d6 dégâts de froid + 2d8 contondants en zone, crée une surface de glace qui peut faire tomber les ennemis — double dégâts contre une cible Mouillée."
+        "titre": "Sorts de niveau 4",
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Tempête de glace (Ice Storm)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "+2 Charisme (20) — maximum naturel de Charisme atteint."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Renforce encore le DD des sorts et les dégâts."
+        }
       },
       {
         "niveau": 9,
-        "titre": "Cône de froid appris",
-        "detail": "Sorts de niveau 5 : 8d8 dégâts de froid en cône, le finisseur de zone du build."
+        "titre": "Sorts de niveau 5",
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Cône de froid (Cone of Cold)",
+            "type": "nouveau",
+            "note": "finisseur de zone"
+          },
+          {
+            "nom": "Télékinésie (Telekinesis)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Télékinésie",
-        "detail": "Déplace une créature ou un objet chaque tour. Métamagie Sort intensifié débloquée."
+        "titre": "Métamagie supplémentaire",
+        "detail": "Une Métamagie supplémentaire au choix, plus Récupération arcanique : une fois par jour, convertit des emplacements de sort dépensés en Points de sorcellerie lors d'un repos court."
       },
       {
         "niveau": 11,
-        "titre": "Globe d'invulnérabilité",
-        "detail": "Sorts de niveau 6 : bouton d'urgence pour stabiliser une phase de combat très dangereuse."
+        "titre": "Sorts de niveau 6",
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Globe d'invulnérabilité (Globe of Invulnerability)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "Vigilant (+5 initiative, ne peut être surpris). Boule de feu apprise comme option hors élément, utile contre les ennemis résistants ou immunisés au froid."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "Alerte",
+          "effet": "+5 à l'initiative, impossible d'être surpris — agir tôt permet de poser ses sorts de zone avant que les ennemis ne se dispersent."
+        }
       }
     ],
     "equipement": [
