@@ -3103,12 +3103,16 @@
       {
         "niveau": 3,
         "titre": "Sous-classe Filou",
-        "detail": "Deuxième action bonus disponible : deux attaques hors-main possibles chaque tour, donc deux chances d'Attaque sournoise."
+        "detail": "Mains rapides : une deuxième action bonus par tour, cumulable avec Ruse — deux attaques hors-main possibles chaque tour, donc deux chances d'Attaque sournoise. Travail d'escalade : résistance aux dégâts de chute."
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "+2 Dextérité (18)."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 5,
@@ -3128,17 +3132,25 @@
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "Combat à deux armes, ou Doué (Skilled) selon la priorité recherchée."
+        "detail": "",
+        "don": {
+          "nom": "Combat à deux armes / Doué",
+          "effet": "Combat à deux armes, ou Doué (Skilled) selon la priorité recherchée."
+        }
       },
       {
         "niveau": 9,
-        "titre": "Discrétion supérieure",
-        "detail": "Garde l'avantage à la discrétion même en te déplaçant à vitesse réduite."
+        "titre": "Discrétion suprême",
+        "detail": "Action (repos court) : te fond dans l'environnement au point de devenir Invisible."
       },
       {
         "niveau": 10,
         "titre": "Troisième don",
-        "detail": "+2 Dextérité (20) — maximum naturel, précision et dégâts au plus haut."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 11,
@@ -3148,7 +3160,11 @@
       {
         "niveau": 12,
         "titre": "Quatrième don — build terminé",
-        "detail": "Un dernier don libre pour peaufiner le build (précision, survie ou utilitaire)."
+        "detail": "",
+        "don": {
+          "nom": "Don libre",
+          "effet": "Un dernier don au choix pour peaufiner le build (précision, survie ou utilitaire)."
+        }
       }
     ],
     "equipement": [
@@ -4021,7 +4037,11 @@
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "+2 Dextérité (18)."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 5,
@@ -4041,7 +4061,11 @@
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "Assassin chevronné, ou Doué (Skilled) selon la préférence."
+        "detail": "",
+        "don": {
+          "nom": "Assassin chevronné ou Doué",
+          "effet": "Doué (Skilled) ajoute trois compétences maîtrisées au choix — un don utilitaire sûr si tu préfères ne pas dépendre d'un don spécifique à vérifier en jeu."
+        }
       },
       {
         "niveau": 9,
@@ -4051,7 +4075,11 @@
       {
         "niveau": 10,
         "titre": "Troisième don",
-        "detail": "+2 Dextérité (20) — maximum naturel, précision et dégâts au plus haut."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 11,
@@ -4061,7 +4089,11 @@
       {
         "niveau": 12,
         "titre": "Quatrième don — build terminé",
-        "detail": "Un dernier don libre pour peaufiner le build (précision, survie ou utilitaire)."
+        "detail": "",
+        "don": {
+          "nom": "Don libre",
+          "effet": "Un dernier don au choix pour peaufiner le build (précision, survie ou utilitaire)."
+        }
       }
     ],
     "equipement": [
@@ -7717,12 +7749,33 @@
       {
         "niveau": 3,
         "titre": "Sous-classe Escamoteur arcanique",
-        "detail": "Lanceur de sorts (liste restreinte de Magicien) et Main de mage invisible, contrôlable à distance."
+        "detail": "Main de mage : tour de passe-passe — le cantrip devient invisible et permanent tant que tu ne le dissipes pas, pratique pour voler ou déclencher pièges et coffres à distance. Lanceur de sorts restreint (liste de Magicien, DD à l'Intelligence) : la plupart de tes sorts doivent venir d'Enchantement ou d'Illusion, avec quelques exceptions dans n'importe quelle école.",
+        "sorts": [
+          {
+            "nom": "Main de mage (Mage Hand)",
+            "type": "toujoursPrepare",
+            "note": "rendu invisible et permanent par la sous-classe"
+          },
+          {
+            "nom": "Charme-personne (Charm Person)",
+            "type": "nouveau",
+            "note": "Enchantement"
+          },
+          {
+            "nom": "Bouclier (Shield)",
+            "type": "nouveau",
+            "note": "exception hors école imposée"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "+2 Dextérité (18)."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 5,
@@ -7737,22 +7790,40 @@
       {
         "niveau": 7,
         "titre": "Évasion",
-        "detail": "Mi-dégâts sur les sauvegardes de Dextérité réussies."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Invisibilité (Invisibility)",
+            "type": "nouveau",
+            "note": "Illusion"
+          }
+        ]
       },
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+        "detail": "",
+        "don": {
+          "nom": "Doué",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
-        "titre": "Ruse des sorts",
-        "detail": "Peut lancer certains sorts d'illusion/enchantement avec un net avantage social."
+        "titre": "Embuscade magique",
+        "detail": "Tant que tu es Caché, tes cibles ont le désavantage à leur jet de sauvegarde contre tes sorts — sors de l'ombre pour lancer un sort de contrôle presque garanti."
       },
       {
         "niveau": 10,
         "titre": "Troisième don",
-        "detail": "+2 Dextérité (20)."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de personne (Hold Person)",
+            "type": "nouveau",
+            "note": "Enchantement"
+          }
+        ]
       },
       {
         "niveau": 11,
@@ -7762,7 +7833,11 @@
       {
         "niveau": 12,
         "titre": "Quatrième don — build terminé",
-        "detail": "Un dernier don libre pour peaufiner le build."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       }
     ],
     "equipement": [
@@ -13435,12 +13510,16 @@
       {
         "niveau": 3,
         "titre": "Sous-classe Bretteur",
-        "detail": "Peut se déplacer autour d'un ennemi seul sans provoquer d'attaque d'opportunité, et gagne l'avantage social en duel."
+        "detail": "Jeu de jambes : après une attaque de mêlée, la cible ne peut plus déclencher d'attaque d'opportunité contre toi ce tour-ci. Audace canaille : +2 à l'initiative (progressif avec le niveau), et l'Attaque sournoise ne demande plus l'avantage tant qu'aucun autre ennemi n'est à moins de 2 m (ou qu'un allié est à portée) — plus besoin d'être caché ou en supériorité numérique pour la déclencher."
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "+2 Dextérité (18)."
+        "detail": "Tours fourbes (action bonus, au Charisme sauf Jet de sable qui utilise la Dextérité) : Coup du poignet (tente de désarmer), Jet de sable (tente d'aveugler) ou Moquerie cruelle (donne le désavantage au prochain jet d'attaque de la cible).",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 5,
@@ -13460,17 +13539,25 @@
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
-        "titre": "Panache du duelliste",
-        "detail": "Renforce l'attaque sournoise quand tu es seul contre ta cible."
+        "titre": "Panache",
+        "detail": "Action : jet de Persuasion contre l'Intuition de la cible. En cas d'échec, un ennemi subit le désavantage à ses attaques contre les autres, et une créature neutre est Charmée."
       },
       {
         "niveau": 10,
         "titre": "Troisième don",
-        "detail": "+2 Dextérité (20) — maximum naturel."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 11,
@@ -13480,7 +13567,11 @@
       {
         "niveau": 12,
         "titre": "Quatrième don — build terminé",
-        "detail": "Un dernier don libre pour peaufiner le build."
+        "detail": "",
+        "don": {
+          "nom": "Don libre",
+          "effet": "Un dernier don au choix pour peaufiner le build (précision, survie ou utilitaire)."
+        }
       }
     ],
     "equipement": [
@@ -14115,7 +14206,11 @@
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Tireur d'élite : ignore le désavantage à distance, option -5/+10 dégâts — à prendre systématiquement sur ton tir d'ouverture garanti critique."
+        "detail": "",
+        "don": {
+          "nom": "Tireur d'élite",
+          "effet": "Ignore le désavantage à distance et le couvert léger/intermédiaire ; option -5 au jet d'attaque pour +10 dégâts."
+        }
       },
       {
         "niveau": 5,
@@ -14135,7 +14230,11 @@
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "+2 Dextérité (18) — précision, dégâts et CA améliorés."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 9,
@@ -14155,7 +14254,11 @@
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "+2 Dextérité (20) — maximum naturel."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       }
     ],
     "equipement": [
@@ -15233,7 +15336,11 @@
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "+2 Dextérité (18)."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 5,
@@ -15253,7 +15360,11 @@
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "Assassin chevronné, ou Doué (Skilled) selon la préférence."
+        "detail": "",
+        "don": {
+          "nom": "Assassin chevronné ou Doué",
+          "effet": "Doué (Skilled) ajoute trois compétences maîtrisées au choix — un don utilitaire sûr si tu préfères ne pas dépendre d'un don spécifique à vérifier en jeu."
+        }
       },
       {
         "niveau": 9,
@@ -15263,7 +15374,11 @@
       {
         "niveau": 10,
         "titre": "Troisième don",
-        "detail": "+2 Dextérité (20) — maximum naturel, précision et dégâts au plus haut."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 11,
@@ -15273,7 +15388,11 @@
       {
         "niveau": 12,
         "titre": "Quatrième don — build terminé",
-        "detail": "+7 dégâts de Dolor Amarus sur chaque critique garanti en ouverture : le build est à son pic."
+        "detail": "",
+        "don": {
+          "nom": "Don libre",
+          "effet": "Un dernier don au choix pour peaufiner le build (précision, survie ou utilitaire)."
+        }
       }
     ],
     "equipement": [
