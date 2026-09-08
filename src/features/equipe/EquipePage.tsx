@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { PageHeader } from '../../components/PageHeader'
-import { RotateCcw, Sparkles } from '../../components/icons'
+import { RotateCcw, Sparkles, Trash } from '../../components/icons'
 import { builds } from '../../data'
 import { saveStore, useSaveData } from '../../storage/useSaveData'
 import { lireJoueurId } from '../../storage/identite'
@@ -128,6 +128,31 @@ function ReinitialiserProgressionButton({ campagne }: { campagne: Campagne }) {
   )
 }
 
+function SupprimerCampagneButton({ campagne }: { campagne: Campagne }) {
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        if (
+          !confirm(`Supprimer la campagne "${campagne.nom}" et ses ${campagne.personnages.length} personnage(s) ?`)
+        ) {
+          return
+        }
+        // Détache localement une éventuelle session de groupe (sans y toucher côté Firebase) : un
+        // personnage de coéquipier peut être retiré manuellement par n'importe qui si besoin, ou
+        // récupéré en revenant plus tard avec le même code.
+        detacherSessionsPourCampagnes([campagne.id])
+        saveStore.supprimerCampagne(campagne.id)
+      }}
+      aria-label="Supprimer cette campagne"
+      title="Supprimer cette campagne"
+      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-essentiel/40 text-essentiel active:bg-essentiel/10"
+    >
+      <Trash className="h-3.5 w-3.5" />
+    </button>
+  )
+}
+
 export function EquipePage() {
   const data = useSaveData()
   const campagneActive =
@@ -151,6 +176,7 @@ export function EquipePage() {
           <div className="flex items-center gap-1.5">
             <SelecteurCampagne campagneActiveId={campagneActive.id} />
             <ReinitialiserProgressionButton campagne={campagneActive} />
+            <SupprimerCampagneButton campagne={campagneActive} />
           </div>
         }
       />
@@ -226,29 +252,7 @@ export function EquipePage() {
       </div>
 
       <CompagnonsSuivi campagne={campagneActive} />
-
-      <div className="px-4 pb-6">
-        <button
-          type="button"
-          onClick={() => {
-            if (
-              !confirm(
-                `Supprimer la campagne "${campagneActive.nom}" et ses ${campagneActive.personnages.length} personnage(s) ?`,
-              )
-            ) {
-              return
-            }
-            // Détache localement une éventuelle session de groupe (sans y toucher côté Firebase) :
-            // un personnage de coéquipier peut être retiré manuellement par n'importe qui si besoin,
-            // ou récupéré en revenant plus tard avec le même code.
-            detacherSessionsPourCampagnes([campagneActive.id])
-            saveStore.supprimerCampagne(campagneActive.id)
-          }}
-          className="w-full rounded-lg border border-essentiel/40 py-2.5 text-sm text-essentiel"
-        >
-          Supprimer cette campagne
-        </button>
-      </div>
+      <div className="pb-6" />
     </div>
   )
 }

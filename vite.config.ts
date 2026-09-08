@@ -19,7 +19,7 @@ export default defineConfig({
         'apple-touch-icon.png',
       ],
       manifest: {
-        name: 'Compagnon BG3',
+        name: 'BG3 Compagnon',
         short_name: 'BG3 Compagnon',
         description: 'Builds, objets et suivi de personnages pour Baldur\'s Gate 3',
         lang: 'fr',
