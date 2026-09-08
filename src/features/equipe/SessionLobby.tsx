@@ -9,6 +9,12 @@ import { builds } from '../../data'
 import { PersonnagesListe } from './PersonnagesListe'
 import { GroupeApercu } from './GroupeApercu'
 
+/** Un joueur "prêt" sans aucun personnage créé (cas limite : personnage supprimé après coche)
+ * ne compte pas comme réellement prêt — évite de bloquer le groupe sur un roster incohérent. */
+function estReellementPret(campagne: Campagne, joueur: JoueurSession): boolean {
+  return joueur.pret && campagne.personnages.some((p) => p.proprietaireId === joueur.joueurId)
+}
+
 function LigneJoueur({
   campagne,
   numero,
@@ -36,12 +42,14 @@ function LigneJoueur({
     )
   }
 
+  const pret = estReellementPret(campagne, joueur)
+
   return (
     <div className="rounded-lg border border-border bg-surface px-3 py-2.5">
       <div className="flex items-center gap-2.5">
         <span
           className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-xs font-semibold ${
-            joueur.pret ? 'border-bon bg-bon/15 text-bon' : 'border-gold-soft text-gold'
+            pret ? 'border-bon bg-bon/15 text-bon' : 'border-gold-soft text-gold'
           }`}
         >
           J{numero}
@@ -63,11 +71,11 @@ function LigneJoueur({
         )}
         <span
           className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border ${
-            joueur.pret ? 'border-bon bg-bon/20 text-bon' : 'border-border text-ink-muted'
+            pret ? 'border-bon bg-bon/20 text-bon' : 'border-border text-ink-muted'
           }`}
-          aria-label={joueur.pret ? 'Prêt' : 'Pas encore prêt'}
+          aria-label={pret ? 'Prêt' : 'Pas encore prêt'}
         >
-          {joueur.pret && <Check className="h-3.5 w-3.5" />}
+          {pret && <Check className="h-3.5 w-3.5" />}
         </span>
       </div>
       <div className="mt-1.5 pl-9">
@@ -93,9 +101,12 @@ export function SessionLobby({ campagne }: { campagne: Campagne }) {
   const [erreur, setErreur] = useState<string | null>(null)
   const monId = lireJoueurId()
   const monJoueur = campagne.sessionJoueurs.find((j) => j.joueurId === monId)
+  const mesPersonnages = campagne.personnages.filter((p) => p.proprietaireId === monId)
   const tailleMax = campagne.sessionTailleMax ?? campagne.sessionJoueurs.length
   const numeros = Array.from({ length: tailleMax }, (_, i) => i + 1)
-  const toutLeMondePret = campagne.sessionJoueurs.length > 0 && campagne.sessionJoueurs.every((j) => j.pret)
+  const toutLeMondePret =
+    campagne.sessionJoueurs.length > 0 &&
+    campagne.sessionJoueurs.every((j) => estReellementPret(campagne, j))
 
   return (
     <div>
@@ -117,17 +128,25 @@ export function SessionLobby({ campagne }: { campagne: Campagne }) {
         </div>
 
         {monJoueur && (
-          <button
-            type="button"
-            onClick={() => saveStore.definirMonJoueurSession(campagne.id, { pret: !monJoueur.pret })}
-            className={`mt-3 w-full rounded-lg border py-2.5 text-sm font-medium transition-colors ${
-              monJoueur.pret
-                ? 'border-bon/60 bg-bon/10 text-bon'
-                : 'border-glow/60 bg-glow/10 text-glow'
-            }`}
-          >
-            {monJoueur.pret ? '✓ Je suis prêt — annuler' : 'Je suis prêt'}
-          </button>
+          <>
+            <button
+              type="button"
+              disabled={mesPersonnages.length === 0 && !monJoueur.pret}
+              onClick={() => saveStore.definirMonJoueurSession(campagne.id, { pret: !monJoueur.pret })}
+              className={`mt-3 w-full rounded-lg border py-2.5 text-sm font-medium transition-colors disabled:opacity-40 ${
+                monJoueur.pret
+                  ? 'border-bon/60 bg-bon/10 text-bon'
+                  : 'border-glow/60 bg-glow/10 text-glow'
+              }`}
+            >
+              {monJoueur.pret ? '✓ Je suis prêt — annuler' : 'Je suis prêt'}
+            </button>
+            {mesPersonnages.length === 0 && (
+              <p className="mt-1.5 text-center text-[11px] text-ink-muted">
+                Crée d'abord ton personnage pour pouvoir te déclarer prêt.
+              </p>
+            )}
+          </>
         )}
       </Section>
 

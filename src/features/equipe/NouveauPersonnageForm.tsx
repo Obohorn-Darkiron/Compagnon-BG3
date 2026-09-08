@@ -3,6 +3,7 @@ import { Plus } from '../../components/icons'
 import { ClasseIcon } from '../../components/ClasseIcon'
 import { buildsPourClasseEtSousClasse, classesDisponibles, races, sousClassesPourClasse } from '../../data'
 import { saveStore, type Campagne, type StyleJeu } from '../../storage/useSaveData'
+import { lireJoueurId } from '../../storage/identite'
 import { COMPAGNONS } from './composeurEquipe'
 import { SousClasseCard } from './SousClasseCard'
 import { BuildCandidatCard } from './BuildCandidatCard'
@@ -30,6 +31,9 @@ export function NouveauPersonnageForm({ campagne }: { campagne: Campagne }) {
   const [buildId, setBuildId] = useState('')
   const [race, setRace] = useState('')
   const [sousRace, setSousRace] = useState('')
+
+  const monJoueur = campagne.sessionJoueurs.find((j) => j.joueurId === lireJoueurId())
+  const nomParDefaut = monJoueur ? `Personnage de ${monJoueur.nom}` : 'Personnage'
 
   const nomsDejaLies = new Set(
     campagne.personnages.map((p) => p.compagnonNom).filter((n): n is string => n !== null),
@@ -78,7 +82,7 @@ export function NouveauPersonnageForm({ campagne }: { campagne: Campagne }) {
     )
   }
 
-  const nomValide = type === 'libre' ? nom.trim().length > 0 : compagnonNom.length > 0
+  const nomValide = type === 'libre' ? true : compagnonNom.length > 0
 
   return (
     <form
@@ -86,7 +90,7 @@ export function NouveauPersonnageForm({ campagne }: { campagne: Campagne }) {
       onSubmit={(e) => {
         e.preventDefault()
         if (!nomValide) return
-        saveStore.creerPersonnage(campagne.id, type === 'compagnon' ? compagnonNom : nom.trim(), {
+        saveStore.creerPersonnage(campagne.id, type === 'compagnon' ? compagnonNom : nom.trim() || nomParDefaut, {
           classe: classe || null,
           sousClasse: sousClasse || null,
           buildId: buildId || null,
@@ -141,7 +145,7 @@ export function NouveauPersonnageForm({ campagne }: { campagne: Campagne }) {
           autoFocus
           value={nom}
           onChange={(e) => setNom(e.target.value)}
-          placeholder="Nom du personnage"
+          placeholder={`Nom du personnage (ex. ${nomParDefaut})`}
           className="rounded-lg border border-border bg-surface-raised px-3 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:border-glow focus:outline-none"
         />
       ) : (

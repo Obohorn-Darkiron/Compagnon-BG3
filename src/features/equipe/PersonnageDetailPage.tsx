@@ -7,6 +7,7 @@ import { SourceAlternativeBadge } from '../../components/SourceAlternativeBadge'
 import { EtapeProgressionCard } from '../../components/EtapeProgressionCard'
 import { CaracTable } from '../../components/CaracTable'
 import { Check } from '../../components/icons'
+import { useConfirm } from '../../components/useConfirm'
 import { builds, etapeAuNiveau, jalonsSombres, nomAffiche, races } from '../../data'
 import { saveStore, useSaveData, type StyleJeu } from '../../storage/useSaveData'
 import { lireJoueurId } from '../../storage/identite'
@@ -42,6 +43,7 @@ export function PersonnageDetailPage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
   const data = useSaveData()
+  const { confirmer, dialogue } = useConfirm()
 
   const trouvaille = data.campagnes
     .flatMap((c) => c.personnages.map((p) => ({ campagneId: c.id, personnage: p })))
@@ -414,8 +416,9 @@ export function PersonnageDetailPage() {
       <div className="px-4 py-6">
         <button
           type="button"
-          onClick={() => {
-            if (confirm(`Supprimer ${personnage.nom} ?`)) {
+          onClick={async () => {
+            const ok = await confirmer(`Supprimer ${personnage.nom} ?`, { danger: true, confirmerLabel: 'Supprimer' })
+            if (ok) {
               saveStore.supprimerPersonnage(campagneId, personnage.id)
               navigate('/equipe')
             }
@@ -425,6 +428,7 @@ export function PersonnageDetailPage() {
           Supprimer ce personnage
         </button>
       </div>
+      {dialogue}
       </fieldset>
     </div>
   )

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { PageHeader } from '../../components/PageHeader'
 import { RotateCcw, Sparkles, Trash } from '../../components/icons'
+import { useConfirm } from '../../components/useConfirm'
 import { saveStore, useSaveData } from '../../storage/useSaveData'
 import { detacherSessionsPourCampagnes } from '../../session/sessionSync'
 import { GroupeApercu } from './GroupeApercu'
@@ -105,50 +106,56 @@ function SelecteurCampagne({ campagneActiveId }: { campagneActiveId: string }) {
 }
 
 function ReinitialiserProgressionButton({ campagne }: { campagne: Campagne }) {
+  const { confirmer, dialogue } = useConfirm()
   return (
-    <button
-      type="button"
-      onClick={() => {
-        if (
-          !confirm(
+    <>
+      <button
+        type="button"
+        onClick={async () => {
+          const ok = await confirmer(
             `Réinitialiser la progression de "${campagne.nom}" ?\n\nLes objets cochés, les jalons Dark Urge et les compagnons recrutés repartent à zéro. Tes personnages, leurs niveaux et leurs builds restent inchangés — pratique pour relancer la même campagne depuis le début.\n\n(Si vous jouez en groupe, seuls tes propres personnages sont concernés.)`,
+            { confirmerLabel: 'Réinitialiser' },
           )
-        ) {
-          return
-        }
-        saveStore.reinitialiserProgressionCampagne(campagne.id)
-      }}
-      aria-label="Réinitialiser la progression de cette campagne"
-      title="Réinitialiser la progression (objets cochés, compagnons recrutés...)"
-      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-border text-ink-muted active:bg-surface"
-    >
-      <RotateCcw className="h-3.5 w-3.5" />
-    </button>
+          if (!ok) return
+          saveStore.reinitialiserProgressionCampagne(campagne.id)
+        }}
+        aria-label="Réinitialiser la progression de cette campagne"
+        title="Réinitialiser la progression (objets cochés, compagnons recrutés...)"
+        className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-border text-ink-muted active:bg-surface"
+      >
+        <RotateCcw className="h-3.5 w-3.5" />
+      </button>
+      {dialogue}
+    </>
   )
 }
 
 function SupprimerCampagneButton({ campagne }: { campagne: Campagne }) {
+  const { confirmer, dialogue } = useConfirm()
   return (
-    <button
-      type="button"
-      onClick={() => {
-        if (
-          !confirm(`Supprimer la campagne "${campagne.nom}" et ses ${campagne.personnages.length} personnage(s) ?`)
-        ) {
-          return
-        }
-        // Détache localement une éventuelle session de groupe (sans y toucher côté Firebase) : un
-        // personnage de coéquipier peut être retiré manuellement par n'importe qui si besoin, ou
-        // récupéré en revenant plus tard avec le même code.
-        detacherSessionsPourCampagnes([campagne.id])
-        saveStore.supprimerCampagne(campagne.id)
-      }}
-      aria-label="Supprimer cette campagne"
-      title="Supprimer cette campagne"
-      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-essentiel/40 text-essentiel active:bg-essentiel/10"
-    >
-      <Trash className="h-3.5 w-3.5" />
-    </button>
+    <>
+      <button
+        type="button"
+        onClick={async () => {
+          const ok = await confirmer(
+            `Supprimer la campagne "${campagne.nom}" et ses ${campagne.personnages.length} personnage(s) ?`,
+            { danger: true, confirmerLabel: 'Supprimer' },
+          )
+          if (!ok) return
+          // Détache localement une éventuelle session de groupe (sans y toucher côté Firebase) : un
+          // personnage de coéquipier peut être retiré manuellement par n'importe qui si besoin, ou
+          // récupéré en revenant plus tard avec le même code.
+          detacherSessionsPourCampagnes([campagne.id])
+          saveStore.supprimerCampagne(campagne.id)
+        }}
+        aria-label="Supprimer cette campagne"
+        title="Supprimer cette campagne"
+        className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-essentiel/40 text-essentiel active:bg-essentiel/10"
+      >
+        <Trash className="h-3.5 w-3.5" />
+      </button>
+      {dialogue}
+    </>
   )
 }
 

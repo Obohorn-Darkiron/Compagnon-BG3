@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Section } from '../../components/Section'
+import { useConfirm } from '../../components/useConfirm'
 import type { Campagne } from '../../storage/useSaveData'
 import {
   creerSession,
@@ -20,6 +21,7 @@ export function SessionSection({ campagne }: { campagne: Campagne }) {
   const [enCours, setEnCours] = useState(false)
   const [erreur, setErreur] = useState<string | null>(null)
   const [copie, setCopie] = useState(false)
+  const { confirmer, dialogue } = useConfirm()
 
   if (!sessionDisponible) {
     return (
@@ -35,6 +37,7 @@ export function SessionSection({ campagne }: { campagne: Campagne }) {
     const nbJoueurs = campagne.sessionJoueurs.length
 
     return (
+      <>
       <Section title="Session de groupe">
         <div className="rounded-lg border border-glow/40 bg-glow/10 px-3 py-3">
           <p className="text-xs text-ink-muted">
@@ -81,14 +84,12 @@ export function SessionSection({ campagne }: { campagne: Campagne }) {
             <button
               type="button"
               disabled={enCours}
-              onClick={() => {
-                if (
-                  !confirm(
-                    "Supprimer cette session pour tout le monde ? Les autres joueurs seront déconnectés et perdront le lien de synchronisation.",
-                  )
-                ) {
-                  return
-                }
+              onClick={async () => {
+                const ok = await confirmer(
+                  'Supprimer cette session pour tout le monde ? Les autres joueurs seront déconnectés et perdront le lien de synchronisation.',
+                  { danger: true, confirmerLabel: 'Supprimer' },
+                )
+                if (!ok) return
                 setEnCours(true)
                 setErreur(null)
                 void supprimerSessionEtQuitter(campagne.id, campagne.sessionCode!).then((resultat) => {
@@ -108,6 +109,8 @@ export function SessionSection({ campagne }: { campagne: Campagne }) {
           )}
         </div>
       </Section>
+      {dialogue}
+      </>
     )
   }
 

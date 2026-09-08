@@ -3,11 +3,13 @@ import { builds } from '../../data'
 import { lireJoueurId } from '../../storage/identite'
 import type { Campagne } from '../../storage/useSaveData'
 import { retirerPersonnageDeSession } from '../../session/sessionSync'
+import { useConfirm } from '../../components/useConfirm'
 import { NouveauPersonnageForm } from './NouveauPersonnageForm'
 
 /** Liste des personnages d'une campagne, avec formulaire d'ajout — utilisée à la fois par la
  * page Groupe normale et par le lobby de session (choix de personnage/build en direct). */
 export function PersonnagesListe({ campagne }: { campagne: Campagne }) {
+  const { confirmer, dialogue } = useConfirm()
   return (
     <div className="flex flex-col gap-3 px-4 py-4">
       {campagne.personnages.map((perso) => {
@@ -42,14 +44,12 @@ export function PersonnagesListe({ campagne }: { campagne: Campagne }) {
             {estCoequipier && campagne.sessionCode && campagne.sessionEstProprietaire && (
               <button
                 type="button"
-                onClick={() => {
-                  if (
-                    confirm(
-                      `Retirer ${perso.nom} de la session ? Utile si cette personne ne revient pas — elle pourra recréer son personnage si elle rejoint plus tard.`,
-                    )
-                  ) {
-                    void retirerPersonnageDeSession(campagne.id, campagne.sessionCode!, perso.id)
-                  }
+                onClick={async () => {
+                  const ok = await confirmer(
+                    `Retirer ${perso.nom} de la session ? Utile si cette personne ne revient pas — elle pourra recréer son personnage si elle rejoint plus tard.`,
+                    { danger: true, confirmerLabel: 'Retirer' },
+                  )
+                  if (ok) void retirerPersonnageDeSession(campagne.id, campagne.sessionCode!, perso.id)
                 }}
                 className="w-full border-t border-border py-2 text-xs text-essentiel"
               >
@@ -61,6 +61,7 @@ export function PersonnagesListe({ campagne }: { campagne: Campagne }) {
       })}
 
       <NouveauPersonnageForm campagne={campagne} />
+      {dialogue}
     </div>
   )
 }

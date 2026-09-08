@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { PageHeader } from '../../components/PageHeader'
 import { Section } from '../../components/Section'
 import { Download, Upload } from '../../components/icons'
+import { useConfirm } from '../../components/useConfirm'
 import { builds, objets } from '../../data'
 import { saveStore } from '../../storage/useSaveData'
 import { forcerMiseAJour, stockageEstPersistant } from '../../storage/driver'
@@ -27,6 +28,7 @@ export function ParametresPage() {
   const [persistant, setPersistant] = useState<boolean | null>(null)
   const [recherche, setRecherche] = useState(false)
   const theme = useTheme()
+  const { confirmer, dialogue } = useConfirm()
 
   useEffect(() => {
     stockageEstPersistant().then(setPersistant)
@@ -158,8 +160,8 @@ export function ParametresPage() {
       <Section title="Réinitialiser">
         <button
           type="button"
-          onClick={() => {
-            if (!confirm('Supprimer toutes les campagnes et tous les personnages ?')) return
+          onClick={async () => {
+            if (!(await confirmer('Supprimer toutes les campagnes et tous les personnages ?', { danger: true, confirmerLabel: 'Tout supprimer' }))) return
             // Détache localement les sessions actives (sans y toucher côté Firebase) : un
             // personnage de session peut être retiré manuellement par n'importe qui si besoin, ou
             // récupéré en revenant plus tard avec le même code.
@@ -200,6 +202,7 @@ export function ParametresPage() {
           .
         </p>
       </Section>
+      {dialogue}
     </div>
   )
 }
