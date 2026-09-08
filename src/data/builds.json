@@ -564,62 +564,109 @@
       {
         "niveau": 1,
         "titre": "Lanceur de sorts",
-        "detail": "Inspiration bardique (d6) pour booster les jets d'un allié. Premiers sorts et cantrips de soutien."
+        "detail": "4 sorts et 2 cantrips connus au niveau 1 (jusqu'à 15 sorts et 4 cantrips au niveau 12) — un sort connu peut aussi être remplacé à chaque niveau. Inspiration bardique (d6, 3 utilisations par repos long) : donne à un allié un dé bonus à ajouter à un jet d'attaque, de sauvegarde ou de compétence.",
+        "sorts": [
+          {
+            "nom": "Moquerie cruelle (Vicious Mockery)",
+            "type": "nouveau",
+            "note": "cantrip de départ"
+          },
+          {
+            "nom": "Injonction (Command)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
         "titre": "Touche-à-tout",
-        "detail": "Ajoute la moitié de ta maîtrise à tous les jets de caractéristique non maîtrisés. Chant du repos (soin bonus au repos court)."
+        "detail": "Touche-à-tout : ajoute la moitié de ton bonus de maîtrise (arrondi à l'inférieur) à tout test de caractéristique où tu n'es pas déjà maîtrisé."
       },
       {
         "niveau": 3,
-        "titre": "Sous-classe Collège de l'Épée",
-        "detail": "Fioriture tranchante : réplique une attaque sur une seconde cible ou la même cible."
+        "titre": "Sous-classe : Collège de l'Épée",
+        "detail": "Maîtrise de l'armure intermédiaire et des cimeterres. Style de combat (Duel recommandé avec deux arbalètes légères, ou Deux armes). Fioriture d'arme : 2 charges d'Inspiration bardique dépensables pour Fioriture tranchante (attaque 2 cibles), Fioriture défensive (+4 CA si le coup touche) ou Fioriture mobile (repousse la cible et te téléporte à sa position).",
+        "sorts": [
+          {
+            "nom": "Immobilisation de personne (Hold Person)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "Tireur d'élite : ignore le désavantage à distance, option -5/+10 dégâts."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Tireur d'élite (Sharpshooter)",
+          "effet": "Ignore le désavantage à distance et le couvert léger/intermédiaire ; option -5 au jet d'attaque pour +10 dégâts."
+        }
       },
       {
         "niveau": 5,
         "titre": "Inspiration bardique améliorée",
-        "detail": "Le dé d'Inspiration passe à d8 et se recharge au repos court."
+        "detail": "L'Inspiration bardique passe au d8, gagne une utilisation de plus (4 au total), et se recharge désormais au repos court plutôt qu'au repos long.",
+        "sorts": [
+          {
+            "nom": "Hâte (Haste)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Mot de guérison de groupe (Mass Healing Word)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
         "titre": "Attaque supplémentaire",
-        "detail": "Un second coup par action, plus Contre-charme pour protéger le groupe."
+        "detail": "Un second coup par action d'attaque — avec deux arbalètes légères, ça fait deux attaques principales plus une en action bonus (Deux armes), chacune capable de déclencher une Fioriture."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : un sort de soutien ou de contrôle supplémentaire."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Liberté de mouvement (Freedom of Movement)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "+2 Dextérité — précision et dégâts améliorés à l'arbalète."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Chant du repos encore amélioré ; accès aux sorts de niveau 5."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
         "titre": "Secrets magiques",
-        "detail": "Apprend deux sorts de n'importe quelle classe. Inspiration bardique d10."
+        "detail": "Secrets magiques : apprend 2 sorts de niveau 5 ou moins pris dans la liste de n'importe quelle autre classe — l'occasion d'aller chercher un sort normalement hors de portée du Barde."
       },
       {
         "niveau": 11,
-        "titre": "Dip Guerrier (1er niveau)",
+        "titre": "Dip Guerrier 1",
         "detail": "Style de combat (Archerie recommandé) et Second souffle pour un peu de PV de secours."
       },
       {
         "niveau": 12,
-        "titre": "Dip Guerrier (2e niveau) — build terminé",
-        "detail": "Fougue (Action Surge) débloquée : un tour d'ouverture avec deux fois plus d'attaques."
+        "titre": "Dip Guerrier 2 — build terminé",
+        "detail": "Action Surge : une action supplémentaire une fois par repos court."
       }
     ],
     "equipement": [
@@ -6405,62 +6452,120 @@
       {
         "niveau": 1,
         "titre": "Lanceur de sorts",
-        "detail": "Inspiration bardique (d6) pour booster les jets d'un allié."
+        "detail": "4 sorts et 2 cantrips connus au niveau 1 (jusqu'à 15 sorts et 4 cantrips au niveau 12) — un sort connu peut aussi être remplacé à chaque niveau. Inspiration bardique (d6, 3 utilisations par repos long) : donne à un allié un dé bonus à ajouter à un jet d'attaque, de sauvegarde ou de compétence.",
+        "sorts": [
+          {
+            "nom": "Moquerie cruelle (Vicious Mockery)",
+            "type": "nouveau",
+            "note": "cantrip de départ"
+          },
+          {
+            "nom": "Injonction (Command)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
         "titre": "Touche-à-tout",
-        "detail": "Ajoute la moitié de ta maîtrise à tous les jets de caractéristique non maîtrisés."
+        "detail": "Touche-à-tout : ajoute la moitié de ton bonus de maîtrise (arrondi à l'inférieur) à tout test de caractéristique où tu n'es pas déjà maîtrisé."
       },
       {
         "niveau": 3,
-        "titre": "Sous-classe Collège du Savoir",
-        "detail": "Trois maîtrises de compétences supplémentaires, plus Mots Cinglants (Cutting Words) : réaction qui réduit le jet d'attaque, de compétence ou de dégâts d'un ennemi proche."
+        "titre": "Sous-classe : Collège du Savoir",
+        "detail": "Compétences supplémentaires : maîtrise de 3 compétences au choix. Mots acerbes (réaction, Inspiration bardique) : inflige un malus (-1d6) au jet d'attaque, de caractéristique ou aux dégâts d'une créature proche.",
+        "sorts": [
+          {
+            "nom": "Immobilisation de personne (Hold Person)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Charisme (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts, les jets d'attaque de sort et l'efficacité des capacités de Barde basées sur le Charisme."
+        }
       },
       {
         "niveau": 5,
         "titre": "Inspiration bardique améliorée",
-        "detail": "Le dé d'Inspiration passe à d8 et se recharge au repos court."
+        "detail": "L'Inspiration bardique passe au d8, gagne une utilisation de plus (4 au total), et se recharge désormais au repos court plutôt qu'au repos long.",
+        "sorts": [
+          {
+            "nom": "Hâte (Haste)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Mot de guérison de groupe (Mass Healing Word)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Contre-charme supérieur + Savoir complémentaire",
-        "detail": "Peut utiliser Inspiration bardique pour contrer un effet de Peur ou de Charme sur un allié. Savoir complémentaire : apprend 2 sorts supplémentaires de n'importe quelle classe (Boule de feu, Immobilisation de monstre...)."
+        "titre": "Contre-charme supérieur + Secrets magiques supplémentaires",
+        "detail": "Contre-charme (avantage aux sauvegardes contre Charme/Peur pour toi et tes alliés proches) s'étend désormais à tout le groupe. Secrets magiques additionnels : apprend 2 sorts de niveau 3 ou moins pris dans la liste de n'importe quelle autre classe."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : contrôle ou soutien avancé."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Liberté de mouvement (Freedom of Movement)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Soins de groupe et autres sorts de haut niveau."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
         "titre": "Secrets magiques",
-        "detail": "Apprend deux sorts de plus de n'importe quelle classe. Inspiration bardique d10."
+        "detail": "Secrets magiques : apprend 2 sorts de niveau 5 ou moins pris dans la liste de n'importe quelle autre classe — l'occasion d'aller chercher un sort normalement hors de portée du Barde."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Charisme (20) — maximum naturel, DD des sorts au plus haut."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Charisme à 20, le maximum naturel."
+        }
       }
     ],
     "equipement": [
@@ -8065,62 +8170,120 @@
       {
         "niveau": 1,
         "titre": "Lanceur de sorts",
-        "detail": "Inspiration bardique (d6) pour booster les jets d'un allié."
+        "detail": "4 sorts et 2 cantrips connus au niveau 1 (jusqu'à 15 sorts et 4 cantrips au niveau 12) — un sort connu peut aussi être remplacé à chaque niveau. Inspiration bardique (d6, 3 utilisations par repos long) : donne à un allié un dé bonus à ajouter à un jet d'attaque, de sauvegarde ou de compétence.",
+        "sorts": [
+          {
+            "nom": "Moquerie cruelle (Vicious Mockery)",
+            "type": "nouveau",
+            "note": "cantrip de départ"
+          },
+          {
+            "nom": "Injonction (Command)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
         "titre": "Touche-à-tout",
-        "detail": "Ajoute la moitié de ta maîtrise à tous les jets de caractéristique non maîtrisés."
+        "detail": "Touche-à-tout : ajoute la moitié de ton bonus de maîtrise (arrondi à l'inférieur) à tout test de caractéristique où tu n'es pas déjà maîtrisé."
       },
       {
         "niveau": 3,
-        "titre": "Sous-classe Vaillance",
-        "detail": "Combat inspiré : maîtrise des armes de guerre et armures moyennes/boucliers, plus un dé de bonus (1d6) donné à un allié pour un jet d'attaque, de caractéristique, de sauvegarde, de dégâts ou de CA."
+        "titre": "Sous-classe : Collège de la Vaillance",
+        "detail": "Compétences martiales : maîtrise de l'armure intermédiaire, des boucliers et des armes de guerre. Inspiration au combat (action bonus, Inspiration bardique) : donne à un allié un d6 bonus à ajouter à son prochain jet d'attaque, de sauvegarde, de dégâts ou à sa CA.",
+        "sorts": [
+          {
+            "nom": "Immobilisation de personne (Hold Person)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "Tireur d'élite : ignore le désavantage à distance, option -5/+10 dégâts."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Tireur d'élite (Sharpshooter)",
+          "effet": "Ignore le désavantage à distance et le couvert léger/intermédiaire ; option -5 au jet d'attaque pour +10 dégâts."
+        }
       },
       {
         "niveau": 5,
-        "titre": "Inspiration améliorée",
-        "detail": "Le dé d'Inspiration passe à d8 et se recharge au repos court."
+        "titre": "Inspiration bardique améliorée",
+        "detail": "L'Inspiration bardique passe au d8, gagne une utilisation de plus (4 au total), et se recharge désormais au repos court plutôt qu'au repos long.",
+        "sorts": [
+          {
+            "nom": "Hâte (Haste)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Mot de guérison de groupe (Mass Healing Word)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
         "titre": "Attaque supplémentaire",
-        "detail": "Un second coup par action, plus Contre-charme pour protéger le groupe."
+        "detail": "Un second coup par action d'attaque — combiné à l'Inspiration au combat, tu distribues du bonus tout en restant efficace au contact ou à distance."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : sort de soutien ou de contrôle."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Liberté de mouvement (Freedom of Movement)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Nouvel emplacement de haut niveau."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
         "titre": "Secrets magiques",
-        "detail": "Apprend deux sorts de n'importe quelle classe. Inspiration bardique d10."
+        "detail": "Secrets magiques : apprend 2 sorts de niveau 5 ou moins pris dans la liste de n'importe quelle autre classe — l'occasion d'aller chercher un sort normalement hors de portée du Barde."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Charisme (20) — maximum naturel."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Charisme à 20, le maximum naturel."
+        }
       }
     ],
     "equipement": [
@@ -8251,62 +8414,120 @@
       {
         "niveau": 1,
         "titre": "Lanceur de sorts",
-        "detail": "Inspiration bardique (d6) pour booster les jets d'un allié."
+        "detail": "4 sorts et 2 cantrips connus au niveau 1 (jusqu'à 15 sorts et 4 cantrips au niveau 12) — un sort connu peut aussi être remplacé à chaque niveau. Inspiration bardique (d6, 3 utilisations par repos long) : donne à un allié un dé bonus à ajouter à un jet d'attaque, de sauvegarde ou de compétence.",
+        "sorts": [
+          {
+            "nom": "Moquerie cruelle (Vicious Mockery)",
+            "type": "nouveau",
+            "note": "cantrip de départ"
+          },
+          {
+            "nom": "Bénédiction (Bless)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
         "titre": "Touche-à-tout",
-        "detail": "Ajoute la moitié de ta maîtrise à tous les jets de caractéristique non maîtrisés."
+        "detail": "Touche-à-tout : ajoute la moitié de ton bonus de maîtrise (arrondi à l'inférieur) à tout test de caractéristique où tu n'es pas déjà maîtrisé."
       },
       {
         "niveau": 3,
-        "titre": "Sous-classe Séduction",
-        "detail": "Air enchanteur : PV temporaires pour le groupe et déplacement bonus en début de combat."
+        "titre": "Sous-classe : Collège de la Séduction",
+        "detail": "Manteau d'inspiration (action bonus, Inspiration bardique) : donne 5 PV temporaires à 2 alliés proches ; tant qu'ils ont ces PV temporaires, tout attaquant de mêlée qui les touche devient Charmé.",
+        "sorts": [
+          {
+            "nom": "Injonction (Command)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Charisme (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts, les jets d'attaque de sort et l'efficacité des capacités de Barde basées sur le Charisme."
+        }
       },
       {
         "niveau": 5,
-        "titre": "Inspiration améliorée",
-        "detail": "Le dé d'Inspiration passe à d8 et se recharge au repos court."
+        "titre": "Inspiration bardique améliorée",
+        "detail": "L'Inspiration bardique passe au d8, gagne une utilisation de plus (4 au total), et se recharge désormais au repos court plutôt qu'au repos long.",
+        "sorts": [
+          {
+            "nom": "Hâte (Haste)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Mot de guérison de groupe (Mass Healing Word)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Manteau de Majesté",
-        "detail": "Manteau de Majesté (Commandement) : action bonus (repos long) qui ordonne à une créature proche de fuir, approcher, geler sur place ou lâcher son arme — réussite automatique contre une cible charmée. Ne consomme pas d'Inspiration bardique."
+        "titre": "Capacité de collège : Manteau de Majesté",
+        "detail": "Action bonus (repos long) : Commande une créature à fuir, s'approcher, se figer, tomber au sol ou lâcher son arme — les cibles déjà Charmées échouent automatiquement leur sauvegarde. Le Manteau d'inspiration passe à 8 PV temporaires et 3 cibles."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : sort de soutien ou de contrôle."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Liberté de mouvement (Freedom of Movement)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Soins de groupe et autres sorts de haut niveau."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Immobilisation de monstre (Hold Monster)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Secrets magiques",
-        "detail": "Apprend deux sorts de n'importe quelle classe. Inspiration bardique d10."
+        "titre": "Secrets magiques + Manteau renforcé",
+        "detail": "Le Manteau d'inspiration passe à 11 PV temporaires et 4 cibles."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "Doué ou tout don utilitaire selon la préférence."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Charisme à 20, le maximum naturel."
+        }
       }
     ],
     "equipement": [
