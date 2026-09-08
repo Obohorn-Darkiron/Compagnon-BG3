@@ -992,7 +992,7 @@
     ],
     "dons": [
       "Bagarreur de taverne / Tavern Brawler (niv 4)",
-      "+ Dextérité / Sagesse"
+      "+ Dextérité / Sagesse (niv 8)"
     ],
     "sortsCles": [],
     "jalons": [
@@ -1023,12 +1023,23 @@
       {
         "niveau": 3,
         "titre": "Sous-classe Paume ouverte",
-        "detail": "Rafale de coups peut renverser ou repousser la cible touchée."
+        "detail": "Rafale de coups gagne trois variantes au choix selon la situation : Renversement (peut mettre à terre), Chancellement (empêche les réactions) ou Repoussée (repousse de 5 m). Déflexion de projectiles : réaction qui réduit les dégâts d'une attaque d'arme à distance de 1d10 + mod Dextérité + niveau de Moine ; si les dégâts tombent à 0, tu peux dépenser 1 point de Ki pour renvoyer le projectile sur l'attaquant.",
+        "sorts": [
+          {
+            "nom": "Illusion mineure (Minor Illusion)",
+            "type": "toujoursPrepare",
+            "note": "cantrip gratuit offert à tout Moine au niveau 3, quelle que soit la sous-classe"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Bagarreur de taverne : ajoute le mod de Force aux jets et dégâts à mains nues."
+        "detail": "Chute amortie : réaction qui donne la résistance aux dégâts de chute.",
+        "don": {
+          "nom": "Bagarreur de taverne / Tavern Brawler",
+          "effet": "Ajoute le mod de Force aux jets et dégâts à mains nues, et augmente le dé de dégâts à mains nues."
+        }
       },
       {
         "niveau": 5,
@@ -1037,8 +1048,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Intégrité du corps",
-        "detail": "Dépense des points de Ki pour se soigner. Les attaques à mains nues comptent désormais comme magiques."
+        "titre": "Manifestation + Intégrité du corps",
+        "detail": "Ki-empowered strikes : les attaques à mains nues comptent désormais comme magiques. Vitesse sans armure : +4,5 m. Choisit une Manifestation passive (une seule active à la fois) : Corps (nécrotique), Esprit (psychique) ou Âme (radiant) — chacune ajoute 1d4 + mod Sagesse de dégâts aux frappes à mains nues. Intégrité du corps (Wholeness of Body, repos long) : récupère la moitié de tes points de Ki et gagne une action bonus supplémentaire pendant un tour."
       },
       {
         "niveau": 7,
@@ -1048,12 +1059,16 @@
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "+2 Dextérité ou Sagesse selon la priorité recherchée."
+        "detail": "",
+        "don": {
+          "nom": "+ Dextérité / Sagesse",
+          "effet": "+2 dans la caractéristique la plus utile pour le build : Dextérité (précision/dégâts/CA) ou Sagesse (CA/DD de Ki)."
+        }
       },
       {
         "niveau": 9,
-        "titre": "Déplacement sans armure avancé",
-        "detail": "Vitesse de déplacement sans armure augmentée (la Tranquillité/Sérénité est exclusive à un Moine Paume ouverte qui atteint le niveau 11, jamais atteint ici). Fin de la partie Moine pure du build."
+        "titre": "Résonance de Ki",
+        "detail": "Déplacement sans armure avancé : le terrain difficile ne te ralentit plus, et tu peux sauter 6 m de plus. Frappes à mains nues : dé de dégâts 1d6 → 1d8. Résonance de Ki : une frappe à mains nues met la cible en résonance ; détonne-la ensuite (gratuit) pour infliger 3d6 dégâts de force à la cible et à tout ce qui l'entoure (5 m). Fin de la partie Moine pure du build — la Tranquillité (niveau 11 Paume ouverte) n'est jamais atteinte ici."
       },
       {
         "niveau": 10,
@@ -7320,12 +7335,23 @@
       {
         "niveau": 3,
         "titre": "Sous-classe Voie de l'Ombre",
-        "detail": "Arts de l'ombre : sorts utilitaires pour 2 Ki (Ténèbres, Vision dans le noir, Silence, Pas sans trace), plus Discrétion en action bonus."
+        "detail": "Arts de l'ombre : sorts utilitaires pour 2 Ki (Ténèbres, Vision dans le noir, Silence, Pas sans trace), plus Discrétion en action bonus (gratuite). Déflexion de projectiles : réaction qui réduit les dégâts d'une attaque d'arme à distance de 1d10 + mod Dextérité + niveau de Moine ; si les dégâts tombent à 0, tu peux dépenser 1 point de Ki pour renvoyer le projectile sur l'attaquant.",
+        "sorts": [
+          {
+            "nom": "Illusion mineure (Minor Illusion)",
+            "type": "toujoursPrepare",
+            "note": "cantrip gratuit offert à tout Moine au niveau 3, quelle que soit la sous-classe"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Bagarreur de taverne : ajoute le mod de Force aux jets et dégâts à mains nues."
+        "detail": "Chute amortie : réaction qui donne la résistance aux dégâts de chute.",
+        "don": {
+          "nom": "Bagarreur de taverne",
+          "effet": "Ajoute le mod de Force aux jets et dégâts à mains nues, et augmente le dé de dégâts à mains nues."
+        }
       },
       {
         "niveau": 5,
@@ -7335,7 +7361,7 @@
       {
         "niveau": 6,
         "titre": "Pas de l'ombre",
-        "detail": "Téléportation d'ombre en ombre en action bonus (sans coût de Ki), avec avantage sur ta prochaine attaque de mêlée."
+        "detail": "Téléportation d'ombre en ombre en action bonus (sans coût de Ki), avec avantage sur ta prochaine attaque de mêlée. Ki-empowered strikes : les attaques à mains nues comptent comme magiques. Vitesse sans armure : +4,5 m."
       },
       {
         "niveau": 7,
@@ -7345,12 +7371,16 @@
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "+2 Dextérité ou Sagesse selon la priorité recherchée."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité ou Sagesse",
+          "effet": "+2 dans la caractéristique la plus utile pour le build : Dextérité (précision/dégâts/CA) ou Sagesse (CA/DD de Ki)."
+        }
       },
       {
         "niveau": 9,
         "titre": "Déplacement sans armure avancé",
-        "detail": "Vitesse de déplacement sans armure augmentée (la Tranquillité/Sérénité est exclusive à Paume ouverte)."
+        "detail": "Déplacement sans armure avancé : le terrain difficile ne te ralentit plus, et tu peux sauter 6 m de plus. Frappes à mains nues : dé de dégâts 1d6 → 1d8."
       },
       {
         "niveau": 10,
@@ -7365,7 +7395,11 @@
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+        "detail": "",
+        "don": {
+          "nom": "Doué",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       }
     ],
     "equipement": [
@@ -11980,12 +12014,38 @@
       {
         "niveau": 3,
         "titre": "Sous-classe Quatre Éléments",
-        "detail": "Premières disciplines élémentaires débloquées : mini-sorts de dégâts de zone contre du Ki."
+        "detail": "Disciple des éléments : choisit 3 disciplines élémentaires (DD = 8 + bonus de maîtrise + mod Sagesse). Déflexion de projectiles : réaction qui réduit les dégâts d'une attaque d'arme à distance de 1d10 + mod Dextérité + niveau de Moine ; si les dégâts tombent à 0, tu peux dépenser 1 point de Ki pour renvoyer le projectile sur l'attaquant.",
+        "sorts": [
+          {
+            "nom": "Illusion mineure (Minor Illusion)",
+            "type": "toujoursPrepare",
+            "note": "cantrip gratuit offert à tout Moine au niveau 3, quelle que soit la sous-classe"
+          },
+          {
+            "nom": "Crocs du serpent de feu (Fangs of the Fire Snake)",
+            "type": "nouveau",
+            "note": "attaque à mains nues à distance (6 m), +1d10 feu, compte comme une vraie attaque donc compatible avec Attaque supplémentaire"
+          },
+          {
+            "nom": "Frappe cendrée balayante (Sweeping Cinder Strike)",
+            "type": "nouveau",
+            "note": "équivalent de Mains brûlantes : cône de 5 m, 3d6 dégâts de feu (jet de sauvegarde Dex)"
+          },
+          {
+            "nom": "Ruée des esprits de la rafale (Rush of the Gale Spirits)",
+            "type": "nouveau",
+            "note": "équivalent de Rafale de vent : repousse et Déséquilibre en ligne de 12 m (jet de sauvegarde Force)"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Bagarreur de taverne : ajoute le mod de Force aux jets et dégâts à mains nues."
+        "detail": "Chute amortie : réaction qui donne la résistance aux dégâts de chute.",
+        "don": {
+          "nom": "Bagarreur de taverne",
+          "effet": "Ajoute le mod de Force aux jets et dégâts à mains nues, et augmente le dé de dégâts à mains nues."
+        }
       },
       {
         "niveau": 5,
@@ -11994,8 +12054,15 @@
       },
       {
         "niveau": 6,
-        "titre": "Disciplines supplémentaires",
-        "detail": "Nouvelles disciplines élémentaires débloquées (contrôle et déplacement)."
+        "titre": "Nouvelle discipline élémentaire",
+        "detail": "Ki-empowered strikes : les attaques à mains nues comptent comme magiques. Vitesse sans armure : +4,5 m.",
+        "sorts": [
+          {
+            "nom": "Étreinte du Nord (Clench of the North Wind)",
+            "type": "nouveau",
+            "note": "équivalent d'Immobilisation de personne (Hold Person) : cible humanoïde immobilisée, critique garanti à 3 m"
+          }
+        ]
       },
       {
         "niveau": 7,
@@ -12005,27 +12072,49 @@
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "+2 Dextérité ou Sagesse selon la priorité recherchée."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité ou Sagesse",
+          "effet": "+2 dans la caractéristique la plus utile pour le build : Dextérité (précision/dégâts/CA) ou Sagesse (CA/DD de Ki)."
+        }
       },
       {
         "niveau": 9,
-        "titre": "Déplacement sans armure avancé",
-        "detail": "Vitesse de déplacement sans armure augmentée, plus sélection d'une discipline élémentaire supplémentaire (la Tranquillité/Sérénité est exclusive à Paume ouverte)."
+        "titre": "Fonte élémentaire améliorée",
+        "detail": "Déplacement sans armure avancé : le terrain difficile ne te ralentit plus, et tu peux sauter 6 m de plus. Frappes à mains nues : dé de dégâts 1d6 → 1d8. Fonte élémentaire améliorée : plusieurs disciplines élémentaires gagnent un dé de dégâts supplémentaire (Crocs du serpent de feu, Frappe cendrée, Étreinte du Nord...).",
+        "sorts": [
+          {
+            "nom": "Étreinte de l'enfer (Embrace of the Inferno)",
+            "type": "nouveau",
+            "note": "équivalent de Rayon ardent (Scorching Ray) : 3 rayons de 2d6 dégâts de feu, +1 rayon grâce à la Fonte améliorée"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Disciplines de haut niveau",
-        "detail": "Options élémentaires plus puissantes débloquées."
+        "titre": "Purification et vitesse sans armure améliorée",
+        "detail": "Vitesse sans armure : +6 m. Purification du corps : immunité aux poisons et aux maladies."
       },
       {
         "niveau": 11,
-        "titre": "Corps parfait",
-        "detail": "Immunité aux poisons et maladies, plus de résistance générale."
+        "titre": "Chevaucher le vent",
+        "detail": "Nouvelle discipline élémentaire au choix.",
+        "sorts": [
+          {
+            "nom": "Chevaucher le vent (Ride the Wind)",
+            "type": "nouveau",
+            "note": "gagne la capacité de Voler (4 Ki, concentration) — repositionnement et verticalité inégalés"
+          }
+        ]
       },
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "Doué, ou tout don utilitaire selon la préférence."
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       }
     ],
     "equipement": [
@@ -12155,12 +12244,23 @@
       {
         "niveau": 3,
         "titre": "Sous-classe Maître ivre",
-        "detail": "Pendant Rafale de coups, peut se déplacer entre les attaques sans provoquer d'attaque d'opportunité."
+        "detail": "Verre facile (Cheeky Tipple) : immunisé aux effets négatifs d'être Ivre, et récupère la moitié de tes points de Ki une fois par jour en buvant de l'alcool. Représentation ivre : maîtrise en Représentation. Technique de l'ivrogne (Drunken Technique) remplace entièrement Rafale de coups : deux coups à mains nues en action bonus, plus 3 m de déplacement et les bénéfices de Désengagement. Déflexion de projectiles : réaction qui réduit les dégâts d'une attaque d'arme à distance de 1d10 + mod Dextérité + niveau de Moine ; si les dégâts tombent à 0, tu peux dépenser 1 point de Ki pour renvoyer le projectile sur l'attaquant.",
+        "sorts": [
+          {
+            "nom": "Illusion mineure (Minor Illusion)",
+            "type": "toujoursPrepare",
+            "note": "cantrip gratuit offert à tout Moine au niveau 3, quelle que soit la sous-classe"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Bagarreur de taverne : ajoute le mod de Force aux jets et dégâts à mains nues."
+        "detail": "Frappe enivrante (action bonus, 1 Ki) : touche à mains nues et peut rendre la cible Ivre. Vie de la fête (Life of the Party) : chaque frappe enivrante réussie donne un bonus de Classe d'Armure et aux jets d'attaque contre les cibles Ivres. Chute amortie : réaction qui donne la résistance aux dégâts de chute.",
+        "don": {
+          "nom": "Bagarreur de taverne",
+          "effet": "Ajoute le mod de Force aux jets et dégâts à mains nues, et augmente le dé de dégâts à mains nues."
+        }
       },
       {
         "niveau": 5,
@@ -12170,7 +12270,7 @@
       {
         "niveau": 6,
         "titre": "Se relever d'un bond + Rediriger l'attaque",
-        "detail": "Se relever d'un bond : se relever de la position à terre coûte moins de déplacement. Rediriger l'attaque : réaction qui dévie une attaque de mêlée manquée vers une autre créature proche."
+        "detail": "Se relever d'un bond : se relever de la position à terre ne coûte que 1,5 m de déplacement. Rediriger l'attaque (réaction, 1 Ki) : après une attaque de mêlée manquée contre toi, force l'attaquant à cibler une autre créature proche. Ki-empowered strikes : les attaques à mains nues comptent comme magiques. Vitesse sans armure : +4,5 m."
       },
       {
         "niveau": 7,
@@ -12180,27 +12280,35 @@
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "+2 Dextérité ou Sagesse selon la priorité recherchée."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité ou Sagesse",
+          "effet": "+2 dans la caractéristique la plus utile pour le build : Dextérité (précision/dégâts/CA) ou Sagesse (CA/DD de Ki)."
+        }
       },
       {
         "niveau": 9,
         "titre": "Dessoûlage",
-        "detail": "Sobering Realisation : dégâts psychiques bonus infligés à une cible ivre, qui la dessoûle au passage (la Tranquillité/Sérénité est exclusive à Paume ouverte)."
+        "detail": "Dessoûlage (Sobering Realisation, action bonus, 1 Ki) : frappe à mains nues qui inflige 2d8 + mod Sagesse dégâts psychiques bonus à une cible Ivre et la dessoûle — fait perdre Vie de la fête au passage. Déplacement sans armure avancé : le terrain difficile ne te ralentit plus, et tu peux sauter 6 m de plus. Frappes à mains nues : dé de dégâts 1d6 → 1d8."
       },
       {
         "niveau": 10,
-        "titre": "Esquive avancée",
-        "detail": "La mobilité offerte par la sous-classe devient encore plus généreuse."
+        "titre": "Purification et vitesse sans armure améliorée",
+        "detail": "Vitesse sans armure : +6 m. Purification du corps : immunité aux poisons et aux maladies."
       },
       {
         "niveau": 11,
-        "titre": "Corps parfait",
-        "detail": "Immunité aux poisons et maladies, plus de résistance générale."
+        "titre": "Chance de l'ivrogne",
+        "detail": "Chance de l'ivrogne (Drunkard's Luck, 2 Ki) : quand un jet de caractéristique, d'attaque ou de sauvegarde a le désavantage, annule ce désavantage."
       },
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "Doué, ou tout don utilitaire selon la préférence."
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       }
     ],
     "equipement": [
