@@ -137,6 +137,15 @@ export function Plus({ className }: IconProps) {
   )
 }
 
+export function RotateCcw({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <path d="M3 12a9 9 0 1 0 3-6.7" />
+      <path d="M3 4v5h5" />
+    </svg>
+  )
+}
+
 export function ChevronDown({ className }: IconProps) {
   return (
     <svg className={className} {...base}>

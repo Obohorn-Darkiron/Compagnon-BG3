@@ -307,6 +307,29 @@ export const saveStore = {
     })
   },
 
+  /** Remet à zéro le suivi de progression d'une campagne pour NOS personnages uniquement
+   * (objets cochés, jalons Dark Urge, choix de bonus permanents, compagnons recrutés) — pour
+   * recommencer une partie sans supprimer la campagne, les personnages, leurs builds ou la
+   * session de groupe. Les personnages des coéquipiers ne sont pas touchés : chacun réinitialise
+   * les siens. */
+  reinitialiserProgressionCampagne(campagneId: string) {
+    const monId = lireJoueurId()
+    majEtat({
+      ...etat,
+      campagnes: etat.campagnes.map((c) => {
+        if (c.id !== campagneId) return c
+        return {
+          ...c,
+          compagnonsRecrutes: [],
+          personnages: c.personnages.map((p) => {
+            if (p.proprietaireId !== null && p.proprietaireId !== monId) return p
+            return { ...p, objetsObtenus: [], choixBonusPermanents: {}, jalonsSombresCoches: [] }
+          }),
+        }
+      }),
+    })
+  },
+
   /** Associe (ou retire, avec code=null) une campagne à une session de groupe partagée.
    * Quitter une session détache les personnages des autres joueurs (ils ne sont plus synchronisés). */
   definirSession(campagneId: string, code: string | null, estProprietaire = false) {

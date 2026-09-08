@@ -108,58 +108,58 @@ export function BuildsListPage() {
           </button>
         }
       >
-        <div className="flex flex-col gap-2">
-          <label className="relative block">
-            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-muted" />
-            <input
-              value={recherche}
-              onChange={(e) => setRecherche(e.target.value)}
-              placeholder="Classe, rôle, sort, don, objet…"
-              className="w-full rounded-lg border border-border bg-surface py-2.5 pl-9 pr-3 text-sm text-ink placeholder:text-ink-muted focus:border-glow focus:outline-none"
-            />
-          </label>
-
-          <div className="flex gap-1.5">
-            {filtres.map((f) => (
-              <button
-                key={f.valeur}
-                type="button"
-                onClick={() => setFiltre(f.valeur)}
-                className={`flex-1 rounded-lg border px-2 py-3 text-xs font-medium transition-colors ${
-                  filtre === f.valeur
-                    ? 'border-glow/70 bg-glow/15 text-glow'
-                    : 'border-border text-ink-muted'
-                }`}
-              >
-                {f.label}
-              </button>
-            ))}
-          </div>
-
-          <button
-            type="button"
-            onClick={() => setFiltresOuverts((v) => !v)}
-            className={`flex items-center justify-between gap-2 rounded-lg border px-3 py-2.5 text-xs font-medium transition-colors ${
-              filtresOuverts || nbFiltresActifs > 0
-                ? 'border-glow/70 bg-glow/15 text-glow'
-                : 'border-border text-ink-muted'
-            }`}
-          >
-            <span className="flex items-center gap-1.5">
-              <Filter className="h-3.5 w-3.5" />
-              Filtres
-              {nbFiltresActifs > 0 && (
-                <span className="flex h-4 min-w-4 items-center justify-center rounded-full bg-glow px-1 text-[10px] font-semibold text-bg">
-                  {nbFiltresActifs}
-                </span>
-              )}
-            </span>
-            <ChevronDown
-              className={`h-3.5 w-3.5 transition-transform ${filtresOuverts ? 'rotate-180' : ''}`}
-            />
-          </button>
-        </div>
+        <label className="relative block">
+          <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-muted" />
+          <input
+            value={recherche}
+            onChange={(e) => setRecherche(e.target.value)}
+            placeholder="Classe, rôle, sort, don, objet…"
+            className="w-full rounded-lg border border-border bg-surface py-2.5 pl-9 pr-3 text-sm text-ink placeholder:text-ink-muted focus:border-glow focus:outline-none"
+          />
+        </label>
       </PageHeader>
+
+      <div className="flex flex-col gap-2 border-b border-border px-4 py-3">
+        <div className="flex gap-1.5">
+          {filtres.map((f) => (
+            <button
+              key={f.valeur}
+              type="button"
+              onClick={() => setFiltre(f.valeur)}
+              className={`flex-1 rounded-lg border px-2 py-3 text-xs font-medium transition-colors ${
+                filtre === f.valeur
+                  ? 'border-glow/70 bg-glow/15 text-glow'
+                  : 'border-border text-ink-muted'
+              }`}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setFiltresOuverts((v) => !v)}
+          className={`flex items-center justify-between gap-2 rounded-lg border px-3 py-2.5 text-xs font-medium transition-colors ${
+            filtresOuverts || nbFiltresActifs > 0
+              ? 'border-glow/70 bg-glow/15 text-glow'
+              : 'border-border text-ink-muted'
+          }`}
+        >
+          <span className="flex items-center gap-1.5">
+            <Filter className="h-3.5 w-3.5" />
+            Filtres
+            {nbFiltresActifs > 0 && (
+              <span className="flex h-4 min-w-4 items-center justify-center rounded-full bg-glow px-1 text-[10px] font-semibold text-bg">
+                {nbFiltresActifs}
+              </span>
+            )}
+          </span>
+          <ChevronDown
+            className={`h-3.5 w-3.5 transition-transform ${filtresOuverts ? 'rotate-180' : ''}`}
+          />
+        </button>
+      </div>
 
       <div className={`flex flex-col gap-3 px-4 py-4 ${modeComparaison ? 'pb-24' : ''}`}>
         {filtresOuverts && (

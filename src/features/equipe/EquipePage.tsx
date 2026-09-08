@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { PageHeader } from '../../components/PageHeader'
-import { Sparkles } from '../../components/icons'
+import { RotateCcw, Sparkles } from '../../components/icons'
 import { builds } from '../../data'
 import { saveStore, useSaveData } from '../../storage/useSaveData'
 import { lireJoueurId } from '../../storage/identite'
@@ -10,6 +10,7 @@ import { NouveauPersonnageForm } from './NouveauPersonnageForm'
 import { GroupeApercu } from './GroupeApercu'
 import { CompagnonsSuivi } from './CompagnonsSuivi'
 import { SessionSection } from './SessionSection'
+import type { Campagne } from '../../storage/useSaveData'
 
 function CreerCampagne() {
   const [nom, setNom] = useState('')
@@ -104,6 +105,29 @@ function SelecteurCampagne({ campagneActiveId }: { campagneActiveId: string }) {
   )
 }
 
+function ReinitialiserProgressionButton({ campagne }: { campagne: Campagne }) {
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        if (
+          !confirm(
+            `Réinitialiser la progression de "${campagne.nom}" ?\n\nLes objets cochés, les jalons Dark Urge et les compagnons recrutés repartent à zéro. Tes personnages, leurs niveaux et leurs builds restent inchangés — pratique pour relancer la même campagne depuis le début.\n\n(Si vous jouez en groupe, seuls tes propres personnages sont concernés.)`,
+          )
+        ) {
+          return
+        }
+        saveStore.reinitialiserProgressionCampagne(campagne.id)
+      }}
+      aria-label="Réinitialiser la progression de cette campagne"
+      title="Réinitialiser la progression (objets cochés, compagnons recrutés...)"
+      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-border text-ink-muted active:bg-surface"
+    >
+      <RotateCcw className="h-3.5 w-3.5" />
+    </button>
+  )
+}
+
 export function EquipePage() {
   const data = useSaveData()
   const campagneActive =
@@ -123,7 +147,12 @@ export function EquipePage() {
       <PageHeader
         title={campagneActive.nom}
         subtitle={`${campagneActive.personnages.length} personnage(s)`}
-        action={<SelecteurCampagne campagneActiveId={campagneActive.id} />}
+        action={
+          <div className="flex items-center gap-1.5">
+            <SelecteurCampagne campagneActiveId={campagneActive.id} />
+            <ReinitialiserProgressionButton campagne={campagneActive} />
+          </div>
+        }
       />
 
       <div className="px-4 pt-4">
