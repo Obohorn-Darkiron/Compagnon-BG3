@@ -807,22 +807,50 @@
       {
         "niveau": 2,
         "titre": "Rôdeur 2",
-        "detail": "Style de combat (Archerie recommandé) et premiers sorts de rôdeur : Marque du chasseur."
+        "detail": "Style de combat (Archerie recommandé) et premiers sorts de rôdeur : Marque du chasseur.",
+        "sorts": [
+          {
+            "nom": "Marque du chasseur (Hunter's Mark)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Frappe piégeuse (Ensnaring Strike)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 3,
         "titre": "Sous-classe Traqueur des ténèbres",
-        "detail": "Attaque bonus gratuite au premier tour de combat, plus bonus d'initiative."
+        "detail": "Traqueur des ténèbres : au premier tour de combat, gagne 3 m de vitesse et une attaque d'arme bonus infligeant 1d8 dégâts en plus, avec +3 à l'initiative en permanence.",
+        "sorts": [
+          {
+            "nom": "Déguisement (Disguise Self)",
+            "type": "toujoursPrepare",
+            "note": "sort de sous-classe, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Tireur d'élite : ignore le désavantage à distance, option -5/+10 dégâts."
+        "detail": "",
+        "don": {
+          "nom": "Tireur d'élite (Sharpshooter)",
+          "effet": "Ignore le désavantage à distance et le couvert léger/intermédiaire ; option -5 au jet d'attaque pour +10 dégâts."
+        }
       },
       {
         "niveau": 5,
         "titre": "Attaque supplémentaire",
-        "detail": "Rôdeur niveau 5 : un second coup par action d'attaque."
+        "detail": "Rôdeur niveau 5 : un second coup par action d'attaque.",
+        "sorts": [
+          {
+            "nom": "Foulée brumeuse (Misty Step)",
+            "type": "toujoursPrepare",
+            "note": "sort de sous-classe, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 6,
@@ -857,7 +885,11 @@
       {
         "niveau": 12,
         "titre": "Voleur 4 — build terminé",
-        "detail": "+2 Dextérité — précision et dégâts améliorés sur l'ensemble du build."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Précision et dégâts améliorés sur l'ensemble du build."
+        }
       }
     ],
     "equipement": [
@@ -6953,8 +6985,8 @@
     ],
     "sortsCles": [
       "Marque du chasseur",
-      "Immobiliser un être humanoïde",
-      "Nuée de flèches"
+      "Croissance d'épines (Spike Growth)",
+      "Invocation de projectiles (Conjure Barrage)"
     ],
     "jalons": [
       {
@@ -6966,62 +6998,111 @@
       {
         "niveau": 1,
         "titre": "Rôdeur 1",
-        "detail": "Ennemi juré et Explorateur-né : bonus situationnels."
+        "detail": "Ennemi juré et Explorateur-né : bonus situationnels contre un type d'ennemi et sur un terrain au choix (pistage, langue, résistance à être surpris)."
       },
       {
         "niveau": 2,
         "titre": "Rôdeur 2",
-        "detail": "Style de combat (Archerie recommandé) et premiers sorts : Marque du chasseur."
+        "detail": "Style de combat (Archerie recommandé pour un profil à distance). Premiers sorts : 2 sorts de niveau 1 connus. Contrairement au Barde ou à l'Ensorceleur, un sort de Rôdeur une fois choisi ne peut plus être remplacé.",
+        "sorts": [
+          {
+            "nom": "Marque du chasseur (Hunter's Mark)",
+            "type": "nouveau",
+            "note": "sort de départ recommandé"
+          },
+          {
+            "nom": "Frappe piégeuse (Ensnaring Strike)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 3,
         "titre": "Sous-classe Chasseur",
-        "detail": "Proie du chasseur : choisit une capacité contre les groupes (Volée de flèches) ou les cibles isolées (Ennemi juré supérieur)."
+        "detail": "Proie du chasseur : choisit une capacité contre les groupes (Fracasseur de horde, attaque deux cibles proches) ou les cibles isolées (Massacreur de colosses, +1d8 dégâts une fois par tour sur une cible déjà blessée).",
+        "sorts": [
+          {
+            "nom": "Communication avec les animaux (Speak with Animals)",
+            "type": "nouveau",
+            "note": "rituel — ne consomme pas de sort connu en combat"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Tireur d'élite : ignore le désavantage à distance, option -5/+10 dégâts."
+        "detail": "",
+        "don": {
+          "nom": "Tireur d'élite (Sharpshooter)",
+          "effet": "Ignore le désavantage à distance et le couvert léger/intermédiaire ; option -5 au jet d'attaque pour +10 dégâts."
+        }
       },
       {
         "niveau": 5,
         "titre": "Attaque supplémentaire",
-        "detail": "Un second coup par action d'attaque."
+        "detail": "Un second coup par action d'attaque.",
+        "sorts": [
+          {
+            "nom": "Croissance d'épines (Spike Growth)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
         "titre": "Ennemi juré supérieur",
-        "detail": "Bonus renforcés contre le type d'ennemi favori."
+        "detail": "Bonus renforcés contre le type d'ennemi favori choisi au niveau 1."
       },
       {
         "niveau": 7,
-        "titre": "Défense du chasseur",
-        "detail": "Capacité défensive au choix (esquive contre plusieurs attaquants, ou repli protecteur)."
+        "titre": "Défense du Chasseur",
+        "detail": "Choisit une tactique défensive passive : Échapper à la horde (désavantage aux attaques d'opportunité contre toi), Volonté de fer (avantage aux sauvegardes contre la Peur) ou Défense multi-attaque (-4 aux jets d'attaque supplémentaires d'un ennemi qui t'a déjà touché ce tour).",
+        "sorts": [
+          {
+            "nom": "Restauration partielle (Lesser Restoration)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "+2 Dextérité — précision et dégâts améliorés."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 3",
-        "detail": "Immobiliser un être humanoïde et autres sorts de contrôle."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Invocation de projectiles (Conjure Barrage)",
+            "type": "nouveau",
+            "note": "cône de projectiles, bon nettoyage de groupe"
+          }
+        ]
       },
       {
         "niveau": 10,
         "titre": "Explorateur-né supérieur",
-        "detail": "Bonus d'exploration et de pistage renforcés."
+        "detail": "Ennemi juré et Explorateur-né supérieurs : un deuxième choix pour chacun. Dissimulation à vue : en restant immobile, devient Invisible avec un bonus de +10 en Discrétion."
       },
       {
         "niveau": 11,
-        "titre": "Volée de flèches supérieure",
-        "detail": "Capacité offensive de zone renforcée contre les groupes."
+        "titre": "Proie du chasseur supérieure",
+        "detail": "Renforce encore la capacité choisie au niveau 3 (Fracasseur de horde ou Massacreur de colosses)."
       },
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       }
     ],
     "equipement": [
@@ -12741,7 +12822,7 @@
     ],
     "sortsCles": [
       "Marque du chasseur",
-      "Immobiliser un être humanoïde"
+      "Croissance d'épines (Spike Growth)"
     ],
     "jalons": [
       {
@@ -12753,62 +12834,110 @@
       {
         "niveau": 1,
         "titre": "Rôdeur 1",
-        "detail": "Ennemi juré et Explorateur-né : bonus situationnels."
+        "detail": "Ennemi juré et Explorateur-né : bonus situationnels contre un type d'ennemi et sur un terrain au choix (pistage, langue, résistance à être surpris)."
       },
       {
         "niveau": 2,
         "titre": "Rôdeur 2",
-        "detail": "Style de combat et premiers sorts : Marque du chasseur."
+        "detail": "Style de combat (Archerie recommandé pour un profil à distance). Premiers sorts : 2 sorts de niveau 1 connus. Contrairement au Barde ou à l'Ensorceleur, un sort de Rôdeur une fois choisi ne peut plus être remplacé.",
+        "sorts": [
+          {
+            "nom": "Marque du chasseur (Hunter's Mark)",
+            "type": "nouveau",
+            "note": "sort de départ recommandé"
+          },
+          {
+            "nom": "Frappe piégeuse (Ensnaring Strike)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 3,
         "titre": "Sous-classe Maître des bêtes",
-        "detail": "Invoque un compagnon animal contrôlable qui combat à tes côtés."
+        "detail": "Compagnon du Rôdeur (action, repos court) : invoque un compagnon animal (Ours, Sanglier, Corbeau funeste, Loup ou Araignée-loup), chacun avec des capacités propres.",
+        "sorts": [
+          {
+            "nom": "Communication avec les animaux (Speak with Animals)",
+            "type": "nouveau",
+            "note": "rituel — ne consomme pas de sort connu en combat"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Tireur d'élite : ignore le désavantage à distance, option -5/+10 dégâts."
+        "detail": "",
+        "don": {
+          "nom": "Tireur d'élite (Sharpshooter)",
+          "effet": "Ignore le désavantage à distance et le couvert léger/intermédiaire ; option -5 au jet d'attaque pour +10 dégâts."
+        }
       },
       {
         "niveau": 5,
         "titre": "Attaque supplémentaire",
-        "detail": "Un second coup par action ; le compagnon peut attaquer en plus."
+        "detail": "Un second coup par action d'attaque.",
+        "sorts": [
+          {
+            "nom": "Croissance d'épines (Spike Growth)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Lien renforcé",
-        "detail": "Le compagnon animal gagne en résistance et en fiabilité au combat."
+        "titre": "Lien du compagnon",
+        "detail": "Le compagnon gagne un bonus à la CA et aux dégâts égal à ton bonus de maîtrise, plus des PV et une capacité supplémentaires."
       },
       {
         "niveau": 7,
-        "titre": "Défense du rôdeur",
-        "detail": "Capacité défensive au choix."
+        "titre": "Entraînement exceptionnel",
+        "detail": "Ton compagnon peut désormais utiliser Foncer, Se désengager ou Aider en action bonus au lieu d'une action complète.",
+        "sorts": [
+          {
+            "nom": "Restauration partielle (Lesser Restoration)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "+2 Dextérité — précision et dégâts améliorés."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 3",
-        "detail": "Immobiliser un être humanoïde et autres sorts de contrôle."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Invocation de projectiles (Conjure Barrage)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
         "titre": "Explorateur-né supérieur",
-        "detail": "Bonus d'exploration et de pistage renforcés."
+        "detail": "Ennemi juré et Explorateur-né supérieurs : un deuxième choix pour chacun. Dissimulation à vue : en restant immobile, devient Invisible avec un bonus de +10 en Discrétion."
       },
       {
         "niveau": 11,
-        "titre": "Compagnon vétéran",
-        "detail": "Le compagnon animal atteint son plein potentiel de combat."
+        "titre": "Fureur bestiale",
+        "detail": "Ton compagnon gagne une attaque supplémentaire, plus une nouvelle capacité et des PV en plus."
       },
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "Doué, ou tout don utilitaire selon la préférence."
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       }
     ],
     "equipement": [
@@ -12918,7 +13047,7 @@
     ],
     "sortsCles": [
       "Marque du chasseur",
-      "Immobiliser un être humanoïde"
+      "Croissance d'épines (Spike Growth)"
     ],
     "jalons": [
       {
@@ -12930,62 +13059,116 @@
       {
         "niveau": 1,
         "titre": "Rôdeur 1",
-        "detail": "Ennemi juré et Explorateur-né : bonus situationnels."
+        "detail": "Ennemi juré et Explorateur-né : bonus situationnels contre un type d'ennemi et sur un terrain au choix (pistage, langue, résistance à être surpris)."
       },
       {
         "niveau": 2,
         "titre": "Rôdeur 2",
-        "detail": "Style de combat et premiers sorts : Marque du chasseur."
+        "detail": "Style de combat (Archerie recommandé pour un profil à distance). Premiers sorts : 2 sorts de niveau 1 connus. Contrairement au Barde ou à l'Ensorceleur, un sort de Rôdeur une fois choisi ne peut plus être remplacé.",
+        "sorts": [
+          {
+            "nom": "Marque du chasseur (Hunter's Mark)",
+            "type": "nouveau",
+            "note": "sort de départ recommandé"
+          },
+          {
+            "nom": "Frappe piégeuse (Ensnaring Strike)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 3,
         "titre": "Sous-classe Gardien d'essaim",
-        "detail": "Essaim mystique : en action bonus, repousse ou blesse un ennemi proche."
+        "detail": "Essaim rassemblé : choisit un type d'essaim (Nuée de méduses : foudre + choc ; Nuée de mites : psychique + aveuglement ; Légion d'abeilles : perforant + repousse) — une capacité par round après avoir touché une attaque. Sorts de sous-classe toujours préparés : Main de mage et Lueurs féeriques. Écho de la proie : ton essaim inflige des dégâts bonus aux cibles marquées par Marque du chasseur.",
+        "sorts": [
+          {
+            "nom": "Main de mage (Mage Hand)",
+            "type": "toujoursPrepare",
+            "note": "sort de sous-classe, toujours accessible"
+          },
+          {
+            "nom": "Lueurs féeriques (Faerie Fire)",
+            "type": "toujoursPrepare",
+            "note": "sort de sous-classe, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Tireur d'élite : ignore le désavantage à distance, option -5/+10 dégâts."
+        "detail": "",
+        "don": {
+          "nom": "Tireur d'élite (Sharpshooter)",
+          "effet": "Ignore le désavantage à distance et le couvert léger/intermédiaire ; option -5 au jet d'attaque pour +10 dégâts."
+        }
       },
       {
         "niveau": 5,
         "titre": "Attaque supplémentaire",
-        "detail": "Un second coup par action d'attaque."
+        "detail": "Un second coup par action d'attaque.",
+        "sorts": [
+          {
+            "nom": "Croissance d'épines (Spike Growth)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
         "titre": "Essaim renforcé",
-        "detail": "L'essaim mystique gagne en portée et en fréquence d'utilisation."
+        "detail": "Les capacités de l'essaim gagnent en puissance (dégâts et effets renforcés)."
       },
       {
         "niveau": 7,
-        "titre": "Défense du rôdeur",
-        "detail": "Capacité défensive au choix."
+        "titre": "Marée grouillante",
+        "detail": "Action bonus, 3 charges (repos long) : ton essaim te porte dans les airs — vitesse de vol de 9 m et immunité aux effets de surface pendant 10 tours.",
+        "sorts": [
+          {
+            "nom": "Restauration partielle (Lesser Restoration)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "+2 Dextérité — précision et dégâts améliorés."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 3",
-        "detail": "Immobiliser un être humanoïde et autres sorts de contrôle."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Forme gazeuse (Gaseous Form)",
+            "type": "toujoursPrepare",
+            "note": "sort de sous-classe, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 10,
         "titre": "Explorateur-né supérieur",
-        "detail": "Bonus d'exploration et de pistage renforcés."
+        "detail": "Ennemi juré et Explorateur-né supérieurs : un deuxième choix pour chacun. Dissimulation à vue : en restant immobile, devient Invisible avec un bonus de +10 en Discrétion."
       },
       {
         "niveau": 11,
-        "titre": "Essaim vorace",
-        "detail": "L'essaim mystique inflige davantage de dégâts et de déplacement."
+        "titre": "Essaim redoutable",
+        "detail": "Les dégâts de l'essaim montent à 1d8, ses effets spéciaux s'enrichissent (Désarmement, Lenteur, À terre selon le type), et se téléporter via l'essaim donne +2 CA pour le round."
       },
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "Doué, ou tout don utilitaire selon la préférence."
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       }
     ],
     "equipement": [
@@ -15406,62 +15589,111 @@
       {
         "niveau": 1,
         "titre": "Rôdeur 1",
-        "detail": "Ennemi juré et Explorateur-né : bonus situationnels."
+        "detail": "Ennemi juré et Explorateur-né : bonus situationnels contre un type d'ennemi et sur un terrain au choix (pistage, langue, résistance à être surpris)."
       },
       {
         "niveau": 2,
         "titre": "Rôdeur 2",
-        "detail": "Style de combat (Archerie recommandé) et premiers sorts : Marque du chasseur."
+        "detail": "Style de combat (Archerie recommandé pour un profil à distance). Premiers sorts : 2 sorts de niveau 1 connus. Contrairement au Barde ou à l'Ensorceleur, un sort de Rôdeur une fois choisi ne peut plus être remplacé.",
+        "sorts": [
+          {
+            "nom": "Marque du chasseur (Hunter's Mark)",
+            "type": "nouveau",
+            "note": "sort de départ recommandé"
+          },
+          {
+            "nom": "Frappe piégeuse (Ensnaring Strike)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 3,
         "titre": "Sous-classe Chasseur",
-        "detail": "Proie du chasseur : choisit une capacité contre les groupes (Volée de flèches) ou les cibles isolées (Ennemi juré supérieur)."
+        "detail": "Proie du chasseur : choisit une capacité contre les groupes (Fracasseur de horde, attaque deux cibles proches) ou les cibles isolées (Massacreur de colosses, +1d8 dégâts une fois par tour sur une cible déjà blessée).",
+        "sorts": [
+          {
+            "nom": "Communication avec les animaux (Speak with Animals)",
+            "type": "nouveau",
+            "note": "rituel — ne consomme pas de sort connu en combat"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Tireur d'élite : ignore le désavantage à distance, option -5/+10 dégâts."
+        "detail": "",
+        "don": {
+          "nom": "Tireur d'élite (Sharpshooter)",
+          "effet": "Ignore le désavantage à distance et le couvert léger/intermédiaire ; option -5 au jet d'attaque pour +10 dégâts."
+        }
       },
       {
         "niveau": 5,
         "titre": "Attaque supplémentaire",
-        "detail": "Un second coup par action d'attaque — deux chances de critique par tour avec l'Arc court vicieux."
+        "detail": "Un second coup par action d'attaque.",
+        "sorts": [
+          {
+            "nom": "Croissance d'épines (Spike Growth)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
         "titre": "Ennemi juré supérieur",
-        "detail": "Bonus renforcés contre le type d'ennemi favori."
+        "detail": "Bonus renforcés contre le type d'ennemi favori choisi au niveau 1."
       },
       {
         "niveau": 7,
-        "titre": "Défense du chasseur",
-        "detail": "Capacité défensive au choix (esquive contre plusieurs attaquants, ou repli protecteur)."
+        "titre": "Défense du Chasseur",
+        "detail": "Choisit une tactique défensive passive : Échapper à la horde (désavantage aux attaques d'opportunité contre toi), Volonté de fer (avantage aux sauvegardes contre la Peur) ou Défense multi-attaque (-4 aux jets d'attaque supplémentaires d'un ennemi qui t'a déjà touché ce tour).",
+        "sorts": [
+          {
+            "nom": "Restauration partielle (Lesser Restoration)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "+2 Dextérité — précision et dégâts améliorés."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 3",
-        "detail": "Immobiliser un être humanoïde et autres sorts de contrôle."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Invocation de projectiles (Conjure Barrage)",
+            "type": "nouveau",
+            "note": "cône de projectiles, bon nettoyage de groupe"
+          }
+        ]
       },
       {
         "niveau": 10,
         "titre": "Explorateur-né supérieur",
-        "detail": "Bonus d'exploration et de pistage renforcés."
+        "detail": "Ennemi juré et Explorateur-né supérieurs : un deuxième choix pour chacun. Dissimulation à vue : en restant immobile, devient Invisible avec un bonus de +10 en Discrétion."
       },
       {
         "niveau": 11,
-        "titre": "Volée de flèches supérieure",
-        "detail": "Capacité offensive de zone renforcée contre les groupes."
+        "titre": "Proie du chasseur supérieure",
+        "detail": "Renforce encore la capacité choisie au niveau 3 (Fracasseur de horde ou Massacreur de colosses)."
       },
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       }
     ],
     "equipement": [
