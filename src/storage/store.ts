@@ -1,6 +1,13 @@
 import { ecrireBrut, lireBrut } from './driver'
 import { lireJoueurId } from './identite'
-import { SAVE_VERSION, saveDataVide, type Campagne, type Personnage, type SaveData } from './schema'
+import {
+  SAVE_VERSION,
+  saveDataVide,
+  type Campagne,
+  type JoueurSession,
+  type Personnage,
+  type SaveData,
+} from './schema'
 
 function normaliserPersonnage(p: Partial<Personnage>): Personnage {
   return {
@@ -30,6 +37,9 @@ function normaliserCampagne(c: Partial<Campagne>): Campagne {
     compagnonsRecrutes: c.compagnonsRecrutes ?? [],
     sessionCode: c.sessionCode ?? null,
     sessionEstProprietaire: c.sessionEstProprietaire ?? false,
+    sessionTailleMax: c.sessionTailleMax ?? null,
+    sessionJoueurs: c.sessionJoueurs ?? [],
+    sessionConfirmee: c.sessionConfirmee ?? false,
   }
 }
 
@@ -102,6 +112,9 @@ export const saveStore = {
       compagnonsRecrutes: [],
       sessionCode: null,
       sessionEstProprietaire: false,
+      sessionTailleMax: null,
+      sessionJoueurs: [],
+      sessionConfirmee: false,
     }
     majEtat({
       ...etat,
@@ -353,7 +366,64 @@ export const saveStore = {
           ...c,
           sessionCode: null,
           sessionEstProprietaire: false,
+          sessionTailleMax: null,
+          sessionJoueurs: [],
+          sessionConfirmee: false,
           personnages: c.personnages.filter((p) => p.proprietaireId === null || p.proprietaireId === monId),
+        }
+      }),
+    })
+  },
+
+  definirSessionTailleMax(campagneId: string, taille: number | null) {
+    majEtat({
+      ...etat,
+      campagnes: etat.campagnes.map((c) => (c.id === campagneId ? { ...c, sessionTailleMax: taille } : c)),
+    })
+  },
+
+  definirSessionConfirmee(campagneId: string, confirmee: boolean) {
+    majEtat({
+      ...etat,
+      campagnes: etat.campagnes.map((c) => (c.id === campagneId ? { ...c, sessionConfirmee: confirmee } : c)),
+    })
+  },
+
+  /** Insère ou met à jour l'entrée d'UN joueur du roster (le mien ou un reçu d'un autre membre). */
+  appliquerJoueurSession(campagneId: string, joueur: JoueurSession) {
+    majEtat({
+      ...etat,
+      campagnes: etat.campagnes.map((c) => {
+        if (c.id !== campagneId) return c
+        const autres = c.sessionJoueurs.filter((j) => j.joueurId !== joueur.joueurId)
+        return { ...c, sessionJoueurs: [...autres, joueur].sort((a, b) => a.numero - b.numero) }
+      }),
+    })
+  },
+
+  /** Retire un joueur du roster (a quitté la session). */
+  retirerJoueurSession(campagneId: string, joueurId: string) {
+    majEtat({
+      ...etat,
+      campagnes: etat.campagnes.map((c) =>
+        c.id === campagneId
+          ? { ...c, sessionJoueurs: c.sessionJoueurs.filter((j) => j.joueurId !== joueurId) }
+          : c,
+      ),
+    })
+  },
+
+  /** Modifie MA propre entrée dans le roster (nom et/ou prêt) — le suivi de session (sessionSync)
+   * détecte le changement et le pousse vers Firebase, comme pour un personnage possédé. */
+  definirMonJoueurSession(campagneId: string, patch: Partial<Pick<JoueurSession, 'nom' | 'pret'>>) {
+    const monId = lireJoueurId()
+    majEtat({
+      ...etat,
+      campagnes: etat.campagnes.map((c) => {
+        if (c.id !== campagneId) return c
+        return {
+          ...c,
+          sessionJoueurs: c.sessionJoueurs.map((j) => (j.joueurId === monId ? { ...j, ...patch } : j)),
         }
       }),
     })

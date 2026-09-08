@@ -23,6 +23,16 @@ export interface Personnage {
   jalonsSombresCoches: string[]
 }
 
+export interface JoueurSession {
+  joueurId: string
+  /** Rang d'arrivée dans la session (1 = créateur), affiché "J1", "J2"... */
+  numero: number
+  /** Nom du joueur (distinct du nom de son personnage), modifiable à tout moment. */
+  nom: string
+  /** Coché manuellement par le joueur — togglable, jamais définitif. */
+  pret: boolean
+}
+
 export interface Campagne {
   id: string
   nom: string
@@ -33,6 +43,15 @@ export interface Campagne {
   sessionCode: string | null
   /** true si CE joueur a créé la session en cours — seul lui peut la supprimer pour tout le monde. */
   sessionEstProprietaire: boolean
+  /** Nombre de places choisi par le créateur à la création (2 à 4). Null pour une session créée
+   * avant l'ajout du lobby, ou hors session — dans ce cas pas d'écran lobby, l'app se comporte
+   * comme avant. */
+  sessionTailleMax: number | null
+  /** Roster des joueurs de la session (numéro, nom, prêt), synchronisé en direct. */
+  sessionJoueurs: JoueurSession[]
+  /** true une fois que l'hôte a confirmé le groupe — bascule vers l'app normale. Rien n'est
+   * verrouillé pour autant : les builds restent modifiables après. */
+  sessionConfirmee: boolean
 }
 
 export interface SaveData {

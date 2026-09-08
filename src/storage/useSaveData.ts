@@ -13,4 +13,4 @@ export function useEchecEcriture() {
 }
 
 export { saveStore } from './store'
-export type { Campagne, Personnage, SaveData, StyleJeu } from './schema'
+export type { Campagne, JoueurSession, Personnage, SaveData, StyleJeu } from './schema'

@@ -9,7 +9,13 @@ import {
 } from '../../session/sessionSync'
 import { sessionDisponible } from '../../session/firebaseClient'
 
+const TAILLES = [2, 3, 4]
+
 export function SessionSection({ campagne }: { campagne: Campagne }) {
+  const [etapeCreation, setEtapeCreation] = useState(false)
+  const [etapeRejoindre, setEtapeRejoindre] = useState(false)
+  const [monNom, setMonNom] = useState('')
+  const [taille, setTaille] = useState(4)
   const [codeSaisi, setCodeSaisi] = useState('')
   const [enCours, setEnCours] = useState(false)
   const [erreur, setErreur] = useState<string | null>(null)
@@ -26,9 +32,7 @@ export function SessionSection({ campagne }: { campagne: Campagne }) {
   }
 
   if (campagne.sessionCode) {
-    const nbJoueurs = new Set(
-      campagne.personnages.map((p) => p.proprietaireId).filter((id): id is string => id !== null),
-    ).size
+    const nbJoueurs = campagne.sessionJoueurs.length
 
     return (
       <Section title="Session de groupe">
@@ -55,7 +59,9 @@ export function SessionSection({ campagne }: { campagne: Campagne }) {
           <p className="mt-2 text-xs text-ink-muted">
             {nbJoueurs <= 1
               ? "Toi seul(e) pour l'instant."
-              : `${nbJoueurs} joueurs connectés à cette session.`}
+              : `${nbJoueurs} joueur(s) connecté(s)${
+                  campagne.sessionTailleMax ? ` sur ${campagne.sessionTailleMax}` : ''
+                }.`}
           </p>
         </div>
         {erreur && <p className="mt-2 text-xs text-essentiel">{erreur}</p>}
@@ -109,53 +115,141 @@ export function SessionSection({ campagne }: { campagne: Campagne }) {
     <Section title="Session de groupe">
       <p className="mb-2 text-xs leading-relaxed text-ink-muted">
         Rejoignez-vous à plusieurs (jusqu'à 4 joueurs) avec un code partagé : chacun voit les
-        builds des autres et l'app repère automatiquement les objets convoités par plusieurs
-        d'entre vous.
+        builds des autres en direct, avec un récap des synergies et des objets convoités par
+        plusieurs d'entre vous avant de vous lancer.
       </p>
-      <div className="flex flex-col gap-2">
-        <button
-          type="button"
-          disabled={enCours}
-          onClick={async () => {
-            setEnCours(true)
-            setErreur(null)
-            const resultat = await creerSession(campagne.id)
-            setEnCours(false)
-            if (!resultat.ok) setErreur(resultat.erreur)
-          }}
-          className="rounded-lg border border-glow/60 bg-glow/10 py-2.5 text-sm font-medium text-glow disabled:opacity-40"
-        >
-          Créer une session de groupe
-        </button>
+
+      {!etapeCreation && !etapeRejoindre && (
+        <div className="flex flex-col gap-2">
+          <button
+            type="button"
+            onClick={() => {
+              setErreur(null)
+              setEtapeCreation(true)
+            }}
+            className="rounded-lg border border-glow/60 bg-glow/10 py-2.5 text-sm font-medium text-glow disabled:opacity-40"
+          >
+            Créer une session de groupe
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setErreur(null)
+              setEtapeRejoindre(true)
+            }}
+            className="rounded-lg border border-border py-2.5 text-sm font-medium text-ink"
+          >
+            Rejoindre avec un code
+          </button>
+        </div>
+      )}
+
+      {etapeCreation && (
         <form
-          className="flex items-center gap-2"
+          className="flex flex-col gap-2.5"
           onSubmit={async (e) => {
             e.preventDefault()
             setEnCours(true)
             setErreur(null)
-            const resultat = await rejoindreSession(campagne.id, codeSaisi)
+            const resultat = await creerSession(campagne.id, taille, monNom)
+            setEnCours(false)
+            if (!resultat.ok) setErreur(resultat.erreur)
+          }}
+        >
+          <input
+            autoFocus
+            value={monNom}
+            onChange={(e) => setMonNom(e.target.value)}
+            placeholder="Ton nom"
+            maxLength={24}
+            className="rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:border-glow focus:outline-none"
+          />
+          <div>
+            <p className="mb-1.5 text-[11px] font-medium uppercase tracking-wide text-ink-muted">
+              Combien de joueurs ?
+            </p>
+            <div className="flex gap-1.5">
+              {TAILLES.map((t) => (
+                <button
+                  key={t}
+                  type="button"
+                  onClick={() => setTaille(t)}
+                  className={`flex-1 rounded-lg border py-2.5 text-sm font-medium transition-colors ${
+                    taille === t ? 'border-glow/70 bg-glow/15 text-glow' : 'border-border text-ink-muted'
+                  }`}
+                >
+                  {t}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={() => setEtapeCreation(false)}
+              className="flex-1 rounded-lg border border-border py-2.5 text-sm text-ink-muted"
+            >
+              Annuler
+            </button>
+            <button
+              type="submit"
+              disabled={enCours || !monNom.trim()}
+              className="flex-1 rounded-lg bg-gold py-2.5 text-sm font-medium text-bg disabled:opacity-40"
+            >
+              Créer
+            </button>
+          </div>
+          {erreur && <p className="text-xs text-essentiel">{erreur}</p>}
+        </form>
+      )}
+
+      {etapeRejoindre && (
+        <form
+          className="flex flex-col gap-2.5"
+          onSubmit={async (e) => {
+            e.preventDefault()
+            setEnCours(true)
+            setErreur(null)
+            const resultat = await rejoindreSession(campagne.id, codeSaisi, monNom)
             setEnCours(false)
             if (!resultat.ok) setErreur(resultat.erreur)
             else setCodeSaisi('')
           }}
         >
           <input
+            autoFocus
             value={codeSaisi}
             onChange={(e) => setCodeSaisi(e.target.value.toUpperCase())}
             placeholder="Code à 6 caractères"
             maxLength={6}
-            className="flex-1 rounded-lg border border-border bg-surface px-3 py-2.5 text-sm uppercase tracking-widest text-ink placeholder:text-ink-muted placeholder:normal-case placeholder:tracking-normal focus:border-glow focus:outline-none"
+            className="mb-2.5 rounded-lg border border-border bg-surface px-3 py-2.5 text-sm uppercase tracking-widest text-ink placeholder:text-ink-muted placeholder:normal-case placeholder:tracking-normal focus:border-glow focus:outline-none"
           />
-          <button
-            type="submit"
-            disabled={enCours || !codeSaisi.trim()}
-            className="shrink-0 rounded-lg border border-border px-3 py-2.5 text-sm font-medium text-ink disabled:opacity-40"
-          >
-            Rejoindre
-          </button>
+          <input
+            value={monNom}
+            onChange={(e) => setMonNom(e.target.value)}
+            placeholder="Ton nom"
+            maxLength={24}
+            className="mb-2.5 rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:border-glow focus:outline-none"
+          />
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={() => setEtapeRejoindre(false)}
+              className="flex-1 rounded-lg border border-border py-2.5 text-sm text-ink-muted"
+            >
+              Annuler
+            </button>
+            <button
+              type="submit"
+              disabled={enCours || !codeSaisi.trim() || !monNom.trim()}
+              className="flex-1 rounded-lg bg-gold py-2.5 text-sm font-medium text-bg disabled:opacity-40"
+            >
+              Rejoindre
+            </button>
+          </div>
+          {erreur && <p className="text-xs text-essentiel">{erreur}</p>}
         </form>
-        {erreur && <p className="text-xs text-essentiel">{erreur}</p>}
-      </div>
+      )}
     </Section>
   )
 }

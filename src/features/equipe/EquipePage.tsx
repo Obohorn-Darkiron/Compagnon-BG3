@@ -2,14 +2,13 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { PageHeader } from '../../components/PageHeader'
 import { RotateCcw, Sparkles, Trash } from '../../components/icons'
-import { builds } from '../../data'
 import { saveStore, useSaveData } from '../../storage/useSaveData'
-import { lireJoueurId } from '../../storage/identite'
-import { detacherSessionsPourCampagnes, retirerPersonnageDeSession } from '../../session/sessionSync'
-import { NouveauPersonnageForm } from './NouveauPersonnageForm'
+import { detacherSessionsPourCampagnes } from '../../session/sessionSync'
 import { GroupeApercu } from './GroupeApercu'
 import { CompagnonsSuivi } from './CompagnonsSuivi'
 import { SessionSection } from './SessionSection'
+import { SessionLobby } from './SessionLobby'
+import { PersonnagesListe } from './PersonnagesListe'
 import type { Campagne } from '../../storage/useSaveData'
 
 function CreerCampagne() {
@@ -193,66 +192,18 @@ export function EquipePage() {
 
       <SessionSection campagne={campagneActive} />
 
-      <GroupeApercu campagne={campagneActive} />
-
-      <div className="flex flex-col gap-3 px-4 py-4">
-        {campagneActive.personnages.map((perso) => {
-          const build = builds.find((b) => b.id === perso.buildId)
-          const estCoequipier = perso.proprietaireId !== null && perso.proprietaireId !== lireJoueurId()
-          return (
-            <div key={perso.id} className="rounded-xl border border-border bg-surface">
-              <Link
-                to={`/equipe/${perso.id}`}
-                className="flex items-center justify-between gap-3 p-4 active:bg-surface-raised"
-              >
-                <div className="min-w-0">
-                  <div className="flex items-center gap-1.5">
-                    <p className="truncate font-title text-lg font-semibold text-ink">{perso.nom}</p>
-                    {perso.compagnonNom && (
-                      <span className="shrink-0 rounded-full border border-glow/40 bg-glow/10 px-1.5 py-0.5 text-[10px] font-medium text-glow">
-                        Compagnon
-                      </span>
-                    )}
-                    {estCoequipier && (
-                      <span className="shrink-0 rounded-full border border-border px-1.5 py-0.5 text-[10px] font-medium text-ink-muted">
-                        Coéquipier
-                      </span>
-                    )}
-                  </div>
-                  <p className="truncate text-sm text-ink-muted">
-                    {build ? build.nom : 'Build à définir'}
-                  </p>
-                </div>
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gold-soft text-sm font-semibold text-gold">
-                  {perso.niveau}
-                </div>
-              </Link>
-              {estCoequipier && campagneActive.sessionCode && campagneActive.sessionEstProprietaire && (
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (
-                      confirm(
-                        `Retirer ${perso.nom} de la session ? Utile si cette personne ne revient pas — elle pourra recréer son personnage si elle rejoint plus tard.`,
-                      )
-                    ) {
-                      void retirerPersonnageDeSession(campagneActive.id, campagneActive.sessionCode!, perso.id)
-                    }
-                  }}
-                  className="w-full border-t border-border py-2 text-xs text-essentiel"
-                >
-                  Retirer de la session
-                </button>
-              )}
-            </div>
-          )
-        })}
-
-        <NouveauPersonnageForm campagne={campagneActive} />
-      </div>
-
-      <CompagnonsSuivi campagne={campagneActive} />
-      <div className="pb-6" />
+      {campagneActive.sessionCode &&
+      campagneActive.sessionTailleMax !== null &&
+      !campagneActive.sessionConfirmee ? (
+        <SessionLobby campagne={campagneActive} />
+      ) : (
+        <>
+          <GroupeApercu campagne={campagneActive} />
+          <PersonnagesListe campagne={campagneActive} />
+          <CompagnonsSuivi campagne={campagneActive} />
+          <div className="pb-6" />
+        </>
+      )}
     </div>
   )
 }
