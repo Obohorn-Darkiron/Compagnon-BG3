@@ -1206,12 +1206,16 @@
       {
         "niveau": 3,
         "titre": "Sous-classe Maître de guerre",
-        "detail": "Manœuvres débloquées : Frappe menaçante, Attaque au but, Riposte."
+        "detail": "4 dés de supériorité (d8, rechargés au repos court ou long). Manœuvres débloquées : Frappe menaçante (Effrayé si échec de sauvegarde), Attaque au but (+dé de supériorité au jet d'attaque après un jet raté) et Riposte (réaction après avoir été manqué en mêlée)."
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Grand Maître d'armes : option -5 au jet d'attaque pour +10 dégâts avec une arme lourde."
+        "detail": "",
+        "don": {
+          "nom": "Grand Maître d'armes / Great Weapon Master",
+          "effet": "Grand Maître d'armes : option -5 au jet d'attaque pour +10 dégâts avec une arme lourde."
+        }
       },
       {
         "niveau": 5,
@@ -1221,7 +1225,11 @@
       {
         "niveau": 6,
         "titre": "Deuxième don",
-        "detail": "+2 Force."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force",
+          "effet": "Augmente la précision, les dégâts et la charge portée."
+        }
       },
       {
         "niveau": 7,
@@ -1231,7 +1239,11 @@
       {
         "niveau": 8,
         "titre": "Troisième don",
-        "detail": "Résilient (Constitution) ou Chanceux selon le confort recherché."
+        "detail": "",
+        "don": {
+          "nom": "Résilient CON ou Chanceux",
+          "effet": "Résilient (Constitution) donne la maîtrise des sauvegardes de Constitution (protège la Concentration) ; Chanceux permet de relancer un jet raté jusqu'à 3 fois par repos long."
+        }
       },
       {
         "niveau": 9,
@@ -1241,7 +1253,7 @@
       {
         "niveau": 10,
         "titre": "Manœuvre et dé de supériorité supplémentaires",
-        "detail": "Une manœuvre de plus au répertoire, et un dé de supériorité additionnel par repos court."
+        "detail": "Dés de supériorité : passent en d10, plus un dé supplémentaire (5 au total). Deux manœuvres de plus au répertoire."
       },
       {
         "niveau": 11,
@@ -1251,7 +1263,11 @@
       {
         "niveau": 12,
         "titre": "Quatrième don — build terminé",
-        "detail": "Un dernier don libre pour peaufiner le build (précision, survie ou utilitaire)."
+        "detail": "",
+        "don": {
+          "nom": "Don libre",
+          "effet": "Un dernier don au choix pour peaufiner le build (précision, survie ou utilitaire)."
+        }
       }
     ],
     "equipement": [
@@ -3267,7 +3283,11 @@
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Grand Maître d'armes : option -5/+10 dégâts avec une arme lourde."
+        "detail": "",
+        "don": {
+          "nom": "Grand Maître d'armes",
+          "effet": "Option -5 au jet d'attaque pour +10 dégâts avec une arme lourde."
+        }
       },
       {
         "niveau": 5,
@@ -3277,7 +3297,11 @@
       {
         "niveau": 6,
         "titre": "Deuxième don",
-        "detail": "+2 Force."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force",
+          "effet": "Augmente la précision, les dégâts et la charge portée."
+        }
       },
       {
         "niveau": 7,
@@ -3287,7 +3311,11 @@
       {
         "niveau": 8,
         "titre": "Troisième don",
-        "detail": "Résilient (Constitution) ou Chanceux selon le confort recherché."
+        "detail": "",
+        "don": {
+          "nom": "Résilient CON ou Chanceux",
+          "effet": "Résilient (Constitution) donne la maîtrise des sauvegardes de Constitution (protège la Concentration) ; Chanceux permet de relancer un jet raté jusqu'à 3 fois par repos long."
+        }
       },
       {
         "niveau": 9,
@@ -3307,7 +3335,11 @@
       {
         "niveau": 12,
         "titre": "Quatrième don — build terminé",
-        "detail": "Un dernier don libre pour peaufiner le build (précision, survie ou utilitaire)."
+        "detail": "",
+        "don": {
+          "nom": "Don libre",
+          "effet": "Un dernier don au choix pour peaufiner le build (précision, survie ou utilitaire)."
+        }
       }
     ],
     "equipement": [
@@ -7825,7 +7857,7 @@
       {
         "niveau": 1,
         "titre": "Guerrier 1",
-        "detail": "Style de combat et Second souffle."
+        "detail": "Style de combat (Défense ou Duel recommandé) et Second souffle pour un peu de PV de secours."
       },
       {
         "niveau": 2,
@@ -7835,12 +7867,33 @@
       {
         "niveau": 3,
         "titre": "Sous-classe Chevalier occulte",
-        "detail": "Lanceur de sorts restreint (Magicien) et Lien arcanique : une arme peut être invoquée à la main."
+        "detail": "Lanceur de sorts restreint (liste de Magicien, DD à l'Intelligence) : les niveaux 3-6 imposent de choisir surtout dans les écoles d'Abjuration/Évocation. Lien arcanique : une arme liée peut être invoquée à la main et ne peut plus être désarmée.",
+        "sorts": [
+          {
+            "nom": "Lame tonnante (Booming Blade)",
+            "type": "toujoursPrepare",
+            "note": "cantrip, l'un des 2 connus au niveau 3 — synergise avec Guerre des sorts au niveau 7"
+          },
+          {
+            "nom": "Bouclier (Shield)",
+            "type": "toujoursPrepare",
+            "note": "sort toujours accessible, Abjuration"
+          },
+          {
+            "nom": "Projectile magique (Magic Missile)",
+            "type": "toujoursPrepare",
+            "note": "sort toujours accessible, Évocation"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Grand Maître d'armes : option -5/+10 dégâts avec une arme lourde."
+        "detail": "",
+        "don": {
+          "nom": "Grand Maître d'armes",
+          "effet": "Option -5 au jet d'attaque pour +10 dégâts avec une arme lourde."
+        }
       },
       {
         "niveau": 5,
@@ -7850,17 +7903,32 @@
       {
         "niveau": 6,
         "titre": "Deuxième don",
-        "detail": "+2 Force."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force",
+          "effet": "Augmente la précision, les dégâts et la charge portée."
+        }
       },
       {
         "niveau": 7,
         "titre": "Guerre des sorts",
-        "detail": "Après avoir lancé un cantrip (sort mineur), tu peux effectuer une attaque d'arme en action bonus."
+        "detail": "Après avoir lancé un cantrip (sort mineur), tu peux effectuer une attaque d'arme en action bonus.",
+        "sorts": [
+          {
+            "nom": "Contresort (Counterspell)",
+            "type": "toujoursPrepare",
+            "note": "sort toujours accessible, Abjuration"
+          }
+        ]
       },
       {
         "niveau": 8,
         "titre": "Troisième don",
-        "detail": "Doué (Skilled), ou tout don utilitaire selon la préférence."
+        "detail": "",
+        "don": {
+          "nom": "Doué",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
@@ -7870,7 +7938,14 @@
       {
         "niveau": 10,
         "titre": "Frappe occulte",
-        "detail": "Toucher avec une attaque d'arme inflige un désavantage à la cible sur son prochain jet de sauvegarde contre un sort que tu lances avant la fin de ton prochain tour."
+        "detail": "Toucher avec une attaque d'arme inflige un désavantage à la cible sur son prochain jet de sauvegarde contre un sort que tu lances avant la fin de ton prochain tour.",
+        "sorts": [
+          {
+            "nom": "Sort au choix (n'importe quelle école)",
+            "type": "toujoursPrepare",
+            "note": "à partir du niveau 7 d'Occulte-lame, la liste s'ouvre au-delà d'Abjuration/Évocation"
+          }
+        ]
       },
       {
         "niveau": 11,
@@ -7880,7 +7955,11 @@
       {
         "niveau": 12,
         "titre": "Quatrième don — build terminé",
-        "detail": "Un dernier don libre pour peaufiner le build."
+        "detail": "",
+        "don": {
+          "nom": "Don libre",
+          "effet": "Un dernier don au choix pour peaufiner le build (précision, survie ou utilitaire)."
+        }
       }
     ],
     "equipement": [
@@ -10638,12 +10717,16 @@
       {
         "niveau": 3,
         "titre": "Sous-classe Archer occulte",
-        "detail": "Tir de salve arcanique : les flèches peuvent exploser, ralentir ou percer la cible."
+        "detail": "4 Flèches arcaniques (repos court ou long). Choisit 3 Tirs de salve parmi : Flèche bannissante, Flèche enchanteresse (Charme), Flèche explosive (zone), Flèche affaiblissante, Flèche happante (Entravé), Flèche perçante (ligne), Flèche traqueuse (avantage garanti) ou Flèche des ombres (Aveuglement). Un cantrip au choix : Ligne directrice, Lumière ou Vrai coup."
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Tireur d'élite : ignore le désavantage à distance, option -5/+10 dégâts."
+        "detail": "",
+        "don": {
+          "nom": "Tireur d'élite",
+          "effet": "Ignore le désavantage à distance et le couvert léger/intermédiaire ; option -5 au jet d'attaque pour +10 dégâts."
+        }
       },
       {
         "niveau": 5,
@@ -10653,17 +10736,25 @@
       {
         "niveau": 6,
         "titre": "Deuxième don",
-        "detail": "+2 Dextérité."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 7,
         "titre": "Tir de salve amélioré",
-        "detail": "Options de tir de salve supplémentaires débloquées."
+        "detail": "Tir courbe (action bonus) : après un tir raté, retente sur la cible valide la plus proche. Flèche magique : tous tes tirs à distance comptent comme magiques. Flèches arcaniques : 4 → 7. Un quatrième Tir de salve débloqué."
       },
       {
         "niveau": 8,
         "titre": "Troisième don",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       },
       {
         "niveau": 9,
@@ -10673,7 +10764,7 @@
       {
         "niveau": 10,
         "titre": "Tir de salve renforcé",
-        "detail": "Les charges de Tir de salve arcanique passent à 10 par repos (pas illimité) et une option supplémentaire est débloquée."
+        "detail": "Flèches arcaniques : 7 → 10. Un cinquième Tir de salve débloqué."
       },
       {
         "niveau": 11,
@@ -10683,7 +10774,11 @@
       {
         "niveau": 12,
         "titre": "Quatrième don — build terminé",
-        "detail": "Un dernier don libre pour peaufiner le build."
+        "detail": "",
+        "don": {
+          "nom": "Don libre",
+          "effet": "Un dernier don au choix pour peaufiner le build (précision, survie ou utilitaire)."
+        }
       }
     ],
     "equipement": [
@@ -14151,7 +14246,11 @@
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Tireur d'élite : ignore le désavantage à distance, option -5/+10 dégâts."
+        "detail": "",
+        "don": {
+          "nom": "Tireur d'élite",
+          "effet": "Ignore le désavantage à distance et le couvert léger/intermédiaire ; option -5 au jet d'attaque pour +10 dégâts."
+        }
       },
       {
         "niveau": 5,
@@ -14161,7 +14260,11 @@
       {
         "niveau": 6,
         "titre": "Deuxième don",
-        "detail": "Alerte : +5 à l'initiative, impossible d'être surpris."
+        "detail": "",
+        "don": {
+          "nom": "Alerte",
+          "effet": "+5 à l'initiative, impossible d'être surpris."
+        }
       },
       {
         "niveau": 7,
@@ -14171,7 +14274,11 @@
       {
         "niveau": 8,
         "titre": "Troisième don",
-        "detail": "+2 Dextérité (18)."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 9,
@@ -14191,7 +14298,11 @@
       {
         "niveau": 12,
         "titre": "Quatrième don — build terminé",
-        "detail": "+2 Dextérité (20) — maximum naturel."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       }
     ],
     "equipement": [
@@ -15260,7 +15371,11 @@
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Grand Maître d'armes : option -5/+10 dégâts avec une arme lourde."
+        "detail": "",
+        "don": {
+          "nom": "Grand Maître d'armes",
+          "effet": "Option -5 au jet d'attaque pour +10 dégâts avec une arme lourde."
+        }
       },
       {
         "niveau": 5,
@@ -15270,7 +15385,11 @@
       {
         "niveau": 6,
         "titre": "Deuxième don",
-        "detail": "+2 Force."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force",
+          "effet": "Augmente la précision, les dégâts et la charge portée."
+        }
       },
       {
         "niveau": 7,
@@ -15280,7 +15399,11 @@
       {
         "niveau": 8,
         "titre": "Troisième don",
-        "detail": "Résilient (Constitution) ou Chanceux selon le confort recherché."
+        "detail": "",
+        "don": {
+          "nom": "Résilient CON ou Chanceux",
+          "effet": "Résilient (Constitution) donne la maîtrise des sauvegardes de Constitution (protège la Concentration) ; Chanceux permet de relancer un jet raté jusqu'à 3 fois par repos long."
+        }
       },
       {
         "niveau": 9,
@@ -15300,7 +15423,11 @@
       {
         "niveau": 12,
         "titre": "Quatrième don — build terminé",
-        "detail": "Un dernier don libre pour peaufiner le build (précision, survie ou utilitaire)."
+        "detail": "",
+        "don": {
+          "nom": "Don libre",
+          "effet": "Un dernier don au choix pour peaufiner le build (précision, survie ou utilitaire)."
+        }
       }
     ],
     "equipement": [
@@ -15427,12 +15554,16 @@
       {
         "niveau": 3,
         "titre": "Sous-classe Maître de guerre",
-        "detail": "Manœuvres débloquées : Frappe menaçante, Attaque au but, Riposte."
+        "detail": "4 dés de supériorité (d8, rechargés au repos court ou long). Manœuvres débloquées : Frappe menaçante (Effrayé si échec de sauvegarde), Attaque au but (+dé de supériorité au jet d'attaque après un jet raté) et Riposte (réaction après avoir été manqué en mêlée)."
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Sentinelle : punit les ennemis qui attaquent tes alliés ou tentent de fuir ta portée."
+        "detail": "",
+        "don": {
+          "nom": "Sentinelle",
+          "effet": "Réduit à 0 la vitesse d'un ennemi touché par une attaque d'opportunité, et permet d'attaquer en réaction un ennemi qui attaque un allié proche plutôt que toi."
+        }
       },
       {
         "niveau": 5,
@@ -15442,7 +15573,11 @@
       {
         "niveau": 6,
         "titre": "Deuxième don",
-        "detail": "+2 Force."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force",
+          "effet": "Augmente la précision, les dégâts et la charge portée."
+        }
       },
       {
         "niveau": 7,
@@ -15452,7 +15587,11 @@
       {
         "niveau": 8,
         "titre": "Troisième don",
-        "detail": "Robuste (plus de PV max) ou Résilient (Constitution) selon le confort recherché."
+        "detail": "",
+        "don": {
+          "nom": "Robuste ou Résilient CON",
+          "effet": "Robuste augmente les PV maximum de 2 par niveau ; Résilient (Constitution) donne la maîtrise des sauvegardes de Constitution (protège la Concentration)."
+        }
       },
       {
         "niveau": 9,
@@ -15462,7 +15601,7 @@
       {
         "niveau": 10,
         "titre": "Manœuvre et dé de supériorité supplémentaires",
-        "detail": "Une manœuvre de plus au répertoire, et un dé de supériorité additionnel par repos court."
+        "detail": "Dés de supériorité : passent en d10, plus un dé supplémentaire (5 au total). Deux manœuvres de plus au répertoire."
       },
       {
         "niveau": 11,
@@ -15472,7 +15611,11 @@
       {
         "niveau": 12,
         "titre": "Quatrième don — build terminé",
-        "detail": "Un dernier don libre pour peaufiner le build (précision, survie ou utilitaire)."
+        "detail": "",
+        "don": {
+          "nom": "Don libre",
+          "effet": "Un dernier don au choix pour peaufiner le build (précision, survie ou utilitaire)."
+        }
       }
     ],
     "equipement": [
@@ -15836,7 +15979,11 @@
       {
         "niveau": 7,
         "titre": "Premier don",
-        "detail": "Grand Maître d'armes : option -5 au jet d'attaque pour +10 dégâts avec une arme lourde."
+        "detail": "",
+        "don": {
+          "nom": "Grand Maître d'armes",
+          "effet": "Option -5 au jet d'attaque pour +10 dégâts avec une arme lourde."
+        }
       },
       {
         "niveau": 8,
@@ -15856,7 +16003,11 @@
       {
         "niveau": 11,
         "titre": "Deuxième don",
-        "detail": "+2 Force."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force",
+          "effet": "Augmente la précision, les dégâts et la charge portée."
+        }
       },
       {
         "niveau": 12,
@@ -16010,7 +16161,11 @@
       {
         "niveau": 7,
         "titre": "Premier don",
-        "detail": "+2 Dextérité — plus de précision, de dégâts et de Classe d'Armure (Défense sans armure)."
+        "detail": "",
+        "don": {
+          "nom": "+2 Dextérité",
+          "effet": "Augmente la précision, les dégâts et la Classe d'Armure."
+        }
       },
       {
         "niveau": 8,
@@ -16030,7 +16185,11 @@
       {
         "niveau": 11,
         "titre": "Deuxième don",
-        "detail": "Alerte : +5 à l'initiative, impossible d'être surpris — permet d'ouvrir le combat et de déclencher l'Attaque téméraire dès le premier tour."
+        "detail": "",
+        "don": {
+          "nom": "Alerte",
+          "effet": "+5 à l'initiative, impossible d'être surpris."
+        }
       },
       {
         "niveau": 12,
@@ -16192,7 +16351,11 @@
       {
         "niveau": 7,
         "titre": "Premier don",
-        "detail": "+2 Charisme."
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts et les jets d'attaque de sort."
+        }
       },
       {
         "niveau": 8,
@@ -16202,7 +16365,11 @@
       {
         "niveau": 9,
         "titre": "Deuxième don",
-        "detail": "Alerte : +5 à l'initiative, impossible d'être surpris."
+        "detail": "",
+        "don": {
+          "nom": "Alerte",
+          "effet": "+5 à l'initiative, impossible d'être surpris."
+        }
       },
       {
         "niveau": 10,
@@ -16212,7 +16379,11 @@
       {
         "niveau": 11,
         "titre": "Troisième don",
-        "detail": "+2 Charisme (18 ou plus selon le point de départ)."
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Augmente le DD des sorts et les jets d'attaque de sort."
+        }
       },
       {
         "niveau": 12,
