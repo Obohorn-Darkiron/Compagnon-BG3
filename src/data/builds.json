@@ -1617,12 +1617,28 @@
       {
         "niveau": 3,
         "titre": "Serment de Vengeance",
-        "detail": "Vœu d'inimitié : avantage aux attaques contre une cible désignée."
+        "detail": "Vœu d'inimitié : avantage aux attaques contre une cible désignée.",
+        "sorts": [
+          {
+            "nom": "Imprécation (Bane)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          },
+          {
+            "nom": "Marque du chasseur (Hunter's Mark)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Grand Maître d'armes : option -5/+10 dégâts avec une arme lourde."
+        "detail": "",
+        "don": {
+          "nom": "Grand Maître d'armes",
+          "effet": "Option -5 au jet d'attaque pour +10 dégâts avec une arme lourde — synergise avec Châtiment divin pour de gros pics de dégâts."
+        }
       },
       {
         "niveau": 5,
@@ -1652,7 +1668,11 @@
       {
         "niveau": 10,
         "titre": "Deuxième don",
-        "detail": "+2 Charisme — améliore à la fois les attaques liées et le DD des sorts d'Occultiste."
+        "detail": "",
+        "don": {
+          "nom": "+2 Charisme",
+          "effet": "Améliore à la fois les attaques liées au Pacte de la Lame et le DD des sorts d'Occultiste."
+        }
       },
       {
         "niveau": 11,
@@ -5560,62 +5580,110 @@
       {
         "niveau": 1,
         "titre": "Paladin 1",
-        "detail": "Sens divin et Imposition des mains (réserve de soin tactile)."
+        "detail": "Pas de sorts avant le niveau 2. Soin des mains (Lay on Hands) : 3 charges (4 au niveau 4, 5 au niveau 10), chacune rendant 1d4 PV ou soignant poison/maladie, en action bonus. Sens divin (repos court) : détecte les créatures célestes, fielonnes et morts-vivantes proches."
       },
       {
         "niveau": 2,
         "titre": "Châtiment divin",
-        "detail": "Sort qui ajoute des dégâts radiants massifs sur une attaque réussie. Style de combat choisi."
+        "detail": "Châtiment divin : dépense un emplacement de sort en réaction à une attaque de mêlée réussie pour infliger 2d8 dégâts radiants bonus (+1d8 contre les morts-vivants et les fiélons) — monte avec le niveau de l'emplacement dépensé."
       },
       {
         "niveau": 3,
         "titre": "Serment de Dévotion",
-        "detail": "Sacré-bouclier : réaction pour donner l'avantage à un allié sur sa prochaine sauvegarde."
+        "detail": "Arme sacrée (action bonus, Conduit du serment) : ton arme gagne le modificateur de Charisme au jet d'attaque et émet une lumière vive, pendant 1 minute. Bannir l'impie (action, Conduit du serment) : force les morts-vivants et fiélons proches à fuir et à ne plus pouvoir t'approcher.",
+        "sorts": [
+          {
+            "nom": "Protection contre le bien et le mal",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          },
+          {
+            "nom": "Sanctuaire (Sanctuary)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Grand Maître d'armes : option -5/+10 dégâts avec une arme lourde."
+        "detail": "",
+        "don": {
+          "nom": "Grand Maître d'armes",
+          "effet": "Option -5 au jet d'attaque pour +10 dégâts avec une arme lourde — synergise avec Attaque supplémentaire et Châtiment divin pour de gros pics de dégâts."
+        }
       },
       {
         "niveau": 5,
         "titre": "Attaque supplémentaire",
-        "detail": "Un second coup par action d'attaque."
+        "detail": "Attaque supplémentaire : un second coup par action d'attaque.",
+        "sorts": [
+          {
+            "nom": "Restauration partielle (Lesser Restoration)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          },
+          {
+            "nom": "Silence",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 6,
         "titre": "Aura de protection",
-        "detail": "Toi et les alliés proches gagnez un bonus aux sauvegardes égal à ton modificateur de Charisme (aucun don à ce niveau)."
+        "detail": "Aura de protection : toi et les alliés proches (3 m) ajoutez ton modificateur de Charisme à tous vos jets de sauvegarde — disparaît si tu tombes inconscient."
       },
       {
         "niveau": 7,
         "titre": "Aura de dévotion",
-        "detail": "Toi et les alliés proches êtes immunisés au Charme."
+        "detail": "Toi et les alliés proches ne pouvez plus être Charmés — disparaît si tu tombes inconscient."
       },
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "+2 Force ou Charisme."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force ou Charisme",
+          "effet": "Force pour la précision et les dégâts d'arme, ou Charisme pour le DD des sorts et Châtiment divin — selon ce qui manque le plus."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 3",
-        "detail": "Nouvel emplacement de sort de niveau 3."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Délivrance des malédictions (Remove Curse)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          },
+          {
+            "nom": "Lueur d'espoir (Beacon of Hope)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Aura étendue",
-        "detail": "Les auras du Paladin couvrent une zone plus large."
+        "titre": "Soin des mains renforcé + Aura de bravoure",
+        "detail": "Soin des mains passe à 5 charges. Aura de bravoure : toi et les alliés proches ne peuvent plus être Effrayés — disparaît si tu tombes inconscient."
       },
       {
         "niveau": 11,
         "titre": "Frappe sacrée",
-        "detail": "Les attaques d'arme infligent des dégâts radiants supplémentaires à chaque coup."
+        "detail": "Frappe sacrée (Improved Divine Smite) : tes attaques de mêlée infligent désormais automatiquement 1d8 dégâts radiants supplémentaires, sans consommer d'emplacement de sort — cumulable avec un Châtiment divin actif."
       },
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "Un dernier don libre pour maximiser le build."
+        "detail": "",
+        "don": {
+          "nom": "Don libre",
+          "effet": "Un dernier don au choix pour peaufiner le build (précision, survie ou utilitaire)."
+        }
       }
     ],
     "equipement": [
@@ -5746,62 +5814,110 @@
       {
         "niveau": 1,
         "titre": "Paladin 1",
-        "detail": "Sens divin et Imposition des mains (réserve de soin tactile)."
+        "detail": "Pas de sorts avant le niveau 2. Soin des mains (Lay on Hands) : 3 charges (4 au niveau 4, 5 au niveau 10), chacune rendant 1d4 PV ou soignant poison/maladie, en action bonus. Sens divin (repos court) : détecte les créatures célestes, fielonnes et morts-vivantes proches."
       },
       {
         "niveau": 2,
         "titre": "Châtiment divin",
-        "detail": "Sort qui ajoute des dégâts radiants massifs sur une attaque réussie. Style de combat choisi."
+        "detail": "Châtiment divin : dépense un emplacement de sort en réaction à une attaque de mêlée réussie pour infliger 2d8 dégâts radiants bonus (+1d8 contre les morts-vivants et les fiélons) — monte avec le niveau de l'emplacement dépensé."
       },
       {
         "niveau": 3,
         "titre": "Serment des Anciens",
-        "detail": "Flamme sacrée persistante : émet de la lumière et inflige des dégâts bonus contre les créatures maléfiques."
+        "detail": "Colère de la nature (action, Conduit du serment) : entrave une créature proche avec des lianes. Bannir les infidèles (action, Conduit du serment) : force les fées et fiélons proches à fuir.",
+        "sorts": [
+          {
+            "nom": "Communication avec les animaux (Speak with Animals)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, rituel, toujours accessible"
+          },
+          {
+            "nom": "Frappe entravante (Ensnaring Strike)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Grand Maître d'armes : option -5/+10 dégâts avec une arme lourde."
+        "detail": "",
+        "don": {
+          "nom": "Grand Maître d'armes",
+          "effet": "Option -5 au jet d'attaque pour +10 dégâts avec une arme lourde — synergise avec Attaque supplémentaire et Châtiment divin pour de gros pics de dégâts."
+        }
       },
       {
         "niveau": 5,
         "titre": "Attaque supplémentaire",
-        "detail": "Un second coup par action d'attaque."
+        "detail": "Attaque supplémentaire : un second coup par action d'attaque.",
+        "sorts": [
+          {
+            "nom": "Foulée brumeuse (Misty Step)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          },
+          {
+            "nom": "Rayon de lune (Moonbeam)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 6,
         "titre": "Aura de protection",
-        "detail": "Toi et les alliés proches gagnez un bonus aux sauvegardes égal à ton modificateur de Charisme (aucun don à ce niveau)."
+        "detail": "Aura de protection : toi et les alliés proches (3 m) ajoutez ton modificateur de Charisme à tous vos jets de sauvegarde — disparaît si tu tombes inconscient."
       },
       {
         "niveau": 7,
         "titre": "Aura de garde",
-        "detail": "Toi et les alliés proches subissez moins de dégâts contre certains effets naturels/du terrain."
+        "detail": "Toi et les alliés proches ne subissez que la moitié des dégâts des sorts — disparaît si tu tombes inconscient."
       },
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "+2 Force ou Charisme."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force ou Charisme",
+          "effet": "Force pour la précision et les dégâts d'arme, ou Charisme pour le DD des sorts et Châtiment divin — selon ce qui manque le plus."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 3",
-        "detail": "Nouvel emplacement de sort de niveau 3."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Protection contre l'énergie (Protection from Energy)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          },
+          {
+            "nom": "Croissance des plantes (Plant Growth)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Aura étendue",
-        "detail": "Les auras du Paladin couvrent une zone plus large."
+        "titre": "Soin des mains renforcé + Aura de bravoure",
+        "detail": "Soin des mains passe à 5 charges. Aura de bravoure : toi et les alliés proches ne peuvent plus être Effrayés — disparaît si tu tombes inconscient."
       },
       {
         "niveau": 11,
         "titre": "Frappe sacrée",
-        "detail": "Les attaques d'arme infligent des dégâts radiants supplémentaires à chaque coup."
+        "detail": "Frappe sacrée (Improved Divine Smite) : tes attaques de mêlée infligent désormais automatiquement 1d8 dégâts radiants supplémentaires, sans consommer d'emplacement de sort — cumulable avec un Châtiment divin actif."
       },
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "Un dernier don libre pour maximiser le build."
+        "detail": "",
+        "don": {
+          "nom": "Don libre",
+          "effet": "Un dernier don au choix pour peaufiner le build (précision, survie ou utilitaire)."
+        }
       }
     ],
     "equipement": [
@@ -12164,62 +12280,110 @@
       {
         "niveau": 1,
         "titre": "Paladin 1",
-        "detail": "Sens divin et Imposition des mains (réserve de soin tactile)."
+        "detail": "Pas de sorts avant le niveau 2. Soin des mains (Lay on Hands) : 3 charges (4 au niveau 4, 5 au niveau 10), chacune rendant 1d4 PV ou soignant poison/maladie, en action bonus. Sens divin (repos court) : détecte les créatures célestes, fielonnes et morts-vivantes proches."
       },
       {
         "niveau": 2,
         "titre": "Châtiment divin",
-        "detail": "Sort qui ajoute des dégâts radiants massifs sur une attaque réussie. Style de combat choisi."
+        "detail": "Châtiment divin : dépense un emplacement de sort en réaction à une attaque de mêlée réussie pour infliger 2d8 dégâts radiants bonus (+1d8 contre les morts-vivants et les fiélons) — monte avec le niveau de l'emplacement dépensé."
       },
       {
         "niveau": 3,
         "titre": "Serment de la Couronne",
-        "detail": "Défi de la Couronne : force une créature proche à concentrer ses attaques sur toi."
+        "detail": "Défi du champion (action, Conduit du serment) : force les ennemis proches à ne t'attaquer que toi — leurs attaques contre d'autres cibles ont le désavantage. Retourner la marée (action, Conduit du serment) : soigne tous les alliés proches.",
+        "sorts": [
+          {
+            "nom": "Injonction (Command)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          },
+          {
+            "nom": "Duel forcé (Compelled Duel)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Grand Maître d'armes : option -5/+10 dégâts avec une arme lourde."
+        "detail": "",
+        "don": {
+          "nom": "Grand Maître d'armes",
+          "effet": "Option -5 au jet d'attaque pour +10 dégâts avec une arme lourde — synergise avec Attaque supplémentaire et Châtiment divin pour de gros pics de dégâts."
+        }
       },
       {
         "niveau": 5,
         "titre": "Attaque supplémentaire",
-        "detail": "Un second coup par action d'attaque."
+        "detail": "Attaque supplémentaire : un second coup par action d'attaque.",
+        "sorts": [
+          {
+            "nom": "Lien de protection (Warding Bond)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          },
+          {
+            "nom": "Arme spirituelle (Spiritual Weapon)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 6,
         "titre": "Aura de protection",
-        "detail": "Toi et les alliés proches gagnez un bonus aux sauvegardes égal à ton modificateur de Charisme (aucun don à ce niveau)."
+        "detail": "Aura de protection : toi et les alliés proches (3 m) ajoutez ton modificateur de Charisme à tous vos jets de sauvegarde — disparaît si tu tombes inconscient."
       },
       {
         "niveau": 7,
-        "titre": "Zèle de la Couronne",
-        "detail": "Vitesse de déplacement bonus quand un allié proche est réduit à 0 PV ou effrayé."
+        "titre": "Allégeance divine",
+        "detail": "Réaction : quand un allié proche subit des dégâts, prends sa place — il récupère 2 × ton niveau de Paladin en PV, et tu subis 2 × ton niveau de Paladin en dégâts radiants."
       },
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "+2 Force ou Charisme selon la priorité recherchée."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force ou Charisme",
+          "effet": "Force pour la précision et les dégâts d'arme, ou Charisme pour le DD des sorts et Châtiment divin — selon ce qui manque le plus."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 3",
-        "detail": "Nouvel emplacement de sort de niveau 3."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Esprits gardiens (Spirit Guardians)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          },
+          {
+            "nom": "Aura du croisé (Crusader's Mantle)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Aura étendue",
-        "detail": "Les auras du Paladin couvrent une zone plus large."
+        "titre": "Soin des mains renforcé + Aura de bravoure",
+        "detail": "Soin des mains passe à 5 charges. Aura de bravoure : toi et les alliés proches ne peuvent plus être Effrayés — disparaît si tu tombes inconscient."
       },
       {
         "niveau": 11,
         "titre": "Frappe sacrée",
-        "detail": "Les attaques d'arme infligent des dégâts radiants supplémentaires à chaque coup."
+        "detail": "Frappe sacrée (Improved Divine Smite) : tes attaques de mêlée infligent désormais automatiquement 1d8 dégâts radiants supplémentaires, sans consommer d'emplacement de sort — cumulable avec un Châtiment divin actif."
       },
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       }
     ],
     "equipement": [
@@ -12336,7 +12500,7 @@
     "sortsCles": [
       "Châtiment divin",
       "Ténèbres",
-      "Réprimande infernale"
+      "Représailles infernales"
     ],
     "jalons": [
       {
@@ -12348,62 +12512,110 @@
       {
         "niveau": 1,
         "titre": "Paladin 1",
-        "detail": "Sens divin et Imposition des mains (réserve de soin tactile)."
+        "detail": "Pas de sorts avant le niveau 2. Soin des mains (Lay on Hands) : 3 charges (4 au niveau 4, 5 au niveau 10), chacune rendant 1d4 PV ou soignant poison/maladie, en action bonus. Sens divin (repos court) : détecte les créatures célestes, fielonnes et morts-vivantes proches."
       },
       {
         "niveau": 2,
         "titre": "Châtiment divin",
-        "detail": "Sort qui ajoute des dégâts radiants massifs sur une attaque réussie. Style de combat choisi."
+        "detail": "Châtiment divin : dépense un emplacement de sort en réaction à une attaque de mêlée réussie pour infliger 2d8 dégâts radiants bonus (+1d8 contre les morts-vivants et les fiélons) — monte avec le niveau de l'emplacement dépensé."
       },
       {
         "niveau": 3,
         "titre": "Serment du Parjure",
-        "detail": "Aura de domination : effraie les ennemis proches, une fois par repos long. Accès à des sorts nécrotiques."
+        "detail": "Contrôler les morts-vivants (action, Conduit du serment) : prend le contrôle d'un mort-vivant proche, qui te suit et attaque tes ennemis. Aspect effroyable (action, Conduit du serment) : effraie les ennemis proches.",
+        "sorts": [
+          {
+            "nom": "Représailles infernales (Hellish Rebuke)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          },
+          {
+            "nom": "Blessure (Inflict Wounds)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Grand Maître d'armes : option -5/+10 dégâts avec une arme lourde."
+        "detail": "",
+        "don": {
+          "nom": "Grand Maître d'armes",
+          "effet": "Option -5 au jet d'attaque pour +10 dégâts avec une arme lourde — synergise avec Attaque supplémentaire et Châtiment divin pour de gros pics de dégâts."
+        }
       },
       {
         "niveau": 5,
         "titre": "Attaque supplémentaire",
-        "detail": "Un second coup par action d'attaque."
+        "detail": "Attaque supplémentaire : un second coup par action d'attaque.",
+        "sorts": [
+          {
+            "nom": "Couronne du dément (Crown of Madness)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          },
+          {
+            "nom": "Ténèbres (Darkness)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 6,
         "titre": "Aura de protection",
-        "detail": "Toi et les alliés proches gagnez un bonus aux sauvegardes égal à ton modificateur de Charisme (aucun don à ce niveau)."
+        "detail": "Aura de protection : toi et les alliés proches (3 m) ajoutez ton modificateur de Charisme à tous vos jets de sauvegarde — disparaît si tu tombes inconscient."
       },
       {
         "niveau": 7,
-        "titre": "Volonté brisée",
-        "detail": "Renforce l'effet de peur sur les ennemis marqués par l'Aura de domination."
+        "titre": "Aura de haine",
+        "detail": "Toi et les fiélons/morts-vivants proches ajoutez votre modificateur de Charisme aux dégâts des attaques de mêlée à l'arme — disparaît si tu tombes inconscient."
       },
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "+2 Force ou Charisme selon la priorité recherchée."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force ou Charisme",
+          "effet": "Force pour la précision et les dégâts d'arme, ou Charisme pour le DD des sorts et Châtiment divin — selon ce qui manque le plus."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 3",
-        "detail": "Nouvel emplacement de sort de niveau 3."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Malédiction (Bestow Curse)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          },
+          {
+            "nom": "Animation des morts (Animate Dead)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Aura étendue",
-        "detail": "Les auras du Paladin couvrent une zone plus large."
+        "titre": "Soin des mains renforcé + Aura de bravoure",
+        "detail": "Soin des mains passe à 5 charges. Aura de bravoure : toi et les alliés proches ne peuvent plus être Effrayés — disparaît si tu tombes inconscient."
       },
       {
         "niveau": 11,
         "titre": "Frappe sacrée",
-        "detail": "Les attaques d'arme infligent des dégâts nécrotiques supplémentaires à chaque coup."
+        "detail": "Frappe sacrée (Improved Divine Smite) : tes attaques de mêlée infligent désormais automatiquement 1d8 dégâts radiants supplémentaires, sans consommer d'emplacement de sort — cumulable avec un Châtiment divin actif."
       },
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "Doué : trois compétences maîtrisées supplémentaires."
+        "detail": "",
+        "don": {
+          "nom": "Doué (Skilled)",
+          "effet": "Ajoute trois compétences maîtrisées au choix."
+        }
       }
     ],
     "equipement": [
@@ -13936,62 +14148,110 @@
       {
         "niveau": 1,
         "titre": "Paladin 1",
-        "detail": "Sens divin et Imposition des mains (réserve de soin tactile)."
+        "detail": "Pas de sorts avant le niveau 2. Soin des mains (Lay on Hands) : 3 charges (4 au niveau 4, 5 au niveau 10), chacune rendant 1d4 PV ou soignant poison/maladie, en action bonus. Sens divin (repos court) : détecte les créatures célestes, fielonnes et morts-vivantes proches."
       },
       {
         "niveau": 2,
         "titre": "Châtiment divin",
-        "detail": "Sort qui ajoute des dégâts radiants massifs sur une attaque réussie, surtout rentable sur un critique. Style de combat choisi."
+        "detail": "Châtiment divin : dépense un emplacement de sort en réaction à une attaque de mêlée réussie pour infliger 2d8 dégâts radiants bonus (+1d8 contre les morts-vivants et les fiélons) — monte avec le niveau de l'emplacement dépensé."
       },
       {
         "niveau": 3,
         "titre": "Serment de Vengeance",
-        "detail": "Défi vengeur (marque une cible, avantage contre elle) et Traque implacable (vitesse bonus pour la poursuivre)."
+        "detail": "Abjurer l'ennemi (action, Conduit du serment) : effraie un ennemi, qui subit le désavantage aux tests et jets d'attaque et ne peut plus se déplacer. Vœu d'inimitié (action bonus, Conduit du serment) : avantage à tes jets d'attaque contre un ennemi choisi.",
+        "sorts": [
+          {
+            "nom": "Imprécation (Bane)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          },
+          {
+            "nom": "Marque du chasseur (Hunter's Mark)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "+2 Force (18)."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force",
+          "effet": "Augmente la précision, les dégâts et la charge portée."
+        }
       },
       {
         "niveau": 5,
         "titre": "Attaque supplémentaire",
-        "detail": "Un second coup par action d'attaque."
+        "detail": "Attaque supplémentaire : un second coup par action d'attaque.",
+        "sorts": [
+          {
+            "nom": "Foulée brumeuse (Misty Step)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          },
+          {
+            "nom": "Immobilisation de personne (Hold Person)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 6,
         "titre": "Aura de protection",
-        "detail": "Toi et les alliés proches gagnez un bonus aux sauvegardes égal à ton modificateur de Charisme."
+        "detail": "Aura de protection : toi et les alliés proches (3 m) ajoutez ton modificateur de Charisme à tous vos jets de sauvegarde — disparaît si tu tombes inconscient."
       },
       {
         "niveau": 7,
-        "titre": "Détermination implacable",
-        "detail": "Un échec critique contre un jet de Peur ou de Charme peut être relancé."
+        "titre": "Vengeur implacable",
+        "detail": "Si tu touches un ennemi avec une attaque d'opportunité, ta vitesse de déplacement augmente de 4,5 m jusqu'à ton prochain tour — poursuis les ennemis qui fuient."
       },
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "Grand Maître d'armes : option -5/+10 dégâts avec une arme lourde."
+        "detail": "",
+        "don": {
+          "nom": "Grand Maître d'armes",
+          "effet": "Option -5 au jet d'attaque pour +10 dégâts avec une arme lourde — synergise avec Attaque supplémentaire et Châtiment divin pour de gros pics de dégâts."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 3",
-        "detail": "Nouvel emplacement de sort de niveau 3 — encore plus de Châtiments divins par jour."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Hâte (Haste)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          },
+          {
+            "nom": "Protection contre l'énergie (Protection from Energy)",
+            "type": "toujoursPrepare",
+            "note": "sort de serment, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Aura étendue",
-        "detail": "Les auras du Paladin couvrent une zone plus large."
+        "titre": "Soin des mains renforcé + Aura de bravoure",
+        "detail": "Soin des mains passe à 5 charges. Aura de bravoure : toi et les alliés proches ne peuvent plus être Effrayés — disparaît si tu tombes inconscient."
       },
       {
         "niveau": 11,
         "titre": "Frappe sacrée",
-        "detail": "Les attaques d'arme infligent des dégâts radiants supplémentaires à chaque coup, sans dépenser d'emplacement."
+        "detail": "Frappe sacrée (Improved Divine Smite) : tes attaques de mêlée infligent désormais automatiquement 1d8 dégâts radiants supplémentaires, sans consommer d'emplacement de sort — cumulable avec un Châtiment divin actif."
       },
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "+2 Force (20) — maximum naturel."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force",
+          "effet": "Force à 20, le maximum naturel — dégâts et précision au plus haut."
+        }
       }
     ],
     "equipement": [
