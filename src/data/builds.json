@@ -2233,7 +2233,7 @@
     "dons": [
       "+2 Sagesse (niv 4)",
       "+2 Sagesse (niv 8)",
-      "Vigilant (niv 12)"
+      "Alerte (niv 12)"
     ],
     "sortsCles": [
       "Rayon de lune (Moonbeam)",
@@ -2255,63 +2255,128 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Lanceur de sorts",
-        "detail": "Tours de magie : Flamme, Fouet épineux. Sorts : Mot de guérison, Foulée allongée, Lueurs féeriques, Couteau de glace."
+        "titre": "Sorts de départ",
+        "detail": "Sorts préparés chaque jour : niveau de Druide + modificateur de Sagesse (minimum 1), modifiable hors combat — accès à toute la liste de sorts du Druide, pas une liste figée. 2 cantrips connus (3 au niveau 4).",
+        "sorts": [
+          {
+            "nom": "Résistance (Resistance)",
+            "type": "nouveau",
+            "note": "cantrip de départ"
+          },
+          {
+            "nom": "Bénédiction (Bless)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "Cercle des étoiles",
-        "detail": "Trois Formes étoilées débloquées (Dragon, Archer, Calice), plus 2 Cartes stellaires : Rayon traçant lancé sans dépenser d'emplacement."
+        "titre": "Spécialisation : Cercle des étoiles",
+        "detail": "Carte stellaire : 2 charges (repos long), lance Rayon traçant (Guiding Bolt) sans consommer d'emplacement. Forme stellaire (dépense une charge de Forme sauvage) : te change en constellation au choix — Archer (dégâts radiants à distance en action bonus), Calice (soin bonus sur tes sorts de soin) ou Dragon (protège ta Concentration et inflige des dégâts radiants en cône).",
+        "sorts": [
+          {
+            "nom": "Rayon traçant (Guiding Bolt)",
+            "type": "toujoursPrepare",
+            "note": "sort de cercle, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Croissance d'épines et Rayon de lune appris — un seul actif à la fois (même Concentration)."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Rayon de lune (Moonbeam)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Sagesse (18). Tour de magie Gourdin magique."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Augmente le DD des sorts, les soins et les jets de sauvegarde de Sagesse."
+        }
       },
       {
         "niveau": 5,
-        "titre": "Sorts de niveau 3",
-        "detail": "Appel de la foudre (dégâts de zone chaque tour) et Croissance végétale (sans Concentration) appris."
+        "titre": "Sorts de niveau 3 + Carte stellaire renforcée",
+        "detail": "Passe à 3 charges de Carte stellaire. Souffle éblouissant (forme Dragon) monte à 3d6.",
+        "sorts": [
+          {
+            "nom": "Appel de la foudre (Call Lightning)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Présage cosmique",
-        "detail": "Au repos long, obtient une Faveur (+1d6) ou un Malheur (-1d6) pour la journée. Nouvelles formes sauvages : panthère, ours-hibou."
+        "titre": "Capacité de cercle : Présage cosmique",
+        "detail": "Au repos long, consulte le Bien ou le Mal : 3 charges (repos long) pour ajouter ou retirer 1d6 à un jet d'attaque ou de sauvegarde proche (le Bien peut aussi améliorer un test de caractéristique allié)."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Tempête de glace (zone immédiate sans Concentration) et Liberté de mouvement appris."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Liberté de mouvement (Freedom of Movement)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "+2 Sagesse (20) — meilleur DD naturel, contrôles bien plus fiables."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Renforce encore le DD des sorts et les soins."
+        }
       },
       {
         "niveau": 9,
-        "titre": "Sorts de niveau 5",
-        "detail": "Fléau d'insectes (grande zone + terrain difficile) et Soins de groupe appris."
+        "titre": "Sorts de niveau 5 + Carte stellaire renforcée",
+        "detail": "Passe à 4 charges de Carte stellaire.",
+        "sorts": [
+          {
+            "nom": "Fléau d'insectes (Insect Plague)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Soins de groupe (Mass Cure Wounds)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Constellations scintillantes",
-        "detail": "Archer et Calice gagnent +1d8, le Dragon peut voler, et le changement de forme devient gratuit une fois par tour."
+        "titre": "Capacité de cercle : Constellations scintillantes",
+        "detail": "Une fois par tour, change gratuitement de Forme stellaire. Les dégâts et soins bonus de chaque forme augmentent encore."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Festin des héros ou Rayon de soleil, selon la préférence (préparation longue vs attaque répétable)."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "Vigilant recommandé (agir tôt pour poser sa zone avant que les ennemis se dispersent)."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "Alerte",
+          "effet": "+5 à l'initiative, impossible d'être surpris."
+        }
       }
     ],
     "equipement": [
@@ -2442,63 +2507,152 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Druide 1",
-        "detail": "Lanceur de sorts et premiers cantrips de nature. Forme sauvage pas encore débloquée."
+        "titre": "Sorts de départ",
+        "detail": "Sorts préparés chaque jour : niveau de Druide + modificateur de Sagesse (minimum 1), modifiable hors combat — accès à toute la liste de sorts du Druide, pas une liste figée. 2 cantrips connus (3 au niveau 4).",
+        "sorts": [
+          {
+            "nom": "Fouet épineux (Thorn Whip)",
+            "type": "nouveau",
+            "note": "cantrip de départ, tire la cible vers toi"
+          },
+          {
+            "nom": "Toile d'araignée (Web)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "Cercle des spores",
-        "detail": "Halo de spores (dégâts aux ennemis proches) et Entité symbiotique (PV temporaires + dégâts nécrotiques en mêlée). Forme sauvage débloquée."
+        "titre": "Spécialisation : Cercle des spores",
+        "detail": "Halo de spores (réaction) : inflige des dégâts nécrotiques à toute créature qui termine son tour proche de toi. Entité symbiotique (dépense une charge de Forme sauvage) : PV temporaires + dégâts nécrotiques bonus sur tes attaques, et double les dégâts du Halo de spores tant qu'actif.",
+        "sorts": [
+          {
+            "nom": "Contact glacial (Bone Chill)",
+            "type": "toujoursPrepare",
+            "note": "cantrip de cercle, toujours accessible — renommé Bone Chill dans BG3, identique à Chill Touch"
+          }
+        ]
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de contrôle ou d'invocation supplémentaire."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Rayon de lune (Moonbeam)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Cécité/Surdité (Blindness)",
+            "type": "toujoursPrepare",
+            "note": "sort de cercle, toujours accessible"
+          },
+          {
+            "nom": "Détection des pensées (Detect Thoughts)",
+            "type": "toujoursPrepare",
+            "note": "sort de cercle, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Sagesse (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Augmente le DD des sorts, les soins et les jets de sauvegarde de Sagesse."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Nouvel emplacement de niveau 3, plus de dégâts de zone disponibles."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Animation des morts (Animate Dead)",
+            "type": "toujoursPrepare",
+            "note": "sort de cercle, toujours accessible"
+          },
+          {
+            "nom": "Forme gazeuse (Gaseous Form)",
+            "type": "toujoursPrepare",
+            "note": "sort de cercle, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Corps de spores",
-        "detail": "Possibilité de relever un mort-vivant allié à la mort d'une créature proche."
+        "titre": "Capacité de cercle : Corps de spores",
+        "detail": "Le Halo de spores inflige plus de dégâts. Infestation fongique (réaction, 4 charges par repos long) : relève un zombie moisi à partir d'un cadavre proche, actif jusqu'au prochain repos long."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : contrôle ou soutien avancé."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Flétrissement (Blight)",
+            "type": "toujoursPrepare",
+            "note": "sort de cercle, toujours accessible"
+          },
+          {
+            "nom": "Confusion",
+            "type": "toujoursPrepare",
+            "note": "sort de cercle, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Guerrier de guerre (War Caster) ou Résilient selon le confort recherché."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Guerrier de guerre (War Caster)",
+          "effet": "Permet de lancer des sorts avec des composantes verbales/gestuelles même les mains occupées, et donne l'avantage aux jets de Concentration."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Nouvel emplacement de haut niveau pour les grosses invocations ou zones."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Brume mortelle (Cloudkill)",
+            "type": "toujoursPrepare",
+            "note": "sort de cercle, toujours accessible"
+          },
+          {
+            "nom": "Contagion",
+            "type": "toujoursPrepare",
+            "note": "sort de cercle, toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Propagation des spores",
-        "detail": "Crée un nuage de spores en action bonus qui blesse les ennemis proches."
+        "titre": "Capacité de cercle : Propagation des spores",
+        "detail": "Le Halo de spores inflige encore plus de dégâts. Dispersion des spores (action bonus) : ensemence une zone de spores mortelles, dégâts nécrotiques chaque tour à qui les respire (sauf toi et tes alliés)."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Sagesse (20) — maximum naturel, DD des sorts au plus haut."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Sagesse à 20, le maximum naturel."
+        }
       }
     ],
     "equipement": [
@@ -7647,63 +7801,121 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Druide 1",
-        "detail": "Lanceur de sorts et premiers cantrips de nature."
+        "titre": "Sorts de départ",
+        "detail": "Sorts préparés chaque jour : niveau de Druide + modificateur de Sagesse (minimum 1), modifiable hors combat — accès à toute la liste de sorts du Druide, pas une liste figée. 2 cantrips connus (3 au niveau 4).",
+        "sorts": [
+          {
+            "nom": "Fouet épineux (Thorn Whip)",
+            "type": "nouveau",
+            "note": "cantrip de départ"
+          },
+          {
+            "nom": "Bénédiction (Bless)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "Cercle de la Lune",
-        "detail": "Formes sauvages de combat débloquées (ours, loup...) avec PV bonus. Changer de forme ne coûte qu'une action bonus."
+        "titre": "Spécialisation : Cercle de la Lune",
+        "detail": "Forme sauvage de combat : 2 charges par repos court (au lieu d'1 par repos long), utilisable en action bonus. Débloque l'Ours (30 PV, capacité pour attirer l'attention des ennemis)."
       },
       {
         "niveau": 3,
         "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de contrôle ou d'invocation supplémentaire."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Rayon de lune (Moonbeam)",
+            "type": "nouveau"
+          },
+          {
+            "nom": "Croissance d'épines (Spike Growth)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "Bagarreur de taverne : ajoute le mod de Force aux dégâts en forme animale (via la Force de la forme sauvage, aucun inconvénient)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Bagarreur de taverne (Tavern Brawler)",
+          "effet": "+1 Force ou Constitution, dégâts à mains nues améliorés, avantage aux jets d'attaque à mains nues — profite directement aux attaques en Forme sauvage."
+        }
       },
       {
         "niveau": 5,
-        "titre": "Sorts de niveau 3",
-        "detail": "Croissance d'épines et autres sorts de contrôle naturel."
+        "titre": "Sorts de niveau 3 + Corbeau funeste",
+        "detail": "Débloque la forme Corbeau funeste (13 PV, discrétion et aveuglement de l'ennemi).",
+        "sorts": [
+          {
+            "nom": "Appel de la foudre (Call Lightning)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Frappe de la lune",
-        "detail": "Peut dépenser un emplacement de sort en forme sauvage pour infliger des dégâts radiants supplémentaires."
+        "titre": "Capacité de cercle : Frappe primordiale",
+        "detail": "Tes attaques en forme de bête comptent comme magiques pour outrepasser la résistance et l'immunité aux dégâts non-magiques."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : contrôle ou soutien avancé."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Tempête de glace (Ice Storm)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Guerrier de guerre (War Caster) ou Résilient selon le confort recherché."
+        "titre": "Nouveau don + Tigre à dents de sabre",
+        "detail": "Débloque la forme Tigre à dents de sabre (griffes qui déchirent l'armure, régénération de PV).",
+        "don": {
+          "nom": "Guerrier de guerre (War Caster)",
+          "effet": "Permet de lancer des sorts avec des composantes verbales/gestuelles même les mains occupées, et donne l'avantage aux jets de Concentration."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Soins de groupe et autres sorts de haut niveau."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Soins de groupe (Mass Cure Wounds)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Formes supérieures",
-        "detail": "Accès à des formes sauvages encore plus résistantes."
+        "titre": "Capacité de cercle : Formes supérieures",
+        "detail": "Débloque les 4 formes de myrmidon élémentaire (Air, Terre, Feu, Eau), chacune coûtant 2 charges de Forme sauvage, avec 90 à 103 PV de départ et des capacités uniques."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Sagesse (20) — maximum naturel, DD des sorts au plus haut."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Sagesse à 20, le maximum naturel."
+        }
       }
     ],
     "equipement": [
@@ -9719,63 +9931,141 @@
     "progression": [
       {
         "niveau": 1,
-        "titre": "Druide 1",
-        "detail": "Lanceur de sorts et premiers cantrips de nature."
+        "titre": "Sorts de départ",
+        "detail": "Sorts préparés chaque jour : niveau de Druide + modificateur de Sagesse (minimum 1), modifiable hors combat — accès à toute la liste de sorts du Druide, pas une liste figée. 2 cantrips connus (3 au niveau 4).",
+        "sorts": [
+          {
+            "nom": "Fouet épineux (Thorn Whip)",
+            "type": "nouveau",
+            "note": "cantrip de départ"
+          },
+          {
+            "nom": "Bénédiction (Bless)",
+            "type": "nouveau"
+          }
+        ]
       },
       {
         "niveau": 2,
-        "titre": "Cercle de la Terre",
-        "detail": "Sorts de domaine supplémentaires toujours préparés. Récupération naturelle hors combat."
+        "titre": "Spécialisation : Cercle de la Terre",
+        "detail": "Cantrip bonus : un cantrip supplémentaire au choix dans la liste du Druide. Récupération naturelle : 1 charge (repos long) pour restaurer des emplacements de sort hors combat (jusqu'au niveau 5 combiné)."
       },
       {
         "niveau": 3,
-        "titre": "Sorts de niveau 2",
-        "detail": "Nouvel emplacement : sort de contrôle ou d'invocation."
+        "titre": "Sorts de niveau 2 + Terrain : Forêt",
+        "detail": "Choisis un terrain (Forêt recommandée) : ses sorts associés sont toujours préparés, sans consommer d'emplacement.",
+        "sorts": [
+          {
+            "nom": "Peau d'écorce (Barkskin)",
+            "type": "toujoursPrepare",
+            "note": "sort de terrain (Forêt), toujours accessible"
+          },
+          {
+            "nom": "Immobilisation de personne (Hold Person)",
+            "type": "toujoursPrepare",
+            "note": "sort de terrain (Forêt), toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 4,
-        "titre": "Premier don",
-        "detail": "+2 Sagesse (18)."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Augmente le DD des sorts, les soins et les jets de sauvegarde de Sagesse."
+        }
       },
       {
         "niveau": 5,
         "titre": "Sorts de niveau 3",
-        "detail": "Croissance d'épines et autres sorts de zone."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Appel de la foudre (Call Lightning)",
+            "type": "toujoursPrepare",
+            "note": "sort de terrain (Forêt), toujours accessible"
+          },
+          {
+            "nom": "Croissance des plantes (Plant Growth)",
+            "type": "toujoursPrepare",
+            "note": "sort de terrain (Forêt), toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 6,
-        "titre": "Capacité de sous-classe",
-        "detail": "Renforce la résistance à un type de sort selon le terrain."
+        "titre": "Capacité de cercle : Foulée agile",
+        "detail": "Le terrain difficile ne te ralentit plus, avantage aux sauvegardes contre les plantes magiques entravantes, et les surfaces à épines/pointes ne te blessent plus."
       },
       {
         "niveau": 7,
         "titre": "Sorts de niveau 4",
-        "detail": "Nouvel emplacement : contrôle ou soutien avancé."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Invocation d'élémentaires mineurs (Conjure Minor Elementals)",
+            "type": "toujoursPrepare",
+            "note": "sort de terrain (Forêt), toujours accessible"
+          },
+          {
+            "nom": "Liane avide (Grasping Vine)",
+            "type": "toujoursPrepare",
+            "note": "sort de terrain (Forêt), toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 8,
-        "titre": "Deuxième don",
-        "detail": "Guerrier de guerre (War Caster) : avantage aux jets de sauvegarde de Concentration, lance des sorts à composantes gestuelles mains occupées."
+        "titre": "Nouveau don",
+        "detail": "",
+        "don": {
+          "nom": "Guerrier de guerre (War Caster)",
+          "effet": "Permet de lancer des sorts avec des composantes verbales/gestuelles même les mains occupées, et donne l'avantage aux jets de Concentration."
+        }
       },
       {
         "niveau": 9,
         "titre": "Sorts de niveau 5",
-        "detail": "Nouvel emplacement de haut niveau."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Soins de groupe (Mass Cure Wounds)",
+            "type": "toujoursPrepare",
+            "note": "sort de terrain (Forêt), toujours accessible"
+          },
+          {
+            "nom": "Contagion",
+            "type": "toujoursPrepare",
+            "note": "sort de terrain (Forêt), toujours accessible"
+          }
+        ]
       },
       {
         "niveau": 10,
-        "titre": "Capacité de sous-classe",
-        "detail": "Sorts de domaine supplémentaires de haut niveau toujours préparés."
+        "titre": "Capacité de cercle : Garde de la nature",
+        "detail": "Ne peut plus être Charmé ni Effrayé par les élémentaires et les fées, et n'est plus affecté par les maladies ni les poisons."
       },
       {
         "niveau": 11,
         "titre": "Sorts de niveau 6",
-        "detail": "Premier emplacement de niveau 6 débloqué."
+        "detail": "",
+        "sorts": [
+          {
+            "nom": "Sort de niveau 6 au choix",
+            "type": "nouveau",
+            "note": "selon le combat prévu"
+          }
+        ]
       },
       {
         "niveau": 12,
-        "titre": "Troisième don — build terminé",
-        "detail": "+2 Sagesse (20) — maximum naturel."
+        "titre": "Dernier don — build terminé",
+        "detail": "",
+        "don": {
+          "nom": "+2 Sagesse",
+          "effet": "Sagesse à 20, le maximum naturel."
+        }
       }
     ],
     "equipement": [
