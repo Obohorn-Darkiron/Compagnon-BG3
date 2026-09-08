@@ -1881,7 +1881,11 @@
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Grand Maître d'armes : option -5/+10 dégâts, et attaque bonus après un critique ou une élimination."
+        "detail": "",
+        "don": {
+          "nom": "Grand Maître d'armes",
+          "effet": "Option -5 au jet d'attaque pour +10 dégâts avec une arme lourde, plus une attaque de mêlée bonus après un critique ou une élimination."
+        }
       },
       {
         "niveau": 5,
@@ -1901,7 +1905,11 @@
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "Athlète : +1 Force (18), sauts plus longs, se relever coûte moins de mouvement."
+        "detail": "",
+        "don": {
+          "nom": "Athlète",
+          "effet": "+1 Force (jusqu'à 20), sauts plus longs, se relever ne coûte presque plus de mouvement."
+        }
       },
       {
         "niveau": 9,
@@ -1921,7 +1929,11 @@
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "+2 Force (20). 5 charges de Rage. Précision, dégâts et capacité de port au maximum naturel."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force",
+          "effet": "Force à 20, le maximum naturel — précision, dégâts et capacité de transport au plus haut."
+        }
       }
     ],
     "equipement": [
@@ -6622,7 +6634,11 @@
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Grand Maître d'armes : option -5/+10 dégâts."
+        "detail": "",
+        "don": {
+          "nom": "Grand Maître d'armes",
+          "effet": "Option -5 au jet d'attaque pour +10 dégâts avec une arme lourde, plus une attaque de mêlée bonus après un critique ou une élimination."
+        }
       },
       {
         "niveau": 5,
@@ -6632,7 +6648,7 @@
       {
         "niveau": 6,
         "titre": "Aspect de la bête",
-        "detail": "Bonus passif permanent lié à l'esprit choisi (odorat, escalade ou natation selon l'esprit)."
+        "detail": "Aspect de l'Ours : bonus passif permanent hors Rage (odorat développé, force portée...). S'ajoute à Cœur d'ours (niveau 3), qui reste la résistance à tous les dégâts sauf psychique pendant la Rage."
       },
       {
         "niveau": 7,
@@ -6642,7 +6658,11 @@
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "Athlète : +1 Force, sauts plus longs, se relever coûte moins de mouvement."
+        "detail": "Foulée agile : le terrain difficile ne te ralentit plus, et les surfaces à épines/pointes ne te blessent plus.",
+        "don": {
+          "nom": "Athlète",
+          "effet": "+1 Force (jusqu'à 20), sauts plus longs, se relever ne coûte presque plus de mouvement."
+        }
       },
       {
         "niveau": 9,
@@ -6651,8 +6671,8 @@
       },
       {
         "niveau": 10,
-        "titre": "Présence intimidante",
-        "detail": "Action de peur ciblée, DD basé sur le Charisme."
+        "titre": "Deuxième Aspect de la bête",
+        "detail": "Choisit un second esprit animal (Aigle, Élan, Tigre ou Loup) : un bonus passif supplémentaire s'ajoute à celui de l'Ours, actif en permanence."
       },
       {
         "niveau": 11,
@@ -6662,7 +6682,11 @@
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "+2 Force (20). Précision, dégâts et résistance au maximum naturel."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force",
+          "effet": "Force à 20, le maximum naturel — précision, dégâts et capacité de transport au plus haut."
+        }
       }
     ],
     "equipement": [
@@ -8328,17 +8352,21 @@
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Grand Maître d'armes : option -5/+10 dégâts."
+        "detail": "",
+        "don": {
+          "nom": "Grand Maître d'armes",
+          "effet": "Option -5 au jet d'attaque pour +10 dégâts avec une arme lourde, plus une attaque de mêlée bonus après un critique ou une élimination."
+        }
       },
       {
         "niveau": 5,
         "titre": "Attaque supplémentaire",
-        "detail": "Deux coups par action, plus Déplacement rapide."
+        "detail": "Deux coups par action, plus Déplacement rapide. Coup de pied (Géant) : tente de repousser une cible au loin — chances basées sur l'Athlétisme, meilleures si tu es Caché ou Invisible."
       },
       {
         "niveau": 6,
-        "titre": "Capacité de sous-classe",
-        "detail": "Renforce encore le combo lancer/dégâts propre au Géant."
+        "titre": "Capacité de sous-classe : Fendoir élémentaire",
+        "detail": "Jusqu'à la fin de ta Rage, ton arme inflige un dégât élémentaire supplémentaire au choix (acide, froid, feu, foudre ou tonnerre) et gagne la propriété de jet — une arme lancée revient aussitôt dans ta main."
       },
       {
         "niveau": 7,
@@ -8348,7 +8376,11 @@
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "Athlète : +1 Force, sauts plus longs, se relever coûte moins de mouvement."
+        "detail": "",
+        "don": {
+          "nom": "Athlète",
+          "effet": "+1 Force (jusqu'à 20), sauts plus longs, se relever ne coûte presque plus de mouvement."
+        }
       },
       {
         "niveau": 9,
@@ -8357,8 +8389,8 @@
       },
       {
         "niveau": 10,
-        "titre": "Présence intimidante",
-        "detail": "Action de peur ciblée, DD basé sur le Charisme."
+        "titre": "Impulsion puissante",
+        "detail": "Action bonus : projette une créature au loin sans test de Force requis, sur une distance fixe — une version fiable et sans risque du lancer classique."
       },
       {
         "niveau": 11,
@@ -8368,7 +8400,11 @@
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "+2 Force (20). Capacité de sous-classe à son maximum."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force",
+          "effet": "Force à 20, le maximum naturel — précision, dégâts et capacité de transport au plus haut."
+        }
       }
     ],
     "equipement": [
@@ -8491,12 +8527,16 @@
       {
         "niveau": 3,
         "titre": "Sous-classe Magie sauvage",
-        "detail": "Chaque entrée en Rage peut déclencher une surtension magique aléatoire."
+        "detail": "Rage : Magie sauvage — chaque entrée en Rage peut déclencher une surtension magique aléatoire parmi 8 effets (généralement favorables). Conscience magique (action bonus, repos court) : les alliés proches gagnent +1d4 à leurs jets de sauvegarde."
       },
       {
         "niveau": 4,
         "titre": "Premier don",
-        "detail": "Grand Maître d'armes : option -5/+10 dégâts."
+        "detail": "",
+        "don": {
+          "nom": "Grand Maître d'armes",
+          "effet": "Option -5 au jet d'attaque pour +10 dégâts avec une arme lourde, plus une attaque de mêlée bonus après un critique ou une élimination."
+        }
       },
       {
         "niveau": 5,
@@ -8505,8 +8545,8 @@
       },
       {
         "niveau": 6,
-        "titre": "Capacité de sous-classe",
-        "detail": "Renforce le contrôle sur les effets de Chaos sauvage."
+        "titre": "Capacité de sous-classe : Magie stabilisatrice",
+        "detail": "Action (repos long) : toi ou un allié proche gagne soit +1d4 aux jets d'attaque et tests de caractéristique pendant 10 tours, soit récupère un emplacement de sort de niveau 1 ou 2."
       },
       {
         "niveau": 7,
@@ -8516,17 +8556,21 @@
       {
         "niveau": 8,
         "titre": "Deuxième don",
-        "detail": "Athlète : +1 Force, sauts plus longs, se relever coûte moins de mouvement."
+        "detail": "",
+        "don": {
+          "nom": "Athlète",
+          "effet": "+1 Force (jusqu'à 20), sauts plus longs, se relever ne coûte presque plus de mouvement."
+        }
       },
       {
         "niveau": 9,
         "titre": "Critique brutal",
-        "detail": "Un dé de dégâts d'arme supplémentaire sur les critiques."
+        "detail": "Un dé de dégâts d'arme supplémentaire sur les critiques. Magie stabilisatrice s'étend aussi aux emplacements de sort de niveau 3."
       },
       {
         "niveau": 10,
-        "titre": "Présence intimidante",
-        "detail": "Action de peur ciblée, DD basé sur le Charisme."
+        "titre": "Contrecoup instable",
+        "detail": "Réaction pendant la Rage : quand tu subis des dégâts ou rates un jet de sauvegarde, déclenche une nouvelle surtension magique aléatoire qui remplace l'effet en cours."
       },
       {
         "niveau": 11,
@@ -8536,7 +8580,11 @@
       {
         "niveau": 12,
         "titre": "Troisième don — build terminé",
-        "detail": "+2 Force (20). Précision et dégâts au maximum naturel."
+        "detail": "",
+        "don": {
+          "nom": "+2 Force",
+          "effet": "Force à 20, le maximum naturel — précision, dégâts et capacité de transport au plus haut."
+        }
       }
     ],
     "equipement": [
