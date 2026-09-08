@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { PageHeader } from '../../components/PageHeader'
 import { Section } from '../../components/Section'
-import { Download, Upload } from '../../components/icons'
+import { Download, Share, Upload } from '../../components/icons'
 import { useConfirm } from '../../components/useConfirm'
+import { lienApp, partagerApp } from '../../components/partagerApp'
 import { builds, objets } from '../../data'
 import { saveStore } from '../../storage/useSaveData'
 import { forcerMiseAJour, stockageEstPersistant } from '../../storage/driver'
@@ -29,6 +30,7 @@ export function ParametresPage() {
   const [recherche, setRecherche] = useState(false)
   const theme = useTheme()
   const { confirmer, dialogue } = useConfirm()
+  const [partage, setPartage] = useState<'partage' | 'copie' | null>(null)
 
   useEffect(() => {
     stockageEstPersistant().then(setPersistant)
@@ -56,6 +58,27 @@ export function ParametresPage() {
   return (
     <div>
       <PageHeader title="Paramètres" />
+
+      <Section title="Inviter tes amis">
+        <p className="mb-3 text-sm text-ink-muted">
+          Envoie-leur ce lien pour qu'ils installent l'appli — ensuite, créez ou rejoignez une
+          session de groupe depuis "Mon Groupe" pour jouer ensemble.
+        </p>
+        <button
+          type="button"
+          onClick={async () => {
+            const resultat = await partagerApp()
+            if (resultat === 'annule') return
+            setPartage(resultat)
+            setTimeout(() => setPartage(null), 1500)
+          }}
+          className="flex w-full items-center justify-center gap-2 rounded-lg bg-gold px-3 py-2.5 text-sm font-medium text-bg"
+        >
+          <Share className="h-4 w-4" />
+          {partage === 'copie' ? 'Lien copié !' : partage === 'partage' ? 'Partagé' : "Partager le lien de l'appli"}
+        </button>
+        <p className="mt-2 truncate text-center text-xs text-ink-muted">{lienApp}</p>
+      </Section>
 
       <Section title="Thème">
         <p className="mb-3 text-sm text-ink-muted">

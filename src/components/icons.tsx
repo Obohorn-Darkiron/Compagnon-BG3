@@ -137,6 +137,17 @@ export function Plus({ className }: IconProps) {
   )
 }
 
+export function Share({ className }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <circle cx="18" cy="5" r="2.5" />
+      <circle cx="6" cy="12" r="2.5" />
+      <circle cx="18" cy="19" r="2.5" />
+      <path d="M8.2 10.8 15.8 6.5M8.2 13.2l7.6 4.3" />
+    </svg>
+  )
+}
+
 export function Trash({ className }: IconProps) {
   return (
     <svg className={className} {...base}>

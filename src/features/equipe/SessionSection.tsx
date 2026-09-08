@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Section } from '../../components/Section'
 import { useConfirm } from '../../components/useConfirm'
+import { Share } from '../../components/icons'
+import { partagerApp } from '../../components/partagerApp'
 import type { Campagne } from '../../storage/useSaveData'
 import {
   creerSession,
@@ -11,6 +13,25 @@ import {
 import { sessionDisponible } from '../../session/firebaseClient'
 
 const TAILLES = [2, 3, 4]
+
+function BoutonPartagerApp({ className = '' }: { className?: string }) {
+  const [partage, setPartage] = useState<'partage' | 'copie' | null>(null)
+  return (
+    <button
+      type="button"
+      onClick={async () => {
+        const resultat = await partagerApp()
+        if (resultat === 'annule') return
+        setPartage(resultat)
+        setTimeout(() => setPartage(null), 1500)
+      }}
+      className={`flex items-center justify-center gap-1.5 rounded-lg border border-border py-2.5 text-sm font-medium text-ink ${className}`}
+    >
+      <Share className="h-4 w-4" />
+      {partage === 'copie' ? 'Lien copié !' : partage === 'partage' ? 'Partagé' : "Partager le lien de l'appli"}
+    </button>
+  )
+}
 
 export function SessionSection({ campagne }: { campagne: Campagne }) {
   const [etapeCreation, setEtapeCreation] = useState(false)
@@ -39,9 +60,11 @@ export function SessionSection({ campagne }: { campagne: Campagne }) {
     return (
       <>
       <Section title="Session de groupe">
+        <BoutonPartagerApp className="mb-2 w-full" />
         <div className="rounded-lg border border-glow/40 bg-glow/10 px-3 py-3">
           <p className="text-xs text-ink-muted">
-            Partage ce code à tes amis pour qu'ils rejoignent la même partie :
+            Partage l'appli (bouton ci-dessus) puis ce code à tes amis pour qu'ils rejoignent la
+            même partie :
           </p>
           <div className="mt-2 flex items-center gap-2">
             <span className="flex-1 rounded-lg bg-surface px-3 py-2 text-center font-title text-2xl font-bold tracking-[0.3em] text-glow">
@@ -124,6 +147,7 @@ export function SessionSection({ campagne }: { campagne: Campagne }) {
 
       {!etapeCreation && !etapeRejoindre && (
         <div className="flex flex-col gap-2">
+          <BoutonPartagerApp />
           <button
             type="button"
             onClick={() => {
