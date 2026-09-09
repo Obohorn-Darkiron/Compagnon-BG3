@@ -35,19 +35,27 @@ function EnTeteBuild({ build }: { build: Build }) {
 function ListeComparee({ a, b }: { a: string[]; b: string[] }) {
   return (
     <div className="grid grid-cols-2 gap-3">
-      <ul className="space-y-1.5">
-        {a.map((item) => (
-          <li key={item} className="text-xs leading-relaxed text-ink">
-            {item}
-          </li>
-        ))}
+      <ul className="space-y-1.5 rounded-lg border border-border bg-surface p-2.5">
+        {a.length > 0 ? (
+          a.map((item) => (
+            <li key={item} className="text-xs leading-relaxed text-ink">
+              {item}
+            </li>
+          ))
+        ) : (
+          <Placeholder />
+        )}
       </ul>
-      <ul className="space-y-1.5">
-        {b.map((item) => (
-          <li key={item} className="text-xs leading-relaxed text-ink">
-            {item}
-          </li>
-        ))}
+      <ul className="space-y-1.5 rounded-lg border border-border bg-surface p-2.5">
+        {b.length > 0 ? (
+          b.map((item) => (
+            <li key={item} className="text-xs leading-relaxed text-ink">
+              {item}
+            </li>
+          ))
+        ) : (
+          <Placeholder />
+        )}
       </ul>
     </div>
   )
@@ -109,8 +117,12 @@ export function ComparerBuildsPage() {
 
       <Section title="Résumé">
         <div className="grid grid-cols-2 gap-3">
-          <p className="text-xs leading-relaxed text-ink-muted">{buildA.resume}</p>
-          <p className="text-xs leading-relaxed text-ink-muted">{buildB.resume}</p>
+          <p className="rounded-lg border border-border bg-surface p-2.5 text-xs leading-relaxed text-ink-muted">
+            {buildA.resume}
+          </p>
+          <p className="rounded-lg border border-border bg-surface p-2.5 text-xs leading-relaxed text-ink-muted">
+            {buildB.resume}
+          </p>
         </div>
       </Section>
 
