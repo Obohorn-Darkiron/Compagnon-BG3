@@ -8,6 +8,7 @@ import { MulticlasseBadge } from '../../components/MulticlasseBadge'
 import { estMulticlasse, getBuild } from '../../data'
 import type { Build, CaracDepart } from '../../data/types'
 import { LABELS_ROLE } from '../equipe/composeurEquipe'
+import { genererAnalyseComparative } from './comparaisonUtils'
 
 const labelsCarac: Record<keyof CaracDepart, string> = {
   FOR: 'Force',
@@ -93,6 +94,8 @@ export function ComparerBuildsPage() {
 
   if (!buildA || !buildB) return <Navigate to="/builds" replace />
 
+  const analyse = genererAnalyseComparative(buildA, buildB)
+
   return (
     <div>
       <PageHeader title="Comparer" subtitle={`${buildA.nom} vs ${buildB.nom}`} back="/builds" />
@@ -101,6 +104,16 @@ export function ComparerBuildsPage() {
         <div className="grid grid-cols-2 gap-3">
           <EnTeteBuild build={buildA} />
           <EnTeteBuild build={buildB} />
+        </div>
+      </Section>
+
+      <Section title="Analyse comparative">
+        <div className="flex flex-col gap-2 rounded-lg border border-glow/30 bg-glow/5 p-3">
+          {analyse.map((paragraphe, i) => (
+            <p key={i} className="text-xs leading-relaxed text-ink">
+              {paragraphe}
+            </p>
+          ))}
         </div>
       </Section>
 
