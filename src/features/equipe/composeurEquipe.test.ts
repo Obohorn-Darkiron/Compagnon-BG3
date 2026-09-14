@@ -43,6 +43,37 @@ describe('detecterSynergies', () => {
     const synergies = detecterSynergies([occultiste, distance])
     expect(synergies.map((s) => s.label)).not.toContain('Obscurité totale à exploiter')
   })
+
+  it('détecte le combo Bénédiction + DPS ou contrôle', () => {
+    const clerc = creerBuildFixture({ id: 'clerc-x', classe: 'Clerc', sortsCles: ['Bénédiction'], roles: ['soin'] })
+    const dps = creerBuildFixture({ id: 'dps-x', classe: 'Guerrier', roles: ['degatsMelee'] })
+    const synergies = detecterSynergies([clerc, dps])
+    expect(synergies.map((s) => s.label)).toContain('Bénédiction sur le reste du groupe')
+  })
+
+  it('détecte le combo Invisibilité + Roublard', () => {
+    const magicien = creerBuildFixture({
+      id: 'magicien-x',
+      classe: 'Magicien',
+      sortsCles: ['Invisibilité suprême'],
+      roles: ['controle'],
+    })
+    const roublard = creerBuildFixture({ id: 'roublard-x', classe: 'Roublard', roles: ['degatsMelee'] })
+    const synergies = detecterSynergies([magicien, roublard])
+    expect(synergies.map((s) => s.label)).toContain('Invisibilité + Attaque sournoise garantie')
+  })
+
+  it("ne détecte pas le combo Invisibilité si personne n'est Roublard", () => {
+    const magicien = creerBuildFixture({
+      id: 'magicien-x',
+      classe: 'Magicien',
+      sortsCles: ['Invisibilité suprême'],
+      roles: ['controle'],
+    })
+    const guerrier = creerBuildFixture({ id: 'guerrier-x', classe: 'Guerrier', roles: ['degatsMelee'] })
+    const synergies = detecterSynergies([magicien, guerrier])
+    expect(synergies.map((s) => s.label)).not.toContain('Invisibilité + Attaque sournoise garantie')
+  })
 })
 
 describe('genererConseilsRace', () => {

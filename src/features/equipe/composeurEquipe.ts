@@ -140,6 +140,22 @@ const REGLES_SYNERGIE: RegleSynergie[] = [
     description: (a, b) =>
       `${a} peut plonger une zone dans les Ténèbres (obscurité totale, tir à distance quasi impossible pour l'ennemi). Attention : la Vision dans le noir de race, même Supérieure (Drow, Duergar...), NE fonctionne PAS contre une obscurité magique comme ce sort. La seule solution fiable est l'invocation Vision des ténèbres de l'Occultiste (n'importe quel patron) — donne-la à ${a} lui-même ou à un deuxième Occultiste du groupe pour qu'il se batte à distance en toute sécurité dans le noir. Pour ${b} qui reste au contact, ça n'aide pas directement à voir, mais l'ennemi aveugle rate ses attaques à distance contre lui — profite plutôt de la couverture.`,
   },
+  {
+    id: 'benediction-carry',
+    label: 'Bénédiction sur le reste du groupe',
+    aTag: (b) => possedeSort(b, /Bénédiction/),
+    bTag: (b) => b.roles.includes('degatsMelee') || b.roles.includes('degatsDistance') || b.roles.includes('controle'),
+    description: (a, b) =>
+      `${a} peut lancer Bénédiction sur jusqu'à 3 alliés (dont ${b}) : +1d4 aux jets d'attaque ET aux jets de sauvegarde pendant 10 tours — un des buffs les plus rentables du jeu pour peu cher (sort de niveau 1).`,
+  },
+  {
+    id: 'invisibilite-sournois',
+    label: 'Invisibilité + Attaque sournoise garantie',
+    aTag: (b) => possedeSort(b, /Invisibilit/),
+    bTag: (b) => b.classe === 'Roublard',
+    description: (a, b) =>
+      `${a} peut rendre ${b} Invisible : Invisible donne l'avantage à TOUS ses jets d'attaque (et le désavantage aux ennemis qui l'attaquent), ce qui déclenche l'Attaque sournoise à coup sûr sans avoir besoin d'être Caché ou en supériorité numérique. Attention : attaquer ou lancer un sort met fin à l'Invisibilité, donc chaque frappe ne compte qu'une fois avant de devoir la relancer.`,
+  },
 ]
 
 interface ReglaConseilRace {
