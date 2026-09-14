@@ -4,6 +4,7 @@ import { Section } from '../../components/Section'
 import { Download, Share, Upload } from '../../components/icons'
 import { useConfirm } from '../../components/useConfirm'
 import { lienApp, partagerApp } from '../../components/partagerApp'
+import { declencherInstallPrompt, useInstallPromptDisponible } from '../../components/installPrompt'
 import { builds, objets } from '../../data'
 import { saveStore } from '../../storage/useSaveData'
 import { forcerMiseAJour, stockageEstPersistant } from '../../storage/driver'
@@ -35,6 +36,7 @@ export function ParametresPage() {
   const [partage, setPartage] = useState<'partage' | 'copie' | null>(null)
   const [derniereErreur, setDerniereErreur] = useState<string | null>(null)
   const [erreurCopiee, setErreurCopiee] = useState(false)
+  const installPossible = useInstallPromptDisponible()
 
   useEffect(() => {
     stockageEstPersistant().then(setPersistant)
@@ -124,7 +126,22 @@ export function ParametresPage() {
           Tes campagnes et personnages sont stockés uniquement sur cet appareil, dans la mémoire
           du navigateur. Fermer l'appli ou éteindre le téléphone n'efface rien.
         </p>
-        {!estInstallee && (
+        {!estInstallee && installPossible && (
+          <div className="mb-3 rounded-lg border border-glow/40 bg-glow/10 px-3 py-2.5">
+            <p className="mb-2 text-xs text-ink">
+              Pour une sauvegarde plus solide dans la durée, installe l'appli sur ton téléphone —
+              elle se comportera comme une vraie appli.
+            </p>
+            <button
+              type="button"
+              onClick={() => void declencherInstallPrompt()}
+              className="w-full rounded-lg bg-glow px-3 py-2 text-xs font-medium text-bg"
+            >
+              Installer l'appli
+            </button>
+          </div>
+        )}
+        {!estInstallee && !installPossible && (
           <p className="mb-3 rounded-lg border border-glow/40 bg-glow/10 px-3 py-2.5 text-xs text-ink">
             Pour une sauvegarde plus solide dans la durée, ajoute l'appli à l'écran d'accueil de
             ton téléphone (menu du navigateur → « Ajouter à l'écran d'accueil »). Elle se
