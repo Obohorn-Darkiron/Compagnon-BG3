@@ -1,6 +1,23 @@
 import { describe, expect, it } from 'vitest'
 import { creerBuildFixture } from '../../test/fixtures'
-import { composerEquipe, detecterSynergies, genererConseilsRace } from './composeurEquipe'
+import {
+  composerEquipe,
+  detecterSynergies,
+  genererAccroche,
+  genererConseilsRace,
+  type ResultatComposition,
+} from './composeurEquipe'
+import type { Build } from '../../data/types'
+
+function creerResultatFixture(builds: Build[], synergies: ResultatComposition['synergies'] = []): ResultatComposition {
+  return {
+    genre: 'equilibre',
+    slots: builds.map((build) => ({ build, raison: '', dejaExistant: false, typeSlot: 'perso' })),
+    synergies,
+    conseilsRace: [],
+    avertissements: [],
+  }
+}
 
 describe('detecterSynergies', () => {
   it('détecte le combo Sculpteur de sorts + mêlée', () => {
@@ -195,5 +212,65 @@ describe('composerEquipe — répartition joueurs/compagnons', () => {
     const resultat = composerEquipe({ ...optionsBase, nbJoueurs: 4 })
     const classes = resultat.slots.map((s) => s.build.classe)
     expect(new Set(classes).size).toBe(classes.length)
+  })
+})
+
+describe('genererAccroche', () => {
+  const equipeDeBase = [
+    creerBuildFixture({ id: 'a', roles: ['tank'] }),
+    creerBuildFixture({ id: 'b', roles: ['soin'] }),
+    creerBuildFixture({ id: 'c', roles: ['controle'] }),
+    creerBuildFixture({ id: 'd', roles: ['degatsMelee'] }),
+  ]
+
+  it('cite le nombre et une synergie précise quand il y en a plusieurs', () => {
+    const resultat = creerResultatFixture(equipeDeBase, [
+      { label: 'Synergie A', description: '' },
+      { label: 'Synergie B', description: '' },
+    ])
+    const accroche = genererAccroche('solide', resultat)
+    expect(accroche).toContain('2 vraies synergies mécaniques')
+    expect(accroche).toMatch(/Synergie A|Synergie B/)
+  })
+
+  it("cite la synergie unique quand il n'y en a qu'une", () => {
+    const resultat = creerResultatFixture(equipeDeBase, [{ label: 'Synergie unique', description: '' }])
+    expect(genererAccroche('solide', resultat)).toBe('Synergie réelle détectée : « Synergie unique ».')
+  })
+
+  it('met en avant les sous-classes peu jouées pour la proposition atypique sans synergie', () => {
+    const resultat = creerResultatFixture(equipeDeBase)
+    expect(genererAccroche('atypique', resultat)).toContain('sous-classes peu jouées')
+  })
+
+  it('signale le multiclassage quand au moins 2 builds en combinent plusieurs, sans synergie', () => {
+    const equipe = [
+      creerBuildFixture({ id: 'guerrier-maitre-de-guerre', split: 'Guerrier 12' }),
+      creerBuildFixture({ id: 'x1', split: 'Guerrier 9 / Occultiste 3' }),
+      creerBuildFixture({ id: 'x2', split: 'Rôdeur 9 / Guerrier 3' }),
+      creerBuildFixture({ id: 'x3', split: 'Clerc 12' }),
+    ]
+    const resultat = creerResultatFixture(equipe)
+    expect(genererAccroche('solide', resultat)).toContain('multiclassage')
+  })
+
+  it('signale la couverture complète des rôles quand rien de plus marquant ne ressort', () => {
+    const equipe = [
+      creerBuildFixture({ id: 'guerrier-maitre-de-guerre', roles: ['tank'] }),
+      creerBuildFixture({ id: 'x1', roles: ['soin'] }),
+      creerBuildFixture({ id: 'x2', roles: ['controle'] }),
+      creerBuildFixture({ id: 'x3', roles: ['degatsMelee'] }),
+    ]
+    const resultat = creerResultatFixture(equipe)
+    expect(genererAccroche('solide', resultat)).toContain('Couverture complète')
+  })
+
+  it('retombe sur une phrase neutre sans synergie, sans multiclasse et sans couverture complète', () => {
+    const equipe = [
+      creerBuildFixture({ id: 'guerrier-maitre-de-guerre', roles: ['degatsMelee'] }),
+      creerBuildFixture({ id: 'x1', roles: ['degatsMelee'] }),
+    ]
+    const resultat = creerResultatFixture(equipe)
+    expect(genererAccroche('solide', resultat)).toContain('Un profil complémentaire')
   })
 })

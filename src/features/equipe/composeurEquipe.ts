@@ -812,6 +812,46 @@ export interface PropositionEquipe {
   resultat: ResultatComposition
 }
 
+/**
+ * Phrase d'accroche générée à partir du CONTENU réel de cette proposition précise plutôt qu'une
+ * description générique du mode — pour que la carte de sélection dise déjà pourquoi cette équipe-là
+ * est intéressante, avant même de cliquer dedans.
+ */
+export function genererAccroche(id: PropositionEquipe['id'], resultat: ResultatComposition): string {
+  const { synergies, slots } = resultat
+
+  if (synergies.length > 1) {
+    // Choisie au hasard plutôt que toujours la première détectée : sinon la même règle la plus
+    // "large" (celle qui matche le plus souvent) revient sans arrêt en avant, même quand d'autres
+    // synergies plus rares sont aussi présentes — la carte finit par sembler répétitive alors que
+    // les équipes en dessous sont, elles, vraiment différentes.
+    const miseEnAvant = synergies[Math.floor(Math.random() * synergies.length)]
+    return `${synergies.length} vraies synergies mécaniques, dont « ${miseEnAvant.label} ».`
+  }
+  if (synergies.length === 1) {
+    return `Synergie réelle détectée : « ${synergies[0].label} ».`
+  }
+
+  if (id === 'atypique') {
+    const nbAtypiques = slots.filter((s) => !BUILDS_CLASSIQUES.has(s.build.id)).length
+    if (nbAtypiques === slots.length && slots.length > 0) {
+      return `${slots.length} sous-classes peu jouées, aucun pick "évident" dans ce lot.`
+    }
+  }
+
+  const nbMulti = slots.filter((s) => estMulticlasse(s.build)).length
+  if (nbMulti >= 2) {
+    return `${nbMulti} builds sur ${slots.length} misent sur un multiclassage — un groupe qui n'a pas peur de la complexité.`
+  }
+
+  const bucketsCouvertsParGroupe = new Set(slots.flatMap((s) => bucketsCouverts(s.build)))
+  if (bucketsCouvertsParGroupe.size >= 4) {
+    return 'Couverture complète : tank, soin, contrôle et dégâts, rien ne manque.'
+  }
+
+  return 'Un profil complémentaire, sans synergie mécanique marquante détectée entre les membres.'
+}
+
 const NB_TENTATIVES_SYNERGIE = 4
 
 /**
@@ -858,24 +898,9 @@ export function composerTroisPropositions(options: OptionsComposition): Proposit
   enregistrer(atypique)
 
   return [
-    {
-      id: 'solide',
-      titre: 'Solide',
-      accroche: 'Le profil le plus direct pour tes réponses.',
-      resultat: solide,
-    },
-    {
-      id: 'synergique',
-      titre: 'Synergique',
-      accroche: 'Priorise les vraies combos mécaniques entre coéquipiers.',
-      resultat: synergique,
-    },
-    {
-      id: 'atypique',
-      titre: 'Atypique',
-      accroche: 'Des sous-classes moins jouées, pour sortir des sentiers battus.',
-      resultat: atypique,
-    },
+    { id: 'solide', titre: 'Solide', accroche: genererAccroche('solide', solide), resultat: solide },
+    { id: 'synergique', titre: 'Synergique', accroche: genererAccroche('synergique', synergique), resultat: synergique },
+    { id: 'atypique', titre: 'Atypique', accroche: genererAccroche('atypique', atypique), resultat: atypique },
   ]
 }
 
