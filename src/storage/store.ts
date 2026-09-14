@@ -29,6 +29,15 @@ function normaliserPersonnage(p: Partial<Personnage>): Personnage {
   }
 }
 
+function normaliserJoueurSession(j: Partial<JoueurSession>): JoueurSession {
+  return {
+    joueurId: j.joueurId ?? crypto.randomUUID(),
+    numero: j.numero ?? 1,
+    nom: j.nom ?? 'Joueur',
+    pret: j.pret ?? false,
+  }
+}
+
 function normaliserCampagne(c: Partial<Campagne>): Campagne {
   return {
     id: c.id ?? crypto.randomUUID(),
@@ -38,7 +47,7 @@ function normaliserCampagne(c: Partial<Campagne>): Campagne {
     sessionCode: c.sessionCode ?? null,
     sessionEstProprietaire: c.sessionEstProprietaire ?? false,
     sessionTailleMax: c.sessionTailleMax ?? null,
-    sessionJoueurs: c.sessionJoueurs ?? [],
+    sessionJoueurs: (c.sessionJoueurs ?? []).map(normaliserJoueurSession),
     sessionConfirmee: c.sessionConfirmee ?? false,
   }
 }
@@ -391,12 +400,13 @@ export const saveStore = {
 
   /** Insère ou met à jour l'entrée d'UN joueur du roster (le mien ou un reçu d'un autre membre). */
   appliquerJoueurSession(campagneId: string, joueur: JoueurSession) {
+    const joueurSur = normaliserJoueurSession(joueur)
     majEtat({
       ...etat,
       campagnes: etat.campagnes.map((c) => {
         if (c.id !== campagneId) return c
-        const autres = c.sessionJoueurs.filter((j) => j.joueurId !== joueur.joueurId)
-        return { ...c, sessionJoueurs: [...autres, joueur].sort((a, b) => a.numero - b.numero) }
+        const autres = c.sessionJoueurs.filter((j) => j.joueurId !== joueurSur.joueurId)
+        return { ...c, sessionJoueurs: [...autres, joueurSur].sort((a, b) => a.numero - b.numero) }
       }),
     })
   },
@@ -431,16 +441,22 @@ export const saveStore = {
 
   /** Insère ou met à jour un personnage reçu d'un autre joueur de la session (ne touche jamais aux miens). */
   appliquerPersonnageDistant(campagneId: string, personnage: Personnage) {
+    // Passe par normaliserPersonnage comme les données chargées localement : un personnage reçu
+    // d'un autre appareil (autre version de l'appli, écriture Firebase manuelle...) peut avoir un
+    // champ manquant ou null sans qu'on contrôle sa forme exacte — sans ça, un champ comme
+    // objetsObtenus absent plante GroupeApercu pour TOUT le monde dans la session, pas seulement
+    // pour la personne dont l'appareil a envoyé la donnée incomplète.
+    const personnageSur = normaliserPersonnage(personnage)
     majEtat({
       ...etat,
       campagnes: etat.campagnes.map((c) => {
         if (c.id !== campagneId) return c
-        const dejaPresent = c.personnages.some((p) => p.id === personnage.id)
+        const dejaPresent = c.personnages.some((p) => p.id === personnageSur.id)
         return {
           ...c,
           personnages: dejaPresent
-            ? c.personnages.map((p) => (p.id === personnage.id ? personnage : p))
-            : [...c.personnages, personnage],
+            ? c.personnages.map((p) => (p.id === personnageSur.id ? personnageSur : p))
+            : [...c.personnages, personnageSur],
         }
       }),
     })

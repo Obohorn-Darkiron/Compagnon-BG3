@@ -13,6 +13,8 @@ import { THEMES, definirTheme, useTheme } from '../../theme/theme'
 const estInstallee =
   typeof window !== 'undefined' && window.matchMedia('(display-mode: standalone)').matches
 
+const CLE_DERNIERE_ERREUR = 'bg3-companion-derniere-erreur'
+
 function telechargerFichier(contenu: string, nomFichier: string) {
   const blob = new Blob([contenu], { type: 'application/json' })
   const url = URL.createObjectURL(blob)
@@ -31,9 +33,16 @@ export function ParametresPage() {
   const theme = useTheme()
   const { confirmer, dialogue } = useConfirm()
   const [partage, setPartage] = useState<'partage' | 'copie' | null>(null)
+  const [derniereErreur, setDerniereErreur] = useState<string | null>(null)
+  const [erreurCopiee, setErreurCopiee] = useState(false)
 
   useEffect(() => {
     stockageEstPersistant().then(setPersistant)
+    try {
+      setDerniereErreur(window.localStorage.getItem(CLE_DERNIERE_ERREUR))
+    } catch {
+      // stockage indisponible : pas de dernière erreur à afficher, tant pis
+    }
   }, [])
 
   function verifierMaj() {
@@ -179,6 +188,41 @@ export function ParametresPage() {
           {recherche ? 'Recherche de la dernière version…' : 'Forcer la mise à jour'}
         </button>
       </Section>
+
+      {derniereErreur && (
+        <Section title="Dernier plantage">
+          <p className="mb-3 text-sm text-ink-muted">
+            Détail technique du dernier écran qui a planté — utile à me transmettre si ça se
+            reproduit.
+          </p>
+          <pre className="max-h-40 overflow-auto whitespace-pre-wrap break-words rounded-lg border border-border bg-surface p-2.5 text-[10px] leading-snug text-ink-muted">
+            {derniereErreur}
+          </pre>
+          <div className="mt-2 flex gap-2">
+            <button
+              type="button"
+              onClick={async () => {
+                await navigator.clipboard.writeText(derniereErreur)
+                setErreurCopiee(true)
+                setTimeout(() => setErreurCopiee(false), 1500)
+              }}
+              className="flex-1 rounded-lg border border-border py-2 text-xs font-medium text-ink"
+            >
+              {erreurCopiee ? 'Copié !' : 'Copier'}
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                window.localStorage.removeItem(CLE_DERNIERE_ERREUR)
+                setDerniereErreur(null)
+              }}
+              className="flex-1 rounded-lg border border-border py-2 text-xs text-ink-muted"
+            >
+              Effacer
+            </button>
+          </div>
+        </Section>
+      )}
 
       <Section title="Réinitialiser">
         <button

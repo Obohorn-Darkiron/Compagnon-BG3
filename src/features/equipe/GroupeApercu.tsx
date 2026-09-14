@@ -135,7 +135,7 @@ export function GroupeApercu({ campagne }: { campagne: Campagne }) {
                         </div>
                         <div className="mt-1.5 flex flex-col gap-1.5">
                           {entrees.map(({ perso, importance, alternative, alternativeAutoTrouvee, sansAlternative, objetOriginal }) => {
-                            const obtenu = perso.objetsObtenus.includes(idAffiche)
+                            const obtenu = (perso.objetsObtenus ?? []).includes(idAffiche)
                             const modifiable =
                               perso.proprietaireId === null || perso.proprietaireId === lireJoueurId()
                             return (
