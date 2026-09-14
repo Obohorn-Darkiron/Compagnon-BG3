@@ -327,13 +327,18 @@ export function detecterSynergies(groupe: Build[]): SynergieDetectee[] {
  * Un plafond bas garde la synergie comme un vrai bonus de départage, pas le facteur dominant. */
 const PLAFOND_CORRESPONDANCES_SYNERGIE = 1
 
-function bonusSynergie(candidat: Build, dejaChoisis: Build[], synergiesSurprenantes: boolean): number {
+function bonusSynergie(
+  candidat: Build,
+  dejaChoisis: Build[],
+  synergiesSurprenantes: boolean,
+  multiplicateur: number,
+): number {
   const poids = synergiesSurprenantes ? 26 : 16
   let correspondances = 0
   for (const autre of dejaChoisis) {
     correspondances += synergiesEntre(candidat, autre).length
   }
-  return Math.min(correspondances, PLAFOND_CORRESPONDANCES_SYNERGIE) * poids
+  return Math.min(correspondances, PLAFOND_CORRESPONDANCES_SYNERGIE) * poids * multiplicateur
 }
 
 interface OptionsScore {
@@ -343,6 +348,9 @@ interface OptionsScore {
   styleCombat: StyleCombat
   multiclassage: PreferenceMulticlasse
   synergiesSurprenantes: boolean
+  /** Pousse le poids de la synergie au-delà de sa valeur normale — utilisé par la proposition
+   * "Synergique" pour vraiment prioriser les vraies combos plutôt que de juste les tolérer. */
+  poidsSynergieMultiplicateur: number
 }
 
 /**
@@ -364,7 +372,7 @@ function scoreCandidat(candidat: Build, o: OptionsScore): number {
   if (candidat.roles.includes('utilitaire')) score += 4
 
   score -= penaliteCannibalisation(candidat, o.dejaChoisis)
-  score += bonusSynergie(candidat, o.dejaChoisis, o.synergiesSurprenantes)
+  score += bonusSynergie(candidat, o.dejaChoisis, o.synergiesSurprenantes, o.poidsSynergieMultiplicateur)
 
   if (o.styleCombat === 'melee' && (candidat.roles.includes('tank') || candidat.roles.includes('degatsMelee'))) {
     score += 10
@@ -417,14 +425,23 @@ function raisonChoix(build: Build, besoinsAvant: Besoins, dejaChoisis: Build[]):
   return morceaux.join(' · ')
 }
 
-/** Écart de score en dessous du meilleur : au-delà, un candidat n'est plus considéré "aussi bon". */
-const ECART_QUASI_EX_AEQUO = 12
+/** Température de l'échantillonnage pondéré : plus c'est haut, plus des candidats nettement moins
+ * bons que le meilleur gardent une vraie chance d'être choisis. Un écart de 10 points sous TEMPERATURE_BASE
+ * (~9) donne encore ~30% de la chance du meilleur ; le même écart sous TEMPERATURE_EXPLORATION (~14)
+ * en garde ~50%. Sans une vraie température, la même poignée de classes "optimales" revenait sans
+ * arrêt à chaque régénération, même avec des réponses strictement identiques — pas seulement en
+ * mode "atypique" : demander la même équipe équilibrée deux fois donnait quasi toujours la même
+ * réponse dès que le meilleur candidat n'était pas à quelques points près d'un concurrent. */
+const TEMPERATURE_BASE = 9
+const TEMPERATURE_EXPLORATION = 14
+
+/** Écart de score en dessous du meilleur, juste pour écarter les candidats manifestement hors
+ * course avant l'échantillonnage — leur vrai poids relatif est ensuite fixé par la température. */
+const ECART_MAX_CONSIDERE = 30
 
 /**
- * Choisit parmi les meilleurs candidats plutôt que TOUJOURS le premier. Quand plusieurs profils
- * sont réellement comparables (score à moins de ECART_QUASI_EX_AEQUO points du meilleur), le choix
- * est pondéré par leur score au lieu d'être figé sur un seul gagnant — sinon la même poignée de
- * classes "optimales" revient sans arrêt, quelle que soit la nuance de la demande.
+ * Choisit parmi les meilleurs candidats plutôt que TOUJOURS le premier — pondéré par un
+ * échantillonnage softmax (voir TEMPERATURE_*) plutôt que figé sur un seul gagnant.
  */
 function meilleurCandidat(candidats: Build[], o: OptionsScore): Build | null {
   if (candidats.length === 0) return null
@@ -432,11 +449,12 @@ function meilleurCandidat(candidats: Build[], o: OptionsScore): Build | null {
     .map((candidat) => ({ candidat, score: scoreCandidat(candidat, o) }))
     .sort((a, b) => b.score - a.score || a.candidat.id.localeCompare(b.candidat.id))
 
-  const seuil = notes[0].score - ECART_QUASI_EX_AEQUO
-  const finalistes = notes.filter((n) => n.score >= seuil)
+  const meilleurScore = notes[0].score
+  const finalistes = notes.filter((n) => n.score >= meilleurScore - ECART_MAX_CONSIDERE)
   if (finalistes.length <= 1) return notes[0].candidat
 
-  const poids = finalistes.map((n) => n.score - seuil + 1)
+  const temperature = o.synergiesSurprenantes ? TEMPERATURE_EXPLORATION : TEMPERATURE_BASE
+  const poids = finalistes.map((n) => Math.exp((n.score - meilleurScore) / temperature))
   const poidsTotal = poids.reduce((s, p) => s + p, 0)
   let tirage = Math.random() * poidsTotal
   for (let i = 0; i < finalistes.length; i++) {
@@ -572,6 +590,9 @@ export interface OptionsComposition {
   tailleEquipe?: number
   /** Builds à ne jamais proposer (déjà montrés lors d'un remplacement ou d'une autre proposition). */
   buildsAExclure?: string[]
+  /** Multiplie le poids du bonus de synergie (défaut 1) — la proposition "Synergique" pousse ça plus
+   * haut pour vraiment prioriser les vraies combos plutôt que de juste les tolérer. */
+  poidsSynergieMultiplicateur?: number
 }
 
 function calculerAvertissements(choisis: Build[], tailleEquipe: number): string[] {
@@ -630,6 +651,7 @@ export function composerEquipe(options: OptionsComposition): ResultatComposition
     styleCombat: options.styleCombat,
     multiclassage: options.multiclassage,
     synergiesSurprenantes,
+    poidsSynergieMultiplicateur: options.poidsSynergieMultiplicateur ?? 1,
   })
 
   for (const classe of options.classesAInclure ?? []) {
@@ -712,6 +734,7 @@ export function remplacerSlot(
     styleCombat: options.styleCombat,
     multiclassage: options.multiclassage,
     synergiesSurprenantes,
+    poidsSynergieMultiplicateur: options.poidsSynergieMultiplicateur ?? 1,
   })
   if (!meilleur) return resultatActuel
 
@@ -764,6 +787,80 @@ export function reproposerEquipe(
 ): ResultatComposition {
   const idsAExclure = resultatActuel.slots.filter((s) => !s.dejaExistant).map((s) => s.build.id)
   return composerEquipe({ ...options, buildsAExclure: [...(options.buildsAExclure ?? []), ...idsAExclure] })
+}
+
+export interface PropositionEquipe {
+  id: 'solide' | 'synergique' | 'atypique'
+  titre: string
+  accroche: string
+  resultat: ResultatComposition
+}
+
+const NB_TENTATIVES_SYNERGIE = 4
+
+/**
+ * Génère 3 propositions volontairement différentes pour les mêmes réponses plutôt qu'une seule à
+ * prendre ou tout rejeter :
+ * - Solide : le profil direct pour le genre demandé (comportement historique).
+ * - Synergique : pousse le poids des vraies combos mécaniques bien au-delà de la normale, et
+ *   retente plusieurs fois pour garder la version avec le plus de synergies réellement détectées.
+ * - Atypique : bascule sur le mode associations inattendues, quel que soit le réglage du formulaire.
+ *
+ * Chaque proposition évite autant que possible les classes déjà utilisées par les précédentes de ce
+ * même lot (repli silencieux sur le chevauchement si ça ne laisse plus assez de candidats valides) —
+ * pour que les 3 se ressemblent le moins possible plutôt que d'être 3 variations mineures du même
+ * groupe.
+ */
+export function composerTroisPropositions(options: OptionsComposition): PropositionEquipe[] {
+  const classesDejaUtilisees = new Set<string>()
+  const tailleAttendue = (options.tailleEquipe ?? 4) - (options.builsFixes?.length ?? 0)
+
+  function composerEnEvitant(o: OptionsComposition): ResultatComposition {
+    const classesAEviterCombinees = [...new Set([...(o.classesAEviter ?? []), ...classesDejaUtilisees])]
+    const avecEvitement = composerEquipe({ ...o, classesAEviter: classesAEviterCombinees })
+    const nbNouveaux = avecEvitement.slots.filter((s) => !s.dejaExistant).length
+    return nbNouveaux >= tailleAttendue ? avecEvitement : composerEquipe(o)
+  }
+
+  function enregistrer(resultat: ResultatComposition) {
+    for (const slot of resultat.slots) {
+      if (!slot.dejaExistant) classesDejaUtilisees.add(slot.build.classe)
+    }
+  }
+
+  const solide = composerEnEvitant(options)
+  enregistrer(solide)
+
+  let synergique = composerEnEvitant({ ...options, poidsSynergieMultiplicateur: 3 })
+  for (let i = 1; i < NB_TENTATIVES_SYNERGIE && synergique.synergies.length === 0; i++) {
+    const essai = composerEnEvitant({ ...options, poidsSynergieMultiplicateur: 3 })
+    if (essai.synergies.length > synergique.synergies.length) synergique = essai
+  }
+  enregistrer(synergique)
+
+  const atypique = composerEnEvitant({ ...options, synergiesSurprenantes: true })
+  enregistrer(atypique)
+
+  return [
+    {
+      id: 'solide',
+      titre: 'Solide',
+      accroche: 'Le profil le plus direct pour tes réponses.',
+      resultat: solide,
+    },
+    {
+      id: 'synergique',
+      titre: 'Synergique',
+      accroche: 'Priorise les vraies combos mécaniques entre coéquipiers.',
+      resultat: synergique,
+    },
+    {
+      id: 'atypique',
+      titre: 'Atypique',
+      accroche: 'Des sous-classes moins jouées, pour sortir des sentiers battus.',
+      resultat: atypique,
+    },
+  ]
 }
 
 export const LABELS_GENRE_GROUPE = LABELS_GENRE

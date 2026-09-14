@@ -5,7 +5,7 @@ import { Section } from '../../components/Section'
 import { builds, classesDisponibles, races } from '../../data'
 import { saveStore, useSaveData, type Campagne } from '../../storage/useSaveData'
 import {
-  composerEquipe,
+  composerTroisPropositions,
   LABELS_GENRE_GROUPE,
   LABELS_ROLE,
   remplacerSlot,
@@ -14,9 +14,11 @@ import {
   type OptionsComposition,
   type PreferenceMulticlasse,
   type PreferenceSoin,
+  type PropositionEquipe,
   type ResultatComposition,
   type StyleCombat,
 } from './composeurEquipe'
+import { ClasseIcon } from '../../components/ClasseIcon'
 
 const GENRES: { valeur: GenreGroupe; label: string; description: string }[] = [
   {
@@ -92,6 +94,43 @@ function ChipMultiSelect({
         )
       })}
     </div>
+  )
+}
+
+function CartePropositionApercu({
+  proposition,
+  onChoisir,
+}: {
+  proposition: PropositionEquipe
+  onChoisir: () => void
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onChoisir}
+      className="w-full rounded-xl border border-border bg-surface p-4 text-left transition-colors active:border-glow/60 active:bg-glow/5"
+    >
+      <div className="flex items-center justify-between gap-2">
+        <p className="font-title text-base font-semibold text-gold">{proposition.titre}</p>
+        {proposition.resultat.synergies.length > 0 && (
+          <span className="shrink-0 rounded-full border border-bon/40 bg-bon/10 px-2 py-0.5 text-[11px] font-medium text-bon">
+            {proposition.resultat.synergies.length} synergie{proposition.resultat.synergies.length > 1 ? 's' : ''}
+          </span>
+        )}
+      </div>
+      <p className="mt-0.5 text-xs text-ink-muted">{proposition.accroche}</p>
+      <div className="mt-3 flex flex-wrap gap-2">
+        {proposition.resultat.slots.map((slot, i) => (
+          <span
+            key={i}
+            className="flex items-center gap-1.5 rounded-full border border-border bg-surface-raised px-2.5 py-1.5 text-xs text-ink"
+          >
+            <ClasseIcon classe={slot.build.classe} className="h-3.5 w-3.5 shrink-0" />
+            {slot.build.classe}
+          </span>
+        ))}
+      </div>
+    </button>
   )
 }
 
@@ -355,8 +394,11 @@ export function EquipeBuilderPage() {
   const [classesAEviter, setClassesAEviter] = useState<string[]>([])
   const [synergiesSurprenantes, setSynergiesSurprenantes] = useState(false)
   const [utiliserExistants, setUtiliserExistants] = useState(false)
-  const [resultat, setResultat] = useState<ResultatComposition | null>(null)
+  const [propositions, setPropositions] = useState<PropositionEquipe[] | null>(null)
+  const [indexChoisi, setIndexChoisi] = useState<number | null>(null)
   const [optionsActuelles, setOptionsActuelles] = useState<OptionsComposition | null>(null)
+
+  const resultat = indexChoisi !== null ? (propositions?.[indexChoisi]?.resultat ?? null) : null
 
   function basculer(liste: string[], setListe: (v: string[]) => void, valeur: string) {
     setListe(liste.includes(valeur) ? liste.filter((c) => c !== valeur) : [...liste, valeur])
@@ -375,17 +417,20 @@ export function EquipeBuilderPage() {
       nbJoueurs,
     }
     setOptionsActuelles(options)
-    setResultat(composerEquipe(options))
+    setPropositions(composerTroisPropositions(options))
+    setIndexChoisi(null)
   }
 
   function remplacer(index: number) {
-    if (!resultat || !optionsActuelles) return
-    setResultat(remplacerSlot(resultat, index, optionsActuelles))
+    if (!resultat || !optionsActuelles || indexChoisi === null || !propositions) return
+    const nouveauResultat = remplacerSlot(resultat, index, optionsActuelles)
+    setPropositions(propositions.map((p, i) => (i === indexChoisi ? { ...p, resultat: nouveauResultat } : p)))
   }
 
   function relancerTout() {
-    if (!resultat || !optionsActuelles) return
-    setResultat(reproposerEquipe(resultat, optionsActuelles))
+    if (!resultat || !optionsActuelles || indexChoisi === null || !propositions) return
+    const nouveauResultat = reproposerEquipe(resultat, optionsActuelles)
+    setPropositions(propositions.map((p, i) => (i === indexChoisi ? { ...p, resultat: nouveauResultat } : p)))
   }
 
   return (
@@ -395,8 +440,9 @@ export function EquipeBuilderPage() {
       <div className="px-4 pt-3">
         <p className="text-sm leading-relaxed text-ink-muted">
           Un outil d'exploration indépendant de tes personnages : réponds à quelques questions, je te
-          propose 4 personnages complémentaires — sans doublon de classe, sans qu'ils se battent pour
-          le même objet, et en cherchant de vraies synergies mécaniques entre eux.
+          propose 3 équipes différentes de 4 personnages complémentaires — sans doublon de classe,
+          sans qu'ils se battent pour le même objet, et en cherchant de vraies synergies mécaniques
+          entre eux.
         </p>
       </div>
 
@@ -551,13 +597,34 @@ export function EquipeBuilderPage() {
 
       <div className="px-4 py-4">
         <button type="button" onClick={composer} className="w-full rounded-lg bg-gold py-2.5 text-sm font-medium text-bg">
-          {resultat ? 'Recomposer depuis zéro' : "Composer l'équipe"}
+          {propositions ? 'Recomposer depuis zéro (3 nouvelles propositions)' : "Composer l'équipe"}
         </button>
       </div>
 
-      {resultat && (
+      {propositions && indexChoisi === null && (
+        <Section title="3 propositions — choisis celle qui te tente">
+          <p className="mb-3 text-xs leading-relaxed text-ink-muted">
+            Mêmes réponses, 3 approches différentes. Tu peux toujours revenir en choisir une autre
+            ensuite.
+          </p>
+          <div className="flex flex-col gap-3">
+            {propositions.map((p, i) => (
+              <CartePropositionApercu key={p.id} proposition={p} onChoisir={() => setIndexChoisi(i)} />
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {resultat && indexChoisi !== null && (
         <>
-          <Section title={`Ton équipe — ${LABELS_GENRE_GROUPE[resultat.genre]}`}>
+          <Section title={`${propositions![indexChoisi].titre} — ${LABELS_GENRE_GROUPE[resultat.genre]}`}>
+            <button
+              type="button"
+              onClick={() => setIndexChoisi(null)}
+              className="mb-3 text-xs font-medium text-glow underline underline-offset-2"
+            >
+              ← Voir les 3 propositions
+            </button>
             <div className="flex flex-col gap-3">
               {resultat.slots.map((slot, i) => (
                 <CarteSlot
