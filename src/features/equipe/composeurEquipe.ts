@@ -320,13 +320,20 @@ export function detecterSynergies(groupe: Build[]): SynergieDetectee[] {
   return synergies
 }
 
+/** Au-delà de cette correspondance, une synergie de plus ne rapporte plus rien. Sans plafond, une
+ * règle qui matche largement (ex. Barde + n'importe quel DPS) s'accumule avec chaque coéquipier déjà
+ * choisi et finit par écraser tout le reste du score (besoins de rôle, genre demandé...) dès la 3e ou
+ * 4e place — la classe "generalist-synergie" gagne alors presque à coup sûr, peu importe le contexte.
+ * Un plafond bas garde la synergie comme un vrai bonus de départage, pas le facteur dominant. */
+const PLAFOND_CORRESPONDANCES_SYNERGIE = 1
+
 function bonusSynergie(candidat: Build, dejaChoisis: Build[], synergiesSurprenantes: boolean): number {
-  let bonus = 0
   const poids = synergiesSurprenantes ? 26 : 16
+  let correspondances = 0
   for (const autre of dejaChoisis) {
-    bonus += synergiesEntre(candidat, autre).length * poids
+    correspondances += synergiesEntre(candidat, autre).length
   }
-  return bonus
+  return Math.min(correspondances, PLAFOND_CORRESPONDANCES_SYNERGIE) * poids
 }
 
 interface OptionsScore {
