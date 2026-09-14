@@ -370,6 +370,7 @@ export async function quitterSession(campagneId: string) {
     const mesPersonnages = campagne?.personnages.filter((p) => p.proprietaireId === monId) ?? []
     await Promise.all(mesPersonnages.map((p) => remove(ref(db, `sessions/${sessionCode}/personnages/${p.id}`))))
     await remove(ref(db, `sessions/${sessionCode}/joueurs/${monId}`))
+    await remove(ref(db, `sessions/${sessionCode}/enTrain/${monId}`))
     const restants = await get(ref(db, `sessions/${sessionCode}/personnages`))
     if (!restants.exists()) await remove(ref(db, `sessions/${sessionCode}`))
   } catch (err) {

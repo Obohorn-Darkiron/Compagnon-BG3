@@ -5,6 +5,7 @@ import { saveStore } from '../../storage/useSaveData'
 import { lireJoueurId } from '../../storage/identite'
 import type { Campagne, JoueurSession } from '../../storage/useSaveData'
 import { confirmerGroupe } from '../../session/sessionSync'
+import { useEnTrainDeChoisir } from '../../session/presence'
 import { builds } from '../../data'
 import { PersonnagesListe } from './PersonnagesListe'
 import { GroupeApercu } from './GroupeApercu'
@@ -20,11 +21,13 @@ function LigneJoueur({
   numero,
   joueur,
   estMoi,
+  enTrainDeChoisir,
 }: {
   campagne: Campagne
   numero: number
   joueur: JoueurSession | undefined
   estMoi: boolean
+  enTrainDeChoisir?: string
 }) {
   const [nomEdite, setNomEdite] = useState(joueur?.nom ?? '')
   const persosDuJoueur = joueur
@@ -79,6 +82,9 @@ function LigneJoueur({
         </span>
       </div>
       <div className="mt-1.5 pl-9">
+        {!estMoi && enTrainDeChoisir && (
+          <p className="text-[11px] italic text-glow">{enTrainDeChoisir}…</p>
+        )}
         {persosDuJoueur.length === 0 ? (
           <p className="text-[11px] text-ink-muted">Personnage pas encore créé.</p>
         ) : (
@@ -102,6 +108,7 @@ export function SessionLobby({ campagne }: { campagne: Campagne }) {
   const monId = lireJoueurId()
   const monJoueur = campagne.sessionJoueurs.find((j) => j.joueurId === monId)
   const mesPersonnages = campagne.personnages.filter((p) => p.proprietaireId === monId)
+  const enTrain = useEnTrainDeChoisir(campagne.sessionCode)
   const tailleMax = campagne.sessionTailleMax ?? campagne.sessionJoueurs.length
   const numeros = Array.from({ length: tailleMax }, (_, i) => i + 1)
   const toutLeMondePret =
@@ -116,15 +123,19 @@ export function SessionLobby({ campagne }: { campagne: Campagne }) {
           Coche "Je suis prêt" quand tu as fini, {campagne.sessionEstProprietaire ? "puis lance la partie une fois tout le monde prêt." : "l'hôte lance la partie une fois tout le monde prêt."}
         </p>
         <div className="flex flex-col gap-2">
-          {numeros.map((n) => (
-            <LigneJoueur
-              key={n}
-              campagne={campagne}
-              numero={n}
-              joueur={campagne.sessionJoueurs.find((j) => j.numero === n)}
-              estMoi={campagne.sessionJoueurs.find((j) => j.numero === n)?.joueurId === monId}
-            />
-          ))}
+          {numeros.map((n) => {
+            const joueur = campagne.sessionJoueurs.find((j) => j.numero === n)
+            return (
+              <LigneJoueur
+                key={n}
+                campagne={campagne}
+                numero={n}
+                joueur={joueur}
+                estMoi={joueur?.joueurId === monId}
+                enTrainDeChoisir={joueur ? enTrain[joueur.joueurId] : undefined}
+              />
+            )
+          })}
         </div>
 
         {monJoueur && (

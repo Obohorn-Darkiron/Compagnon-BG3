@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Plus } from '../../components/icons'
 import { ClasseIcon } from '../../components/ClasseIcon'
-import { buildsPourClasseEtSousClasse, classesDisponibles, races, sousClassesPourClasse } from '../../data'
+import { buildsPourClasseEtSousClasse, classesDisponibles, getBuild, races, sousClassesPourClasse } from '../../data'
 import { saveStore, type Campagne, type StyleJeu } from '../../storage/useSaveData'
 import { lireJoueurId } from '../../storage/identite'
+import { definirEnTrainDeChoisir, effacerEnTrainDeChoisir } from '../../session/presence'
 import { COMPAGNONS } from './composeurEquipe'
 import { SousClasseCard } from './SousClasseCard'
 import { BuildCandidatCard } from './BuildCandidatCard'
@@ -45,6 +46,34 @@ export function NouveauPersonnageForm({ campagne }: { campagne: Campagne }) {
   const candidats =
     classe && sousClasse ? buildsPourClasseEtSousClasse(classe, sousClasse) : []
   const raceInfo = races.find((r) => r.nom === (type === 'compagnon' ? compagnonChoisi?.race : race))
+
+  // Signale en direct aux autres joueurs de la session ce que je regarde en ce moment — avant
+  // même d'avoir créé le personnage. Purement informatif, jamais stocké dans la sauvegarde.
+  useEffect(() => {
+    const sessionCode = campagne.sessionCode
+    if (!sessionCode) return
+    if (!ouvert) {
+      effacerEnTrainDeChoisir(sessionCode)
+      return
+    }
+    let texte: string | null = null
+    if (type === 'compagnon') {
+      texte = compagnonNom ? `regarde ${compagnonNom}` : null
+    } else if (buildId) {
+      texte = `regarde ${getBuild(buildId)?.nom ?? classe}`
+    } else if (classe && sousClasse) {
+      texte = `regarde ${classe} ${sousClasse}`
+    } else if (classe) {
+      texte = `regarde ${classe}`
+    }
+    definirEnTrainDeChoisir(sessionCode, texte)
+  }, [campagne.sessionCode, ouvert, type, compagnonNom, classe, sousClasse, buildId])
+
+  useEffect(() => {
+    const sessionCode = campagne.sessionCode
+    if (!sessionCode) return
+    return () => effacerEnTrainDeChoisir(sessionCode)
+  }, [campagne.sessionCode])
 
   function reinitialiser() {
     setType('libre')
