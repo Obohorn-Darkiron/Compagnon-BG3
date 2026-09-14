@@ -2,16 +2,19 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import './index.css'
+import './components/installPrompt' // enregistre le listener beforeinstallprompt tôt (voir ce fichier)
 import App from './App.tsx'
-import { BuildsListPage } from './features/builds/BuildsListPage'
-import { BuildDetailPage } from './features/builds/BuildDetailPage'
-import { ComparerBuildsPage } from './features/builds/ComparerBuildsPage'
-import { ObjetsListPage } from './features/explorer/ObjetsListPage'
-import { ObjetDetailPage } from './features/explorer/ObjetDetailPage'
-import { EquipePage } from './features/equipe/EquipePage'
-import { EquipeBuilderPage } from './features/equipe/EquipeBuilderPage'
-import { PersonnageDetailPage } from './features/equipe/PersonnageDetailPage'
-import { ParametresPage } from './features/parametres/ParametresPage'
+import {
+  BuildDetailPage,
+  BuildsListPage,
+  ComparerBuildsPage,
+  EquipeBuilderPage,
+  EquipePage,
+  ObjetDetailPage,
+  ObjetsListPage,
+  ParametresPage,
+  PersonnageDetailPage,
+} from './routes'
 import { demanderStockagePersistant } from './storage/driver'
 import { reprendreSessionsActives } from './session/sessionSync'
 import { initialiserTheme } from './theme/theme'

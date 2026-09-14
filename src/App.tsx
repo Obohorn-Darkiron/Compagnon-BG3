@@ -1,8 +1,13 @@
+import { Suspense } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { Shield, Compass, Users, Settings } from './components/icons'
 import { TentacleDecoration } from './components/TentacleDecoration'
 import { ErrorBoundary } from './components/ErrorBoundary'
 import { useEchecEcriture } from './storage/useSaveData'
+
+function ChargementPage() {
+  return <div className="flex items-center justify-center py-16 text-sm text-ink-muted">Chargement…</div>
+}
 
 const tabs = [
   { to: '/builds', label: 'Builds', icon: Shield },
@@ -26,7 +31,9 @@ function App() {
       )}
       <main className="flex-1 overflow-y-auto pb-20">
         <ErrorBoundary key={location.pathname}>
-          <Outlet />
+          <Suspense fallback={<ChargementPage />}>
+            <Outlet />
+          </Suspense>
         </ErrorBoundary>
       </main>
 
